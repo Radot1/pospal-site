@@ -1,0 +1,1110 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>POSPal Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-green: #16a34a;
+      --text: #111827;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html,body { height:100%; margin:0; padding:0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 16px;
+    }
+
+    .wrap { max-width: 720px; margin: 0 auto; }
+
+    .header { 
+      padding: 20px 0; 
+      border-bottom: 1px solid var(--rule); 
+      text-align: center; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      background-image: url('/app_icon.ico');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* Fallback styling in case image doesn't load */
+      background-color: var(--brand-green);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    h1 { 
+      font-size: 22px; 
+      font-weight: 600; 
+      margin: 0;
+      color: var(--brand-green);
+    }
+
+    .content { padding-top: 16px; }
+    #content { min-height: 200px; }
+    .loading, .error { text-align: center; color: var(--muted); font-size: 14px; padding: 24px 8px; }
+
+    /* Sticky Category navigation - Performance optimized */
+    .category-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 16px 0 20px 0;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      justify-content: flex-start;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 12px 0;
+      background: var(--bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transform: translateZ(0); /* Force hardware acceleration */
+      contain: layout style;
+    }
+    .category-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    .category-nav::-webkit-scrollbar-track {
+      background: var(--rule);
+      border-radius: 2px;
+    }
+    .category-nav::-webkit-scrollbar-thumb {
+      background: var(--brand-green);
+      border-radius: 2px;
+    }
+    .category-btn {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .category-btn:hover { background: rgba(22, 163, 74, 0.1); border-color: var(--brand-green); }
+    .category-btn.active { background: var(--brand-green); color: white; border-color: var(--brand-green); }
+
+    /* Cleaner category styling - no boxes */
+    .category {
+      margin-top: 24px;
+      padding: 0;
+    }
+    .category.hidden { display: none; }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 20px;
+      color: var(--brand-green);
+      text-transform: none;
+      letter-spacing: normal;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--brand-green);
+      display: block;
+      text-align: left;
+    }
+
+    .item {
+      display: block;
+      padding: 12px;
+      margin-bottom: 20px;
+      transition: background-color 0.2s ease;
+      border-bottom: 1px solid var(--rule);
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      contain: layout style;
+      will-change: auto;
+    }
+    .item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .item-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.3;
+      flex: 1;
+      min-width: 0;
+      /* Subtle emphasis with stronger weight */
+    }
+
+    .item-price {
+      font-weight: 800;
+      font-size: 18px;
+      color: white;
+      background: var(--brand-green);
+      padding: 6px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(22, 163, 74, 0.2);
+      letter-spacing: -0.3px;
+    }
+
+    .item-description {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+      margin: 0 0 10px 0;
+      max-height: 2.8em; /* ~2 lines */
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-weight: 400;
+      opacity: 0.9; /* Subtle de-emphasis */
+    }
+
+    .item-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .prep-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 11px;
+      color: #6b7280;
+      background: rgba(107, 114, 128, 0.08);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-weight: 500;
+      border: 1px solid rgba(107, 114, 128, 0.2);
+    }
+
+    .dietary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .dietary-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 2px 6px;
+      border-radius: 8px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    /* Simplified 3-color badge system */
+    .dietary-tag.vegan,
+    .dietary-tag.vegetarian {
+      background: rgba(34, 197, 94, 0.1);
+      color: #15803d;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .dietary-tag.gluten_free,
+    .dietary-tag.dairy_free {
+      background: rgba(59, 130, 246, 0.1);
+      color: #1d4ed8;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .dietary-tag.popular,
+    .dietary-tag.spicy {
+      background: rgba(239, 68, 68, 0.1);
+      color: #dc2626;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .allergen-section {
+      margin-top: 10px;
+      border-top: 1px solid rgba(220, 38, 38, 0.1);
+      padding-top: 8px;
+    }
+
+    .allergen-warning {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #dc2626;
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      width: fit-content;
+      box-shadow: 0 1px 2px rgba(220, 38, 38, 0.1);
+    }
+
+    .allergen-warning-icon {
+      font-size: 12px;
+    }
+
+    .has-options-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--brand-green) 0%, #059669 100%);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(22, 163, 74, 0.3);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-left: auto;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      min-height: 44px;
+      min-width: 60px;
+    }
+
+    .has-options-badge:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4);
+    }
+
+    .has-options-badge:active {
+      transform: scale(0.95);
+    }
+
+    /* Ensure items with options have same styling as regular items */
+    .item.has-options {
+      /* No overrides - inherit all styling from .item */
+    }
+
+    /* Simple footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--rule);
+      margin-top: 16px;
+    }
+
+    .footer a {
+      color: var(--brand-green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Subtle hover effects - only on devices that support hover */
+    @media (hover: hover) {
+      .item:hover {
+        background-color: rgba(22, 163, 74, 0.02);
+      }
+    }
+
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transform: scale(0.9);
+      transition: transform 0.2s ease;
+    }
+    .modal-overlay.show .modal { transform: scale(1); }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+    .modal-close:hover {
+      background: var(--rule);
+      color: var(--text);
+    }
+    .modal-options {
+      margin: 0;
+      padding: 0;
+    }
+    .modal-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--rule);
+      font-size: 14px;
+    }
+    .modal-option:last-child { border-bottom: none; }
+    .modal-option-name {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .modal-option-price {
+      color: var(--brand-green);
+      font-weight: 600;
+    }
+    .modal-option-price.negative { color: #dc2626; }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --text:#e5e7eb; --muted:#9ca3af; --rule:#374151; --bg:#111827; --card:#0f172a; }
+      .category-nav {
+        background: rgba(17, 24, 39, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom-color: #374151;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      .item-price {
+        background: var(--brand-green);
+        color: white;
+        box-shadow: 0 2px 4px rgba(22, 163, 74, 0.3);
+      }
+      .prep-time {
+        background: rgba(107, 114, 128, 0.2);
+        border-color: rgba(107, 114, 128, 0.3);
+        color: #d1d5db;
+      }
+      .item:hover { background-color: rgba(22, 163, 74, 0.1); }
+      .category-btn:hover { background: rgba(22, 163, 74, 0.2); }
+      .allergen-warning {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.3) 100%);
+        border-color: rgba(239, 68, 68, 0.3);
+      }
+    }
+      .modal-option-price.negative { color: #f87171; }
+
+      /* Simplified dark mode dietary tags */
+      .dietary-tag.vegan,
+      .dietary-tag.vegetarian {
+        background: rgba(34, 197, 94, 0.2);
+        color: #bbf7d0;
+        border-color: rgba(34, 197, 94, 0.4);
+      }
+
+      .dietary-tag.gluten_free,
+      .dietary-tag.dairy_free {
+        background: rgba(59, 130, 246, 0.2);
+        color: #bfdbfe;
+        border-color: rgba(59, 130, 246, 0.4);
+      }
+
+      .dietary-tag.popular,
+      .dietary-tag.spicy {
+        background: rgba(239, 68, 68, 0.2);
+        color: #fecaca;
+        border-color: rgba(239, 68, 68, 0.4);
+      }
+
+      .allergen-warning {
+        background: rgba(239, 68, 68, 0.2);
+        color: #fca5a5;
+        border-color: rgba(239, 68, 68, 0.3);
+      }
+
+      .prep-time {
+        background: none;
+      }
+    }
+
+    /* Mobile responsive enhancements */
+    @media (max-width: 640px) {
+      body {
+        padding: 12px;
+      }
+
+      .wrap {
+        max-width: 100%;
+      }
+
+      .header {
+        padding: 16px 0;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .category {
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      .item {
+        padding: 10px 0;
+        margin-bottom: 16px;
+      }
+
+      .item-header {
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+
+      .item-name {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .item-price {
+        font-size: 16px;
+        padding: 5px 10px;
+        font-weight: 800;
+      }
+
+      .item-description {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .dietary-tag {
+        font-size: 9px;
+        padding: 2px 5px;
+      }
+
+      .prep-time {
+        font-size: 10px;
+        padding: 2px 5px;
+      }
+
+      .has-options-badge {
+        font-size: 10px;
+        padding: 12px 14px;
+        font-weight: 600;
+        min-height: 44px;
+        min-width: 50px;
+      }
+
+      .allergen-warning {
+        font-size: 10px;
+        padding: 3px 6px;
+      }
+
+      .category-nav {
+        gap: 6px;
+        margin: 12px 0 16px 0;
+        padding: 8px 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .category-btn {
+        padding: 12px 16px;
+        font-size: 12px;
+        min-height: 44px;
+      }
+
+      .modal {
+        margin: 12px;
+        padding: 20px;
+      }
+    }
+
+    /* Touch optimization */
+    @media (hover: none) and (pointer: coarse) {
+      .category-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item.has-options {
+        min-height: 44px;
+      }
+
+      .modal-close {
+        min-width: 44px;
+        min-height: 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="logo"></div>
+      <h1 id="title">Menu</h1>
+    </div>
+    <div class="content">
+      <div id="content"></div>
+    </div>
+    <div class="footer">
+      <div>Powered by <a href="https://pospal.gr/" target="_blank">POSPal</a> - Modern Point of Sale System</div>
+    </div>
+  </div>
+  
+  <!-- Options Modal -->
+  <div id="optionsModal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle" class="modal-title">Item Options</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modalContent" class="modal-options">
+        <!-- Options will be populated here -->
+      </div>
+    </div>
+  </div>
+  <script>
+    // Set this to your Worker URL
+    const API_BASE = 'https://menus-api.bzoumboulis.workers.dev';
+
+    function getSlugFromPath() {
+      const path = location.pathname.replace(/\/+$/, '');
+      if (path.startsWith('/s/')) return path.slice(3).replace(/^\//,'').toLowerCase();
+      return '';
+    }
+
+    async function load() {
+      const slug = getSlugFromPath();
+      const title = document.getElementById('title');
+      const content = document.getElementById('content');
+      title.textContent = slug ? `Menu – ${slug}` : 'Menu';
+      if (!slug) { content.textContent = 'No store selected.'; return; }
+
+      // Add delay before showing loading state
+      let loadingTimer = setTimeout(() => {
+        content.className = 'loading';
+        content.textContent = 'Loading...';
+      }, 200); // Only show loading after 200ms
+
+      try {
+        const res = await fetch(`${API_BASE}/v1/stores/${encodeURIComponent(slug)}/menu`, {
+          cache: 'default'
+        });
+        clearTimeout(loadingTimer); // Cancel loading display if fetch completes quickly
+
+        if (!res.ok) {
+          content.className = 'error';
+          if (res.status === 404) {
+            content.textContent = 'Menu not found. Please check the URL.';
+          } else if (!navigator.onLine) {
+            content.textContent = 'No internet connection. Please try again.';
+          } else {
+            content.textContent = `Failed to load menu (Error ${res.status})`;
+          }
+          return;
+        }
+
+        const menu = await res.json();
+        render(menu);
+      } catch (e) {
+        clearTimeout(loadingTimer); // Cancel loading display on error
+        content.className = 'error';
+
+        // Check for network-related errors
+        console.error('Fetch error:', e.name, e.message, e);
+        if (!navigator.onLine) {
+          content.textContent = 'No internet connection. Please try again.';
+        } else if (e.name === 'TypeError' && e.message.includes('fetch')) {
+          content.textContent = `Network error: ${e.message}. Please check your connection.`;
+        } else {
+          content.textContent = `Failed to load menu: ${e.message}. Please try again.`;
+        }
+      }
+    }
+
+    let currentCategory = null;
+    let dynamicEventListeners = []; // Store dynamic event listeners for cleanup
+    let isScrolling = false; // Prevent infinite scroll loops
+    let scrollTimeout;
+    let intersectionObserver; // For performance monitoring and lazy loading
+
+    function cleanupEventListeners() {
+      // Remove all stored event listeners
+      dynamicEventListeners.forEach(({ element, event, handler }) => {
+        element.removeEventListener(event, handler);
+      });
+      dynamicEventListeners = [];
+    }
+
+    function render(menu) {
+      // Clean up previous event listeners
+      cleanupEventListeners();
+
+      // Performance timing
+      const renderStart = performance.now();
+
+      try {
+        const content = document.getElementById('content');
+
+        // Use DocumentFragment for efficient DOM manipulation
+        const fragment = document.createDocumentFragment();
+
+        const cats = Object.keys(menu || {});
+        if (!cats.length) {
+          content.className = 'error';
+          content.textContent = 'No items yet.';
+          return;
+        }
+
+      // Check URL for category parameter first
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCategory = urlParams.get('category');
+
+      // Set initial category: URL param > current > first available
+      if (urlCategory && cats.includes(urlCategory)) {
+        currentCategory = urlCategory;
+      } else if (!currentCategory || !cats.includes(currentCategory)) {
+        currentCategory = cats[0];
+      }
+
+      // Create category navigation
+      if (cats.length > 1) {
+        const navDiv = document.createElement('div');
+        navDiv.className = 'category-nav';
+        
+        cats.forEach(cat => {
+          const btn = document.createElement('button');
+          btn.className = `category-btn ${cat === currentCategory ? 'active' : ''}`;
+          btn.textContent = cat.replace(/_/g, ' ');
+
+          const clickHandler = () => showCategory(cat, menu);
+          btn.addEventListener('click', clickHandler);
+          dynamicEventListeners.push({ element: btn, event: 'click', handler: clickHandler });
+
+          navDiv.appendChild(btn);
+        });
+        
+        fragment.appendChild(navDiv);
+      }
+
+      // Create all category divs but hide non-active ones
+      cats.forEach(cat => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = `category ${cat === currentCategory ? '' : 'hidden'}`;
+        categoryDiv.dataset.category = cat;
+
+        const h2 = document.createElement('h2');
+        h2.textContent = cat.replace(/_/g, ' ');
+        categoryDiv.appendChild(h2);
+
+        (menu[cat]||[]).forEach(it => {
+          const item = document.createElement('div');
+          const hasOptions = it.hasGeneralOptions && it.generalOptions && it.generalOptions.length > 0;
+          item.className = hasOptions ? 'item has-options' : 'item';
+
+          // Create header section with name and price
+          const itemHeader = document.createElement('div');
+          itemHeader.className = 'item-header';
+
+          // Create item name with proper semantic structure
+          const itemName = document.createElement('h3');
+          itemName.className = 'item-name';
+          itemName.textContent = it.name || '';
+          itemName.setAttribute('aria-level', '3');
+          itemHeader.appendChild(itemName);
+
+          // Create price with accessibility labels
+          const price = document.createElement('div');
+          price.className = 'item-price';
+          const priceValue = Number(it.price||0).toFixed(2);
+          price.textContent = `€${priceValue}`;
+          price.setAttribute('aria-label', `Price: ${priceValue} euros`);
+          price.setAttribute('title', `Price: €${priceValue}`);
+          itemHeader.appendChild(price);
+
+          item.appendChild(itemHeader);
+
+          // Create description if available
+          if (it.description) {
+            const description = document.createElement('p');
+            description.className = 'item-description';
+            description.textContent = it.description;
+            item.appendChild(description);
+          }
+
+          // Create details section (dietary tags, prep time, and options)
+          const itemDetails = document.createElement('div');
+          itemDetails.className = 'item-details';
+
+          // Add preparation time if available
+          if (it.prep_time) {
+            const prepTime = document.createElement('span');
+            prepTime.className = 'prep-time';
+            prepTime.innerHTML = `⏱️ ${it.prep_time}min`;
+            prepTime.setAttribute('aria-label', `Preparation time: ${it.prep_time} minutes`);
+            prepTime.setAttribute('title', `Takes ${it.prep_time} minutes to prepare`);
+            itemDetails.appendChild(prepTime);
+          }
+
+          // Add dietary tags with smart priority system
+          if (it.dietary_tags && it.dietary_tags.length > 0) {
+            // Priority order: popular/spicy first, then dietary restrictions
+            const priorityOrder = ['popular', 'spicy', 'vegan', 'vegetarian', 'gluten_free', 'dairy_free'];
+            const sortedTags = it.dietary_tags.sort((a, b) => {
+              return priorityOrder.indexOf(a) - priorityOrder.indexOf(b);
+            });
+
+            // Show max 3 badges to avoid clutter
+            const visibleTags = sortedTags.slice(0, 3);
+
+            visibleTags.forEach(tag => {
+              const tagElement = document.createElement('span');
+              tagElement.className = `dietary-tag ${tag}`;
+
+              // Simplified badge system - shorter text, clear symbols
+              let icon = '';
+              let symbol = '';
+              let text = '';
+              switch(tag) {
+                case 'vegan':
+                  symbol = 'V';
+                  text = 'Vegan';
+                  break;
+                case 'vegetarian':
+                  symbol = 'VG';
+                  text = 'Veggie';
+                  break;
+                case 'gluten_free':
+                  symbol = 'GF';
+                  text = 'Gluten Free';
+                  break;
+                case 'dairy_free':
+                  symbol = 'DF';
+                  text = 'No Dairy';
+                  break;
+                case 'popular':
+                  icon = '⭐';
+                  text = 'Popular';
+                  break;
+                case 'spicy':
+                  icon = '🌶️';
+                  text = 'Spicy';
+                  break;
+              }
+
+              tagElement.innerHTML = symbol || `${icon} ${text}`;
+              tagElement.setAttribute('aria-label', `${text} item`);
+              tagElement.setAttribute('title', `This item is ${text.toLowerCase()}`);
+              itemDetails.appendChild(tagElement);
+            });
+
+            // If there are more tags, add a "+more" indicator
+            if (sortedTags.length > 3) {
+              const moreElement = document.createElement('span');
+              moreElement.className = 'dietary-tag more-tags';
+              moreElement.innerHTML = `+${sortedTags.length - 3}`;
+              moreElement.setAttribute('title', `${sortedTags.length - 3} more dietary options`);
+              moreElement.style.background = 'rgba(107, 114, 128, 0.1)';
+              moreElement.style.color = '#6b7280';
+              moreElement.style.border = '1px solid rgba(107, 114, 128, 0.2)';
+              itemDetails.appendChild(moreElement);
+            }
+          }
+
+          // Add options badge if available
+          if (hasOptions) {
+            const badge = document.createElement('button');
+            badge.className = 'has-options-badge';
+            badge.textContent = '+ ADD';
+            badge.setAttribute('type', 'button');
+            badge.setAttribute('aria-label', `Add extras to ${it.name}`);
+            badge.setAttribute('title', `View available extras and add-ons for ${it.name}`);
+
+            const badgeClickHandler = () => showOptionsModal(it);
+            badge.addEventListener('click', badgeClickHandler);
+            dynamicEventListeners.push({ element: badge, event: 'click', handler: badgeClickHandler });
+
+            itemDetails.appendChild(badge);
+          }
+
+          // Add details section if it has content
+          if (itemDetails.children.length > 0) {
+            item.appendChild(itemDetails);
+          }
+
+          // Add allergen warning as separate section if available
+          if (it.allergens && it.allergens.length > 0) {
+            const allergenSection = document.createElement('div');
+            allergenSection.className = 'allergen-section';
+
+            const allergenWarning = document.createElement('div');
+            allergenWarning.className = 'allergen-warning';
+            allergenWarning.innerHTML = `<span class="allergen-warning-icon">⚠️</span> Contains: ${it.allergens.join(', ')}`;
+
+            allergenSection.appendChild(allergenWarning);
+            item.appendChild(allergenSection);
+          }
+
+          categoryDiv.appendChild(item);
+        });
+
+        fragment.appendChild(categoryDiv);
+      });
+
+      // Single DOM update for better performance
+      content.innerHTML = '';
+      content.appendChild(fragment);
+
+      // Initialize performance optimizations
+      initPerformanceOptimizations();
+
+      // Log render performance
+      const renderTime = performance.now() - renderStart;
+      if (renderTime > 100) { // Log if render takes more than 100ms
+        console.log(`Menu render took ${renderTime.toFixed(1)}ms`);
+      }
+
+      } catch (e) {
+        const content = document.getElementById('content');
+        content.className = 'error';
+        content.textContent = 'Error displaying menu.';
+        console.error('Menu render error:', e);
+      }
+    }
+
+    function showCategory(categoryName, menu) {
+      currentCategory = categoryName;
+      isScrolling = true; // Prevent auto-highlighting during programmatic scroll
+
+      // Update button states
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === categoryName.replace(/_/g, ' '));
+      });
+
+      // Smooth scroll to category
+      const targetCategory = document.querySelector(`[data-category="${categoryName}"]`);
+      if (targetCategory) {
+        const navHeight = document.querySelector('.category-nav')?.offsetHeight || 80;
+        const targetPosition = targetCategory.offsetTop - navHeight - 20;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Reset scrolling flag after scroll completes
+        setTimeout(() => {
+          isScrolling = false;
+        }, 800); // Account for smooth scroll duration
+      }
+
+      // Update URL without page reload (optional - for bookmarking)
+      if (history.replaceState) {
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('category', categoryName);
+        history.replaceState(null, '', newUrl);
+      }
+    }
+
+    // Modal functions
+    function showOptionsModal(item) {
+      const modal = document.getElementById('optionsModal');
+      const title = document.getElementById('modalTitle');
+      const content = document.getElementById('modalContent');
+      
+      title.textContent = `${item.name} - Options`;
+      content.innerHTML = '';
+      
+      if (item.generalOptions && item.generalOptions.length > 0) {
+        item.generalOptions.forEach(option => {
+          const optionDiv = document.createElement('div');
+          optionDiv.className = 'modal-option';
+          
+          const optionName = document.createElement('span');
+          optionName.className = 'modal-option-name';
+          optionName.textContent = option.name;
+          
+          const optionPrice = document.createElement('span');
+          const price = Number(option.price || option.priceChange || 0);
+          optionPrice.className = `modal-option-price ${price < 0 ? 'negative' : ''}`;
+          const priceText = price >= 0 ? `+€${price.toFixed(2)}` : `€${price.toFixed(2)}`;
+          optionPrice.textContent = priceText;
+          
+          optionDiv.appendChild(optionName);
+          optionDiv.appendChild(optionPrice);
+          content.appendChild(optionDiv);
+        });
+      }
+      
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('optionsModal');
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    
+    // Store modal event listener reference for proper cleanup
+    const modal = document.getElementById('optionsModal');
+    const modalClickHandler = (e) => {
+      if (e.target === modal) closeModal();
+    };
+    modal.addEventListener('click', modalClickHandler);
+
+    // Scroll-based category highlighting
+    function updateActiveCategory() {
+      if (isScrolling) return; // Don't update during programmatic scrolling
+
+      const navHeight = document.querySelector('.category-nav')?.offsetHeight || 80;
+      const scrollTop = window.scrollY + navHeight + 50; // 50px buffer
+      const categories = document.querySelectorAll('.category');
+
+      let activeCategory = null;
+
+      categories.forEach(categoryDiv => {
+        const categoryTop = categoryDiv.offsetTop;
+        const categoryBottom = categoryTop + categoryDiv.offsetHeight;
+
+        if (scrollTop >= categoryTop && scrollTop < categoryBottom) {
+          activeCategory = categoryDiv.dataset.category;
+        }
+      });
+
+      if (activeCategory && activeCategory !== currentCategory) {
+        currentCategory = activeCategory;
+
+        // Update button states without scrolling
+        document.querySelectorAll('.category-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.textContent === activeCategory.replace(/_/g, ' '));
+        });
+
+        // Update URL
+        if (history.replaceState) {
+          const newUrl = new URL(window.location);
+          newUrl.searchParams.set('category', activeCategory);
+          history.replaceState(null, '', newUrl);
+        }
+      }
+    }
+
+    // Performance-optimized scroll listener with RAF
+    let rafId;
+    function handleScroll() {
+      if (rafId) return; // Skip if already scheduled
+
+      rafId = requestAnimationFrame(() => {
+        updateActiveCategory();
+        isScrolling = false; // Reset scrolling flag
+        rafId = null;
+      });
+    }
+
+    // Use passive listener for better scroll performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Performance monitoring setup
+    function initPerformanceOptimizations() {
+      // CSS containment hints for better layout performance
+      const content = document.getElementById('content');
+      if (content) {
+        content.style.contain = 'layout style';
+      }
+
+      // Intersection Observer for visibility optimizations
+      if ('IntersectionObserver' in window) {
+        intersectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            // Could be used for lazy loading images or animations
+            if (entry.isIntersecting) {
+              entry.target.style.willChange = 'auto';
+            }
+          });
+        }, {
+          rootMargin: '50px',
+          threshold: 0.1
+        });
+      }
+    }
+
+    // Memory management - cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+      cleanupEventListeners();
+      if (intersectionObserver) {
+        intersectionObserver.disconnect();
+      }
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    });
+
+    // Initialize menu loading
+    load();
+  </script>
+</body>
+</html>
