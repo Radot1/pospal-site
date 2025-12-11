@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <link rel="stylesheet" href="./static/css/fonts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Οδηγός Εγκατάστασης - POSPal</title>
+    <style>
+        :root {
+            --brand-green: #16a34a;
+            --brand-dark: #15803d;
+            --text: #111827;
+            --muted: #6b7280;
+            --rule: #e5e7eb;
+            --bg: #ffffff;
+            --card: #ffffff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.04);
+            --radius: 8px;
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--brand-green);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background-image: url('./app_icon.ico');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: var(--brand-green);
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .step {
+            background: var(--card);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .step:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            background: var(--brand-green);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            color: var(--brand-green);
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .step p {
+            margin: 0 0 15px 0;
+            color: var(--text);
+        }
+
+        .step ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .step li {
+            margin: 8px 0;
+            color: var(--text);
+        }
+
+        .highlight {
+            background: rgba(22, 163, 74, 0.1);
+            border-left: 4px solid var(--brand-green);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .highlight strong {
+            color: var(--brand-green);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--brand-green);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            margin: 10px 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--brand-dark);
+        }
+
+        .system-requirements {
+            background: var(--card);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .system-requirements h3 {
+            color: var(--brand-green);
+            margin: 0 0 15px 0;
+        }
+
+        .requirement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .requirement-item {
+            background: rgba(22, 163, 74, 0.05);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid rgba(22, 163, 74, 0.2);
+        }
+
+        .requirement-item strong {
+            color: var(--brand-green);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--brand-green);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #e5e7eb;
+                --muted: #9ca3af;
+                --rule: #374151;
+                --bg: #111827;
+                --card: #0f172a;
+            }
+            .highlight {
+                background: rgba(22, 163, 74, 0.2);
+            }
+            .requirement-item {
+                background: rgba(22, 163, 74, 0.1);
+                border-color: rgba(22, 163, 74, 0.3);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .step {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+            <h1>Οδηγός Εγκατάστασης</h1>
+            <p class="subtitle">Εγκαταστήστε το POSPal στο Windows σας σε λίγα απλά βήματα</p>
+        </div>
+
+        <a href="index.html" class="back-btn">← Επιστροφή στην αρχική σελίδα</a>
+
+        <!-- CRITICAL INFORMATION - HIGHLIGHTED FOR IMMEDIATE VISIBILITY -->
+        <div class="highlight" style="background: rgba(220, 38, 38, 0.1); border-left: 6px solid #dc2626; margin: 30px 0; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);">
+            <div style="text-align: center; margin-bottom: 15px;">
+                <i class="fas fa-exclamation-triangle" style="color: #dc2626; font-size: 2rem; margin-bottom: 10px;"></i>
+                <h3 style="color: #dc2626; font-size: 1.5rem; margin: 0; font-weight: 700;">⚠️ ΣΗΜΑΝΤΙΚΟ - ΔΙΑΒΑΣΤΕ ΤΩΡΑ ⚠️</h3>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <p style="font-size: 1.2rem; font-weight: 600; color: #dc2626; margin: 0;">
+                    <strong>ΠΡΟΕΠΙΛΕΓΜΕΝΟΣ ΚΩΔΙΚΟΣ ΠΡΟΣΒΑΣΗΣ ΓΙΑ ΤΙΣ ΡΥΘΜΙΣΕΙΣ:</strong>
+                </p>
+                <div style="background: #dc2626; color: white; padding: 15px 25px; border-radius: 10px; display: inline-block; margin: 15px 0; font-size: 2rem; font-weight: 800; letter-spacing: 3px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    9999
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 1.1rem; color: #374151; margin: 0; line-height: 1.6;">
+                <strong>Χρησιμοποιήστε αυτόν τον κωδικό για την πρώτη σας είσοδο στις ρυθμίσεις.</strong><br>
+                <strong>Συνιστάται να αλλάξετε τον κωδικό από τις ρυθμίσεις ασφαλείας μετά την πρώτη σύνδεση.</strong>
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Λήψη για Windows</h3>
+            <p>Το POSPal είναι διαθέσιμο για Windows 10/11 (64-bit):</p>
+            
+            <div class="requirement-grid">
+                <div class="requirement-item">
+                    <strong>Windows</strong>
+                    <p>Windows 10/11 (64-bit)</p>
+                    <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe" class="download-btn">Λήψη για Windows</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Λήψη και εγκατάσταση</h3>
+            <p>Μετά τη λήψη του αρχείου:</p>
+            <ul>
+                <li><strong>Windows:</strong> Εκτελέστε το .exe αρχείο και ακολουθήστε τον οδηγό εγκατάστασης</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>Σημαντικό:</strong> Για Windows, ενδέχεται να χρειαστεί να απενεργοποιήσετε την προστασία από ιούς ή να επιτρέψετε την εφαρμογή από το Windows Defender.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Πρώτη εκκίνηση</h3>
+            <p>Όταν εκκινήσετε το POSPal για πρώτη φορά:</p>
+            <ul>
+                <li>Θα σας ζητηθεί να δημιουργήσετε λογαριασμό διαχειριστή (αυτό είναι απαραίτητο για να μπορεί το PDA mobile version να συνδέεται με τον server μέσω του firewall)</li>
+                <li>Ρυθμίστε τις προτιμήσεις εκτύπωσης και γλώσσας</li>
+                <li>Δημιουργήστε το πρώτο σας μενού</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Πρόσβαση στις ρυθμίσεις</h3>
+            <p>Για να ανοίξετε τις ρυθμίσεις του POSPal:</p>
+            <ul>
+                <li>Πατήστε το κουμπί ρυθμίσεων (εικονίδιο γραναζιού) στο κύριο μενού</li>
+                <li>Εισάγετε τον κωδικό πρόσβασης: <strong>9999</strong></li>
+                <li>Αυτός είναι ο προεπιλεγμένος κωδικός πρόσβασης για τις ρυθμίσεις</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>Σημαντικό:</strong> Ο προεπιλεγμένος κωδικός πρόσβασης για τις ρυθμίσεις είναι <strong>9999</strong>. Μπορείτε να τον αλλάξετε αργότερα από τις ρυθμίσεις ασφαλείας.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <h3>Ρύθμιση συσκευών</h3>
+            <p>Για να συνδέσετε εκτυπωτές και άλλες συσκευές:</p>
+            <ul>
+                <li>Πηγαίνετε στις Ρυθμίσεις → Συσκευές</li>
+                <li>Επιλέξτε τον εκτυπωτή σας από τη λίστα</li>
+                <li>Κάντε δοκιμή εκτύπωσης για να επιβεβαιώσετε τη σύνδεση</li>
+                <li>Ρυθμίστε το μέγεθος του χαρτιού και την ποιότητα εκτύπωσης</li>
+            </ul>
+        </div>
+
+        <div class="system-requirements">
+            <h3>Απαιτήσεις Συστήματος</h3>
+            <div class="requirement-grid">
+                <div class="requirement-item">
+                    <strong>Επεξεργαστής</strong>
+                    <p>Intel/AMD 1.5GHz ή νεότερο</p>
+                </div>
+                <div class="requirement-item">
+                    <strong>Μνήμη RAM</strong>
+                    <p>4GB (συνιστάται 8GB)</p>
+                </div>
+                <div class="requirement-item">
+                    <strong>Δίσκος</strong>
+                    <p>500MB ελεύθερος χώρος</p>
+                </div>
+                <div class="requirement-item">
+                    <strong>Οθόνη</strong>
+                    <p>1024x768 ελάχιστη ανάλυση</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <h3>Επιβεβαίωση εγκατάστασης</h3>
+            <p>Για να επιβεβαιώσετε ότι η εγκατάσταση ήταν επιτυχής:</p>
+            <ul>
+                <li>Εκκινήστε το POSPal</li>
+                <li>Δημιουργήστε μια δοκιμαστική παραγγελία</li>
+                <li>Εκτυπώστε μια απόδειξη</li>
+                <li>Ελέγξτε ότι όλες οι λειτουργίες λειτουργούν σωστά</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <strong>Βοήθεια:</strong> Αν αντιμετωπίσετε προβλήματα κατά την εγκατάσταση, επικοινωνήστε μαζί μας στο Instagram <a href="https://www.instagram.com/pospalsoftware/" target="_blank" style="color: var(--brand-green); text-decoration: underline;">@pospalsoftware</a>.
+        </div>
+
+        <div class="step">
+            <div class="step-number">7</div>
+            <h3>Επόμενα βήματα</h3>
+            <p>Μετά την επιτυχημένη εγκατάσταση:</p>
+            <ul>
+                <li>Δημιουργήστε τα μενού σας</li>
+                <li>Ρυθμίστε τις τιμές και τις κατηγορίες</li>
+                <li>Προσθέστε τους υπαλλήλους σας</li>
+                <li>Ρυθμίστε τις αναφορές και τα στατιστικά</li>
+                <li>Εκπαιδεύστε το προσωπικό σας</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-btn">← Επιστροφή στην αρχική σελίδα</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγκατάσταση POSPal για Beach Bar | Οδηγός 2025</title>
+
+    <meta name="description" content="Πλήρης οδηγός εγκατάστασης POSPal για beach bars στην Ελλάδα. Βήμα-βήμα οδηγίες για εποχικές επιχειρήσεις και παραθαλάσσια καταστήματα.">
+    <meta name="keywords" content="beach bar pos, pos για beach bar, εποχικό pos σύστημα, pos παραλία, εγκατάσταση pos beach bar">
+
+    <!-- Structured Data for How-To -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Εγκατάσταση POSPal για Beach Bar",
+      "description": "Πλήρης οδηγός εγκατάστασης POS συστήματος για beach bars στην Ελλάδα",
+      "image": "https://pospal.gr/app_icon.ico",
+      "totalTime": "PT30M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "20"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Κατέβασμα POSPal",
+          "text": "Πηγαίνετε στο pospal.gr και κατεβάστε το πρόγραμμα",
+          "image": "https://pospal.gr/app_icon.ico"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Εγκατάσταση σε Tablet",
+          "text": "Εγκαταστήστε το POSPal σε tablet ή laptop για το beach bar σας"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Ρύθμιση Μενού",
+          "text": "Προσθέστε τα προϊόντα του beach bar σας (ποτά, κοκτέιλ, snacks)"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="canonical" href="https://pospal.gr/guides/beach-bar-setup">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center space-x-4">
+                        <img src="../app_icon.ico" alt="POSPal Logo" class="w-10 h-10 rounded-lg">
+                        <span class="text-2xl font-bold">
+                            <span class="text-brand-600">POS</span><span class="text-gray-900">Pal</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/guides" class="text-gray-600 hover:text-brand-600 text-sm">← Πίσω στους Οδηγούς</a>
+                    <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe"
+                       class="bg-brand-600 text-white px-6 py-2 rounded-lg hover:bg-brand-700 transition-colors font-medium text-sm">
+                        Κατέβασμα POSPal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-600">
+                <a href="/" class="hover:text-brand-600">Αρχική</a>
+                <span class="mx-2">›</span>
+                <a href="/guides" class="hover:text-brand-600">Οδηγοί</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-900">Beach Bar Setup</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <section class="py-12 bg-gradient-to-br from-orange-50 to-orange-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-4">
+                <div class="w-16 h-16 bg-orange-200 rounded-xl flex items-center justify-center mr-4">
+                    🏖️
+                </div>
+                <div>
+                    <span class="inline-block px-3 py-1 bg-orange-200 text-orange-800 text-xs font-medium rounded-full mb-2">
+                        Εποχικές Επιχειρήσεις
+                    </span>
+                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                        Εγκατάσταση POSPal για Beach Bar
+                    </h1>
+                </div>
+            </div>
+            <p class="text-xl text-gray-600 mb-6">
+                Πλήρης οδηγός για την εγκατάσταση και ρύθμιση του POSPal σε beach bars και παραθαλάσσιες επιχειρήσεις.
+                Ιδανικό για εποχικές επιχειρήσεις που θέλουν γρήγορη εγκατάσταση.
+            </p>
+            <div class="flex items-center space-x-6 text-sm text-gray-600">
+                <span><i class="fas fa-clock mr-1"></i> 30 λεπτά ανάγνωση</span>
+                <span><i class="fas fa-signal mr-1"></i> Εύκολο</span>
+                <span><i class="fas fa-calendar mr-1"></i> Ενημερώθηκε: Ιανουάριος 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Table of Contents -->
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Περιεχόμενα</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#requirements" class="text-brand-600 hover:text-brand-700">1. Προαπαιτούμενα για Beach Bar</a></li>
+                    <li><a href="#installation" class="text-brand-600 hover:text-brand-700">2. Εγκατάσταση Βήμα-Βήμα</a></li>
+                    <li><a href="#menu-setup" class="text-brand-600 hover:text-brand-700">3. Ρύθμιση Μενού Beach Bar</a></li>
+                    <li><a href="#qr-placement" class="text-brand-600 hover:text-brand-700">4. Τοποθέτηση QR Codes</a></li>
+                    <li><a href="#seasonal-tips" class="text-brand-600 hover:text-brand-700">5. Συμβουλές για Εποχικές Επιχειρήσεις</a></li>
+                    <li><a href="#troubleshooting" class="text-brand-600 hover:text-brand-700">6. Αντιμετώπιση Προβλημάτων</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <section id="requirements" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">1. Προαπαιτούμενα για Beach Bar</h2>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                    <h3 class="font-semibold text-blue-900 mb-2">
+                        <i class="fas fa-info-circle mr-2"></i>Τι χρειάζεστε
+                    </h3>
+                    <ul class="text-blue-800 text-sm space-y-1">
+                        <li>• Tablet ή Laptop (Windows)</li>
+                        <li>• Σταθερή σύνδεση WiFi ή 4G</li>
+                        <li>• Εκτυπωτής θερμικός (προαιρετικός)</li>
+                        <li>• 30 λεπτά για εγκατάσταση</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Γιατί το POSPal είναι ιδανικό για Beach Bars;</h3>
+                <p class="text-gray-700 mb-4">
+                    Τα beach bars έχουν ειδικές ανάγκες που το POSPal καλύπτει άριστα:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <li><strong>Εποχικότητα:</strong> Συνδρομή €20/μήνα που μπορεί να διακοπεί στο τέλος της σεζόν</li>
+                    <li><strong>Απλότητα:</strong> Δεν χρειάζεται ειδικός εξοπλισμός ή εγκατάσταση τεχνικού</li>
+                    <li><strong>Mobility:</strong> Δουλεύει σε tablets για παραγγελίες στα τραπέζια</li>
+                    <li><strong>QR Μενού:</strong> Οι πελάτες βλέπουν το μενού στο κινητό τους - ιδανικό για τουρίστες</li>
+                </ul>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="installation" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">2. Εγκατάσταση Βήμα-Βήμα</h2>
+
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 bg-brand-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</div>
+                            <h3 class="text-lg font-semibold text-gray-900">Κατέβασμα POSPal</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Πηγαίνετε στο επίσημο site και κατεβάστε το πρόγραμμα:</p>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-600 mb-2">Κατέβασμα από:</p>
+                            <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe"
+                               class="inline-flex items-center px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 text-sm">
+                                <i class="fas fa-download mr-2"></i>POSPal.exe (Δωρεάν 30 ημέρες)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 bg-brand-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
+                            <h3 class="text-lg font-semibold text-gray-900">Εγκατάσταση στο Tablet/PC</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Εκτελέστε το αρχείο και ακολουθήστε τις οδηγίες:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Δεξί κλικ → "Run as administrator" (σημαντικό!)</li>
+                            <li>Επιλέξτε φάκελο εγκατάστασης</li>
+                            <li>Περιμένετε να ολοκληρωθεί η εγκατάσταση</li>
+                        </ul>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 bg-brand-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
+                            <h3 class="text-lg font-semibold text-gray-900">Πρώτη Εκκίνηση</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Ανοίξτε το POSPal και θα δείτε το περιβάλλον διαχείρισης:</p>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <p class="text-yellow-800 text-sm">
+                                <i class="fas fa-lightbulb mr-2"></i>
+                                <strong>Tip:</strong> Το POSPal ξεκινάει με 30 ημέρες δωρεάν δοκιμή. Δεν χρειάζεται κάρτα ή εγγραφή!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="menu-setup" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">3. Ρύθμιση Μενού Beach Bar</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Τώρα θα ρυθμίσουμε το μενού σας. Τα beach bars έχουν συνήθως απλό μενού με ποτά, κοκτέιλ και light meals.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Προτεινόμενες Κατηγορίες για Beach Bar:</h3>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-900 mb-3">🍹 Ποτά & Κοκτέιλ</h4>
+                        <ul class="text-blue-800 text-sm space-y-1">
+                            <li>• Μπίρες (Άλφα, Heineken, Corona)</li>
+                            <li>• Κοκτέιλ (Mojito, Piña Colada)</li>
+                            <li>• Αναψυκτικά & Νερά</li>
+                            <li>• Καφέδες & Frappes</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-orange-900 mb-3">🍤 Φαγητό</h4>
+                        <ul class="text-orange-800 text-sm space-y-1">
+                            <li>• Σαλάτες (Ελληνική, Caesar)</li>
+                            <li>• Snacks (Τυρόπιτα, Σάντουιτς)</li>
+                            <li>• Θαλασσινά (Γαρίδες, Καλαμάρια)</li>
+                            <li>• Επιδόρπια (Παγωτό, Γλυκά)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h4 class="font-semibold text-gray-900 mb-3">💡 Pro Tips για Beach Bar Μενού:</h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li><strong>Απλότητα:</strong> Κρατήστε το μενού απλό - 20-30 είδη maximum</li>
+                        <li><strong>Τιμές:</strong> Χρησιμοποιήστε στρογγυλά νούμερα (€5, €10) για γρήγορες συναλλαγές</li>
+                        <li><strong>Εικόνες:</strong> Προσθέστε φωτογραφίες στα signature κοκτέιλ σας</li>
+                        <li><strong>Εποχικότητα:</strong> Προσθέστε summer specials που μπορείτε να αφαιρέσετε εύκολα</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="qr-placement" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">4. Τοποθέτηση QR Codes</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Το QR μενού είναι ιδανικό για beach bars γιατί οι πελάτες μπορούν να δουν το μενού στο κινητό τους χωρίς να χειριστούν φυσικά μενού.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Βέλτιστες Θέσεις για QR Codes:</h3>
+
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">✓</div>
+                        <div>
+                            <strong class="text-gray-900">Κέντρο κάθε τραπεζιού:</strong>
+                            <p class="text-gray-600 text-sm">Πλαστικοποιημένο QR code στο κέντρο, αδιάβροχο</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">✓</div>
+                        <div>
+                            <strong class="text-gray-900">Είσοδος beach bar:</strong>
+                            <p class="text-gray-600 text-sm">Μεγάλη πινακίδα για πελάτες που μπαίνουν</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">✓</div>
+                        <div>
+                            <strong class="text-gray-900">Bar area:</strong>
+                            <p class="text-gray-600 text-sm">Για πελάτες που παραγγέλνουν στο μπαρ</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">✓</div>
+                        <div>
+                            <strong class="text-gray-900">Ξαπλώστρες:</strong>
+                            <p class="text-gray-600 text-sm">Μικρές πινακίδες για service στην παραλία</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 class="font-semibold text-orange-900 mb-2">⚠️ Προσοχή στην Παραλία:</h4>
+                    <ul class="text-orange-800 text-sm space-y-1">
+                        <li>• Χρησιμοποιήστε αδιάβροχα υλικά (πλαστικοποίηση)</li>
+                        <li>• Κολλήστε καλά για να μην τα πάρει ο άνεμος</li>
+                        <li>• Κρατήστε εφεδρικά QR codes για αντικατάσταση</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="seasonal-tips" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">5. Συμβουλές για Εποχικές Επιχειρήσεις</h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                        <h3 class="font-semibold text-green-900 mb-3">🌞 Ανοιχτή Σεζόν</h3>
+                        <ul class="text-green-800 text-sm space-y-2">
+                            <li>• Ενεργοποιήστε τη συνδρομή €20/μήνα</li>
+                            <li>• Ενημερώστε τις τιμές για καλοκαίρι</li>
+                            <li>• Προσθέστε seasonal specials</li>
+                            <li>• Εκπαιδεύστε το προσωπικό στο σύστημα</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h3 class="font-semibold text-blue-900 mb-3">❄️ Κλειστή Σεζόν</h3>
+                        <ul class="text-blue-800 text-sm space-y-2">
+                            <li>• Διακόψτε τη συνδρομή (χωρίς penalty)</li>
+                            <li>• Κρατήστε backup των δεδομένων</li>
+                            <li>• Σχεδιάστε το μενού για επόμενη σεζόν</li>
+                            <li>• Αναλύστε τα στατιστικά της σεζόν</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
+                    <h4 class="font-semibold text-yellow-900 mb-2">💰 Οικονομικά Οφέλη:</h4>
+                    <p class="text-yellow-800 text-sm">
+                        Με το POSPal πληρώνετε μόνο όταν είστε ανοιχτοί. 6 μήνες λειτουργία = €120 vs €3000+ με παραδοσιακά συστήματα!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="troubleshooting" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">6. Αντιμετώπιση Προβλημάτων</h2>
+
+                <div class="space-y-4">
+                    <details class="bg-gray-50 border border-gray-200 rounded-lg">
+                        <summary class="p-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-100">
+                            🔧 Το QR μενού δεν ανοίγει
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-700 text-sm">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Ελέγξτε τη σύνδεση internet του POSPal</li>
+                                <li>Βεβαιωθείτε ότι το server τρέχει</li>
+                                <li>Δοκιμάστε με διαφορετικό κινητό</li>
+                                <li>Επανεκκινήστε το POSPal</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="bg-gray-50 border border-gray-200 rounded-lg">
+                        <summary class="p-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-100">
+                            📡 Προβλήματα με WiFi στην παραλία
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-700 text-sm">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Χρησιμοποιήστε 4G hotspot αν το WiFi είναι αργό</li>
+                                <li>Τοποθετήστε το router σε κεντρικό σημείο</li>
+                                <li>Χρησιμοποιήστε WiFi extender για μεγαλύτερη κάλυψη</li>
+                                <li>Backup plan: Mobile internet στο tablet</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="bg-gray-50 border border-gray-200 rounded-lg">
+                        <summary class="p-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-100">
+                            🖨️ Ο εκτυπωτής δεν δουλεύει
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-700 text-sm">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Ελέγξτε αν έχει χαρτί και μελάνι</li>
+                                <li>Επανεκκινήστε τον εκτυπωτή</li>
+                                <li>Ελέγξτε τη σύνδεση USB/WiFi</li>
+                                <li>Στις ρυθμίσεις POSPal ελέγξτε τον επιλεγμένο εκτυπωτή</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="bg-gradient-to-r from-brand-600 to-brand-700 text-white rounded-2xl p-8 text-center">
+                <h2 class="text-2xl font-bold mb-4">Συγχαρητήρια! 🎉</h2>
+                <p class="text-lg mb-6 opacity-90">
+                    Το beach bar σας είναι έτοιμο με το POSPal! Τώρα μπορείτε να εξυπηρετείτε πελάτες αποτελεσματικά.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/guides/first-week-optimization"
+                       class="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                        Επόμενο: Πρώτη Εβδομάδα Tips
+                    </a>
+                    <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe"
+                       class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-brand-600 transition-colors font-semibold">
+                        <i class="fas fa-download mr-2"></i>Κατέβασμα POSPal
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </article>
+
+    <!-- Related Guides -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 text-center mb-8">Σχετικοί Οδηγοί</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/guides/cafe-optimization" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-3">☕</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Καφετέρια Setup</h3>
+                    <p class="text-gray-600 text-sm">Ειδικές ρυθμίσεις για καφέ και quick service</p>
+                </a>
+
+                <a href="/guides/food-truck-mobile" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-3">🚚</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Food Truck Guide</h3>
+                    <p class="text-gray-600 text-sm">Mobile POS για κινητές επιχειρήσεις</p>
+                </a>
+
+                <a href="/guides/seasonal-management" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">📅</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Εποχική Διαχείριση</h3>
+                    <p class="text-gray-600 text-sm">Βέλτιστη διαχείριση για εποχικές επιχειρήσεις</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <img src="../app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-lg">
+                <span class="text-xl font-bold text-white">POSPal</span>
+            </div>
+            <p class="text-sm mb-4">Το φθηνότερο POS σύστημα στην Ελλάδα - €20/μήνα</p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="/" class="hover:text-white">Αρχική</a>
+                <a href="/guides" class="hover:text-white">Οδηγοί</a>
+                <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe" class="hover:text-white">Download</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

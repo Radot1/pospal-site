@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSPal - Desktop Demo</title>
+    <script src="./static/vendor/tailwindcdn.js"></script>
+    <link rel="stylesheet" href="./static/css/fonts.css">
+    <link rel="stylesheet" href="./static/vendor/fontawesome/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-thumb { background-color: #9ca3af; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #e5e7eb; }
+        .product-card h3 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.5em;
+        }
+        .options-badge {
+            font-size: 0.65em;
+            font-weight: 500;
+            background-color: #4b5563;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            white-space: nowrap;
+            align-self: center;
+        }
+        .option-pill {
+            display: inline-flex;
+            align-items: center;
+            background-color: #4b5563;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.9em;
+            line-height: 1;
+        }
+        .option-pill .remove-option-btn {
+            background: none;
+            border: none;
+            color: white;
+            margin-left: 0.6rem;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 0;
+            line-height: 0.5;
+            font-weight: bold;
+        }
+        .option-pill .remove-option-btn:hover { color: #d1d5db; }
+        .option-selectable.selected {
+            border-color: #111827 !important;
+            background-color: #f3f4f6;
+        }
+        .date-range-btn.active {
+            background-color: #111827;
+            color: white;
+            font-weight: 600;
+        }
+        .copy-btn {
+            background-color: #d1d5db;
+            color: #1f2937;
+            border: 1px solid #9ca3af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover { background-color: #9ca3af; }
+
+        /* Consistent Color Scheme */
+        .btn-primary { background-color: #111827; color: white; }
+        .btn-primary:hover { background-color: #1f2937; }
+        .btn-primary:disabled { background-color: #6b7280; cursor: not-allowed; }
+        .btn-secondary { background-color: #e5e7eb; color: #1f2937; border: 1px solid #d1d5db; }
+        .btn-secondary:hover { background-color: #d1d5db; }
+        .btn-danger { background-color: #ef4444; color: white; }
+        .btn-danger:hover { background-color: #dc2626; }
+        .btn-warning { background-color: #f59e0b; color: white; }
+        .btn-warning:hover { background-color: #d97706; }
+        .btn-success { background-color: #16a34a; color: white; }
+        .btn-success:hover { background-color: #15803d; }
+        .category-tab {
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .category-tab:hover {
+            background-color: #e5e7eb;
+            border-color: #9ca3af;
+        }
+        .category-tab.active {
+            background-color: #111827;
+            color: white;
+            border-color: #111827;
+        }
+        .order-item.selected-for-numpad {
+            background-color: #e5e7eb;
+            border-left: 3px solid #374151;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #111827;
+            box-shadow: 0 0 0 2px #9ca3af;
+            outline: none;
+        }
+        .management-form input:focus, .management-form select:focus, .management-form textarea:focus {
+            border-color: #111827;
+            box-shadow: 0 0 0 2px #9ca3af;
+        }
+
+        /* Rotating Settings Gear */
+        .settings-gear {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .settings-gear:hover {
+            transform: rotate(90deg) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Desktop Order Items */
+        .order-item {
+            transition: all 0.2s ease;
+        }
+        .order-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .order-item.selected-for-numpad {
+            background-color: #eff6ff !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+
+        /* Enhanced License Validation UI Components */
+        .license-status-message { font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.5rem; }
+        .progressive-warning { animation: warningPulse 2s ease-in-out infinite; }
+        @keyframes warningPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
+        .connectivity-status { transition: all 0.3s ease; backdrop-filter: blur(4px); }
+        .connectivity-status:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .trial-mode-indicator { animation: trialBlink 3s ease-in-out infinite; }
+        @keyframes trialBlink { 0%, 85%, 100% { opacity: 1; } 90%, 95% { opacity: 0.7; } }
+        .warning-notification { animation: slideInDown 0.4s ease-out; }
+        @keyframes slideInDown { from { transform: translate(-50%, -100%); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+        .offline-grace-progress { background: linear-gradient(90deg, #f59e0b 0%, #d97706 50%, #dc2626 100%); }
+        .license-badge-active { background: linear-gradient(45deg, #10b981, #047857) !important; animation: successGlow 2s ease-in-out; }
+        @keyframes successGlow { 0%, 100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.3); } 50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); } }
+        .connection-help-modal { backdrop-filter: blur(8px); }
+        .status-indicator-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
+
+        /* Analytics Chart Enhancements */
+        #analytics-chart-container {
+            background: linear-gradient(to bottom, rgba(243, 244, 246, 0.3) 0%, transparent 100%);
+            border-radius: 8px;
+            padding: 16px 8px 8px 8px;
+        }
+
+        .chart-tooltip {
+            backdrop-filter: blur(8px);
+            animation: tooltipFadeIn 0.2s ease-out;
+        }
+
+        @keyframes tooltipFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .analytics-section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="desktop-ui flex h-screen bg-gray-100 text-gray-800">
+
+    <!-- Left Panel: Order Details -->
+    <div class="w-1/3 max-w-md flex flex-col p-3 gap-2 bg-gray-50 border-r border-gray-300 h-full overflow-hidden">
+        <div class="bg-gray-900 text-white p-3 rounded-lg">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-xl font-bold tracking-wider">POS<span class="text-green-400">Pal</span></h1>
+                </div>
+                <div class="text-right">
+                    <div class="mt-1 flex items-center space-x-2 bg-gray-700 px-3 py-1 rounded-md">
+                        <label for="header-table-input" class="cursor-pointer">
+                            <i class="fas fa-chair text-white"></i>
+                        </label>
+                        <input type="text" id="header-table-input" class="bg-transparent text-white font-semibold w-24 focus:outline-none placeholder-gray-400" placeholder="Table #">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 bg-white p-3 rounded-lg shadow-md flex flex-col min-h-0">
+            <div class="flex items-center justify-between mb-2 flex-shrink-0">
+                <h2 class="text-xl font-bold">Order #<span id="order-number-desktop">1</span></h2>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDesktopNumpad()" class="px-2 py-1 text-xs btn-secondary rounded">Numpad</button>
+                </div>
+            </div>
+            <div id="order-items-container" class="flex-1 overflow-y-auto -mr-2 pr-2 space-y-1 min-h-0">
+                <p id="empty-order-message" class="text-gray-500 text-center py-8 italic">Your order is empty.</p>
+            </div>
+            <div id="order-total" class="text-2xl font-bold text-right mt-4 pt-4 border-t border-gray-200 flex-shrink-0">Total: €0.00</div>
+        </div>
+
+        <div id="desktopNumpadMini" class="bg-white p-2 rounded-lg shadow-md">
+            <div class="flex flex-wrap gap-2 items-center">
+                <div class="grid grid-cols-3 gap-2 flex-1">
+                    <button onclick="handleNumpad_desktop(1)" class="w-full py-3 bg-white border border-gray-300 rounded text-gray-800 text-lg hover:bg-gray-200">1</button>
+                    <button onclick="handleNumpad_desktop(2)" class="w-full py-3 bg-white border border-gray-300 rounded text-gray-800 text-lg hover:bg-gray-200">2</button>
+                    <button onclick="handleNumpad_desktop(3)" class="w-full py-3 bg-white border border-gray-300 rounded text-gray-800 text-lg hover:bg-gray-200">3</button>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="handleNumpadClear_desktop()" class="px-3 py-2 text-xs btn-warning rounded">C</button>
+                    <button onclick="handleNumpadBackspace_desktop()" class="px-3 py-2 text-xs btn-danger rounded"><i class="fas fa-backspace"></i></button>
+                </div>
+                <button onclick="expandDesktopNumpad()" class="ml-auto px-3 py-2 text-xs btn-secondary rounded"><i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+
+        <div id="desktopNumpad" class="bg-white p-3 rounded-lg shadow-md hidden">
+            <div class="grid grid-cols-3 gap-2">
+               <button onclick="handleNumpad_desktop(1)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">1</button>
+               <button onclick="handleNumpad_desktop(2)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">2</button>
+               <button onclick="handleNumpad_desktop(3)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">3</button>
+               <button onclick="handleNumpad_desktop(4)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">4</button>
+               <button onclick="handleNumpad_desktop(5)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">5</button>
+               <button onclick="handleNumpad_desktop(6)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">6</button>
+               <button onclick="handleNumpad_desktop(7)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">7</button>
+               <button onclick="handleNumpad_desktop(8)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">8</button>
+               <button onclick="handleNumpad_desktop(9)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">9</button>
+               <button onclick="handleNumpadClear_desktop()" class="py-3 rounded-lg font-semibold text-xl transition-colors btn-warning">C</button>
+               <button onclick="handleNumpad_desktop(0)" class="py-3 bg-white border border-gray-300 rounded-lg text-gray-800 font-semibold text-xl hover:bg-gray-200 active:bg-gray-300 transition-colors">0</button>
+               <button onclick="handleNumpadBackspace_desktop()" class="py-3 rounded-lg font-semibold text-xl transition-colors btn-danger"><i class="fas fa-backspace"></i></button>
+            </div>
+        </div>
+
+        <div id="desktopNotesCard" class="bg-white p-3 rounded-lg shadow-md">
+            <label for="universalOrderCommentInput_desktop" class="block mb-1 text-sm font-medium text-gray-700">Order Notes:</label>
+            <textarea id="universalOrderCommentInput_desktop" rows="2" class="w-full p-2 border border-gray-300 rounded-md text-sm" placeholder="Add notes for the entire order..."></textarea>
+            <textarea id="universalOrderCommentInput" rows="3" class="hidden"></textarea>
+            <div class="mt-2 flex items-center">
+                <label for="paidByCardCheckbox" class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" id="paidByCardCheckbox" class="h-5 w-5 text-black border-gray-300 rounded focus:ring-black accent-black">
+                    <span class="text-sm font-medium text-gray-700">Pay by Card</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="flex gap-3">
+            <button onclick="newOrder()" class="w-full py-3 text-lg font-semibold rounded-lg btn-secondary transition-transform active:scale-95">New Order</button>
+            <button id="sendOrderBtn" onclick="sendOrder()" class="w-full py-3 text-lg font-semibold rounded-lg btn-primary transition-transform active:scale-95">Send Order</button>
+        </div>
+    </div>
+
+    <!-- Right Panel: Menu -->
+    <div class="w-2/3 flex-1 flex flex-col p-4 h-full overflow-hidden">
+        <div id="category-section" class="mb-4 pb-4 border-b border-gray-300 flex-shrink-0">
+            <div id="categories" class="flex flex-wrap gap-2">
+                <!-- Categories will load here -->
+            </div>
+        </div>
+        <div id="products" class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-3 overflow-y-auto flex-1 content-start">
+            <!-- Products will load here -->
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg text-sm z-[2000] hidden opacity-0 transition-opacity duration-300">
+        <span id="toast-message">Toast message here</span>
+    </div>
+
+    <!-- Settings Gear -->
+    <div id="settings-gear-container" class="fixed bottom-4 right-4 z-[1001]">
+        <button onclick="openLoginModal()" class="settings-gear text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition" title="Settings">
+            <i class="fas fa-cog text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-70 z-[90] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm text-gray-800">
+            <h3 class="text-xl font-semibold mb-4 text-center">Management Access (Demo)</h3>
+            <form id="loginForm">
+                <div class="space-y-4">
+                    <div>
+                        <label for="passwordInput" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="passwordInput" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm sm:text-sm" placeholder="Password" required>
+                    </div>
+                    <p id="loginError" class="text-sm text-red-600 text-center hidden"></p>
+                    <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg text-sm text-blue-800">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <strong>Demo Tip:</strong> Use password "9999" to access management features
+                    </div>
+                    <div class="flex gap-2 pt-2">
+                        <button type="button" class="w-full py-2 px-4 btn-secondary" onclick="closeLoginModal()">Cancel</button>
+                        <button type="submit" id="loginSubmitBtn" class="w-full py-2 px-4 btn-primary">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Management Modal -->
+    <div id="managementModal" class="fixed inset-0 bg-black bg-opacity-50 z-[70] hidden flex flex-col justify-end sm:justify-center sm:items-center">
+        <div class="bg-white shadow-xl w-full h-[90vh] sm:h-auto sm:max-h-[90vh] sm:max-w-6xl flex flex-col text-gray-800 rounded-t-2xl sm:rounded-lg">
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center flex-shrink-0">
+                <h2 class="text-xl font-semibold">Management (Demo Mode)</h2>
+                <button onclick="closeManagementModal()" class="text-gray-500 hover:text-black"><i class="fas fa-times text-2xl"></i></button>
+            </div>
+            <div class="p-2 border-b border-gray-200 management-tab-container flex-shrink-0">
+                <div class="flex flex-wrap gap-1 rounded-md bg-gray-100 p-1">
+                    <button onclick="switchManagementTab('analytics', this)" class="management-tab flex-1 py-2 px-2 text-xs sm:text-sm font-medium rounded-md text-gray-600 hover:bg-gray-200">Analytics</button>
+                    <button onclick="switchManagementTab('items', this)" class="management-tab flex-1 py-2 px-2 text-xs sm:text-sm font-medium rounded-md text-gray-600 hover:bg-gray-200">Items</button>
+                    <button onclick="switchManagementTab('categories', this)" class="management-tab flex-1 py-2 px-2 text-xs sm:text-sm font-medium rounded-md text-gray-600 hover:bg-gray-200">Categories</button>
+                    <button onclick="switchManagementTab('orderHistory', this)" class="management-tab flex-1 py-2 px-2 text-xs sm:text-sm font-medium rounded-md text-gray-600 hover:bg-gray-200">Order History</button>
+                    <button onclick="openDaySummaryModal()" class="flex-1 py-2 px-2 text-xs sm:text-sm font-medium rounded-md text-gray-600 hover:bg-gray-200 bg-blue-100">Day Summary</button>
+                </div>
+            </div>
+            <div class="flex-grow overflow-y-auto p-4 management-content">
+                <!-- Analytics Management -->
+                <div id="analyticsManagement" class="hidden">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4 gap-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Performance Overview (Demo Data)</h3>
+                        <div class="flex items-center gap-1 bg-gray-100 p-1 rounded-lg flex-wrap">
+                            <button onclick="loadAnalyticsData('today', this)" class="date-range-btn flex-grow text-sm px-3 py-1.5 rounded-md transition-colors">Today</button>
+                            <button onclick="loadAnalyticsData('week', this)" class="date-range-btn flex-grow text-sm px-3 py-1.5 rounded-md transition-colors">This Week</button>
+                            <button onclick="loadAnalyticsData('month', this)" class="date-range-btn flex-grow text-sm px-3 py-1.5 rounded-md transition-colors">This Month</button>
+                            <button onclick="toggleCustomDateRangeUI(this)" class="date-range-btn flex-grow text-sm px-3 py-1.5 rounded-md transition-colors">Custom</button>
+                        </div>
+                    </div>
+                    <div id="custom-date-range-picker" class="hidden my-4 p-4 bg-gray-100 rounded-lg border border-gray-200">
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <div>
+                                <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+                                <input type="date" id="startDate" name="startDate" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="endDate" class="block text-sm font-medium text-gray-700">End Date</label>
+                                <input type="date" id="endDate" name="endDate" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm">
+                            </div>
+                            <div class="self-end pt-1 sm:pt-0">
+                                <button onclick="fetchCustomDateRangeAnalytics()" class="w-full sm:w-auto py-2 px-4 btn-primary rounded-md">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                        <div class="bg-gray-50 p-4 rounded-lg shadow"><h4 class="text-sm font-medium text-gray-500">Gross Revenue</h4><p id="kpi-gross-revenue" class="text-3xl font-bold text-gray-900 mt-1">€247.50</p></div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow"><h4 class="text-sm font-medium text-gray-500">Total Orders</h4><p id="kpi-total-orders" class="text-3xl font-bold text-gray-900 mt-1">42</p></div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow"><h4 class="text-sm font-medium text-gray-500">Avg. Order Value</h4><p id="kpi-atv" class="text-3xl font-bold text-gray-900 mt-1">€5.89</p></div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow"><h4 class="text-sm font-medium text-gray-500">Items per Order</h4><p id="kpi-items-per-order" class="text-3xl font-bold text-gray-900 mt-1">2.3</p></div>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Sales by Hour Chart -->
+                        <div class="bg-white p-4 rounded-lg border">
+                            <h4 class="font-semibold text-gray-700 mb-3">Sales by Hour</h4>
+                            <div class="overflow-x-auto" style="overflow-y:hidden; padding-bottom:0.5rem">
+                                <div id="analytics-chart-container" class="flex items-end space-x-4" style="height:14rem">
+                                    <p style="font-size:12px; color:#6b7280; font-style:italic; width:100%; text-align:center">Loading chart data...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Two Column Analytics Grid -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+                            <div class="bg-white p-4 rounded-lg border h-full" style="display:flex; flex-direction:column">
+                                <h4 class="font-semibold text-gray-700 mb-2">Sales by Category</h4>
+                                <div id="kpi-sales-by-category" class="space-y-2" style="flex-grow:1; overflow-y:auto">
+                                    <p style="font-size:12px; color:#6b7280; font-style:italic">Loading data...</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border h-full" style="display:flex; flex-direction:column">
+                                <h4 class="font-semibold text-gray-700 mb-2">Top Items (by Revenue)</h4>
+                                <div id="kpi-top-revenue-items" class="space-y-2" style="flex-grow:1; overflow-y:auto">
+                                    <p style="font-size:12px; color:#6b7280; font-style:italic">Loading data...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Two Column Analytics Grid -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+                            <div class="bg-white p-4 rounded-lg border h-full" style="display:flex; flex-direction:column">
+                                <h4 class="font-semibold text-gray-700 mb-2">Best Selling Items (by Qty)</h4>
+                                <div id="kpi-best-sellers" class="space-y-2" style="flex-grow:1; overflow-y:auto">
+                                    <p style="font-size:12px; color:#6b7280; font-style:italic">Loading data...</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border h-full" style="display:flex; flex-direction:column">
+                                <h4 class="font-semibold text-gray-700 mb-2">Underperforming Items (by Qty)</h4>
+                                <div id="kpi-worst-sellers" class="space-y-2" style="flex-grow:1; overflow-y:auto">
+                                    <p style="font-size:12px; color:#6b7280; font-style:italic">Loading data...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top Add-ons Section -->
+                        <div class="bg-white p-4 rounded-lg border">
+                            <h4 class="font-semibold text-gray-700 mb-2">Top Add‑ons / Options</h4>
+                            <div id="kpi-top-addons" class="space-y-2">
+                                <p style="font-size:12px; color:#6b7280; font-style:italic">No add‑on data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Items Management -->
+                <div id="itemsManagement" class="hidden">
+                    <div class="flex justify-end mb-4"><button onclick="openItemFormModal()" class="btn-success py-2 px-4 rounded-md flex items-center"><i class="fas fa-plus mr-2"></i>Add New Item (Demo)</button></div>
+                    <h4 class="text-md font-medium text-gray-800 mb-2">Existing Items (Demo Data)</h4>
+                    <div id="existingItemsListModal" class="space-y-3 pr-2 border border-gray-200 rounded-md p-2 bg-gray-50">
+                        <div class="bg-white p-3 rounded border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <div class="font-semibold">Ribeye Steak (300g)</div>
+                                    <div class="text-sm text-gray-600">Steaks • €28.50</div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="btn-secondary px-2 py-1 text-xs">Edit</button>
+                                    <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <div class="font-semibold">Classic Cheeseburger</div>
+                                    <div class="text-sm text-gray-600">Burgers • €14.50</div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="btn-secondary px-2 py-1 text-xs">Edit</button>
+                                    <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Management -->
+                <div id="categoriesManagement" class="hidden">
+                    <form id="categoryManagementForm" class="space-y-4 management-form">
+                        <div><label for="categoryName" class="block text-sm font-medium text-gray-700">Category Name</label><input type="text" id="categoryName" name="categoryName" class="mt-1 block w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm sm:text-sm" required></div>
+                        <button type="button" onclick="saveCategory()" class="w-full py-2 px-4 btn-success">📁 Save Category (Demo)</button>
+                    </form>
+                    <div class="mt-6">
+                        <h4 class="text-md font-medium text-gray-800 mb-2">Existing Categories (Demo Data)</h4>
+                        <div id="existingCategoriesListModal" class="space-y-2 max-h-72 overflow-y-auto pr-1 border border-gray-200 rounded-md p-2 bg-gray-50">
+                            <div class="bg-white p-2 rounded border flex justify-between items-center">
+                                <span>Steaks</span>
+                                <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                            </div>
+                            <div class="bg-white p-2 rounded border flex justify-between items-center">
+                                <span>Burgers</span>
+                                <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                            </div>
+                            <div class="bg-white p-2 rounded border flex justify-between items-center">
+                                <span>Sides</span>
+                                <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                            </div>
+                            <div class="bg-white p-2 rounded border flex justify-between items-center">
+                                <span>Drinks</span>
+                                <button class="btn-danger px-2 py-1 text-xs">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order History Management -->
+                <div id="orderHistoryManagement" class="hidden">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Today's Orders (Demo Data)</h3>
+                    <div class="flex flex-wrap gap-2 items-end mb-3">
+                        <div>
+                            <label class="block text-xs text-gray-600">Date</label>
+                            <input id="ohDate" type="date" class="px-2 py-1 border border-gray-300 rounded text-sm" />
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-600">Time Range</label>
+                            <select id="ohRange" class="px-2 py-1 border border-gray-300 rounded text-sm">
+                                <option value="all">All Day</option>
+                                <option value="this_hour">This Hour</option>
+                                <option value="last2h">Last 2 Hours</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="flex-1 min-w-[160px]">
+                            <label class="block text-xs text-gray-600">Search (Order # or Table)</label>
+                            <input id="ohSearch" type="text" class="w-full px-2 py-1 border border-gray-300 rounded text-sm" placeholder="# or table" />
+                        </div>
+                        <button onclick="loadTodaysOrdersForReprint()" class="px-3 py-2 btn-secondary text-sm"><i class="fas fa-sync-alt mr-1"></i> Refresh</button>
+                    </div>
+                    <div id="todaysOrdersList" class="space-y-2 max-h-[60vh] overflow-y-auto pr-1 border border-gray-200 rounded-md p-2 bg-gray-50">
+                        <div class="bg-white p-3 rounded border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <div class="font-semibold">Order #1 - Table 5</div>
+                                    <div class="text-sm text-gray-600">2 items • €18.50 • 10:30 AM</div>
+                                </div>
+                                <button class="btn-secondary px-2 py-1 text-xs">Reprint</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <div class="font-semibold">Order #2 - Table 3</div>
+                                    <div class="text-sm text-gray-600">3 items • €24.75 • 11:15 AM</div>
+                                </div>
+                                <button class="btn-secondary px-2 py-1 text-xs">Reprint</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="appVersionContainer" class="p-3 border-t border-gray-200 bg-gray-50 flex justify-between items-center text-xs text-gray-500 flex-shrink-0 rounded-b-lg">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <span>POSPal Version:</span>
+                    <span id="appVersion" class="font-medium text-gray-600">1.0.0 (Demo)</span>
+                    <span id="footer-trial-status" class="font-medium text-blue-600">Demo Mode</span>
+                    <button onclick="switchManagementTab('license', this)" class="text-gray-500 hover:text-gray-800 hover:underline focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-1">License Info</button>
+                    <button onclick="switchManagementTab('hardwarePrinting', this)" class="text-gray-500 hover:text-gray-800 hover:underline focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-1">Settings</button>
+                    <button onclick="switchManagementTab('onlineMenu', this)" class="text-gray-500 hover:text-gray-800 hover:underline focus:outline-none focus:ring-2 focus:ring-gray-400 rounded px-1">Online Menu</button>
+                </div>
+                <button onclick="showDemoShutdownMessage()" class="btn-danger text-white py-1 px-3 rounded-md flex items-center text-xs font-semibold"><i class="fas fa-power-off mr-1.5"></i>Shutdown</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Day Summary Modal -->
+    <div id="daySummaryModal" class="fixed inset-0 bg-black bg-opacity-70 z-[80] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md flex flex-col text-gray-800">
+            <div class="p-4 border-b border-gray-300 flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Day Summary (Demo)</h2>
+                <button onclick="closeDaySummaryModal()" class="text-gray-500 hover:text-black"><i class="fas fa-times text-2xl"></i></button>
+            </div>
+            <div id="daySummaryContent" class="p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-600">€247.50</div>
+                        <div class="text-sm text-gray-600">Total Revenue</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-blue-600">42</div>
+                        <div class="text-sm text-gray-600">Orders Served</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600">€5.89</div>
+                        <div class="text-sm text-gray-600">Avg Order</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-600">97</div>
+                        <div class="text-sm text-gray-600">Items Sold</div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg text-sm text-blue-800">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    This is demo data. In the real application, this would show actual daily statistics.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Demo Configuration
+        const DEMO_MODE = true;
+        const LOCAL_STORAGE_PREFIX = 'pospalDemoDesktop_';
+
+        // Demo Menu Data
+        const MOCK_MENU_DATA = {
+            "Steaks": [
+                {"id": 1, "name": "Ribeye Steak (300g)", "price": 28.50, "hasGeneralOptions": true, "generalOptions": [{"name": "Peppercorn Sauce", "priceChange": 2.00}, {"name": "Mushroom Sauce", "priceChange": 2.00}]},
+                {"id": 2, "name": "Filet Mignon (250g)", "price": 34.00, "hasGeneralOptions": true, "generalOptions": [{"name": "Red Wine Jus", "priceChange": 2.50}]},
+                {"id": 3, "name": "T-Bone Steak (500g)", "price": 45.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 4, "name": "Sirloin Steak (280g)", "price": 25.00, "hasGeneralOptions": false, "generalOptions": []}
+            ],
+            "Burgers": [
+                {"id": 10, "name": "Classic Cheeseburger", "price": 14.50, "hasGeneralOptions": true, "generalOptions": [{"name": "Extra Bacon", "priceChange": 2.00}, {"name": "Double Patty", "priceChange": 4.00}]},
+                {"id": 11, "name": "Spicy Chicken Burger", "price": 13.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 12, "name": "Veggie Burger", "price": 12.50, "hasGeneralOptions": true, "generalOptions": [{"name": "Vegan Cheese", "priceChange": 1.50}]}
+            ],
+            "Sides": [
+                {"id": 20, "name": "French Fries", "price": 4.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 21, "name": "Onion Rings", "price": 5.50, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 22, "name": "Side Salad", "price": 6.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 23, "name": "Mashed Potatoes", "price": 4.50, "hasGeneralOptions": false, "generalOptions": []}
+            ],
+            "Drinks": [
+                {"id": 30, "name": "Coca-Cola", "price": 3.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 31, "name": "Craft Beer", "price": 6.50, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 32, "name": "House Red Wine", "price": 7.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 33, "name": "Sparkling Water", "price": 2.50, "hasGeneralOptions": false, "generalOptions": []}
+            ]
+        };
+
+        // Global Variables
+        let menu = {};
+        let selectedCategory = null;
+        let currentOrder = JSON.parse(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'CurrentOrder')) || [];
+        let orderNumber = parseInt(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'OrderNumber')) || 1;
+        let selectedItemForNumpad = null;
+
+        // DOM Elements Cache
+        const els = {};
+        function $(id) { return document.getElementById(id); }
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', () => {
+            cacheElements();
+            initializeApp();
+            renderCategories();
+            updateOrderDisplay();
+        });
+
+        function cacheElements() {
+            els.categories = $('categories');
+            els.products = $('products');
+            els.orderItems = $('order-items-container');
+            els.emptyOrderMsg = $('empty-order-message');
+            els.orderTotal = $('order-total');
+            els.orderNumber = $('order-number-desktop');
+            els.toast = $('toast');
+            els.toastMessage = $('toast-message');
+        }
+
+        function initializeApp() {
+            menu = JSON.parse(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'Menu')) || JSON.parse(JSON.stringify(MOCK_MENU_DATA));
+            selectedCategory = Object.keys(menu)[0] || null;
+            els.orderNumber.textContent = orderNumber;
+
+            // Set today's date as default
+            const today = new Date().toISOString().split('T')[0];
+            if ($('startDate')) $('startDate').value = today;
+            if ($('endDate')) $('endDate').value = today;
+            if ($('ohDate')) $('ohDate').value = today;
+        }
+
+        function renderCategories() {
+            els.categories.innerHTML = '';
+            Object.keys(menu).forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = `category-tab ${cat === selectedCategory ? 'active' : ''}`;
+                btn.textContent = cat;
+                btn.onclick = () => {
+                    selectedCategory = cat;
+                    renderCategories();
+                    renderProducts();
+                };
+                els.categories.appendChild(btn);
+            });
+            renderProducts();
+        }
+
+        function renderProducts() {
+            els.products.innerHTML = '';
+            (menu[selectedCategory] || []).forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card bg-white rounded-lg shadow border p-4 cursor-pointer hover:shadow-md transition-shadow';
+                card.onclick = () => addToOrder(item);
+
+                let optionsBadge = '';
+                if (item.hasGeneralOptions && item.generalOptions.length > 0) {
+                    optionsBadge = `<span class="options-badge">${item.generalOptions.length} opts</span>`;
+                }
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-sm font-semibold text-gray-800">${item.name}</h3>
+                        ${optionsBadge}
+                    </div>
+                    <p class="text-lg font-bold text-black">€${item.price.toFixed(2)}</p>
+                `;
+                els.products.appendChild(card);
+            });
+        }
+
+        function addToOrder(item) {
+            const orderItem = {
+                ...item,
+                quantity: 1,
+                orderId: `${item.id}-${Date.now()}`,
+                selectedOptions: []
+            };
+            currentOrder.push(orderItem);
+            updateOrderDisplay();
+            showToast(`Added ${item.name} to order`, 'success');
+        }
+
+        function updateOrderDisplay() {
+            els.orderItems.innerHTML = '';
+            let total = 0;
+
+            if (currentOrder.length === 0) {
+                els.emptyOrderMsg.style.display = 'block';
+            } else {
+                els.emptyOrderMsg.style.display = 'none';
+                currentOrder.forEach((item, index) => {
+                    let itemTotal = item.price * item.quantity;
+
+                    // Add options price
+                    if (item.selectedOptions) {
+                        item.selectedOptions.forEach(opt => {
+                            itemTotal += opt.priceChange * item.quantity;
+                        });
+                    }
+
+                    total += itemTotal;
+
+                    const row = document.createElement('div');
+                    row.className = 'order-item p-2 border-b border-gray-200 flex items-center justify-between text-sm cursor-pointer hover:bg-gray-50 border border-transparent rounded';
+                    row.onclick = () => selectOrderItemForNumpad(index);
+
+                    let optionsDisplay = '';
+                    if (item.selectedOptions && item.selectedOptions.length > 0) {
+                        optionsDisplay = `<div class="text-xs text-gray-500 mt-1">${item.selectedOptions.map(opt => opt.name).join(', ')}</div>`;
+                    }
+
+                    row.innerHTML = `
+                        <div class="flex-grow pr-2">
+                            <span class="font-medium text-gray-800">${item.name}</span>
+                            ${optionsDisplay}
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button class="px-2 py-1 text-xs btn-secondary rounded" onclick="event.stopPropagation(); changeQuantity('${item.orderId}', -1)">-</button>
+                            <span class="w-6 text-center font-medium">${item.quantity}</span>
+                            <button class="px-2 py-1 text-xs btn-secondary rounded" onclick="event.stopPropagation(); changeQuantity('${item.orderId}', 1)">+</button>
+                            <span class="font-semibold text-gray-900 min-w-[60px] text-right">€${itemTotal.toFixed(2)}</span>
+                            <button class="text-red-600 hover:text-red-800 p-1" onclick="event.stopPropagation(); removeItem('${item.orderId}')" title="Remove item">
+                                <i class="fas fa-trash text-xs"></i>
+                            </button>
+                        </div>
+                    `;
+                    els.orderItems.appendChild(row);
+                });
+            }
+
+            els.orderTotal.innerHTML = `Total: €${total.toFixed(2)}`;
+            localStorage.setItem(LOCAL_STORAGE_PREFIX + 'CurrentOrder', JSON.stringify(currentOrder));
+        }
+
+        function changeQuantity(orderId, delta) {
+            const item = currentOrder.find(i => i.orderId === orderId);
+            if (!item) return;
+
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                removeItem(orderId);
+            } else {
+                updateOrderDisplay();
+            }
+        }
+
+        function removeItem(orderId) {
+            currentOrder = currentOrder.filter(i => i.orderId !== orderId);
+            clearNumpadSelection();
+            updateOrderDisplay();
+            showToast('Item removed from order', 'info');
+        }
+
+        function newOrder() {
+            if (currentOrder.length && !confirm('Clear current order and start fresh?')) return;
+            currentOrder = [];
+            clearNumpadSelection();
+            updateOrderDisplay();
+            showToast('Order cleared', 'info');
+        }
+
+        function sendOrder() {
+            if (!currentOrder.length) {
+                showToast('Order is empty! Add items before sending.', 'warning');
+                return;
+            }
+
+            const btn = $('sendOrderBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+
+            setTimeout(() => {
+                showToast(`Order #${orderNumber} sent successfully! (Demo Mode)`, 'success');
+                orderNumber++;
+                localStorage.setItem(LOCAL_STORAGE_PREFIX + 'OrderNumber', orderNumber.toString());
+                newOrder();
+                btn.disabled = false;
+                btn.innerHTML = 'Send Order';
+                els.orderNumber.textContent = orderNumber;
+            }, 1200);
+        }
+
+        // Toast Notifications
+        let toastTimeout;
+        function showToast(message, type = 'info', duration = 3000) {
+            clearTimeout(toastTimeout);
+            els.toastMessage.textContent = message;
+            els.toast.classList.remove('hidden');
+            els.toast.style.opacity = '0';
+
+            // Set toast color based on type
+            const colors = {
+                success: '#16a34a',
+                warning: '#f59e0b',
+                danger: '#ef4444',
+                info: '#1f2937'
+            };
+            els.toast.style.backgroundColor = colors[type] || colors.info;
+
+            setTimeout(() => els.toast.style.opacity = '1', 10);
+
+            toastTimeout = setTimeout(() => {
+                els.toast.style.opacity = '0';
+                setTimeout(() => els.toast.classList.add('hidden'), 300);
+            }, duration);
+        }
+
+        // Login Modal Functions
+        function openLoginModal() {
+            $('loginModal').classList.remove('hidden');
+            $('loginModal').style.display = 'flex';
+            $('passwordInput').focus();
+        }
+
+        function closeLoginModal() {
+            $('loginModal').classList.add('hidden');
+            $('loginModal').style.display = 'none';
+            $('passwordInput').value = '';
+            $('loginError').classList.add('hidden');
+        }
+
+        // Handle login form submission
+        $('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = $('passwordInput').value;
+
+            if (password === '9999') {
+                closeLoginModal();
+                openManagementModal();
+            } else {
+                $('loginError').textContent = 'Incorrect password. Try: 9999';
+                $('loginError').classList.remove('hidden');
+                showToast('Demo tip: Use password "9999"', 'warning');
+            }
+        });
+
+        // Management Modal Functions
+        function openManagementModal() {
+            $('managementModal').classList.remove('hidden');
+            $('managementModal').style.display = 'flex';
+            // Default to analytics tab
+            switchManagementTab('analytics', $('managementModal').querySelector('.management-tab'));
+        }
+
+        function closeManagementModal() {
+            $('managementModal').classList.add('hidden');
+            $('managementModal').style.display = 'none';
+        }
+
+        function switchManagementTab(tabName, buttonElement) {
+            // Hide all content panels
+            document.querySelectorAll('[id$="Management"]').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+
+            // Remove active styling from all tabs
+            document.querySelectorAll('.management-tab').forEach(tab => {
+                tab.classList.remove('bg-white', 'text-gray-900', 'shadow-sm');
+                tab.classList.add('text-gray-600');
+            });
+
+            // Show selected content panel
+            const panel = $(tabName + 'Management');
+            if (panel) {
+                panel.classList.remove('hidden');
+            }
+
+            // Add active styling to selected tab
+            if (buttonElement) {
+                buttonElement.classList.add('bg-white', 'text-gray-900', 'shadow-sm');
+                buttonElement.classList.remove('text-gray-600');
+            }
+
+            // Load analytics data when analytics tab is selected
+            if (tabName === 'analytics') {
+                const todayButton = document.querySelector('.date-range-btn');
+                if (todayButton) {
+                    loadAnalyticsData('today', todayButton);
+                }
+            }
+        }
+
+        // Demo Analytics Data Generation
+        function generateDemoAnalyticsData(period = 'today') {
+            const currentDate = new Date();
+            let salesByHour = [];
+            let salesByCategory = [];
+            let topRevenueItems = [];
+            let bestSellers = [];
+            let worstSellers = [];
+            let topAddons = [];
+
+            // Generate hourly sales data
+            const hoursToGenerate = period === 'today' ? 24 : (period === 'week' ? 7 : 30);
+            const baseRevenue = period === 'today' ? 15 : (period === 'week' ? 180 : 300);
+
+            for (let i = 0; i < hoursToGenerate; i++) {
+                const revenue = Math.random() * baseRevenue + (baseRevenue * 0.3);
+                const label = period === 'today' ? `${i}:00` : (period === 'week' ? `Day ${i+1}` : `Week ${i+1}`);
+                salesByHour.push({
+                    hour: i,
+                    label: label,
+                    total: revenue,
+                    orders: Math.floor(revenue / 12) + Math.floor(Math.random() * 5)
+                });
+            }
+
+            // Generate category sales data
+            const categories = Object.keys(MOCK_MENU_DATA);
+            categories.forEach(category => {
+                const items = MOCK_MENU_DATA[category];
+                const totalRevenue = items.reduce((sum, item) => {
+                    const randomSales = Math.floor(Math.random() * 15) + 5;
+                    return sum + (item.price * randomSales);
+                }, 0);
+
+                salesByCategory.push({
+                    category: category,
+                    total: totalRevenue
+                });
+            });
+
+            // Generate top revenue items
+            const allItems = [];
+            Object.values(MOCK_MENU_DATA).flat().forEach(item => {
+                const randomSales = Math.floor(Math.random() * 20) + 1;
+                allItems.push({
+                    name: item.name,
+                    revenue: item.price * randomSales,
+                    quantity: randomSales
+                });
+            });
+
+            topRevenueItems = [...allItems].sort((a, b) => b.revenue - a.revenue).slice(0, 8);
+            bestSellers = [...allItems].sort((a, b) => b.quantity - a.quantity).slice(0, 8);
+            worstSellers = [...allItems].sort((a, b) => a.quantity - b.quantity).slice(0, 6);
+
+            // Generate top addons
+            topAddons = [
+                { name: 'Peppercorn Sauce', revenue: 45.60, attachRate: 0.23 },
+                { name: 'Extra Bacon', revenue: 38.20, attachRate: 0.19 },
+                { name: 'Mushroom Sauce', revenue: 32.40, attachRate: 0.16 },
+                { name: 'Double Patty', revenue: 28.80, attachRate: 0.12 }
+            ];
+
+            return {
+                grossRevenue: salesByHour.reduce((sum, h) => sum + h.total, 0),
+                totalOrders: salesByHour.reduce((sum, h) => sum + h.orders, 0),
+                atv: salesByHour.reduce((sum, h) => sum + h.total, 0) / salesByHour.reduce((sum, h) => sum + h.orders, 0),
+                totalItems: allItems.reduce((sum, item) => sum + item.quantity, 0),
+                salesByHour: salesByHour,
+                salesByCategory: salesByCategory,
+                topRevenueItems: topRevenueItems,
+                bestSellers: bestSellers,
+                worstSellers: worstSellers,
+                topAddons: topAddons
+            };
+        }
+
+        // Analytics Functions
+        function loadAnalyticsData(period, buttonElement) {
+            // Remove active class from all date range buttons
+            document.querySelectorAll('.date-range-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+
+            showToast(`Loading ${period} analytics... (Demo)`, 'info');
+
+            // Generate and render demo data
+            setTimeout(() => {
+                const demoData = generateDemoAnalyticsData(period);
+                renderAnalytics(demoData);
+                showToast(`${period} analytics loaded successfully!`, 'success');
+            }, 800);
+        }
+
+        function toggleCustomDateRangeUI(buttonElement) {
+            const picker = $('custom-date-range-picker');
+            if (picker.classList.contains('hidden')) {
+                picker.classList.remove('hidden');
+                buttonElement.classList.add('active');
+            } else {
+                picker.classList.add('hidden');
+                buttonElement.classList.remove('active');
+            }
+        }
+
+        function fetchCustomDateRangeAnalytics() {
+            const startDate = $('startDate').value;
+            const endDate = $('endDate').value;
+
+            if (!startDate || !endDate) {
+                showToast('Please select both start and end dates', 'warning');
+                return;
+            }
+
+            showToast(`Loading analytics for ${startDate} to ${endDate}... (Demo)`, 'info');
+
+            setTimeout(() => {
+                const demoData = generateDemoAnalyticsData('custom');
+                renderAnalytics(demoData);
+                showToast(`Custom date range analytics loaded!`, 'success');
+            }, 1000);
+        }
+
+        // Analytics Rendering Functions
+        function renderAnalytics(data) {
+            // Update KPI cards
+            $('kpi-gross-revenue').textContent = `€${(data.grossRevenue || 0).toFixed(2)}`;
+            $('kpi-total-orders').textContent = data.totalOrders || 0;
+            $('kpi-atv').textContent = `€${(data.atv || 0).toFixed(2)}`;
+
+            // Items per order
+            const itemsPerOrder = (data.totalItems && data.totalOrders) ? (data.totalItems / data.totalOrders) : 0;
+            const itemsPerOrderEl = $('kpi-items-per-order');
+            if (itemsPerOrderEl) itemsPerOrderEl.textContent = itemsPerOrder > 0 ? itemsPerOrder.toFixed(2) : '-';
+
+            // Render lists
+            renderList('kpi-sales-by-category', data.salesByCategory, item => `
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.category}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(item.total || 0).toFixed(2)}</span>
+                </div>`, "No category sales yet.");
+
+            renderList('kpi-top-revenue-items', data.topRevenueItems, item => `
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.name}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(item.revenue || 0).toFixed(2)}</span>
+                </div>`, "No items sold yet.");
+
+            renderList('kpi-best-sellers', data.bestSellers, item => `
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.name}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">${item.quantity} sold</span>
+                </div>`, "No items sold yet.");
+
+            renderList('kpi-worst-sellers', data.worstSellers, item => `
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.name}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">${item.quantity} sold</span>
+                </div>`, "No underperforming items found.");
+
+            // Render hourly chart
+            renderSalesByHourChart(data.salesByHour);
+
+            // Top add-ons/options
+            const addonsContainer = $('kpi-top-addons');
+            if (addonsContainer) {
+                const items = data.topAddons || [];
+                if (items.length === 0) {
+                    addonsContainer.innerHTML = '<p style="font-size: 0.75rem; color: #6b7280; font-style: italic; padding: 0.5rem;">No add‑on data.</p>';
+                } else {
+                    addonsContainer.innerHTML = items.map(a => `
+                        <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                            <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${a.name}</span>
+                            <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(a.revenue || 0).toFixed(2)} • ${a.attachRate ? Math.round(a.attachRate*100) : 0}%</span>
+                        </div>
+                    `).join('');
+                }
+            }
+        }
+
+        function renderList(containerId, items, templateFn, emptyMessage) {
+            const container = $(containerId);
+            container.innerHTML = '';
+
+            if (items && items.length > 0) {
+                items.forEach(item => {
+                    container.innerHTML += templateFn(item);
+                });
+            } else {
+                container.innerHTML = `<p style="font-size: 0.75rem; color: #6b7280; font-style: italic; padding: 0.5rem;">${emptyMessage}</p>`;
+            }
+        }
+
+        function renderSalesByHourChart(salesByHour) {
+            const container = $('analytics-chart-container');
+            container.innerHTML = '';
+
+            if (!salesByHour || salesByHour.length === 0) {
+                container.innerHTML = '<p style="font-size: 0.75rem; color: #6b7280; font-style: italic; width: 100%; text-align: center; align-self: center;">No sales data for this period.</p>';
+                container.style.minWidth = 'auto';
+                return;
+            }
+
+            const barWidth = 40;
+            const spaceWidth = 16;
+            container.style.minWidth = `${salesByHour.length * (barWidth + spaceWidth) + 60}px`;
+            container.style.maxHeight = '100%';
+            container.style.overflowY = 'hidden';
+            container.style.position = 'relative';
+
+            const maxRevenue = Math.max(...salesByHour.map(h => h.total), 0);
+
+            // Create global tooltip
+            const tooltip = document.createElement('div');
+            tooltip.id = 'chart-tooltip';
+            tooltip.className = 'chart-tooltip';
+            tooltip.style.cssText = `
+                position: absolute;
+                background: #1f2937;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 600;
+                pointer-events: none;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                opacity: 0;
+                transition: opacity 0.2s ease;
+                white-space: nowrap;
+            `;
+            container.appendChild(tooltip);
+
+            // Y-axis (5 ticks)
+            const yAxis = document.createElement('div');
+            yAxis.style.cssText = 'display:flex; flex-direction:column; justify-content:space-between; height:100%; margin-right:8px; color:#6b7280; font-size:12px;';
+            const ticks = 5;
+            for (let i = ticks; i >= 0; i--) {
+                const val = (maxRevenue / ticks) * i;
+                const lbl = document.createElement('div');
+                lbl.textContent = `€${val.toFixed(0)}`;
+                lbl.style.cssText = 'height:1px; transform:translateY(6px)';
+                yAxis.appendChild(lbl);
+            }
+            container.appendChild(yAxis);
+
+            salesByHour.forEach(hourData => {
+                const barHeight = maxRevenue > 0 ? (hourData.total / maxRevenue) * 100 : 0;
+                const barWrapper = document.createElement('div');
+                barWrapper.style.cssText = 'width: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%;';
+
+                // Create bar container
+                const barContainer = document.createElement('div');
+                barContainer.style.cssText = 'width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; position: relative;';
+
+                // Create the bar
+                const bar = document.createElement('div');
+                bar.style.cssText = `
+                    background-color: #4f46e5;
+                    width: 75%;
+                    border-radius: 2px 2px 0 0;
+                    transition: all 0.3s ease;
+                    height: ${barHeight}%;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    cursor: pointer;
+                `;
+
+                // Add event listeners
+                bar.addEventListener('mouseenter', function(e) {
+                    // Update tooltip
+                    tooltip.textContent = `${hourData.label}: €${hourData.total.toFixed(2)}`;
+                    tooltip.style.opacity = '1';
+
+                    // Position tooltip
+                    const rect = this.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+
+                    let left = rect.right - containerRect.left + 10;
+                    let top = rect.top - containerRect.top + (rect.height / 2) - 12;
+
+                    // Keep tooltip in bounds
+                    if (left + 120 > container.offsetWidth - 5) {
+                        left = rect.left - containerRect.left - 120 - 10;
+                    }
+                    if (top < 5) top = 5;
+                    if (top + 24 > container.offsetHeight - 5) top = container.offsetHeight - 24 - 5;
+
+                    tooltip.style.left = left + 'px';
+                    tooltip.style.top = top + 'px';
+
+                    // Style bar
+                    this.style.backgroundColor = '#6366f1';
+                    this.style.transform = 'scale(1.05)';
+                });
+
+                bar.addEventListener('mouseleave', function(e) {
+                    tooltip.style.opacity = '0';
+                    this.style.backgroundColor = '#4f46e5';
+                    this.style.transform = 'scale(1)';
+                });
+
+                // Create hour label
+                const hourLabel = document.createElement('span');
+                hourLabel.style.cssText = 'color: #6b7280; font-size: 12px; margin-top: 8px; transform: rotate(-45deg); transform-origin: center; white-space: nowrap;';
+                hourLabel.textContent = hourData.label;
+
+                barContainer.appendChild(bar);
+                barWrapper.appendChild(barContainer);
+                barWrapper.appendChild(hourLabel);
+                container.appendChild(barWrapper);
+            });
+        }
+
+        // Categories Management
+        function saveCategory() {
+            const categoryName = $('categoryName').value.trim();
+            if (!categoryName) {
+                showToast('Please enter a category name', 'warning');
+                return;
+            }
+
+            showToast(`Category "${categoryName}" saved! (Demo Mode)`, 'success');
+            $('categoryName').value = '';
+        }
+
+        // Day Summary Modal
+        function openDaySummaryModal() {
+            $('daySummaryModal').classList.remove('hidden');
+            $('daySummaryModal').style.display = 'flex';
+        }
+
+        function closeDaySummaryModal() {
+            $('daySummaryModal').classList.add('hidden');
+            $('daySummaryModal').style.display = 'none';
+        }
+
+        // Item Management Functions
+        function openItemFormModal() {
+            showToast('Item form would open here (Demo)', 'info');
+        }
+
+        function loadTodaysOrdersForReprint() {
+            showToast('Refreshing order history... (Demo)', 'info');
+        }
+
+        function showDemoShutdownMessage() {
+            if (confirm('This is demo mode. In the real application, this would properly shutdown the system. Continue to reload the demo?')) {
+                location.reload();
+            }
+        }
+
+        // Numpad Functions
+        function toggleDesktopNumpad() {
+            const miniNumpad = $('desktopNumpadMini');
+            const fullNumpad = $('desktopNumpad');
+
+            if (miniNumpad.style.display === 'none') {
+                miniNumpad.style.display = 'block';
+                fullNumpad.classList.add('hidden');
+                showToast('Numpad enabled - click an order item to change quantity', 'info');
+            } else {
+                miniNumpad.style.display = 'none';
+                fullNumpad.classList.add('hidden');
+                clearNumpadSelection();
+                showToast('Numpad disabled', 'info');
+            }
+        }
+
+        function expandDesktopNumpad() {
+            $('desktopNumpadMini').style.display = 'none';
+            $('desktopNumpad').classList.remove('hidden');
+        }
+
+        function collapseDesktopNumpad() {
+            $('desktopNumpad').classList.add('hidden');
+            $('desktopNumpadMini').style.display = 'block';
+        }
+
+        function selectOrderItemForNumpad(index) {
+            clearNumpadSelection();
+            selectedItemForNumpad = index;
+            const orderItems = document.querySelectorAll('.order-item');
+            if (orderItems[index]) {
+                orderItems[index].classList.add('selected-for-numpad');
+                showToast('Use numpad to set new quantity', 'info');
+            }
+        }
+
+        function clearNumpadSelection() {
+            selectedItemForNumpad = null;
+            document.querySelectorAll('.order-item').forEach(item => {
+                item.classList.remove('selected-for-numpad');
+            });
+        }
+
+        function handleNumpad_desktop(digit) {
+            if (selectedItemForNumpad === null) {
+                showToast('Select an order item first', 'warning');
+                return;
+            }
+
+            if (currentOrder[selectedItemForNumpad]) {
+                const newQty = parseInt(digit.toString());
+                if (newQty > 0) {
+                    currentOrder[selectedItemForNumpad].quantity = newQty;
+                    updateOrderDisplay();
+                    showToast(`Quantity set to ${newQty}`, 'success');
+                }
+            }
+        }
+
+        function handleNumpadClear_desktop() {
+            if (selectedItemForNumpad !== null && currentOrder[selectedItemForNumpad]) {
+                currentOrder[selectedItemForNumpad].quantity = 1;
+                updateOrderDisplay();
+                showToast('Quantity reset to 1', 'info');
+            }
+        }
+
+        function handleNumpadBackspace_desktop() {
+            if (selectedItemForNumpad !== null && currentOrder[selectedItemForNumpad]) {
+                const currentQty = currentOrder[selectedItemForNumpad].quantity;
+                if (currentQty > 1) {
+                    currentOrder[selectedItemForNumpad].quantity = currentQty - 1;
+                    updateOrderDisplay();
+                    showToast(`Quantity reduced to ${currentQty - 1}`, 'info');
+                } else {
+                    showToast('Minimum quantity is 1', 'warning');
+                }
+            }
+        }
+
+        // Handle escape key to close modals
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLoginModal();
+                closeManagementModal();
+                closeDaySummaryModal();
+            }
+        });
+
+    </script>
+</body>
+</html>

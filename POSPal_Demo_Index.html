@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>POSPal Interactive Demo</title>
+	<script src="./static/vendor/tailwindcdn.js"></script>
+    <link rel="stylesheet" href="./static/css/fonts.css">
+	<style>
+		body { font-family: 'Inter', sans-serif; }
+	</style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+	<header class="bg-white shadow-sm sticky top-0 z-10">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+			<div class="flex items-center gap-3">
+				<img src="app_icon.ico" class="h-8 w-8 rounded" alt="POSPal logo">
+				<h1 class="text-lg sm:text-xl font-bold">POS<span class="text-green-500">Pal</span> Interactive Demo</h1>
+			</div>
+			<a href="index.html" class="text-sm text-gray-600 hover:text-gray-900 whitespace-nowrap">Back to website</a>
+		</div>
+	</header>
+
+	<main class="max-w-4xl mx-auto px-6 py-10">
+		<p class="text-gray-600 mb-6">Choose your experience:</p>
+		<div class="grid md:grid-cols-2 gap-6">
+			<div class="bg-white rounded-lg border shadow-sm p-6 flex flex-col h-full">
+				<div class="flex items-center gap-3 mb-3">
+					<div class="bg-gray-900 text-white rounded-md px-2 py-1 text-xs">Desktop</div>
+					<h2 class="text-lg font-semibold">Desktop POS</h2>
+				</div>
+				<p class="text-sm text-gray-600 flex-grow">Wide-screen layout with side-by-side Order and Menu.</p>
+				<a href="POSPal_Demo_Desktop.html" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors">Open Desktop Demo</a>
+			</div>
+			<div class="bg-white rounded-lg border shadow-sm p-6 flex flex-col h-full">
+				<div class="flex items-center gap-3 mb-3">
+					<div class="bg-green-600 text-white rounded-md px-2 py-1 text-xs">Mobile</div>
+					<h2 class="text-lg font-semibold">Mobile/Tablet POS</h2>
+				</div>
+				<p class="text-sm text-gray-600 flex-grow">Touch-first layout with collapsible order drawer.</p>
+				<a href="POSPal_Demo.html" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700 transition-colors">Open Mobile Demo</a>
+			</div>
+		</div>
+
+		<div class="mt-10 text-sm text-gray-500">
+			<p>Note: These are sandbox demos with mock data. Saving, printing, and external integrations are disabled.</p>
+		</div>
+	</main>
+</body>
+</html>
+
+

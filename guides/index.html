@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Οδηγοί POSPal | Εκμάθηση POS Συστήματος για Εστιατόρια & Καφετέριες</title>
+
+    <meta name="description" content="Μάθετε POSPal σε 5 επίπεδα: Από αρχάριος σε expert σε 12 βήματα. Εκμάθηση ταμειακού συστήματος για εστιατόρια, καφετέριες, beach bars. Δωρεάν 30ήμερη δοκιμή!">
+    <meta name="keywords" content="οδηγοί pos σύστημα προοδευτικοί, εκμάθηση pos βήμα βήμα, pos setup αρχάριος expert, εστιατόριο pos εκπαίδευση, καφετέρια ταμειακό σύστημα, qr menu οδηγός, απομακρυσμένη διαχείριση pos, pos analytics ελλάδα">
+
+    <!-- Canonical and SEO -->
+    <link rel="canonical" href="https://pospal.gr/guides/">
+    <meta property="og:title" content="Οδηγοί POSPal | Εκμάθηση POS Συστήματος">
+    <meta property="og:description" content="Μάθετε πώς να χρησιμοποιείτε το POSPal αποτελεσματικά για την επιχείρησή σας.">
+
+    <!-- Google Fonts with Greek support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap&subset=greek,latin" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .guide-card { transition: all 0.3s ease; }
+        .guide-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    </style>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "POSPal POS System Training",
+        "description": "Complete POS system training in 12 steps across 5 progressive levels. From beginner to expert for Greek restaurants and cafes.",
+        "provider": {
+            "@type": "Organization",
+            "name": "POSPal",
+            "url": "https://pospal.gr"
+        },
+        "courseMode": "online",
+        "educationalLevel": "Beginner to Expert",
+        "inLanguage": "el",
+        "about": {
+            "@type": "Thing",
+            "name": "Point of Sale Systems for Restaurants"
+        },
+        "hasPart": [
+            {
+                "@type": "CourseInstance",
+                "name": "Level 1: Getting Started",
+                "description": "Initial setup, printer configuration, firewall & network setup",
+                "courseMode": "online",
+                "timeRequired": "PT45M"
+            },
+            {
+                "@type": "CourseInstance",
+                "name": "Level 2: Basic Operations",
+                "description": "Menu creation, daily operations, connecting multiple devices",
+                "courseMode": "online",
+                "timeRequired": "PT60M"
+            },
+            {
+                "@type": "CourseInstance",
+                "name": "Level 3: Customer Features",
+                "description": "QR menu setup, online customer orders",
+                "courseMode": "online",
+                "timeRequired": "PT55M"
+            },
+            {
+                "@type": "CourseInstance",
+                "name": "Level 4: Management Tools",
+                "description": "Sales reports & analytics, staff management",
+                "courseMode": "online",
+                "timeRequired": "PT75M"
+            },
+            {
+                "@type": "CourseInstance",
+                "name": "Level 5: Remote Access Master",
+                "description": "Remote access setup, advanced network configuration",
+                "courseMode": "online",
+                "timeRequired": "PT105M"
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header (Same as main site) -->
+    <header class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center space-x-4">
+                        <img src="../app_icon.ico" alt="POSPal Logo" class="w-12 h-12 rounded-xl">
+                        <span class="text-3xl font-bold">
+                            <span class="text-brand-600">POS</span><span class="text-gray-900">Pal</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../POSPal_Demo_Index.html" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Online Demo</a>
+                    <a href="/guides" class="text-brand-600 font-medium">Οδηγοί</a>
+                    <a href="/#pricing" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Τιμές</a>
+                    <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe" class="bg-brand-600 text-white px-8 py-3 rounded-lg hover:bg-brand-700 transition-colors font-semibold">Ξεκίνα Δωρεάν</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Οδηγοί POSPal
+                <span class="block text-2xl lg:text-3xl text-brand-600 mt-2">12 Βήματα στο POS Mastery</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-4">
+                Από κενή εφαρμογή σε απομακρυσμένο POS expert σε 5 προοδευτικά επίπεδα.
+            </p>
+            <div class="flex items-center justify-center space-x-8 mb-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">Αρχάριος</span>
+                </div>
+                <div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+                <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">Βασικό</span>
+                </div>
+                <div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+                <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">Προχωρημένο</span>
+                </div>
+                <div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+                <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">Expert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 1: Getting Started -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                    <h2 class="text-3xl font-bold text-gray-900">Πρώτα Βήματα</h2>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Αρχάριος</span>
+                </div>
+                <p class="text-gray-600">Τα βασικά για να ξεκινήσετε με το POSPal - από μηδενική γνώση σε λειτουργικό σύστημα</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="../POSPal_Demo_Index.html?guide=initial-setup" class="guide-card block bg-white p-6 rounded-2xl shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-play text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Αρχική Ρύθμιση & Πρώτη Παραγγελία</h3>
+                    <p class="text-gray-600 mb-4">Εγκατάσταση, πρώτη ρύθμιση και δημιουργία της πρώτης σας παραγγελίας</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-green-600 font-medium">Απαραίτητο • 15 λεπτά</span>
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=printer-setup" class="guide-card block bg-white p-6 rounded-2xl shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-print text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ρύθμιση Εκτυπωτή</h3>
+                    <p class="text-gray-600 mb-4">Σύνδεση και ρύθμιση εκτυπωτή αποδείξεων για αυτόματη εκτύπωση</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-green-600 font-medium">Εύκολο • 10 λεπτά</span>
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=firewall-setup" class="guide-card block bg-white p-6 rounded-2xl shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Firewall & Δίκτυο</h3>
+                    <p class="text-gray-600 mb-4">Ασφαλής ρύθμιση δικτύου και firewall για προστασία των δεδομένων</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-green-600 font-medium">Μέτριο • 20 λεπτά</span>
+                        <i class="fas fa-arrow-right text-gray-400"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 2: Basic Operations -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                    <h2 class="text-3xl font-bold text-gray-900">Βασικές Λειτουργίες</h2>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Βασικό</span>
+                </div>
+                <p class="text-gray-600">Κατανοήστε τις καθημερινές λειτουργίες και χτίστε την εμπιστοσύνη σας</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../POSPal_Demo_Index.html?guide=menu-creation" class="guide-card block bg-white p-6 rounded-xl shadow-lg relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">4</div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                        <i class="fas fa-list text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Δημιουργία Μενού</h3>
+                    <p class="text-sm text-gray-600 mb-3">Κατηγορίες, προϊόντα, τιμές και επιλογές</p>
+                    <span class="text-xs text-blue-600 font-medium">Εύκολο • 25 λεπτά</span>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=daily-ops" class="guide-card block bg-white p-6 rounded-xl shadow-lg relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">5</div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                        <i class="fas fa-cash-register text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Καθημερινές Λειτουργίες</h3>
+                    <p class="text-sm text-gray-600 mb-3">Παραγγελίες, τραπέζια, ιστορικό και αναφορές</p>
+                    <span class="text-xs text-blue-600 font-medium">Βασικό • 20 λεπτά</span>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=multi-device" class="guide-card block bg-white p-6 rounded-xl shadow-lg relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">6</div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                        <i class="fas fa-tablet-alt text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Σύνδεση Συσκευών</h3>
+                    <p class="text-sm text-gray-600 mb-3">Tablets, τηλέφωνα και QR codes</p>
+                    <span class="text-xs text-blue-600 font-medium">Μέτριο • 15 λεπτά</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 3: Customer Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                    <h2 class="text-3xl font-bold text-gray-900">Χαρακτηριστικά Πελατών</h2>
+                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Προχωρημένο</span>
+                </div>
+                <p class="text-gray-600">Επεκτείνετε τις πωλήσεις με online παραγγελίες και QR μενού</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="../POSPal_Demo_Index.html?guide=qr-menu" class="guide-card block bg-gray-50 p-6 rounded-xl border border-gray-200 relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs font-bold">7</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-qrcode text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ρύθμιση QR Μενού</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cloudflare setup και δημοσίευση online μενού</p>
+                    <span class="text-sm text-purple-600 font-medium">Προχωρημένο • 30 λεπτά</span>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=online-orders" class="guide-card block bg-gray-50 p-6 rounded-xl border border-gray-200 relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs font-bold">8</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Online Παραγγελίες</h3>
+                    <p class="text-gray-600 text-sm mb-4">Διαχείριση παραγγελιών από απομακρυσμένους πελάτες</p>
+                    <span class="text-sm text-purple-600 font-medium">Προχωρημένο • 25 λεπτά</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 4: Management Tools -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">4</div>
+                    <h2 class="text-3xl font-bold text-gray-900">Εργαλεία Διαχείρισης</h2>
+                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Expert</span>
+                </div>
+                <p class="text-gray-600">Βελτιστοποιήστε τις λειτουργίες με αναλυτικά στοιχεία και διαχείριση προσωπικού</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="../POSPal_Demo_Index.html?guide=analytics" class="guide-card block bg-white p-6 rounded-xl shadow-lg relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-orange-500 text-white rounded-full flex items-center justify-center text-xs font-bold">9</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-bar text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Αναφορές & Αναλυτικά</h3>
+                    <p class="text-gray-600 mb-4">Κατανόηση δεδομένων πωλήσεων και βελτιστοποίηση κερδών</p>
+                    <span class="text-sm text-orange-600 font-medium">Expert • 35 λεπτά</span>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=staff-mgmt" class="guide-card block bg-white p-6 rounded-xl shadow-lg relative">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-orange-500 text-white rounded-full flex items-center justify-center text-xs font-bold">10</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Διαχείριση Προσωπικού</h3>
+                    <p class="text-gray-600 mb-4">Δικαιώματα χρηστών, εκπαίδευση και troubleshooting</p>
+                    <span class="text-sm text-orange-600 font-medium">Expert • 40 λεπτά</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 5: Remote Access Master -->
+    <section class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-yellow-500 text-gray-900 rounded-full flex items-center justify-center font-bold">5</div>
+                    <h2 class="text-3xl font-bold text-white">Master Level: Απομακρυσμένη Πρόσβαση</h2>
+                    <span class="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">Master</span>
+                </div>
+                <p class="text-gray-300 mb-6">Διαχειριστείτε την επιχείρησή σας από οπουδήποτε στον κόσμο</p>
+                <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 inline-block">
+                    <p class="text-yellow-300 text-sm">
+                        <i class="fas fa-crown mr-2"></i>
+                        Το τελικό επίπεδο για πλήρη επαγγελματική λειτουργία
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="../POSPal_Demo_Index.html?guide=remote-access" class="guide-card block bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 relative hover:bg-white/15">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-yellow-500 text-gray-900 rounded-full flex items-center justify-center text-xs font-bold">11</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-400/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-satellite-dish text-2xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ρύθμιση Απομακρυσμένης Πρόσβασης</h3>
+                    <p class="text-gray-300 mb-4">Public IP, port forwarding και domain name setup</p>
+                    <span class="text-sm text-yellow-400 font-medium">Master • 45 λεπτά</span>
+                </a>
+
+                <a href="../POSPal_Demo_Index.html?guide=advanced-network" class="guide-card block bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 relative hover:bg-white/15">
+                    <div class="absolute top-4 right-4 w-6 h-6 bg-yellow-500 text-gray-900 rounded-full flex items-center justify-center text-xs font-bold">12</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-400/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-network-wired text-2xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Προχωρημένη Ρύθμιση Δικτύου</h3>
+                    <p class="text-gray-300 mb-4">Multi-location, ασφάλεια και disaster recovery</p>
+                    <span class="text-sm text-yellow-400 font-medium">Master • 60 λεπτά</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Progress Tracker -->
+    <section class="py-16 bg-gradient-to-br from-brand-50 to-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Η Πορεία σας προς το POS Mastery</h2>
+            <p class="text-gray-600 mb-8">Παρακολουθήστε την πρόοδό σας μέσα από τα 5 επίπεδα εκμάθησης</p>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
+                        <h4 class="font-semibold text-gray-900 mb-1">Πρώτα Βήματα</h4>
+                        <p class="text-xs text-gray-600">3 Οδηγοί</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">2</div>
+                        <h4 class="font-semibold text-gray-900 mb-1">Βασικές Λειτουργίες</h4>
+                        <p class="text-xs text-gray-600">3 Οδηγοί</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">3</div>
+                        <h4 class="font-semibold text-gray-900 mb-1">Πελάτες</h4>
+                        <p class="text-xs text-gray-600">2 Οδηγοί</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">4</div>
+                        <h4 class="font-semibold text-gray-900 mb-1">Διαχείριση</h4>
+                        <p class="text-xs text-gray-600">2 Οδηγοί</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-orange-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-500 text-gray-900 rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">👑</div>
+                        <h4 class="font-semibold text-gray-900 mb-1">Master</h4>
+                        <p class="text-xs text-gray-600">2 Οδηγοί</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-gray-50 rounded-xl">
+                    <p class="text-sm text-gray-600 mb-3">💡 <strong>Tip:</strong> Ολοκληρώστε κάθε επίπεδο πριν προχωρήσετε στο επόμενο για βέλτιστα αποτελέσματα</p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <a href="../POSPal_Demo_Index.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-brand-600 bg-white border border-brand-600 rounded-lg hover:bg-brand-50 transition-colors">
+                            <i class="fas fa-desktop mr-2"></i>
+                            Δοκιμάστε το Demo
+                        </a>
+                        <a href="../index.html#pricing" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-brand-600 rounded-lg hover:bg-brand-700 transition-colors">
+                            <i class="fas fa-tag mr-2"></i>
+                            Δείτε Τιμές
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-brand-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Έτοιμοι να Ξεκινήσετε;</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Κατεβάστε το POSPal και εφαρμόστε τα tips από τους οδηγούς μας
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/Radot1/POSPal/releases/latest/download/POSPal.exe"
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-white text-brand-600 rounded-xl hover:bg-gray-100 transition-all">
+                    <i class="fas fa-download mr-3"></i>
+                    Δωρεάν Δοκιμή 30 Ημερών
+                </a>
+                <a href="../index.html"
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-xl hover:bg-white hover:text-brand-600 transition-all">
+                    <i class="fas fa-home mr-3"></i>
+                    Αρχική Σελίδα
+                </a>
+                <a href="../index.html#pricing"
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-xl hover:bg-white hover:text-brand-600 transition-all">
+                    <i class="fas fa-euro-sign mr-3"></i>
+                    Τιμές & Πακέτα
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <img src="../app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-lg">
+                <span class="text-xl font-bold text-white">POSPal</span>
+            </div>
+            <p class="text-sm">&copy; 2025 POSPal. Όλα τα δικαιώματα διατηρούνται.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
