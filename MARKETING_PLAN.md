@@ -37,8 +37,8 @@
 - Top-of-funnel: home page + SEO.
 - Mid-funnel: demo and installation guide.
 - Bottom-of-funnel: download installer and start trial.
-- Primary CTA: open the demo.
-- Secondary CTA: download `webstud.exe` (link TBD).
+- Primary CTA: download `webstud.exe` (link TBD).
+- Secondary CTA: open the demo.
 
 ### 7) Website Plan (TBD)
 - Key pages: Home, Demo, Installation Guide, Guides.
