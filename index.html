@@ -356,16 +356,16 @@
                 <div class="text-center lg:text-left lg:col-span-2 order-1 lg:order-1">
                     
                     <!-- Mobile Compact Headline -->
-                    <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-3 lg:mb-4 fade-in-up">
-                        <span class="text-brand-600">Σύστημα παραγγελιοληψίας για Καφετέριες</span>
-                    </h1>
+                     <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-3 lg:mb-4 fade-in-up">
+                         <span class="text-brand-600">Σύστημα παραγγελιοληψίας για την εστίαση</span>
+                     </h1>
 
                     <!-- Mobile Compact Description -->
-                    <p class="text-sm lg:text-lg text-gray-600 mb-4 lg:mb-6 fade-in-up stagger-1">
-                        <span class="lg:hidden">QR μενού + PDA σύστημα για εστιατόρια και beach bars.</span>
-                        <span class="hidden lg:block">Mobile PDA για εποχικές επιχειρήσεις, beach bars, ταβέρνες, street food. QR μενού που ενημερώνεται αυτόματα.<br>
-                        <span class="font-semibold text-brand-600">30 ημέρες δωρεάν δοκιμή</span> - ιδανικό για καλοκαιρινά μαγαζιά</span>
-                    </p>
+                     <p class="text-sm lg:text-lg text-gray-600 mb-4 lg:mb-6 fade-in-up stagger-1">
+                         <span class="lg:hidden">Παραγγελίες από κινητό/tablet ή από υπολογιστή αφής. QR μενού που ενημερώνεται αυτόματα. <span class="font-semibold text-brand-600">30 ημέρες δωρεάν δοκιμή — χωρίς κάρτα, χωρίς στοιχεία.</span></span>
+                         <span class="hidden lg:block">Παραγγελίες από κινητό/tablet ή από υπολογιστή αφής. QR μενού που ενημερώνεται αυτόματα.<br>
+                         <span class="font-semibold text-brand-600">30 ημέρες δωρεάν δοκιμή — χωρίς κάρτα, χωρίς στοιχεία.</span></span>
+                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start fade-in-up stagger-3">
                         <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/webstud.exe"
@@ -387,7 +387,45 @@
                     <div class="bg-white rounded-2xl shadow-2xl p-4 border border-gray-100 demo-container">
                         <div class="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl overflow-hidden bg-gray-50 border border-gray-200">
                             <!-- Mobile UI iframe -->
-                            <iframe id="mobile-view" src="POSPal_Demo.html" class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100" style="border:0; transform: scale(0.6); transform-origin: top left; width: 166%; height: 170%;" sandbox="allow-scripts allow-same-origin"></iframe>
+                            <div id="mobile-view" class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+                                <div class="flex items-center justify-center h-full w-full bg-gray-50">
+                                    <div class="w-[280px] sm:w-[320px] h-[520px] sm:h-[560px] bg-white rounded-2xl shadow-lg border border-gray-200 flex flex-col overflow-hidden">
+                                        <div class="flex items-center justify-between bg-gray-900 text-white px-3 py-2">
+                                            <span class="text-xs font-semibold tracking-wide">POSPal</span>
+                                            <span class="text-[10px] bg-gray-700 px-2 py-1 rounded">Table 8</span>
+                                        </div>
+                                        <div class="p-2 flex-1 overflow-hidden">
+                                            <div class="text-xs font-semibold text-gray-700 mb-2">Παραγγελία #128</div>
+                                            <div class="space-y-2 text-xs">
+                                                <div class="flex justify-between bg-gray-50 p-2 rounded border">
+                                                    <span>Καπουτσίνο x2</span>
+                                                    <span class="font-semibold">€6.00</span>
+                                                </div>
+                                                <div class="flex justify-between bg-gray-50 p-2 rounded border">
+                                                    <span>Κλαμπ Σάντουιτς</span>
+                                                    <span class="font-semibold">€5.50</span>
+                                                </div>
+                                                <div class="flex justify-between bg-gray-50 p-2 rounded border">
+                                                    <span>Χωριάτικη</span>
+                                                    <span class="font-semibold">€4.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 text-[10px] text-gray-500">Στέλνεται αυτόματα στην κουζίνα</div>
+                                        </div>
+                                        <div class="border-t p-2 bg-white">
+                                            <div class="grid grid-cols-3 gap-1 text-[10px] text-gray-700">
+                                                <div class="bg-gray-100 rounded px-2 py-1 text-center">Καφέδες</div>
+                                                <div class="bg-gray-100 rounded px-2 py-1 text-center">Σνακ</div>
+                                                <div class="bg-gray-100 rounded px-2 py-1 text-center">Ποτά</div>
+                                            </div>
+                                            <div class="mt-2 flex justify-between text-xs font-semibold">
+                                                <span>Σύνολο</span>
+                                                <span>€15.50</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
 
                             <!-- Desktop POS view (authentic desktop interface) -->
@@ -612,13 +650,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-3 flex items-center justify-center space-x-2">
-                            <button id="dot-0" class="w-2 h-2 rounded-full bg-brand-600 transition-colors dot-nav" onclick="switchView(0)"></button>
-                            <button id="dot-1" class="w-2 h-2 rounded-full bg-gray-300 transition-colors dot-nav" onclick="switchView(1)"></button>
-                            <button id="dot-2" class="w-2 h-2 rounded-full bg-gray-300 transition-colors dot-nav" onclick="switchView(2)"></button>
-                        </div>
-                        <div class="text-xs text-gray-500 mt-1 text-center">
-                            <span id="view-indicator">Mobile View</span>
+                        <div class="mt-3 flex items-center justify-center gap-2 flex-wrap">
+                            <button id="view-btn-0" class="view-switch-btn px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors bg-brand-600 text-white border-brand-600">Κινητό</button>
+                            <button id="view-btn-1" class="view-switch-btn px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors bg-white text-gray-600 border-gray-200 hover:border-brand-600 hover:text-brand-600">Οθόνη αφής</button>
+                            <button id="view-btn-2" class="view-switch-btn px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors bg-white text-gray-600 border-gray-200 hover:border-brand-600 hover:text-brand-600">Αναφορές</button>
                         </div>
                     </div>
 
@@ -667,7 +702,7 @@
                             <div class="flex-1">
                                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
                                     <div class="text-xs text-gray-500 mb-1">Live Demo Menu</div>
-                                    <a href="https://menus-5ar.pages.dev/s/cafetest" target="_blank" class="text-sm text-blue-600 hover:text-blue-800 underline font-medium break-all">menus-5ar.pages.dev/s/cafetest</a>
+                                    <a href="https://menus-5ar.pages.dev/s/pospal" target="_blank" class="text-sm text-blue-600 hover:text-blue-800 underline font-medium break-all">menus-5ar.pages.dev/s/pospal</a>
                                     <div class="mt-2 space-y-1">
                                         <div class="flex items-center text-xs text-gray-600">
                                             <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
@@ -1223,19 +1258,21 @@
             observer.observe(card);
         });
 
-        // View switcher with dot navigation (3 views)
+        // View switcher with labeled buttons (3 views)
         const mobileView = document.getElementById('mobile-view');
         const analyticsView = document.getElementById('analytics-view');
         const desktopPosView = document.getElementById('desktop-pos-view');
-        const viewIndicator = document.getElementById('view-indicator');
-        const dots = [
-            document.getElementById('dot-0'),
-            document.getElementById('dot-1'),
-            document.getElementById('dot-2')
+        const viewButtons = [
+            document.getElementById('view-btn-0'),
+            document.getElementById('view-btn-1'),
+            document.getElementById('view-btn-2')
         ];
-        const viewLabels = ['Mobile View', 'Desktop View', 'Analytics'];
+        const viewLabels = ['Κινητό', 'Οθόνη αφής', 'Αναφορές'];
+        const demoContainer = document.querySelector('.demo-container');
         let currentView = 0;
         let autoInterval;
+        let autoPaused = false;
+        let resumeTimeout;
 
         function isDesktopHidden() {
             return window.innerWidth <= 1024; // Hide desktop view on mobile and tablet
@@ -1248,6 +1285,26 @@
             return [0, 1, 2]; // All views
         }
 
+        function updateViewButtons(viewIndex) {
+            viewButtons.forEach((button, index) => {
+                if (!button) {
+                    return;
+                }
+                if (index === 1 && isDesktopHidden()) {
+                    button.style.display = 'none';
+                    return;
+                }
+                button.style.display = 'inline-flex';
+                if (index === viewIndex) {
+                    button.classList.add('bg-brand-600', 'text-white', 'border-brand-600');
+                    button.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+                } else {
+                    button.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+                    button.classList.remove('bg-brand-600', 'text-white', 'border-brand-600');
+                }
+            });
+        }
+
         function switchView(viewIndex) {
             const availableViews = getAvailableViews();
 
@@ -1257,10 +1314,6 @@
             }
 
             currentView = viewIndex;
-
-            // Reset auto interval
-            clearInterval(autoInterval);
-            startAutoProgression();
 
             // Hide all views
             mobileView.style.opacity = '0';
@@ -1283,28 +1336,14 @@
             }
 
             // Update view indicator
-            viewIndicator.textContent = viewLabels[viewIndex];
-
-            // Update dots - hide middle dot on mobile
-            dots.forEach((dot, index) => {
-                if (dot) {
-                    if (index === 1 && isDesktopHidden()) {
-                        dot.style.display = 'none';
-                    } else {
-                        dot.style.display = 'block';
-                        if (index === viewIndex) {
-                            dot.classList.add('bg-brand-600');
-                            dot.classList.remove('bg-gray-300');
-                        } else {
-                            dot.classList.add('bg-gray-300');
-                            dot.classList.remove('bg-brand-600');
-                        }
-                    }
-                }
-            });
+            updateViewButtons(viewIndex);
         }
 
         function startAutoProgression() {
+            if (autoPaused) {
+                return;
+            }
+            clearInterval(autoInterval);
             autoInterval = setInterval(() => {
                 const availableViews = getAvailableViews();
                 const currentIndex = availableViews.indexOf(currentView);
@@ -1314,10 +1353,40 @@
             }, 5000); // 5 seconds per view for better demonstration
         }
 
-        // Make switchView globally available
-        window.switchView = switchView;
-        
+        function pauseAutoProgression() {
+            autoPaused = true;
+            clearInterval(autoInterval);
+            clearTimeout(resumeTimeout);
+        }
+
+        function resumeAutoProgression(delay = 0) {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+                autoPaused = false;
+                startAutoProgression();
+            }, delay);
+        }
+
+        viewButtons.forEach((button, index) => {
+            if (!button) {
+                return;
+            }
+            button.addEventListener('click', () => {
+                pauseAutoProgression();
+                switchView(index);
+                resumeAutoProgression(8000);
+            });
+        });
+
+        if (demoContainer) {
+            demoContainer.addEventListener('mouseenter', pauseAutoProgression);
+            demoContainer.addEventListener('mouseleave', () => resumeAutoProgression());
+            demoContainer.addEventListener('touchstart', pauseAutoProgression, { passive: true });
+            demoContainer.addEventListener('touchend', () => resumeAutoProgression(6000));
+        }
+
         // Start auto progression
+        switchView(currentView);
         startAutoProgression();
 
 
