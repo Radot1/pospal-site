@@ -25,23 +25,25 @@ Status: Draft only (no changes to index.html). Target draft file: drafts/home-v2
 - Banner motion: subtle horizontal drift on scroll + progress line + adaptive header content (tagline + secondary CTA collapse).
 
 ## Experience-First Structure (outline)
-1. Hero: two-column layout with headline + CTAs on the left and the experience stage on the right. The stage expands to full width on scroll to reveal the live QR menu (sync rail in between).
-2. Workflow visual: left-to-right flow (Order -> Kitchen/Bar -> QR menu update -> Reports) with micro UI snippets.
-3. Tutorials: cards with UI snapshots/mini steps; focus on setup, QR menu, printers/tables.
-4. Use cases: cafe/restaurant/beach bar/food truck as compact tabs with visuals.
-5. Pricing block + CTA.
-6. Short FAQ.
-7. Footer.
+1. Hero: two-column layout with headline + CTAs on the left and the experience stage on the right. Stage 1 expands to full width on scroll (with a scroll runway), adds a "try it" focus state, then unlocks the live demo. Stage 2 swaps in QR menu copy (left) + live QR menu (right).
+2. Pricing block + CTA (repeat primary + secondary).
+3. Short FAQ (SEO-focused).
+4. Footer.
 
 ## Feature-to-Visual Mapping
 - Clean UI: hero demo iframe in the experience stage.
 - Orders + kitchen: ticket/receipt micro panel.
 - QR menu: live iframe paired side-by-side with the demo.
 - Multi-device: hero iframe switches between mobile/desktop views.
-- Reports: dashboard preview.
-- Tutorials: card snapshots and tiny step indicators.
+- Guides removed for now; revisit when scope allows.
+
+## Replacement Ideas (pending approval)
+- Trust strip: small row with "No card for trial", "Cancel anytime", "Works alongside fiscal POS".
+- Mini proof panel: 2–3 short bullets about speed, clarity, QR menu included.
+- CTA band with QR + Demo (lightweight, no new visuals).
 
 ## Notes
 - Keep copy minimal; rely on visuals to communicate.
 - All public copy stays Greek; this doc remains English.
-- Demo pages will be localized to Greek later to keep embeds consistent.
+- Coffee-menu demo pages live in `drafts/pospal-demo-coffee-desktop.html` and `drafts/pospal-demo-coffee-mobile.html`; items and categories mirror the live QR menu.
+- Stage 2 uses a same-origin QR menu in `drafts/qr-menu-demo.html` with a live link to the hosted QR menu.

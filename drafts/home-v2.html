@@ -153,10 +153,6 @@
             .header-shell {
                 padding: calc(12px - 4px * var(--header-compact)) 32px;
             }
-
-            #site-header {
-                --header-shift: -10px;
-            }
         }
 
         @media (min-width: 1280px) {
@@ -199,100 +195,247 @@
 
         .demo-frame-hero {
             --hero-ratio: 16 / 10;
-            aspect-ratio: var(--hero-ratio);
             width: 100%;
-            min-height: clamp(420px, 60vh, 720px);
-        }
-
-        .demo-frame-hero[data-mode="desktop"] {
-            --hero-ratio: 16 / 10;
-        }
-
-        .demo-frame-hero[data-mode="mobile"] {
-            --hero-ratio: 9 / 16;
+            aspect-ratio: var(--hero-ratio);
+            height: auto;
+            margin-inline: auto;
+            transform-origin: top center;
+            will-change: transform;
         }
 
         .demo-frame-qr {
-            height: clamp(420px, 60vh, 620px);
+            --qr-max-height: calc(100vh - var(--header-offset, 120px) - 64px);
+            --qr-target-width: 414px;
+            width: min(var(--qr-target-width), calc(var(--qr-max-height) * 0.4615));
+            max-width: 92vw;
+            aspect-ratio: 9 / 19.5;
+            height: auto;
+            justify-self: start;
+            border-radius: 34px;
+            box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.08);
+            overscroll-behavior: contain;
         }
 
         .experience-viewport {
             position: relative;
-            min-height: 150vh;
+            min-height: 320vh;
             overflow: visible;
+            --experience-progress: 0;
         }
 
         .experience-stage {
             position: sticky;
-            top: 120px;
+            top: calc(var(--header-offset, 120px) + 12px);
             display: grid;
             gap: 24px;
             align-items: stretch;
             --experience-progress: 0;
-            grid-template-columns: minmax(0, 1fr) 0px 0px;
+            --hero-demo-height: auto;
+            grid-template-columns: 1fr;
             width: 100%;
             transform: translate3d(0, 0, 0);
             transition: none;
             will-change: width, transform;
         }
 
-        .experience-demo {
+        .experience-left {
             grid-column: 1;
+            display: grid;
+            align-items: center;
+            position: relative;
+        }
+
+        .experience-left > * {
+            grid-area: 1 / 1;
+        }
+
+        .experience-demo {
             z-index: 2;
+            position: relative;
+            justify-self: end;
+            transition: none;
+            display: inline-flex;
+            width: fit-content;
+            max-width: 100%;
             will-change: transform;
+        }
+
+        .experience-copy {
+            max-width: 420px;
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 260ms ease, transform 260ms ease;
+            pointer-events: none;
+        }
+
+        .experience-copy-qr {
+            display: none;
         }
 
         .experience-qr {
-            grid-column: 3;
-            opacity: var(--experience-progress);
-            transform: translateY(calc(16px * (1 - var(--experience-progress))));
+            grid-column: 2;
+            opacity: 0;
+            transform: translate(24px, 16px);
             transition: none;
             pointer-events: none;
-            z-index: 1;
-            width: min(380px, 100%);
-            justify-self: center;
-            align-self: stretch;
-            display: flex;
-            height: 100%;
-            min-height: 100%;
-            will-change: transform, opacity;
+            align-self: center;
         }
 
-        .experience-qr.is-active {
-            pointer-events: auto;
-        }
-
-        .experience-rail {
-            grid-column: 2;
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-            opacity: calc(0.2 + 0.8 * var(--experience-progress));
-        }
-
-        .rail-line {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #16a34a, #22c55e);
-            border-radius: 999px;
-        }
-
-        .rail-dot {
+        .stage-hint {
             position: absolute;
             top: 50%;
-            left: 0;
-            width: 12px;
-            height: 12px;
+            left: 50%;
+            z-index: 4;
+            padding: 14px 26px;
+            font-size: 1.1rem;
+            letter-spacing: 0.01em;
+            font-weight: 600;
+            color: #166534;
+            background: #f0fdf4;
+            border: 1px solid rgba(187, 247, 208, 0.9);
             border-radius: 999px;
-            background: #16a34a;
-            transform: translateY(-50%) translateX(calc((100% - 12px) * var(--experience-progress)));
-            box-shadow: 0 8px 16px rgba(22, 163, 74, 0.25);
-            transition: none;
-            will-change: transform;
+            opacity: 0;
+            transform: translate(-50%, -40%);
+            transition: opacity 220ms ease, transform 220ms ease;
+            pointer-events: none;
         }
+
+        .demo-frame-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(248, 250, 252, 0.72);
+            opacity: 0;
+            transition: opacity 240ms ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .experience-stage.is-focus .stage-hint {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .experience-stage.is-focus .demo-frame-hero::after {
+            opacity: 1;
+        }
+
+        .experience-stage.is-focus .frame-body {
+            filter: grayscale(0.2) saturate(0.85);
+        }
+
+        .experience-stage.is-focus .demo-iframe {
+            pointer-events: none;
+        }
+
+        .experience-stage.is-locked .frame-body {
+            filter: none;
+        }
+
+        .experience-stage.is-stage2 {
+            grid-template-columns: 1fr;
+        }
+
+        .stage2-grid {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: min(100%, 1120px);
+            transform: translateX(-50%);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: center;
+            gap: clamp(24px, 4vw, 56px);
+            padding-inline: clamp(20px, 4vw, 60px);
+            pointer-events: none;
+            z-index: 3;
+            --stage2-opacity: 0;
+        }
+
+        .stage2-grid::before {
+            content: "";
+            position: absolute;
+            inset: -24px -32px;
+            border-radius: 36px;
+            background: radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.08), transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(15, 23, 42, 0.04), transparent 55%);
+            border: 1px solid rgba(226, 232, 240, 0.75);
+            opacity: var(--stage2-opacity);
+            transition: opacity 240ms ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .stage2-grid > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .stage2-copy {
+            opacity: 0;
+            transform: translate(-24px, 12px);
+            transition: none;
+            pointer-events: none;
+        }
+
+        .stage2-copy h3 {
+            letter-spacing: -0.01em;
+        }
+
+        .stage2-copy p {
+            line-height: 1.6;
+        }
+
+        .qr-bullets {
+            margin-top: 16px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .qr-bullet {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .qr-bullet-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            background: #dcfce7;
+            color: #15803d;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
+        }
+
+        .qr-bullet-text {
+            line-height: 1.4;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         .frame-body {
             position: relative;
@@ -301,6 +444,15 @@
             padding: 8px;
             background: #f8fafc;
             overflow: hidden;
+        }
+
+        .demo-frame-qr .frame-body {
+            padding: 6px;
+            overscroll-behavior: contain;
+        }
+
+        .demo-frame-qr .demo-iframe {
+            border-radius: 24px;
         }
 
         .demo-scale {
@@ -331,7 +483,9 @@
             background: #fff;
             box-shadow: 0 0 0 1px rgba(226, 232, 240, 0.9);
             display: block;
+            overscroll-behavior: contain;
         }
+
 
         .demo-iframe.is-interactive {
             pointer-events: auto;
@@ -355,13 +509,31 @@
             }
 
             .experience-demo {
+                opacity: 1;
                 transform: none;
+            }
+
+            .experience-left {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .experience-left > * {
+                grid-area: auto;
+            }
+
+            .experience-copy {
+                opacity: 1;
+                transform: none;
+                pointer-events: auto;
             }
 
             .experience-qr {
                 opacity: 1;
                 transform: none;
                 pointer-events: auto;
+                height: auto;
             }
 
             .experience-rail {
@@ -406,6 +578,40 @@
             background: #16a34a;
             color: #fff;
             border-color: #16a34a;
+        }
+
+        .hero-copy {
+            transition: opacity 0.2s ease;
+            will-change: transform, opacity;
+        }
+
+        .hero-grid {
+            align-items: start;
+        }
+
+        .hero-scroll-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-scroll-line {
+            width: 38px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(34, 197, 94, 0.7), rgba(16, 185, 129, 0.1));
+        }
+
+        .hero-scroll-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
         }
 
         .btn {
@@ -491,7 +697,6 @@
                     </div>
                     <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
                         <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-                        <a href="../guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
                         <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/webstud.exe" class="text-brand-600 hover:text-brand-700">Λήψη</a>
                     </nav>
@@ -515,7 +720,6 @@
                 <div id="mobile-menu-dropdown" class="hidden md:hidden surface-soft mt-3 px-4 py-3">
                     <div class="flex flex-col gap-3 text-sm font-medium text-slate-600">
                         <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-                        <a href="../guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
                         <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/webstud.exe" class="text-brand-600 hover:text-brand-700">Λήψη</a>
                     </div>
@@ -526,8 +730,8 @@
         <main class="pb-20">
             <section class="pt-12 lg:pt-20 pb-16">
                 <div class="hero-container">
-                    <div class="grid lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-10 items-start">
-                        <div class="space-y-6 reveal max-w-xl lg:max-w-none">
+                    <div class="hero-grid grid lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-10 items-start">
+                        <div class="hero-copy space-y-6 reveal max-w-xl lg:max-w-none">
                             <div class="chip-row">
                                 <span class="chip">Καθαρό UI</span>
                                 <span class="chip">Γρήγορη ροή</span>
@@ -547,41 +751,76 @@
                                     Κατέβασε το POSPal
                                 </a>
                             </div>
+                            <div class="hero-scroll-hint">
+                                <span class="hero-scroll-line"></span>
+                                <span class="hero-scroll-dot"></span>
+                                <span>&#922;&#973;&#955;&#951;&#963;&#949; &#947;&#953;&#945; &#963;&#965;&#957;&#941;&#967;&#949;&#953;&#945;</span>
+                            </div>
                         </div>
                         <div class="reveal">
                             <div class="experience-viewport" id="experience-viewport">
                                 <div class="experience-stage" id="experience-stage">
-                                    <div class="demo-frame demo-frame-hero experience-demo" data-mode="desktop">
-                                        <div class="frame-body" id="hero-frame">
-                                            <div class="demo-placeholder" id="demo-placeholder">
-                                                Φόρτωση demo...
-                                            </div>
-                                            <div class="demo-scale" id="hero-scale">
-                                                <iframe
-                                                    id="hero-demo"
-                                                    class="demo-iframe is-interactive"
-                                                    title="Demo POSPal"
-                                                    loading="lazy"
-                                                    data-src-mobile="../POSPal_Demo.html"
-                                                    data-src-desktop="../POSPal_Demo_Desktop.html"
-                                                ></iframe>
-                                            </div>
+                                    <div class="experience-left">
+                                        <div class="experience-demo">
+                                            <div class="demo-frame demo-frame-hero" data-mode="desktop">
+                                            <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
+                                              <div class="frame-body" id="hero-frame">
+                                                  <div class="demo-placeholder" id="demo-placeholder">
+                                                      Φόρτωση demo...
+                                                  </div>
+                                                  <div class="demo-scale" id="hero-scale">
+                                                      <iframe
+                                                          id="hero-demo"
+                                                          class="demo-iframe is-interactive"
+                                                          title="Demo POSPal"
+                                                          loading="lazy"
+                                                          data-src-mobile="./pospal-demo-coffee-mobile.html"
+                                                          data-src-desktop="./pospal-demo-coffee-desktop.html"
+                                                      ></iframe>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        <div class="experience-copy experience-copy-qr">
+                                            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR μενού χωρίς κόστος.</h3>
+                                            <p class="mt-3 text-base text-slate-600">
+                                                Περιλαμβάνεται στο πακέτο. Φιλικό για τον πελάτη, έτοιμο για κινητά και ενημερώνεται εύκολα.
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="experience-rail" aria-hidden="true">
-                                        <span class="rail-line"></span>
-                                        <span class="rail-dot"></span>
-                                    </div>
-                                    <div class="demo-frame demo-frame-qr experience-qr">
-                                        <div class="frame-body">
-                                            <iframe
-                                                title="QR Μενού POSPal"
-                                                class="demo-iframe is-interactive"
-                                                loading="lazy"
-                                                src="https://menus-5ar.pages.dev/s/pospal"
-                                            ></iframe>
+                                    <div class="stage2-grid">
+                                        <div class="stage2-copy">
+                                            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR μενού χωρίς κόστος.</h3>
+                                            <p class="mt-3 text-base text-slate-600">
+                                                Περιλαμβάνεται στο πακέτο. Φιλικό για τον πελάτη, έτοιμο για κινητά και ενημερώνεται εύκολα.
+                                            </p>
+                                            <div class="qr-bullets">
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">&#917;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#965;&#964;&#972;&#956;&#945;&#964;&#945; &#945;&#960;&#972; &#964;&#959; POSPal.</span>
+                                                </div>
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">&#931;&#967;&#949;&#948;&#953;&#945;&#963;&#956;&#941;&#957;&#959; &#947;&#953;&#945; &#954;&#953;&#957;&#951;&#964;&#940; &#954;&#945;&#953; QR &#964;&#961;&#945;&#960;&#949;&#950;&#953;&#974;&#957;.</span>
+                                                </div>
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">&#935;&#969;&#961;&#943;&#962; &#949;&#960;&#953;&#960;&#955;&#941;&#959;&#957; &#954;&#972;&#963;&#964;&#959;&#962; &#942; &#949;&#960;&#953;&#960;&#955;&#941;&#959;&#957; &#949;&#961;&#947;&#945;&#963;&#943;&#945;.</span>
+                                                </div>
+                                            </div>
+                                            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">&#916;&#949;&#962; &#964;&#959; live QR &#956;&#949;&#957;&#959;&#973;</a>
                                         </div>
-                                    </div>
+                                        <div class="demo-frame demo-frame-qr experience-qr">
+                                              <div class="frame-body">
+                                                    <iframe
+                                                        class="demo-iframe is-interactive"
+                                                        title="POSPal QR Menu"
+                                                        loading="lazy"
+                                                        src="./qr-menu-demo.html"
+                                                    ></iframe>
+                                              </div>
+                                          </div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -590,148 +829,39 @@
             </section>
 
             <div class="site-container">
-            <section class="py-12">
-                <div class="surface-soft p-6 sm:p-8 reveal">
-                    <div class="flex flex-col lg:flex-row gap-6 items-center">
-                        <div class="mini-window flex-1">
-                                <div class="mini-header"><span>Παραγγελία</span><span>Ταμπλέτα</span></div>
-                            <div class="space-y-2 text-xs text-slate-600">
-                                <div>Δημιουργία νέας παραγγελίας</div>
-                                <div>Άμεση αποστολή στην κουζίνα</div>
-                            </div>
-                        </div>
-                        <div class="text-slate-400 text-2xl">→</div>
-                        <div class="mini-window flex-1">
-                            <div class="mini-header"><span>Κουζίνα / Μπαρ</span><span>Εκτύπωση</span></div>
-                            <div class="space-y-2 text-xs text-slate-600">
-                                <div>Δελτίο με όλα τα στοιχεία</div>
-                                <div>Χωρίς καθυστερήσεις</div>
-                            </div>
-                        </div>
-                        <div class="text-slate-400 text-2xl">→</div>
-                        <div class="mini-window flex-1">
-                            <div class="mini-header"><span>QR Μενού</span><span>Συγχρονισμός</span></div>
-                            <div class="space-y-2 text-xs text-slate-600">
-                                <div>Ενημέρωση τιμών σε δευτερόλεπτα</div>
-                                <div>Σαφές μενού για τον πελάτη</div>
-                            </div>
-                        </div>
-                        <div class="text-slate-400 text-2xl">→</div>
-                        <div class="mini-window flex-1">
-                            <div class="mini-header"><span>Αναφορές</span><span>Έλεγχος</span></div>
-                            <div class="space-y-2 text-xs text-slate-600">
-                                <div>Καθημερινή εικόνα πωλήσεων</div>
-                                <div>Γρήγορες αποφάσεις</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="py-12">
-                <div class="grid lg:grid-cols-3 gap-6">
-                    <article class="surface-soft p-6 reveal card-hover">
-                        <div class="mini-header"><span>Οδηγός</span><span>10 λεπτά</span></div>
-                        <div class="mini-window mb-4">
-                            <div class="text-sm font-semibold text-slate-800">Πρώτη εγκατάσταση</div>
-                            <div class="text-xs text-slate-600">Βήμα-βήμα μέσα στο POSPal</div>
-                        </div>
-                        <a href="../guides/index.html" class="text-brand-600 font-semibold">Δες οδηγό</a>
-                    </article>
-                    <article class="surface-soft p-6 reveal card-hover">
-                        <div class="mini-header"><span>QR Μενού</span><span>Ζωντανά</span></div>
-                        <div class="mini-window mb-4">
-                            <div class="text-sm font-semibold text-slate-800">Στήσιμο QR μενού</div>
-                            <div class="text-xs text-slate-600">Μενού έτοιμο σε λίγα λεπτά</div>
-                        </div>
-                        <a href="../guides/qr-menu-best-practices.html" class="text-brand-600 font-semibold">Δες οδηγό</a>
-                    </article>
-                    <article class="surface-soft p-6 reveal card-hover">
-                        <div class="mini-header"><span>Εκτυπωτές</span><span>Κουζίνα</span></div>
-                        <div class="mini-window mb-4">
-                            <div class="text-sm font-semibold text-slate-800">Σύνδεση εκτυπωτή</div>
-                            <div class="text-xs text-slate-600">Κουζίνα και μπαρ έτοιμα</div>
-                        </div>
-                        <a href="../guides/index.html" class="text-brand-600 font-semibold">Δες οδηγό</a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="py-12">
-                <div class="surface p-6 sm:p-8 reveal">
-                    <div class="flex flex-col lg:flex-row gap-8">
-                        <div class="lg:w-1/3 space-y-3">
-                            <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">Για κάθε τύπο επιχείρησης</h2>
-                            <p class="text-slate-600">Διάλεξε το σενάριο που σου ταιριάζει και δες τη ροή.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <button class="chip tab-btn" data-tab="cafe">Καφετέρια</button>
-                                <button class="chip tab-btn" data-tab="restaurant">Εστιατόριο</button>
-                                <button class="chip tab-btn" data-tab="beach">Παραλιακό Μπαρ</button>
-                                <button class="chip tab-btn" data-tab="food">Καντίνα</button>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="tab-panel" data-panel="cafe">
-                                <div class="mini-window space-y-2">
-                                    <div class="mini-header"><span>Καφετέρια</span><span>Γρήγορο service</span></div>
-                                    <div class="text-xs text-slate-600">Γρήγορες παραγγελίες, καθαρή ροή, εύκολη αλλαγή βαρδιών.</div>
-                                </div>
-                            </div>
-                            <div class="tab-panel hidden" data-panel="restaurant">
-                                <div class="mini-window space-y-2">
-                                    <div class="mini-header"><span>Εστιατόριο</span><span>Τραπέζια</span></div>
-                                    <div class="text-xs text-slate-600">Παρακολούθηση τραπεζιών, στέλνεις στην κουζίνα χωρίς καθυστερήσεις.</div>
-                                </div>
-                            </div>
-                            <div class="tab-panel hidden" data-panel="beach">
-                                <div class="mini-window space-y-2">
-                                    <div class="mini-header"><span>Παραλιακό Μπαρ</span><span>Κινητότητα</span></div>
-                                    <div class="text-xs text-slate-600">Πολλές συσκευές στο χώρο, QR μενού για γρήγορες επιλογές.</div>
-                                </div>
-                            </div>
-                            <div class="tab-panel hidden" data-panel="food">
-                                <div class="mini-window space-y-2">
-                                    <div class="mini-header"><span>Καντίνα</span><span>Απλή λειτουργία</span></div>
-                                <div class="text-xs text-slate-600">Απλή λειτουργία, γρήγορη παραγγελιοληψία, μικρή ουρά.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section id="pricing" class="py-12">
                 <div class="surface-soft p-8 text-center reveal">
-                    <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">Μία απλή συνδρομή</h2>
-                    <p class="text-slate-600 mt-3">€20/μήνα με 30 ημέρες δωρεάν δοκιμή.</p>
+                    <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">&#932;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#949;&#954;&#960;&#955;&#942;&#958;&#949;&#953;&#962;</h2>
+                    <p class="text-slate-600 mt-3">&#8364;20/&#956;&#942;&#957;&#945;. 30 &#951;&#956;&#941;&#961;&#949;&#962; &#948;&#959;&#954;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
                     <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../POSPal_Demo_Index.html" class="btn btn-primary">
-                            Δες Demo
-                        </a>
-                        <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/webstud.exe" class="btn btn-secondary">
-                            Κατέβασε το POSPal
-                        </a>
+                        <a href="../POSPal_Demo_Index.html" class="btn btn-primary">&#916;&#949;&#962; Demo</a>
+                        <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/webstud.exe" class="btn btn-secondary">&#922;&#945;&#964;&#941;&#946;&#945;&#963;&#949; &#964;&#959; POSPal</a>
                     </div>
+                    <p class="mt-3 text-xs text-slate-500">&#913;&#954;&#973;&#961;&#969;&#963;&#951; &#972;&#964;&#949; &#952;&#941;&#955;&#949;&#953;&#962;.</p>
                 </div>
             </section>
 
             <section class="py-12">
                 <div class="grid md:grid-cols-2 gap-6">
                     <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">Πώς ξεκινάω;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">Κατεβάζεις το POSPal, κάνεις την πρώτη ρύθμιση και ξεκινάς άμεσα τη δοκιμή.</p>
+                        <summary class="font-semibold text-slate-900 cursor-pointer">&#928;&#974;&#962; &#958;&#949;&#954;&#953;&#957;&#940;&#969;;</summary>
+                        <p class="text-slate-600 mt-2 text-sm">&#922;&#945;&#964;&#949;&#946;&#940;&#950;&#949;&#953;&#962; &#964;&#959; POSPal, &#964;&#959; &#949;&#947;&#954;&#945;&#952;&#953;&#963;&#964;&#940;&#962; &#954;&#945;&#953; &#958;&#949;&#954;&#953;&#957;&#940;&#962;. &#919; &#948;&#959;&#954;&#953;&#956;&#942; &#949;&#943;&#957;&#945;&#953; 30 &#951;&#956;&#941;&#961;&#949;&#962; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
                     </details>
                     <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">Το QR μενού περιλαμβάνεται;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">Ναι, είναι μέρος του πακέτου και ενημερώνεται αυτόματα από το POSPal.</p>
+                        <summary class="font-semibold text-slate-900 cursor-pointer">&#932;&#959; QR &#956;&#949;&#957;&#959;&#973; &#960;&#949;&#961;&#953;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953;;</summary>
+                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#960;&#949;&#961;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953; &#954;&#945;&#953; &#949;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#960;&#972; &#964;&#959; POSPal.</p>
                     </details>
                     <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">Λειτουργεί σε πολλές συσκευές;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">Συνδέεις όσες συσκευές χρειάζεσαι στο ίδιο δίκτυο για παραγγελίες.</p>
+                        <summary class="font-semibold text-slate-900 cursor-pointer">&#923;&#949;&#953;&#964;&#959;&#965;&#961;&#947;&#949;&#943; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; POS;</summary>
+                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#956;&#960;&#959;&#961;&#949;&#943; &#957;&#945; &#964;&#961;&#941;&#967;&#949;&#953; &#960;&#945;&#961;&#940;&#955;&#955;&#951;&#955;&#945; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; &#963;&#973;&#963;&#964;&#951;&#956;&#945;.</p>
                     </details>
                     <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">Υπάρχει τεχνική υποστήριξη;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">Υπάρχει βοήθεια μέσα από οδηγούς και απλή υποστήριξη όταν χρειάζεται.</p>
+                        <summary class="font-semibold text-slate-900 cursor-pointer">&#931;&#949; &#960;&#959;&#953;&#949;&#962; &#963;&#965;&#963;&#954;&#949;&#965;&#941;&#962; &#948;&#959;&#965;&#955;&#949;&#973;&#949;&#953;;</summary>
+                        <p class="text-slate-600 mt-2 text-sm">&#931;&#949; tablet, &#954;&#953;&#957;&#951;&#964;&#972; &#954;&#945;&#953; &#965;&#960;&#959;&#955;&#959;&#947;&#953;&#963;&#964;&#942; &#956;&#941;&#963;&#945; &#963;&#964;&#959;&#957; &#967;&#974;&#961;&#959; &#963;&#945;&#962;.</p>
+                    </details>
+                    <details class="surface-soft p-6 reveal card-hover">
+                        <summary class="font-semibold text-slate-900 cursor-pointer">&#933;&#960;&#940;&#961;&#967;&#949;&#953; &#964;&#949;&#967;&#957;&#953;&#954;&#942; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951;;</summary>
+                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#965;&#960;&#940;&#961;&#967;&#949;&#953; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951; &#947;&#953;&#945; &#964;&#951;&#957; &#949;&#947;&#954;&#945;&#964;&#940;&#963;&#964;&#945;&#963;&#951; &#954;&#945;&#953; &#964;&#951; &#967;&#961;&#942;&#963;&#951;.</p>
                     </details>
                 </div>
             </section>
@@ -747,8 +877,6 @@
                     </div>
                     <div class="flex flex-wrap gap-4">
                         <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-                        <a href="../guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="../installation-guide.html" class="hover:text-slate-900">Οδηγός εγκατάστασης</a>
                     </div>
                 </div>
             </div>
@@ -769,10 +897,25 @@
         const updateHeader = () => {
             if (!siteHeader) return;
             const scrollY = window.scrollY || 0;
-            const compactStart = 8;
-            const compactRange = 480;
-            const compactProgress = Math.min(Math.max((scrollY - compactStart) / compactRange, 0), 1);
+            let compactProgress = 0;
+            const stage2Grid = document.querySelector('.stage2-grid');
+            const experienceStage = document.getElementById('experience-stage');
+            if (stage2Grid && experienceStage) {
+                const stickyTop = parseFloat(getComputedStyle(experienceStage).top) || 0;
+                const gridRect = stage2Grid.getBoundingClientRect();
+                const delta = stickyTop - gridRect.top;
+                if (delta > 0) {
+                    const range = Math.min(Math.max(gridRect.height * 0.35, 180), 320);
+                    compactProgress = Math.min(Math.max(delta / range, 0), 1);
+                }
+            } else {
+                const compactStart = 8;
+                const compactRange = 480;
+                compactProgress = Math.min(Math.max((scrollY - compactStart) / compactRange, 0), 1);
+            }
             siteHeader.style.setProperty('--header-compact', compactProgress.toFixed(3));
+            const headerRect = siteHeader.getBoundingClientRect();
+            document.documentElement.style.setProperty('--header-offset', `${headerRect.height}px`);
             if (scrollProgress) {
                 const doc = document.documentElement;
                 const maxScroll = doc.scrollHeight - window.innerHeight;
@@ -785,9 +928,19 @@
         window.addEventListener('resize', updateHeader);
 
         const heroContainer = document.querySelector('.hero-container');
+        const heroCopy = document.querySelector('.hero-copy');
+        const heroScrollHint = document.querySelector('.hero-scroll-hint');
         const experienceViewport = document.getElementById('experience-viewport');
         const experienceStage = document.getElementById('experience-stage');
-        const experienceQr = document.querySelector('.experience-qr');
+        const experienceLeft = document.querySelector('.experience-left');
+        const experienceDemo = document.querySelector('.experience-demo');
+        const stage2Grid = document.querySelector('.stage2-grid');
+        const stage2Copy = document.querySelector('.stage2-copy');
+        const stage2Qr = document.querySelector('.experience-qr');
+        const heroDemoFrame = document.querySelector('.demo-frame-hero');
+        const HERO_RATIO = 16 / 10;
+        const HERO_SCALE_MAX = 1.5;
+        let heroBaseWidth = 0;
         const experienceMetrics = {
             containerWidth: 0,
             viewportWidth: 0,
@@ -795,39 +948,182 @@
         };
         let experienceTarget = 0;
         let experienceCurrent = 0;
+        let experienceRaw = 0;
         let experienceRaf = null;
+        let experienceFrameTime = 0;
+        const SCROLL_DEADZONE = 0.08;
+        const SCROLL_TAIL = 0.12;
+        const STAGE_FOCUS_START = 0.03;
+        const STAGE_LOCK_START = 0.5;
+        const STAGE_ONE_END = 0.58;
+        const STAGE_TWO_START = 0.68;
+        const STAGE_TWO_END = 0.98;
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        const ease = (t) => t * t * (3 - 2 * t);
+
+        const updateHeroBaseWidth = () => {
+            if (!heroDemoFrame || !experienceViewport) return;
+            const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
+            const maxHeight = Math.max(window.innerHeight - headerOffset - 24 + 48, 320);
+            const heightLimitedWidth = (maxHeight * HERO_RATIO) / HERO_SCALE_MAX;
+            const viewportWidth = experienceViewport.clientWidth || heroDemoFrame.getBoundingClientRect().width;
+            heroBaseWidth = Math.min(viewportWidth, heightLimitedWidth);
+            heroDemoFrame.style.width = `${heroBaseWidth}px`;
+        };
 
         const updateExperienceMetrics = () => {
             if (!experienceStage || !experienceViewport || !heroContainer) return;
             const containerRect = heroContainer.getBoundingClientRect();
+            const previousStageTransform = experienceStage.style.transform;
+            const previousStageWidth = experienceStage.style.width;
+            experienceStage.style.transform = 'none';
+            experienceStage.style.width = `${experienceViewport.clientWidth}px`;
             const viewportRect = experienceViewport.getBoundingClientRect();
             experienceMetrics.containerWidth = containerRect.width;
             experienceMetrics.viewportWidth = viewportRect.width;
             experienceMetrics.shift = Math.max(viewportRect.left - containerRect.left, 0);
+            if (heroDemoFrame) {
+                const previousDemoTransform = experienceDemo ? experienceDemo.style.transform : '';
+                const previousTransform = heroDemoFrame.style.transform;
+                if (experienceDemo) {
+                    experienceDemo.style.transform = 'none';
+                }
+                heroDemoFrame.style.transform = 'none';
+                const heroRect = heroDemoFrame.getBoundingClientRect();
+                heroDemoFrame.style.transform = previousTransform;
+                if (experienceDemo) {
+                    experienceDemo.style.transform = previousDemoTransform;
+                }
+                const containerCenter = containerRect.left + containerRect.width / 2;
+                const heroCenter = heroRect.left + heroRect.width / 2;
+                const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
+                const viewportCenterY = headerOffset + (window.innerHeight - headerOffset) / 2;
+                const heroCenterY = heroRect.top + heroRect.height / 2;
+                experienceMetrics.heroShiftX = containerCenter - heroCenter;
+                experienceMetrics.heroShiftY = viewportCenterY - heroCenterY;
+                experienceMetrics.heroBaseTop = heroRect.top;
+                experienceMetrics.heroBaseHeight = heroRect.height;
+            }
+            experienceStage.style.transform = previousStageTransform;
+            experienceStage.style.width = previousStageWidth;
+            updateHeroBaseWidth();
+        };
+
+        const updateExperienceStageHeight = (stage2Ease = 0) => {
+            if (!experienceStage) return;
+            let baseHeight = 0;
+            if (heroDemoFrame) {
+                baseHeight = heroDemoFrame.getBoundingClientRect().height;
+            }
+            let requiredHeight = baseHeight;
+            if (stage2Ease > 0.01) {
+                const stage2CopyHeight = stage2Copy ? stage2Copy.getBoundingClientRect().height : 0;
+                const stage2QrHeight = stage2Qr ? stage2Qr.getBoundingClientRect().height : 0;
+                const stage2Height = Math.max(stage2CopyHeight, stage2QrHeight);
+                if (stage2Height > 0 && baseHeight > 0) {
+                    requiredHeight = Math.max(baseHeight, baseHeight + (stage2Height - baseHeight) * stage2Ease);
+                } else {
+                    requiredHeight = Math.max(baseHeight, stage2Height);
+                }
+            }
+            if (requiredHeight > 0) {
+                experienceStage.style.minHeight = `${Math.ceil(requiredHeight)}px`;
+            }
         };
 
         const applyExperienceProgress = (progress) => {
             if (!experienceStage || !experienceViewport) return;
             experienceStage.style.setProperty('--experience-progress', progress.toFixed(3));
-            const rail = 72 * progress;
+            experienceViewport.style.setProperty('--experience-progress', progress.toFixed(3));
             const viewportWidth = experienceMetrics.viewportWidth || experienceViewport.getBoundingClientRect().width;
             const containerWidth = experienceMetrics.containerWidth || viewportWidth;
             const shift = experienceMetrics.shift;
-            const stageWidth = viewportWidth + (containerWidth - viewportWidth) * progress;
+            const layoutProgress = ease(clamp((progress - STAGE_TWO_START) / (STAGE_TWO_END - STAGE_TWO_START), 0, 1));
+            const stageWidth = viewportWidth + (containerWidth - viewportWidth) * layoutProgress;
             experienceStage.style.width = `${stageWidth}px`;
-            experienceStage.style.transform = `translate3d(${-shift * progress}px, 0, 0)`;
-            const rightTarget = Math.min((stageWidth - rail) * 0.45, 380);
-            const right = rightTarget * progress;
-            const left = Math.max(stageWidth - rail - right, 0);
-            experienceStage.style.gridTemplateColumns = `${left}px ${rail}px ${right}px`;
-            if (experienceQr) {
-                experienceQr.classList.toggle('is-active', progress > 0.45);
+            const activeShift = shift * layoutProgress;
+            experienceStage.style.transform = `translate3d(${-activeShift}px, 0, 0)`;
+            const stage1Progress = ease(clamp((progress - STAGE_FOCUS_START) / (STAGE_LOCK_START - STAGE_FOCUS_START), 0, 1));
+            const isFocus = progress >= STAGE_FOCUS_START && progress < STAGE_LOCK_START;
+            const isLocked = progress >= STAGE_LOCK_START && progress < STAGE_TWO_START;
+            const stage2Raw = (progress - STAGE_TWO_START) / (STAGE_TWO_END - STAGE_TWO_START);
+            const stage2Progress = ease(clamp(stage2Raw, 0, 1));
+            const stage2Ease = ease(clamp((stage2Progress - 0.03) / 0.92, 0, 1));
+            const stage2Soft = ease(clamp((stage2Progress - 0.15) / 0.8, 0, 1));
+            const isStage2 = stage2Progress > 0.01;
+            experienceStage.classList.toggle('is-focus', isFocus);
+            experienceStage.classList.toggle('is-locked', isLocked);
+            experienceStage.classList.toggle('is-stage2', isStage2);
+
+            if (heroDemoFrame) {
+                const demoScale = 1 + stage1Progress * (HERO_SCALE_MAX - 1);
+                const heroShiftX = (experienceMetrics.heroShiftX || 0) * stage1Progress;
+                const baseHeight = experienceMetrics.heroBaseHeight || heroDemoFrame.getBoundingClientRect().height;
+                const baseTop = experienceMetrics.heroBaseTop || 0;
+                const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
+                const safeTop = headerOffset + 12;
+                const centerShiftY = (experienceMetrics.heroShiftY || 0) * stage1Progress;
+                let heroShiftY = centerShiftY - (demoScale - 1) * (baseHeight / 2);
+                if (baseTop + heroShiftY < safeTop) {
+                    heroShiftY = safeTop - baseTop;
+                }
+                heroDemoFrame.style.transform = `scale(${demoScale})`;
+                if (experienceDemo) {
+                    experienceDemo.style.transform = `translate3d(${heroShiftX}px, ${heroShiftY}px, 0)`;
+                }
             }
+
+            if (experienceLeft) {
+                let demoVisibility = 1 - stage2Soft;
+                experienceLeft.style.opacity = demoVisibility.toFixed(3);
+                experienceLeft.style.transform = `translateY(${10 * (1 - demoVisibility)}px) scale(${0.985 + 0.015 * demoVisibility})`;
+                experienceLeft.style.filter = `blur(${(1 - demoVisibility) * 2}px)`;
+                experienceLeft.style.pointerEvents = demoVisibility > 0.25 ? 'auto' : 'none';
+                experienceLeft.style.visibility = demoVisibility < 0.02 ? 'hidden' : 'visible';
+            }
+
+            if (heroCopy) {
+                heroCopy.style.opacity = (1 - stage1Progress * 0.9).toFixed(3);
+                heroCopy.style.transform = `translateY(${-14 * stage1Progress}px)`;
+            }
+
+            if (heroScrollHint) {
+                const hintEase = ease(clamp((stage1Progress - 0.1) / 0.6, 0, 1));
+                heroScrollHint.style.opacity = (1 - hintEase).toFixed(3);
+                heroScrollHint.style.transform = `translateY(${8 * hintEase}px)`;
+                heroScrollHint.style.pointerEvents = hintEase < 0.95 ? 'auto' : 'none';
+            }
+
+            if (stage2Copy) {
+                stage2Copy.style.opacity = stage2Ease.toFixed(3);
+                stage2Copy.style.transform = `translate(${(1 - stage2Ease) * -18}px, ${(1 - stage2Ease) * 8}px)`;
+                stage2Copy.style.pointerEvents = stage2Ease > 0.6 ? 'auto' : 'none';
+            }
+
+            if (stage2Qr) {
+                stage2Qr.style.opacity = stage2Ease.toFixed(3);
+                stage2Qr.style.transform = `translate(${(1 - stage2Ease) * 18}px, ${(1 - stage2Ease) * 8}px)`;
+                stage2Qr.style.pointerEvents = stage2Ease > 0.7 ? 'auto' : 'none';
+            }
+
+            if (stage2Grid) {
+                stage2Grid.style.setProperty('--stage2-opacity', stage2Ease.toFixed(3));
+                stage2Grid.style.pointerEvents = stage2Ease > 0.7 ? 'auto' : 'none';
+            }
+
+            updateExperienceStageHeight(stage2Ease);
         };
 
-        const tickExperience = () => {
+        const tickExperience = (timestamp) => {
             const delta = experienceTarget - experienceCurrent;
-            experienceCurrent += delta * 0.12;
+            if (!experienceFrameTime) {
+                experienceFrameTime = timestamp;
+            }
+            const dt = Math.min(Math.max(timestamp - experienceFrameTime, 0), 48);
+            experienceFrameTime = timestamp;
+            const smoothing = 1 - Math.exp(-dt / 140);
+            experienceCurrent += delta * smoothing;
             if (Math.abs(delta) < 0.001) {
                 experienceCurrent = experienceTarget;
             }
@@ -836,6 +1132,7 @@
                 experienceRaf = requestAnimationFrame(tickExperience);
             } else {
                 experienceRaf = null;
+                experienceFrameTime = 0;
             }
         };
 
@@ -844,20 +1141,20 @@
             if (window.matchMedia('(max-width: 1024px)').matches) {
                 experienceTarget = 1;
                 experienceCurrent = 1;
-                experienceStage.style.gridTemplateColumns = '1fr';
-                experienceStage.style.width = '100%';
-                experienceStage.style.transform = 'translate3d(0, 0, 0)';
-                experienceStage.style.setProperty('--experience-progress', '1');
-                if (experienceQr) {
-                    experienceQr.classList.add('is-active');
-                }
+                experienceRaw = 1;
+                applyExperienceProgress(1);
                 return;
             }
 
             const rect = experienceViewport.getBoundingClientRect();
             const maxScroll = rect.height - window.innerHeight;
             const scrolled = Math.min(Math.max(-rect.top, 0), maxScroll);
-            experienceTarget = maxScroll > 0 ? scrolled / maxScroll : 1;
+            const rawProgress = maxScroll > 0 ? scrolled / maxScroll : 1;
+            const start = SCROLL_DEADZONE;
+            const end = 1 - SCROLL_TAIL;
+            const normalized = clamp((rawProgress - start) / (end - start), 0, 1);
+            experienceRaw = clamp(rawProgress, 0, 1);
+            experienceTarget = ease(normalized);
             if (!experienceRaf) {
                 experienceRaf = requestAnimationFrame(tickExperience);
             }
@@ -890,11 +1187,10 @@
         const demoPlaceholder = document.getElementById('demo-placeholder');
         const heroFrame = document.getElementById('hero-frame');
         const heroScale = document.getElementById('hero-scale');
-        const heroDemoFrame = document.querySelector('.demo-frame-hero');
         let heroLoadToken = 0;
         const DEMO_SIZES = {
             mobile: { width: 360, height: 640 },
-            desktop: { width: 1200, height: 750 }
+            desktop: { width: 1600, height: 1000 }
         };
         let currentDemoMode = null;
 
