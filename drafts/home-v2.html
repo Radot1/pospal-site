@@ -665,6 +665,74 @@
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
         }
 
+        .faq-list {
+            display: grid;
+            gap: 16px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            overflow: hidden;
+        }
+
+        .faq-trigger {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 18px 22px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0f172a;
+            cursor: pointer;
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.28s ease, opacity 0.2s ease;
+        }
+
+        .faq-panel-content {
+            padding: 0 22px 18px;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.is-open .faq-panel {
+            opacity: 1;
+        }
+
+        .faq-item.is-open .faq-icon {
+            transform: rotate(180deg);
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .faq-item.is-open .faq-trigger {
+            color: #0f172a;
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(18px);
@@ -842,27 +910,62 @@
             </section>
 
             <section class="py-12">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">&#928;&#974;&#962; &#958;&#949;&#954;&#953;&#957;&#940;&#969;;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">&#922;&#945;&#964;&#949;&#946;&#940;&#950;&#949;&#953;&#962; &#964;&#959; POSPal, &#964;&#959; &#949;&#947;&#954;&#945;&#952;&#953;&#963;&#964;&#940;&#962; &#954;&#945;&#953; &#958;&#949;&#954;&#953;&#957;&#940;&#962;. &#919; &#948;&#959;&#954;&#953;&#956;&#942; &#949;&#943;&#957;&#945;&#953; 30 &#951;&#956;&#941;&#961;&#949;&#962; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
-                    </details>
-                    <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">&#932;&#959; QR &#956;&#949;&#957;&#959;&#973; &#960;&#949;&#961;&#953;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953;;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#960;&#949;&#961;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953; &#954;&#945;&#953; &#949;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#960;&#972; &#964;&#959; POSPal.</p>
-                    </details>
-                    <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">&#923;&#949;&#953;&#964;&#959;&#965;&#961;&#947;&#949;&#943; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; POS;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#956;&#960;&#959;&#961;&#949;&#943; &#957;&#945; &#964;&#961;&#941;&#967;&#949;&#953; &#960;&#945;&#961;&#940;&#955;&#955;&#951;&#955;&#945; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; &#963;&#973;&#963;&#964;&#951;&#956;&#945;.</p>
-                    </details>
-                    <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">&#931;&#949; &#960;&#959;&#953;&#949;&#962; &#963;&#965;&#963;&#954;&#949;&#965;&#941;&#962; &#948;&#959;&#965;&#955;&#949;&#973;&#949;&#953;;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">&#931;&#949; tablet, &#954;&#953;&#957;&#951;&#964;&#972; &#954;&#945;&#953; &#965;&#960;&#959;&#955;&#959;&#947;&#953;&#963;&#964;&#942; &#956;&#941;&#963;&#945; &#963;&#964;&#959;&#957; &#967;&#974;&#961;&#959; &#963;&#945;&#962;.</p>
-                    </details>
-                    <details class="surface-soft p-6 reveal card-hover">
-                        <summary class="font-semibold text-slate-900 cursor-pointer">&#933;&#960;&#940;&#961;&#967;&#949;&#953; &#964;&#949;&#967;&#957;&#953;&#954;&#942; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951;;</summary>
-                        <p class="text-slate-600 mt-2 text-sm">&#925;&#945;&#953;, &#965;&#960;&#940;&#961;&#967;&#949;&#953; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951; &#947;&#953;&#945; &#964;&#951;&#957; &#949;&#947;&#954;&#945;&#964;&#940;&#963;&#964;&#945;&#963;&#951; &#954;&#945;&#953; &#964;&#951; &#967;&#961;&#942;&#963;&#951;.</p>
-                    </details>
+                <div class="faq-list reveal">
+                    <div class="faq-item surface-soft" data-faq-item>
+                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-1">
+                            <span>&#928;&#974;&#962; &#958;&#949;&#954;&#953;&#957;&#940;&#969;;</span>
+                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <div class="faq-panel" data-faq-panel id="faq-panel-1">
+                            <div class="faq-panel-content">
+                                <p>&#922;&#945;&#964;&#949;&#946;&#940;&#950;&#949;&#953;&#962; &#964;&#959; POSPal, &#964;&#959; &#949;&#947;&#954;&#945;&#952;&#953;&#963;&#964;&#940;&#962; &#954;&#945;&#953; &#958;&#949;&#954;&#953;&#957;&#940;&#962;. &#919; &#948;&#959;&#954;&#953;&#956;&#942; &#949;&#943;&#957;&#945;&#953; 30 &#951;&#956;&#941;&#961;&#949;&#962; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item surface-soft" data-faq-item>
+                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-2">
+                            <span>&#932;&#959; QR &#956;&#949;&#957;&#959;&#973; &#960;&#949;&#961;&#953;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953;;</span>
+                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <div class="faq-panel" data-faq-panel id="faq-panel-2">
+                            <div class="faq-panel-content">
+                                <p>&#925;&#945;&#953;, &#960;&#949;&#961;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953; &#954;&#945;&#953; &#949;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#960;&#972; &#964;&#959; POSPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item surface-soft" data-faq-item>
+                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-3">
+                            <span>&#923;&#949;&#953;&#964;&#959;&#965;&#961;&#947;&#949;&#943; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; POS;</span>
+                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <div class="faq-panel" data-faq-panel id="faq-panel-3">
+                            <div class="faq-panel-content">
+                                <p>&#925;&#945;&#953;, &#956;&#960;&#959;&#961;&#949;&#943; &#957;&#945; &#964;&#961;&#941;&#967;&#949;&#953; &#960;&#945;&#961;&#940;&#955;&#955;&#951;&#955;&#945; &#956;&#949; &#964;&#959; &#965;&#960;&#940;&#961;&#967;&#959;&#957; &#963;&#973;&#963;&#964;&#951;&#956;&#945;.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item surface-soft" data-faq-item>
+                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-4">
+                            <span>&#931;&#949; &#960;&#959;&#953;&#949;&#962; &#963;&#965;&#963;&#954;&#949;&#965;&#941;&#962; &#948;&#959;&#965;&#955;&#949;&#973;&#949;&#953;;</span>
+                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <div class="faq-panel" data-faq-panel id="faq-panel-4">
+                            <div class="faq-panel-content">
+                                <p>&#931;&#949; tablet, &#954;&#953;&#957;&#951;&#964;&#972; &#954;&#945;&#953; &#965;&#960;&#959;&#955;&#959;&#947;&#953;&#963;&#964;&#942; &#956;&#941;&#963;&#945; &#963;&#964;&#959;&#957; &#967;&#974;&#961;&#959; &#963;&#945;&#962;.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item surface-soft" data-faq-item>
+                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-5">
+                            <span>&#933;&#960;&#940;&#961;&#967;&#949;&#953; &#964;&#949;&#967;&#957;&#953;&#954;&#942; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951;;</span>
+                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <div class="faq-panel" data-faq-panel id="faq-panel-5">
+                            <div class="faq-panel-content">
+                                <p>&#925;&#945;&#953;, &#965;&#960;&#940;&#961;&#967;&#949;&#953; &#965;&#960;&#959;&#963;&#964;&#942;&#961;&#953;&#958;&#951; &#947;&#953;&#945; &#964;&#951;&#957; &#949;&#947;&#954;&#945;&#964;&#940;&#963;&#964;&#945;&#963;&#951; &#954;&#945;&#953; &#964;&#951; &#967;&#961;&#942;&#963;&#951;.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             </div>
@@ -944,7 +1047,8 @@
         const experienceMetrics = {
             containerWidth: 0,
             viewportWidth: 0,
-            shift: 0
+            shift: 0,
+            heroLocalTop: 0
         };
         let experienceTarget = 0;
         let experienceCurrent = 0;
@@ -991,18 +1095,15 @@
                 }
                 heroDemoFrame.style.transform = 'none';
                 const heroRect = heroDemoFrame.getBoundingClientRect();
+                const stageRect = experienceStage.getBoundingClientRect();
                 heroDemoFrame.style.transform = previousTransform;
                 if (experienceDemo) {
                     experienceDemo.style.transform = previousDemoTransform;
                 }
                 const containerCenter = containerRect.left + containerRect.width / 2;
                 const heroCenter = heroRect.left + heroRect.width / 2;
-                const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
-                const viewportCenterY = headerOffset + (window.innerHeight - headerOffset) / 2;
-                const heroCenterY = heroRect.top + heroRect.height / 2;
                 experienceMetrics.heroShiftX = containerCenter - heroCenter;
-                experienceMetrics.heroShiftY = viewportCenterY - heroCenterY;
-                experienceMetrics.heroBaseTop = heroRect.top;
+                experienceMetrics.heroLocalTop = heroRect.top - stageRect.top;
                 experienceMetrics.heroBaseHeight = heroRect.height;
             }
             experienceStage.style.transform = previousStageTransform;
@@ -1060,10 +1161,12 @@
                 const demoScale = 1 + stage1Progress * (HERO_SCALE_MAX - 1);
                 const heroShiftX = (experienceMetrics.heroShiftX || 0) * stage1Progress;
                 const baseHeight = experienceMetrics.heroBaseHeight || heroDemoFrame.getBoundingClientRect().height;
-                const baseTop = experienceMetrics.heroBaseTop || 0;
                 const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
                 const safeTop = headerOffset + 12;
-                const centerShiftY = (experienceMetrics.heroShiftY || 0) * stage1Progress;
+                const stageTop = experienceStage.getBoundingClientRect().top;
+                const baseTop = stageTop + (experienceMetrics.heroLocalTop || 0);
+                const viewportCenterY = headerOffset + (window.innerHeight - headerOffset) / 2;
+                const centerShiftY = (viewportCenterY - (baseTop + baseHeight / 2)) * stage1Progress;
                 let heroShiftY = centerShiftY - (demoScale - 1) * (baseHeight / 2);
                 if (baseTop + heroShiftY < safeTop) {
                     heroShiftY = safeTop - baseTop;
@@ -1307,6 +1410,63 @@
         });
         if (tabButtons.length) {
             tabButtons[0].classList.add('is-active');
+        }
+
+        const faqItems = document.querySelectorAll('[data-faq-item]');
+        const closeFaqItem = (item) => {
+            if (!item) return;
+            item.classList.remove('is-open');
+            const trigger = item.querySelector('[data-faq-trigger]');
+            const panel = item.querySelector('[data-faq-panel]');
+            if (trigger) {
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+            if (panel) {
+                panel.style.maxHeight = '0px';
+                panel.setAttribute('aria-hidden', 'true');
+            }
+        };
+        const openFaqItem = (item) => {
+            if (!item) return;
+            item.classList.add('is-open');
+            const trigger = item.querySelector('[data-faq-trigger]');
+            const panel = item.querySelector('[data-faq-panel]');
+            if (trigger) {
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+            if (panel) {
+                panel.style.maxHeight = `${panel.scrollHeight}px`;
+                panel.setAttribute('aria-hidden', 'false');
+            }
+        };
+        if (faqItems.length) {
+            faqItems.forEach((item) => {
+                closeFaqItem(item);
+                const trigger = item.querySelector('[data-faq-trigger]');
+                if (!trigger) return;
+                trigger.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('is-open');
+                    faqItems.forEach((other) => {
+                        if (other !== item) {
+                            closeFaqItem(other);
+                        }
+                    });
+                    if (isOpen) {
+                        closeFaqItem(item);
+                    } else {
+                        openFaqItem(item);
+                    }
+                });
+            });
+            window.addEventListener('resize', () => {
+                faqItems.forEach((item) => {
+                    if (!item.classList.contains('is-open')) return;
+                    const panel = item.querySelector('[data-faq-panel]');
+                    if (panel) {
+                        panel.style.maxHeight = `${panel.scrollHeight}px`;
+                    }
+                });
+            });
         }
     </script>
 </body>
