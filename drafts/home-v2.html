@@ -1087,6 +1087,7 @@
             experienceMetrics.containerWidth = containerRect.width;
             experienceMetrics.viewportWidth = viewportRect.width;
             experienceMetrics.shift = Math.max(viewportRect.left - containerRect.left, 0);
+            updateHeroBaseWidth();
             if (heroDemoFrame) {
                 const previousDemoTransform = experienceDemo ? experienceDemo.style.transform : '';
                 const previousTransform = heroDemoFrame.style.transform;
@@ -1108,13 +1109,14 @@
             }
             experienceStage.style.transform = previousStageTransform;
             experienceStage.style.width = previousStageWidth;
-            updateHeroBaseWidth();
         };
 
         const updateExperienceStageHeight = (stage2Ease = 0) => {
             if (!experienceStage) return;
             let baseHeight = 0;
-            if (heroDemoFrame) {
+            if (experienceMetrics.heroBaseHeight) {
+                baseHeight = experienceMetrics.heroBaseHeight;
+            } else if (heroDemoFrame) {
                 baseHeight = heroDemoFrame.getBoundingClientRect().height;
             }
             let requiredHeight = baseHeight;
