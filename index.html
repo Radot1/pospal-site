@@ -46,6 +46,41 @@
             background: #f8fafc;
         }
 
+        .mobile-splash {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .mobile-splash-inner {
+            max-width: 360px;
+        }
+
+        .mobile-splash-eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        .mobile-splash-title {
+            margin-top: 12px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .mobile-splash-subtitle {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
         .surface {
             background: var(--surface);
             border: 1px solid rgba(226, 232, 240, 0.9);
@@ -492,6 +527,14 @@
         }
 
         @media (max-width: 1024px) {
+            body > :not(.mobile-splash) {
+                display: none !important;
+            }
+
+            .mobile-splash {
+                display: flex;
+            }
+
             .experience-viewport {
                 min-height: 0;
             }
@@ -786,6 +829,13 @@
     </style>
 </head>
 <body class="min-h-screen">
+    <div class="mobile-splash">
+        <div class="mobile-splash-inner">
+            <div class="mobile-splash-eyebrow">IN DEVELOPMENT</div>
+            <div class="mobile-splash-title">Please view on desktop.</div>
+            <div class="mobile-splash-subtitle">Mobile experience is not available yet.</div>
+        </div>
+    </div>
     <div class="relative z-10">
         <header id="site-header" class="sticky top-0 z-50">
             <div class="header-shell">
