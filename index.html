@@ -500,6 +500,8 @@
                 position: static;
                 grid-template-columns: 1fr;
                 gap: 18px;
+                width: 100% !important;
+                transform: none !important;
             }
 
             .experience-demo,
@@ -511,6 +513,8 @@
             .experience-demo {
                 opacity: 1;
                 transform: none;
+                justify-self: center;
+                align-self: center;
             }
 
             .experience-left {
@@ -529,11 +533,40 @@
                 pointer-events: auto;
             }
 
+            .stage2-grid {
+                position: static;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                width: 100%;
+                transform: none;
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding-inline: 0;
+                pointer-events: auto;
+                --stage2-opacity: 1 !important;
+            }
+
+            .stage2-grid::before {
+                inset: 0;
+                border-radius: 24px;
+                opacity: 1;
+            }
+
+            .stage2-copy,
+            .experience-qr {
+                opacity: 1 !important;
+                transform: none !important;
+                pointer-events: auto !important;
+            }
+
             .experience-qr {
                 opacity: 1;
                 transform: none;
                 pointer-events: auto;
                 height: auto;
+                justify-self: center;
+                max-width: 100%;
             }
 
             .experience-rail {
@@ -1038,6 +1071,53 @@
         const stage2Copy = document.querySelector('.stage2-copy');
         const stage2Qr = document.querySelector('.experience-qr');
         const heroDemoFrame = document.querySelector('.demo-frame-hero');
+        const applyExperienceMobileLayout = () => {
+            if (!experienceStage) return;
+            experienceStage.style.removeProperty('min-height');
+            experienceStage.style.removeProperty('width');
+            experienceStage.style.removeProperty('transform');
+            experienceStage.style.removeProperty('--experience-progress');
+            if (experienceViewport) {
+                experienceViewport.style.removeProperty('--experience-progress');
+            }
+            if (experienceDemo) {
+                experienceDemo.style.removeProperty('transform');
+            }
+            if (heroDemoFrame) {
+                heroDemoFrame.style.removeProperty('transform');
+            }
+            if (experienceLeft) {
+                experienceLeft.style.removeProperty('opacity');
+                experienceLeft.style.removeProperty('transform');
+                experienceLeft.style.removeProperty('filter');
+                experienceLeft.style.removeProperty('pointer-events');
+                experienceLeft.style.removeProperty('visibility');
+            }
+            if (heroCopy) {
+                heroCopy.style.removeProperty('opacity');
+                heroCopy.style.removeProperty('transform');
+            }
+            if (heroScrollHint) {
+                heroScrollHint.style.removeProperty('opacity');
+                heroScrollHint.style.removeProperty('transform');
+                heroScrollHint.style.removeProperty('pointer-events');
+            }
+            if (stage2Copy) {
+                stage2Copy.style.removeProperty('opacity');
+                stage2Copy.style.removeProperty('transform');
+                stage2Copy.style.removeProperty('pointer-events');
+            }
+            if (stage2Qr) {
+                stage2Qr.style.removeProperty('opacity');
+                stage2Qr.style.removeProperty('transform');
+                stage2Qr.style.removeProperty('pointer-events');
+            }
+            if (stage2Grid) {
+                stage2Grid.style.removeProperty('--stage2-opacity');
+                stage2Grid.style.removeProperty('pointer-events');
+            }
+            experienceStage.classList.remove('is-focus', 'is-locked', 'is-stage2');
+        };
         const HERO_RATIO = 16 / 10;
         const HERO_SCALE_MAX = 1.5;
         let heroBaseWidth = 0;
@@ -1241,10 +1321,7 @@
         const updateExperienceTarget = () => {
             if (!experienceStage || !experienceViewport || !heroContainer) return;
             if (window.matchMedia('(max-width: 1024px)').matches) {
-                experienceTarget = 1;
-                experienceCurrent = 1;
-                experienceRaw = 1;
-                applyExperienceProgress(1);
+                applyExperienceMobileLayout();
                 return;
             }
 
