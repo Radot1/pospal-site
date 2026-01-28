@@ -503,6 +503,19 @@
             padding: 18px;
         }
 
+        .mobile-demo-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .mobile-demo-note {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
         .mobile-phase-eyebrow {
             font-size: 0.7rem;
             letter-spacing: 0.18em;
@@ -616,6 +629,10 @@
             .demo-frame-hero .demo-iframe {
                 border-radius: 22px;
                 pointer-events: none;
+            }
+
+            .demo-frame-hero.is-mobile-interactive .demo-iframe {
+                pointer-events: auto;
             }
 
             .mobile-phase-indicator,
@@ -953,6 +970,12 @@
                                                   </div>
                                               </div>
                                           </div>
+                                        </div>
+                                        <div class="mobile-only mobile-demo-controls">
+                                            <button class="btn btn-secondary btn-sm" type="button" id="mobile-demo-toggle" aria-pressed="false">
+                                                Ενεργοποίησε demo
+                                            </button>
+                                            <span class="mobile-demo-note">Για κύλιση, κλείσε το demo.</span>
                                         </div>
                                         <div class="experience-copy experience-copy-qr">
                                             <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR &#956;&#949;&#957;&#959;&#973;, &#967;&#969;&#961;&#943;&#962; extra &#954;&#972;&#963;&#964;&#959;&#962;.</h3>
@@ -1500,6 +1523,7 @@
         const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
         const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
         const enableMobileSwap = false;
+        const mobileDemoToggle = document.getElementById('mobile-demo-toggle');
         let currentMobilePhase = 0;
         let mobilePhaseMode = null;
         let mobileFadeTimeout = null;
@@ -1526,6 +1550,13 @@
             if (demoPlaceholder) {
                 demoPlaceholder.classList.add('hidden');
             }
+        };
+
+        const setMobileDemoInteractive = (active) => {
+            if (!heroDemoFrame || !mobileDemoToggle) return;
+            heroDemoFrame.classList.toggle('is-mobile-interactive', active);
+            mobileDemoToggle.setAttribute('aria-pressed', active ? 'true' : 'false');
+            mobileDemoToggle.textContent = active ? 'Κλείσε demo' : 'Ενεργοποίησε demo';
         };
 
         function updateMobileDemoHeight() {
@@ -1692,6 +1723,9 @@
                 if (heroDemoFrame) {
                     heroDemoFrame.classList.remove('is-mobile-fading');
                 }
+                if (mobileDemoToggle) {
+                    setMobileDemoInteractive(false);
+                }
                 mobilePhaseMode = null;
                 if (experienceStage) {
                     experienceStage.classList.remove('is-mobile-phase-2');
@@ -1718,6 +1752,14 @@
             requestIdleCallback(initDemo, { timeout: 1200 });
         } else {
             window.addEventListener('load', initDemo);
+        }
+
+        if (mobileDemoToggle) {
+            mobileDemoToggle.addEventListener('click', () => {
+                if (!heroDemoFrame) return;
+                const isActive = heroDemoFrame.classList.contains('is-mobile-interactive');
+                setMobileDemoInteractive(!isActive);
+            });
         }
 
         initMobilePhaseObserver();
