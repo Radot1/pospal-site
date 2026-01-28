@@ -503,31 +503,27 @@
             padding: 18px;
         }
 
-        .mobile-demo-hint {
+        .mobile-demo-overlay {
             display: none;
             position: absolute;
-            left: 50%;
-            bottom: 14px;
-            transform: translateX(-50%);
+            inset: 0;
             z-index: 4;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: rgba(15, 23, 42, 0.88);
-            color: #fff;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
-            pointer-events: none;
-            opacity: 0;
-            animation: mobileHintPulse 4.2s ease 0.3s infinite;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(1px);
+            transition: opacity 220ms ease, visibility 220ms ease;
         }
 
-        @keyframes mobileHintPulse {
-            0% { opacity: 0; transform: translate(-50%, 6px); }
-            18% { opacity: 1; transform: translate(-50%, 0); }
-            60% { opacity: 1; transform: translate(-50%, 0); }
-            100% { opacity: 0; transform: translate(-50%, -6px); }
+        .mobile-demo-overlay span {
+            background: rgba(15, 23, 42, 0.9);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, 0.25);
         }
 
         .mobile-phase-eyebrow {
@@ -642,13 +638,21 @@
 
             .demo-frame-hero .demo-iframe {
                 border-radius: 22px;
+                pointer-events: none;
+            }
+
+            .demo-frame-hero.is-mobile-active .demo-iframe {
                 pointer-events: auto;
             }
 
-            .mobile-demo-hint {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
+            .mobile-demo-overlay {
+                display: flex;
+            }
+
+            .demo-frame-hero.is-mobile-active .mobile-demo-overlay {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
             }
 
             .mobile-phase-indicator,
@@ -969,7 +973,9 @@
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
                                             <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
-                                            <div class="mobile-demo-hint">Πάτα για να το δοκιμάσεις</div>
+                                            <div class="mobile-demo-overlay" id="mobile-demo-overlay">
+                                                <span>Δοκίμασέ με</span>
+                                            </div>
                                               <div class="frame-body" id="hero-frame">
                                                   <div class="demo-placeholder" id="demo-placeholder">
                                                       Φόρτωση demo...
@@ -1533,7 +1539,9 @@
         const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
         const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
         const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
+        const mobileDemoOverlay = document.getElementById('mobile-demo-overlay');
         const enableMobileSwap = false;
+        let isMobileDemoActivated = false;
         let currentMobilePhase = 0;
         let mobilePhaseMode = null;
         let mobileFadeTimeout = null;
@@ -1570,6 +1578,17 @@
                 experienceStage.style.setProperty('--mobile-demo-height', `${Math.ceil(rect.height)}px`);
             }
         }
+
+        const updateMobileDemoOverlay = () => {
+            if (!heroDemoFrame || !mobileDemoOverlay) return;
+            if (!mobileMediaQuery.matches) {
+                heroDemoFrame.classList.remove('is-mobile-active');
+                mobileDemoOverlay.setAttribute('hidden', '');
+                return;
+            }
+            mobileDemoOverlay.removeAttribute('hidden');
+            heroDemoFrame.classList.toggle('is-mobile-active', isMobileDemoActivated);
+        };
 
         const applyHeroScale = () => {
             if (!heroFrame || !heroScale) return;
@@ -1716,6 +1735,7 @@
         };
         const handleMobileLayoutChange = () => {
             updateQrIframe();
+            updateMobileDemoOverlay();
             if (!mobileMediaQuery.matches) {
                 if (mobileFadeTimeout) {
                     clearTimeout(mobileFadeTimeout);
@@ -1752,6 +1772,13 @@
             requestIdleCallback(initDemo, { timeout: 1200 });
         } else {
             window.addEventListener('load', initDemo);
+        }
+
+        if (mobileDemoOverlay) {
+            mobileDemoOverlay.addEventListener('click', () => {
+                isMobileDemoActivated = true;
+                updateMobileDemoOverlay();
+            });
         }
 
         initMobilePhaseObserver();
