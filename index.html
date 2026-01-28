@@ -788,6 +788,14 @@
         }
 
         @media (max-width: 1024px) {
+            main > section:first-of-type {
+                padding-top: 24px;
+            }
+
+            .hero-copy {
+                gap: 12px;
+            }
+
             .chip-row {
                 display: none;
             }
@@ -803,10 +811,29 @@
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none;
+                width: fit-content;
+                max-width: 100%;
+                padding: 6px 10px;
+                border-radius: 999px;
+                background: #f0fdf4;
+                border: 1px solid rgba(187, 247, 208, 0.85);
+                box-shadow: 0 8px 18px rgba(22, 163, 74, 0.08);
+            }
+
+            .hero-pill-line span {
+                gap: 6px;
             }
 
             .hero-pill-line::-webkit-scrollbar {
                 display: none;
+            }
+
+            .hero-copy .text-base p {
+                margin-top: 4px;
+            }
+
+            .hero-copy > .flex {
+                gap: 12px;
             }
         }
 
