@@ -1565,13 +1565,14 @@
             }
         };
 
-        const updateMobileDemoHeight = () => {
-            if (!heroDemoFrame || !experienceStage || !mobileMediaQuery.matches) return;
+        function updateMobileDemoHeight() {
+            if (!heroDemoFrame || !experienceStage) return;
+            if (!window.matchMedia('(max-width: 1024px)').matches) return;
             const rect = heroDemoFrame.getBoundingClientRect();
             if (rect.height > 0) {
                 experienceStage.style.setProperty('--mobile-demo-height', `${Math.ceil(rect.height)}px`);
             }
-        };
+        }
 
         const applyHeroScale = () => {
             if (!heroFrame || !heroScale) return;
