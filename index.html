@@ -48,41 +48,6 @@
             background: #f8fafc;
         }
 
-        .mobile-splash {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            min-height: 100svh;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .mobile-splash-inner {
-            max-width: 360px;
-        }
-
-        .mobile-splash-eyebrow {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #64748b;
-        }
-
-        .mobile-splash-title {
-            margin-top: 12px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #0f172a;
-        }
-
-        .mobile-splash-subtitle {
-            margin-top: 8px;
-            font-size: 0.95rem;
-            color: #475569;
-        }
-
         .surface {
             background: var(--surface);
             border: 1px solid rgba(226, 232, 240, 0.9);
@@ -528,31 +493,158 @@
             pointer-events: auto;
         }
 
+        .mobile-phase-indicator,
+        .mobile-phases,
+        .mobile-interact-overlay {
+            display: none;
+        }
+
+        .mobile-phase-indicator {
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(248, 250, 252, 0.9);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+        }
+
+        .mobile-phase-dots {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .mobile-phase-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #e2e8f0;
+        }
+
+        .mobile-phase-dot.is-active {
+            background: #16a34a;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.16);
+        }
+
+        .mobile-interact-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 18px;
+            border: none;
+            background: rgba(248, 250, 252, 0.92);
+            color: #0f172a;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 200ms ease;
+        }
+
+        .mobile-interact-subtitle {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #64748b;
+            letter-spacing: 0.05em;
+        }
+
+        .demo-frame-hero.is-mobile-interactive .mobile-interact-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mobile-phase-card {
+            padding: 18px;
+        }
+
+        .mobile-phase-eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        .mobile-phase-title {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .mobile-phase-body {
+            margin-top: 10px;
+            color: #475569;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .mobile-phase-list {
+            margin-top: 14px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .mobile-phase-list-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .mobile-phase-list-item::before {
+            content: "✓";
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            background: #dcfce7;
+            color: #15803d;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
+        }
+
         @media (max-width: 1024px) {
-            body > :not(.mobile-splash) {
-                display: none !important;
-            }
-
-            .mobile-splash {
-                display: flex;
-            }
-
             .experience-viewport {
                 min-height: 0;
+                padding-bottom: 24px;
             }
 
             .experience-stage {
-                position: static;
-                grid-template-columns: 1fr;
-                gap: 18px;
+                position: sticky;
+                top: calc(var(--header-offset, 92px) + 12px);
+                gap: 12px;
                 width: 100% !important;
                 transform: none !important;
+                align-items: center;
             }
 
-            .experience-demo,
-            .experience-qr,
-            .experience-rail {
-                grid-column: 1;
+            .experience-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .experience-left > * {
+                grid-area: auto;
             }
 
             .experience-demo {
@@ -562,60 +654,59 @@
                 align-self: center;
             }
 
-            .experience-left {
-                display: flex;
-                flex-direction: column;
-                gap: 18px;
-            }
-
-            .experience-left > * {
-                grid-area: auto;
-            }
-
-            .experience-copy {
-                opacity: 1;
-                transform: none;
-                pointer-events: auto;
-            }
-
-            .stage2-grid {
-                position: static;
-                top: auto;
-                bottom: auto;
-                left: auto;
-                width: 100%;
-                transform: none;
-                grid-template-columns: 1fr;
-                gap: 18px;
-                padding-inline: 0;
-                pointer-events: auto;
-                --stage2-opacity: 1 !important;
-            }
-
-            .stage2-grid::before {
-                inset: 0;
-                border-radius: 24px;
-                opacity: 1;
-            }
-
-            .stage2-copy,
-            .experience-qr {
-                opacity: 1 !important;
-                transform: none !important;
-                pointer-events: auto !important;
-            }
-
-            .experience-qr {
-                opacity: 1;
-                transform: none;
-                pointer-events: auto;
-                height: auto;
-                justify-self: center;
-                max-width: 100%;
-            }
-
+            .experience-copy,
+            .experience-copy-qr,
+            .stage2-grid,
             .experience-rail {
-                display: none;
+                display: none !important;
+            }
+
+            .demo-frame-hero {
+                --hero-ratio: 9 / 19.5;
+                max-width: min(92vw, 420px);
+                border-radius: 34px;
+                box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.08);
+            }
+
+            .demo-frame-hero .frame-body {
+                padding: 6px;
+                background: #f8fafc;
+                border-radius: 28px;
+            }
+
+            .demo-frame-hero .demo-iframe {
+                border-radius: 22px;
+                pointer-events: none;
+            }
+
+            .demo-frame-hero.is-mobile-interactive .demo-iframe {
+                pointer-events: auto;
+            }
+
+            .mobile-phase-indicator,
+            .mobile-phases,
+            .mobile-interact-overlay {
+                display: flex;
+            }
+
+            .mobile-phase-indicator {
+                margin-bottom: 10px;
+            }
+
+            .mobile-phases {
+                margin-top: 24px;
+                display: grid;
+                gap: 24px;
+            }
+
+            .mobile-phase {
+                min-height: 65vh;
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .mobile-phase-card {
+                width: 100%;
             }
         }
 
@@ -831,13 +922,6 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <div class="mobile-splash">
-        <div class="mobile-splash-inner">
-            <div class="mobile-splash-eyebrow">IN DEVELOPMENT</div>
-            <div class="mobile-splash-title">Please view on desktop.</div>
-            <div class="mobile-splash-subtitle">Mobile experience is not available yet.</div>
-        </div>
-    </div>
     <div class="relative z-10">
         <header id="site-header" class="sticky top-0 z-50">
             <div class="header-shell">
@@ -914,10 +998,21 @@
                         <div class="reveal">
                             <div class="experience-viewport" id="experience-viewport">
                                 <div class="experience-stage" id="experience-stage">
+                                    <div class="mobile-phase-indicator" aria-hidden="true">
+                                        <span id="mobile-phase-label">ΦΑΣΗ 1 • Παραγγελιοληψία</span>
+                                        <span class="mobile-phase-dots">
+                                            <span class="mobile-phase-dot is-active" data-mobile-dot="1"></span>
+                                            <span class="mobile-phase-dot" data-mobile-dot="2"></span>
+                                        </span>
+                                    </div>
                                     <div class="experience-left">
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
                                             <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
+                                            <button class="mobile-interact-overlay" id="mobile-interact-overlay" type="button" hidden>
+                                                <span>Πάτα για να το δοκιμάσεις</span>
+                                                <span class="mobile-interact-subtitle">Κύλησε για συνέχεια</span>
+                                            </button>
                                               <div class="frame-body" id="hero-frame">
                                                   <div class="demo-placeholder" id="demo-placeholder">
                                                       Φόρτωση demo...
@@ -930,6 +1025,7 @@
                                                           loading="lazy"
                                                           data-src-mobile="./pospal-demo-coffee-mobile.html"
                                                           data-src-desktop="./pospal-demo-coffee-desktop.html"
+                                                          data-src-qr="./qr-menu-demo.html"
                                                       ></iframe>
                                                   </div>
                                               </div>
@@ -967,10 +1063,47 @@
                                                         title="POSPal QR Menu"
                                                         loading="lazy"
                                                         src="./qr-menu-demo.html"
+                                                        data-src="./qr-menu-demo.html"
                                                     ></iframe>
                                               </div>
                                           </div>
                                       </div>
+                                </div>
+                                <div class="mobile-phases" id="mobile-phases">
+                                    <section class="mobile-phase" data-mobile-phase="1">
+                                        <div class="surface-soft mobile-phase-card">
+                                            <div class="mobile-phase-eyebrow">ΦΑΣΗ 1 • Παραγγελιοληψία</div>
+                                            <h3 class="mobile-phase-title">Παραγγελίες, τραπέζια και απλή λειτουργία.</h3>
+                                            <p class="mobile-phase-body">Για καφέ, εστιατόρια, παραλιακά καταστήματα και καντίνες στην Ελλάδα.</p>
+                                            <div class="mobile-phase-list">
+                                                <div class="mobile-phase-list-item">Λειτουργία τραπεζιών</div>
+                                                <div class="mobile-phase-list-item">Απλή λειτουργία (χωρίς τραπέζια)</div>
+                                                <div class="mobile-phase-list-item">Ροή παραγγελιών για κουζίνα</div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="mobile-phase" data-mobile-phase="2">
+                                        <div class="surface-soft mobile-phase-card">
+                                            <div class="mobile-phase-eyebrow">ΦΑΣΗ 2 • QR Μενού</div>
+                                            <h3 class="mobile-phase-title">QR μενού, χωρίς επιπλέον κόστος.</h3>
+                                            <p class="mobile-phase-body">Περιλαμβάνεται στο πακέτο και ενημερώνεται αυτόματα με κάθε αλλαγή.</p>
+                                            <div class="qr-bullets">
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">Δημιουργείται από τον υπάρχοντα κατάλογο, χωρίς επιπλέον εργασία.</span>
+                                                </div>
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">Προσαρμοσμένο για κινητά, ευανάγνωστο για τον πελάτη.</span>
+                                                </div>
+                                                <div class="qr-bullet">
+                                                    <span class="qr-bullet-icon">&#10003;</span>
+                                                    <span class="qr-bullet-text">Αυτόματη ενημέρωση σε κάθε αλλαγή του καταλόγου.</span>
+                                                </div>
+                                            </div>
+                                            <a class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">Δες το live QR μενού</a>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>
@@ -1085,7 +1218,8 @@
             let compactProgress = 0;
             const stage2Grid = document.querySelector('.stage2-grid');
             const experienceStage = document.getElementById('experience-stage');
-            if (stage2Grid && experienceStage) {
+            const isMobileLayout = window.matchMedia('(max-width: 1024px)').matches;
+            if (!isMobileLayout && stage2Grid && experienceStage) {
                 const stickyTop = parseFloat(getComputedStyle(experienceStage).top) || 0;
                 const gridRect = stage2Grid.getBoundingClientRect();
                 const delta = stickyTop - gridRect.top;
@@ -1137,6 +1271,7 @@
             }
             if (heroDemoFrame) {
                 heroDemoFrame.style.removeProperty('transform');
+                heroDemoFrame.style.removeProperty('width');
             }
             if (experienceLeft) {
                 experienceLeft.style.removeProperty('opacity');
@@ -1207,6 +1342,12 @@
 
         const updateExperienceMetrics = () => {
             if (!experienceStage || !experienceViewport || !heroContainer) return;
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+                if (heroDemoFrame) {
+                    heroDemoFrame.style.removeProperty('width');
+                }
+                return;
+            }
             const containerRect = heroContainer.getBoundingClientRect();
             const previousStageTransform = experienceStage.style.transform;
             const previousStageWidth = experienceStage.style.width;
@@ -1418,10 +1559,19 @@
         const demoPlaceholder = document.getElementById('demo-placeholder');
         const heroFrame = document.getElementById('hero-frame');
         const heroScale = document.getElementById('hero-scale');
+        const mobilePhaseLabel = document.getElementById('mobile-phase-label');
+        const mobilePhaseDots = document.querySelectorAll('[data-mobile-dot]');
+        const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
+        const mobileInteractOverlay = document.getElementById('mobile-interact-overlay');
+        const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
+        const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
+        let currentMobilePhase = 0;
+        let mobilePhaseMode = null;
         let heroLoadToken = 0;
         const DEMO_SIZES = {
-            mobile: { width: 360, height: 640 },
-            desktop: { width: 1600, height: 1000 }
+            mobile: { width: 390, height: 844 },
+            desktop: { width: 1600, height: 1000 },
+            qr: { width: 390, height: 844 }
         };
         let currentDemoMode = null;
 
@@ -1477,9 +1627,15 @@
         };
         const chooseDemoSrc = () => {
             if (!heroDemo || !heroScale || !heroFrame) return;
-            const mode = isMobileDevice() ? 'mobile' : 'desktop';
-            const src = mode === 'mobile' ? heroDemo.dataset.srcMobile : heroDemo.dataset.srcDesktop;
-            const size = DEMO_SIZES[mode];
+            const isMobileLayout = mobileMediaQuery.matches;
+            let mode = 'desktop';
+            if (isMobileLayout) {
+                mode = mobilePhaseMode === 'qr' ? 'qr' : 'mobile';
+            }
+            const src = mode === 'qr'
+                ? heroDemo.dataset.srcQr
+                : (mode === 'mobile' ? heroDemo.dataset.srcMobile : heroDemo.dataset.srcDesktop);
+            const size = DEMO_SIZES[mode] || DEMO_SIZES.desktop;
 
             if (currentDemoMode !== mode) {
                 currentDemoMode = mode;
@@ -1502,6 +1658,82 @@
                 scheduleHeroFallback();
             }
         };
+        const updateQrIframe = () => {
+            if (!qrDemoIframe) return;
+            const isMobileLayout = mobileMediaQuery.matches;
+            const src = qrDemoIframe.dataset.src || qrDemoIframe.getAttribute('src');
+            if (isMobileLayout) {
+                if (qrDemoIframe.getAttribute('src')) {
+                    qrDemoIframe.removeAttribute('src');
+                }
+            } else if (src && !qrDemoIframe.getAttribute('src')) {
+                qrDemoIframe.setAttribute('src', src);
+            }
+        };
+        const setMobilePhase = (phase) => {
+            if (!experienceStage) return;
+            const nextPhase = Number(phase);
+            if (!Number.isFinite(nextPhase)) return;
+            if (currentMobilePhase === nextPhase) return;
+            currentMobilePhase = nextPhase;
+            mobilePhaseMode = nextPhase === 2 ? 'qr' : null;
+            if (mobilePhaseLabel) {
+                mobilePhaseLabel.textContent = nextPhase === 2 ? 'ΦΑΣΗ 2 • QR Μενού' : 'ΦΑΣΗ 1 • Παραγγελιοληψία';
+            }
+            mobilePhaseDots.forEach((dot) => {
+                dot.classList.toggle('is-active', dot.dataset.mobileDot === String(nextPhase));
+            });
+            experienceStage.classList.toggle('is-mobile-phase-2', nextPhase === 2);
+            if (demoPlaceholder) {
+                demoPlaceholder.classList.remove('hidden');
+            }
+            chooseDemoSrc();
+        };
+        const initMobilePhaseObserver = () => {
+            if (!mobilePhases.length) return;
+            const observer = new IntersectionObserver((entries) => {
+                if (!mobileMediaQuery.matches) return;
+                let bestEntry = null;
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
+                        bestEntry = entry;
+                    }
+                });
+                if (bestEntry) {
+                    setMobilePhase(bestEntry.target.dataset.mobilePhase);
+                }
+            }, { threshold: [0.45, 0.6, 0.75] });
+            mobilePhases.forEach((phase) => observer.observe(phase));
+        };
+        const handleMobileLayoutChange = () => {
+            updateQrIframe();
+            if (!mobileMediaQuery.matches) {
+                mobilePhaseMode = null;
+                if (experienceStage) {
+                    experienceStage.classList.remove('is-mobile-phase-2');
+                }
+                if (heroDemoFrame) {
+                    heroDemoFrame.classList.remove('is-mobile-interactive');
+                }
+                if (mobileInteractOverlay) {
+                    mobileInteractOverlay.setAttribute('hidden', '');
+                }
+                if (mobilePhaseLabel) {
+                    mobilePhaseLabel.textContent = 'ΦΑΣΗ 1 • Παραγγελιοληψία';
+                }
+                mobilePhaseDots.forEach((dot) => {
+                    dot.classList.toggle('is-active', dot.dataset.mobileDot === '1');
+                });
+                chooseDemoSrc();
+                return;
+            }
+            if (mobileInteractOverlay) {
+                mobileInteractOverlay.removeAttribute('hidden');
+            }
+            const nextPhase = currentMobilePhase || 1;
+            setMobilePhase(nextPhase);
+        };
         const initDemo = () => {
             chooseDemoSrc();
         };
@@ -1509,6 +1741,20 @@
             requestIdleCallback(initDemo, { timeout: 1200 });
         } else {
             window.addEventListener('load', initDemo);
+        }
+
+        if (mobileInteractOverlay && heroDemoFrame) {
+            mobileInteractOverlay.addEventListener('click', () => {
+                heroDemoFrame.classList.add('is-mobile-interactive');
+            });
+        }
+
+        initMobilePhaseObserver();
+        handleMobileLayoutChange();
+        if (typeof mobileMediaQuery.addEventListener === 'function') {
+            mobileMediaQuery.addEventListener('change', handleMobileLayoutChange);
+        } else if (typeof mobileMediaQuery.addListener === 'function') {
+            mobileMediaQuery.addListener(handleMobileLayoutChange);
         }
 
         if (heroFrame && 'ResizeObserver' in window) {
