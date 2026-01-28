@@ -589,6 +589,42 @@
         }
 
         @media (max-width: 1024px) {
+            .hero-copy {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .chip-row {
+                display: none;
+            }
+
+            .hero-pill-line {
+                display: flex;
+            }
+
+            .hero-copy h1 {
+                font-size: 2.1rem;
+                line-height: 1.2;
+            }
+
+            .hero-copy .text-base {
+                font-size: 0.98rem;
+            }
+
+            .hero-copy .text-base p {
+                margin-top: 6px;
+            }
+
+            .hero-copy .text-base p:first-child {
+                margin-top: 0;
+            }
+
+            .hero-scroll-hint {
+                font-size: 0.7rem;
+                opacity: 0.7;
+            }
+
             .experience-viewport {
                 min-height: auto;
                 padding-bottom: 12px;
@@ -716,6 +752,26 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+        }
+
+        .hero-pill-line {
+            display: none;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #166534;
+        }
+
+        .hero-pill-line span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-pill-line span::before {
+            content: "•";
+            color: #22c55e;
         }
 
         .chip {
@@ -962,6 +1018,11 @@
                             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-slate-900 leading-tight">
                                 Το σύστημα παραγγελιοληψίας που θέλει η ομάδα σου.
                             </h1>
+                            <div class="hero-pill-line">
+                                <span>Εκτός Wi-Fi</span>
+                                <span>Γρήγορη ροή</span>
+                                <span>Χωρίς δέσμευση</span>
+                            </div>
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού με αυτόματη ενημέρωση σε κάθε αλλαγή.</p>
                                 <p class="font-semibold text-emerald-700">30 ημέρες δωρεάν • χωρίς κάρτα • χωρίς λογαριασμό.</p>
