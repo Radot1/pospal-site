@@ -503,17 +503,27 @@
             padding: 18px;
         }
 
-        .mobile-demo-controls {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            margin-top: 14px;
+        .mobile-demo-overlay {
+            display: none;
+            position: absolute;
+            inset: 0;
+            z-index: 6;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 12px;
+            pointer-events: none;
         }
 
-        .mobile-demo-note {
-            font-size: 0.8rem;
-            color: #64748b;
+        .mobile-demo-btn {
+            pointer-events: auto;
+            border: 1px solid rgba(15, 23, 42, 0.16);
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(15, 23, 42, 0.88);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
         }
 
         .mobile-phase-eyebrow {
@@ -633,6 +643,16 @@
 
             .demo-frame-hero.is-mobile-interactive .demo-iframe {
                 pointer-events: auto;
+            }
+
+            .mobile-demo-overlay {
+                display: flex;
+            }
+
+            .demo-frame-hero.is-mobile-interactive .mobile-demo-overlay {
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding: 10px;
             }
 
             .mobile-phase-indicator,
@@ -953,6 +973,11 @@
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
                                             <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
+                                            <div class="mobile-demo-overlay">
+                                                <button class="mobile-demo-btn" type="button" id="mobile-demo-toggle" aria-pressed="false">
+                                                    Ενεργοποίησε demo
+                                                </button>
+                                            </div>
                                               <div class="frame-body" id="hero-frame">
                                                   <div class="demo-placeholder" id="demo-placeholder">
                                                       Φόρτωση demo...
@@ -970,12 +995,6 @@
                                                   </div>
                                               </div>
                                           </div>
-                                        </div>
-                                        <div class="mobile-only mobile-demo-controls">
-                                            <button class="btn btn-secondary btn-sm" type="button" id="mobile-demo-toggle" aria-pressed="false">
-                                                Ενεργοποίησε demo
-                                            </button>
-                                            <span class="mobile-demo-note">Για κύλιση, κλείσε το demo.</span>
                                         </div>
                                         <div class="experience-copy experience-copy-qr">
                                             <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR &#956;&#949;&#957;&#959;&#973;, &#967;&#969;&#961;&#943;&#962; extra &#954;&#972;&#963;&#964;&#959;&#962;.</h3>
