@@ -503,6 +503,16 @@
             padding: 18px;
         }
 
+        .mobile-section-label {
+            display: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
         .mobile-demo-overlay {
             display: none;
             position: absolute;
@@ -677,6 +687,10 @@
             }
 
             .mobile-only {
+                display: block;
+            }
+
+            .mobile-section-label {
                 display: block;
             }
         }
@@ -970,6 +984,7 @@
                             <div class="experience-viewport" id="experience-viewport">
                                 <div class="experience-stage" id="experience-stage">
                                     <div class="experience-left">
+                                        <div class="mobile-section-label mobile-only">Παραγγελιοληψία</div>
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
                                             <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
@@ -1035,7 +1050,7 @@
                                 <div class="mobile-phases" id="mobile-phases">
                                     <section class="mobile-phase" data-mobile-phase="1">
                                         <div class="surface-soft mobile-phase-card">
-                                            <div class="mobile-phase-eyebrow">Παραγγελιοληψία</div>
+                                            <div class="mobile-phase-eyebrow">Τι περιλαμβάνει</div>
                                             <h3 class="mobile-phase-title">Παραγγελίες, τραπέζια και απλή λειτουργία.</h3>
                                             <p class="mobile-phase-body">Για καφέ, εστιατόρια, παραλιακά καταστήματα και καντίνες στην Ελλάδα.</p>
                                             <div class="mobile-phase-list">
