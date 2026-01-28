@@ -787,6 +787,29 @@
             color: #22c55e;
         }
 
+        @media (max-width: 1024px) {
+            .chip-row {
+                display: none;
+            }
+
+            .hero-pill-line {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.78rem;
+                line-height: 1.2;
+                white-space: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .hero-pill-line::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         .chip {
             border: 1px solid rgba(187, 247, 208, 0.9);
             border-radius: 999px;
