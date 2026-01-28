@@ -601,6 +601,19 @@
 
             .hero-pill-line {
                 display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.78rem;
+                line-height: 1.2;
+                white-space: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .hero-pill-line::-webkit-scrollbar {
+                display: none;
             }
 
             .hero-copy h1 {
@@ -769,8 +782,8 @@
             gap: 8px;
         }
 
-        .hero-pill-line span::before {
-            content: "•";
+        .hero-pill-line span + span::before {
+            content: "\2022";
             color: #22c55e;
         }
 
