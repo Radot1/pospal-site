@@ -494,42 +494,9 @@
         }
 
         .mobile-phase-indicator,
-        .mobile-phases {
+        .mobile-phases,
+        .mobile-only {
             display: none;
-        }
-
-        .mobile-phase-indicator {
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: rgba(248, 250, 252, 0.9);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #475569;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-        }
-
-        .mobile-phase-dots {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .mobile-phase-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 999px;
-            background: #e2e8f0;
-        }
-
-        .mobile-phase-dot.is-active {
-            background: #16a34a;
-            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.16);
         }
 
         .mobile-phase-card {
@@ -595,12 +562,12 @@
             }
 
             .experience-stage {
-                position: sticky;
-                top: max(calc(50svh - (var(--mobile-demo-height, 60vh) / 2)), calc(var(--header-offset, 92px) + 12px));
+                position: static;
+                top: auto;
                 gap: 12px;
                 width: 100% !important;
                 transform: none !important;
-                align-items: center;
+                align-items: flex-start;
             }
 
             .experience-left {
@@ -651,21 +618,9 @@
                 pointer-events: none;
             }
 
-            .demo-frame-hero .demo-scale {
-                transition: opacity 220ms ease;
-            }
-
-            .demo-frame-hero.is-mobile-fading .demo-scale {
-                opacity: 0;
-            }
-
             .mobile-phase-indicator,
             .mobile-phases {
                 display: flex;
-            }
-
-            .mobile-phase-indicator {
-                margin-bottom: 10px;
             }
 
             .mobile-phases {
@@ -682,6 +637,10 @@
 
             .mobile-phase-card {
                 width: 100%;
+            }
+
+            .mobile-only {
+                display: block;
             }
         }
 
@@ -973,13 +932,6 @@
                         <div class="reveal">
                             <div class="experience-viewport" id="experience-viewport">
                                 <div class="experience-stage" id="experience-stage">
-                                    <div class="mobile-phase-indicator" aria-hidden="true">
-                                        <span id="mobile-phase-label">Παραγγελιοληψία</span>
-                                        <span class="mobile-phase-dots">
-                                            <span class="mobile-phase-dot is-active" data-mobile-dot="1"></span>
-                                            <span class="mobile-phase-dot" data-mobile-dot="2"></span>
-                                        </span>
-                                    </div>
                                     <div class="experience-left">
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
@@ -1059,6 +1011,16 @@
                                             <div class="mobile-phase-eyebrow">QR Μενού</div>
                                             <h3 class="mobile-phase-title">QR μενού, χωρίς επιπλέον κόστος.</h3>
                                             <p class="mobile-phase-body">Περιλαμβάνεται στο πακέτο και ενημερώνεται αυτόματα με κάθε αλλαγή.</p>
+                                            <div class="demo-frame demo-frame-qr mobile-only mt-5">
+                                                <div class="frame-body">
+                                                    <iframe
+                                                        class="demo-iframe is-interactive"
+                                                        title="POSPal QR Menu"
+                                                        loading="lazy"
+                                                        src="./qr-menu-demo.html"
+                                                    ></iframe>
+                                                </div>
+                                            </div>
                                             <div class="qr-bullets">
                                                 <div class="qr-bullet">
                                                     <span class="qr-bullet-icon">&#10003;</span>
@@ -1532,11 +1494,12 @@
         const demoPlaceholder = document.getElementById('demo-placeholder');
         const heroFrame = document.getElementById('hero-frame');
         const heroScale = document.getElementById('hero-scale');
-        const mobilePhaseLabel = document.getElementById('mobile-phase-label');
-        const mobilePhaseDots = document.querySelectorAll('[data-mobile-dot]');
+        const mobilePhaseLabel = null;
+        const mobilePhaseDots = [];
         const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
         const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
         const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
+        const enableMobileSwap = false;
         let currentMobilePhase = 0;
         let mobilePhaseMode = null;
         let mobileFadeTimeout = null;
@@ -1617,7 +1580,7 @@
             const isMobileLayout = mobileMediaQuery.matches;
             let mode = 'desktop';
             if (isMobileLayout) {
-                mode = mobilePhaseMode === 'qr' ? 'qr' : 'mobile';
+                mode = enableMobileSwap && mobilePhaseMode === 'qr' ? 'qr' : 'mobile';
             }
             const src = mode === 'qr'
                 ? heroDemo.dataset.srcQr
@@ -1653,11 +1616,13 @@
                 if (qrDemoIframe.getAttribute('src')) {
                     qrDemoIframe.removeAttribute('src');
                 }
+                return;
             } else if (src && !qrDemoIframe.getAttribute('src')) {
                 qrDemoIframe.setAttribute('src', src);
             }
         };
         const setMobilePhase = (phase) => {
+            if (!enableMobileSwap) return;
             if (!experienceStage) return;
             const nextPhase = Number(phase);
             if (!Number.isFinite(nextPhase)) return;
@@ -1695,6 +1660,7 @@
             }
         };
         const initMobilePhaseObserver = () => {
+            if (!enableMobileSwap) return;
             if (!mobilePhases.length) return;
             const observer = new IntersectionObserver((entries) => {
                 if (!mobileMediaQuery.matches) return;
@@ -1739,8 +1705,10 @@
                 chooseDemoSrc();
                 return;
             }
-            const nextPhase = currentMobilePhase || 1;
-            setMobilePhase(nextPhase);
+            if (enableMobileSwap) {
+                const nextPhase = currentMobilePhase || 1;
+                setMobilePhase(nextPhase);
+            }
             updateMobileDemoHeight();
         };
         const initDemo = () => {
