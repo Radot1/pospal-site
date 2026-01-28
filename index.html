@@ -553,6 +553,10 @@
             transition: opacity 200ms ease;
         }
 
+        .mobile-interact-overlay[hidden] {
+            display: none !important;
+        }
+
         .mobile-interact-subtitle {
             font-size: 0.78rem;
             font-weight: 500;
@@ -652,6 +656,9 @@
                 transform: none;
                 justify-self: center;
                 align-self: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
             .experience-copy,
@@ -663,7 +670,9 @@
 
             .demo-frame-hero {
                 --hero-ratio: 9 / 19.5;
-                max-width: min(92vw, 420px);
+                width: 92vw;
+                max-width: 420px;
+                min-height: 60vh;
                 border-radius: 34px;
                 box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.08);
             }
@@ -1569,9 +1578,9 @@
         let mobilePhaseMode = null;
         let heroLoadToken = 0;
         const DEMO_SIZES = {
-            mobile: { width: 390, height: 844 },
+            mobile: { width: 360, height: 640 },
             desktop: { width: 1600, height: 1000 },
-            qr: { width: 390, height: 844 }
+            qr: { width: 360, height: 640 }
         };
         let currentDemoMode = null;
 
