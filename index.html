@@ -494,8 +494,7 @@
         }
 
         .mobile-phase-indicator,
-        .mobile-phases,
-        .mobile-interact-overlay {
+        .mobile-phases {
             display: none;
         }
 
@@ -531,42 +530,6 @@
         .mobile-phase-dot.is-active {
             background: #16a34a;
             box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.16);
-        }
-
-        .mobile-interact-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 18px;
-            border: none;
-            background: rgba(248, 250, 252, 0.92);
-            color: #0f172a;
-            text-align: center;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 200ms ease;
-        }
-
-        .mobile-interact-overlay[hidden] {
-            display: none !important;
-        }
-
-        .mobile-interact-subtitle {
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: #64748b;
-            letter-spacing: 0.05em;
-        }
-
-        .demo-frame-hero.is-mobile-interactive .mobile-interact-overlay {
-            opacity: 0;
-            pointer-events: none;
         }
 
         .mobile-phase-card {
@@ -627,13 +590,13 @@
 
         @media (max-width: 1024px) {
             .experience-viewport {
-                min-height: 0;
+                min-height: auto;
                 padding-bottom: 24px;
             }
 
             .experience-stage {
                 position: sticky;
-                top: calc(var(--header-offset, 92px) + 12px);
+                top: max(calc(50svh - (var(--mobile-demo-height, 60vh) / 2)), calc(var(--header-offset, 92px) + 12px));
                 gap: 12px;
                 width: 100% !important;
                 transform: none !important;
@@ -688,13 +651,16 @@
                 pointer-events: none;
             }
 
-            .demo-frame-hero.is-mobile-interactive .demo-iframe {
-                pointer-events: auto;
+            .demo-frame-hero .demo-scale {
+                transition: opacity 220ms ease;
+            }
+
+            .demo-frame-hero.is-mobile-fading .demo-scale {
+                opacity: 0;
             }
 
             .mobile-phase-indicator,
-            .mobile-phases,
-            .mobile-interact-overlay {
+            .mobile-phases {
                 display: flex;
             }
 
@@ -709,9 +675,9 @@
             }
 
             .mobile-phase {
-                min-height: 65vh;
+                min-height: 80vh;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
             }
 
             .mobile-phase-card {
@@ -1008,7 +974,7 @@
                             <div class="experience-viewport" id="experience-viewport">
                                 <div class="experience-stage" id="experience-stage">
                                     <div class="mobile-phase-indicator" aria-hidden="true">
-                                        <span id="mobile-phase-label">ΦΑΣΗ 1 • Παραγγελιοληψία</span>
+                                        <span id="mobile-phase-label">Παραγγελιοληψία</span>
                                         <span class="mobile-phase-dots">
                                             <span class="mobile-phase-dot is-active" data-mobile-dot="1"></span>
                                             <span class="mobile-phase-dot" data-mobile-dot="2"></span>
@@ -1018,10 +984,6 @@
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
                                             <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
-                                            <button class="mobile-interact-overlay" id="mobile-interact-overlay" type="button" hidden>
-                                                <span>Πάτα για να το δοκιμάσεις</span>
-                                                <span class="mobile-interact-subtitle">Κύλησε για συνέχεια</span>
-                                            </button>
                                               <div class="frame-body" id="hero-frame">
                                                   <div class="demo-placeholder" id="demo-placeholder">
                                                       Φόρτωση demo...
@@ -1081,7 +1043,7 @@
                                 <div class="mobile-phases" id="mobile-phases">
                                     <section class="mobile-phase" data-mobile-phase="1">
                                         <div class="surface-soft mobile-phase-card">
-                                            <div class="mobile-phase-eyebrow">ΦΑΣΗ 1 • Παραγγελιοληψία</div>
+                                            <div class="mobile-phase-eyebrow">Παραγγελιοληψία</div>
                                             <h3 class="mobile-phase-title">Παραγγελίες, τραπέζια και απλή λειτουργία.</h3>
                                             <p class="mobile-phase-body">Για καφέ, εστιατόρια, παραλιακά καταστήματα και καντίνες στην Ελλάδα.</p>
                                             <div class="mobile-phase-list">
@@ -1089,11 +1051,12 @@
                                                 <div class="mobile-phase-list-item">Απλή λειτουργία (χωρίς τραπέζια)</div>
                                                 <div class="mobile-phase-list-item">Ροή παραγγελιών για κουζίνα</div>
                                             </div>
+                                            <a class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800" href="./POSPal_Demo_Index.html">Δες το demo</a>
                                         </div>
                                     </section>
                                     <section class="mobile-phase" data-mobile-phase="2">
                                         <div class="surface-soft mobile-phase-card">
-                                            <div class="mobile-phase-eyebrow">ΦΑΣΗ 2 • QR Μενού</div>
+                                            <div class="mobile-phase-eyebrow">QR Μενού</div>
                                             <h3 class="mobile-phase-title">QR μενού, χωρίς επιπλέον κόστος.</h3>
                                             <p class="mobile-phase-body">Περιλαμβάνεται στο πακέτο και ενημερώνεται αυτόματα με κάθε αλλαγή.</p>
                                             <div class="qr-bullets">
@@ -1355,6 +1318,7 @@
                 if (heroDemoFrame) {
                     heroDemoFrame.style.removeProperty('width');
                 }
+                updateMobileDemoHeight();
                 return;
             }
             const containerRect = heroContainer.getBoundingClientRect();
@@ -1571,11 +1535,12 @@
         const mobilePhaseLabel = document.getElementById('mobile-phase-label');
         const mobilePhaseDots = document.querySelectorAll('[data-mobile-dot]');
         const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
-        const mobileInteractOverlay = document.getElementById('mobile-interact-overlay');
         const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
         const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
         let currentMobilePhase = 0;
         let mobilePhaseMode = null;
+        let mobileFadeTimeout = null;
+        let mobileFadeReleaseTimeout = null;
         let heroLoadToken = 0;
         const DEMO_SIZES = {
             mobile: { width: 360, height: 640 },
@@ -1600,6 +1565,14 @@
             }
         };
 
+        const updateMobileDemoHeight = () => {
+            if (!heroDemoFrame || !experienceStage || !mobileMediaQuery.matches) return;
+            const rect = heroDemoFrame.getBoundingClientRect();
+            if (rect.height > 0) {
+                experienceStage.style.setProperty('--mobile-demo-height', `${Math.ceil(rect.height)}px`);
+            }
+        };
+
         const applyHeroScale = () => {
             if (!heroFrame || !heroScale) return;
             const baseWidth = parseFloat(heroScale.dataset.baseWidth || '0');
@@ -1614,12 +1587,16 @@
             const offsetX = (availWidth - baseWidth * scale) / 2 + parseFloat(styles.paddingLeft);
             const offsetY = (availHeight - baseHeight * scale) / 2 + parseFloat(styles.paddingTop);
             heroScale.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+            updateMobileDemoHeight();
         };
 
         if (heroDemo) {
             heroDemo.addEventListener('load', () => {
                 applyHeroScale();
                 hideHeroPlaceholder();
+                if (heroDemoFrame) {
+                    heroDemoFrame.classList.remove('is-mobile-fading');
+                }
             });
         }
 
@@ -1685,9 +1662,9 @@
             if (!Number.isFinite(nextPhase)) return;
             if (currentMobilePhase === nextPhase) return;
             currentMobilePhase = nextPhase;
-            mobilePhaseMode = nextPhase === 2 ? 'qr' : null;
+            const nextMode = nextPhase === 2 ? 'qr' : null;
             if (mobilePhaseLabel) {
-                mobilePhaseLabel.textContent = nextPhase === 2 ? 'ΦΑΣΗ 2 • QR Μενού' : 'ΦΑΣΗ 1 • Παραγγελιοληψία';
+                mobilePhaseLabel.textContent = nextPhase === 2 ? 'QR Μενού' : 'Παραγγελιοληψία';
             }
             mobilePhaseDots.forEach((dot) => {
                 dot.classList.toggle('is-active', dot.dataset.mobileDot === String(nextPhase));
@@ -1696,40 +1673,64 @@
             if (demoPlaceholder) {
                 demoPlaceholder.classList.remove('hidden');
             }
-            chooseDemoSrc();
+            if (mobileMediaQuery.matches && heroDemoFrame && nextMode !== mobilePhaseMode) {
+                if (mobileFadeTimeout) {
+                    clearTimeout(mobileFadeTimeout);
+                }
+                if (mobileFadeReleaseTimeout) {
+                    clearTimeout(mobileFadeReleaseTimeout);
+                }
+                heroDemoFrame.classList.add('is-mobile-fading');
+                mobileFadeTimeout = window.setTimeout(() => {
+                    mobilePhaseMode = nextMode;
+                    chooseDemoSrc();
+                }, 160);
+                mobileFadeReleaseTimeout = window.setTimeout(() => {
+                    heroDemoFrame.classList.remove('is-mobile-fading');
+                }, 650);
+            } else {
+                mobilePhaseMode = nextMode;
+                chooseDemoSrc();
+            }
         };
         const initMobilePhaseObserver = () => {
             if (!mobilePhases.length) return;
             const observer = new IntersectionObserver((entries) => {
                 if (!mobileMediaQuery.matches) return;
-                let bestEntry = null;
+                const viewportCenter = window.innerHeight * 0.5;
+                let closest = null;
                 entries.forEach((entry) => {
                     if (!entry.isIntersecting) return;
-                    if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
-                        bestEntry = entry;
+                    const rect = entry.boundingClientRect;
+                    const distance = Math.abs((rect.top + rect.height / 2) - viewportCenter);
+                    if (!closest || distance < closest.distance) {
+                        closest = { distance, phase: entry.target.dataset.mobilePhase };
                     }
                 });
-                if (bestEntry) {
-                    setMobilePhase(bestEntry.target.dataset.mobilePhase);
+                if (closest) {
+                    setMobilePhase(closest.phase);
                 }
-            }, { threshold: [0.45, 0.6, 0.75] });
+            }, { threshold: 0, rootMargin: '-30% 0px -30% 0px' });
             mobilePhases.forEach((phase) => observer.observe(phase));
         };
         const handleMobileLayoutChange = () => {
             updateQrIframe();
             if (!mobileMediaQuery.matches) {
+                if (mobileFadeTimeout) {
+                    clearTimeout(mobileFadeTimeout);
+                }
+                if (mobileFadeReleaseTimeout) {
+                    clearTimeout(mobileFadeReleaseTimeout);
+                }
+                if (heroDemoFrame) {
+                    heroDemoFrame.classList.remove('is-mobile-fading');
+                }
                 mobilePhaseMode = null;
                 if (experienceStage) {
                     experienceStage.classList.remove('is-mobile-phase-2');
                 }
-                if (heroDemoFrame) {
-                    heroDemoFrame.classList.remove('is-mobile-interactive');
-                }
-                if (mobileInteractOverlay) {
-                    mobileInteractOverlay.setAttribute('hidden', '');
-                }
                 if (mobilePhaseLabel) {
-                    mobilePhaseLabel.textContent = 'ΦΑΣΗ 1 • Παραγγελιοληψία';
+                    mobilePhaseLabel.textContent = 'Παραγγελιοληψία';
                 }
                 mobilePhaseDots.forEach((dot) => {
                     dot.classList.toggle('is-active', dot.dataset.mobileDot === '1');
@@ -1737,11 +1738,9 @@
                 chooseDemoSrc();
                 return;
             }
-            if (mobileInteractOverlay) {
-                mobileInteractOverlay.removeAttribute('hidden');
-            }
             const nextPhase = currentMobilePhase || 1;
             setMobilePhase(nextPhase);
+            updateMobileDemoHeight();
         };
         const initDemo = () => {
             chooseDemoSrc();
@@ -1750,12 +1749,6 @@
             requestIdleCallback(initDemo, { timeout: 1200 });
         } else {
             window.addEventListener('load', initDemo);
-        }
-
-        if (mobileInteractOverlay && heroDemoFrame) {
-            mobileInteractOverlay.addEventListener('click', () => {
-                heroDemoFrame.classList.add('is-mobile-interactive');
-            });
         }
 
         initMobilePhaseObserver();
