@@ -1,3 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
+Disallow: /drafts/
 Sitemap: https://pospal.gr/sitemap.xml

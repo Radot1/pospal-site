@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πρώτη εβδομάδα: λίστα ελέγχου | POSPal</title>
+    <meta name="description" content="Λίστα ελέγχου για την πρώτη εβδομάδα: τι να ελέγξεις ώστε η παραγγελιοληψία (PDA) να “κουμπώσει” σωστά στην ομάδα και στη ροή του καταστήματος.">
+    <link rel="canonical" href="https://pospal.gr/guides/first-week-optimization/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="POSPal">
+    <meta property="og:title" content="Πρώτη εβδομάδα: λίστα ελέγχου | POSPal">
+    <meta property="og:description" content="Λίστα ελέγχου για την πρώτη εβδομάδα ώστε η ροή παραγγελιών να δουλέψει σωστά.">
+    <meta property="og:url" content="https://pospal.gr/guides/first-week-optimization/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Πρώτη εβδομάδα: λίστα ελέγχου | POSPal">
+    <meta name="twitter:description" content="Λίστα ελέγχου για την πρώτη εβδομάδα ώστε η ροή παραγγελιών να δουλέψει σωστά.">
+    <link rel="icon" href="/app_icon.ico">
+    <link rel="apple-touch-icon" href="/app_icon.ico">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <script src="/static/vendor/tailwindcdn.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --ink: #0f172a;
+            --surface: #ffffff;
+            --radius-lg: 22px;
+        }
+
+        body {
+            font-family: "Inter", system-ui, sans-serif;
+            color: var(--ink);
+            background: #f8fafc;
+        }
+
+        .site-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .surface-soft {
+            background: var(--surface);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            will-change: transform;
+        }
+
+        .btn-primary {
+            background: #16a34a;
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            background: #15803d;
+            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(34, 197, 94, 0.55);
+            color: #166534;
+            background: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            border-color: #16a34a;
+            color: #14532d;
+            background: #f0fdf4;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="py-6">
+        <div class="site-container flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
+                <span class="text-lg font-semibold tracking-tight">
+                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
+                <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
+                <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pb-16">
+        <div class="site-container">
+            <article class="surface-soft p-8">
+                <p class="text-sm font-semibold text-emerald-700">Οδηγός</p>
+                <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">Πρώτη εβδομάδα: λίστα ελέγχου</h1>
+                <p class="mt-3 text-slate-600 text-lg">Στόχος της πρώτης εβδομάδας δεν είναι η “τελειότητα”. Είναι να σταθεροποιήσεις τη ροή ώστε η ομάδα να δουλεύει χωρίς τριβές.</p>
+
+                <div class="mt-8 grid gap-4">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Λίστα ελέγχου (γρήγορη)</h2>
+                        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+                            <li>Ο κατάλογος έχει καθαρές κατηγορίες και ονόματα.</li>
+                            <li>Η τιμή φαίνεται πάντα δίπλα σε κάθε είδος.</li>
+                            <li>Η ομάδα ξέρει πότε δουλεύει “τραπέζια” και πότε “απλή λειτουργία”.</li>
+                            <li>Υπάρχουν 2-3 βασικά shortcuts (δημοφιλή) που βγάζουν 80% των παραγγελιών.</li>
+                            <li>Υπάρχει μία κοινή “συνήθεια” για σχόλια/ειδικές οδηγίες.</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Τι να μετρήσεις</h2>
+                        <p class="mt-2 text-slate-600">Δεν χρειάζεσαι analytics για να βγάλεις συμπέρασμα. Αρκεί να δεις:</p>
+                        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+                            <li>Πού “κολλάει” η ομάδα (σε ποιο βήμα χάνεται χρόνος).</li>
+                            <li>Πόσες διευκρινίσεις ζητά ο πελάτης (τιμές, επιλογές, περιγραφές).</li>
+                            <li>Ποια 3 είδη είναι τα πιο συχνά και πώς εμφανίζονται στο UI.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-9 rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                    <h2 class="text-xl font-semibold text-slate-900">Δες το demo και κάνε “δοκιμή βάρδιας”</h2>
+                    <p class="mt-2 text-slate-700">Πάρε 5 παραγγελίες στο demo όπως θα τις έπαιρνε η ομάδα σου. Θα σου δείξει αμέσως τι χρειάζεται αλλαγή.</p>
+                    <div class="mt-5 flex flex-col sm:flex-row gap-3">
+                        <a href="/POSPal_Demo_Index.html" class="btn btn-primary">Δες Demo</a>
+                        <a href="/pda-pos-leitourgei.html" class="btn btn-secondary">PDA: πώς λειτουργεί</a>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="/guides/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στους οδηγούς</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="pb-10">
+        <div class="site-container">
+            <div class="surface-soft px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-slate-600">
+                <div class="flex items-center gap-3">
+                    <img src="/app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
+                    <span>POSPal</span>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
+                    <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -24,7 +24,7 @@
 
 ### 4) Offer & Pricing (TBD)
 - Plan name(s): POSPal Subscription.
-- Price point(s): EUR 20 / month.
+- Price point(s): EUR 18.90 / month.
 - Trial details: 30-day free trial, no information required.
 - Cancellation terms: cancel anytime, just like common subscriptions (Netflix/Spotify).
 

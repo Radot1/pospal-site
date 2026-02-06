@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR μενού: καλές πρακτικές | POSPal</title>
+    <meta name="description" content="Οδηγός: QR μενού καλές πρακτικές για καφετέρια/εστιατόριο/beach bar. Τι να δείχνεις, πώς να το οργανώσεις και τι να αποφύγεις.">
+    <link rel="canonical" href="https://pospal.gr/guides/qr-menu-best-practices.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="POSPal">
+    <meta property="og:title" content="QR μενού: καλές πρακτικές | POSPal">
+    <meta property="og:description" content="Οδηγός: QR μενού καλές πρακτικές για καφετέρια/εστιατόριο/beach bar.">
+    <meta property="og:url" content="https://pospal.gr/guides/qr-menu-best-practices.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="QR μενού: καλές πρακτικές | POSPal">
+    <meta name="twitter:description" content="Οδηγός: QR μενού καλές πρακτικές για καφετέρια/εστιατόριο/beach bar.">
+    <link rel="icon" href="/app_icon.ico">
+    <link rel="apple-touch-icon" href="/app_icon.ico">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <script src="/static/vendor/tailwindcdn.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --ink: #0f172a;
+            --surface: #ffffff;
+            --radius-lg: 22px;
+        }
+
+        body {
+            font-family: "Inter", system-ui, sans-serif;
+            color: var(--ink);
+            background: #f8fafc;
+        }
+
+        .site-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .surface-soft {
+            background: var(--surface);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            will-change: transform;
+        }
+
+        .btn-primary {
+            background: #16a34a;
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            background: #15803d;
+            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(34, 197, 94, 0.55);
+            color: #166534;
+            background: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            border-color: #16a34a;
+            color: #14532d;
+            background: #f0fdf4;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="py-6">
+        <div class="site-container flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
+                <span class="text-lg font-semibold tracking-tight">
+                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
+                <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
+                <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pb-16">
+        <div class="site-container">
+            <article class="surface-soft p-8">
+                <p class="text-sm font-semibold text-emerald-700">Οδηγός</p>
+                <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">QR μενού: καλές πρακτικές</h1>
+                <p class="mt-3 text-slate-600 text-lg">Ένα καλό QR μενού μειώνει “ερωτήσεις”, ανεβάζει ταχύτητα και δείχνει πιο καθαρά τον κατάλογο. Παρακάτω είναι πρακτικές που δουλεύουν σχεδόν σε κάθε κατάστημα εστίασης.</p>
+
+                <div class="mt-8 grid gap-4">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">1) Κράτα τις κατηγορίες απλές</h2>
+                        <p class="mt-2 text-slate-600">Λίγες κατηγορίες με καθαρά ονόματα (π.χ. Καφές, Αναψυκτικά, Ποτά, Σνακ). Αν έχεις πολλές, ο πελάτης χάνεται.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">2) Βάλε τιμές δίπλα σε κάθε είδος</h2>
+                        <p class="mt-2 text-slate-600">Μην κρύβεις τιμές ή “από”. Η καθαρή τιμή μειώνει τριβές και καθυστερήσεις.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">3) Κάνε τα ονόματα ευανάγνωστα</h2>
+                        <p class="mt-2 text-slate-600">Απόφυγε ALL CAPS και πολύ μεγάλα κείμενα. Ένα όνομα, μία γραμμή αν γίνεται.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">4) Αν έχεις επιλογές, κάν’ τες ξεκάθαρες</h2>
+                        <p class="mt-2 text-slate-600">Π.χ. “έξτρα σιρόπι”, “ντεκαφεϊνέ”, “γάλα αμυγδάλου”. Οι επιλογές πρέπει να φαίνονται καθαρά και να μην μπερδεύουν.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">5) Βάλε 2-3 “δημοφιλή” στην κορυφή</h2>
+                        <p class="mt-2 text-slate-600">Αν ο πελάτης βλέπει αμέσως τα βασικά, μειώνει scroll και χρόνο.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">6) Πρόσεξε τα “set” και τα combo</h2>
+                        <p class="mt-2 text-slate-600">Αν έχεις combo, δείξε τι περιλαμβάνει με μία σύντομη γραμμή. Όσο λιγότερες διευκρινίσεις χρειάζονται, τόσο καλύτερα.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">7) Φτιάξε σωστά το QR (και το σημείο που θα μπει)</h2>
+                        <p class="mt-2 text-slate-600">Ένα QR που είναι μικρό, γυαλιστερό ή τοποθετημένο σε λάθος σημείο, θα αποτύχει. Βάλε το σε σταθερό σημείο στο τραπέζι ή στο bar.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">8) Κράτα τον κατάλογο “ζωντανό”</h2>
+                        <p class="mt-2 text-slate-600">Όταν αλλάζει κάτι (τιμή/διαθεσιμότητα/περιγραφή), ενημέρωσέ το γρήγορα ώστε το QR να δείχνει πάντα την πραγματική εικόνα.</p>
+                    </div>
+                </div>
+
+                <div class="mt-9 rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                    <h2 class="text-xl font-semibold text-slate-900">Θες να δεις demo QR μενού;</h2>
+                    <p class="mt-2 text-slate-700">Δες το demo του POSPal και πώς “κάθεται” το QR μενού στη ροή.</p>
+                    <div class="mt-5 flex flex-col sm:flex-row gap-3">
+                        <a href="/POSPal_Demo_Index.html" class="btn btn-primary">Δες Demo</a>
+                        <a href="/times.html" class="btn btn-secondary">Δες Τιμές</a>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="/guides/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στους οδηγούς</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="pb-10">
+        <div class="site-container">
+            <div class="surface-soft px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-slate-600">
+                <div class="flex items-center gap-3">
+                    <img src="/app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
+                    <span>POSPal</span>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
+                    <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
