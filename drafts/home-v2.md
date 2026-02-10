@@ -11,7 +11,7 @@ Status: Draft only (no changes to index.html). Target draft file: drafts/home-v2
 ## Constraints
 - Greek-only public copy (English notes are OK here).
 - Keep the existing welcome page unchanged; work in drafts/ only.
-- Do not link to POSPal.exe; download is webstud.exe (pospal-artifacts host).
+- Do not link to POSPal.exe; download is POSPal-win-Setup.exe (pospal-artifacts host).
 - No competitor mentions or compliance/fines claims.
 - "Not a fiscal POS" note only when approved.
 

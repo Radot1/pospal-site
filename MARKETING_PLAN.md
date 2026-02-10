@@ -1,9 +1,9 @@
 ## POSPal Marketing Plan (Working Draft)
 
 ### 1) Goals (TBD)
-- Primary goal: distribute `webstud.exe` (installer that downloads all app files and enables auto-updates) from the public `pospal-artifacts` repo.
+- Primary goal: distribute `POSPal-win-Setup.exe` (Windows installer) from the public `pospal-artifacts` repo.
 - Secondary goals: keep a working demo and promote a 30-day free trial with no info required.
-- Target conversion action: download `webstud.exe` (primary) and visit demo (secondary).
+- Target conversion action: download `POSPal-win-Setup.exe` (primary) and visit demo (secondary).
 - Time horizon: TBD.
 
 ### 2) Audience (TBD)
@@ -37,7 +37,7 @@
 - Top-of-funnel: home page + SEO.
 - Mid-funnel: demo and installation guide.
 - Bottom-of-funnel: download installer and start trial.
-- Primary CTA: download `webstud.exe` (link TBD).
+- Primary CTA: download `POSPal-win-Setup.exe` (link TBD).
 - Secondary CTA: open the demo.
 
 ### 7) Website Plan (TBD)
@@ -70,12 +70,12 @@
 - [ ] Proof points (data, testimonials)
 - [ ] Visual direction
 - [ ] Clear "not a legal POS" explanation without hurting conversion
-- [ ] Hosting location for `webstud.exe` (pospal-artifacts public repo)
-- [ ] `webstud.exe` public URL (pending)
+- [ ] Hosting location for `POSPal-win-Setup.exe` (pospal-artifacts public repo)
+- [ ] `POSPal-win-Setup.exe` public URL (pending)
 
 ### 11) Next Actions
 - Finalize positioning statement
-- Confirm download host for `webstud.exe` (pospal-artifacts public repo)
+- Confirm download host for `POSPal-win-Setup.exe` (pospal-artifacts public repo)
 - Add homepage note: not a legal POS (FAQ + pricing footnote + footer)
 - Update site copy + CTAs
 - Fix asset/link integrity + sitemap

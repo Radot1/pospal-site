@@ -9,7 +9,7 @@ Guidance for agents working on the POSPal marketing site.
 
 ## Objectives
 - Primary: drive traffic to the demo.
-- Secondary: drive downloads of webstud.exe (installer).
+- Secondary: drive downloads of POSPal-win-Setup.exe (installer).
 - Emphasize 30-day free trial with no info required.
 
 ## Audience
@@ -28,7 +28,7 @@ Guidance for agents working on the POSPal marketing site.
 
 ## CTA rules
 - Primary CTA: Demo.
-- Secondary CTA: Download webstud.exe.
+- Secondary CTA: Download POSPal-win-Setup.exe.
 - Do NOT link to POSPal.exe directly.
 - Use pospal-artifacts as the download host (URL TBD).
 
