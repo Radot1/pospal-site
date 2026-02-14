@@ -20,6 +20,7 @@ Guidance for agents working on the POSPal marketing site.
 - POSPal is a kitchen/order workflow tool.
 - It runs alongside existing fiscal POS systems.
 - It does NOT handle the fiscal layer.
+- State this clearly when relevant: POSPal is **not** a fiscal POS and **not** a cash register.
 
 ## Messaging pillars
 - All-in-one workflow (tables, simple mode, QR menu included).
@@ -38,6 +39,22 @@ Guidance for agents working on the POSPal marketing site.
 - Avoid claims about compliance or fines.
 - Keep statements factual and non-comparative.
 
+## Writing style
+- Tone: natural human Greek.
+- Prefer short, clear sentences.
+- Do not stuff keywords unnaturally.
+
+## Language standards
+- Use monotonic Greek (μονοτονικό) consistently.
+- Keep spelling and tonos usage correct and consistent.
+- Preferred terms: `παραγγελιοληψία`, `ασύρματη`, `σερβιτόρος`.
+- Preserve Greek readability first; include search-term variants only where they read naturally.
+
+## What to avoid
+- Do not over-promise features or outcomes.
+- Do not claim integrations unless they are real and verified in this repo/project context.
+- Do not write fake testimonials, fabricated social proof, or invented customer quotes.
+
 ## Legal/clarity note
 - Include a "not a fiscal POS" note in FAQ + pricing footnote + footer (only when approved).
 
@@ -49,6 +66,7 @@ Guidance for agents working on the POSPal marketing site.
 ## Workflow constraints
 - Do not edit the website without explicit approval.
 - Draft copy/structure first, then implement after approval.
+- Ground all outputs in repository context files (for example this `AGENTS.md` and `MARKETING_PLAN.md`) before drafting or editing.
 
 ## Testing
 - No automated tests required (static site).

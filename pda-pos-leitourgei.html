@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pda πωσ λειτουργει: βήμα-βήμα παραγγελιοληψία | POSPal</title>
-    <meta name="description" content="pda πωσ λειτουργει βήμα-βήμα: η pda παραγγελιοληψια από λήψη σε κινητό/tablet μέχρι ροή κουζίνας. Δες Demo και ξεκίνα 30 ημέρες δωρεάν χωρίς κάρτα.">
+    <title>PDA πώς λειτουργεί στην εστίαση | POSPal</title>
+    <meta name="description" content="Δες βήμα-βήμα πώς λειτουργεί η παραγγελιοληψία με PDA στην εστίαση, από λήψη μέχρι εκτέλεση, με καθαρή ροή.">
     <link rel="canonical" href="https://pospal.gr/pda-pos-leitourgei.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="pda πωσ λειτουργει: βήμα-βήμα παραγγελιοληψία | POSPal">
-    <meta property="og:description" content="pda πωσ λειτουργει βήμα-βήμα: η pda παραγγελιοληψια από λήψη σε κινητό/tablet μέχρι ροή κουζίνας.">
+    <meta property="og:title" content="PDA πώς λειτουργεί στην εστίαση | POSPal">
+    <meta property="og:description" content="Πρακτική εξήγηση για τη ροή παραγγελιοληψίας με PDA: λήψη, διαβίβαση και εκτέλεση παραγγελίας.">
     <meta property="og:url" content="https://pospal.gr/pda-pos-leitourgei.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="pda πωσ λειτουργει: βήμα-βήμα παραγγελιοληψία | POSPal">
-    <meta name="twitter:description" content="pda πωσ λειτουργει βήμα-βήμα: η pda παραγγελιοληψια από λήψη σε κινητό/tablet μέχρι ροή κουζίνας.">
+    <meta name="twitter:title" content="PDA πώς λειτουργεί στην εστίαση | POSPal">
+    <meta name="twitter:description" content="Πρακτική εξήγηση για τη ροή παραγγελιοληψίας με PDA στην εστίαση.">
     <link rel="icon" href="/app_icon.ico">
     <link rel="apple-touch-icon" href="/app_icon.ico">
     <link rel="stylesheet" href="/static/css/fonts.css">
@@ -41,9 +41,7 @@
     <style>
         :root {
             --ink: #0f172a;
-            --muted: #64748b;
             --surface: #ffffff;
-            --line: rgba(148, 163, 184, 0.25);
             --radius-lg: 22px;
         }
 
@@ -103,6 +101,54 @@
             transform: translateY(-1px);
         }
     </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "PDA πώς λειτουργεί στην παραγγελιοληψία;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Η παραγγελία καταχωρείται από φορητή συσκευή και περνά στη ροή εκτέλεσης, ώστε η ομάδα να δουλεύει με καθαρά βήματα."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Τι αλλάζει στις ώρες αιχμής;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Μειώνονται οι καθυστερήσεις από προφορικές επαναλήψεις και η ομάδα ακολουθεί πιο σταθερή διαδικασία λήψης και εκτέλεσης."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Πού βλέπω αναλυτικά το σύστημα;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Στη σελίδα σύστημα παραγγελιοληψίας θα βρεις τη συνολική εικόνα λειτουργίας και τα επόμενα βήματα."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Πού βλέπω τιμές και αγορά άδειας;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Στη σελίδα τιμών βλέπεις το κόστος και από τη σελίδα αγοράς άδειας προχωράς σε συνδρομή όταν είσαι έτοιμος."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Το POSPal είναι φορολογικός POS;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Όχι. Το POSPal είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής. Δεν είναι φορολογικός POS και δεν εκδίδει αποδείξεις."
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 <body class="min-h-screen">
     <header class="py-6">
@@ -124,106 +170,91 @@
 
     <main class="pb-16">
         <div class="site-container">
-            <div class="surface-soft p-8">
-                <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 border border-emerald-100">
-                    PDA • Παραγγελιοληψία • Ροή κουζίνας
+            <article class="surface-soft p-8">
+                <p class="text-sm font-semibold text-emerald-700">PDA • Παραγγελιοληψία</p>
+                <h1 class="mt-5 text-3xl sm:text-4xl font-display font-semibold text-slate-900">PDA πώς λειτουργεί στην πράξη</h1>
+                <p class="mt-3 text-slate-600 text-lg">Αν ψάχνεις «pda πωσ λειτουργει», η απάντηση είναι πρακτική: λήψη παραγγελίας από κινητή συσκευή, καθαρή διαβίβαση στην εκτέλεση και σταθερή ροή για όλη την ομάδα.</p>
+
+                <div class="mt-7 flex flex-col sm:flex-row gap-3">
+                    <a href="/POSPal_Demo_Index.html" class="btn btn-primary">Δες βήματα</a>
+                    <a href="/systima-paraggeliolipsias.html" class="btn btn-secondary">Δες σύστημα</a>
+                    <a href="/times.html" class="btn btn-secondary">Δες τιμές</a>
                 </div>
-                <h1 class="mt-5 text-3xl sm:text-4xl font-display font-semibold text-slate-900">pda πωσ λειτουργει: παραγγελιοληψία στην πράξη</h1>
-                <p class="mt-3 text-slate-600 text-lg">Αν ψάχνεις “pda πωσ λειτουργει”, εδώ είναι η απλή εικόνα: παίρνεις παραγγελίες από κινητό/tablet και η παραγγελία περνάει άμεσα στη ροή της κουζίνας.</p>
 
-                <div class="mt-8 grid gap-4">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <div class="flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-emerald-800">1</div>
-                            <div>
-                                <h2 class="text-lg font-semibold text-slate-900">Παίρνεις παραγγελία</h2>
-                                <p class="mt-1 text-slate-600">Από κινητό, tablet ή υπολογιστή, μέσα στον χώρο σου. Η ομάδα δουλεύει γρήγορα, χωρίς χαρτάκια.</p>
-                            </div>
+                <section class="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
+                    <h2 class="text-lg font-semibold text-slate-900">Βήμα-βήμα: από λήψη σε εκτέλεση</h2>
+                    <ol class="mt-3 space-y-2 text-slate-700 list-decimal pl-5">
+                        <li>Ο χρήστης καταχωρεί την παραγγελία από PDA/κινητό/tablet.</li>
+                        <li>Η παραγγελία περνά στην εκτέλεση με τις απαραίτητες σημειώσεις.</li>
+                        <li>Η ομάδα ακολουθεί κοινή σειρά βημάτων για σταθερό ρυθμό.</li>
+                        <li>Η βάρδια παραμένει οργανωμένη χωρίς πρόχειρες επαναλήψεις.</li>
+                    </ol>
+                </section>
+
+                <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+                    <h2 class="text-lg font-semibold text-slate-900">Τι κερδίζεις στις ώρες αιχμής</h2>
+                    <ul class="mt-3 list-disc pl-5 text-slate-700 space-y-1">
+                        <li>Καλύτερη σειρά στη λήψη παραγγελιών.</li>
+                        <li>Λιγότερα λάθη από προφορικές επαναλήψεις.</li>
+                        <li>Πιο καθαρή συνεργασία ανάμεσα στα σημεία εργασίας.</li>
+                    </ul>
+                </section>
+
+                <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+                    <h2 class="text-lg font-semibold text-slate-900">Τι να οργανώσεις για σταθερή ροή</h2>
+                    <ul class="mt-3 list-disc pl-5 text-slate-700 space-y-1">
+                        <li>Καθαρή δομή προϊόντων και επιλογών.</li>
+                        <li>Συγκεκριμένος τρόπος χρήσης σημειώσεων από όλη την ομάδα.</li>
+                        <li>Σύντομη εκπαίδευση βάρδιας στα ίδια βήματα.</li>
+                    </ul>
+                </section>
+
+                <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+                    <h2 class="text-lg font-semibold text-slate-900">Γιατί POSPal</h2>
+                    <p class="mt-2 text-slate-600">Το POSPal είναι workflow layer για παραγγελιοληψία και οργάνωση ροής. Δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν εκδίδει αποδείξεις.</p>
+                    <ul class="mt-3 list-disc pl-5 text-slate-700 space-y-1">
+                        <li><a class="text-brand-700 font-semibold hover:underline" href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a> για κινητή λήψη.</li>
+                        <li><a class="text-brand-700 font-semibold hover:underline" href="/paraggelies-gia-estiash.html">Παραγγελίες στην εστίαση</a> με καθαρή διαδικασία.</li>
+                        <li><a class="text-brand-700 font-semibold hover:underline" href="/menu-estiatoriou.html">Μενού εστιατορίου</a> με πρακτική οργάνωση καταλόγου.</li>
+                    </ul>
+                </section>
+
+                <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+                    <h2 class="text-lg font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
+                    <div class="mt-3 space-y-4 text-slate-700">
+                        <div>
+                            <h3 class="font-semibold text-slate-900">PDA πώς λειτουργεί στην παραγγελιοληψία;</h3>
+                            <p class="mt-1">Η παραγγελία καταχωρείται από φορητή συσκευή και περνά στη ροή εκτέλεσης, ώστε η ομάδα να δουλεύει με καθαρά βήματα.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Τι αλλάζει στις ώρες αιχμής;</h3>
+                            <p class="mt-1">Μειώνονται οι καθυστερήσεις από προφορικές επαναλήψεις και η ομάδα ακολουθεί πιο σταθερή διαδικασία λήψης και εκτέλεσης.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Πού βλέπω αναλυτικά το σύστημα;</h3>
+                            <p class="mt-1">Στη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/systima-paraggeliolipsias.html">σύστημα παραγγελιοληψίας</a> θα βρεις τη συνολική εικόνα.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Πού βλέπω τιμές και αγορά άδειας;</h3>
+                            <p class="mt-1">Στη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/times.html">τιμών</a> βλέπεις το κόστος και στη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/buy-license.html">αγοράς άδειας</a> προχωράς όταν είσαι έτοιμος.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Το POSPal είναι φορολογικός POS;</h3>
+                            <p class="mt-1">Όχι. Είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής, όχι φορολογικός μηχανισμός.</p>
                         </div>
                     </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <div class="flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-emerald-800">2</div>
-                            <div>
-                                <h2 class="text-lg font-semibold text-slate-900">Η ροή προς κουζίνα γίνεται άμεσα</h2>
-                                <p class="mt-1 text-slate-600">Μόλις φύγει η παραγγελία, “τρέχει” στον χώρο παραγωγής ώστε να μη χάνεται χρόνος σε μεταφορές και επαναλήψεις.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <div class="flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-emerald-800">3</div>
-                            <div>
-                                <h2 class="text-lg font-semibold text-slate-900">Δουλεύεις σε “τραπέζια” ή “απλή λειτουργία”</h2>
-                                <p class="mt-1 text-slate-600">Για καφετέρια/εστιατόριο με τραπέζια ή για γρήγορες πωλήσεις (πακέτο). Ό,τι ταιριάζει στη ροή του καταστήματός σου.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <div class="flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-emerald-800">4</div>
-                            <div>
-                                <h2 class="text-lg font-semibold text-slate-900">QR μενού</h2>
-                                <p class="mt-1 text-slate-600">Φτιαγμένο για κινητό. Δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα σε κάθε αλλαγή και φιλοξενείται δωρεάν για πάντα.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </section>
 
                 <div class="mt-9 rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
-                    <h2 class="text-xl font-semibold text-slate-900">Δες το στην πράξη</h2>
-                    <p class="mt-2 text-slate-700">Κατέβασε το POSPal και ξεκίνα 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα. Αν θες, άνοιξε και το demo για να δεις τη ροή.</p>
+                    <h2 class="text-xl font-semibold text-slate-900">Επόμενο βήμα</h2>
+                    <p class="mt-2 text-slate-700">Δες το demo, επιβεβαίωσε ότι η ροή ταιριάζει στο κατάστημά σου και προχώρησε σε άδεια όταν είσαι έτοιμος.</p>
                     <div class="mt-5 flex flex-col sm:flex-row gap-3">
-                        <a href="/POSPal_Demo_Index.html" class="btn btn-secondary">Δες Demo</a>
-                        <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe" class="btn btn-primary">Κατέβασε το POSPal</a>
+                        <a href="/POSPal_Demo_Index.html" class="btn btn-primary">Δες Demo</a>
+                        <a href="/times.html" class="btn btn-secondary">Δες τιμές</a>
+                        <a href="/buy-license.html" class="btn btn-secondary">Αγορά άδειας</a>
                     </div>
                 </div>
-            </div>
-
-            <section class="mt-10 grid gap-6 md:grid-cols-2">
-                <div class="surface-soft p-7">
-                    <h2 class="text-xl font-semibold text-slate-900">Σχετικές σελίδες</h2>
-                    <div class="mt-4 grid gap-3">
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/times.html">
-                            <div class="font-semibold text-slate-900">Τιμές</div>
-                            <div class="text-sm text-slate-600 mt-1">€18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/pda-ti-einai.html">
-                            <div class="font-semibold text-slate-900">pda τι ειναι</div>
-                            <div class="text-sm text-slate-600 mt-1">Σύντομη εξήγηση για το τι είναι το PDA στην εστίαση.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/pda-gia-kafeteries.html">
-                            <div class="font-semibold text-slate-900">PDA για καφετέρια</div>
-                            <div class="text-sm text-slate-600 mt-1">Τραπέζια + πακέτο, με απλή λειτουργία όταν χρειάζεται.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/paraggelio-lipsia-gia-beach-bar.html">
-                            <div class="font-semibold text-slate-900">Παραγγελιοληψία για beach bar</div>
-                            <div class="text-sm text-slate-600 mt-1">Στήσιμο γρήγορα, δουλειά σε tablet/κινητό.</div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="surface-soft p-7">
-                    <h2 class="text-xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-                    <div class="mt-4 space-y-3">
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Σε ποιες συσκευές δουλεύει;</summary>
-                            <p class="mt-2 text-slate-600">Σε tablet, κινητό και υπολογιστή μέσα στον χώρο σου.</p>
-                        </details>
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Υπάρχει δωρεάν δοκιμή;</summary>
-                            <p class="mt-2 text-slate-600">Ναι. 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</p>
-                        </details>
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Ποια είναι η τιμή;</summary>
-                            <p class="mt-2 text-slate-600">€18,90/μήνα.</p>
-                        </details>
-                    </div>
-                </div>
-            </section>
+            </article>
 
             <div class="mt-10 text-center">
                 <a href="/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
@@ -246,7 +277,7 @@
                         <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
                     </div>
                 </div>
-                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικό POS. Δουλεύει δίπλα στο υπάρχον σύστημα και καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
+                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικός POS. Λειτουργεί δίπλα στο υπάρχον σύστημα και καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
             </div>
         </div>
     </footer>

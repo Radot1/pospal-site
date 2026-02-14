@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Οδηγός εγκατάστασης POSPal: λήψη και πρώτο στήσιμο | POSPal</title>
-    <meta name="description" content="Οδηγός εγκατάστασης POSPal με λήψη POSPal-win-Setup.exe, βασικό στήσιμο και έλεγχο πρώτης εβδομάδας. Δες Demo και ξεκίνα 30 ημέρες δωρεάν.">
+    <title>Οδηγός εγκατάστασης POSPal σε Windows | POSPal</title>
+    <meta name="description" content="Οδηγός εγκατάστασης POSPal με λήψη POSPal-win-Setup.exe, βασικά βήματα ρύθμισης και επόμενες ενέργειες για την πρώτη βάρδια.">
     <link rel="canonical" href="https://pospal.gr/installation-guide.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="Οδηγός εγκατάστασης POSPal: λήψη και πρώτο στήσιμο">
-    <meta property="og:description" content="Βήματα για λήψη POSPal-win-Setup.exe, ρύθμιση και πρώτη δοκιμή ροής παραγγελιοληψίας.">
+    <meta property="og:title" content="Οδηγός εγκατάστασης POSPal σε Windows | POSPal">
+    <meta property="og:description" content="Λήψη POSPal-win-Setup.exe και καθαρά βήματα για πρώτη εγκατάσταση και εκκίνηση.">
     <meta property="og:url" content="https://pospal.gr/installation-guide.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Οδηγός εγκατάστασης POSPal: λήψη και πρώτο στήσιμο">
-    <meta name="twitter:description" content="Βήματα για λήψη POSPal-win-Setup.exe, ρύθμιση και πρώτη δοκιμή ροής παραγγελιοληψίας.">
+    <meta name="twitter:title" content="Οδηγός εγκατάστασης POSPal σε Windows | POSPal">
+    <meta name="twitter:description" content="Απλά βήματα για λήψη, εγκατάσταση και πρώτο έλεγχο ροής παραγγελιοληψίας.">
     <link rel="icon" href="/app_icon.ico">
     <link rel="apple-touch-icon" href="/app_icon.ico">
     <link rel="stylesheet" href="/static/css/fonts.css">
@@ -100,26 +100,34 @@
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Χρειάζεται να δώσω κάρτα για να ξεκινήσω;",
+                    "name": "Η εγκατάσταση του POSPal γίνεται σε Windows;",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Όχι. Ξεκινάς με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα."
+                        "text": "Η λήψη γίνεται από το αρχείο POSPal-win-Setup.exe, άρα η βασική διαδικασία αφορά εγκατάσταση σε περιβάλλον Windows."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Μπορώ να δοκιμάσω πρώτα το Demo;",
+                    "name": "Τι κάνω αν δεν ξεκινά ο installer;",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ναι. Άνοιξε το Demo για εικόνα της ροής πριν από πλήρη εγκατάσταση."
+                        "text": "Κλείσε το αρχείο, ξανακάνε λήψη από τον επίσημο σύνδεσμο και έλεγξε ότι ο λογαριασμός σου έχει δικαιώματα εγκατάστασης στον υπολογιστή."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Το POSPal αντικαθιστά το φορολογικό POS;",
+                    "name": "Ποια είναι τα επόμενα βήματα μετά την εγκατάσταση;",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Όχι. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα."
+                        "text": "Περνάς βασικά στοιχεία καταλόγου, κάνεις δοκιμαστικές παραγγελίες και μετά βλέπεις τιμές ή αγορά άδειας για παραγωγική χρήση."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Το POSPal είναι φορολογικός POS ή ταμειακή;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής."
                     }
                 }
             ]
@@ -146,72 +154,110 @@
     <main class="pb-16">
         <div class="site-container">
             <article class="surface-soft p-8">
-                <p class="text-sm font-semibold text-emerald-700">Εγκατάσταση • Ρύθμιση • Πρώτη εβδομάδα</p>
-                <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">Οδηγός εγκατάστασης POSPal</h1>
-                <p class="mt-3 text-slate-600 text-lg">Αυτός ο οδηγός εγκατάστασης φτιάχτηκε για γρήγορο ξεκίνημα: λήψη, βασικό στήσιμο και πρώτη δοκιμή ροής με την ομάδα σου.</p>
-                <div class="mt-8 grid gap-4">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">1) Κατέβασε το POSPal</h2>
-                        <p class="mt-2 text-slate-600">Ξεκίνα από το επίσημο αρχείο εγκατάστασης <strong>POSPal-win-Setup.exe</strong> και ολοκλήρωσε την εγκατάσταση στον υπολογιστή σου.</p>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">2) Στήσε βασικά στοιχεία</h2>
-                        <p class="mt-2 text-slate-600">Πέρασε κατηγορίες, είδη και τιμές. Αν θέλεις QR μενού, στηρίζεται στον ίδιο κατάλογο για να ενημερώνεται άμεσα.</p>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">3) Δοκίμασε ροή με την ομάδα</h2>
-                        <p class="mt-2 text-slate-600">Κάνε δοκιμαστικές παραγγελίες από κινητό ή tablet και επιβεβαίωσε τη ροή προς κουζίνα πριν την πλήρη έναρξη.</p>
-                    </div>
+                <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Οδηγός εγκατάστασης POSPal</h1>
+                <p class="mt-3 text-slate-600 text-lg">Ακολούθησε τα παρακάτω βήματα για να κάνεις λήψη, εγκατάσταση και πρώτο έλεγχο του POSPal χωρίς καθυστερήσεις.</p>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe" class="btn btn-primary">Λήψη</a>
+                    <a href="/systima-paraggeliolipsias.html" class="btn btn-secondary">Εγκατάσταση</a>
+                    <a href="/times.html" class="btn btn-secondary">Επόμενα βήματα</a>
                 </div>
-                <div class="mt-9 rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
-                    <h2 class="text-xl font-semibold text-slate-900">Δοκιμή στην πράξη</h2>
-                    <p class="mt-2 text-slate-700">Άνοιξε πρώτα το Demo για μια γρήγορη εικόνα και μετά κατέβασε το POSPal για 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</p>
-                    <div class="mt-5 flex flex-col sm:flex-row gap-3">
-                        <a href="/POSPal_Demo_Index.html" class="btn btn-secondary">Δες Demo</a>
-                        <a href="https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe" class="btn btn-primary">Κατέβασε το POSPal</a>
-                    </div>
+
+                <div class="mt-8 grid gap-4">
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Πριν ξεκινήσεις</h2>
+                        <p class="mt-2 text-slate-600">Πριν την εγκατάσταση, έλεγξε τα βασικά ώστε η διαδικασία να ολοκληρωθεί χωρίς διακοπές.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Πρόσβαση σε υπολογιστή Windows.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Σταθερή σύνδεση για τη λήψη του installer.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Δικαιώματα εγκατάστασης στον λογαριασμό χρήστη.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Βήμα 1: Λήψη του installer</h2>
+                        <p class="mt-2 text-slate-600">Κατέβασε το αρχείο <strong>POSPal-win-Setup.exe</strong> από το επίσημο link και περίμενε να ολοκληρωθεί η λήψη.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Χρησιμοποίησε το κουμπί λήψης της σελίδας.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Μην αλλάζεις το αρχείο πριν το εκτελέσεις.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Κράτησε το αρχείο σε εύκολο σημείο (π.χ. Downloads).</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Βήμα 2: Εγκατάσταση στα Windows</h2>
+                        <p class="mt-2 text-slate-600">Άνοιξε το `POSPal-win-Setup.exe` και ακολούθησε τα βήματα του installer μέχρι να ολοκληρωθεί η διαδικασία.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Επιβεβαίωσε τα βήματα του οδηγού εγκατάστασης.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Περίμενε να εμφανιστεί ολοκλήρωση πριν κλείσεις το παράθυρο.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Άνοιξε την εφαρμογή μετά το τέλος της εγκατάστασης.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Βήμα 3: Πρώτη ρύθμιση και έλεγχος</h2>
+                        <p class="mt-2 text-slate-600">Μετά την εγκατάσταση, κάνε ένα σύντομο αρχικό setup για να δοκιμάσεις τη ροή σε πραγματικές συνθήκες.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Πέρασε βασικά στοιχεία καταλόγου.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Κάνε δοκιμαστικές παραγγελίες με την ομάδα.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Επιβεβαίωσε ότι η ροή παραγγελιοληψίας είναι ομαλή.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Έλεγχος πριν την πρώτη κανονική βάρδια</h2>
+                        <p class="mt-2 text-slate-600">Αυτό το γρήγορο checklist μειώνει τα προβλήματα της πρώτης ημέρας.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Έλεγχος βασικού καταλόγου από τη σελίδα <a href="/menu-estiatoriou.html" class="text-brand-700 font-semibold hover:underline">μενού εστιατορίου</a>.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Επιβεβαίωση διαδικασίας από τη σελίδα <a href="/paraggelies-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">παραγγελίες στην εστίαση</a>.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Για mobile ροή, έλεγξε και την <a href="/asyrmati-paraggeliolipsia.html" class="text-brand-700 font-semibold hover:underline">ασύρματη παραγγελιοληψία</a>.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Αν κάτι δεν πάει καλά</h2>
+                        <p class="mt-2 text-slate-600">Σε περίπτωση που η εγκατάσταση δεν ολοκληρώνεται, ακολούθησε τα βασικά βήματα ελέγχου πριν προχωρήσεις.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Κάνε ξανά λήψη του `POSPal-win-Setup.exe`.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Έλεγξε ότι ο χρήστης έχει δικαιώματα εγκατάστασης.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Κλείσε άλλα ανοιχτά installers και προσπάθησε ξανά.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Γιατί POSPal</h2>
+                        <p class="mt-2 text-slate-600">Το POSPal είναι εργαλείο παραγγελιοληψίας και διαχείρισης ροής. Δεν είναι φορολογικός POS και δεν εκδίδει αποδείξεις. Λειτουργεί δίπλα στο φορολογικό σύστημα του καταστήματος.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Εστίαση στην οργάνωση παραγγελιών.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Πρακτική έναρξη με βήματα εγκατάστασης.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Σαφής συνέχεια σε <a href="/times.html" class="text-brand-700 font-semibold hover:underline">τιμές</a> και <a href="/buy-license.html" class="text-brand-700 font-semibold hover:underline">αγορά άδειας</a>.</span></li>
+                        </ul>
+                    </section>
                 </div>
             </article>
-            <section class="mt-10 grid gap-6 md:grid-cols-2">
-                <div class="surface-soft p-7">
-                    <h2 class="text-xl font-semibold text-slate-900">Σχετικές σελίδες</h2>
-                    <div class="mt-4 grid gap-3">
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/systima-paraggeliolipsias.html">
-                            <div class="font-semibold text-slate-900">Σύστημα παραγγελιοληψίας</div>
-                            <div class="text-sm text-slate-600 mt-1">Τι να κοιτάξεις πριν αποφασίσεις λύση.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/times.html">
-                            <div class="font-semibold text-slate-900">Τιμές</div>
-                            <div class="text-sm text-slate-600 mt-1">€18,90/μήνα μετά τις 30 ημέρες δωρεάν δοκιμής.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/menu-estiatoriou.html">
-                            <div class="font-semibold text-slate-900">Μενού εστιατορίου</div>
-                            <div class="text-sm text-slate-600 mt-1">Οργάνωση καταλόγου πριν το άνοιγμα.</div>
-                        </a>
-                        <a class="rounded-xl border border-slate-200 bg-white px-5 py-4 hover:border-emerald-200 hover:bg-emerald-50 transition-colors" href="/guides/first-week-optimization/">
-                            <div class="font-semibold text-slate-900">Πρώτη εβδομάδα</div>
-                            <div class="text-sm text-slate-600 mt-1">Λίστα ελέγχου για σταθερό ξεκίνημα μετά την εγκατάσταση.</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="surface-soft p-7">
-                    <h2 class="text-xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-                    <div class="mt-4 space-y-3">
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Χρειάζεται να δώσω κάρτα για να ξεκινήσω;</summary>
-                            <p class="mt-2 text-slate-600">Όχι. Ξεκινάς με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</p>
-                        </details>
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Μπορώ να δοκιμάσω πρώτα το Demo;</summary>
-                            <p class="mt-2 text-slate-600">Ναι. Άνοιξε το Demo για εικόνα της ροής πριν από πλήρη εγκατάσταση.</p>
-                        </details>
-                        <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                            <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal αντικαθιστά το φορολογικό POS;</summary>
-                            <p class="mt-2 text-slate-600">Όχι. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα.</p>
-                        </details>
-                    </div>
+
+            <section class="mt-10 surface-soft p-7">
+                <h2 class="text-xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
+                <div class="mt-4 space-y-3">
+                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
+                        <summary class="cursor-pointer font-semibold text-slate-900">Η εγκατάσταση του POSPal γίνεται σε Windows;</summary>
+                        <p class="mt-2 text-slate-600">Η λήψη γίνεται από το αρχείο <strong>POSPal-win-Setup.exe</strong>, άρα η βασική διαδικασία αφορά εγκατάσταση σε περιβάλλον Windows.</p>
+                    </details>
+                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
+                        <summary class="cursor-pointer font-semibold text-slate-900">Τι κάνω αν δεν ξεκινά ο installer;</summary>
+                        <p class="mt-2 text-slate-600">Κλείσε το αρχείο, ξανακάνε λήψη από τον επίσημο σύνδεσμο και έλεγξε ότι ο λογαριασμός σου έχει δικαιώματα εγκατάστασης στον υπολογιστή.</p>
+                    </details>
+                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
+                        <summary class="cursor-pointer font-semibold text-slate-900">Ποια είναι τα επόμενα βήματα μετά την εγκατάσταση;</summary>
+                        <p class="mt-2 text-slate-600">Περνάς βασικά στοιχεία καταλόγου, κάνεις δοκιμαστικές παραγγελίες και μετά βλέπεις <a href="/times.html" class="text-brand-700 font-semibold hover:underline">τιμές</a> ή προχωράς σε <a href="/buy-license.html" class="text-brand-700 font-semibold hover:underline">αγορά άδειας</a>.</p>
+                    </details>
+                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
+                        <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal είναι φορολογικός POS ή ταμειακή;</summary>
+                        <p class="mt-2 text-slate-600">Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής.</p>
+                    </details>
                 </div>
             </section>
+
             <div class="mt-10 text-center">
                 <a href="/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
             </div>
@@ -232,7 +278,7 @@
                         <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
                     </div>
                 </div>
-                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικό POS. Δουλεύει δίπλα στο υπάρχον σύστημα και καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
+                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Καλύπτει παραγγελιοληψία και διαχείριση ροής.</p>
             </div>
         </div>
     </footer>
