@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Λήψη POSPal για Windows</title>
-    <meta name="description" content="Λήψη POSPal για Windows. Αν είσαι από κινητό, στείλε τον σύνδεσμο σε υπολογιστή και συνέχισε από εκεί.">
+    <meta name="description" content="Λήψη POSPal για Windows. Από κινητό κάνεις το πρώτο βήμα και συνεχίζεις σε υπολογιστή.">
     <link rel="canonical" href="https://pospal.gr/download/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://pospal.gr/download/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Λήψη POSPal για Windows">
-    <meta name="twitter:description" content="Από κινητό ή tablet στείλε τον σύνδεσμο σε υπολογιστή Windows και συνέχισε από εκεί.">
+    <meta name="twitter:description" content="Από κινητό κάνεις το πρώτο βήμα και συνεχίζεις την εγκατάσταση σε υπολογιστή Windows.">
     <link rel="icon" href="/app_icon.ico">
     <link rel="apple-touch-icon" href="/app_icon.ico">
     <link rel="stylesheet" href="/static/css/fonts.css">
@@ -133,8 +133,12 @@
             </section>
 
             <section id="mobile-view" class="surface-soft p-8 hidden">
-                <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Η εγκατάσταση γίνεται σε υπολογιστή Windows.</h1>
-                <p class="mt-3 text-slate-600 text-lg">Από κινητό ή tablet δεν γίνεται εγκατάσταση του POSPal-win-Setup.exe. Στείλε τον σύνδεσμο σε υπολογιστή Windows και συνέχισε από εκεί.</p>
+                <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Συνέχισε την εγκατάσταση σε υπολογιστή Windows</h1>
+                <p class="mt-3 text-slate-600 text-lg">Είσαι στο σωστό σημείο. Από κινητό κάνεις το πρώτο βήμα και συνεχίζεις σε υπολογιστή.</p>
+                <ol class="mt-4 list-decimal pl-6 space-y-2 text-slate-700">
+                    <li>Πάτησε «Αντιγραφή συνδέσμου για υπολογιστή».</li>
+                    <li>Άνοιξε τον σύνδεσμο σε υπολογιστή Windows. Η λήψη του POSPal-win-Setup.exe ξεκινά αυτόματα.</li>
+                </ol>
                 <div class="mt-6 flex flex-col sm:flex-row gap-3">
                     <button id="copy-link-btn" type="button" class="btn btn-primary">Αντιγραφή συνδέσμου για υπολογιστή</button>
                     <a href="/POSPal_Demo_Index.html" class="btn btn-secondary">Δες Demo</a>
@@ -178,7 +182,7 @@
                         throw new Error('clipboard_not_supported');
                     }
                     await navigator.clipboard.writeText(desktopShareUrl);
-                    status.textContent = 'Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον από υπολογιστή Windows.';
+                    status.textContent = 'Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για να ξεκινήσει η λήψη.';
                     return;
                 } catch (error) {
                     try {
@@ -194,7 +198,7 @@
                         document.body.removeChild(area);
 
                         if (ok) {
-                            status.textContent = 'Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον από υπολογιστή Windows.';
+                            status.textContent = 'Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για να ξεκινήσει η λήψη.';
                             return;
                         }
                     } catch (fallbackError) {
@@ -202,7 +206,7 @@
                     }
                 }
 
-                status.textContent = 'Δεν έγινε αντιγραφή αυτόματα. Αντέγραψε χειροκίνητα αυτόν τον σύνδεσμο: ' + desktopShareUrl;
+                status.textContent = 'Δεν έγινε αυτόματη αντιγραφή. Αντέγραψε αυτόν τον σύνδεσμο και άνοιξέ τον σε υπολογιστή Windows: ' + desktopShareUrl;
             }
 
             if (isMobileDevice()) {
