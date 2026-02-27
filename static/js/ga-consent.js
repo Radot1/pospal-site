@@ -1,7 +1,32 @@
 (function () {
   var DEFAULT_COOKIEBOT_ID = "ca0565fc-355d-4699-91f8-5d332abfb5d8";
+  var MEASUREMENT_ID = "G-F851JG8PL6";
   var configuredId = (window.POSPAL_COOKIEBOT_ID || DEFAULT_COOKIEBOT_ID || "").trim();
   var cookiebotId = configuredId;
+
+  function normalizePathname(pathname) {
+    var path = String(pathname || "/").trim().toLowerCase();
+    return path || "/";
+  }
+
+  function isDemoOrAppPath(pathname) {
+    return (
+      /^\/pospal_demo(?:_desktop|_index)?\.html$/.test(pathname) ||
+      pathname === "/pospaldesktop.html" ||
+      /^\/pospal-demo-[^/]+\.html$/.test(pathname) ||
+      /^\/pospal-demo-coffee-[^/]+\.html$/.test(pathname) ||
+      pathname === "/qr-menu-demo.html" ||
+      pathname === "/managementcomponent.html"
+    );
+  }
+
+  function isEmbeddedContext() {
+    try {
+      return window.self !== window.top;
+    } catch (error) {
+      return true;
+    }
+  }
 
   window.dataLayer = window.dataLayer || [];
   window.gtag =
@@ -9,6 +34,13 @@
     function () {
       window.dataLayer.push(arguments);
     };
+
+  var pathname = normalizePathname(window.location.pathname || "/");
+  var disableTracking = isDemoOrAppPath(pathname) || isEmbeddedContext();
+  if (disableTracking) {
+    window["ga-disable-" + MEASUREMENT_ID] = true;
+    return;
+  }
 
   // Consent Mode v2 defaults: denied until user consent is known.
   window.gtag("consent", "default", {
