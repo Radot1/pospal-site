@@ -1,6 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
+    <script src="/static/js/ga-consent.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F851JG8PL6"></script>
+    <script>
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-F851JG8PL6');
+    </script>
+    <script defer src="/static/js/ga-events.js"></script>
     <meta charset="UTF-8">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -9,14 +16,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "vnzrn7y23s");
     </script>
-    <script src="/static/js/ga-consent.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F851JG8PL6"></script>
-    <script>
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-F851JG8PL6');
-    </script>
-    <script defer src="/static/js/ga-events.js"></script>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSPal - Desktop</title>
     <meta name="robots" content="noindex,nofollow">
@@ -1400,7 +1400,7 @@
         <div id="tableSelectorContent">
             <div id="tableSelectorHeader">
                 <h3>Select Table</h3>
-                <button id="tableSelectorClose" onclick="closeTableSelector()" aria-label="Close">Ã—</button>
+                <button id="tableSelectorClose" onclick="closeTableSelector()" aria-label="Close">×</button>
             </div>
             <div id="tableSelectorGrid">
                 <!-- Table selection buttons will be inserted here by JavaScript -->
@@ -1547,9 +1547,9 @@
 
                     <!-- Table Mode: Indicator Badge -->
                     <div id="tableIndicatorBadge" class="table-mode-only" onclick="openTableSelector()">
-                        <span class="indicator-icon">ðŸ“</span>
+                        <span class="indicator-icon">📍</span>
                         <span class="indicator-text">Tap to Select</span>
-                        <span class="indicator-chevron">â–¼</span>
+                        <span class="indicator-chevron">▼</span>
                     </div>
                 </div>
             </div>
@@ -2052,7 +2052,7 @@
                 <div id="categoriesManagement" class="hidden">
                     <form id="categoryManagementForm" class="space-y-4 management-form">
                         <div><label for="categoryName" class="block text-sm font-medium text-gray-700" data-i18n="ui.category.nameLabel">Category Name</label><input type="text" id="categoryName" name="categoryName" class="mt-1 block w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm sm:text-sm" required></div>
-                        <button type="button" onclick="saveCategory()" class="w-full py-2 px-4 btn-success">ðŸ“ <span data-i18n="ui.category.save">Save Category</span></button>
+                        <button type="button" onclick="saveCategory()" class="w-full py-2 px-4 btn-success">📁 <span data-i18n="ui.category.save">Save Category</span></button>
                     </form>
                     <div class="mt-6">
                         <h4 class="text-md font-medium text-gray-800 mb-2">Existing Categories</h4>
@@ -2158,7 +2158,7 @@
                                         </div>
                                         <div id="price-card" class="bg-green-50 p-4 rounded-xl border border-green-200 text-center">
                                             <div class="text-xs text-green-600 uppercase tracking-wide font-medium mb-1">Monthly Cost</div>
-                                            <div id="subscription-price" class="text-lg font-bold text-green-800" data-pricing-amount data-pricing-format="long">â‚¬18.90</div>
+                                            <div id="subscription-price" class="text-lg font-bold text-green-800" data-pricing-amount data-pricing-format="long">€18.90</div>
                                         </div>
                                         <div id="renewal-card" class="bg-purple-50 p-4 rounded-xl border border-purple-200 text-center">
                                             <div class="text-xs text-purple-600 uppercase tracking-wide font-medium mb-1">Renewal In</div>
@@ -2198,7 +2198,7 @@
                                                     class="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-white font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200"
                                                     onclick="showEmbeddedPayment()">
                                                 <i class="fas fa-credit-card"></i>
-                                                <span data-pricing-template="Subscribe / Reactivate for {price_short}/month">Subscribe / Reactivate for â‚¬18.90/month</span>
+                                                <span data-pricing-template="Subscribe / Reactivate for {price_short}/month">Subscribe / Reactivate for €18.90/month</span>
                                             </button>
                                             <button type="button"
                                                     class="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-gray-200 px-6 py-3 text-gray-800 font-semibold hover:border-gray-300 hover:bg-gray-50 transition-colors"
@@ -2289,7 +2289,7 @@
                     <!-- About Section -->
                     <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
                         <h4 class="text-lg font-semibold text-gray-800 mb-3" data-i18n="ui.license.about">About POSPal</h4>
-                        <p class="text-sm text-gray-600 mb-4">Â© 2025 Anastasia Palamoutsi & Robert Zoumboulis-Airey. All rights reserved.</p>
+                        <p class="text-sm text-gray-600 mb-4">© 2025 Anastasia Palamoutsi & Robert Zoumboulis-Airey. All rights reserved.</p>
                         <div class="flex flex-wrap gap-4 text-sm">
                             <a href="https://github.com/Radot1/POSPal/blob/main/EULA.md" target="_blank" class="text-blue-600 hover:underline transition-colors" data-i18n="ui.license.viewEula">EULA</a>
                             <a href="https://github.com/Radot1/POSPal/blob/main/PRIVACY.md" target="_blank" class="text-blue-600 hover:underline transition-colors" data-i18n="ui.license.privacyPolicy">Privacy Policy</a>
@@ -3175,7 +3175,7 @@
                                 id="paymentMethodCash"
                                 class="payment-method-btn selected-payment"
                                 type="button">
-                            <span class="text-4xl mb-2">ðŸ’µ</span>
+                            <span class="text-4xl mb-2">💵</span>
                             <span class="font-medium">Cash</span>
                         </button>
 
@@ -3184,7 +3184,7 @@
                                 id="paymentMethodCard"
                                 class="payment-method-btn"
                                 type="button">
-                            <span class="text-4xl mb-2">ðŸ’³</span>
+                            <span class="text-4xl mb-2">💳</span>
                             <span class="font-medium">Card</span>
                         </button>
                     </div>
@@ -3311,7 +3311,7 @@
 
                     <!-- Enhanced Menu Fields -->
                     <div class="space-y-4 p-3 border border-gray-300 rounded-md bg-gray-50">
-                        <h4 class="text-sm font-semibold text-gray-700 mb-2">ðŸ“ Enhanced Menu Information</h4>
+                        <h4 class="text-sm font-semibold text-gray-700 mb-2">📝 Enhanced Menu Information</h4>
 
                         <!-- Description -->
                           <div>
@@ -3333,62 +3333,62 @@
 
                         <!-- Dietary Tags -->
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">ðŸŒ± Dietary Information</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">🌱 Dietary Information</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-vegetarian" name="dietary-vegetarian" class="h-4 w-4 text-green-600 border-gray-400 rounded focus:ring-green-500 accent-green-600">
-                                    <span class="ml-2">ðŸ¥¬ Vegetarian</span>
+                                    <span class="ml-2">🥬 Vegetarian</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-vegan" name="dietary-vegan" class="h-4 w-4 text-green-600 border-gray-400 rounded focus:ring-green-500 accent-green-600">
-                                    <span class="ml-2">ðŸŒ± Vegan</span>
+                                    <span class="ml-2">🌱 Vegan</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-gluten-free" name="dietary-gluten-free" class="h-4 w-4 text-green-600 border-gray-400 rounded focus:ring-green-500 accent-green-600">
-                                    <span class="ml-2">ðŸŒ¾ Gluten-Free</span>
+                                    <span class="ml-2">🌾 Gluten-Free</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-dairy-free" name="dietary-dairy-free" class="h-4 w-4 text-green-600 border-gray-400 rounded focus:ring-green-500 accent-green-600">
-                                    <span class="ml-2">ðŸ¥› Dairy-Free</span>
+                                    <span class="ml-2">🥛 Dairy-Free</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-spicy" name="dietary-spicy" class="h-4 w-4 text-red-600 border-gray-400 rounded focus:ring-red-500 accent-red-600">
-                                    <span class="ml-2">ðŸŒ¶ï¸ Spicy</span>
+                                    <span class="ml-2">🌶️ Spicy</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="dietary-popular" name="dietary-popular" class="h-4 w-4 text-yellow-600 border-gray-400 rounded focus:ring-yellow-500 accent-yellow-600">
-                                    <span class="ml-2">â­ Popular</span>
+                                    <span class="ml-2">⭐ Popular</span>
                                 </label>
                             </div>
                         </div>
 
                         <!-- Allergen Information -->
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">âš ï¸ Allergen Information</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">⚠️ Allergen Information</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-nuts" name="allergen-nuts" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸ¥œ Nuts</span>
+                                    <span class="ml-2">🥜 Nuts</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-dairy" name="allergen-dairy" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸ¥› Dairy</span>
+                                    <span class="ml-2">🥛 Dairy</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-gluten" name="allergen-gluten" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸŒ¾ Gluten</span>
+                                    <span class="ml-2">🌾 Gluten</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-seafood" name="allergen-seafood" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸŸ Seafood</span>
+                                    <span class="ml-2">🐟 Seafood</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-eggs" name="allergen-eggs" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸ¥š Eggs</span>
+                                    <span class="ml-2">🥚 Eggs</span>
                                 </label>
                                 <label class="inline-flex items-center text-sm">
                                     <input type="checkbox" id="allergen-soy" name="allergen-soy" class="h-4 w-4 text-orange-600 border-gray-400 rounded focus:ring-orange-500 accent-orange-600">
-                                    <span class="ml-2">ðŸ«˜ Soy</span>
+                                    <span class="ml-2">🫘 Soy</span>
                                 </label>
                             </div>
                         </div>
@@ -3684,7 +3684,7 @@
                                     disabled>
                                 <div class="flex items-center justify-center gap-2">
                                     <i class="fas fa-lock text-sm"></i>
-                                    <span data-pricing-template="Subscribe for {price_short}/month">Subscribe for â‚¬18.90/month</span>
+                                    <span data-pricing-template="Subscribe for {price_short}/month">Subscribe for €18.90/month</span>
                                 </div>
                             </button>
                             <p class="text-center text-xs text-gray-500 mt-2">
@@ -3774,7 +3774,7 @@
                     </p>
 
                     <div class="space-y-2 text-sm">
-                        <p class="font-semibold text-red-600">âš ï¸ This action will:</p>
+                        <p class="font-semibold text-red-600">⚠️ This action will:</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
                             <li>End your current session</li>
                             <li>Clear all license data from this device</li>
@@ -3785,7 +3785,7 @@
 
                 <!-- Reassurance Section -->
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <p class="font-semibold text-blue-800 mb-2">â„¹ï¸ Your subscription remains active:</p>
+                    <p class="font-semibold text-blue-800 mb-2">ℹ️ Your subscription remains active:</p>
                     <ul class="list-disc list-inside text-sm text-blue-700 space-y-1 ml-2">
                         <li>No data loss on cloud/server</li>
                         <li>Menu items preserved</li>
@@ -3909,7 +3909,7 @@
 
                 <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-xs text-blue-800">
                     <i class="fas fa-info-circle mr-1"></i>
-                    <strong>Tip:</strong> You can change this behavior in Settings â†’ This Device Settings â†’ Print Behavior
+                    <strong>Tip:</strong> You can change this behavior in Settings → This Device Settings → Print Behavior
                 </div>
             </div>
 
@@ -4239,57 +4239,57 @@
 
         // Demo Menu Data
         const MOCK_MENU_DATA = {
-            "ÎšÎ±Ï†Î­Î´ÎµÏ‚ & Î¡Î¿Ï†Î®Î¼Î±Ï„Î±": [
-                {"id": 1, "name": "Espresso Î¼Î¿Î½ÏŒÏ‚", "price": 2.20, "hasGeneralOptions": true, "generalOptions": [{"name": "Decaf", "priceChange": 0.00}, {"name": "Extra shot", "priceChange": 0.80}]},
-                {"id": 2, "name": "Espresso Î´Î¹Ï€Î»ÏŒÏ‚", "price": 2.90, "hasGeneralOptions": true, "generalOptions": [{"name": "Decaf", "priceChange": 0.00}, {"name": "Extra shot", "priceChange": 0.80}]},
-                {"id": 3, "name": "Cappuccino", "price": 3.40, "hasGeneralOptions": true, "generalOptions": [{"name": "Î“Î¬Î»Î± Î²ÏÏŽÎ¼Î·Ï‚", "priceChange": 0.60}, {"name": "Î£Î¹ÏÏŒÏ€Î¹ Î²Î±Î½Î¯Î»Î¹Î±", "priceChange": 0.50}]},
-                {"id": 4, "name": "Flat white", "price": 3.60, "hasGeneralOptions": true, "generalOptions": [{"name": "Î“Î¬Î»Î± Î²ÏÏŽÎ¼Î·Ï‚", "priceChange": 0.60}]},
-                {"id": 5, "name": "Latte", "price": 3.80, "hasGeneralOptions": true, "generalOptions": [{"name": "Î“Î¬Î»Î± Î±Î¼Ï…Î³Î´Î¬Î»Î¿Ï…", "priceChange": 0.60}, {"name": "Î£Î¹ÏÏŒÏ€Î¹ ÎºÎ±ÏÎ±Î¼Î­Î»Î±", "priceChange": 0.50}]},
+            "Καφέδες & Ροφήματα": [
+                {"id": 1, "name": "Espresso μονός", "price": 2.20, "hasGeneralOptions": true, "generalOptions": [{"name": "Decaf", "priceChange": 0.00}, {"name": "Extra shot", "priceChange": 0.80}]},
+                {"id": 2, "name": "Espresso διπλός", "price": 2.90, "hasGeneralOptions": true, "generalOptions": [{"name": "Decaf", "priceChange": 0.00}, {"name": "Extra shot", "priceChange": 0.80}]},
+                {"id": 3, "name": "Cappuccino", "price": 3.40, "hasGeneralOptions": true, "generalOptions": [{"name": "Γάλα βρώμης", "priceChange": 0.60}, {"name": "Σιρόπι βανίλια", "priceChange": 0.50}]},
+                {"id": 4, "name": "Flat white", "price": 3.60, "hasGeneralOptions": true, "generalOptions": [{"name": "Γάλα βρώμης", "priceChange": 0.60}]},
+                {"id": 5, "name": "Latte", "price": 3.80, "hasGeneralOptions": true, "generalOptions": [{"name": "Γάλα αμυγδάλου", "priceChange": 0.60}, {"name": "Σιρόπι καραμέλα", "priceChange": 0.50}]},
                 {"id": 6, "name": "Americano", "price": 2.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 7, "name": "Î¦ÏÎ­Î½Ï„Î¿ espresso", "price": 3.20, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 8, "name": "Î¦ÏÎ­Î½Ï„Î¿ cappuccino", "price": 3.90, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 9, "name": "Î•Î»Î»Î·Î½Î¹ÎºÏŒÏ‚", "price": 2.00, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 10, "name": "Î¤ÏƒÎ¬Î¹ Earl Grey", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 11, "name": "Î–ÎµÏƒÏ„Î® ÏƒÎ¿ÎºÎ¿Î»Î¬Ï„Î±", "price": 3.60, "hasGeneralOptions": false, "generalOptions": []}
+                {"id": 7, "name": "Φρέντο espresso", "price": 3.20, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 8, "name": "Φρέντο cappuccino", "price": 3.90, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 9, "name": "Ελληνικός", "price": 2.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 10, "name": "Τσάι Earl Grey", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 11, "name": "Ζεστή σοκολάτα", "price": 3.60, "hasGeneralOptions": false, "generalOptions": []}
             ],
             "Brunch": [
-                {"id": 20, "name": "Î¤Î¿ÏƒÏ„ Î±Î²Î¿ÎºÎ¬Î½Ï„Î¿ Î¼Îµ Î±Ï…Î³ÏŒ Ï€Î¿ÏƒÎ­", "price": 7.20, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 21, "name": "ÎŸÎ¼ÎµÎ»Î­Ï„Î± Î»Î±Ï‡Î±Î½Î¹ÎºÏŽÎ½", "price": 6.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 22, "name": "Î£Ï„ÏÎ±Ï€Î±Ï„ÏƒÎ¬Î´Î±", "price": 6.40, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 23, "name": "Î“Î¹Î±Î¿ÏÏÏ„Î¹ Î¼Îµ granola & Î¼Î­Î»Î¹", "price": 4.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 24, "name": "Pancakes Î¼Îµ Î¼Î­Î»Î¹", "price": 5.40, "hasGeneralOptions": false, "generalOptions": []}
+                {"id": 20, "name": "Τοστ αβοκάντο με αυγό ποσέ", "price": 7.20, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 21, "name": "Ομελέτα λαχανικών", "price": 6.80, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 22, "name": "Στραπατσάδα", "price": 6.40, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 23, "name": "Γιαούρτι με granola & μέλι", "price": 4.80, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 24, "name": "Pancakes με μέλι", "price": 5.40, "hasGeneralOptions": false, "generalOptions": []}
             ],
-            "Î£Î½Î±Îº & Î£Î¬Î½Ï„Î¿Ï…Î¹Ï„Ï‚": [
-                {"id": 30, "name": "Î¤Î¿ÏƒÏ„ Î³Î±Î»Î¿Ï€Î¿ÏÎ»Î±-Ï„Ï…ÏÎ¯", "price": 3.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 31, "name": "Î£Î¬Î½Ï„Î¿Ï…Î¹Ï„Ï‚ ÎºÎ¿Ï„ÏŒÏ€Î¿Ï…Î»Î¿", "price": 6.20, "hasGeneralOptions": false, "generalOptions": []},
+            "Σνακ & Σάντουιτς": [
+                {"id": 30, "name": "Τοστ γαλοπούλα-τυρί", "price": 3.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 31, "name": "Σάντουιτς κοτόπουλο", "price": 6.20, "hasGeneralOptions": false, "generalOptions": []},
                 {"id": 32, "name": "Club sandwich", "price": 7.40, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 33, "name": "Bagel Î¼Îµ Ï„Ï…ÏÎ¯ ÎºÏÎ­Î¼Î± & Î³Î±Î»Î¿Ï€Î¿ÏÎ»Î±", "price": 5.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 34, "name": "ÎœÏ€Î¬ÏÎ± Î´Î·Î¼Î·Ï„ÏÎ¹Î±ÎºÏŽÎ½", "price": 2.40, "hasGeneralOptions": false, "generalOptions": []}
+                {"id": 33, "name": "Bagel με τυρί κρέμα & γαλοπούλα", "price": 5.80, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 34, "name": "Μπάρα δημητριακών", "price": 2.40, "hasGeneralOptions": false, "generalOptions": []}
             ],
-            "ÎšÏ…ÏÎ¯Ï‰Ï‚ (Î‘Ï€Î»Î¬ Ï€Î¹Î¬Ï„Î±)": [
-                {"id": 40, "name": "Î£Ï€Î±Î³Î³Î­Ï„Î¹ Î½Î±Ï€Î¿Î»Î¹Ï„Î¬Î½Î±", "price": 8.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 41, "name": "Î£Ï€Î±Î³Î³Î­Ï„Î¹ ÎºÎ±ÏÎ¼Ï€Î¿Î½Î¬ÏÎ±", "price": 10.20, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 42, "name": "Î Î­Î½Î½ÎµÏ‚ ÎºÎ¿Ï„ÏŒÏ€Î¿Ï…Î»Î¿ & ÎºÏÎ­Î¼Î±", "price": 10.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 43, "name": "Î¡Î¹Î¶ÏŒÏ„Î¿ Î¼Î±Î½Î¹Ï„Î±ÏÎ¹ÏŽÎ½", "price": 9.80, "hasGeneralOptions": false, "generalOptions": []}
+            "Κυρίως (Απλά πιάτα)": [
+                {"id": 40, "name": "Σπαγγέτι ναπολιτάνα", "price": 8.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 41, "name": "Σπαγγέτι καρμπονάρα", "price": 10.20, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 42, "name": "Πέννες κοτόπουλο & κρέμα", "price": 10.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 43, "name": "Ριζότο μανιταριών", "price": 9.80, "hasGeneralOptions": false, "generalOptions": []}
             ],
-            "ÎœÏ€ÏÏÎµÏ‚": [
+            "Μπύρες": [
                 {"id": 50, "name": "Lager 330ml", "price": 3.40, "hasGeneralOptions": false, "generalOptions": []},
                 {"id": 51, "name": "Lager 500ml", "price": 4.60, "hasGeneralOptions": false, "generalOptions": []},
                 {"id": 52, "name": "Weiss 500ml", "price": 5.20, "hasGeneralOptions": false, "generalOptions": []},
                 {"id": 53, "name": "IPA 330ml", "price": 4.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 54, "name": "Î§Ï‰ÏÎ¯Ï‚ Î±Î»ÎºÎ¿ÏŒÎ» 330ml", "price": 3.20, "hasGeneralOptions": false, "generalOptions": []}
+                {"id": 54, "name": "Χωρίς αλκοόλ 330ml", "price": 3.20, "hasGeneralOptions": false, "generalOptions": []}
             ],
-            "Î‘Î½Î±ÏˆÏ…ÎºÏ„Î¹ÎºÎ¬ & Î§Ï…Î¼Î¿Î¯": [
-                {"id": 60, "name": "ÎÎµÏÏŒ ÎµÎ¼Ï†Î¹Î±Î»Ï‰Î¼Î­Î½Î¿ 500ml", "price": 1.20, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 61, "name": "Î‘Î½Î¸ÏÎ±ÎºÎ¿ÏÏ‡Î¿ Î½ÎµÏÏŒ 500ml", "price": 1.60, "hasGeneralOptions": false, "generalOptions": []},
+            "Αναψυκτικά & Χυμοί": [
+                {"id": 60, "name": "Νερό εμφιαλωμένο 500ml", "price": 1.20, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 61, "name": "Ανθρακούχο νερό 500ml", "price": 1.60, "hasGeneralOptions": false, "generalOptions": []},
                 {"id": 62, "name": "Cola", "price": 2.40, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 63, "name": "Î›ÎµÎ¼Î¿Î½Î¬Î´Î± ÏƒÏ€Î¹Ï„Î¹ÎºÎ®", "price": 3.00, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 64, "name": "Î Î¿ÏÏ„Î¿ÎºÎ±Î»Î¬Î´Î±", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 65, "name": "Î§Ï…Î¼ÏŒÏ‚ Ï€Î¿ÏÏ„Î¿ÎºÎ¬Î»Î¹", "price": 3.40, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 66, "name": "Î§Ï…Î¼ÏŒÏ‚ Î¼Î®Î»Î¿", "price": 2.80, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 67, "name": "Iced tea ÏÎ¿Î´Î¬ÎºÎ¹Î½Î¿", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 68, "name": "Î¤ÏŒÎ½Î¹Îº", "price": 2.40, "hasGeneralOptions": false, "generalOptions": []},
-                {"id": 69, "name": "Î£ÏŒÎ´Î±", "price": 2.00, "hasGeneralOptions": false, "generalOptions": []}
+                {"id": 63, "name": "Λεμονάδα σπιτική", "price": 3.00, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 64, "name": "Πορτοκαλάδα", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 65, "name": "Χυμός πορτοκάλι", "price": 3.40, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 66, "name": "Χυμός μήλο", "price": 2.80, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 67, "name": "Iced tea ροδάκινο", "price": 2.60, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 68, "name": "Τόνικ", "price": 2.40, "hasGeneralOptions": false, "generalOptions": []},
+                {"id": 69, "name": "Σόδα", "price": 2.00, "hasGeneralOptions": false, "generalOptions": []}
             ]
         };
 
@@ -4368,7 +4368,7 @@
                         <h3 class="text-sm font-semibold text-gray-800">${item.name}</h3>
                         ${optionsBadge}
                     </div>
-                    <p class="text-lg font-bold text-black">â‚¬${item.price.toFixed(2)}</p>
+                    <p class="text-lg font-bold text-black">€${item.price.toFixed(2)}</p>
                 `;
                 els.products.appendChild(card);
             });
@@ -4424,7 +4424,7 @@
                             <button class="px-2 py-1 text-xs btn-secondary rounded" onclick="event.stopPropagation(); changeQuantity('${item.orderId}', -1)">-</button>
                             <span class="w-6 text-center font-medium">${item.quantity}</span>
                             <button class="px-2 py-1 text-xs btn-secondary rounded" onclick="event.stopPropagation(); changeQuantity('${item.orderId}', 1)">+</button>
-                            <span class="font-semibold text-gray-900 min-w-[60px] text-right">â‚¬${itemTotal.toFixed(2)}</span>
+                            <span class="font-semibold text-gray-900 min-w-[60px] text-right">€${itemTotal.toFixed(2)}</span>
                             <button class="text-red-600 hover:text-red-800 p-1" onclick="event.stopPropagation(); removeItem('${item.orderId}')" title="Remove item">
                                 <i class="fas fa-trash text-xs"></i>
                             </button>
@@ -4434,7 +4434,7 @@
                 });
             }
 
-            els.orderTotal.innerHTML = `Total: â‚¬${total.toFixed(2)}`;
+            els.orderTotal.innerHTML = `Total: €${total.toFixed(2)}`;
             localStorage.setItem(LOCAL_STORAGE_PREFIX + 'CurrentOrder', JSON.stringify(currentOrder));
         }
 
@@ -4717,9 +4717,9 @@
         // Analytics Rendering Functions
         function renderAnalytics(data) {
             // Update KPI cards
-            $('kpi-gross-revenue').textContent = `â‚¬${(data.grossRevenue || 0).toFixed(2)}`;
+            $('kpi-gross-revenue').textContent = `€${(data.grossRevenue || 0).toFixed(2)}`;
             $('kpi-total-orders').textContent = data.totalOrders || 0;
-            $('kpi-atv').textContent = `â‚¬${(data.atv || 0).toFixed(2)}`;
+            $('kpi-atv').textContent = `€${(data.atv || 0).toFixed(2)}`;
 
             // Items per order
             const itemsPerOrder = (data.totalItems && data.totalOrders) ? (data.totalItems / data.totalOrders) : 0;
@@ -4730,13 +4730,13 @@
             renderList('kpi-sales-by-category', data.salesByCategory, item => `
                 <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
                     <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.category}</span>
-                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">â‚¬${(item.total || 0).toFixed(2)}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(item.total || 0).toFixed(2)}</span>
                 </div>`, "No category sales yet.");
 
             renderList('kpi-top-revenue-items', data.topRevenueItems, item => `
                 <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
                     <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${item.name}</span>
-                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">â‚¬${(item.revenue || 0).toFixed(2)}</span>
+                    <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(item.revenue || 0).toFixed(2)}</span>
                 </div>`, "No items sold yet.");
 
             renderList('kpi-best-sellers', data.bestSellers, item => `
@@ -4759,12 +4759,12 @@
             if (addonsContainer) {
                 const items = data.topAddons || [];
                 if (items.length === 0) {
-                    addonsContainer.innerHTML = '<p style="font-size: 0.75rem; color: #6b7280; font-style: italic; padding: 0.5rem;">No addâ€‘on data.</p>';
+                    addonsContainer.innerHTML = '<p style="font-size: 0.75rem; color: #6b7280; font-style: italic; padding: 0.5rem;">No add‑on data.</p>';
                 } else {
                     addonsContainer.innerHTML = items.map(a => `
                         <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
                             <span style="color: #4b5563; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 0.5rem;">${a.name}</span>
-                            <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">â‚¬${(a.revenue || 0).toFixed(2)} â€¢ ${a.attachRate ? Math.round(a.attachRate*100) : 0}%</span>
+                            <span style="font-weight: 500; color: #1f2937; white-space: nowrap;">€${(a.revenue || 0).toFixed(2)} • ${a.attachRate ? Math.round(a.attachRate*100) : 0}%</span>
                         </div>
                     `).join('');
                 }
@@ -4831,7 +4831,7 @@
             for (let i = ticks; i >= 0; i--) {
                 const val = (maxRevenue / ticks) * i;
                 const lbl = document.createElement('div');
-                lbl.textContent = `â‚¬${val.toFixed(0)}`;
+                lbl.textContent = `€${val.toFixed(0)}`;
                 lbl.style.cssText = 'height:1px; transform:translateY(6px)';
                 yAxis.appendChild(lbl);
             }
@@ -4861,7 +4861,7 @@
                 // Add event listeners
                 bar.addEventListener('mouseenter', function(e) {
                     // Update tooltip
-                    tooltip.textContent = `${hourData.label}: â‚¬${hourData.total.toFixed(2)}`;
+                    tooltip.textContent = `${hourData.label}: €${hourData.total.toFixed(2)}`;
                     tooltip.style.opacity = '1';
 
                     // Position tooltip
@@ -5034,4 +5034,3 @@
     </script>
 </body>
 </html>
-
