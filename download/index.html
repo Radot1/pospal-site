@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+    <script src="/static/js/ga-consent.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F851JG8PL6"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F851JG8PL6');
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-F851JG8PL6');
     </script>
     <script defer src="/static/js/ga-events.js"></script>
     <meta charset="UTF-8">
@@ -229,9 +228,32 @@
             const status = document.getElementById('desktop-status');
             manualDownload.setAttribute('href', INSTALLER_URL);
             status.textContent = 'Η λήψη ξεκινά αυτόματα. Αν δεν ξεκινήσει, πάτησε το κουμπί.';
+
+            if (typeof window.gtag === 'function') {
+                const basePayload = {
+                    page_path: window.location.pathname,
+                    page_type: 'download',
+                    event_version: 'v1.1',
+                    cta_variant: 'auto_redirect',
+                    cta_text: 'desktop_auto_redirect',
+                    cta_href: INSTALLER_URL,
+                    cta_id: 'auto-redirect',
+                    cta_classes: 'auto-redirect'
+                };
+
+                window.gtag('event', 'download_click', basePayload);
+                window.gtag('event', 'trial_start_click', basePayload);
+                window.gtag('event', 'installer_autostart', {
+                    page_path: window.location.pathname,
+                    page_type: 'download',
+                    event_version: 'v1.1',
+                    installer_url: INSTALLER_URL
+                });
+            }
+
             window.setTimeout(function () {
                 window.location.assign(INSTALLER_URL);
-            }, 400);
+            }, 700);
         })();
     </script>
 </body>

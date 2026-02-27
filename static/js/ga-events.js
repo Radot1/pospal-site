@@ -1,4 +1,17 @@
 (function () {
+  var EVENT_VERSION = "v1.1";
+  var SEO_ARTICLE_PATHS = [
+    "/asyrmati-paraggeliolipsia.html",
+    "/menu-estiatoriou.html",
+    "/paraggelies-gia-estiash.html",
+    "/paraggelio-lipsia-gia-beach-bar.html",
+    "/pda-gia-kafeteries.html",
+    "/pda-pos-leitourgei.html",
+    "/pda-ti-einai.html",
+    "/qr-menu-gia-estiash.html",
+    "/systima-paraggeliolipsias.html",
+  ];
+
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
   }
@@ -8,7 +21,6 @@
     if (typeof text.normalize === "function") {
       return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
-
     return text;
   }
 
@@ -18,6 +30,81 @@
     } catch (error) {
       return null;
     }
+  }
+
+  function normalizePathname(pathname) {
+    var path = normalizeText(pathname || "/").toLocaleLowerCase();
+    if (!path) {
+      return "/";
+    }
+    return path;
+  }
+
+  function isDemoOrAppPath(pathname) {
+    return (
+      /^\/pospal_demo(?:_desktop|_index)?\.html$/.test(pathname) ||
+      pathname === "/pospaldesktop.html" ||
+      /^\/pospal-demo-[^/]+\.html$/.test(pathname) ||
+      /^\/pospal-demo-coffee-[^/]+\.html$/.test(pathname) ||
+      pathname === "/qr-menu-demo.html" ||
+      pathname === "/managementcomponent.html"
+    );
+  }
+
+  function isMarketingPage(pathname) {
+    return !isDemoOrAppPath(pathname);
+  }
+
+  function resolvePageType(pathname) {
+    if (pathname === "/" || pathname === "/index.html") {
+      return "home";
+    }
+
+    if (pathname === "/times.html") {
+      return "pricing";
+    }
+
+    if (
+      pathname === "/download" ||
+      pathname === "/download/" ||
+      pathname.indexOf("/download/") === 0
+    ) {
+      return "download";
+    }
+
+    if (pathname === "/buy-license.html") {
+      return "buy";
+    }
+
+    if (pathname === "/installation-guide.html") {
+      return "install_guide";
+    }
+
+    if (pathname === "/guides" || pathname.indexOf("/guides/") === 0) {
+      return "guides";
+    }
+
+    if (SEO_ARTICLE_PATHS.indexOf(pathname) !== -1) {
+      return "seo_article";
+    }
+
+    return "other";
+  }
+
+  function buildBasePayload() {
+    return {
+      page_path: window.location.pathname,
+      page_type: PAGE_TYPE,
+      event_version: EVENT_VERSION,
+    };
+  }
+
+  function sendEvent(name, params) {
+    if (typeof window.gtag !== "function") {
+      return;
+    }
+
+    window.gtag("event", name, params);
   }
 
   function classifyDownload(pathname, elementId) {
@@ -103,27 +190,11 @@
     return "download_link_cta";
   }
 
-  function sendEvent(name, params) {
-    if (typeof window.gtag !== "function") {
+  function setupCtaClickTracking() {
+    if (!IS_MARKETING_PAGE) {
       return;
     }
 
-    window.gtag("event", name, params);
-  }
-
-  function getBaseCtaPayload(element, href, url, text) {
-    return {
-      page_path: window.location.pathname,
-      cta_text: text,
-      cta_href: url ? url.href : href,
-      cta_id: element.id || "",
-      cta_classes: normalizeText(
-        typeof element.className === "string" ? element.className : ""
-      ).slice(0, 200),
-    };
-  }
-
-  function setupCtaClickTracking() {
     document.addEventListener(
       "click",
       function (event) {
@@ -140,7 +211,7 @@
         var tagName = (element.tagName || "").toLowerCase();
         var href = tagName === "a" ? element.getAttribute("href") || "" : "";
         var url = href ? toUrl(href) : null;
-        var pathname = url && url.pathname ? url.pathname.toLowerCase() : "";
+        var pathname = normalizePathname(url && url.pathname ? url.pathname : "");
         var elementId = element.id || "";
         var ctaText = normalizeText(element.innerText || element.textContent || "");
         var textMatch = normalizeForMatch(ctaText);
@@ -161,11 +232,19 @@
           return;
         }
 
-        var payload = getBaseCtaPayload(element, href, url, ctaText);
+        var payload = buildBasePayload();
+        payload.cta_text = ctaText;
+        payload.cta_href = url ? url.href : href;
+        payload.cta_id = elementId;
+        payload.cta_classes = normalizeText(
+          typeof element.className === "string" ? element.className : ""
+        ).slice(0, 200);
 
         if (downloadVariant) {
           sendEvent("download_click", {
             page_path: payload.page_path,
+            page_type: payload.page_type,
+            event_version: payload.event_version,
             cta_variant: downloadVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
@@ -177,6 +256,8 @@
         if (trialVariant) {
           sendEvent("trial_start_click", {
             page_path: payload.page_path,
+            page_type: payload.page_type,
+            event_version: payload.event_version,
             cta_variant: trialVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
@@ -188,6 +269,8 @@
         if (demoVariant) {
           sendEvent("demo_click", {
             page_path: payload.page_path,
+            page_type: payload.page_type,
+            event_version: payload.event_version,
             cta_variant: demoVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
@@ -222,7 +305,7 @@
       var heading = headings[i];
       var headingMatch = normalizeForMatch(heading.textContent || "");
       if (
-        headingMatch.indexOf("τιμε") === -1 &&
+        headingMatch.indexOf("τιμ") === -1 &&
         headingMatch.indexOf("pricing") === -1
       ) {
         continue;
@@ -238,7 +321,7 @@
   }
 
   function setupPricingViewTracking() {
-    if (typeof window.IntersectionObserver !== "function") {
+    if (!IS_MARKETING_PAGE || typeof window.IntersectionObserver !== "function") {
       return;
     }
 
@@ -252,11 +335,7 @@
       function (entries) {
         var i;
         for (i = 0; i < entries.length; i += 1) {
-          if (sent) {
-            return;
-          }
-
-          if (!entries[i].isIntersecting) {
+          if (sent || !entries[i].isIntersecting) {
             continue;
           }
 
@@ -264,13 +343,12 @@
           observer.disconnect();
 
           var heading = target.querySelector("h1, h2, h3");
-          sendEvent("pricing_view", {
-            page_path: window.location.pathname,
-            section_id: target.id || "",
-            section_heading: normalizeText(
-              heading ? heading.textContent || "" : ""
-            ).slice(0, 200),
-          });
+          var payload = buildBasePayload();
+          payload.section_id = target.id || "";
+          payload.section_heading = normalizeText(
+            heading ? heading.textContent || "" : ""
+          ).slice(0, 200);
+          sendEvent("pricing_view", payload);
           return;
         }
       },
@@ -283,52 +361,67 @@
   }
 
   function setupFaqExpandTracking() {
-    document.addEventListener("click", function (event) {
-      var target = event.target;
-      if (!target || typeof target.closest !== "function") {
-        return;
-      }
+    if (!IS_MARKETING_PAGE) {
+      return;
+    }
 
-      var trigger = target.closest("[data-faq-trigger], summary");
-      if (!trigger) {
-        return;
-      }
-
-      window.setTimeout(function () {
-        var isOpen = false;
-        var questionText = "";
-        var faqId = "";
-
-        if ((trigger.tagName || "").toLowerCase() === "summary") {
-          var details = trigger.closest("details");
-          isOpen = !!(details && details.open);
-          faqId = details && details.id ? details.id : "";
-          questionText = normalizeText(trigger.textContent || "");
-        } else {
-          var ariaExpanded = trigger.getAttribute("aria-expanded");
-          var faqItem = trigger.closest("[data-faq-item]");
-          isOpen =
-            ariaExpanded === "true" ||
-            !!(faqItem && faqItem.classList.contains("is-open"));
-          faqId =
-            trigger.getAttribute("aria-controls") ||
-            (faqItem && faqItem.id ? faqItem.id : "");
-          questionText = normalizeText(trigger.textContent || "");
-        }
-
-        if (!isOpen || !questionText) {
+    document.addEventListener(
+      "click",
+      function (event) {
+        var target = event.target;
+        if (!target || typeof target.closest !== "function") {
           return;
         }
 
-        sendEvent("faq_expand", {
-          page_path: window.location.pathname,
-          faq_id: faqId,
-          faq_question: questionText.slice(0, 200),
-        });
-      }, 0);
-    },
-    false);
+        var trigger = target.closest("[data-faq-trigger], summary");
+        if (!trigger) {
+          return;
+        }
+
+        window.setTimeout(function () {
+          var isOpen = false;
+          var questionText = "";
+          var faqId = "";
+
+          if ((trigger.tagName || "").toLowerCase() === "summary") {
+            var details = trigger.closest("details");
+            isOpen = !!(details && details.open);
+            faqId = details && details.id ? details.id : "";
+            questionText = normalizeText(trigger.textContent || "");
+          } else {
+            var ariaExpanded = trigger.getAttribute("aria-expanded");
+            var faqItem = trigger.closest("[data-faq-item]");
+            isOpen =
+              ariaExpanded === "true" ||
+              !!(faqItem && faqItem.classList.contains("is-open"));
+            faqId =
+              trigger.getAttribute("aria-controls") ||
+              (faqItem && faqItem.id ? faqItem.id : "");
+            questionText = normalizeText(trigger.textContent || "");
+          }
+
+          if (!isOpen || !questionText) {
+            return;
+          }
+
+          var payload = buildBasePayload();
+          payload.faq_id = faqId;
+          payload.faq_question = questionText.slice(0, 200);
+          sendEvent("faq_expand", payload);
+        }, 0);
+      },
+      false
+    );
   }
+
+  var CURRENT_PATHNAME = normalizePathname(window.location.pathname || "/");
+  var PAGE_TYPE = resolvePageType(CURRENT_PATHNAME);
+  var IS_MARKETING_PAGE = isMarketingPage(CURRENT_PATHNAME);
+
+  window.POSPAL_GA_CONTEXT = window.POSPAL_GA_CONTEXT || {};
+  window.POSPAL_GA_CONTEXT.event_version = EVENT_VERSION;
+  window.POSPAL_GA_CONTEXT.page_type = PAGE_TYPE;
+  window.POSPAL_GA_CONTEXT.is_marketing_page = IS_MARKETING_PAGE;
 
   setupCtaClickTracking();
   setupPricingViewTracking();
