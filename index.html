@@ -145,6 +145,7 @@
         .header-download {
             max-width: calc(200px * (1 - var(--header-compact)));
             overflow: hidden;
+            white-space: nowrap;
             opacity: calc(1 - var(--header-compact));
             transform: translateY(calc(-6px * var(--header-compact)));
             transition: max-width 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
@@ -246,7 +247,7 @@
 
         .experience-viewport {
             position: relative;
-            min-height: 320vh;
+            min-height: 190vh;
             overflow: visible;
             --experience-progress: 0;
         }
@@ -255,21 +256,15 @@
             position: sticky;
             top: calc(var(--header-offset, 120px) + 12px);
             display: grid;
-            gap: 24px;
             align-items: stretch;
             --experience-progress: 0;
             --hero-demo-height: auto;
-            grid-template-columns: 1fr;
             width: 100%;
-            transform: translate3d(0, 0, 0);
-            transition: none;
-            will-change: width, transform;
         }
 
         .experience-left {
-            grid-column: 1;
             display: grid;
-            align-items: center;
+            align-items: start;
             position: relative;
         }
 
@@ -277,142 +272,165 @@
             grid-area: 1 / 1;
         }
 
+        .experience-value-panel {
+            z-index: 3;
+            width: min(100%, 680px);
+            justify-self: center;
+            padding: clamp(22px, 2.8vw, 30px);
+            border-radius: 28px;
+            border: 1px solid rgba(187, 247, 208, 0.85);
+            background:
+                radial-gradient(circle at 85% 12%, rgba(34, 197, 94, 0.14), transparent 45%),
+                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
+            box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12);
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+            will-change: opacity, transform;
+        }
+
+        .value-panel-eyebrow {
+            font-size: 0.76rem;
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #166534;
+        }
+
+        .value-panel-title {
+            margin-top: 10px;
+            font-size: clamp(1.45rem, 2.5vw, 2rem);
+            line-height: 1.2;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+        }
+
+        .value-panel-list {
+            margin-top: 16px;
+            display: grid;
+            gap: 10px;
+            color: #334155;
+            font-size: 0.98rem;
+            line-height: 1.45;
+        }
+
+        .value-panel-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .value-panel-list li::before {
+            content: "\2713";
+            width: 21px;
+            height: 21px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            margin-top: 1px;
+            color: #15803d;
+            background: #dcfce7;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
+        }
+
+        .value-panel-link {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #166534;
+        }
+
+        .value-panel-link:hover {
+            color: #14532d;
+        }
+
         .experience-demo {
             z-index: 2;
             position: relative;
-            justify-self: end;
-            transition: none;
+            justify-self: center;
             display: inline-flex;
-            width: fit-content;
+            width: min(100%, 960px);
             max-width: 100%;
-            will-change: transform;
-        }
-
-        .experience-copy {
-            max-width: 420px;
             opacity: 0;
-            transform: translateY(14px);
-            transition: opacity 260ms ease, transform 260ms ease;
+            transform: translateY(16px) scale(0.975);
+            transform-origin: top center;
             pointer-events: none;
-        }
-
-        .experience-copy-qr {
-            display: none;
-        }
-
-        .experience-qr {
-            grid-column: 2;
-            opacity: 0;
-            transform: translate(24px, 16px);
-            transition: none;
-            pointer-events: none;
-            align-self: center;
+            will-change: opacity, transform;
         }
 
         .stage-hint {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 4;
-            padding: 14px 26px;
-            font-size: 1.1rem;
+            top: 18px;
+            left: 18px;
+            z-index: 5;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            font-size: 0.93rem;
             letter-spacing: 0.01em;
-            font-weight: 600;
+            font-weight: 700;
             color: #166534;
-            background: #f0fdf4;
-            border: 1px solid rgba(187, 247, 208, 0.9);
-            border-radius: 999px;
+            background: #fffde8;
+            border: 2px solid rgba(22, 101, 52, 0.65);
+            border-radius: 12px;
+            box-shadow: 3px 3px 0 rgba(22, 101, 52, 0.26);
             opacity: 0;
-            transform: translate(-50%, -40%);
+            transform: rotate(-4deg) translateY(-6px);
             transition: opacity 220ms ease, transform 220ms ease;
             pointer-events: none;
         }
 
-        .demo-frame-hero::after {
+        .stage-hint-hand {
+            display: inline-block;
+            font-size: 1.05rem;
+            line-height: 1;
+            transform-origin: 70% 80%;
+            animation: hand-tap 1.1s ease-in-out infinite;
+        }
+
+        .stage-hint::before {
             content: "";
             position: absolute;
-            inset: 0;
-            background: rgba(248, 250, 252, 0.72);
-            opacity: 0;
-            transition: opacity 240ms ease;
-            pointer-events: none;
-            z-index: 2;
+            inset: 3px;
+            border-radius: 8px;
+            border: 1px dashed rgba(22, 101, 52, 0.42);
         }
 
-        .experience-stage.is-focus .stage-hint {
-            opacity: 1;
-            transform: translate(-50%, -50%);
-        }
-
-        .experience-stage.is-focus .demo-frame-hero::after {
-            opacity: 1;
-        }
-
-        .experience-stage.is-focus .frame-body {
-            filter: grayscale(0.2) saturate(0.85);
-        }
-
-        .experience-stage.is-focus .demo-iframe {
-            pointer-events: none;
-        }
-
-        .experience-stage.is-locked .frame-body {
-            filter: none;
-        }
-
-        .experience-stage.is-stage2 {
-            grid-template-columns: 1fr;
-        }
-
-        .stage2-grid {
+        .stage-hint::after {
+            content: "\2198";
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: min(100%, 1120px);
-            transform: translateX(-50%);
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto;
-            align-items: center;
-            gap: clamp(24px, 4vw, 56px);
-            padding-inline: clamp(20px, 4vw, 60px);
-            pointer-events: none;
-            z-index: 3;
-            --stage2-opacity: 0;
+            right: -18px;
+            top: 18px;
+            font-size: 1.05rem;
+            color: #166534;
+            transform: rotate(8deg);
         }
 
-        .stage2-grid::before {
-            content: "";
-            position: absolute;
-            inset: -24px -32px;
-            border-radius: 36px;
-            background: radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.08), transparent 60%),
-                radial-gradient(circle at 80% 80%, rgba(15, 23, 42, 0.04), transparent 55%);
-            border: 1px solid rgba(226, 232, 240, 0.75);
-            opacity: var(--stage2-opacity);
-            transition: opacity 240ms ease;
-            pointer-events: none;
-            z-index: 0;
+        @keyframes hand-tap {
+            0%, 100% {
+                transform: rotate(-10deg) translateY(0);
+            }
+            40% {
+                transform: rotate(8deg) translateY(-2px);
+            }
+            70% {
+                transform: rotate(-6deg) translateY(1px);
+            }
         }
 
-        .stage2-grid > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .stage2-copy {
-            opacity: 0;
-            transform: translate(-24px, 12px);
-            transition: none;
-            pointer-events: none;
-        }
-
-        .stage2-copy h3 {
-            letter-spacing: -0.01em;
-        }
-
-        .stage2-copy p {
-            line-height: 1.6;
+        @media (prefers-reduced-motion: reduce) {
+            .stage-hint-hand {
+                animation: none;
+            }
         }
 
         .qr-bullets {
@@ -464,6 +482,209 @@
 
 
 
+
+        .qr-live-section {
+            padding: clamp(40px, 5vw, 64px) 0 32px;
+            position: relative;
+            will-change: opacity, transform;
+        }
+
+        .qr-live-card {
+            padding: clamp(18px, 2.1vw, 30px);
+            border-radius: 30px;
+            border: 1px solid rgba(187, 247, 208, 0.75);
+            background:
+                radial-gradient(circle at 14% 12%, rgba(34, 197, 94, 0.14), transparent 44%),
+                radial-gradient(circle at 92% 85%, rgba(15, 23, 42, 0.06), transparent 48%),
+                #ffffff;
+            box-shadow: 0 20px 42px rgba(15, 23, 42, 0.12);
+        }
+
+        .qr-live-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: clamp(18px, 2.6vw, 38px);
+            align-items: center;
+        }
+
+        .qr-live-copy {
+            max-width: 32rem;
+        }
+
+        .qr-live-eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #166534;
+        }
+
+        .qr-live-title {
+            margin-top: 6px;
+            font-size: clamp(1.35rem, 2vw, 1.86rem);
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            max-width: 20ch;
+        }
+
+        .qr-live-body {
+            margin-top: 8px;
+            color: #334155;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            max-width: 44ch;
+        }
+
+        .qr-live-chips {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .qr-live-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(187, 247, 208, 0.9);
+            background: #f0fdf4;
+            color: #166534;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+        }
+
+        .qr-live-chip::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+        }
+
+        .qr-live-actions {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .qr-live-btn-primary {
+            background: #16a34a;
+            color: #ffffff;
+            border: 1px solid transparent;
+            box-shadow: 0 16px 32px rgba(22, 163, 74, 0.28);
+            padding: 12px 22px;
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .qr-live-btn-primary:hover {
+            background: #15803d;
+            box-shadow: 0 20px 36px rgba(21, 128, 61, 0.3);
+        }
+
+        .qr-live-btn-secondary {
+            background: #ffffff;
+            color: #166534;
+            border: 1px solid rgba(34, 197, 94, 0.55);
+            box-shadow: none;
+            padding: 11px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .qr-live-btn-secondary:hover {
+            background: #f0fdf4;
+            color: #14532d;
+            border-color: #16a34a;
+        }
+
+        .qr-live-meta {
+            margin-top: 8px;
+            color: #64748b;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        .qr-live-preview-wrap {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .qr-live-preview-shell {
+            width: min(100%, 860px);
+            padding: 10px;
+            border-radius: 30px;
+            border: 1px solid rgba(226, 232, 240, 0.95);
+            background: #f8fafc;
+            box-shadow: 0 22px 38px rgba(15, 23, 42, 0.16);
+        }
+
+        .qr-live-preview-frame {
+            --qr-live-max-height: calc(100vh - var(--header-offset, 120px) - 72px);
+            position: relative;
+            width: min(100%, calc(var(--qr-live-max-height) * 0.68));
+            max-height: var(--qr-live-max-height);
+            margin-inline: auto;
+            aspect-ratio: 4 / 5;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .qr-live-preview-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+            background: #ffffff;
+        }
+
+        @media (max-width: 1024px) {
+            .qr-live-section {
+                padding: 24px 0 24px;
+            }
+
+            .qr-live-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .qr-live-preview-wrap {
+                order: 1;
+                justify-content: center;
+            }
+
+            .qr-live-copy {
+                order: 2;
+                max-width: none;
+            }
+
+            .qr-live-title {
+                font-size: 1.35rem;
+                max-width: 26ch;
+            }
+
+            .qr-live-body {
+                font-size: 0.95rem;
+            }
+
+            .qr-live-preview-shell {
+                width: min(100%, 520px);
+            }
+
+            .qr-live-preview-frame {
+                --qr-live-max-height: min(72vh, 680px);
+                width: min(100%, calc(var(--qr-live-max-height) * 0.74));
+            }
+        }
 
         .frame-body {
             position: relative;
@@ -697,12 +918,11 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                pointer-events: auto;
             }
 
-            .experience-copy,
-            .experience-copy-qr,
-            .stage2-grid,
-            .experience-rail {
+            .experience-value-panel,
+            .stage-hint {
                 display: none !important;
             }
 
@@ -1165,9 +1385,6 @@
                     </nav>
                     <div class="header-actions hidden lg:flex items-center gap-3">
                         <span class="header-tagline">Κατέβασε και ξεκίνα δοκιμή.</span>
-                        <a href="./POSPal_Demo_Index.html" class="btn btn-secondary btn-sm">
-                            Δες Demo
-                        </a>
                         <a href="/download/" class="btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
                     </div>
                     <a href="/download/" class="hidden sm:inline-flex lg:hidden btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
@@ -1207,7 +1424,6 @@
                             </div>
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
-                                <p class="font-semibold text-emerald-700">30 ημέρες δωρεάν • χωρίς κάρτα • χωρίς λογαριασμό.</p>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-4">
                                 <a href="./POSPal_Demo_Index.html" class="btn btn-secondary">
@@ -1226,9 +1442,22 @@
                                 <div class="experience-stage" id="experience-stage">
                                     <div class="experience-left">
                                         <div class="mobile-section-label mobile-only">Παραγγελιοληψία</div>
+                                        <div class="experience-value-panel surface-soft" id="experience-value-panel">
+                                            <p class="value-panel-eyebrow">Ξεκάθαρη προσφορά</p>
+                                            <h3 class="value-panel-title">€18,90/μήνα με 30 ημέρες δωρεάν</h3>
+                                            <ul class="value-panel-list">
+                                                <li>Χωρίς κάρτα και χωρίς λογαριασμό για να ξεκινήσεις.</li>
+                                                <li>Παραγγελιοληψία, λειτουργία τραπεζιών και QR μενού στο ίδιο πακέτο.</li>
+                                                <li>Άμεσο Demo και λήψη για Windows.</li>
+                                            </ul>
+                                            <a class="value-panel-link" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">Δες live QR μενού</a>
+                                        </div>
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
-                                            <div class="stage-hint" id="stage-hint">Δοκίμασέ το</div>
+                                            <div class="stage-hint" id="stage-hint">
+                                                <span>Δοκίμασέ το</span>
+                                                <span class="stage-hint-hand" aria-hidden="true">☝</span>
+                                            </div>
                                             <div class="mobile-demo-overlay" id="mobile-demo-overlay">
                                                 <span>Δοκίμασέ με</span>
                                             </div>
@@ -1250,43 +1479,7 @@
                                               </div>
                                           </div>
                                         </div>
-                                        <div class="experience-copy experience-copy-qr">
-                                            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR &#956;&#949;&#957;&#959;&#973;, &#967;&#969;&#961;&#943;&#962; extra &#954;&#972;&#963;&#964;&#959;&#962;.</h3>
-                                            <p class="mt-3 text-base text-slate-600">&#928;&#949;&#961;&#953;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953; &#963;&#964;&#959; &#960;&#945;&#954;&#941;&#964;&#959; &#954;&#945;&#953; &#949;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#965;&#964;&#972;&#956;&#945;&#964;&#945; &#956;&#949; &#954;&#940;&#952;&#949; &#945;&#955;&#955;&#945;&#947;&#942;. &#917;&#973;&#967;&#961;&#951;&#963;&#964;&#959; &#947;&#953;&#945; &#964;&#959;&#957; &#960;&#949;&#955;&#940;&#964;&#951;, &#941;&#964;&#959;&#953;&#956;&#959; &#947;&#953;&#945; &#954;&#953;&#957;&#951;&#964;&#940; &#954;&#945;&#953; QR &#964;&#961;&#945;&#960;&#949;&#950;&#953;&#974;&#957;.</p>
-                                        </div>
                                     </div>
-                                    <div class="stage2-grid">
-                                        <div class="stage2-copy">
-                                            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">QR &#956;&#949;&#957;&#959;&#973;, &#967;&#969;&#961;&#943;&#962; extra &#954;&#972;&#963;&#964;&#959;&#962;.</h3>
-                                            <p class="mt-3 text-base text-slate-600">&#928;&#949;&#961;&#953;&#955;&#945;&#956;&#946;&#940;&#957;&#949;&#964;&#945;&#953; &#963;&#964;&#959; &#960;&#945;&#954;&#941;&#964;&#959; &#954;&#945;&#953; &#949;&#957;&#951;&#956;&#949;&#961;&#974;&#957;&#949;&#964;&#945;&#953; &#945;&#965;&#964;&#972;&#956;&#945;&#964;&#945; &#956;&#949; &#954;&#940;&#952;&#949; &#945;&#955;&#955;&#945;&#947;&#942;. &#917;&#973;&#967;&#961;&#951;&#963;&#964;&#959; &#947;&#953;&#945; &#964;&#959;&#957; &#960;&#949;&#955;&#940;&#964;&#951;, &#941;&#964;&#959;&#953;&#956;&#959; &#947;&#953;&#945; &#954;&#953;&#957;&#951;&#964;&#940; &#954;&#945;&#953; QR &#964;&#961;&#945;&#960;&#949;&#950;&#953;&#974;&#957;.</p>
-                                            <div class="qr-bullets">
-                                                <div class="qr-bullet">
-                                                    <span class="qr-bullet-icon">&#10003;</span>
-                                                    <span class="qr-bullet-text">&#916;&#951;&#956;&#953;&#959;&#965;&#961;&#947;&#949;&#943;&#964;&#945;&#953; &#945;&#960;&#972; &#964;&#959;&#957; &#965;&#960;&#940;&#961;&#967;&#959;&#957;&#964;&#945; &#954;&#945;&#964;&#940;&#955;&#959;&#947;&#959;, &#967;&#969;&#961;&#943;&#962; &#949;&#960;&#953;&#960;&#955;&#941;&#959;&#957; &#949;&#961;&#947;&#945;&#963;&#943;&#945;.</span>
-                                                </div>
-                                                <div class="qr-bullet">
-                                                    <span class="qr-bullet-icon">&#10003;</span>
-                                                    <span class="qr-bullet-text">&#928;&#961;&#959;&#963;&#945;&#961;&#956;&#959;&#963;&#956;&#941;&#957;&#959; &#947;&#953;&#945; &#954;&#953;&#957;&#951;&#964;&#940;, &#949;&#965;&#945;&#957;&#940;&#947;&#957;&#969;&#963;&#964;&#959; &#947;&#953;&#945; &#964;&#959;&#957; &#960;&#949;&#955;&#940;&#964;&#951;.</span>
-                                                </div>
-                                                <div class="qr-bullet">
-                                                    <span class="qr-bullet-icon">&#10003;</span>
-                                                    <span class="qr-bullet-text">&#913;&#965;&#964;&#972;&#956;&#945;&#964;&#951; &#949;&#957;&#951;&#956;&#941;&#961;&#969;&#963;&#951; &#963;&#949; &#954;&#940;&#952;&#949; &#945;&#955;&#955;&#945;&#947;&#942; &#964;&#959;&#965; &#954;&#945;&#964;&#945;&#955;&#972;&#947;&#959;&#965;.</span>
-                                                </div>
-                                            </div>
-                                            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">&#916;&#949;&#962; &#964;&#959; live QR &#956;&#949;&#957;&#959;&#973;</a>
-                                        </div>
-                                        <div class="demo-frame demo-frame-qr experience-qr">
-                                              <div class="frame-body">
-                                                    <iframe
-                                                        class="demo-iframe is-interactive"
-                                                        title="POSPal QR Menu"
-                                                        loading="lazy"
-                                                        src="./qr-menu-demo.html"
-                                                        data-src="./qr-menu-demo.html"
-                                                    ></iframe>
-                                              </div>
-                                          </div>
-                                      </div>
                                 </div>
                                 <div class="mobile-phases" id="mobile-phases">
                                     <section class="mobile-phase" data-mobile-phase="1">
@@ -1337,6 +1530,40 @@
                                         </div>
                                     </section>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="qr-live-section">
+                <div class="site-container">
+                    <div class="qr-live-card reveal">
+                        <div class="qr-live-grid">
+                            <div class="qr-live-preview-wrap">
+                                <div class="qr-live-preview-shell">
+                                    <div class="qr-live-preview-frame">
+                                        <iframe
+                                            title="QR μενού POSPal"
+                                            loading="lazy"
+                                            src="https://menus-5ar.pages.dev/s/pospal"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qr-live-copy">
+                                <p class="qr-live-eyebrow">Επίσης περιλαμβάνει</p>
+                                <h2 class="qr-live-title">Live QR menu για τον χώρο σου</h2>
+                                <p class="qr-live-body">Άνοιξέ το τώρα και δες την εμπειρία όπως θα τη δει ο πελάτης.</p>
+                                <div class="qr-live-chips">
+                                    <span class="qr-live-chip">Αυτόματες ενημερώσεις</span>
+                                    <span class="qr-live-chip">Ένας σύνδεσμος παντού</span>
+                                </div>
+                                <div class="qr-live-actions">
+                                    <a href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer" class="btn qr-live-btn-primary">Άνοιξε QR menu</a>
+                                    <a href="/download/" class="btn qr-live-btn-secondary">Κατέβασε Windows</a>
+                                </div>
+                                <p class="qr-live-meta">Ανοίγει σε νέο tab.</p>
                             </div>
                         </div>
                     </div>
@@ -1557,23 +1784,9 @@
         const updateHeader = () => {
             if (!siteHeader) return;
             const scrollY = window.scrollY || 0;
-            let compactProgress = 0;
-            const stage2Grid = document.querySelector('.stage2-grid');
-            const experienceStage = document.getElementById('experience-stage');
-            const isMobileLayout = window.matchMedia('(max-width: 1024px)').matches;
-            if (!isMobileLayout && stage2Grid && experienceStage) {
-                const stickyTop = parseFloat(getComputedStyle(experienceStage).top) || 0;
-                const gridRect = stage2Grid.getBoundingClientRect();
-                const delta = stickyTop - gridRect.top;
-                if (delta > 0) {
-                    const range = Math.min(Math.max(gridRect.height * 0.35, 180), 320);
-                    compactProgress = Math.min(Math.max(delta / range, 0), 1);
-                }
-            } else {
-                const compactStart = 8;
-                const compactRange = 480;
-                compactProgress = Math.min(Math.max((scrollY - compactStart) / compactRange, 0), 1);
-            }
+            const compactStart = 8;
+            const compactRange = 480;
+            const compactProgress = Math.min(Math.max((scrollY - compactStart) / compactRange, 0), 1);
             siteHeader.style.setProperty('--header-compact', compactProgress.toFixed(3));
             const headerRect = siteHeader.getBoundingClientRect();
             document.documentElement.style.setProperty('--header-offset', `${headerRect.height}px`);
@@ -1588,39 +1801,35 @@
         window.addEventListener('scroll', updateHeader, { passive: true });
         window.addEventListener('resize', updateHeader);
 
-        const heroContainer = document.querySelector('.hero-container');
         const heroCopy = document.querySelector('.hero-copy');
         const heroScrollHint = document.querySelector('.hero-scroll-hint');
         const experienceViewport = document.getElementById('experience-viewport');
         const experienceStage = document.getElementById('experience-stage');
-        const experienceLeft = document.querySelector('.experience-left');
+        const experienceValuePanel = document.getElementById('experience-value-panel');
         const experienceDemo = document.querySelector('.experience-demo');
-        const stage2Grid = document.querySelector('.stage2-grid');
-        const stage2Copy = document.querySelector('.stage2-copy');
-        const stage2Qr = document.querySelector('.experience-qr');
         const heroDemoFrame = document.querySelector('.demo-frame-hero');
+        const stageHint = document.getElementById('stage-hint');
+        const qrLiveSection = document.querySelector('.qr-live-section');
         const applyExperienceMobileLayout = () => {
             if (!experienceStage) return;
             experienceStage.style.removeProperty('min-height');
-            experienceStage.style.removeProperty('width');
-            experienceStage.style.removeProperty('transform');
             experienceStage.style.removeProperty('--experience-progress');
             if (experienceViewport) {
                 experienceViewport.style.removeProperty('--experience-progress');
             }
+            if (experienceValuePanel) {
+                experienceValuePanel.style.removeProperty('opacity');
+                experienceValuePanel.style.removeProperty('transform');
+                experienceValuePanel.style.removeProperty('pointer-events');
+            }
             if (experienceDemo) {
+                experienceDemo.style.removeProperty('opacity');
                 experienceDemo.style.removeProperty('transform');
+                experienceDemo.style.removeProperty('pointer-events');
             }
-            if (heroDemoFrame) {
-                heroDemoFrame.style.removeProperty('transform');
-                heroDemoFrame.style.removeProperty('width');
-            }
-            if (experienceLeft) {
-                experienceLeft.style.removeProperty('opacity');
-                experienceLeft.style.removeProperty('transform');
-                experienceLeft.style.removeProperty('filter');
-                experienceLeft.style.removeProperty('pointer-events');
-                experienceLeft.style.removeProperty('visibility');
+            if (stageHint) {
+                stageHint.style.removeProperty('opacity');
+                stageHint.style.removeProperty('transform');
             }
             if (heroCopy) {
                 heroCopy.style.removeProperty('opacity');
@@ -1631,206 +1840,135 @@
                 heroScrollHint.style.removeProperty('transform');
                 heroScrollHint.style.removeProperty('pointer-events');
             }
-            if (stage2Copy) {
-                stage2Copy.style.removeProperty('opacity');
-                stage2Copy.style.removeProperty('transform');
-                stage2Copy.style.removeProperty('pointer-events');
+            if (qrLiveSection) {
+                qrLiveSection.style.removeProperty('opacity');
+                qrLiveSection.style.removeProperty('transform');
+                qrLiveSection.style.removeProperty('pointer-events');
             }
-            if (stage2Qr) {
-                stage2Qr.style.removeProperty('opacity');
-                stage2Qr.style.removeProperty('transform');
-                stage2Qr.style.removeProperty('pointer-events');
-            }
-            if (stage2Grid) {
-                stage2Grid.style.removeProperty('--stage2-opacity');
-                stage2Grid.style.removeProperty('pointer-events');
-            }
-            experienceStage.classList.remove('is-focus', 'is-locked', 'is-stage2');
         };
-        const HERO_RATIO = 16 / 10;
-        const HERO_SCALE_MAX = 1.5;
-        let heroBaseWidth = 0;
-        const experienceMetrics = {
-            containerWidth: 0,
-            viewportWidth: 0,
-            shift: 0,
-            heroLocalTop: 0
-        };
+
         let experienceTarget = 0;
         let experienceCurrent = 0;
-        let experienceRaw = 0;
         let experienceRaf = null;
         let experienceFrameTime = 0;
-        const SCROLL_DEADZONE = 0.08;
-        const SCROLL_TAIL = 0.12;
-        const STAGE_FOCUS_START = 0.03;
-        const STAGE_LOCK_START = 0.5;
-        const STAGE_ONE_END = 0.58;
-        const STAGE_TWO_START = 0.68;
-        const STAGE_TWO_END = 0.98;
+        let experienceDemoCenterOffset = 0;
+        let experienceDemoScaleMax = 1;
+        const HERO_DEMO_RATIO = 16 / 10;
+        const SCROLL_DEADZONE = 0.05;
+        const SCROLL_TAIL = 0.1;
+        const STAGE_OUTRO_START = 0.84;
+        const STAGE_OUTRO_SPAN = 0.16;
 
         const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
         const ease = (t) => t * t * (3 - 2 * t);
-
-        const updateHeroBaseWidth = () => {
-            if (!heroDemoFrame || !experienceViewport) return;
-            const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
-            const maxHeight = Math.max(window.innerHeight - headerOffset - 24 + 48, 320);
-            const heightLimitedWidth = (maxHeight * HERO_RATIO) / HERO_SCALE_MAX;
-            const viewportWidth = experienceViewport.clientWidth || heroDemoFrame.getBoundingClientRect().width;
-            heroBaseWidth = Math.min(viewportWidth, heightLimitedWidth);
-            heroDemoFrame.style.width = `${heroBaseWidth}px`;
+        const cueWindow = (value, start, peak, end) => {
+            if (value <= start || value >= end) return 0;
+            if (value < peak) return (value - start) / (peak - start);
+            return (end - value) / (end - peak);
         };
 
-        const updateExperienceMetrics = () => {
-            if (!experienceStage || !experienceViewport || !heroContainer) return;
-            if (window.matchMedia('(max-width: 1024px)').matches) {
-                if (heroDemoFrame) {
-                    heroDemoFrame.style.removeProperty('width');
-                }
-                updateMobileDemoHeight();
-                return;
-            }
-            const containerRect = heroContainer.getBoundingClientRect();
-            const previousStageTransform = experienceStage.style.transform;
-            const previousStageWidth = experienceStage.style.width;
-            experienceStage.style.transform = 'none';
-            experienceStage.style.width = `${experienceViewport.clientWidth}px`;
-            const viewportRect = experienceViewport.getBoundingClientRect();
-            experienceMetrics.containerWidth = containerRect.width;
-            experienceMetrics.viewportWidth = viewportRect.width;
-            experienceMetrics.shift = Math.max(viewportRect.left - containerRect.left, 0);
-            updateHeroBaseWidth();
-            if (heroDemoFrame) {
-                const previousDemoTransform = experienceDemo ? experienceDemo.style.transform : '';
-                const previousTransform = heroDemoFrame.style.transform;
-                if (experienceDemo) {
-                    experienceDemo.style.transform = 'none';
-                }
-                heroDemoFrame.style.transform = 'none';
-                const heroRect = heroDemoFrame.getBoundingClientRect();
-                const stageRect = experienceStage.getBoundingClientRect();
-                heroDemoFrame.style.transform = previousTransform;
-                if (experienceDemo) {
-                    experienceDemo.style.transform = previousDemoTransform;
-                }
-                const containerCenter = containerRect.left + containerRect.width / 2;
-                const heroCenter = heroRect.left + heroRect.width / 2;
-                experienceMetrics.heroShiftX = containerCenter - heroCenter;
-                experienceMetrics.heroLocalTop = heroRect.top - stageRect.top;
-                experienceMetrics.heroBaseHeight = heroRect.height;
-            }
-            experienceStage.style.transform = previousStageTransform;
-            experienceStage.style.width = previousStageWidth;
-        };
-
-        const updateExperienceStageHeight = (stage2Ease = 0) => {
+        const updateExperienceStageHeight = (progress = experienceCurrent) => {
             if (!experienceStage) return;
-            let baseHeight = 0;
-            if (experienceMetrics.heroBaseHeight) {
-                baseHeight = experienceMetrics.heroBaseHeight;
-            } else if (heroDemoFrame) {
-                baseHeight = heroDemoFrame.getBoundingClientRect().height;
-            }
-            let requiredHeight = baseHeight;
-            if (stage2Ease > 0.01) {
-                const stage2CopyHeight = stage2Copy ? stage2Copy.getBoundingClientRect().height : 0;
-                const stage2QrHeight = stage2Qr ? stage2Qr.getBoundingClientRect().height : 0;
-                const stage2Height = Math.max(stage2CopyHeight, stage2QrHeight);
-                if (stage2Height > 0 && baseHeight > 0) {
-                    requiredHeight = Math.max(baseHeight, baseHeight + (stage2Height - baseHeight) * stage2Ease);
-                } else {
-                    requiredHeight = Math.max(baseHeight, stage2Height);
-                }
-            }
+            const panelHeight = experienceValuePanel ? experienceValuePanel.offsetHeight : 0;
+            const demoHeight = heroDemoFrame ? heroDemoFrame.offsetHeight : 0;
+            if (panelHeight <= 0 && demoHeight <= 0) return;
+
+            const stageReveal = ease(clamp((progress - 0.015) / 0.9, 0, 1));
+            const demoReveal = ease(clamp((stageReveal - 0.14) / 0.76, 0, 1));
+            const demoCenterProgress = ease(clamp((demoReveal - 0.12) / 0.72, 0, 1));
+            const outroProgress = ease(clamp((progress - STAGE_OUTRO_START) / STAGE_OUTRO_SPAN, 0, 1));
+            const demoGrow = 1 + (experienceDemoScaleMax - 1) * demoCenterProgress;
+            const demoBaseScale = 0.975 + 0.025 * demoReveal;
+            const demoScale = Math.max(demoBaseScale * demoGrow * (1 - 0.08 * outroProgress), 1);
+            const targetDemoHeight = demoHeight * demoScale;
+            const expandedHeight = Math.max(panelHeight, targetDemoHeight) + 32;
+            const requiredHeight = panelHeight + (expandedHeight - panelHeight) * demoReveal;
             if (requiredHeight > 0) {
                 experienceStage.style.minHeight = `${Math.ceil(requiredHeight)}px`;
             }
+        };
+
+        const updateExperienceCenterOffset = () => {
+            experienceDemoCenterOffset = 0;
+            if (!experienceViewport) return;
+            if (window.matchMedia('(max-width: 1024px)').matches) return;
+            const viewportRect = experienceViewport.getBoundingClientRect();
+            if (viewportRect.width <= 0) return;
+            const sourceCenter = viewportRect.left + viewportRect.width / 2;
+            const targetCenter = window.innerWidth / 2;
+            experienceDemoCenterOffset = targetCenter - sourceCenter;
+        };
+
+        const updateExperienceDemoScaleMax = () => {
+            experienceDemoScaleMax = 1;
+            if (!experienceViewport) return;
+            if (window.matchMedia('(max-width: 1024px)').matches) return;
+            const viewportRect = experienceViewport.getBoundingClientRect();
+            if (viewportRect.width <= 0) return;
+            const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 120;
+            const safeHeight = Math.max(window.innerHeight - headerOffset - 28, 360);
+            const maxWidthByHeight = safeHeight * HERO_DEMO_RATIO;
+            const maxWidthByScreen = Math.max(window.innerWidth - 48, viewportRect.width);
+            const targetWidth = Math.max(viewportRect.width, Math.min(maxWidthByHeight, maxWidthByScreen, 1680));
+            experienceDemoScaleMax = targetWidth / viewportRect.width;
         };
 
         const applyExperienceProgress = (progress) => {
             if (!experienceStage || !experienceViewport) return;
             experienceStage.style.setProperty('--experience-progress', progress.toFixed(3));
             experienceViewport.style.setProperty('--experience-progress', progress.toFixed(3));
-            const viewportWidth = experienceMetrics.viewportWidth || experienceViewport.getBoundingClientRect().width;
-            const containerWidth = experienceMetrics.containerWidth || viewportWidth;
-            const shift = experienceMetrics.shift;
-            const layoutProgress = ease(clamp((progress - STAGE_TWO_START) / (STAGE_TWO_END - STAGE_TWO_START), 0, 1));
-            const stageWidth = viewportWidth + (containerWidth - viewportWidth) * layoutProgress;
-            experienceStage.style.width = `${stageWidth}px`;
-            const activeShift = shift * layoutProgress;
-            experienceStage.style.transform = `translate3d(${-activeShift}px, 0, 0)`;
-            const stage1Progress = ease(clamp((progress - STAGE_FOCUS_START) / (STAGE_LOCK_START - STAGE_FOCUS_START), 0, 1));
-            const isFocus = progress >= STAGE_FOCUS_START && progress < STAGE_LOCK_START;
-            const isLocked = progress >= STAGE_LOCK_START && progress < STAGE_TWO_START;
-            const stage2Raw = (progress - STAGE_TWO_START) / (STAGE_TWO_END - STAGE_TWO_START);
-            const stage2Progress = ease(clamp(stage2Raw, 0, 1));
-            const stage2Ease = ease(clamp((stage2Progress - 0.03) / 0.92, 0, 1));
-            const stage2Soft = ease(clamp((stage2Progress - 0.15) / 0.8, 0, 1));
-            const isStage2 = stage2Progress > 0.01;
-            experienceStage.classList.toggle('is-focus', isFocus);
-            experienceStage.classList.toggle('is-locked', isLocked);
-            experienceStage.classList.toggle('is-stage2', isStage2);
 
-            if (heroDemoFrame) {
-                const demoScale = 1 + stage1Progress * (HERO_SCALE_MAX - 1);
-                const heroShiftX = (experienceMetrics.heroShiftX || 0) * stage1Progress;
-                const baseHeight = experienceMetrics.heroBaseHeight || heroDemoFrame.getBoundingClientRect().height;
-                const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 0;
-                const safeTop = headerOffset + 12;
-                const stageTop = experienceStage.getBoundingClientRect().top;
-                const baseTop = stageTop + (experienceMetrics.heroLocalTop || 0);
-                const viewportCenterY = headerOffset + (window.innerHeight - headerOffset) / 2;
-                const centerShiftY = (viewportCenterY - (baseTop + baseHeight / 2)) * stage1Progress;
-                let heroShiftY = centerShiftY - (demoScale - 1) * (baseHeight / 2);
-                if (baseTop + heroShiftY < safeTop) {
-                    heroShiftY = safeTop - baseTop;
-                }
-                heroDemoFrame.style.transform = `scale(${demoScale})`;
-                if (experienceDemo) {
-                    experienceDemo.style.transform = `translate3d(${heroShiftX}px, ${heroShiftY}px, 0)`;
-                }
+            const stageReveal = ease(clamp((progress - 0.015) / 0.9, 0, 1));
+            const panelFade = ease(clamp(stageReveal / 0.62, 0, 1));
+            const panelVisibility = 1 - panelFade;
+            const demoReveal = ease(clamp((stageReveal - 0.14) / 0.76, 0, 1));
+            const demoCenterProgress = ease(clamp((demoReveal - 0.12) / 0.72, 0, 1));
+            const outroProgress = ease(clamp((progress - STAGE_OUTRO_START) / STAGE_OUTRO_SPAN, 0, 1));
+            const demoShiftX = experienceDemoCenterOffset * demoCenterProgress;
+            const demoGrow = 1 + (experienceDemoScaleMax - 1) * demoCenterProgress;
+            const demoBaseScale = 0.975 + 0.025 * demoReveal;
+            const demoScale = demoBaseScale * demoGrow * (1 - 0.08 * outroProgress);
+            const demoVisibility = demoReveal * (1 - 0.78 * outroProgress);
+
+            if (experienceValuePanel) {
+                experienceValuePanel.style.opacity = panelVisibility.toFixed(3);
+                experienceValuePanel.style.transform = `translateY(${(1 - panelVisibility) * -18}px) scale(${0.975 + 0.025 * panelVisibility})`;
+                experienceValuePanel.style.pointerEvents = panelVisibility > 0.35 ? 'auto' : 'none';
             }
 
-            if (experienceLeft) {
-                let demoVisibility = 1 - stage2Soft;
-                experienceLeft.style.opacity = demoVisibility.toFixed(3);
-                experienceLeft.style.transform = `translateY(${10 * (1 - demoVisibility)}px) scale(${0.985 + 0.015 * demoVisibility})`;
-                experienceLeft.style.filter = `blur(${(1 - demoVisibility) * 2}px)`;
-                experienceLeft.style.pointerEvents = demoVisibility > 0.25 ? 'auto' : 'none';
-                experienceLeft.style.visibility = demoVisibility < 0.02 ? 'hidden' : 'visible';
+            if (experienceDemo) {
+                experienceDemo.style.opacity = demoVisibility.toFixed(3);
+                experienceDemo.style.transform = `translate(${demoShiftX}px, ${(1 - demoReveal) * 16 - 18 * outroProgress}px) scale(${demoScale})`;
+                experienceDemo.style.pointerEvents = (demoReveal > 0.45 && outroProgress < 0.45) ? 'auto' : 'none';
             }
 
             if (heroCopy) {
-                heroCopy.style.opacity = (1 - stage1Progress * 0.9).toFixed(3);
-                heroCopy.style.transform = `translateY(${-14 * stage1Progress}px)`;
+                heroCopy.style.opacity = (1 - stageReveal * 0.45).toFixed(3);
+                heroCopy.style.transform = `translateY(${-10 * stageReveal}px)`;
             }
 
             if (heroScrollHint) {
-                const hintEase = ease(clamp((stage1Progress - 0.1) / 0.6, 0, 1));
-                heroScrollHint.style.opacity = (1 - hintEase).toFixed(3);
-                heroScrollHint.style.transform = `translateY(${8 * hintEase}px)`;
-                heroScrollHint.style.pointerEvents = hintEase < 0.95 ? 'auto' : 'none';
+                const hintFade = ease(clamp((stageReveal - 0.03) / 0.34, 0, 1));
+                heroScrollHint.style.opacity = (1 - hintFade).toFixed(3);
+                heroScrollHint.style.transform = `translateY(${8 * hintFade}px)`;
+                heroScrollHint.style.pointerEvents = hintFade < 0.95 ? 'auto' : 'none';
             }
 
-            if (stage2Copy) {
-                stage2Copy.style.opacity = stage2Ease.toFixed(3);
-                stage2Copy.style.transform = `translate(${(1 - stage2Ease) * -18}px, ${(1 - stage2Ease) * 8}px)`;
-                stage2Copy.style.pointerEvents = stage2Ease > 0.6 ? 'auto' : 'none';
+            if (stageHint) {
+                const cueStrength = cueWindow(demoReveal, 0.14, 0.3, 0.52);
+                stageHint.style.opacity = cueStrength.toFixed(3);
+                stageHint.style.transform = `rotate(-4deg) translateY(${(1 - cueStrength) * -4}px)`;
             }
 
-            if (stage2Qr) {
-                stage2Qr.style.opacity = stage2Ease.toFixed(3);
-                stage2Qr.style.transform = `translate(${(1 - stage2Ease) * 18}px, ${(1 - stage2Ease) * 8}px)`;
-                stage2Qr.style.pointerEvents = stage2Ease > 0.7 ? 'auto' : 'none';
+            if (qrLiveSection) {
+                const qrIntro = ease(clamp((progress - 0.82) / 0.18, 0, 1));
+                const qrOpacity = 0.32 + 0.68 * qrIntro;
+                qrLiveSection.style.opacity = qrOpacity.toFixed(3);
+                qrLiveSection.style.transform = `translateY(${(1 - qrIntro) * 28}px)`;
+                qrLiveSection.style.pointerEvents = qrIntro > 0.22 ? 'auto' : 'none';
             }
 
-            if (stage2Grid) {
-                stage2Grid.style.setProperty('--stage2-opacity', stage2Ease.toFixed(3));
-                stage2Grid.style.pointerEvents = stage2Ease > 0.7 ? 'auto' : 'none';
-            }
-
-            updateExperienceStageHeight(stage2Ease);
+            updateExperienceStageHeight(progress);
         };
 
         const tickExperience = (timestamp) => {
@@ -1840,7 +1978,7 @@
             }
             const dt = Math.min(Math.max(timestamp - experienceFrameTime, 0), 48);
             experienceFrameTime = timestamp;
-            const smoothing = 1 - Math.exp(-dt / 140);
+            const smoothing = 1 - Math.exp(-dt / 120);
             experienceCurrent += delta * smoothing;
             if (Math.abs(delta) < 0.001) {
                 experienceCurrent = experienceTarget;
@@ -1855,35 +1993,40 @@
         };
 
         const updateExperienceTarget = () => {
-            if (!experienceStage || !experienceViewport || !heroContainer) return;
+            if (!experienceStage || !experienceViewport) return;
             if (window.matchMedia('(max-width: 1024px)').matches) {
                 applyExperienceMobileLayout();
                 return;
             }
 
             const rect = experienceViewport.getBoundingClientRect();
-            const maxScroll = rect.height - window.innerHeight;
+            const maxScroll = Math.max(rect.height - window.innerHeight, 1);
             const scrolled = Math.min(Math.max(-rect.top, 0), maxScroll);
-            const rawProgress = maxScroll > 0 ? scrolled / maxScroll : 1;
+            const rawProgress = scrolled / maxScroll;
             const start = SCROLL_DEADZONE;
             const end = 1 - SCROLL_TAIL;
             const normalized = clamp((rawProgress - start) / (end - start), 0, 1);
-            experienceRaw = clamp(rawProgress, 0, 1);
             experienceTarget = ease(normalized);
             if (!experienceRaf) {
                 experienceRaf = requestAnimationFrame(tickExperience);
             }
         };
 
-        updateExperienceMetrics();
+        updateExperienceCenterOffset();
+        updateExperienceDemoScaleMax();
+        updateExperienceStageHeight();
         updateExperienceTarget();
         window.addEventListener('scroll', updateExperienceTarget, { passive: true });
         window.addEventListener('resize', () => {
-            updateExperienceMetrics();
+            updateExperienceCenterOffset();
+            updateExperienceDemoScaleMax();
+            updateExperienceStageHeight();
             updateExperienceTarget();
         });
         window.addEventListener('load', () => {
-            updateExperienceMetrics();
+            updateExperienceCenterOffset();
+            updateExperienceDemoScaleMax();
+            updateExperienceStageHeight();
             updateExperienceTarget();
         });
 
@@ -1905,7 +2048,6 @@
         const mobilePhaseLabel = null;
         const mobilePhaseDots = [];
         const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
-        const qrDemoIframe = document.querySelector('.demo-frame-qr .demo-iframe');
         const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
         const mobileDemoOverlay = document.getElementById('mobile-demo-overlay');
         const enableMobileSwap = false;
@@ -2029,19 +2171,6 @@
                 scheduleHeroFallback();
             }
         };
-        const updateQrIframe = () => {
-            if (!qrDemoIframe) return;
-            const isMobileLayout = mobileMediaQuery.matches;
-            const src = qrDemoIframe.dataset.src || qrDemoIframe.getAttribute('src');
-            if (isMobileLayout) {
-                if (qrDemoIframe.getAttribute('src')) {
-                    qrDemoIframe.removeAttribute('src');
-                }
-                return;
-            } else if (src && !qrDemoIframe.getAttribute('src')) {
-                qrDemoIframe.setAttribute('src', src);
-            }
-        };
         const setMobilePhase = (phase) => {
             if (!enableMobileSwap) return;
             if (!experienceStage) return;
@@ -2102,7 +2231,6 @@
             mobilePhases.forEach((phase) => observer.observe(phase));
         };
         const handleMobileLayoutChange = () => {
-            updateQrIframe();
             updateMobileDemoOverlay();
             if (!mobileMediaQuery.matches) {
                 if (mobileFadeTimeout) {
