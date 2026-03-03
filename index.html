@@ -289,16 +289,8 @@
             will-change: opacity, transform;
         }
 
-        .value-panel-eyebrow {
-            font-size: 0.76rem;
-            letter-spacing: 0.17em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: #166534;
-        }
-
         .value-panel-title {
-            margin-top: 10px;
+            margin-top: 0;
             font-size: clamp(1.45rem, 2.5vw, 2rem);
             line-height: 1.2;
             font-weight: 700;
@@ -338,18 +330,88 @@
             box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
         }
 
-        .value-panel-link {
+        .value-panel-actions {
             margin-top: 18px;
-            display: inline-flex;
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 8px;
+            gap: 14px;
+        }
+
+        .value-panel-link {
+            padding: 10px 18px;
+            border: 1px solid #cbd5e1;
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+            color: #1e293b;
             font-size: 0.9rem;
             font-weight: 700;
-            color: #166534;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.95),
+                0 10px 22px rgba(15, 23, 42, 0.1);
         }
 
         .value-panel-link:hover {
-            color: #14532d;
+            border-color: #94a3b8;
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #0f172a;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.95),
+                0 14px 26px rgba(15, 23, 42, 0.14);
+            transform: translateY(-1px);
+        }
+
+        .hero-includes-card {
+            padding: 16px 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(226, 232, 240, 0.95);
+            background: #ffffff;
+            box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+        }
+
+        .hero-includes-inline {
+            margin-top: 8px;
+        }
+
+        .hero-includes-title {
+            margin: 0;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: #0f172a;
+        }
+
+        .hero-includes-list {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 14px;
+        }
+
+        .hero-includes-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #334155;
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+
+        .hero-includes-item::before {
+            content: "\2713";
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            margin-top: 1px;
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 10px;
+            font-weight: 700;
         }
 
         .experience-demo {
@@ -465,24 +527,6 @@
         .qr-bullet-text {
             line-height: 1.4;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .qr-live-section {
             padding: clamp(40px, 5vw, 64px) 0 32px;
             position: relative;
@@ -650,6 +694,19 @@
         @media (max-width: 1024px) {
             .qr-live-section {
                 padding: 24px 0 24px;
+            }
+
+            .hero-includes-card {
+                padding: 14px 14px 15px;
+            }
+
+            .hero-includes-inline {
+                margin-top: 4px;
+            }
+
+            .hero-includes-list {
+                grid-template-columns: 1fr;
+                gap: 8px;
             }
 
             .qr-live-grid {
@@ -1133,6 +1190,40 @@
             box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
         }
 
+        .hero-download-cta {
+            padding: 14px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
+            animation: hero-download-pulse 1.8s ease-out 0.45s 1;
+        }
+
+        .hero-download-cta:hover {
+            box-shadow: 0 24px 46px rgba(22, 163, 74, 0.4);
+        }
+
+        @keyframes hero-download-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 26px 50px rgba(22, 163, 74, 0.42);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-download-cta {
+                animation: none;
+            }
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -1425,11 +1516,17 @@
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
                             </div>
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="./POSPal_Demo_Index.html" class="btn btn-secondary">
-                                    Δες Demo
-                                </a>
-                                <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
+                            <div class="hero-includes-card hero-includes-inline">
+                                <h2 class="hero-includes-title">Τι περιλαμβάνει το πακέτο</h2>
+                                <div class="hero-includes-list">
+                                    <div class="hero-includes-item">Παραγγελιοληψία εκτός Wi-Fi</div>
+                                    <div class="hero-includes-item">Λειτουργία τραπεζιών</div>
+                                    <div class="hero-includes-item">QR μενού με αυτόματη ενημέρωση</div>
+                                    <div class="hero-includes-item">Απλή λειτουργία</div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <a href="/download/" class="btn btn-primary hero-download-cta">Κατέβασε για Windows</a>
                             </div>
                             <div class="hero-scroll-hint">
                                 <span class="hero-scroll-line"></span>
@@ -1443,14 +1540,14 @@
                                     <div class="experience-left">
                                         <div class="mobile-section-label mobile-only">Παραγγελιοληψία</div>
                                         <div class="experience-value-panel surface-soft" id="experience-value-panel">
-                                            <p class="value-panel-eyebrow">Ξεκάθαρη προσφορά</p>
-                                            <h3 class="value-panel-title">€18,90/μήνα με 30 ημέρες δωρεάν</h3>
+                                            <h3 class="value-panel-title">€18,90/μήνα • 30 ημέρες δωρεάν</h3>
                                             <ul class="value-panel-list">
-                                                <li>Χωρίς κάρτα και χωρίς λογαριασμό για να ξεκινήσεις.</li>
-                                                <li>Παραγγελιοληψία, λειτουργία τραπεζιών και QR μενού στο ίδιο πακέτο.</li>
-                                                <li>Άμεσο Demo και λήψη για Windows.</li>
+                                                <li>Χωρίς κάρτα και χωρίς λογαριασμό.</li>
+                                                <li>Παραγγελιοληψία, τραπέζια και QR μενού στο ίδιο πακέτο.</li>
                                             </ul>
-                                            <a class="value-panel-link" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">Δες live QR μενού</a>
+                                            <div class="value-panel-actions">
+                                                <a class="btn value-panel-link" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">Άνοιξε QR menu</a>
+                                            </div>
                                         </div>
                                         <div class="experience-demo">
                                             <div class="demo-frame demo-frame-hero" data-mode="desktop">
@@ -1535,7 +1632,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="qr-live-section">
                 <div class="site-container">
                     <div class="qr-live-card reveal">
@@ -2373,3 +2469,5 @@
     </script>
 </body>
 </html>
+
+
