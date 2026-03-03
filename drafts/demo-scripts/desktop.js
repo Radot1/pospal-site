@@ -63,7 +63,12 @@
         let selectedCategory = null;
         let currentOrder = JSON.parse(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'CurrentOrder')) || [];
         let orderNumber = parseInt(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'OrderNumber')) || 1;
+        let simpleOrderType = 'table';
+        let selectedTableNumber = '';
         let selectedItemForNumpad = null;
+        let pendingOptionItem = null;
+        let pendingSelectedOption = null;
+        let demoWaiterOrders = [];
 
         // DOM Elements Cache
         const els = {};
@@ -73,8 +78,19 @@
         document.addEventListener('DOMContentLoaded', () => {
             cacheElements();
             initializeApp();
+            applyDemoLockedManagementSections();
+            applyDemoManagementModalLayout();
             renderCategories();
             updateOrderDisplay();
+            applyDemoConnectionVisualState();
+
+            if (els.itemOptionSelectModal) {
+                els.itemOptionSelectModal.addEventListener('click', (event) => {
+                    if (event.target === els.itemOptionSelectModal) {
+                        cancelOptionSelection();
+                    }
+                });
+            }
         });
 
         function cacheElements() {
@@ -84,20 +100,567 @@
             els.emptyOrderMsg = $('empty-order-message');
             els.orderTotal = $('order-total');
             els.orderNumber = $('order-number-desktop');
+            els.headerTableInput = $('header-table-input');
+            els.headerTableContainer = $('header-table-container');
+            els.simpleOrderTypeStatus = $('simpleOrderTypeStatus');
             els.toast = $('toast');
             els.toastMessage = $('toast-message');
+            els.waiterOrdersModal = $('waiterOrdersModal');
+            els.waiterOrdersList = $('todaysOrdersListWaiter');
+            els.waiterOrdersSearch = $('ohSearchWaiter');
+            els.waiterOrdersRange = $('ohRangeWaiter');
+            els.waiterOrdersCustomRange = $('ohCustomRangeWaiter');
+            els.waiterOrdersStart = $('ohStartWaiter');
+            els.waiterOrdersEnd = $('ohEndWaiter');
+            els.itemOptionSelectModal = $('itemOptionSelectModal');
+            els.optionModalItemName = $('optionModalItemName');
+            els.optionModalItemDescription = $('optionModalItemDescription');
+            els.optionModalOptionsContainer = $('optionModalOptionsContainer');
+        }
+
+        function buildDemoWaiterOrders() {
+            const now = new Date();
+            const templates = [
+                {
+                    tableLabel: 'Takeaway',
+                    receiptId: 'RCP-52001',
+                    minutesAgo: 8,
+                    status: 'Printed',
+                    waiter: 'Maria',
+                    paymentMethod: 'Card',
+                    note: 'No sugar in cappuccino.',
+                    items: [
+                        { qty: 1, name: 'Cappuccino', unitPrice: 3.40, modifiers: ['Oat milk'] },
+                        { qty: 1, name: 'Butter Croissant', unitPrice: 4.40, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T2',
+                    receiptId: 'RCP-52002',
+                    minutesAgo: 16,
+                    status: 'Sent',
+                    waiter: 'Eleni',
+                    paymentMethod: 'Cash',
+                    note: 'One water on hold.',
+                    items: [
+                        { qty: 1, name: 'Espresso Double', unitPrice: 2.90, modifiers: ['Decaf'] },
+                        { qty: 1, name: 'Club Sandwich', unitPrice: 6.80, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T3',
+                    receiptId: 'RCP-52003',
+                    minutesAgo: 24,
+                    status: 'Sent',
+                    waiter: 'Nikos',
+                    paymentMethod: 'Card',
+                    note: '',
+                    items: [
+                        { qty: 2, name: 'Freddo Espresso', unitPrice: 3.20, modifiers: [] },
+                        { qty: 1, name: 'Sparkling Water 500ml', unitPrice: 1.60, modifiers: [] },
+                        { qty: 1, name: 'Cereal Bar', unitPrice: 2.40, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T4',
+                    receiptId: 'RCP-52004',
+                    minutesAgo: 35,
+                    status: 'Printed',
+                    waiter: 'Sofia',
+                    paymentMethod: 'Card',
+                    note: 'Serve pasta first.',
+                    items: [
+                        { qty: 1, name: 'Penne Chicken Cream', unitPrice: 10.60, modifiers: [] },
+                        { qty: 1, name: 'Soda', unitPrice: 2.00, modifiers: [] },
+                        { qty: 1, name: 'Water 500ml', unitPrice: 1.20, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'Takeaway',
+                    receiptId: 'RCP-52005',
+                    minutesAgo: 49,
+                    status: 'Sent',
+                    waiter: 'Maria',
+                    paymentMethod: 'Card',
+                    note: 'Customer waiting outside.',
+                    items: [
+                        { qty: 1, name: 'Latte', unitPrice: 3.80, modifiers: ['Caramel syrup'] },
+                        { qty: 1, name: 'Toast Turkey-Cheese', unitPrice: 3.60, modifiers: [] },
+                        { qty: 1, name: 'Iced Tea Peach', unitPrice: 2.60, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T6',
+                    receiptId: 'RCP-52006',
+                    minutesAgo: 63,
+                    status: 'Sent',
+                    waiter: 'Giorgos',
+                    paymentMethod: 'Cash',
+                    note: '',
+                    items: [
+                        { qty: 1, name: 'Greek Coffee', unitPrice: 2.00, modifiers: [] },
+                        { qty: 1, name: 'Pancakes with Honey', unitPrice: 5.40, modifiers: [] },
+                        { qty: 1, name: 'Orange Juice', unitPrice: 3.40, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T7',
+                    receiptId: 'RCP-52007',
+                    minutesAgo: 78,
+                    status: 'Printed',
+                    waiter: 'Nikos',
+                    paymentMethod: 'Card',
+                    note: 'All dishes served.',
+                    items: [
+                        { qty: 1, name: 'Mushroom Risotto', unitPrice: 9.80, modifiers: [] },
+                        { qty: 1, name: 'Homemade Lemonade', unitPrice: 3.00, modifiers: [] },
+                        { qty: 1, name: 'Bottled Water 500ml', unitPrice: 1.20, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T1',
+                    receiptId: 'RCP-52008',
+                    minutesAgo: 92,
+                    status: 'Sent',
+                    waiter: 'Eleni',
+                    paymentMethod: 'Cash',
+                    note: 'Guest asked for split bill later.',
+                    items: [
+                        { qty: 2, name: 'Lager 330ml', unitPrice: 3.40, modifiers: [] },
+                        { qty: 1, name: 'Chicken Sandwich', unitPrice: 6.20, modifiers: [] },
+                        { qty: 1, name: 'Tonic', unitPrice: 2.40, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'Takeaway',
+                    receiptId: 'RCP-52009',
+                    minutesAgo: 108,
+                    status: 'Sent',
+                    waiter: 'Sofia',
+                    paymentMethod: 'Card',
+                    note: '',
+                    items: [
+                        { qty: 1, name: 'Americano', unitPrice: 2.80, modifiers: [] },
+                        { qty: 1, name: 'Bagel Cream Cheese', unitPrice: 5.80, modifiers: [] },
+                        { qty: 1, name: 'Cola', unitPrice: 2.40, modifiers: [] }
+                    ]
+                },
+                {
+                    tableLabel: 'T3',
+                    receiptId: 'RCP-52010',
+                    minutesAgo: 135,
+                    status: 'Printed',
+                    waiter: 'Giorgos',
+                    paymentMethod: 'Card',
+                    note: 'Regular customer.',
+                    items: [
+                        { qty: 1, name: 'Spaghetti Carbonara', unitPrice: 10.20, modifiers: [] },
+                        { qty: 1, name: 'Iced Tea Peach', unitPrice: 2.60, modifiers: [] },
+                        { qty: 1, name: 'Soda', unitPrice: 2.00, modifiers: [] }
+                    ]
+                }
+            ];
+
+            return templates.map((template, index) => {
+                const placedAt = new Date(now.getTime() - (template.minutesAgo * 60 * 1000));
+                const itemsCount = template.items.reduce((sum, item) => sum + Number(item.qty || 0), 0);
+                const total = Number(template.items.reduce((sum, item) => {
+                    return sum + (Number(item.unitPrice || 0) * Number(item.qty || 0));
+                }, 0).toFixed(2));
+
+                return {
+                    orderNumber: 1201 + index,
+                    ...template,
+                    placedAt,
+                    itemsCount,
+                    total
+                };
+            });
+        }
+
+        function normalizeSimpleOrderType(value) {
+            return String(value || '').trim().toLowerCase() === 'takeaway' ? 'takeaway' : 'table';
+        }
+
+        function applySimpleOrderTypeUI() {
+            const isTakeaway = simpleOrderType === 'takeaway';
+            document.querySelectorAll('[data-simple-order-type]').forEach((btn) => {
+                const type = normalizeSimpleOrderType(btn.getAttribute('data-simple-order-type'));
+                const isActive = type === simpleOrderType;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+
+            if (els.headerTableInput) {
+                els.headerTableInput.disabled = isTakeaway;
+                els.headerTableInput.classList.toggle('opacity-60', isTakeaway);
+                els.headerTableInput.classList.toggle('cursor-not-allowed', isTakeaway);
+                els.headerTableInput.setAttribute('aria-disabled', isTakeaway ? 'true' : 'false');
+            }
+            if (els.headerTableContainer) {
+                els.headerTableContainer.classList.toggle('simple-order-takeaway', isTakeaway);
+            }
+            if (els.simpleOrderTypeStatus) {
+                els.simpleOrderTypeStatus.style.display = isTakeaway ? 'inline-flex' : 'none';
+            }
+        }
+
+        function setSimpleOrderType(orderType) {
+            const normalized = normalizeSimpleOrderType(orderType);
+            if (simpleOrderType === normalized) {
+                applySimpleOrderTypeUI();
+                return;
+            }
+            simpleOrderType = normalized;
+
+            // Takeaway in simple mode has no table number.
+            if (simpleOrderType === 'takeaway') {
+                selectedTableNumber = '';
+                if (els.headerTableInput) {
+                    els.headerTableInput.value = '';
+                }
+            }
+
+            localStorage.setItem(LOCAL_STORAGE_PREFIX + 'SimpleOrderType', simpleOrderType);
+            localStorage.setItem(LOCAL_STORAGE_PREFIX + 'SimpleTableNumber', selectedTableNumber);
+            applySimpleOrderTypeUI();
+        }
+
+        function initializeSimpleOrderTypeControls() {
+            simpleOrderType = normalizeSimpleOrderType(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'SimpleOrderType'));
+            selectedTableNumber = localStorage.getItem(LOCAL_STORAGE_PREFIX + 'SimpleTableNumber') || '';
+
+            if (els.headerTableInput) {
+                els.headerTableInput.value = selectedTableNumber;
+                els.headerTableInput.addEventListener('input', () => {
+                    selectedTableNumber = els.headerTableInput.value.trim();
+                    localStorage.setItem(LOCAL_STORAGE_PREFIX + 'SimpleTableNumber', selectedTableNumber);
+                });
+            }
+
+            document.querySelectorAll('[data-simple-order-type]').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const type = btn.getAttribute('data-simple-order-type');
+                    if (!type) return;
+                    setSimpleOrderType(type);
+                });
+            });
+
+            applySimpleOrderTypeUI();
+        }
+
+        function setStatusClass(el, status) {
+            if (!el) return;
+            el.classList.remove('status-live', 'status-polling', 'status-offline', 'status-checking');
+            el.classList.add(status);
+        }
+
+        function buildDemoLockedSectionHtml(sectionTitle) {
+            return `
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 mt-2">
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">${sectionTitle}</h4>
+                    <p class="text-sm text-slate-700 mb-2">Στο demo είναι ενεργή μόνο η καρτέλα Αναλύσεις.</p>
+                    <p class="text-sm text-slate-700 mb-4">Για πλήρη εμπειρία και πλήρη διαχείριση, κατέβασε το POSPal για Windows.</p>
+                    <a href="download/index.html" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700 transition-colors font-medium">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        Κατέβασε για Windows
+                    </a>
+                </div>
+            `;
+        }
+
+        function applyDemoLockedManagementSections() {
+            const sections = [
+                { id: 'itemsManagement', title: 'Είδη' },
+                { id: 'categoriesManagement', title: 'Κατηγορίες' },
+                { id: 'orderHistoryManagement', title: 'Ιστορικό παραγγελιών' }
+            ];
+
+            sections.forEach(({ id, title }) => {
+                const section = $(id);
+                if (!section) return;
+                section.innerHTML = buildDemoLockedSectionHtml(title);
+            });
+        }
+
+        function applyDemoManagementModalLayout() {
+            const footer = $('appVersionContainer');
+            if (!footer) return;
+            footer.classList.add('hidden');
+            footer.style.display = 'none';
+        }
+
+        function applyDemoConnectionVisualState() {
+            const gear = $('settingsGear');
+            const gearLabel = $('gearStatusLabel');
+            const banner = $('connectionStatusBanner');
+            const bannerText = $('connectionBannerText');
+            const bannerSubtext = $('connectionBannerSubtext');
+
+            // Keep indicators subtle in demo: healthy green state with no "checking" copy.
+            setStatusClass(gear, 'status-live');
+            if (gear) {
+                gear.title = 'Management Panel';
+                gear.setAttribute('aria-label', 'Management Panel');
+            }
+
+            if (gearLabel) {
+                setStatusClass(gearLabel, 'status-live');
+                gearLabel.textContent = '';
+                gearLabel.classList.remove('active');
+                gearLabel.style.display = 'none';
+            }
+
+            if (banner) {
+                setStatusClass(banner, 'status-live');
+                const copy = banner.querySelector('.status-copy');
+                if (copy) {
+                    copy.style.display = 'none';
+                }
+            }
+
+            if (bannerText) bannerText.textContent = '';
+            if (bannerSubtext) bannerSubtext.textContent = '';
         }
 
         function initializeApp() {
+            // Match real app mode classes so simple/takeaway layout selectors apply.
+            document.body.classList.add('simple-mode');
+            document.body.classList.remove('table-mode');
+
             menu = JSON.parse(localStorage.getItem(LOCAL_STORAGE_PREFIX + 'Menu')) || JSON.parse(JSON.stringify(MOCK_MENU_DATA));
             selectedCategory = Object.keys(menu)[0] || null;
             els.orderNumber.textContent = orderNumber;
+            initializeSimpleOrderTypeControls();
+            demoWaiterOrders = buildDemoWaiterOrders();
 
             // Set today's date as default
             const today = new Date().toISOString().split('T')[0];
             if ($('startDate')) $('startDate').value = today;
             if ($('endDate')) $('endDate').value = today;
             if ($('ohDate')) $('ohDate').value = today;
+
+            if (els.waiterOrdersRange) {
+                els.waiterOrdersRange.addEventListener('change', () => {
+                    const custom = els.waiterOrdersRange.value === 'custom';
+                    if (els.waiterOrdersCustomRange) {
+                        els.waiterOrdersCustomRange.classList.toggle('hidden', !custom);
+                    }
+                    loadWaiterOrders();
+                });
+            }
+            if (els.waiterOrdersSearch) {
+                els.waiterOrdersSearch.addEventListener('input', () => loadWaiterOrders());
+            }
+            if (els.waiterOrdersStart) {
+                els.waiterOrdersStart.addEventListener('change', () => loadWaiterOrders());
+            }
+            if (els.waiterOrdersEnd) {
+                els.waiterOrdersEnd.addEventListener('change', () => loadWaiterOrders());
+            }
+            if (els.waiterOrdersModal) {
+                els.waiterOrdersModal.addEventListener('click', (event) => {
+                    if (event.target === els.waiterOrdersModal) {
+                        closeWaiterOrdersModal();
+                    }
+                });
+            }
+        }
+
+        function openWaiterOrdersModal() {
+            if (!els.waiterOrdersModal) return;
+            if (!demoWaiterOrders.length) {
+                demoWaiterOrders = buildDemoWaiterOrders();
+            }
+            if (els.waiterOrdersRange && !els.waiterOrdersRange.value) {
+                els.waiterOrdersRange.value = 'all';
+            }
+            els.waiterOrdersModal.classList.remove('hidden');
+            els.waiterOrdersModal.style.display = 'flex';
+            loadWaiterOrders();
+        }
+
+        function closeWaiterOrdersModal() {
+            if (!els.waiterOrdersModal) return;
+            els.waiterOrdersModal.classList.add('hidden');
+            els.waiterOrdersModal.style.display = 'none';
+        }
+
+        function parseTimeStringToMinutes(value) {
+            if (!value || !value.includes(':')) return null;
+            const [h, m] = value.split(':').map((part) => parseInt(part, 10));
+            if (Number.isNaN(h) || Number.isNaN(m)) return null;
+            return (h * 60) + m;
+        }
+
+        function isWithinCustomTimeRange(placedAt, startValue, endValue) {
+            const start = parseTimeStringToMinutes(startValue);
+            const end = parseTimeStringToMinutes(endValue);
+            if (start === null || end === null) return true;
+
+            const orderMinutes = (placedAt.getHours() * 60) + placedAt.getMinutes();
+            if (start <= end) {
+                return orderMinutes >= start && orderMinutes <= end;
+            }
+            return orderMinutes >= start || orderMinutes <= end;
+        }
+
+        function formatTimeShort(date) {
+            return date.toLocaleTimeString('el-GR', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function formatDateShort(date) {
+            return date.toLocaleDateString('el-GR', { day: '2-digit', month: '2-digit' });
+        }
+
+        function formatCurrency(amount) {
+            return `€${Number(amount || 0).toFixed(2)}`;
+        }
+
+        function getWaiterOrderStatusClasses(status) {
+            if (status === 'Printed') {
+                return 'bg-emerald-50 text-emerald-700 border border-emerald-200';
+            }
+            if (status === 'Sent') {
+                return 'bg-blue-50 text-blue-700 border border-blue-200';
+            }
+            return 'bg-gray-100 text-gray-700 border border-gray-200';
+        }
+
+        function toggleWaiterOrderDetails(orderNumber) {
+            const detailsId = `waiterOrderDetails-${orderNumber}`;
+            const chevronId = `waiterOrderChevron-${orderNumber}`;
+            const target = $(detailsId);
+            const targetChevron = $(chevronId);
+            if (!target) return;
+
+            const willOpen = target.classList.contains('hidden');
+
+            document.querySelectorAll('[id^="waiterOrderDetails-"]').forEach((el) => {
+                el.classList.add('hidden');
+            });
+            document.querySelectorAll('[id^="waiterOrderChevron-"]').forEach((el) => {
+                el.classList.remove('rotate-180');
+            });
+
+            if (willOpen) {
+                target.classList.remove('hidden');
+                if (targetChevron) {
+                    targetChevron.classList.add('rotate-180');
+                }
+            }
+        }
+
+        function demoReprintOrder(orderNumber) {
+            showToast(`Reprint queued for order #${orderNumber} (Demo)`, 'info');
+        }
+
+        function buildWaiterOrderItemsHtml(order) {
+            return (order.items || []).map((item) => {
+                const lineTotal = Number(item.qty || 0) * Number(item.unitPrice || 0);
+                const modifiers = (item.modifiers && item.modifiers.length)
+                    ? `<p class="text-[11px] text-gray-500 mt-0.5">${item.modifiers.join(' / ')}</p>`
+                    : '';
+
+                return `
+                    <div class="px-3 py-2 flex items-start justify-between gap-3">
+                        <div class="min-w-0">
+                            <p class="text-sm text-gray-800 truncate"><span class="font-semibold mr-1">${item.qty}x</span>${item.name}</p>
+                            ${modifiers}
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 whitespace-nowrap">${formatCurrency(lineTotal)}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function loadWaiterOrders() {
+            if (!els.waiterOrdersList) return;
+
+            const search = (els.waiterOrdersSearch && els.waiterOrdersSearch.value || '').trim().toLowerCase();
+            const range = (els.waiterOrdersRange && els.waiterOrdersRange.value) || 'all';
+            const startValue = els.waiterOrdersStart ? els.waiterOrdersStart.value : '';
+            const endValue = els.waiterOrdersEnd ? els.waiterOrdersEnd.value : '';
+
+            const filtered = demoWaiterOrders.filter((order) => {
+                const matchesSearch = !search
+                    || String(order.orderNumber).includes(search)
+                    || order.tableLabel.toLowerCase().includes(search)
+                    || order.receiptId.toLowerCase().includes(search)
+                    || (order.waiter || '').toLowerCase().includes(search);
+                if (!matchesSearch) return false;
+
+                if (range === 'this_hour') {
+                    return order.minutesAgo <= 60;
+                }
+                if (range === 'last2h') {
+                    return order.minutesAgo <= 120;
+                }
+                if (range === 'custom') {
+                    return isWithinCustomTimeRange(order.placedAt, startValue, endValue);
+                }
+                return true;
+            });
+
+            if (!filtered.length) {
+                els.waiterOrdersList.innerHTML = '<p class="text-sm text-gray-500 italic">No matching orders in demo data.</p>';
+                return;
+            }
+
+            els.waiterOrdersList.innerHTML = filtered.map((order) => `
+                <div class="bg-white border border-gray-200 rounded-md shadow-sm overflow-hidden">
+                    <button type="button" onclick="toggleWaiterOrderDetails(${order.orderNumber})" class="w-full p-3 flex items-center justify-between gap-3 text-left hover:bg-gray-50 transition-colors">
+                        <div class="min-w-0">
+                            <p class="text-sm font-semibold text-gray-900 truncate">#${order.orderNumber} - ${order.tableLabel}</p>
+                            <p class="text-xs text-gray-500 truncate">Receipt: ${order.receiptId} - ${order.itemsCount} items - ${formatTimeShort(order.placedAt)}</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="text-right">
+                                <p class="text-sm font-bold text-gray-900">${formatCurrency(order.total)}</p>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold ${getWaiterOrderStatusClasses(order.status)}">${order.status}</span>
+                            </div>
+                            <i id="waiterOrderChevron-${order.orderNumber}" class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div id="waiterOrderDetails-${order.orderNumber}" class="hidden border-t border-gray-100 px-3 pb-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-3">
+                            <div class="bg-gray-50 border border-gray-200 rounded p-2">
+                                <p class="text-[10px] uppercase tracking-wide text-gray-500">Waiter</p>
+                                <p class="text-sm font-semibold text-gray-800">${order.waiter}</p>
+                            </div>
+                            <div class="bg-gray-50 border border-gray-200 rounded p-2">
+                                <p class="text-[10px] uppercase tracking-wide text-gray-500">Payment</p>
+                                <p class="text-sm font-semibold text-gray-800">${order.paymentMethod}</p>
+                            </div>
+                            <div class="bg-gray-50 border border-gray-200 rounded p-2">
+                                <p class="text-[10px] uppercase tracking-wide text-gray-500">Date / Time</p>
+                                <p class="text-sm font-semibold text-gray-800">${formatDateShort(order.placedAt)} ${formatTimeShort(order.placedAt)}</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 border border-gray-200 rounded-md overflow-hidden">
+                            <div class="px-3 py-1.5 bg-gray-50 border-b border-gray-200 text-[11px] font-semibold uppercase tracking-wide text-gray-500">Order Items</div>
+                            <div class="divide-y divide-gray-100">
+                                ${buildWaiterOrderItemsHtml(order)}
+                            </div>
+                        </div>
+
+                        ${order.note ? `
+                            <div class="mt-3 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
+                                <p class="text-[10px] uppercase tracking-wide text-amber-700 font-semibold">Notes</p>
+                                <p class="text-xs text-amber-900 mt-1">${order.note}</p>
+                            </div>
+                        ` : ''}
+
+                        <div class="mt-3 pt-2 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Demo order details</span>
+                            <button type="button" onclick="demoReprintOrder(${order.orderNumber})" class="btn-secondary px-3 py-1.5 rounded text-xs">
+                                <i class="fas fa-print mr-1"></i>Reprint
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
         }
 
         function renderCategories() {
@@ -139,13 +702,103 @@
             });
         }
 
-        function addToOrder(item) {
-            const orderItem = {
+        function hasItemOptions(item) {
+            return !!(item && item.hasGeneralOptions && Array.isArray(item.generalOptions) && item.generalOptions.length > 0);
+        }
+
+        function buildOrderItem(item, selectedOptions = []) {
+            return {
                 ...item,
                 quantity: 1,
-                orderId: `${item.id}-${Date.now()}`,
-                selectedOptions: []
+                orderId: `${item.id}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+                selectedOptions: [...selectedOptions]
             };
+        }
+
+        function closeOptionModal() {
+            if (!els.itemOptionSelectModal) return;
+            els.itemOptionSelectModal.classList.add('hidden');
+            els.itemOptionSelectModal.style.display = 'none';
+            if (els.optionModalOptionsContainer) {
+                els.optionModalOptionsContainer.innerHTML = '';
+            }
+            pendingOptionItem = null;
+            pendingSelectedOption = null;
+        }
+
+        function renderOptionChoices(options) {
+            if (!els.optionModalOptionsContainer) return;
+            els.optionModalOptionsContainer.innerHTML = '';
+
+            options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'option-selectable w-full text-left border border-gray-300 rounded-md p-3 hover:bg-gray-50 transition-colors';
+                btn.dataset.index = String(idx);
+                btn.innerHTML = `
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="font-medium text-gray-800">${opt.name}</span>
+                        <span class="text-sm text-gray-600">${opt.priceChange >= 0 ? '+' : ''}€${Number(opt.priceChange || 0).toFixed(2)}</span>
+                    </div>
+                `;
+                btn.onclick = () => {
+                    pendingSelectedOption = opt;
+                    els.optionModalOptionsContainer.querySelectorAll('.option-selectable').forEach(el => el.classList.remove('selected'));
+                    btn.classList.add('selected');
+                };
+                if (idx === 0) {
+                    btn.classList.add('selected');
+                }
+                els.optionModalOptionsContainer.appendChild(btn);
+            });
+        }
+
+        function openOptionModal(item) {
+            if (!hasItemOptions(item) || !els.itemOptionSelectModal) return;
+
+            pendingOptionItem = item;
+            pendingSelectedOption = item.generalOptions[0] || null;
+
+            if (els.optionModalItemName) {
+                els.optionModalItemName.textContent = item.name;
+            }
+            if (els.optionModalItemDescription) {
+                els.optionModalItemDescription.textContent = 'Choose one option before adding this item.';
+            }
+
+            renderOptionChoices(item.generalOptions);
+            els.itemOptionSelectModal.classList.remove('hidden');
+            els.itemOptionSelectModal.style.display = 'flex';
+        }
+
+        function confirmOptionSelection() {
+            if (!pendingOptionItem) {
+                closeOptionModal();
+                return;
+            }
+            if (hasItemOptions(pendingOptionItem) && !pendingSelectedOption) {
+                showToast('Select an option first.', 'warning');
+                return;
+            }
+
+            const selectedOptions = pendingSelectedOption ? [pendingSelectedOption] : [];
+            const orderItem = buildOrderItem(pendingOptionItem, selectedOptions);
+            currentOrder.push(orderItem);
+            updateOrderDisplay();
+            closeOptionModal();
+            showToast(`Added ${orderItem.name} to order`, 'success');
+        }
+
+        function cancelOptionSelection() {
+            closeOptionModal();
+        }
+
+        function addToOrder(item) {
+            if (hasItemOptions(item)) {
+                openOptionModal(item);
+                return;
+            }
+            const orderItem = buildOrderItem(item, []);
             currentOrder.push(orderItem);
             updateOrderDisplay();
             showToast(`Added ${item.name} to order`, 'success');
@@ -236,12 +889,30 @@
                 return;
             }
 
+            if (els.headerTableInput) {
+                selectedTableNumber = els.headerTableInput.value.trim();
+                localStorage.setItem(LOCAL_STORAGE_PREFIX + 'SimpleTableNumber', selectedTableNumber);
+            }
+            if (simpleOrderType === 'table' && !selectedTableNumber) {
+                showToast('Select table number first.', 'warning');
+                if (els.headerTableContainer) {
+                    els.headerTableContainer.classList.add('ring-2', 'ring-red-500');
+                    setTimeout(() => {
+                        els.headerTableContainer.classList.remove('ring-2', 'ring-red-500');
+                    }, 1600);
+                }
+                return;
+            }
+
             const btn = $('sendOrderBtn');
             btn.disabled = true;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
 
             setTimeout(() => {
-                showToast(`Order #${orderNumber} sent successfully! (Demo Mode)`, 'success');
+                const destination = simpleOrderType === 'takeaway'
+                    ? 'Takeaway'
+                    : `Table ${selectedTableNumber}`;
+                showToast(`Order #${orderNumber} sent for ${destination}! (Demo Mode)`, 'success');
                 orderNumber++;
                 localStorage.setItem(LOCAL_STORAGE_PREFIX + 'OrderNumber', orderNumber.toString());
                 newOrder();
@@ -278,9 +949,12 @@
 
         // Login Modal Functions
         function openLoginModal() {
-            $('loginModal').classList.remove('hidden');
-            $('loginModal').style.display = 'flex';
-            $('passwordInput').focus();
+            // Demo shortcut: bypass password gate and open management directly.
+            if ($('loginModal')) {
+                $('loginModal').classList.add('hidden');
+                $('loginModal').style.display = 'none';
+            }
+            openManagementModal();
         }
 
         function closeLoginModal() {
@@ -791,8 +1465,14 @@
         // Handle escape key to close modals
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
+                if (els.itemOptionSelectModal && !els.itemOptionSelectModal.classList.contains('hidden')) {
+                    cancelOptionSelection();
+                }
                 closeLoginModal();
                 closeManagementModal();
+                closeWaiterOrdersModal();
                 closeDaySummaryModal();
             }
         });
+
+

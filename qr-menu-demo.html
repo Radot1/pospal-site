@@ -779,7 +779,10 @@
     function centerCategoryButton(button) {
       if (!button || !dom.categoryNav || dom.categoryNav.offsetParent === null) return;
       if (dom.categoryNav.scrollWidth <= dom.categoryNav.clientWidth) return;
-      button.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      const navRect = dom.categoryNav.getBoundingClientRect();
+      const btnRect = button.getBoundingClientRect();
+      const delta = (btnRect.left + btnRect.width / 2) - (navRect.left + navRect.width / 2);
+      dom.categoryNav.scrollTo({ left: dom.categoryNav.scrollLeft + delta, behavior: "smooth" });
     }
 
     function keepCategoryButtonVisible(button) {
@@ -793,6 +796,14 @@
       } else if (btnRect.right > navRect.right - padding) {
         dom.categoryNav.scrollBy({ left: btnRect.right - navRect.right + padding, behavior: "smooth" });
       }
+    }
+
+    function scrollToCategorySection(section) {
+      if (!section) return;
+      const navHeight = dom.categoryNav ? dom.categoryNav.offsetHeight : 0;
+      const offset = navHeight + 12;
+      const targetTop = Math.max(section.getBoundingClientRect().top + window.scrollY - offset, 0);
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
     }
 
     function renderCategoryNav(categories) {
@@ -809,12 +820,15 @@
         btn.textContent = formatCategoryLabel(category);
         btn.dataset.category = category;
         if (index === 0) btn.classList.add("active");
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", event => {
+          event.preventDefault();
+          event.stopPropagation();
           const target = document.querySelector(`[data-category-section="${category}"]`);
           if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            scrollToCategorySection(target);
           }
           centerCategoryButton(btn);
+          btn.blur();
         });
         dom.categoryNav.appendChild(btn);
       });

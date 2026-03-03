@@ -440,7 +440,10 @@
       const target = document.querySelector(`[data-category-section="${category}"]`);
       if (!target) return;
       if (!dom.menuScroll) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        const navHeight = dom.categoryNav ? dom.categoryNav.offsetHeight : 0;
+        const offset = navHeight + 12;
+        const targetTop = Math.max(target.getBoundingClientRect().top + window.scrollY - offset, 0);
+        window.scrollTo({ top: targetTop, behavior: "smooth" });
         return;
       }
       const containerRect = dom.menuScroll.getBoundingClientRect();

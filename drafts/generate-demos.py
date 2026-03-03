@@ -3,6 +3,8 @@ import json
 import re
 from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+
 
 SCRIPT_REPLACEMENTS = [
     ("Total: €", "Σύνολο: €"),
@@ -19,22 +21,32 @@ HTML_REPLACEMENTS = [
 ]
 
 SCRIPT_TAG_PATTERNS = [
-    r"<script[^>]+src=\"\\.\\/static\\/pricing\\.js\"[^>]*><\\/script>",
-    r"<script[^>]+src=\"\\.\\/static\\/js\\/qrcode\\.min\\.js\"[^>]*><\\/script>",
-    r"<script[^>]+src=\"\\/assets\\/desktop-support\\.js\"[^>]*><\\/script>",
-    r"<script[^>]+src=\"pospalCore\\.js\"[^>]*><\\/script>",
-    r"<script[^>]+src=\"i18n\\.js\"[^>]*><\\/script>",
-    r"<script[^>]+src=\"\\.\\/i18n\\.js\"[^>]*><\\/script>",
+    r'<script[^>]+src="\.\/static\/pricing\.js"[^>]*><\/script>',
+    r'<script[^>]+src="\.\/static\/js\/qrcode\.min\.js"[^>]*><\/script>',
+    r'<script[^>]+src="\/assets\/desktop-support\.js"[^>]*><\/script>',
+    r'<script[^>]+src="pospalCore\.js"[^>]*><\/script>',
+    r'<script[^>]+src="i18n\.js"[^>]*><\/script>',
+    r'<script[^>]+src="\.\/i18n\.js"[^>]*><\/script>',
 ]
 
 CSS_LINK_PATTERNS = [
-    r"<link[^>]+href=\"\\/assets\\/desktop-support\\.css\"[^>]*>",
+    r'<link[^>]+href="\/assets\/desktop-support\.css"[^>]*>',
+]
+
+HTML_BLOCK_PATTERNS = [
+    r'<a[^>]*class="[^"]*\bui-select-link\b[^"]*"[^>]*>[\s\S]*?<\/a>',
 ]
 
 ASSET_REWRITES = [
     ("./static/vendor/tailwindcdn.js", "../static/vendor/tailwindcdn.js"),
     ("./static/css/fonts.css", "../static/css/fonts.css"),
     ("./static/vendor/fontawesome/css/all.min.css", "../static/vendor/fontawesome/css/all.min.css"),
+]
+
+LINK_REWRITES = [
+    ('href="UISelect.html"', 'href="POSPal_Demo_Index.html"'),
+    ('href="legal/eula.html"', 'href="#"'),
+    ('href="legal/privacy.html"', 'href="#"'),
 ]
 
 
@@ -147,12 +159,6 @@ def build_post_demo_script():
             if (typeof window.showToast === 'function') {
                 window.showToast = () => {};
             }
-            if (typeof window.openLoginModal === 'function') {
-                window.openLoginModal = () => {};
-            }
-            if (typeof window.openManagementModal === 'function') {
-                window.openManagementModal = () => {};
-            }
             if (typeof window.openDeviceSettingsQuickModal === 'function') {
                 window.openDeviceSettingsQuickModal = () => {};
             }
@@ -221,13 +227,22 @@ def insert_before_body(html, injection):
     return html.replace(marker, f"{injection}\n{marker}")
 
 
+def maybe_rewrite_assets(html, out_path):
+    out_parent = Path(out_path).resolve().parent
+    if out_parent == SCRIPT_DIR:
+        return apply_replacements(html, ASSET_REWRITES)
+    return html
+
+
 def build_demo_html(src_path, demo_script_path, locale_path, title, out_path):
     html = src_path.read_text(encoding="utf-8")
     html = set_lang(html, "el")
     html = set_title(html, title)
-    html = apply_replacements(html, ASSET_REWRITES)
+    html = maybe_rewrite_assets(html, out_path)
+    html = strip_tags(html, HTML_BLOCK_PATTERNS)
     html = strip_tags(html, SCRIPT_TAG_PATTERNS)
     html = strip_tags(html, CSS_LINK_PATTERNS)
+    html = apply_replacements(html, LINK_REWRITES)
     html = apply_replacements(html, HTML_REPLACEMENTS)
     html = replace_done_label(html)
 
