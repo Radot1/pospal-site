@@ -150,6 +150,14 @@
     return "";
   }
 
+  function normalizeJourneyLevel(value) {
+    var level = normalizeForMatch(value);
+    if (level === "beginner" || level === "advanced" || level === "expert") {
+      return level;
+    }
+    return "";
+  }
+
   function classifyTrialStart(pathname, elementId, textMatch, classMatch) {
     var isDownloadTarget =
       elementId === "copy-link-btn" ||
@@ -218,6 +226,9 @@
         var classMatch = normalizeForMatch(
           typeof element.className === "string" ? element.className : ""
         );
+        var journeyLevel = normalizeJourneyLevel(
+          element.getAttribute("data-journey-start") || ""
+        );
 
         var downloadVariant = classifyDownload(pathname, elementId);
         var trialVariant = classifyTrialStart(
@@ -228,7 +239,7 @@
         );
         var demoVariant = classifyDemo(pathname, textMatch, classMatch);
 
-        if (!downloadVariant && !trialVariant && !demoVariant) {
+        if (!downloadVariant && !trialVariant && !demoVariant && !journeyLevel) {
           return;
         }
 
@@ -272,6 +283,19 @@
             page_type: payload.page_type,
             event_version: payload.event_version,
             cta_variant: demoVariant,
+            cta_text: payload.cta_text,
+            cta_href: payload.cta_href,
+            cta_id: payload.cta_id,
+            cta_classes: payload.cta_classes,
+          });
+        }
+
+        if (journeyLevel) {
+          sendEvent("guide_journey_start", {
+            page_path: payload.page_path,
+            page_type: payload.page_type,
+            event_version: payload.event_version,
+            journey_level: journeyLevel,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
             cta_id: payload.cta_id,
