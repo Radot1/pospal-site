@@ -693,7 +693,7 @@
 
         @media (max-width: 1024px) {
             .qr-live-section {
-                padding: 24px 0 24px;
+                padding: 12px 0 24px;
             }
 
             .hero-includes-card {
@@ -738,8 +738,9 @@
             }
 
             .qr-live-preview-frame {
-                --qr-live-max-height: min(72vh, 680px);
-                width: min(100%, calc(var(--qr-live-max-height) * 0.74));
+                --qr-live-max-height: min(84vh, 760px);
+                width: min(100%, calc(var(--qr-live-max-height) * 0.5625));
+                aspect-ratio: 9 / 16;
             }
         }
 
@@ -944,7 +945,7 @@
 
             .experience-viewport {
                 min-height: auto;
-                padding-bottom: 12px;
+                padding-bottom: 0;
             }
 
             .experience-stage {
@@ -1025,11 +1026,11 @@
             .mobile-phases {
                 margin-top: 12px;
                 display: grid;
-                gap: 24px;
+                gap: 12px;
             }
 
             .mobile-phase {
-                min-height: 60vh;
+                min-height: auto;
                 display: flex;
                 align-items: flex-start;
             }
