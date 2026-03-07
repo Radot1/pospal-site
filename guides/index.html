@@ -9,7 +9,7 @@
       window.gtag("config", "AW-17981190399");
     </script>
     <script defer src="../static/js/ga-events.js"></script>
-    <script defer src="../static/js/guides-journey.js"></script>
+    <script defer src="../static/js/guides-curriculum.js"></script>
     <meta charset="UTF-8">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -18,20 +18,19 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "vnzrn7y23s");
     </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Οδηγοί POSPal: διαδρομή εκμάθησης βήμα-βήμα | POSPal</title>
-    <meta name="description" content="Ξεκίνα τη διαδρομή εκμάθησης POSPal με επίπεδα αρχής, προχωρημένου και εξειδικευμένου στησίματος για εστίαση.">
+    <title>Οδηγοί POSPal: καθαρή διαδρομή εφαρμογής | POSPal</title>
+    <meta name="description" content="Οδηγοί POSPal σε 3 επίπεδα: αρχή, προχωρημένο και εξειδικευμένο. Δες το επόμενο βήμα και προχώρα με σειρά.">
     <link rel="canonical" href="https://pospal.gr/guides/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="Οδηγοί POSPal: διαδρομή εκμάθησης βήμα-βήμα | POSPal">
-    <meta property="og:description" content="Ολοκλήρωσε επίπεδα και στήσε σωστά τη ροή παραγγελιοληψίας και QR μενού.">
+    <meta property="og:title" content="Οδηγοί POSPal: καθαρή διαδρομή εφαρμογής | POSPal">
+    <meta property="og:description" content="Δομημένη διαδρομή 9 βημάτων για παραγγελιοληψία, QR μενού και εξειδικευμένο στήσιμο.">
     <meta property="og:url" content="https://pospal.gr/guides/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Οδηγοί POSPal: διαδρομή εκμάθησης βήμα-βήμα | POSPal">
-    <meta name="twitter:description" content="Διάλεξε επόμενο βήμα και προχώρα σταδιακά από αρχή σε εξειδικευμένο στήσιμο.">
+    <meta name="twitter:title" content="Οδηγοί POSPal: καθαρή διαδρομή εφαρμογής | POSPal">
+    <meta name="twitter:description" content="Συνέχισε από το πρώτο ανοιχτό βήμα και ολοκλήρωσε τη διαδρομή σου.">
     <link rel="icon" href="../app_icon.ico">
     <link rel="apple-touch-icon" href="../app_icon.ico">
     <link rel="stylesheet" href="../static/css/fonts.css">
@@ -59,22 +58,17 @@
         :root {
             --ink: #0f172a;
             --surface: #ffffff;
-            --radius-lg: 24px;
-            --growth-300: #86efac;
-            --growth-500: #22c55e;
-            --line-color: #b7d9bf;
+            --radius-lg: 22px;
         }
-
-        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             font-family: "Inter", system-ui, sans-serif;
             color: var(--ink);
             background:
-                radial-gradient(circle at 8% 2%, rgba(34, 197, 94, 0.18), transparent 36%),
-                radial-gradient(circle at 100% 16%, rgba(245, 158, 11, 0.16), transparent 40%),
-                linear-gradient(180deg, #f8fcf9 0%, #f5faf7 48%, #f8fafc 100%);
+                radial-gradient(circle at 8% -4%, rgba(34, 197, 94, 0.12), transparent 36%),
+                radial-gradient(circle at 96% 14%, rgba(251, 191, 36, 0.12), transparent 34%),
+                linear-gradient(180deg, #f8fafc 0%, #f3f9f4 56%, #f8fafc 100%);
         }
 
         .site-container {
@@ -85,9 +79,9 @@
 
         .surface-soft {
             background: var(--surface);
-            border: 1px solid rgba(209, 250, 229, 0.9);
+            border: 1px solid rgba(226, 232, 240, 0.9);
             border-radius: var(--radius-lg);
-            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
         }
 
         .btn {
@@ -95,8 +89,8 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            border-radius: 999px;
             padding: 12px 22px;
+            border-radius: 999px;
             font-weight: 600;
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
@@ -104,57 +98,30 @@
         .btn-primary {
             color: #fff;
             background: linear-gradient(135deg, #16a34a, #15803d);
-            box-shadow: 0 16px 30px rgba(22, 163, 74, 0.27);
+            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.24);
         }
 
         .btn-primary:hover {
             transform: translateY(-1px);
-            box-shadow: 0 22px 36px rgba(22, 163, 74, 0.3);
+            box-shadow: 0 20px 30px rgba(22, 163, 74, 0.28);
         }
 
         .btn-secondary {
-            background: #fff;
+            border: 1px solid rgba(34, 197, 94, 0.55);
             color: #166534;
-            border: 1px solid rgba(22, 163, 74, 0.42);
+            background: #fff;
         }
 
         .btn-secondary:hover {
-            transform: translateY(-1px);
             border-color: #16a34a;
             background: #f0fdf4;
-        }
-
-        .hero-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: minmax(0, 1fr);
-        }
-
-        .progress-ring {
-            --progress: 0;
-            width: 118px;
-            height: 118px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            margin-inline: auto;
-            background:
-                radial-gradient(#ffffff 58%, transparent 59%),
-                conic-gradient(var(--growth-500) calc(var(--progress) * 1%), rgba(148, 163, 184, 0.18) 0);
-            box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.25);
-        }
-
-        .progress-ring span {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #166534;
+            transform: translateY(-1px);
         }
 
         .progress-track {
-            position: relative;
-            height: 11px;
-            background: #e2e8f0;
+            height: 10px;
             border-radius: 999px;
+            background: #e2e8f0;
             overflow: hidden;
         }
 
@@ -162,143 +129,70 @@
             height: 100%;
             width: 0;
             border-radius: inherit;
-            transition: width 0.35s ease;
-            background: linear-gradient(90deg, #22c55e 0%, #84cc16 55%, #fbbf24 100%);
+            background: linear-gradient(90deg, #22c55e 0%, #84cc16 60%, #fbbf24 100%);
+            transition: width 0.25s ease;
         }
 
-        .journey-tree {
+        .module-card {
             position: relative;
             overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
-        .journey-tree::before {
+        .module-card::before {
             content: "";
             position: absolute;
-            inset: 14px;
-            pointer-events: none;
-            border-radius: 20px;
-            background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), rgba(34, 197, 94, 0));
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #22c55e, #84cc16, #fbbf24);
         }
 
-        .tree-root {
-            position: relative;
-            z-index: 2;
-            width: 92px;
-            height: 92px;
-            border-radius: 50%;
-            margin: 8px auto 20px;
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            color: #14532d;
-            background: radial-gradient(circle at 30% 24%, #fef3c7, #86efac 72%);
-            box-shadow: 0 16px 28px rgba(21, 128, 61, 0.22);
+        .module-card[data-module-dimmed="true"] {
+            opacity: 0.63;
         }
 
-        .tree-root::after {
-            content: "";
-            position: absolute;
-            top: 88px;
-            left: 50%;
-            width: 4px;
-            height: 28px;
-            transform: translateX(-50%);
-            border-radius: 999px;
-            background: var(--line-color);
-        }
-
-        .tree-grid {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            gap: 16px;
-            grid-template-columns: minmax(0, 1fr);
-        }        .level-column {
-            position: relative;
-            border-radius: 20px;
-            border: 1px solid #d1fae5;
-            background: #ffffff;
-            padding: 16px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
-        }
-
-        .level-column::before {
-            content: "";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 72%;
-            height: 2px;
-            border-radius: 999px;
-            background: var(--line-color);
-            transform-origin: left center;
-            transition: transform 0.35s ease;
-        }
-
-        .level-column[data-level-complete="true"]::before {
-            transform: translateX(-50%) scaleX(1.12);
-            background: var(--growth-500);
-        }
-
-        .level-column[data-level-dimmed="true"] { opacity: 0.58; }
-
-        .level-chip {
+        .module-status {
             display: inline-flex;
             align-items: center;
             gap: 6px;
             border-radius: 999px;
-            padding: 4px 10px;
-            font-size: 0.73rem;
+            font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.02em;
             text-transform: uppercase;
+            padding: 4px 10px;
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .module-card[data-module-complete="true"] .module-status {
+            background: #bbf7d0;
             color: #166534;
-            background: #ecfdf3;
-            border: 1px solid #bbf7d0;
         }
 
-        .step-list {
-            margin: 14px 0 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            gap: 10px;
-        }
-
-        .step-node {
-            position: relative;
-            border-radius: 16px;
-            border: 1px solid #dbeafe;
+        .step-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
             background: #f8fafc;
-            padding: 12px 12px 11px;
-            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+            padding: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .step-node:hover {
-            transform: translateY(-1px);
-            border-color: #86efac;
-            box-shadow: 0 10px 18px rgba(15, 23, 42, 0.07);
-        }
-
-        .step-node.is-next {
+        .step-item.is-next {
             border-color: #fbbf24;
             background: #fefce8;
-            animation: nodePulse 2.4s ease-in-out infinite;
+            box-shadow: 0 8px 20px rgba(251, 191, 36, 0.22);
         }
 
-        .step-node.is-complete {
+        .step-item.is-complete {
             border-color: #86efac;
             background: #f0fdf4;
         }
 
-        .step-node.is-dimmed:not(.is-complete) { opacity: 0.62; }
-
-        .step-row {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 12px;
+        .step-item.is-dimmed:not(.is-complete) {
+            opacity: 0.64;
         }
 
         .step-order {
@@ -307,17 +201,16 @@
             border-radius: 50%;
             display: inline-grid;
             place-items: center;
-            font-size: 0.75rem;
+            font-size: 0.76rem;
             font-weight: 700;
-            flex: 0 0 auto;
-            color: #14532d;
             background: #dcfce7;
+            color: #14532d;
+            flex: 0 0 auto;
         }
 
         .step-link {
             color: #0f172a;
             font-weight: 600;
-            line-height: 1.35;
             text-decoration: none;
         }
 
@@ -326,37 +219,23 @@
             text-decoration: underline;
         }
 
-        .step-meta {
-            margin-top: 6px;
-            font-size: 0.82rem;
-            color: #64748b;
-        }
-
-        .step-bottom {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
         .step-state {
             display: inline-flex;
             align-items: center;
             border-radius: 999px;
-            padding: 3px 9px;
-            font-size: 0.73rem;
-            font-weight: 700;
-            color: #334155;
             background: #e2e8f0;
+            color: #334155;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 9px;
         }
 
-        .step-node.is-next .step-state {
+        .step-item.is-next .step-state {
             background: #fde68a;
             color: #854d0e;
         }
 
-        .step-node.is-complete .step-state {
+        .step-item.is-complete .step-state {
             background: #bbf7d0;
             color: #166534;
         }
@@ -364,39 +243,18 @@
         .step-toggle {
             border: 1px solid #cbd5e1;
             border-radius: 999px;
-            padding: 6px 10px;
-            font-size: 0.77rem;
-            font-weight: 600;
             background: #fff;
             color: #334155;
-            transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-        }
-
-        .step-toggle:hover {
-            border-color: #94a3b8;
-            transform: translateY(-1px);
+            font-size: 0.76rem;
+            font-weight: 600;
+            padding: 6px 10px;
+            transition: border-color 0.2s ease, background 0.2s ease;
         }
 
         .step-toggle[aria-pressed="true"] {
             border-color: #22c55e;
             background: #dcfce7;
             color: #166534;
-        }
-
-        .mission-box {
-            border-radius: 20px;
-            border: 1px solid #bae6fd;
-            background: linear-gradient(135deg, #f8fafc, #eef2ff);
-            padding: 18px;
-        }
-
-        .mission-complete {
-            border-radius: 16px;
-            border: 1px dashed #86efac;
-            background: #f0fdf4;
-            padding: 14px;
-            color: #166534;
-            font-weight: 600;
         }
 
         .legacy-details summary {
@@ -406,7 +264,9 @@
             list-style: none;
         }
 
-        .legacy-details summary::-webkit-details-marker { display: none; }
+        .legacy-details summary::-webkit-details-marker {
+            display: none;
+        }
 
         .legacy-details summary::after {
             content: "▾";
@@ -415,63 +275,31 @@
             transition: transform 0.2s ease;
         }
 
-        .legacy-details[open] summary::after { transform: rotate(180deg); }
-
-        .hidden { display: none !important; }
-
-        @keyframes nodePulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-            50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.18); }
-        }
-
-        @media (min-width: 760px) {
-            .hero-grid {
-                grid-template-columns: minmax(0, 1fr) 190px;
-                align-items: center;
-            }
-
-            .tree-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 14px;
-            }
-
-            .tree-root::after { height: 34px; }
-
-            .level-column { padding: 16px 14px; }
+        .legacy-details[open] summary::after {
+            transform: rotate(180deg);
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .progress-fill,
-            .level-column,
-            .step-node,
-            .step-toggle,
-            .btn,
-            .legacy-details summary::after,
-            .level-column::before { transition: none !important; }
-
-            .step-node.is-next { animation: none !important; }
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
         }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Οδηγοί POSPal",
-      "url": "https://pospal.gr/guides/",
-      "description": "Διαδρομή εκμάθησης για παραγγελιοληψία, QR μενού και στήσιμο στην εστίαση."
-    }
-    </script>
 </head>
 <body class="min-h-screen">
-    <header class="py-6">
-        <div class="site-container flex items-center justify-between gap-4">
+    <header class="site-container py-5">
+        <div class="surface-soft px-5 py-4 flex items-center justify-between gap-4">
             <a href="../index.html" class="flex items-center gap-3">
                 <img src="../app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-                <span class="text-lg font-semibold tracking-tight">
-                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
-                </span>
+                <div>
+                    <p class="font-semibold text-slate-900 leading-none">POSPal</p>
+                    <p class="text-xs text-slate-500">Ροή παραγγελιοληψίας για εστίαση</p>
+                </div>
             </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <nav class="hidden sm:flex items-center gap-5 text-sm font-medium text-slate-600">
                 <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
                 <a href="../times.html" class="hover:text-slate-900">Τιμές</a>
                 <a href="./index.html" class="text-slate-900">Οδηγοί</a>
@@ -483,177 +311,169 @@
     <main class="pb-16">
         <div class="site-container">
             <section class="surface-soft p-8">
-                <div class="hero-grid">
-                    <div>
-                        <p class="text-sm uppercase tracking-[0.16em] text-brand-700 font-semibold">Διαδρομή εκμάθησης</p>
-                        <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">Χτίσε βήμα-βήμα τη ροή που θες για την ομάδα σου</h1>
-                        <p class="mt-3 text-slate-600 text-lg">Η διαδρομή ξεκινά από τα βασικά και μεγαλώνει όσο ολοκληρώνεις επίπεδα. Ξέρεις πάντα ποιο είναι το επόμενο σωστό βήμα.</p>
-                        <div class="mt-5">
-                            <p class="text-sm font-semibold text-slate-700" data-progress-count>0/9 βήματα ολοκληρωμένα</p>
-                            <div class="mt-2 progress-track" aria-hidden="true">
-                                <div class="progress-fill" data-progress-percent></div>
-                            </div>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-3">
-                            <a class="btn btn-primary" href="../installation-guide.html" data-journey-next-cta data-next-label="Συνέχισε τη διαδρομή">Συνέχισε τη διαδρομή</a>
-                            <a class="btn btn-secondary" href="../download/">Κατέβασε για Windows</a>
-                        </div>
+                <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Οδηγοί POSPal με ξεκάθαρη σειρά ενεργειών</h1>
+                <p class="mt-3 text-slate-600 text-lg">Τρία επίπεδα και εννέα βήματα για να ξέρεις πάντα ποιο είναι το επόμενο σωστό βήμα.</p>
+                <div class="mt-5">
+                    <p class="text-sm font-semibold text-slate-700" data-progress-count>0/9 ολοκληρωμένα</p>
+                    <div class="mt-2 progress-track" aria-hidden="true">
+                        <div class="progress-fill" data-progress-percent></div>
                     </div>
-                    <div class="progress-ring" data-progress-ring style="--progress:0" aria-label="Ποσοστό ολοκλήρωσης διαδρομής">
-                        <span data-progress-text>0%</span>
-                    </div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="../installation-guide.html" class="btn btn-primary" data-curriculum-next-cta data-next-label="Συνέχισε διαδρομή" data-journey-start="beginner">Συνέχισε διαδρομή</a>
+                    <a href="../download/" class="btn btn-secondary">Κατέβασε για Windows</a>
                 </div>
             </section>
 
-            <section class="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,0.75fr)]" data-journey-root>
-                <div class="journey-tree surface-soft p-6" id="journey-tree">
-                    <div class="tree-root">Ρίζα</div>
-                    <div class="tree-grid">
-                        <article class="level-column" data-level="beginner" data-level-container>
-                            <p class="level-chip">Αρχή • 30-45'</p>
-                            <h2 class="mt-2 text-lg font-semibold text-slate-900">Στήσιμο από το μηδέν</h2>
-                            <ul class="step-list">
-                                <li class="step-node" data-step-node data-step-id="beginner_install" data-step-level="beginner" data-step-order="1" data-step-link="../installation-guide.html">
-                                    <div class="step-row">
-                                        <span class="step-order">1</span>
-                                        <a class="step-link flex-1" href="../installation-guide.html" data-step-link>Οδηγός εγκατάστασης</a>
-                                    </div>
-                                    <p class="step-meta">Λήψη, ρύθμιση, πρώτη εκκίνηση.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="beginner_menu_qr" data-step-level="beginner" data-step-order="2" data-step-link="./proto-menou-kai-qr/">
-                                    <div class="step-row">
-                                        <span class="step-order">2</span>
-                                        <a class="step-link flex-1" href="./proto-menou-kai-qr/" data-step-link>Πρώτο μενού και QR</a>
-                                    </div>
-                                    <p class="step-meta">Κατηγορίες, είδη, slug και publish.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="beginner_first_week" data-step-level="beginner" data-step-order="3" data-step-link="./first-week-optimization/">
-                                    <div class="step-row">
-                                        <span class="step-order">3</span>
-                                        <a class="step-link flex-1" href="./first-week-optimization/" data-step-link>Πρώτη εβδομάδα</a>
-                                    </div>
-                                    <p class="step-meta">Σταθεροποίηση ροής και μικρές βελτιώσεις.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </article>
+            <section class="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,0.8fr)]" data-curriculum-root id="curriculum-root">
+                <div class="grid gap-4 md:grid-cols-3">
+                    <article class="surface-soft p-5 module-card" data-module="beginner">
+                        <p class="text-xs uppercase tracking-[0.14em] text-brand-700 font-semibold">Αρχή • 30-45'</p>
+                        <h2 class="mt-2 text-lg font-semibold text-slate-900">Εκκίνηση συστήματος</h2>
+                        <p class="mt-2 text-sm text-slate-600">Στήσιμο βάσης, πρώτο μενού και έλεγχος πρώτης εβδομάδας.</p>
+                        <span class="mt-3 module-status" data-module-status>Δεν ξεκίνησε</span>
+                        <ol class="mt-4 space-y-2 list-none p-0">
+                            <li class="step-item" data-step-id="beginner_install" data-step-level="beginner" data-step-order="1" data-step-link="../installation-guide.html" data-step-time="10-15 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">1</span>
+                                    <a href="../installation-guide.html" class="step-link" data-step-link>Οδηγός εγκατάστασης</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Λήψη, βασικές ρυθμίσεις και πρώτη σύνδεση.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="beginner_menu_qr" data-step-level="beginner" data-step-order="2" data-step-link="./proto-menou-kai-qr/" data-step-time="10-15 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">2</span>
+                                    <a href="./proto-menou-kai-qr/" class="step-link" data-step-link>Πρώτο μενού και QR</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Κατηγορίες, είδη και δημοσίευση QR μενού.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="beginner_first_week" data-step-level="beginner" data-step-order="3" data-step-link="./first-week-optimization/" data-step-time="10-15 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">3</span>
+                                    <a href="./first-week-optimization/" class="step-link" data-step-link>Πρώτη εβδομάδα</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Σταθεροποίηση ροής και μικρές βελτιώσεις.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                        </ol>
+                    </article>
 
-                        <article class="level-column" data-level="advanced" data-level-container>
-                            <p class="level-chip">Προχωρημένο • 20-30'</p>
-                            <h2 class="mt-2 text-lg font-semibold text-slate-900">Καθημερινή λειτουργία</h2>
-                            <ul class="step-list">
-                                <li class="step-node" data-step-node data-step-id="advanced_order_flow" data-step-level="advanced" data-step-order="4" data-step-link="../pda-pos-leitourgei.html">
-                                    <div class="step-row">
-                                        <span class="step-order">4</span>
-                                        <a class="step-link flex-1" href="../pda-pos-leitourgei.html" data-step-link>Ροή παραγγελιοληψίας</a>
-                                    </div>
-                                    <p class="step-meta">Ενιαία διαδικασία για κάθε σερβιτόρο.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="advanced_account_payments" data-step-level="advanced" data-step-order="5" data-step-link="./logariasmos-kai-pliromes/">
-                                    <div class="step-row">
-                                        <span class="step-order">5</span>
-                                        <a class="step-link flex-1" href="./logariasmos-kai-pliromes/" data-step-link>Λογαριασμός και πληρωμές</a>
-                                    </div>
-                                    <p class="step-meta">Δοκιμή, συνδρομή και billing ενέργειες.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="advanced_pricing_activation" data-step-level="advanced" data-step-order="6" data-step-link="../times.html">
-                                    <div class="step-row">
-                                        <span class="step-order">6</span>
-                                        <a class="step-link flex-1" href="../times.html" data-step-link>Τιμές και ενεργοποίηση</a>
-                                    </div>
-                                    <p class="step-meta">Κόστος και συνέχεια προς αγορά άδειας.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </article>
+                    <article class="surface-soft p-5 module-card" data-module="advanced">
+                        <p class="text-xs uppercase tracking-[0.14em] text-brand-700 font-semibold">Προχωρημένο • 20-30'</p>
+                        <h2 class="mt-2 text-lg font-semibold text-slate-900">Καθημερινή λειτουργία</h2>
+                        <p class="mt-2 text-sm text-slate-600">Ροή παραγγελιοληψίας, λογαριασμός και ενεργοποίηση συνδρομής.</p>
+                        <span class="mt-3 module-status" data-module-status>Δεν ξεκίνησε</span>
+                        <ol class="mt-4 space-y-2 list-none p-0">
+                            <li class="step-item" data-step-id="advanced_order_flow" data-step-level="advanced" data-step-order="4" data-step-link="../pda-pos-leitourgei.html" data-step-time="7-10 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">4</span>
+                                    <a href="../pda-pos-leitourgei.html" class="step-link" data-step-link>Ροή παραγγελιοληψίας</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Κοινή πρακτική για κάθε σερβιτόρο στη βάρδια.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="advanced_account_payments" data-step-level="advanced" data-step-order="5" data-step-link="./logariasmos-kai-pliromes/" data-step-time="6-10 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">5</span>
+                                    <a href="./logariasmos-kai-pliromes/" class="step-link" data-step-link>Λογαριασμός και πληρωμές</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Δοκιμή, συνδρομή και συχνές ενέργειες billing.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="advanced_pricing_activation" data-step-level="advanced" data-step-order="6" data-step-link="../times.html" data-step-time="5-8 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">6</span>
+                                    <a href="../times.html" class="step-link" data-step-link>Τιμές και ενεργοποίηση</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Επιλογή πλάνου και συνέχεια προς αγορά άδειας.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                        </ol>
+                    </article>
 
-                        <article class="level-column" data-level="expert" data-level-container>
-                            <p class="level-chip">Εξειδικευμένο • 30-60'</p>
-                            <h2 class="mt-2 text-lg font-semibold text-slate-900">Προχωρημένο στήσιμο</h2>
-                            <ul class="step-list">
-                                <li class="step-node" data-step-node data-step-id="expert_beach_setup" data-step-level="expert" data-step-order="7" data-step-link="./beach-bar-setup.html">
-                                    <div class="step-row">
-                                        <span class="step-order">7</span>
-                                        <a class="step-link flex-1" href="./beach-bar-setup.html" data-step-link>Στήσιμο beach bar</a>
-                                    </div>
-                                    <p class="step-meta">Σενάριο σεζόν με γρήγορη εκτέλεση.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="expert_dns_custom" data-step-level="expert" data-step-order="8" data-step-link="./beach-bar-setup.html#dns-custom-access">
-                                    <div class="step-row">
-                                        <span class="step-order">8</span>
-                                        <a class="step-link flex-1" href="./beach-bar-setup.html#dns-custom-access" data-step-link>Custom DNS τεχνική λύση</a>
-                                    </div>
-                                    <p class="step-meta">Προχωρημένη τεχνική λύση, όχι ενσωματωμένη ρύθμιση.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                                <li class="step-node" data-step-node data-step-id="expert_seasonal" data-step-level="expert" data-step-order="9" data-step-link="./seasonal-management/">
-                                    <div class="step-row">
-                                        <span class="step-order">9</span>
-                                        <a class="step-link flex-1" href="./seasonal-management/" data-step-link>Εποχική οργάνωση</a>
-                                    </div>
-                                    <p class="step-meta">Διαχείριση ομάδας σε περιόδους αιχμής.</p>
-                                    <div class="step-bottom">
-                                        <span class="step-state" data-step-state>Εκκρεμεί</span>
-                                        <button class="step-toggle" type="button" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </article>
-                    </div>
+                    <article class="surface-soft p-5 module-card" data-module="expert">
+                        <p class="text-xs uppercase tracking-[0.14em] text-brand-700 font-semibold">Εξειδικευμένο • 30-60'</p>
+                        <h2 class="mt-2 text-lg font-semibold text-slate-900">Εξειδικευμένο στήσιμο</h2>
+                        <p class="mt-2 text-sm text-slate-600">Στήσιμο beach bar, custom DNS τεχνική λύση και εποχική οργάνωση.</p>
+                        <span class="mt-3 module-status" data-module-status>Δεν ξεκίνησε</span>
+                        <ol class="mt-4 space-y-2 list-none p-0">
+                            <li class="step-item" data-step-id="expert_beach_setup" data-step-level="expert" data-step-order="7" data-step-link="./beach-bar-setup.html" data-step-time="10-20 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">7</span>
+                                    <a href="./beach-bar-setup.html" class="step-link" data-step-link>Στήσιμο beach bar</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Γρήγορη διαμόρφωση για τραπέζια, πακέτο και ροή παραγγελιών.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="expert_dns_custom" data-step-level="expert" data-step-order="8" data-step-link="./beach-bar-setup.html#dns-custom-access" data-step-time="10-20 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">8</span>
+                                    <a href="./beach-bar-setup.html#dns-custom-access" class="step-link" data-step-link>Custom DNS τεχνική λύση</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Προχωρημένη τεχνική λύση εκτός εφαρμογής, όχι ενσωματωμένη ρύθμιση.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                            <li class="step-item" data-step-id="expert_seasonal" data-step-level="expert" data-step-order="9" data-step-link="./seasonal-management/" data-step-time="10-20 λεπτά">
+                                <div class="flex items-start gap-2">
+                                    <span class="step-order">9</span>
+                                    <a href="./seasonal-management/" class="step-link" data-step-link>Εποχική οργάνωση</a>
+                                </div>
+                                <p class="mt-2 text-xs text-slate-500">Διαχείριση ομάδας σε αιχμή με καθαρούς ρόλους.</p>
+                                <div class="mt-2 flex items-center justify-between gap-2">
+                                    <span class="step-state" data-step-state>Εκκρεμεί</span>
+                                    <button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button>
+                                </div>
+                            </li>
+                        </ol>
+                    </article>
                 </div>
-                <aside class="surface-soft p-6">
-                    <h2 class="text-xl font-semibold text-slate-900">Επόμενη αποστολή</h2>
-                    <p class="mt-2 text-slate-600">Προτείνουμε πάντα το πρώτο ανοιχτό βήμα για να μένει καθαρή η πορεία.</p>
 
-                    <div class="mission-box mt-4">
+                <aside class="surface-soft p-6">
+                    <h2 class="text-xl font-semibold text-slate-900">Επόμενο προτεινόμενο βήμα</h2>
+                    <p class="mt-2 text-slate-600">Προτείνεται πάντα το πρώτο ανοιχτό βήμα για να μένει καθαρή η διαδρομή.</p>
+                    <div class="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
                         <p class="text-xs uppercase tracking-[0.14em] text-emerald-700 font-semibold" data-mission-level>Αρχή</p>
                         <h3 class="mt-2 text-lg font-semibold text-slate-900" data-mission-title>Οδηγός εγκατάστασης</h3>
-                        <p class="mt-2 text-sm text-slate-600" data-mission-time>Εκτιμώμενος χρόνος: 10-15 λεπτά.</p>
-                        <a class="mt-4 btn btn-primary w-full" href="../installation-guide.html" data-journey-next-cta data-next-label="Πήγαινε στο επόμενο βήμα">Πήγαινε στο επόμενο βήμα</a>
-                        <p class="mt-3 text-xs text-slate-500">Μπορείς να τσεκάρεις ή να αναιρέσεις κάθε βήμα χειροκίνητα.</p>
+                        <p class="mt-1 text-sm text-slate-600" data-mission-time>Εκτιμώμενος χρόνος: 10-15 λεπτά.</p>
+                        <a href="../installation-guide.html" class="mt-4 btn btn-primary w-full" data-curriculum-next-cta data-next-label="Πήγαινε στο επόμενο βήμα" data-journey-start="beginner">Πήγαινε στο επόμενο βήμα</a>
                     </div>
-
-                    <div class="mission-complete hidden mt-4" data-mission-complete>
-                        Ολοκλήρωσες και τα 9 βήματα. Μπορείς να τα ξαναδείς ή να κάνεις reset προόδου.
+                    <div class="hidden mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-800 font-semibold" data-mission-complete>
+                        Ολοκλήρωσες και τα 9 βήματα. Μπορείς να κάνεις επαναφορά και να ξαναξεκινήσεις.
                     </div>
-
-                    <button class="mt-4 btn btn-secondary w-full" type="button" data-progress-reset>Επαναφορά προόδου</button>
-                    <p class="mt-3 text-xs text-slate-500">Η πρόοδος αποθηκεύεται μόνο στον τρέχοντα browser.</p>
+                    <button type="button" class="mt-4 btn btn-secondary w-full" data-progress-reset>Επαναφορά προόδου</button>
+                    <p class="mt-3 text-xs text-slate-500">Η πρόοδος αποθηκεύεται τοπικά στον browser.</p>
                 </aside>
             </section>
 
             <details class="legacy-details surface-soft mt-8 p-6">
                 <summary>Επιπλέον άρθρα</summary>
-                <p class="mt-3 text-slate-600">Τα παλαιότερα άρθρα μένουν live ως δευτερεύον περιεχόμενο.</p>
+                <p class="mt-3 text-slate-600">Τα παλαιότερα άρθρα παραμένουν ενεργά ως δευτερεύον περιεχόμενο.</p>
                 <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-slate-700">
                     <li><a href="../pda-gia-kafeteries.html" class="text-brand-700 font-semibold hover:underline">PDA για καφετέρια</a></li>
                     <li><a href="../pda-ti-einai.html" class="text-brand-700 font-semibold hover:underline">Τι είναι PDA</a></li>
@@ -661,6 +481,8 @@
                     <li><a href="../paraggelies-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">Παραγγελίες στην εστίαση</a></li>
                     <li><a href="../systima-paraggeliolipsias.html" class="text-brand-700 font-semibold hover:underline">Σύστημα παραγγελιοληψίας</a></li>
                     <li><a href="../qr-menu-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">QR μενού για εστίαση</a></li>
+                    <li><a href="../menu-estiatoriou.html" class="text-brand-700 font-semibold hover:underline">Μενού εστιατορίου</a></li>
+                    <li><a href="../asyrmati-paraggeliolipsia.html" class="text-brand-700 font-semibold hover:underline">Ασύρματη παραγγελιοληψία</a></li>
                 </ul>
             </details>
 
@@ -669,11 +491,11 @@
                 <div class="mt-4 space-y-3">
                     <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
                         <summary class="cursor-pointer font-semibold text-slate-900">Από πού ξεκινάω αν το στήνω πρώτη φορά;</summary>
-                        <p class="mt-2 text-slate-600">Από τον οδηγό εγκατάστασης και μετά στο “Πρώτο μενού και QR”.</p>
+                        <p class="mt-2 text-slate-600">Από τον οδηγό εγκατάστασης και μετά στο βήμα “Πρώτο μενού και QR”.</p>
                     </details>
                     <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Το custom DNS είναι ενσωματωμένη λειτουργία του POSPal;</summary>
-                        <p class="mt-2 text-slate-600">Όχι. Είναι προχωρημένη τεχνική λύση εκτός εφαρμογής και όχι ενσωματωμένη ρύθμιση POSPal.</p>
+                        <summary class="cursor-pointer font-semibold text-slate-900">Το custom DNS είναι ενσωματωμένη ρύθμιση POSPal;</summary>
+                        <p class="mt-2 text-slate-600">Όχι. Είναι προχωρημένη τεχνική λύση εκτός εφαρμογής και όχι ενσωματωμένη δυνατότητα του POSPal.</p>
                     </details>
                     <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
                         <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal είναι φορολογικός POS ή ταμειακή;</summary>
@@ -703,7 +525,7 @@
                         <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
                     </div>
                 </div>
-                <p class="mt-4 text-xs text-slate-500">POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή μηχανή.</p>
+                <p class="mt-4 text-xs text-slate-500">Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή μηχανή.</p>
             </div>
         </div>
     </footer>
