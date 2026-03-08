@@ -83,6 +83,38 @@
     .step-item.is-complete .step-state { background: #c8f6d7; color: #166534; }
     .step-toggle { border: 1px solid #bfd0e7; border-radius: 999px; background: #fff; color: #2f4569; font-size: .75rem; font-weight: 800; padding: 6px 11px; }
     .step-toggle[aria-pressed="true"] { background: #dcfce7; border-color: #86efac; color: #166534; }
+    .is-dev-disabled, .btn:disabled, .step-toggle:disabled {
+      position: relative !important;
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+      transform: none !important;
+      box-shadow: none !important;
+      opacity: .68;
+    }
+    .step-item.is-dev-step-locked {
+      position: relative;
+      overflow: hidden;
+    }
+    .step-item.is-dev-step-locked::after {
+      content: attr(data-dev-label);
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: inherit;
+      background: rgba(15, 23, 42, 0.74);
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .step-item.is-dev-step-locked > * {
+      filter: blur(.4px);
+    }
     .legacy-details summary { cursor: pointer; list-style: none; font-weight: 700; color: #112343; }
     .legacy-details summary::-webkit-details-marker { display: none; }
     .legacy-details summary::after { content: "▾"; float: right; color: #64748b; transition: .2s; }
@@ -95,7 +127,7 @@
     @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; } }
   </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen" data-ui-state="dev-lock">
   <header class="wrap py-5">
     <div class="surface px-5 py-4 flex items-center justify-between gap-4">
       <a href="../index.html" class="flex items-center gap-3">
@@ -124,9 +156,7 @@
           <div class="mt-2 progress-track" aria-hidden="true"><div class="progress-fill" data-progress-percent></div></div>
         </div>
         <div class="mt-5 flex flex-wrap gap-2">
-          <a href="../installation-guide.html" class="btn btn-primary" data-curriculum-next-cta data-next-label="Συνέχισε διαδρομή" data-journey-start="beginner">Συνέχισε διαδρομή</a>
-          <a href="../download/" class="btn btn-secondary">Κατέβασε για Windows</a>
-          <button type="button" class="btn btn-secondary" data-progress-reset>Επαναφορά προόδου</button>
+          <a href="../download/" class="btn btn-secondary" data-dev-lock-keep-label="true">Κατέβασε για Windows</a>
         </div>
       </section>
 

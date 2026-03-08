@@ -2,6 +2,9 @@
   var STORAGE_KEY = "pospal_guides_curriculum_v1";
   var ROOT_SELECTOR = "[data-curriculum-root]";
   var STEP_SELECTOR = "[data-step-id][data-step-order]";
+  var DEV_LOCK_ATTR = "data-ui-state";
+  var DEV_LOCK_VALUE = "dev-lock";
+  var DEV_LOCK_LABEL = "\u03a3\u03b5 \u03b1\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7";
 
   var EVENT_VERSION =
     (window.POSPAL_GA_CONTEXT && window.POSPAL_GA_CONTEXT.event_version) || "v1.1";
@@ -17,6 +20,78 @@
     } catch (error) {
       return false;
     }
+  }
+
+  function isDevLockEnabled() {
+    var body = document.body;
+    return !!(body && body.getAttribute(DEV_LOCK_ATTR) === DEV_LOCK_VALUE);
+  }
+
+  function lockAnchor(anchor, label) {
+    if (!anchor) {
+      return;
+    }
+
+    if (!anchor.hasAttribute("data-dev-original-href")) {
+      anchor.setAttribute("data-dev-original-href", anchor.getAttribute("href") || "");
+    }
+
+    anchor.removeAttribute("href");
+    anchor.setAttribute("aria-disabled", "true");
+    anchor.setAttribute("tabindex", "-1");
+    anchor.classList.add("is-dev-disabled");
+    if (label) {
+      anchor.textContent = label;
+    }
+
+    anchor.addEventListener(
+      "click",
+      function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      true
+    );
+  }
+
+  function lockButton(button, label) {
+    if (!button) {
+      return;
+    }
+
+    button.disabled = true;
+    button.setAttribute("aria-disabled", "true");
+    button.classList.add("is-dev-disabled");
+    if (label) {
+      button.textContent = label;
+    }
+  }
+
+  function shouldKeepOriginalLabel(element) {
+    return element && element.getAttribute("data-dev-lock-keep-label") === "true";
+  }
+
+  function lockStepItems(label) {
+    var steps = document.querySelectorAll(".step-item");
+    steps.forEach(function (step) {
+      step.classList.add("is-dev-step-locked");
+      step.setAttribute("data-dev-label", label || DEV_LOCK_LABEL);
+      step.setAttribute("aria-disabled", "true");
+    });
+  }
+
+  function applyDevLockUi() {
+    var controls = document.querySelectorAll("a.btn, button.btn, button.step-toggle");
+    controls.forEach(function (control) {
+      var label = shouldKeepOriginalLabel(control) ? "" : DEV_LOCK_LABEL;
+      var tagName = (control.tagName || "").toLowerCase();
+      if (tagName === "a") {
+        lockAnchor(control, label);
+        return;
+      }
+      lockButton(control, label);
+    });
+    lockStepItems(DEV_LOCK_LABEL);
   }
 
   var storageEnabled = canUseStorage();
@@ -386,6 +461,11 @@
 
   function init() {
     if (!document.querySelector(ROOT_SELECTOR)) {
+      return;
+    }
+
+    if (isDevLockEnabled()) {
+      applyDevLockUi();
       return;
     }
 
