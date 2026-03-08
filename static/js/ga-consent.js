@@ -348,8 +348,10 @@
       ".pospal-consent-row span{display:block;margin-top:2px;font-size:.8rem;color:#475569}" +
       ".pospal-consent-switch{width:18px;height:18px;margin-top:2px}" +
       ".pospal-consent-panel-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin-top:12px}" +
-      ".pospal-cookie-settings-float{position:fixed;right:12px;right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147482999;border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:8px 12px;font-size:.8rem;font-weight:600;color:#0f172a;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.16)}" +
-      "@media (max-width:640px){.pospal-consent-banner,.pospal-consent-panel{left:10px;right:10px}.pospal-cookie-settings-float{padding:7px 10px;font-size:.75rem;bottom:calc(10px + env(safe-area-inset-bottom,0px))}}";
+      ".pospal-cookie-settings-float{position:fixed;left:12px;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147482999;border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#0f172a;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.16)}" +
+      ".pospal-cookie-settings-float:hover{background:#f8fafc}" +
+      ".pospal-cookie-settings-icon{display:block;width:20px;height:20px}" +
+      "@media (max-width:640px){.pospal-consent-banner,.pospal-consent-panel{left:10px;right:10px}.pospal-cookie-settings-float{width:40px;height:40px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}.pospal-cookie-settings-icon{width:18px;height:18px}}";
     document.head.appendChild(style);
   }
 
@@ -622,7 +624,12 @@
     trigger.type = "button";
     trigger.className = "pospal-cookie-settings-float";
     trigger.setAttribute("data-pospal-cookie-settings-floating", "true");
-    trigger.textContent = "Ρυθμίσεις cookies";
+    trigger.setAttribute("aria-label", "Ρυθμίσεις cookies");
+    trigger.setAttribute("title", "Ρυθμίσεις cookies");
+    trigger.innerHTML =
+      '<svg class="pospal-cookie-settings-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+      '<path fill="currentColor" d="M7.5 3A1.5 1.5 0 0 0 6 4.5c0 .38.14.73.37 1.01A1.5 1.5 0 0 0 5.25 8.4a1.5 1.5 0 0 0-.7 2.68A1.5 1.5 0 0 0 5.5 13.8 1.5 1.5 0 0 0 6.75 16.7 1.5 1.5 0 0 0 9 18.5h.2c.64 0 1.2-.4 1.41-.99.27.16.58.24.89.24h1.2c.31 0 .62-.08.89-.24.21.59.77.99 1.41.99h.2a1.5 1.5 0 0 0 2.25-1.8 1.5 1.5 0 0 0 1.25-2.9 1.5 1.5 0 0 0 .95-2.72 1.5 1.5 0 0 0-.7-2.68 1.5 1.5 0 0 0-1.12-2.89c.23-.28.37-.63.37-1.01A1.5 1.5 0 0 0 16.5 3h-9zM9.75 9.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm4.5 1.25a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0z"/>' +
+      "</svg>";
     trigger.addEventListener("click", function () {
       window.POSPALConsent.openSettings();
     });
@@ -633,10 +640,8 @@
   }
 
   function ensureSettingsEntryPoint() {
-    var hasFooterTarget = injectSettingsLinkInFooter();
-    if (!hasFooterTarget) {
-      injectFloatingSettingsButton();
-    }
+    injectSettingsLinkInFooter();
+    injectFloatingSettingsButton();
   }
 
   function applyConsentState(nextState) {
