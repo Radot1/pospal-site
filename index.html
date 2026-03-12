@@ -400,6 +400,102 @@
             font-weight: 700;
         }
 
+        .mobile-intro-compact,
+        .hero-mobile-value,
+        .hero-mobile-actions,
+        .mobile-sticky-cta {
+            display: none;
+        }
+
+        .hero-mobile-value {
+            padding: 15px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(187, 247, 208, 0.85);
+            background:
+                radial-gradient(circle at 88% 10%, rgba(34, 197, 94, 0.14), transparent 44%),
+                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .hero-mobile-value-title {
+            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.25;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-mobile-value-list {
+            margin-top: 10px;
+            display: grid;
+            gap: 8px;
+            color: #334155;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .hero-mobile-value-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .hero-mobile-value-list li::before {
+            content: "\2713";
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            margin-top: 1px;
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .hero-mobile-actions {
+            gap: 10px;
+            align-items: stretch;
+        }
+
+        .hero-mobile-actions .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .mobile-sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 70;
+            padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+            background: linear-gradient(180deg, rgba(241, 245, 249, 0) 0%, rgba(241, 245, 249, 0.94) 36%, rgba(241, 245, 249, 0.98) 100%);
+            backdrop-filter: blur(6px);
+        }
+
+        .mobile-sticky-cta-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mobile-sticky-cta .btn {
+            padding: 11px 12px;
+            font-size: 0.9rem;
+            box-shadow: none;
+        }
+
+        .mobile-sticky-cta .btn-secondary {
+            background: #ffffff;
+        }
+
         .experience-demo {
             z-index: 2;
             position: relative;
@@ -1082,6 +1178,10 @@
                 padding-top: 24px;
             }
 
+            main {
+                padding-bottom: 136px;
+            }
+
             .hero-copy {
                 gap: 12px;
             }
@@ -1118,12 +1218,51 @@
                 display: none;
             }
 
+            .hero-copy .text-base {
+                display: none;
+            }
+
             .hero-copy .text-base p {
                 margin-top: 4px;
             }
 
+            .mobile-intro-compact {
+                display: block;
+                color: #475569;
+            }
+
+            .hero-mobile-value {
+                display: block;
+            }
+
+            .hero-mobile-actions {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero-desktop-download,
+            .hero-includes-inline,
+            .hero-scroll-hint {
+                display: none !important;
+            }
+
+            .mobile-sticky-cta {
+                display: block;
+            }
+
             .hero-copy > .flex {
                 gap: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .mobile-sticky-cta {
+                padding-inline: 10px;
+            }
+
+            .mobile-sticky-cta .btn {
+                font-size: 0.84rem;
+                padding: 10px 10px;
             }
         }
 
@@ -1500,6 +1639,18 @@
                                 <span>Γρήγορη ροή</span>
                                 <span>Χωρίς δέσμευση</span>
                             </div>
+                            <p class="mobile-intro-compact">Παραγγελιοληψία εκτός Wi-Fi και QR μενού με αυτόματη ενημέρωση.</p>
+                            <div class="hero-mobile-value">
+                                <h2 class="hero-mobile-value-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
+                                <ul class="hero-mobile-value-list">
+                                    <li>Χωρίς κάρτα και χωρίς στοιχεία.</li>
+                                    <li>Παραγγελιοληψία, τραπέζια και QR μενού στο ίδιο πακέτο.</li>
+                                </ul>
+                            </div>
+                            <div class="hero-mobile-actions">
+                                <a href="./POSPal_Demo_Index.html" class="btn btn-primary">Δες Demo</a>
+                                <a href="/download/" class="btn btn-secondary">Κατέβασε για Windows</a>
+                            </div>
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
                             </div>
@@ -1512,7 +1663,7 @@
                                     <div class="hero-includes-item">Απλή λειτουργία</div>
                                 </div>
                             </div>
-                            <div class="flex">
+                            <div class="flex hero-desktop-download">
                                 <a href="/download/" class="btn btn-primary hero-download-cta">Κατέβασε για Windows</a>
                             </div>
                             <div class="hero-scroll-hint">
@@ -1815,6 +1966,13 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div class="mobile-sticky-cta" aria-label="Γρήγορες ενέργειες">
+        <div class="mobile-sticky-cta-inner">
+            <a href="./POSPal_Demo_Index.html" class="btn btn-primary">Δες Demo</a>
+            <a href="/download/" class="btn btn-secondary">Κατέβασε για Windows</a>
+        </div>
     </div>
 
     <script>
