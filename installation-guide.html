@@ -20,7 +20,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Οδηγός εγκατάστασης POSPal σε Windows | POSPal</title>
-    <meta name="description" content="Οδηγός εγκατάστασης POSPal με λήψη POSPal-win-Setup.exe, βασικά βήματα ρύθμισης και επόμενες ενέργειες για την πρώτη βάρδια.">
+    <meta name="description" content="Οδηγός εγκατάστασης POSPal με Βήμα 0 για στήσιμο εκτυπωτή, λήψη POSPal-win-Setup.exe και έλεγχο πρώτης βάρδιας.">
     <link rel="canonical" href="https://pospal.gr/installation-guide.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="el_GR">
@@ -140,6 +140,14 @@
                 },
                 {
                     "@type": "Question",
+                    "name": "Μπορώ να δοκιμάσω το POSPal χωρίς εκτυπωτή;",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ναι, μπορείς να δοκιμάσεις την εφαρμογή χωρίς εκτυπωτή. Για κανονική λειτουργία με εκτύπωση χαρτιού στη βάρδια χρειάζεται ρυθμισμένος εκτυπωτής."
+                    }
+                },
+                {
+                    "@type": "Question",
                     "name": "Το POSPal είναι φορολογικός POS ή ταμειακή;",
                     "acceptedAnswer": {
                         "@type": "Answer",
@@ -171,9 +179,10 @@
         <div class="site-container">
             <article class="surface-soft p-8">
                 <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Οδηγός εγκατάστασης POSPal</h1>
-                <p class="mt-3 text-slate-600 text-lg">Ακολούθησε τα παρακάτω βήματα για να κάνεις λήψη, εγκατάσταση και πρώτο έλεγχο του POSPal χωρίς καθυστερήσεις.</p>
+                <p class="mt-3 text-slate-600 text-lg">Ακολούθησε τα παρακάτω βήματα για να κάνεις πρώτα έλεγχο εκτυπωτή και μετά λήψη, εγκατάσταση και πρώτο έλεγχο του POSPal χωρίς καθυστερήσεις.</p>
 
                 <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="/guides/stisimo-ektypoti/" class="btn btn-secondary">Βήμα 0: Στήσιμο εκτυπωτή</a>
                     <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
                     <a href="/systima-paraggeliolipsias.html" class="btn btn-secondary">Δες το σύστημα</a>
                     <a href="/times.html" class="btn btn-secondary">Επόμενα βήματα</a>
@@ -182,11 +191,22 @@
                 <div class="mt-8 grid gap-4">
                     <section class="rounded-2xl border border-slate-200 bg-white p-6">
                         <h2 class="text-lg font-semibold text-slate-900">Πριν ξεκινήσεις</h2>
-                        <p class="mt-2 text-slate-600">Πριν την εγκατάσταση, έλεγξε τα βασικά ώστε η διαδικασία να ολοκληρωθεί χωρίς διακοπές.</p>
+                        <p class="mt-2 text-slate-600">Πριν την εγκατάσταση, έλεγξε τα βασικά ώστε η διαδικασία να ολοκληρωθεί χωρίς διακοπές και να είσαι έτοιμος για εκτύπωση στη βάρδια.</p>
                         <ul class="mt-3 space-y-2 text-slate-700">
                             <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Πρόσβαση σε υπολογιστή Windows.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Εκτυπωτής διαθέσιμος στα Windows με επιτυχημένη δοκιμαστική σελίδα.</span></li>
                             <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Σταθερή σύνδεση για τη λήψη του installer.</span></li>
                             <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Δικαιώματα εγκατάστασης στον λογαριασμό χρήστη.</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                        <h2 class="text-lg font-semibold text-slate-900">Βήμα 0: Στήσιμο εκτυπωτή (πριν την εγκατάσταση)</h2>
+                        <p class="mt-2 text-slate-600">Ο εκτυπωτής πρέπει να είναι έτοιμος για να δουλέψει η ροή στην πράξη. Μπορείς να δοκιμάσεις την εφαρμογή χωρίς εκτυπωτή, αλλά για κανονική λειτουργία χρειάζεται ρύθμιση εκτυπωτή.</p>
+                        <ul class="mt-3 space-y-2 text-slate-700">
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Άνοιξε τον οδηγό <a href="/guides/stisimo-ektypoti/" class="text-brand-700 font-semibold hover:underline">Στήσιμο εκτυπωτή</a>.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Επιβεβαίωσε ότι ο εκτυπωτής εμφανίζεται στα Windows.</span></li>
+                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Κάνε δοκιμαστική εκτύπωση πριν συνεχίσεις στο Βήμα 1.</span></li>
                         </ul>
                     </section>
 
@@ -258,6 +278,10 @@
                     <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
                         <summary class="cursor-pointer font-semibold text-slate-900">Τι κάνω αν δεν ξεκινά ο installer;</summary>
                         <p class="mt-2 text-slate-600">Κάνε ξανά λήψη από τον επίσημο σύνδεσμο του site ή το επίσημο GitHub release. Αν εμφανιστεί SmartScreen, επίλεξε «Περισσότερες πληροφορίες» και μετά «Εκτέλεση».</p>
+                    </details>
+                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
+                        <summary class="cursor-pointer font-semibold text-slate-900">Μπορώ να δοκιμάσω το POSPal χωρίς εκτυπωτή;</summary>
+                        <p class="mt-2 text-slate-600">Ναι, μπορείς να δοκιμάσεις τη βασική ροή χωρίς εκτυπωτή. Για κανονική λειτουργία με εκτύπωση χαρτιού στη βάρδια χρειάζεται ρυθμισμένος εκτυπωτής.</p>
                     </details>
                     <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
                         <summary class="cursor-pointer font-semibold text-slate-900">Ποια είναι τα επόμενα βήματα μετά την εγκατάσταση;</summary>

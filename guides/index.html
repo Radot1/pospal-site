@@ -9,7 +9,7 @@
     window.gtag("config", "AW-17981190399");
   </script>
   <script defer src="../static/js/ga-events.js"></script>
-  <script defer src="../static/js/guides-curriculum.js"></script>
+  <script defer src="../static/js/academy-progress.js"></script>
   <meta charset="UTF-8">
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -19,281 +19,748 @@
     })(window, document, "clarity", "script", "vnzrn7y23s");
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Οδηγοί POSPal: δομημένη διαδρομή βήμα-βήμα | POSPal</title>
-  <meta name="description" content="Διαδρομή 3 επιπέδων με 9 βήματα για εγκατάσταση, παραγγελιοληψία, QR μενού και εξειδικευμένο στήσιμο.">
+  <title>POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal</title>
+  <meta name="description" content="POSPal Academy με βίντεο-οδηγούς για στήσιμο εκτυπωτή, εγκατάσταση και καθημερινή λειτουργία στην εστίαση.">
   <link rel="canonical" href="https://pospal.gr/guides/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
   <meta property="og:site_name" content="POSPal">
-  <meta property="og:title" content="Οδηγοί POSPal: δομημένη διαδρομή βήμα-βήμα | POSPal">
-  <meta property="og:description" content="Καθαρή σειρά ενεργειών: αρχή, προχωρημένο, εξειδικευμένο.">
+  <meta property="og:title" content="POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal">
+  <meta property="og:description" content="Μάθε το POSPal με σύντομα, πρακτικά βίντεο βήμα-βήμα.">
   <meta property="og:url" content="https://pospal.gr/guides/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Οδηγοί POSPal: δομημένη διαδρομή βήμα-βήμα | POSPal">
-  <meta name="twitter:description" content="Συνέχισε από το πρώτο ανοιχτό βήμα και ολοκλήρωσε τη διαδρομή σου.">
+  <meta name="twitter:title" content="POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal">
+  <meta name="twitter:description" content="Video-first οδηγίες για πραγματική χρήση στη βάρδια.">
   <link rel="icon" href="../app_icon.ico">
   <link rel="apple-touch-icon" href="../app_icon.ico">
   <link rel="stylesheet" href="../static/css/fonts.css">
-  <script src="../static/vendor/tailwindcdn.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"], display: ["Inter", "system-ui", "sans-serif"] },
-          colors: { brand: { 500: "#16a34a", 600: "#15803d", 700: "#166534" } }
-        }
-      }
-    };
-  </script>
   <style>
+    :root {
+      --bg: #eef3f8;
+      --surface: #ffffff;
+      --line: #d5dfeb;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0f766e;
+      --accent-2: #14b8a6;
+      --top: #10243f;
+      --ok-bg: #dcfce7;
+      --ok-text: #166534;
+      --in-bg: #dbeafe;
+      --in-text: #1e40af;
+      --new-bg: #e2e8f0;
+      --new-text: #334155;
+      --soon-bg: #ffedd5;
+      --soon-text: #9a3412;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: "Inter", system-ui, sans-serif;
-      color: #10213d;
-      background:
-        radial-gradient(circle at 0% -12%, rgba(22, 163, 74, 0.2), transparent 35%),
-        radial-gradient(circle at 105% 0%, rgba(245, 158, 11, 0.16), transparent 30%),
-        linear-gradient(180deg, #f4faf6 0%, #f6f8ff 48%, #f8fafc 100%);
+      color: var(--text);
+      background: radial-gradient(circle at 0% 0%, rgba(20, 184, 166, 0.14), transparent 30%), var(--bg);
     }
-    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
-    .surface { background: #fff; border: 1px solid #d8e2ef; border-radius: 22px; box-shadow: 0 14px 26px rgba(16, 33, 61, 0.08); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 13px 24px; font-weight: 700; transition: 0.2s; }
-    .btn-primary { color: #fff; background: linear-gradient(135deg, #16a34a, #15803d); box-shadow: 0 15px 24px rgba(22, 163, 74, 0.26); }
-    .btn-secondary { color: #166534; background: #fff; border: 1px solid rgba(22, 163, 74, 0.5); }
-    .btn:hover { transform: translateY(-1px); }
-    .progress-track { height: 12px; border-radius: 999px; overflow: hidden; background: #dde5f2; }
-    .progress-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #16a34a, #65a30d, #f59e0b); transition: width .25s ease; }
-    .module-block { border: 1px solid #d8e2ef; border-radius: 18px; background: #fff; padding: 18px; box-shadow: 0 10px 20px rgba(16, 33, 61, 0.06); transition: .2s; }
-    .module-block[data-module-dimmed="true"] { opacity: .62; }
-    .module-status { display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px; font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; background: #e6edf8; color: #42597c; }
-    .module-block[data-module-complete="true"] .module-status { background: #c8f6d7; color: #166534; }
-    .step-item { border: 1px solid #d8e2ef; border-radius: 14px; background: #f9fbff; padding: 14px; display: grid; gap: 10px; grid-template-columns: minmax(0,1fr); transition: .2s; }
-    .step-item.is-next { border-color: #f59e0b; background: #fff9ed; box-shadow: 0 12px 22px rgba(245, 158, 11, 0.2); }
-    .step-item.is-complete { border-color: #86efac; background: #eefff3; }
-    .step-item.is-dimmed:not(.is-complete) { opacity: .66; }
-    .step-main { display: flex; gap: 12px; align-items: flex-start; }
-    .step-order { width: 34px; height: 34px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; background: #cff6dd; border: 1px solid #9ee5ba; color: #14532d; }
-    .step-link { color: #132447; text-decoration: none; font-size: 1.28rem; font-weight: 700; line-height: 1.15; }
-    .step-link:hover { text-decoration: underline; color: #0f5132; }
-    .step-desc { margin: 6px 0 0; color: #4d6080; }
-    .step-meta { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
-    .step-time { border-radius: 999px; padding: 5px 10px; font-size: .74rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; background: #e7eef9; color: #3a5985; }
-    .step-state { border-radius: 999px; padding: 5px 10px; font-size: .74rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; background: #e5ebf6; color: #42597c; }
-    .step-item.is-next .step-state { background: #fde8be; color: #92570b; }
-    .step-item.is-complete .step-state { background: #c8f6d7; color: #166534; }
-    .step-toggle { border: 1px solid #bfd0e7; border-radius: 999px; background: #fff; color: #2f4569; font-size: .75rem; font-weight: 800; padding: 6px 11px; }
-    .step-toggle[aria-pressed="true"] { background: #dcfce7; border-color: #86efac; color: #166534; }
-    .is-dev-disabled, .btn:disabled, .step-toggle:disabled {
-      position: relative !important;
-      cursor: not-allowed !important;
-      pointer-events: none !important;
-      transform: none !important;
-      box-shadow: none !important;
-      opacity: .68;
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
     }
-    .step-item.is-dev-step-locked {
-      position: relative;
-      overflow: hidden;
-    }
-    .step-item.is-dev-step-locked::after {
-      content: attr(data-dev-label);
-      position: absolute;
-      inset: 0;
+
+    .topbar {
+      margin-top: 16px;
+      background: var(--top);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      padding: 12px 16px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      border-radius: inherit;
-      background: rgba(15, 23, 42, 0.74);
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
       color: #fff;
-      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .brand img { width: 30px; height: 30px; border-radius: 9px; }
+
+    .topbar nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .92rem;
+    }
+
+    .topbar nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .topbar nav a:hover { color: #fff; }
+
+    .hero {
+      margin-top: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .hero-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: linear-gradient(180deg, #f8fffd 0%, #ffffff 100%);
+    }
+
+    .hero-card h2 {
+      margin: 0;
+      font-size: 1.08rem;
       font-weight: 800;
-      letter-spacing: .06em;
+    }
+
+    .stats {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .stats strong { color: var(--text); }
+
+    .continue-btn {
+      margin-top: 14px;
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 11px 14px;
+    }
+
+    .progress-wrap {
+      margin-top: 12px;
+    }
+
+    .progress-track {
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width .2s ease;
+    }
+
+    .progress-meta {
+      margin: 8px 0 0;
+      font-size: .78rem;
+      color: #475569;
+      font-weight: 700;
+      letter-spacing: .03em;
       text-transform: uppercase;
-      z-index: 5;
+    }
+
+    .hero-main h1 {
+      margin: 0;
+      font-size: 2.1rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-main p {
+      margin: 10px 0 0;
+      max-width: 68ch;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .hero-meta {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hero-meta span {
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 800;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .catalog {
+      margin-top: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .catalog-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .catalog-head h2 {
+      margin: 0;
+      font-size: 1.16rem;
+    }
+
+    .search-input {
+      width: 290px;
+      max-width: 100%;
+      border: 1px solid #c7d3e2;
+      border-radius: 999px;
+      padding: 9px 12px;
+      font: inherit;
+      font-size: .92rem;
+      color: var(--text);
+      background: #fff;
+    }
+
+    details.module {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    details.module summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 12px 14px;
+      font-weight: 800;
+      border-bottom: 1px solid #e7edf5;
+      background: #f8fbff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .module-meta {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #475569;
+      text-transform: uppercase;
+    }
+
+    .lesson-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) 90px 130px 140px;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 14px;
+      border-top: 1px solid #eef2f7;
+    }
+
+    .lesson-row[data-hidden="true"] { display: none; }
+
+    .lesson-main {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .lesson-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #94a3b8;
+      flex: 0 0 auto;
+    }
+
+    .lesson-row[data-lesson-state="started"] .lesson-dot { background: #2563eb; }
+    .lesson-row[data-lesson-state="completed"] .lesson-dot { background: #16a34a; }
+
+    .lesson-title {
+      margin: 0;
+      font-weight: 700;
+      font-size: .95rem;
+      color: #0f172a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .lesson-sub {
+      font-size: .78rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 700;
+    }
+
+    .duration {
+      font-size: .87rem;
+      color: #334155;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .status {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .status-completed { background: var(--ok-bg); color: var(--ok-text); }
+    .status-started { background: var(--in-bg); color: var(--in-text); }
+    .status-new { background: var(--new-bg); color: var(--new-text); }
+    .status-soon { background: var(--soon-bg); color: var(--soon-text); }
+
+    .watch {
+      justify-self: end;
+      border-radius: 999px;
+      border: 1px solid #9bb0cd;
+      padding: 8px 12px;
+      background: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: .86rem;
+    }
+
+    .watch.primary {
+      border-color: var(--accent);
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .watch[aria-disabled="true"] {
       pointer-events: none;
+      opacity: .58;
     }
-    .step-item.is-dev-step-locked > * {
-      filter: blur(.4px);
+
+    .footer {
+      margin: 14px 0 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: .84rem;
+      color: #475569;
     }
-    .legacy-details summary { cursor: pointer; list-style: none; font-weight: 700; color: #112343; }
-    .legacy-details summary::-webkit-details-marker { display: none; }
-    .legacy-details summary::after { content: "▾"; float: right; color: #64748b; transition: .2s; }
-    .legacy-details[open] summary::after { transform: rotate(180deg); }
-    @media (min-width: 980px) {
-      .step-item { grid-template-columns: minmax(0,1fr) auto; min-height: 102px; }
-      .step-actions { justify-content: flex-end; }
+
+    .footer a { color: #0f172a; text-decoration: none; font-weight: 700; }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .lesson-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .duration,
+      .status,
+      .watch {
+        justify-self: start;
+        margin-top: 4px;
+      }
     }
-    @media (max-width: 640px) { .btn { width: 100%; } .step-link { font-size: 1.15rem; } }
-    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; } }
   </style>
 </head>
-<body class="min-h-screen" data-ui-state="dev-lock">
-  <header class="wrap py-5">
-    <div class="surface px-5 py-4 flex items-center justify-between gap-4">
-      <a href="../index.html" class="flex items-center gap-3">
-        <img src="../app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-        <div>
-          <p class="font-semibold text-slate-900 leading-none">POSPal</p>
-          <p class="text-xs text-slate-500">Ροή παραγγελιοληψίας για εστίαση</p>
-        </div>
+<body>
+  <header class="wrap">
+    <div class="topbar">
+      <a class="brand" href="../index.html">
+        <img src="../app_icon.ico" alt="POSPal">
+        <span>POSPal Academy</span>
       </a>
-      <nav class="hidden sm:flex items-center gap-5 text-sm font-medium text-slate-600">
-        <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-        <a href="../times.html" class="hover:text-slate-900">Τιμές</a>
-        <a href="./index.html" class="text-slate-900">Οδηγοί</a>
-        <a href="../download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
+      <nav>
+        <a href="../index.html">Αρχική</a>
+        <a href="../POSPal_Demo_Index.html">Demo</a>
+        <a href="../download/">Λήψη για Windows</a>
       </nav>
     </div>
   </header>
 
-  <main class="pb-16">
-    <div class="wrap">
-      <section class="surface p-7">
-        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.06]">Οδηγοί POSPal με καθαρή, πρακτική σειρά</h1>
-        <p class="mt-3 text-lg text-slate-600 max-w-[62ch]">Τρία επίπεδα, εννέα βήματα και πάντα ξεκάθαρο επόμενο βήμα.</p>
-        <div class="mt-5 max-w-3xl">
-          <p class="text-sm font-semibold text-slate-700" data-progress-count>0/9 ολοκληρωμένα</p>
-          <div class="mt-2 progress-track" aria-hidden="true"><div class="progress-fill" data-progress-percent></div></div>
-        </div>
-        <div class="mt-5 flex flex-wrap gap-2">
-          <a href="../download/" class="btn btn-secondary" data-dev-lock-keep-label="true">Κατέβασε για Windows</a>
-        </div>
-      </section>
-
-      <section class="mt-4 grid gap-3" data-curriculum-root id="curriculum-root">
-        <article class="module-block" data-module="beginner">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
-            <div>
-              <p class="m-0 text-xs font-extrabold uppercase tracking-[0.06em] text-sky-700">Αρχή • 30-45'</p>
-              <h2 class="m-0 mt-1 text-3xl font-semibold text-slate-900">Εκκίνηση συστήματος</h2>
-              <p class="m-0 mt-1 text-slate-600">Στήσιμο βάσης, πρώτο μενού και έλεγχος πρώτης εβδομάδας.</p>
-            </div>
-            <span class="module-status" data-module-status>Δεν ξεκίνησε</span>
-          </div>
-          <ol class="m-0 p-0 list-none grid gap-2">
-            <li class="step-item" data-step-id="beginner_install" data-step-level="beginner" data-step-order="1" data-step-link="../installation-guide.html" data-step-time="10-15 λεπτά">
-              <div class="step-main"><span class="step-order">1</span><div><a href="../installation-guide.html" class="step-link" data-step-link>Οδηγός εγκατάστασης</a><p class="step-desc">Λήψη, βασικές ρυθμίσεις και πρώτη σύνδεση.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-15 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="beginner_menu_qr" data-step-level="beginner" data-step-order="2" data-step-link="./proto-menou-kai-qr/" data-step-time="10-15 λεπτά">
-              <div class="step-main"><span class="step-order">2</span><div><a href="./proto-menou-kai-qr/" class="step-link" data-step-link>Πρώτο μενού και QR</a><p class="step-desc">Κατηγορίες, πρώτα είδη και δημοσίευση QR μενού.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-15 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="beginner_first_week" data-step-level="beginner" data-step-order="3" data-step-link="./first-week-optimization/" data-step-time="10-15 λεπτά">
-              <div class="step-main"><span class="step-order">3</span><div><a href="./first-week-optimization/" class="step-link" data-step-link>Πρώτη εβδομάδα</a><p class="step-desc">Σταθεροποίηση ροής και διορθώσεις με την ομάδα.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-15 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-          </ol>
-        </article>
-
-        <article class="module-block" data-module="advanced">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
-            <div>
-              <p class="m-0 text-xs font-extrabold uppercase tracking-[0.06em] text-sky-700">Προχωρημένο • 20-30'</p>
-              <h2 class="m-0 mt-1 text-3xl font-semibold text-slate-900">Καθημερινή λειτουργία</h2>
-              <p class="m-0 mt-1 text-slate-600">Ροή παραγγελιοληψίας, λογαριασμός και ενεργοποίηση.</p>
-            </div>
-            <span class="module-status" data-module-status>Δεν ξεκίνησε</span>
-          </div>
-          <ol class="m-0 p-0 list-none grid gap-2">
-            <li class="step-item" data-step-id="advanced_order_flow" data-step-level="advanced" data-step-order="4" data-step-link="../pda-pos-leitourgei.html" data-step-time="7-10 λεπτά">
-              <div class="step-main"><span class="step-order">4</span><div><a href="../pda-pos-leitourgei.html" class="step-link" data-step-link>Ροή παραγγελιοληψίας</a><p class="step-desc">Ενιαία διαδικασία για κάθε σερβιτόρο στη βάρδια.</p></div></div>
-              <div class="step-meta"><span class="step-time">7-10 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="advanced_account_payments" data-step-level="advanced" data-step-order="5" data-step-link="./logariasmos-kai-pliromes/" data-step-time="6-10 λεπτά">
-              <div class="step-main"><span class="step-order">5</span><div><a href="./logariasmos-kai-pliromes/" class="step-link" data-step-link>Λογαριασμός και πληρωμές</a><p class="step-desc">Δοκιμή, συνδρομή και billing ενέργειες.</p></div></div>
-              <div class="step-meta"><span class="step-time">6-10 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="advanced_pricing_activation" data-step-level="advanced" data-step-order="6" data-step-link="../times.html" data-step-time="5-8 λεπτά">
-              <div class="step-main"><span class="step-order">6</span><div><a href="../times.html" class="step-link" data-step-link>Τιμές και ενεργοποίηση</a><p class="step-desc">Ξεκάθαρο κόστος και συνέχεια προς αγορά άδειας.</p></div></div>
-              <div class="step-meta"><span class="step-time">5-8 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-          </ol>
-        </article>
-
-        <article class="module-block" data-module="expert">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
-            <div>
-              <p class="m-0 text-xs font-extrabold uppercase tracking-[0.06em] text-sky-700">Εξειδικευμένο • 30-60'</p>
-              <h2 class="m-0 mt-1 text-3xl font-semibold text-slate-900">Εξειδικευμένο στήσιμο</h2>
-              <p class="m-0 mt-1 text-slate-600">Στήσιμο beach bar, custom DNS τεχνική λύση και εποχική οργάνωση.</p>
-            </div>
-            <span class="module-status" data-module-status>Δεν ξεκίνησε</span>
-          </div>
-          <ol class="m-0 p-0 list-none grid gap-2">
-            <li class="step-item" data-step-id="expert_beach_setup" data-step-level="expert" data-step-order="7" data-step-link="./beach-bar-setup.html" data-step-time="10-20 λεπτά">
-              <div class="step-main"><span class="step-order">7</span><div><a href="./beach-bar-setup.html" class="step-link" data-step-link>Στήσιμο beach bar</a><p class="step-desc">Στήσιμο για τραπέζια, πακέτο και γρήγορη εξυπηρέτηση.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-20 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="expert_dns_custom" data-step-level="expert" data-step-order="8" data-step-link="./beach-bar-setup.html#dns-custom-access" data-step-time="10-20 λεπτά">
-              <div class="step-main"><span class="step-order">8</span><div><a href="./beach-bar-setup.html#dns-custom-access" class="step-link" data-step-link>Custom DNS τεχνική λύση</a><p class="step-desc">Προχωρημένη τεχνική λύση εκτός εφαρμογής, όχι ενσωματωμένη δυνατότητα.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-20 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-            <li class="step-item" data-step-id="expert_seasonal" data-step-level="expert" data-step-order="9" data-step-link="./seasonal-management/" data-step-time="10-20 λεπτά">
-              <div class="step-main"><span class="step-order">9</span><div><a href="./seasonal-management/" class="step-link" data-step-link>Εποχική οργάνωση</a><p class="step-desc">Οργάνωση ομάδας σε περιόδους αιχμής.</p></div></div>
-              <div class="step-meta"><span class="step-time">10-20 λεπτά</span><div class="step-actions flex flex-wrap gap-2 items-center"><span class="step-state" data-step-state>Εκκρεμεί</span><button type="button" class="step-toggle" data-step-toggle aria-pressed="false">Ολοκληρώθηκε</button></div></div>
-            </li>
-          </ol>
-        </article>
-      </section>
-
-      <details class="legacy-details surface mt-8 p-6">
-        <summary>Επιπλέον άρθρα</summary>
-        <p class="mt-3 text-slate-600">Τα παλιότερα άρθρα παραμένουν διαθέσιμα ως δευτερεύον περιεχόμενο.</p>
-        <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-slate-700">
-          <li><a href="../pda-gia-kafeteries.html" class="text-brand-700 font-semibold hover:underline">PDA για καφετέρια</a></li>
-          <li><a href="../pda-ti-einai.html" class="text-brand-700 font-semibold hover:underline">Τι είναι PDA</a></li>
-          <li><a href="../paraggelio-lipsia-gia-beach-bar.html" class="text-brand-700 font-semibold hover:underline">Παραγγελιοληψία για beach bar</a></li>
-          <li><a href="../paraggelies-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">Παραγγελίες στην εστίαση</a></li>
-          <li><a href="../systima-paraggeliolipsias.html" class="text-brand-700 font-semibold hover:underline">Σύστημα παραγγελιοληψίας</a></li>
-          <li><a href="../qr-menu-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">QR μενού για εστίαση</a></li>
-          <li><a href="../menu-estiatoriou.html" class="text-brand-700 font-semibold hover:underline">Μενού εστιατορίου</a></li>
-          <li><a href="../asyrmati-paraggeliolipsia.html" class="text-brand-700 font-semibold hover:underline">Ασύρματη παραγγελιοληψία</a></li>
+  <main class="wrap">
+    <section class="hero">
+      <aside class="hero-card">
+        <h2>Κατάσταση μαθήματος</h2>
+        <ul class="stats">
+          <li><strong>Μάθημα:</strong> Βασική εκκίνηση POSPal</li>
+          <li><strong>Δομή:</strong> 3 ενότητες</li>
+          <li><strong>Στόχος:</strong> πρακτική λειτουργία στη βάρδια</li>
+          <li><strong>Πρόοδος:</strong> <span data-progress-count>0/1</span></li>
         </ul>
+        <div class="progress-wrap">
+          <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
+          <p class="progress-meta" data-progress-meta>1 διαθέσιμο μάθημα</p>
+        </div>
+        <a class="continue-btn" data-continue-btn href="./stisimo-ektypoti/">Συνέχισε μάθημα</a>
+      </aside>
+
+      <div class="hero-main">
+        <h1>Video-first οδηγοί για POSPal</h1>
+        <p>Η ακαδημία είναι φτιαγμένη για εκπαίδευση ομάδας. Κάθε μάθημα έχει βίντεο, σύντομο έλεγχο ολοκλήρωσης και σαφή συνέχεια στο επόμενο βήμα.</p>
+        <div class="hero-meta">
+          <span>Πρακτική εκπαίδευση</span>
+          <span>Χωρίς περιττό κείμενο</span>
+          <span>Βήμα-βήμα εκτέλεση</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-head">
+        <h2>Κατάλογος μαθημάτων</h2>
+        <input class="search-input" type="search" placeholder="Αναζήτηση μαθήματος..." data-lesson-search>
+      </div>
+
+      <details class="module" data-module open>
+        <summary>
+          <span>Ενότητα Α: Εκκίνηση συστήματος</span>
+          <span class="module-meta">4 μαθήματα</span>
+        </summary>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_0_printer" data-lesson-title="Οδηγός 0 Στήσιμο εκτυπωτή" data-available="true">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 0: Στήσιμο εκτυπωτή</p>
+              <div class="lesson-sub">βίντεο διαθέσιμο</div>
+            </div>
+          </div>
+          <div class="duration">8-12'</div>
+          <span class="status status-new" data-status-pill>Νέο</span>
+          <a class="watch primary" data-lesson-link href="./stisimo-ektypoti/">Παρακολούθηση</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_1_installation" data-lesson-title="Οδηγός 1 Εγκατάσταση POSPal" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 1: Εγκατάσταση POSPal</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-15'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_2_menu_qr" data-lesson-title="Οδηγός 2 Πρώτο μενού και QR" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 2: Πρώτο μενού και QR</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-15'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_3_first_week" data-lesson-title="Οδηγός 3 Πρώτη εβδομάδα" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 3: Πρώτη εβδομάδα</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-15'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
       </details>
 
-      <section class="surface mt-8 p-6">
-        <h2 class="text-2xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-        <div class="mt-4 space-y-3">
-          <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-            <summary class="cursor-pointer font-semibold text-slate-900">Από πού ξεκινάω αν το στήνω πρώτη φορά;</summary>
-            <p class="mt-2 text-slate-600">Από τον οδηγό εγκατάστασης και μετά στο “Πρώτο μενού και QR”.</p>
-          </details>
-          <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-            <summary class="cursor-pointer font-semibold text-slate-900">Το custom DNS είναι ενσωματωμένη δυνατότητα POSPal;</summary>
-            <p class="mt-2 text-slate-600">Όχι. Είναι προχωρημένη τεχνική λύση εκτός εφαρμογής και όχι ενσωματωμένη ρύθμιση POSPal.</p>
-          </details>
-          <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-            <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal είναι φορολογικός POS ή ταμειακή;</summary>
-            <p class="mt-2 text-slate-600">Όχι. Το POSPal είναι εργαλείο ροής παραγγελιοληψίας και κουζίνας. Δεν είναι φορολογικός POS και δεν είναι ταμειακή.</p>
-          </details>
-        </div>
-      </section>
+      <details class="module" data-module>
+        <summary>
+          <span>Ενότητα Β: Καθημερινή λειτουργία</span>
+          <span class="module-meta">3 μαθήματα</span>
+        </summary>
 
-      <div class="mt-10 text-center">
-        <a href="../index.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
-      </div>
-    </div>
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_4_order_flow" data-lesson-title="Οδηγός 4 Ροή παραγγελιοληψίας" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 4: Ροή παραγγελιοληψίας</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">7-10'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_5_account" data-lesson-title="Οδηγός 5 Λογαριασμός και πληρωμές" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 5: Λογαριασμός και πληρωμές</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">6-10'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_6_activation" data-lesson-title="Οδηγός 6 Τιμές και ενεργοποίηση" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 6: Τιμές και ενεργοποίηση</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">5-8'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+      </details>
+
+      <details class="module" data-module>
+        <summary>
+          <span>Ενότητα Γ: Εξειδικευμένο στήσιμο</span>
+          <span class="module-meta">3 μαθήματα</span>
+        </summary>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_7_beach" data-lesson-title="Οδηγός 7 Στήσιμο beach bar" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 7: Στήσιμο beach bar</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-20'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_8_dns" data-lesson-title="Οδηγός 8 Custom DNS τεχνική λύση" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 8: Custom DNS τεχνική λύση</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-20'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+
+        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_9_seasonal" data-lesson-title="Οδηγός 9 Εποχική οργάνωση" data-available="false">
+          <div class="lesson-main">
+            <span class="lesson-dot"></span>
+            <div>
+              <p class="lesson-title">Οδηγός 9: Εποχική οργάνωση</p>
+              <div class="lesson-sub">βίντεο σύντομα</div>
+            </div>
+          </div>
+          <div class="duration">10-20'</div>
+          <span class="status status-soon" data-status-pill>Σύντομα</span>
+          <a class="watch" aria-disabled="true">Σύντομα</a>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <p class="m-0">Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
+      <p class="m-0 mt-2"><a href="mailto:support@pospal.gr">support@pospal.gr</a></p>
+    </footer>
   </main>
 
-  <footer class="pb-10">
-    <div class="wrap">
-      <div class="surface px-6 py-6 text-sm text-slate-600">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-3">
-            <img src="../app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
-            <span>POSPal</span>
-          </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="../POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-            <a href="../times.html" class="hover:text-slate-900">Τιμές</a>
-            <a href="./index.html" class="hover:text-slate-900">Οδηγοί</a>
-            <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
-          </div>
-        </div>
-        <p class="mt-4 text-xs text-slate-500">Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή μηχανή.</p>
-      </div>
-    </div>
-  </footer>
+  <script>
+    (function () {
+      var FALLBACK_CONTINUE = "./stisimo-ektypoti/";
+      var academy = window.POSPAL_ACADEMY;
+      if (!academy) {
+        return;
+      }
+
+      var state = academy.loadState();
+
+      function lessonStatusText(status) {
+        if (status === "completed") {
+          return "Ολοκληρώθηκε";
+        }
+        if (status === "started") {
+          return "Σε εξέλιξη";
+        }
+        return "Νέο";
+      }
+
+      function lessonStatusClass(status) {
+        if (status === "completed") {
+          return "status status-completed";
+        }
+        if (status === "started") {
+          return "status status-started";
+        }
+        return "status status-new";
+      }
+
+      var rows = Array.prototype.slice.call(
+        document.querySelectorAll("[data-lesson-row]")
+      );
+
+      rows.forEach(function (row) {
+        var lessonId = row.getAttribute("data-lesson-id") || "";
+        var available = row.getAttribute("data-available") === "true";
+        var pill = row.querySelector("[data-status-pill]");
+        var link = row.querySelector("[data-lesson-link]");
+
+        if (available && lessonId && pill) {
+          var status = academy.getLessonStatus(state, lessonId);
+          pill.className = lessonStatusClass(status);
+          pill.textContent = lessonStatusText(status);
+          row.setAttribute("data-lesson-state", status);
+        }
+
+        if (available && link && lessonId) {
+          link.addEventListener("click", function () {
+            academy.markStarted(state, lessonId);
+          });
+        }
+      });
+
+      function updateProgressCount() {
+        var availableIds = rows
+          .filter(function (row) {
+            return row.getAttribute("data-available") === "true";
+          })
+          .map(function (row) {
+            return row.getAttribute("data-lesson-id") || "";
+          })
+          .filter(Boolean);
+        var completedCount = availableIds.filter(function (id) {
+          return !!state.completed[id];
+        }).length;
+        var countEl = document.querySelector("[data-progress-count]");
+        var metaEl = document.querySelector("[data-progress-meta]");
+        var fillEl = document.querySelector("[data-progress-fill]");
+        var availableCount = availableIds.length;
+
+        if (countEl) {
+          countEl.textContent = String(completedCount) + "/" + String(availableCount);
+        }
+
+        if (metaEl) {
+          metaEl.textContent =
+            String(availableCount) +
+            " διαθέσιμο " +
+            (availableCount === 1 ? "μάθημα" : "μαθήματα");
+        }
+
+        if (fillEl) {
+          var percent = availableCount
+            ? Math.round((completedCount / availableCount) * 100)
+            : 0;
+          fillEl.style.width = String(percent) + "%";
+        }
+      }
+
+      function updateContinueCta() {
+        var cta = document.querySelector("[data-continue-btn]");
+        if (!cta) {
+          return;
+        }
+
+        var nextHref = FALLBACK_CONTINUE;
+
+        if (state.last_lesson_id === "lesson_0_printer") {
+          nextHref = "./stisimo-ektypoti/";
+        }
+
+        cta.setAttribute("href", nextHref);
+        cta.textContent =
+          academy.getLessonStatus(state, "lesson_0_printer") === "completed"
+            ? "Ξαναδές μάθημα"
+            : "Συνέχισε μάθημα";
+      }
+
+      function bindSearch() {
+        var searchInput = document.querySelector("[data-lesson-search]");
+        if (!searchInput) {
+          return;
+        }
+
+        searchInput.addEventListener("input", function () {
+          var q = (searchInput.value || "").toLowerCase().trim();
+          rows.forEach(function (row) {
+            var title = (row.getAttribute("data-lesson-title") || "").toLowerCase();
+            var visible = !q || title.indexOf(q) !== -1;
+            row.setAttribute("data-hidden", visible ? "false" : "true");
+          });
+
+          var modules = Array.prototype.slice.call(
+            document.querySelectorAll("[data-module]")
+          );
+          modules.forEach(function (moduleEl) {
+            var visibleRows = moduleEl.querySelectorAll(
+              "[data-lesson-row][data-hidden=\"false\"]"
+            ).length;
+            moduleEl.style.display = visibleRows ? "block" : "none";
+            if (q && visibleRows) {
+              moduleEl.open = true;
+            }
+          });
+        });
+      }
+
+      updateProgressCount();
+      updateContinueCta();
+      bindSearch();
+    })();
+  </script>
 </body>
 </html>

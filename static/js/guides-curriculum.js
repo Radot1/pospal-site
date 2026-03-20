@@ -164,7 +164,7 @@
         };
       })
       .filter(function (step) {
-        return !!step.id && step.order > 0;
+        return !!step.id && step.order >= 0;
       })
       .sort(function (a, b) {
         return a.order - b.order;
@@ -339,7 +339,8 @@
     return unlocked;
   }
 
-  function updateMission(next) {
+  function updateMission(next, totalSteps) {
+    var total = Number.isFinite(totalSteps) ? totalSteps : 0;
     var levelEl = document.querySelector("[data-mission-level]");
     var titleEl = document.querySelector("[data-mission-title]");
     var timeEl = document.querySelector("[data-mission-time]");
@@ -354,7 +355,8 @@
         levelEl.textContent = "Ολοκλήρωση";
       }
       if (titleEl) {
-        titleEl.textContent = "Ολοκλήρωσες και τα 9 βήματα";
+        titleEl.textContent =
+          "Ολοκλήρωσες και τα " + String(total) + " βήματα";
       }
       if (timeEl) {
         timeEl.textContent = "Κάνε επαναφορά προόδου για νέο πέρασμα.";
@@ -398,7 +400,7 @@
     var unlocked = updateModuleUi(steps);
     updateStepUi(steps, next, unlocked);
     updateProgress(steps);
-    updateMission(next);
+    updateMission(next, steps.length);
   }
 
   function setComplete(step, complete, source) {
