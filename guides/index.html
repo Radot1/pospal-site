@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
   <script src="../static/js/ga-consent.js"></script>
@@ -195,9 +195,8 @@
       color: #fff;
     }
 
-    .lesson-link.locked {
-      opacity: .58;
-      pointer-events: none;
+    .lesson-link.soon {
+      opacity: .82;
     }
 
     .content {
@@ -242,6 +241,12 @@
       color: #166534;
       border: 1px solid #86efac;
       white-space: nowrap;
+    }
+
+    .status-pill.is-soon {
+      background: #e2e8f0;
+      color: #334155;
+      border-color: #cbd5e1;
     }
 
     .video-shell {
@@ -337,19 +342,39 @@
 
       <section class="module">
         <h3 class="module-title">Ξεκίνημα</h3>
-        <a class="lesson-link active" href="./stisimo-ektypoti/">
+        <a class="lesson-link active"
+           href="?lesson=0"
+           data-lesson-id="0"
+           data-title="Οδηγός 0: Στήσιμο εκτυπωτή"
+           data-status="available"
+           data-video="">
           Οδηγός 0: Στήσιμο εκτυπωτή
           <small>διαθέσιμο</small>
         </a>
-        <a class="lesson-link locked" href="#">
+        <a class="lesson-link soon"
+           href="?lesson=1"
+           data-lesson-id="1"
+           data-title="Οδηγός 1: Εγκατάσταση POSPal"
+           data-status="soon"
+           data-video="">
           Οδηγός 1: Εγκατάσταση POSPal
           <small>σύντομα</small>
         </a>
-        <a class="lesson-link locked" href="#">
+        <a class="lesson-link soon"
+           href="?lesson=2"
+           data-lesson-id="2"
+           data-title="Οδηγός 2: Πρώτο μενού και QR"
+           data-status="soon"
+           data-video="">
           Οδηγός 2: Πρώτο μενού και QR
           <small>σύντομα</small>
         </a>
-        <a class="lesson-link locked" href="#">
+        <a class="lesson-link soon"
+           href="?lesson=3"
+           data-lesson-id="3"
+           data-title="Οδηγός 3: Πρώτη εβδομάδα"
+           data-status="soon"
+           data-video="">
           Οδηγός 3: Πρώτη εβδομάδα
           <small>σύντομα</small>
         </a>
@@ -357,24 +382,24 @@
 
       <section class="module">
         <h3 class="module-title">Καθημερινή χρήση</h3>
-        <a class="lesson-link locked" href="#">Οδηγός 4: Ροή παραγγελιοληψίας<small>σύντομα</small></a>
-        <a class="lesson-link locked" href="#">Οδηγός 5: Λογαριασμός και πληρωμές<small>σύντομα</small></a>
-        <a class="lesson-link locked" href="#">Οδηγός 6: Τιμές και ενεργοποίηση<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=4" data-lesson-id="4" data-title="Οδηγός 4: Ροή παραγγελιοληψίας" data-status="soon" data-video="">Οδηγός 4: Ροή παραγγελιοληψίας<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=5" data-lesson-id="5" data-title="Οδηγός 5: Λογαριασμός και πληρωμές" data-status="soon" data-video="">Οδηγός 5: Λογαριασμός και πληρωμές<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=6" data-lesson-id="6" data-title="Οδηγός 6: Τιμές και ενεργοποίηση" data-status="soon" data-video="">Οδηγός 6: Τιμές και ενεργοποίηση<small>σύντομα</small></a>
       </section>
 
       <section class="module">
         <h3 class="module-title">Προχωρημένοι οδηγοί</h3>
-        <a class="lesson-link locked" href="#">Οδηγός 7: Στήσιμο beach bar<small>σύντομα</small></a>
-        <a class="lesson-link locked" href="#">Οδηγός 8: Custom DNS τεχνική λύση<small>σύντομα</small></a>
-        <a class="lesson-link locked" href="#">Οδηγός 9: Εποχική οργάνωση<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=7" data-lesson-id="7" data-title="Οδηγός 7: Στήσιμο beach bar" data-status="soon" data-video="">Οδηγός 7: Στήσιμο beach bar<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=8" data-lesson-id="8" data-title="Οδηγός 8: Custom DNS τεχνική λύση" data-status="soon" data-video="">Οδηγός 8: Custom DNS τεχνική λύση<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=9" data-lesson-id="9" data-title="Οδηγός 9: Εποχική οργάνωση" data-status="soon" data-video="">Οδηγός 9: Εποχική οργάνωση<small>σύντομα</small></a>
       </section>
     </aside>
 
     <main class="content">
       <article class="surface panel">
         <div class="panel-head">
-          <h1>Οδηγός 0: Στήσιμο εκτυπωτή</h1>
-          <span class="status-pill">διαθέσιμο</span>
+          <h1 id="lessonTitle">Οδηγός 0: Στήσιμο εκτυπωτή</h1>
+          <span class="status-pill" id="lessonStatus">διαθέσιμο</span>
         </div>
 
         <section class="video-shell">
@@ -393,36 +418,41 @@
 
   <script>
     (function () {
-      var inlineVideoUrl = document.body.getAttribute("data-video-url") || "";
+      var inlineVideoUrl = (document.body.getAttribute("data-video-url") || "").trim();
+      var lessonLinks = Array.prototype.slice.call(document.querySelectorAll("[data-lesson-id]"));
+      var lessonTitle = document.getElementById("lessonTitle");
+      var lessonStatus = document.getElementById("lessonStatus");
+      var videoBox = document.getElementById("videoBox");
+      var openYoutube = document.querySelector("[data-open-youtube]");
 
-      function getQueryParam(name) {
-        var query = window.location.search || "";
-        if (!query) {
-          return "";
-        }
-        var search = new URLSearchParams(query);
-        return (search.get(name) || "").trim();
+      if (!lessonLinks.length || !lessonTitle || !lessonStatus || !videoBox) {
+        return;
       }
 
-      function resolveVideoUrl() {
-        var queryVideo = getQueryParam("yt") || "";
-        if (queryVideo) {
-          try {
-            window.localStorage.setItem("pospal_lesson_0_video_url", queryVideo);
-          } catch (error) {
-            // Ignore localStorage errors.
-          }
-          return queryVideo;
-        }
+      function getQueryParams() {
+        return new URLSearchParams(window.location.search || "");
+      }
 
-        if (inlineVideoUrl) {
-          return inlineVideoUrl;
-        }
+      function getStorageKey(lessonId) {
+        return "pospal_lesson_" + lessonId + "_video_url";
+      }
 
+      function getStoredVideo(lessonId) {
         try {
-          return window.localStorage.getItem("pospal_lesson_0_video_url") || "";
+          return (window.localStorage.getItem(getStorageKey(lessonId)) || "").trim();
         } catch (error) {
           return "";
+        }
+      }
+
+      function setStoredVideo(lessonId, videoUrl) {
+        if (!videoUrl) {
+          return;
+        }
+        try {
+          window.localStorage.setItem(getStorageKey(lessonId), videoUrl);
+        } catch (error) {
+          // Ignore localStorage errors.
         }
       }
 
@@ -444,37 +474,138 @@
         return "";
       }
 
-      function mountVideo() {
-        var rawVideoUrl = resolveVideoUrl();
-        var embed = toEmbedUrl(rawVideoUrl);
-        if (!embed) {
+      function getLessonById(lessonId) {
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          if ((lessonLinks[i].getAttribute("data-lesson-id") || "") === String(lessonId)) {
+            return lessonLinks[i];
+          }
+        }
+        return lessonLinks[0];
+      }
+
+      function getSelectedLessonIdFromQuery() {
+        var params = getQueryParams();
+        var requested = (params.get("lesson") || "").trim();
+        if (!requested) {
+          return lessonLinks[0].getAttribute("data-lesson-id") || "0";
+        }
+        return getLessonById(requested).getAttribute("data-lesson-id") || "0";
+      }
+
+      function setOpenYoutubeUrl(rawVideoUrl) {
+        if (!openYoutube) {
           return;
         }
+        if (!rawVideoUrl) {
+          openYoutube.classList.add("hidden");
+          openYoutube.removeAttribute("href");
+          return;
+        }
+        openYoutube.classList.remove("hidden");
+        openYoutube.setAttribute("href", rawVideoUrl);
+      }
 
-        var box = document.getElementById("videoBox");
-        var placeholder = document.getElementById("videoPlaceholder");
-        if (!box || !placeholder) {
+      function renderPlaceholder(titleText, soon) {
+        var placeholder = document.createElement("div");
+        placeholder.className = "video-placeholder";
+        placeholder.id = "videoPlaceholder";
+
+        var strong = document.createElement("strong");
+        strong.textContent = soon
+          ? "Το βίντεο του " + titleText + " θα προστεθεί σύντομα"
+          : "Το βίντεο του " + titleText + " θα εμφανιστεί εδώ";
+
+        var paragraph = document.createElement("p");
+        paragraph.textContent = soon
+          ? "Θα ενεργοποιηθεί μόλις ανέβει το αντίστοιχο tutorial στο YouTube."
+          : "Μπορείς να περάσεις YouTube URL με ?lesson=ID&yt=YOUTUBE_URL για να εμφανιστεί άμεσα.";
+
+        placeholder.appendChild(strong);
+        placeholder.appendChild(paragraph);
+        videoBox.appendChild(placeholder);
+      }
+
+      function renderVideoForLesson(linkEl, lessonId) {
+        var params = getQueryParams();
+        var queryVideo = (params.get("yt") || "").trim();
+        var queryLesson = (params.get("lesson") || "").trim();
+        var dataVideo = (linkEl.getAttribute("data-video") || "").trim();
+        var rawVideoUrl = "";
+
+        if (queryVideo && (queryLesson === String(lessonId) || !queryLesson)) {
+          setStoredVideo(lessonId, queryVideo);
+          rawVideoUrl = queryVideo;
+        } else if (dataVideo) {
+          rawVideoUrl = dataVideo;
+        } else if (lessonId === "0" && inlineVideoUrl) {
+          rawVideoUrl = inlineVideoUrl;
+        } else {
+          rawVideoUrl = getStoredVideo(lessonId);
+        }
+
+        var embed = toEmbedUrl(rawVideoUrl);
+        var titleText = linkEl.getAttribute("data-title") || "Οδηγός POSPal";
+        var soon = (linkEl.getAttribute("data-status") || "soon") !== "available";
+
+        videoBox.innerHTML = "";
+
+        if (!embed) {
+          renderPlaceholder(titleText, soon);
+          setOpenYoutubeUrl("");
           return;
         }
 
         var iframe = document.createElement("iframe");
         iframe.src = embed;
-        iframe.title = "POSPal Οδηγοί";
+        iframe.title = titleText;
         iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
         iframe.setAttribute("allowfullscreen", "true");
         iframe.setAttribute("loading", "lazy");
-        box.appendChild(iframe);
-        placeholder.remove();
+        videoBox.appendChild(iframe);
+        setOpenYoutubeUrl(rawVideoUrl);
+      }
 
-        var openYoutube = document.querySelector("[data-open-youtube]");
-        if (openYoutube) {
-          openYoutube.classList.remove("hidden");
-          openYoutube.setAttribute("href", rawVideoUrl);
+      function updateUrl(lessonId) {
+        var params = getQueryParams();
+        params.set("lesson", String(lessonId));
+        params.delete("yt");
+        var next = window.location.pathname + "?" + params.toString();
+        window.history.replaceState({}, "", next);
+      }
+
+      function renderLesson(lessonId, updateAddress) {
+        var current = getLessonById(lessonId);
+        var id = current.getAttribute("data-lesson-id") || "0";
+        var title = current.getAttribute("data-title") || "Οδηγός POSPal";
+        var status = current.getAttribute("data-status") || "soon";
+
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          lessonLinks[i].classList.toggle("active", lessonLinks[i] === current);
+        }
+
+        lessonTitle.textContent = title;
+        lessonStatus.textContent = status === "available" ? "διαθέσιμο" : "σύντομα";
+        lessonStatus.classList.toggle("is-soon", status !== "available");
+
+        renderVideoForLesson(current, id);
+
+        if (updateAddress) {
+          updateUrl(id);
         }
       }
 
-      mountVideo();
+      for (var i = 0; i < lessonLinks.length; i += 1) {
+        lessonLinks[i].addEventListener("click", function (event) {
+          event.preventDefault();
+          var id = this.getAttribute("data-lesson-id") || "0";
+          renderLesson(id, true);
+        });
+      }
+
+      renderLesson(getSelectedLessonIdFromQuery(), false);
     })();
   </script>
 </body>
 </html>
+
+

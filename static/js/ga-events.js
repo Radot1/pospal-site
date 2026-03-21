@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   var EVENT_VERSION = "v1.1";
   var SEO_ARTICLE_PATHS = [
     "/asyrmati-paraggeliolipsia.html",
@@ -71,11 +71,16 @@
       return "buy";
     }
 
-    if (
-      pathname === "/guides/stisimo-ektypoti" ||
-      pathname === "/guides/stisimo-ektypoti/"
-    ) {
-      return "install_guide";
+    if (pathname === "/guides/index.html") {
+      try {
+        var lessonParam = new URLSearchParams(window.location.search || "").get("lesson");
+        if (lessonParam === "0") {
+          return "install_guide";
+        }
+      } catch (error) {
+        // Ignore query parse errors and fallback to guides.
+      }
+      return "guides";
     }
 
     if (pathname === "/guides" || pathname.indexOf("/guides/") === 0) {
@@ -178,7 +183,7 @@
       return "installer_manual";
     }
 
-    if (textMatch.indexOf("δοκιμ") !== -1 || textMatch.indexOf("trial") !== -1) {
+    if (textMatch.indexOf("Î´Î¿ÎºÎ¹Î¼") !== -1 || textMatch.indexOf("trial") !== -1) {
       return "trial_copy_cta";
     }
 
@@ -327,7 +332,7 @@
       var heading = headings[i];
       var headingMatch = normalizeForMatch(heading.textContent || "");
       if (
-        headingMatch.indexOf("τιμ") === -1 &&
+        headingMatch.indexOf("Ï„Î¹Î¼") === -1 &&
         headingMatch.indexOf("pricing") === -1
       ) {
         continue;
@@ -449,3 +454,4 @@
   setupPricingViewTracking();
   setupFaqExpandTracking();
 })();
+
