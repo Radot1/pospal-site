@@ -42,12 +42,7 @@
 
   function isDemoOrAppPath(pathname) {
     return (
-      /^\/pospal_demo(?:_desktop|_index)?\.html$/.test(pathname) ||
-      pathname === "/pospaldesktop.html" ||
-      /^\/pospal-demo-[^/]+\.html$/.test(pathname) ||
-      /^\/pospal-demo-coffee-[^/]+\.html$/.test(pathname) ||
-      pathname === "/qr-menu-demo.html" ||
-      pathname === "/managementcomponent.html"
+      pathname === "/qr-menu-demo.html"
     );
   }
 
@@ -76,7 +71,10 @@
       return "buy";
     }
 
-    if (pathname === "/installation-guide.html") {
+    if (
+      pathname === "/guides/stisimo-ektypoti" ||
+      pathname === "/guides/stisimo-ektypoti/"
+    ) {
       return "install_guide";
     }
 

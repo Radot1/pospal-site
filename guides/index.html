@@ -9,7 +9,6 @@
     window.gtag("config", "AW-17981190399");
   </script>
   <script defer src="../static/js/ga-events.js"></script>
-  <script defer src="../static/js/academy-progress.js"></script>
   <meta charset="UTF-8">
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -19,39 +18,43 @@
     })(window, document, "clarity", "script", "vnzrn7y23s");
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal</title>
-  <meta name="description" content="POSPal Academy με βίντεο-οδηγούς για στήσιμο εκτυπωτή, εγκατάσταση και καθημερινή λειτουργία στην εστίαση.">
+  <title>POSPal Οδηγοί | Βίντεο εκκίνησης</title>
+  <meta name="description" content="Video οδηγοί POSPal για εκκίνηση, εγκατάσταση και καθημερινή χρήση.">
   <link rel="canonical" href="https://pospal.gr/guides/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
   <meta property="og:site_name" content="POSPal">
-  <meta property="og:title" content="POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal">
-  <meta property="og:description" content="Μάθε το POSPal με σύντομα, πρακτικά βίντεο βήμα-βήμα.">
+  <meta property="og:title" content="POSPal Οδηγοί | Βίντεο εκκίνησης">
+  <meta property="og:description" content="Πρακτικοί video οδηγοί POSPal με καθαρά βήματα.">
   <meta property="og:url" content="https://pospal.gr/guides/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="POSPal Academy: Οδηγοί βίντεο για εγκατάσταση και ροή | POSPal">
-  <meta name="twitter:description" content="Video-first οδηγίες για πραγματική χρήση στη βάρδια.">
+  <meta name="twitter:title" content="POSPal Οδηγοί | Βίντεο εκκίνησης">
+  <meta name="twitter:description" content="Μάθε το POSPal με σύντομα βίντεο και σαφή βήματα.">
   <link rel="icon" href="../app_icon.ico">
   <link rel="apple-touch-icon" href="../app_icon.ico">
   <link rel="stylesheet" href="../static/css/fonts.css">
   <style>
     :root {
-      --bg: #eef3f8;
+      --bg: #eaf0f6;
+      --top: #0f1d33;
+      --sidebar: #17273f;
       --surface: #ffffff;
-      --line: #d5dfeb;
+      --line: #d3deea;
       --text: #0f172a;
       --muted: #475569;
       --accent: #0f766e;
       --accent-2: #14b8a6;
-      --top: #10243f;
       --ok-bg: #dcfce7;
       --ok-text: #166534;
       --in-bg: #dbeafe;
       --in-text: #1e40af;
       --new-bg: #e2e8f0;
       --new-text: #334155;
-      --soon-bg: #ffedd5;
-      --soon-text: #9a3412;
+      --warn-bg: #fff7ed;
+      --warn-text: #9a3412;
+      --brand-500: #22c55e;
+      --brand-600: #16a34a;
+      --brand-700: #15803d;
     }
 
     * { box-sizing: border-box; }
@@ -60,706 +63,417 @@
       margin: 0;
       font-family: "Inter", system-ui, sans-serif;
       color: var(--text);
-      background: radial-gradient(circle at 0% 0%, rgba(20, 184, 166, 0.14), transparent 30%), var(--bg);
+      background: var(--bg);
     }
 
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
+    .hidden { display: none !important; }
 
     .topbar {
-      margin-top: 16px;
       background: var(--top);
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       color: #fff;
-      padding: 12px 16px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .brand {
+    .topbar-left,
+    .topbar-right {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      text-decoration: none;
+      gap: 8px;
+    }
+
+    .top-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       color: #fff;
-      font-weight: 700;
+      text-decoration: none;
+      font-weight: 800;
       letter-spacing: .02em;
     }
 
-    .brand img { width: 30px; height: 30px; border-radius: 9px; }
-
-    .topbar nav {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      font-size: .92rem;
+    .top-logo img {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: block;
     }
 
-    .topbar nav a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .topbar nav a:hover { color: #fff; }
-
-    .hero {
-      margin-top: 14px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-      display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      gap: 16px;
-    }
-
-    .hero-card {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      background: linear-gradient(180deg, #f8fffd 0%, #ffffff 100%);
-    }
-
-    .hero-card h2 {
-      margin: 0;
-      font-size: 1.08rem;
-      font-weight: 800;
-    }
-
-    .stats {
-      margin: 10px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      font-size: .92rem;
-      color: var(--muted);
-    }
-
-    .stats strong { color: var(--text); }
-
-    .continue-btn {
-      margin-top: 14px;
-      width: 100%;
-      display: inline-flex;
-      justify-content: center;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    .tb-btn {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.04);
       color: #fff;
       text-decoration: none;
-      font-weight: 800;
-      padding: 11px 14px;
-    }
-
-    .progress-wrap {
-      margin-top: 12px;
-    }
-
-    .progress-track {
-      height: 10px;
-      border-radius: 999px;
-      overflow: hidden;
-      background: #e2e8f0;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      transition: width .2s ease;
-    }
-
-    .progress-meta {
-      margin: 8px 0 0;
-      font-size: .78rem;
-      color: #475569;
+      padding: 8px 11px;
+      border-radius: 9px;
+      font-size: .88rem;
       font-weight: 700;
-      letter-spacing: .03em;
-      text-transform: uppercase;
+      transition: background .16s ease, transform .16s ease, box-shadow .16s ease, border-color .16s ease;
     }
 
-    .hero-main h1 {
+    .tb-btn:hover { background: rgba(255, 255, 255, 0.12); }
+    .tb-btn[aria-disabled="true"] { opacity: .56; pointer-events: none; }
+
+    .tb-btn.cta {
+      border-color: var(--brand-600);
+      background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+    }
+
+    .tb-btn.cta:hover {
+      background: linear-gradient(135deg, var(--brand-700), var(--brand-600));
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(21, 128, 61, 0.4);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      min-height: calc(100vh - 58px);
+    }
+
+    .sidebar {
+      background: var(--sidebar);
+      color: #dbeafe;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 12px;
+      overflow: auto;
+    }
+
+    .sidebar h2 {
       margin: 0;
-      font-size: 2.1rem;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
     }
 
-    .hero-main p {
-      margin: 10px 0 0;
-      max-width: 68ch;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .hero-meta {
+    .module {
       margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .hero-meta span {
-      border-radius: 999px;
-      padding: 7px 11px;
+    .module-title {
+      margin: 0;
+      padding: 9px 10px;
       font-size: .78rem;
       text-transform: uppercase;
-      letter-spacing: .05em;
-      font-weight: 800;
-      color: #0f172a;
-      border: 1px solid #cbd5e1;
-      background: #f8fafc;
+      letter-spacing: .06em;
+      color: #bfdbfe;
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    .catalog {
-      margin-top: 14px;
+    .lesson-link {
+      display: block;
+      text-decoration: none;
+      color: #e2e8f0;
+      font-size: .9rem;
+      font-weight: 700;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .lesson-link small {
+      display: block;
+      margin-top: 4px;
+      color: #94a3b8;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700;
+    }
+
+    .lesson-link.active {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.22), rgba(15, 118, 110, 0.16));
+      color: #fff;
+    }
+
+    .lesson-link.locked {
+      opacity: .58;
+      pointer-events: none;
+    }
+
+    .content {
+      padding: 14px;
+      overflow: auto;
+    }
+
+    .surface {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
     }
 
-    .catalog-head {
+    .panel {
+      padding: 14px;
+    }
+
+    .panel-head {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 8px;
       align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .catalog-head h2 {
-      margin: 0;
-      font-size: 1.16rem;
-    }
-
-    .search-input {
-      width: 290px;
-      max-width: 100%;
-      border: 1px solid #c7d3e2;
-      border-radius: 999px;
-      padding: 9px 12px;
-      font: inherit;
-      font-size: .92rem;
-      color: var(--text);
-      background: #fff;
-    }
-
-    details.module {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-
-    details.module summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 12px 14px;
-      font-weight: 800;
-      border-bottom: 1px solid #e7edf5;
-      background: #f8fbff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .module-meta {
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      color: #475569;
-      text-transform: uppercase;
-    }
-
-    .lesson-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) 90px 130px 140px;
       gap: 10px;
-      align-items: center;
-      padding: 10px 14px;
-      border-top: 1px solid #eef2f7;
+      margin-bottom: 10px;
     }
 
-    .lesson-row[data-hidden="true"] { display: none; }
-
-    .lesson-main {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-width: 0;
-    }
-
-    .lesson-dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: #94a3b8;
-      flex: 0 0 auto;
-    }
-
-    .lesson-row[data-lesson-state="started"] .lesson-dot { background: #2563eb; }
-    .lesson-row[data-lesson-state="completed"] .lesson-dot { background: #16a34a; }
-
-    .lesson-title {
+    .panel-head h1 {
       margin: 0;
-      font-weight: 700;
-      font-size: .95rem;
-      color: #0f172a;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      font-size: 1.45rem;
+      line-height: 1.15;
     }
 
-    .lesson-sub {
-      font-size: .78rem;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      font-weight: 700;
-    }
-
-    .duration {
-      font-size: .87rem;
-      color: #334155;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .status {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
+    .status-pill {
       border-radius: 999px;
       padding: 6px 10px;
       font-size: .72rem;
-      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .06em;
-      width: fit-content;
-      margin: 0 auto;
+      font-weight: 800;
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+      white-space: nowrap;
     }
 
-    .status-completed { background: var(--ok-bg); color: var(--ok-text); }
-    .status-started { background: var(--in-bg); color: var(--in-text); }
-    .status-new { background: var(--new-bg); color: var(--new-text); }
-    .status-soon { background: var(--soon-bg); color: var(--soon-text); }
-
-    .watch {
-      justify-self: end;
-      border-radius: 999px;
-      border: 1px solid #9bb0cd;
-      padding: 8px 12px;
-      background: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      color: #0f172a;
-      font-size: .86rem;
-    }
-
-    .watch.primary {
-      border-color: var(--accent);
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    }
-
-    .watch[aria-disabled="true"] {
-      pointer-events: none;
-      opacity: .58;
-    }
-
-    .footer {
-      margin: 14px 0 22px;
-      background: var(--surface);
+    .video-shell {
       border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
-      font-size: .84rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0b1220;
+      display: grid;
+      place-items: center;
+    }
+
+    .video-box {
+      position: relative;
+      width: min(100%, max(240px, calc((100vh - 260px) * 1.7778)));
+      width: min(100%, max(240px, calc((100svh - 260px) * 1.7778)));
+      aspect-ratio: 16 / 9;
+      background: #0b1220;
+    }
+
+    .video-box iframe,
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #cbd5e1;
+      padding: 16px;
+    }
+
+    .video-placeholder p {
+      margin: 8px 0 0;
+      max-width: 58ch;
+      line-height: 1.45;
+      font-size: .95rem;
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      font-size: .82rem;
       color: #475569;
     }
 
-    .footer a { color: #0f172a; text-decoration: none; font-weight: 700; }
-    .footer a:hover { text-decoration: underline; }
+    .footer-note a {
+      color: #0f172a;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-    @media (max-width: 980px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .footer-note a:hover { text-decoration: underline; }
 
-      .lesson-row {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    @media (max-width: 1060px) {
+      .layout { grid-template-columns: minmax(0, 1fr); }
+      .sidebar { order: 2; }
+      .content { order: 1; }
+    }
 
-      .duration,
-      .status,
-      .watch {
-        justify-self: start;
-        margin-top: 4px;
+    @media (max-height: 760px) {
+      .panel-head h1 { font-size: 1.2rem; }
+      .panel { padding: 10px; }
+      .content { padding: 10px; }
+      .video-box {
+        width: min(100%, max(220px, calc((100vh - 220px) * 1.7778)));
+        width: min(100%, max(220px, calc((100svh - 220px) * 1.7778)));
       }
     }
   </style>
 </head>
-<body>
-  <header class="wrap">
-    <div class="topbar">
-      <a class="brand" href="../index.html">
+<body data-video-url="">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a class="top-logo" href="../index.html" aria-label="POSPal αρχική">
         <img src="../app_icon.ico" alt="POSPal">
-        <span>POSPal Academy</span>
+        <span>POSPal</span>
       </a>
-      <nav>
-        <a href="../index.html">Αρχική</a>
-        <a href="../POSPal_Demo_Index.html">Demo</a>
-        <a href="../download/">Λήψη για Windows</a>
-      </nav>
+    </div>
+    <div class="topbar-right">
+      <a class="tb-btn cta" href="../download/">Λήψη για Windows</a>
+      <a class="tb-btn hidden" data-open-youtube href="#" target="_blank" rel="noopener">Άνοιγμα στο YouTube</a>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <aside class="hero-card">
-        <h2>Κατάσταση μαθήματος</h2>
-        <ul class="stats">
-          <li><strong>Μάθημα:</strong> Βασική εκκίνηση POSPal</li>
-          <li><strong>Δομή:</strong> 3 ενότητες</li>
-          <li><strong>Στόχος:</strong> πρακτική λειτουργία στη βάρδια</li>
-          <li><strong>Πρόοδος:</strong> <span data-progress-count>0/1</span></li>
-        </ul>
-        <div class="progress-wrap">
-          <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
-          <p class="progress-meta" data-progress-meta>1 διαθέσιμο μάθημα</p>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Πλοήγηση οδηγών">
+      <h2>Οδηγοί POSPal</h2>
+
+      <section class="module">
+        <h3 class="module-title">Ξεκίνημα</h3>
+        <a class="lesson-link active" href="./stisimo-ektypoti/">
+          Οδηγός 0: Στήσιμο εκτυπωτή
+          <small>διαθέσιμο</small>
+        </a>
+        <a class="lesson-link locked" href="#">
+          Οδηγός 1: Εγκατάσταση POSPal
+          <small>σύντομα</small>
+        </a>
+        <a class="lesson-link locked" href="#">
+          Οδηγός 2: Πρώτο μενού και QR
+          <small>σύντομα</small>
+        </a>
+        <a class="lesson-link locked" href="#">
+          Οδηγός 3: Πρώτη εβδομάδα
+          <small>σύντομα</small>
+        </a>
+      </section>
+
+      <section class="module">
+        <h3 class="module-title">Καθημερινή χρήση</h3>
+        <a class="lesson-link locked" href="#">Οδηγός 4: Ροή παραγγελιοληψίας<small>σύντομα</small></a>
+        <a class="lesson-link locked" href="#">Οδηγός 5: Λογαριασμός και πληρωμές<small>σύντομα</small></a>
+        <a class="lesson-link locked" href="#">Οδηγός 6: Τιμές και ενεργοποίηση<small>σύντομα</small></a>
+      </section>
+
+      <section class="module">
+        <h3 class="module-title">Προχωρημένοι οδηγοί</h3>
+        <a class="lesson-link locked" href="#">Οδηγός 7: Στήσιμο beach bar<small>σύντομα</small></a>
+        <a class="lesson-link locked" href="#">Οδηγός 8: Custom DNS τεχνική λύση<small>σύντομα</small></a>
+        <a class="lesson-link locked" href="#">Οδηγός 9: Εποχική οργάνωση<small>σύντομα</small></a>
+      </section>
+    </aside>
+
+    <main class="content">
+      <article class="surface panel">
+        <div class="panel-head">
+          <h1>Οδηγός 0: Στήσιμο εκτυπωτή</h1>
+          <span class="status-pill">διαθέσιμο</span>
         </div>
-        <a class="continue-btn" data-continue-btn href="./stisimo-ektypoti/">Συνέχισε μάθημα</a>
-      </aside>
 
-      <div class="hero-main">
-        <h1>Video-first οδηγοί για POSPal</h1>
-        <p>Η ακαδημία είναι φτιαγμένη για εκπαίδευση ομάδας. Κάθε μάθημα έχει βίντεο, σύντομο έλεγχο ολοκλήρωσης και σαφή συνέχεια στο επόμενο βήμα.</p>
-        <div class="hero-meta">
-          <span>Πρακτική εκπαίδευση</span>
-          <span>Χωρίς περιττό κείμενο</span>
-          <span>Βήμα-βήμα εκτέλεση</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog">
-      <div class="catalog-head">
-        <h2>Κατάλογος μαθημάτων</h2>
-        <input class="search-input" type="search" placeholder="Αναζήτηση μαθήματος..." data-lesson-search>
-      </div>
-
-      <details class="module" data-module open>
-        <summary>
-          <span>Ενότητα Α: Εκκίνηση συστήματος</span>
-          <span class="module-meta">4 μαθήματα</span>
-        </summary>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_0_printer" data-lesson-title="Οδηγός 0 Στήσιμο εκτυπωτή" data-available="true">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 0: Στήσιμο εκτυπωτή</p>
-              <div class="lesson-sub">βίντεο διαθέσιμο</div>
+        <section class="video-shell">
+          <div class="video-box" id="videoBox">
+            <div class="video-placeholder" id="videoPlaceholder">
+              <strong>Το κεντρικό video εκκίνησης θα εμφανιστεί εδώ</strong>
+              <p>Μπορείς να βάλεις YouTube URL στο `data-video-url` ή να ανοίξεις τη σελίδα με `?yt=YOUTUBE_URL`.</p>
             </div>
           </div>
-          <div class="duration">8-12'</div>
-          <span class="status status-new" data-status-pill>Νέο</span>
-          <a class="watch primary" data-lesson-link href="./stisimo-ektypoti/">Παρακολούθηση</a>
-        </div>
+        </section>
 
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_1_installation" data-lesson-title="Οδηγός 1 Εγκατάσταση POSPal" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 1: Εγκατάσταση POSPal</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-15'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_2_menu_qr" data-lesson-title="Οδηγός 2 Πρώτο μενού και QR" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 2: Πρώτο μενού και QR</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-15'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_3_first_week" data-lesson-title="Οδηγός 3 Πρώτη εβδομάδα" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 3: Πρώτη εβδομάδα</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-15'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-      </details>
-
-      <details class="module" data-module>
-        <summary>
-          <span>Ενότητα Β: Καθημερινή λειτουργία</span>
-          <span class="module-meta">3 μαθήματα</span>
-        </summary>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_4_order_flow" data-lesson-title="Οδηγός 4 Ροή παραγγελιοληψίας" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 4: Ροή παραγγελιοληψίας</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">7-10'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_5_account" data-lesson-title="Οδηγός 5 Λογαριασμός και πληρωμές" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 5: Λογαριασμός και πληρωμές</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">6-10'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_6_activation" data-lesson-title="Οδηγός 6 Τιμές και ενεργοποίηση" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 6: Τιμές και ενεργοποίηση</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">5-8'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-      </details>
-
-      <details class="module" data-module>
-        <summary>
-          <span>Ενότητα Γ: Εξειδικευμένο στήσιμο</span>
-          <span class="module-meta">3 μαθήματα</span>
-        </summary>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_7_beach" data-lesson-title="Οδηγός 7 Στήσιμο beach bar" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 7: Στήσιμο beach bar</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-20'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_8_dns" data-lesson-title="Οδηγός 8 Custom DNS τεχνική λύση" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 8: Custom DNS τεχνική λύση</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-20'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-
-        <div class="lesson-row" data-lesson-row data-lesson-id="lesson_9_seasonal" data-lesson-title="Οδηγός 9 Εποχική οργάνωση" data-available="false">
-          <div class="lesson-main">
-            <span class="lesson-dot"></span>
-            <div>
-              <p class="lesson-title">Οδηγός 9: Εποχική οργάνωση</p>
-              <div class="lesson-sub">βίντεο σύντομα</div>
-            </div>
-          </div>
-          <div class="duration">10-20'</div>
-          <span class="status status-soon" data-status-pill>Σύντομα</span>
-          <a class="watch" aria-disabled="true">Σύντομα</a>
-        </div>
-      </details>
-    </section>
-
-    <footer class="footer">
-      <p class="m-0">Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
-      <p class="m-0 mt-2"><a href="mailto:support@pospal.gr">support@pospal.gr</a></p>
-    </footer>
-  </main>
+        <p class="footer-note">Υποστήριξη: <a href="mailto:support@pospal.gr">support@pospal.gr</a> • Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή.</p>
+      </article>
+    </main>
+  </div>
 
   <script>
     (function () {
-      var FALLBACK_CONTINUE = "./stisimo-ektypoti/";
-      var academy = window.POSPAL_ACADEMY;
-      if (!academy) {
-        return;
+      var inlineVideoUrl = document.body.getAttribute("data-video-url") || "";
+
+      function getQueryParam(name) {
+        var query = window.location.search || "";
+        if (!query) {
+          return "";
+        }
+        var search = new URLSearchParams(query);
+        return (search.get(name) || "").trim();
       }
 
-      var state = academy.loadState();
-
-      function lessonStatusText(status) {
-        if (status === "completed") {
-          return "Ολοκληρώθηκε";
-        }
-        if (status === "started") {
-          return "Σε εξέλιξη";
-        }
-        return "Νέο";
-      }
-
-      function lessonStatusClass(status) {
-        if (status === "completed") {
-          return "status status-completed";
-        }
-        if (status === "started") {
-          return "status status-started";
-        }
-        return "status status-new";
-      }
-
-      var rows = Array.prototype.slice.call(
-        document.querySelectorAll("[data-lesson-row]")
-      );
-
-      rows.forEach(function (row) {
-        var lessonId = row.getAttribute("data-lesson-id") || "";
-        var available = row.getAttribute("data-available") === "true";
-        var pill = row.querySelector("[data-status-pill]");
-        var link = row.querySelector("[data-lesson-link]");
-
-        if (available && lessonId && pill) {
-          var status = academy.getLessonStatus(state, lessonId);
-          pill.className = lessonStatusClass(status);
-          pill.textContent = lessonStatusText(status);
-          row.setAttribute("data-lesson-state", status);
+      function resolveVideoUrl() {
+        var queryVideo = getQueryParam("yt") || "";
+        if (queryVideo) {
+          try {
+            window.localStorage.setItem("pospal_lesson_0_video_url", queryVideo);
+          } catch (error) {
+            // Ignore localStorage errors.
+          }
+          return queryVideo;
         }
 
-        if (available && link && lessonId) {
-          link.addEventListener("click", function () {
-            academy.markStarted(state, lessonId);
-          });
-        }
-      });
-
-      function updateProgressCount() {
-        var availableIds = rows
-          .filter(function (row) {
-            return row.getAttribute("data-available") === "true";
-          })
-          .map(function (row) {
-            return row.getAttribute("data-lesson-id") || "";
-          })
-          .filter(Boolean);
-        var completedCount = availableIds.filter(function (id) {
-          return !!state.completed[id];
-        }).length;
-        var countEl = document.querySelector("[data-progress-count]");
-        var metaEl = document.querySelector("[data-progress-meta]");
-        var fillEl = document.querySelector("[data-progress-fill]");
-        var availableCount = availableIds.length;
-
-        if (countEl) {
-          countEl.textContent = String(completedCount) + "/" + String(availableCount);
+        if (inlineVideoUrl) {
+          return inlineVideoUrl;
         }
 
-        if (metaEl) {
-          metaEl.textContent =
-            String(availableCount) +
-            " διαθέσιμο " +
-            (availableCount === 1 ? "μάθημα" : "μαθήματα");
-        }
-
-        if (fillEl) {
-          var percent = availableCount
-            ? Math.round((completedCount / availableCount) * 100)
-            : 0;
-          fillEl.style.width = String(percent) + "%";
+        try {
+          return window.localStorage.getItem("pospal_lesson_0_video_url") || "";
+        } catch (error) {
+          return "";
         }
       }
 
-      function updateContinueCta() {
-        var cta = document.querySelector("[data-continue-btn]");
-        if (!cta) {
+      function toEmbedUrl(url) {
+        if (!url) {
+          return "";
+        }
+        if (url.indexOf("youtube.com/embed/") !== -1) {
+          return url;
+        }
+        var watchMatch = url.match(/[?&]v=([^&#]+)/);
+        if (watchMatch && watchMatch[1]) {
+          return "https://www.youtube.com/embed/" + watchMatch[1];
+        }
+        var shortMatch = url.match(/youtu\.be\/([^?&#/]+)/);
+        if (shortMatch && shortMatch[1]) {
+          return "https://www.youtube.com/embed/" + shortMatch[1];
+        }
+        return "";
+      }
+
+      function mountVideo() {
+        var rawVideoUrl = resolveVideoUrl();
+        var embed = toEmbedUrl(rawVideoUrl);
+        if (!embed) {
           return;
         }
 
-        var nextHref = FALLBACK_CONTINUE;
-
-        if (state.last_lesson_id === "lesson_0_printer") {
-          nextHref = "./stisimo-ektypoti/";
-        }
-
-        cta.setAttribute("href", nextHref);
-        cta.textContent =
-          academy.getLessonStatus(state, "lesson_0_printer") === "completed"
-            ? "Ξαναδές μάθημα"
-            : "Συνέχισε μάθημα";
-      }
-
-      function bindSearch() {
-        var searchInput = document.querySelector("[data-lesson-search]");
-        if (!searchInput) {
+        var box = document.getElementById("videoBox");
+        var placeholder = document.getElementById("videoPlaceholder");
+        if (!box || !placeholder) {
           return;
         }
 
-        searchInput.addEventListener("input", function () {
-          var q = (searchInput.value || "").toLowerCase().trim();
-          rows.forEach(function (row) {
-            var title = (row.getAttribute("data-lesson-title") || "").toLowerCase();
-            var visible = !q || title.indexOf(q) !== -1;
-            row.setAttribute("data-hidden", visible ? "false" : "true");
-          });
+        var iframe = document.createElement("iframe");
+        iframe.src = embed;
+        iframe.title = "POSPal Οδηγοί";
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.setAttribute("loading", "lazy");
+        box.appendChild(iframe);
+        placeholder.remove();
 
-          var modules = Array.prototype.slice.call(
-            document.querySelectorAll("[data-module]")
-          );
-          modules.forEach(function (moduleEl) {
-            var visibleRows = moduleEl.querySelectorAll(
-              "[data-lesson-row][data-hidden=\"false\"]"
-            ).length;
-            moduleEl.style.display = visibleRows ? "block" : "none";
-            if (q && visibleRows) {
-              moduleEl.open = true;
-            }
-          });
-        });
+        var openYoutube = document.querySelector("[data-open-youtube]");
+        if (openYoutube) {
+          openYoutube.classList.remove("hidden");
+          openYoutube.setAttribute("href", rawVideoUrl);
+        }
       }
 
-      updateProgressCount();
-      updateContinueCta();
-      bindSearch();
+      mountVideo();
     })();
   </script>
 </body>
