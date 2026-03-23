@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   var EVENT_VERSION = "v1.1";
   var SEO_ARTICLE_PATHS = [
     "/asyrmati-paraggeliolipsia.html",
@@ -42,12 +42,7 @@
 
   function isDemoOrAppPath(pathname) {
     return (
-      /^\/pospal_demo(?:_desktop|_index)?\.html$/.test(pathname) ||
-      pathname === "/pospaldesktop.html" ||
-      /^\/pospal-demo-[^/]+\.html$/.test(pathname) ||
-      /^\/pospal-demo-coffee-[^/]+\.html$/.test(pathname) ||
-      pathname === "/qr-menu-demo.html" ||
-      pathname === "/managementcomponent.html"
+      pathname === "/qr-menu-demo.html"
     );
   }
 
@@ -76,8 +71,16 @@
       return "buy";
     }
 
-    if (pathname === "/installation-guide.html") {
-      return "install_guide";
+    if (pathname === "/guides/index.html") {
+      try {
+        var lessonParam = new URLSearchParams(window.location.search || "").get("lesson");
+        if (lessonParam === "0") {
+          return "install_guide";
+        }
+      } catch (error) {
+        // Ignore query parse errors and fallback to guides.
+      }
+      return "guides";
     }
 
     if (pathname === "/guides" || pathname.indexOf("/guides/") === 0) {
@@ -150,6 +153,14 @@
     return "";
   }
 
+  function normalizeJourneyLevel(value) {
+    var level = normalizeForMatch(value);
+    if (level === "beginner" || level === "advanced" || level === "expert") {
+      return level;
+    }
+    return "";
+  }
+
   function classifyTrialStart(pathname, elementId, textMatch, classMatch) {
     var isDownloadTarget =
       elementId === "copy-link-btn" ||
@@ -172,7 +183,7 @@
       return "installer_manual";
     }
 
-    if (textMatch.indexOf("δοκιμ") !== -1 || textMatch.indexOf("trial") !== -1) {
+    if (textMatch.indexOf("Î´Î¿ÎºÎ¹Î¼") !== -1 || textMatch.indexOf("trial") !== -1) {
       return "trial_copy_cta";
     }
 
@@ -218,6 +229,9 @@
         var classMatch = normalizeForMatch(
           typeof element.className === "string" ? element.className : ""
         );
+        var journeyLevel = normalizeJourneyLevel(
+          element.getAttribute("data-journey-start") || ""
+        );
 
         var downloadVariant = classifyDownload(pathname, elementId);
         var trialVariant = classifyTrialStart(
@@ -228,7 +242,7 @@
         );
         var demoVariant = classifyDemo(pathname, textMatch, classMatch);
 
-        if (!downloadVariant && !trialVariant && !demoVariant) {
+        if (!downloadVariant && !trialVariant && !demoVariant && !journeyLevel) {
           return;
         }
 
@@ -278,6 +292,19 @@
             cta_classes: payload.cta_classes,
           });
         }
+
+        if (journeyLevel) {
+          sendEvent("guide_journey_start", {
+            page_path: payload.page_path,
+            page_type: payload.page_type,
+            event_version: payload.event_version,
+            journey_level: journeyLevel,
+            cta_text: payload.cta_text,
+            cta_href: payload.cta_href,
+            cta_id: payload.cta_id,
+            cta_classes: payload.cta_classes,
+          });
+        }
       },
       true
     );
@@ -305,7 +332,7 @@
       var heading = headings[i];
       var headingMatch = normalizeForMatch(heading.textContent || "");
       if (
-        headingMatch.indexOf("τιμ") === -1 &&
+        headingMatch.indexOf("Ï„Î¹Î¼") === -1 &&
         headingMatch.indexOf("pricing") === -1
       ) {
         continue;
@@ -427,3 +454,4 @@
   setupPricingViewTracking();
   setupFaqExpandTracking();
 })();
+

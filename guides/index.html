@@ -1,300 +1,836 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
-    <script src="/static/js/ga-consent.js"></script>
-<script defer src="/static/js/ga-events.js"></script>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Οδηγοί για PDA και QR μενού στην εστίαση | POSPal</title>
-    <meta name="description" content="Οδηγοί POSPal για PDA, QR μενού και οργάνωση ροής στην εστίαση. Διάβασε οδηγούς, δες το σύστημα και τις τιμές.">
-    <link rel="canonical" href="https://pospal.gr/guides/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="el_GR">
-    <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="Οδηγοί για PDA και QR μενού στην εστίαση | POSPal">
-    <meta property="og:description" content="Πρακτικοί οδηγοί για καφετέρια, beach bar, εστιατόριο και food truck.">
-    <meta property="og:url" content="https://pospal.gr/guides/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Οδηγοί για PDA και QR μενού στην εστίαση | POSPal">
-    <meta name="twitter:description" content="Βρες τον σωστό οδηγό για ροή παραγγελιών, QR menu και καθημερινή οργάνωση.">
-    <link rel="icon" href="/app_icon.ico">
-    <link rel="apple-touch-icon" href="/app_icon.ico">
-    <link rel="stylesheet" href="/static/css/fonts.css">
-    <script src="/static/vendor/tailwindcdn.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Inter', 'system-ui', 'sans-serif']
-                    },
-                    colors: {
-                        brand: {
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --ink: #0f172a;
-            --surface: #ffffff;
-            --radius-lg: 22px;
-        }
+  <script src="../static/js/ga-consent.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F851JG8PL6"></script>
+  <script>
+    window.gtag("js", new Date());
+    window.gtag("config", "G-F851JG8PL6");
+    window.gtag("config", "AW-17981190399");
+  </script>
+  <script defer src="../static/js/ga-events.js"></script>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vnzrn7y23s");
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POSPal Οδηγοί | Βίντεο εκκίνησης</title>
+  <meta name="description" content="Video οδηγοί POSPal για εκκίνηση, εγκατάσταση και καθημερινή χρήση.">
+  <link rel="canonical" href="https://pospal.gr/guides/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="POSPal">
+  <meta property="og:title" content="POSPal Οδηγοί | Βίντεο εκκίνησης">
+  <meta property="og:description" content="Πρακτικοί video οδηγοί POSPal με καθαρά βήματα.">
+  <meta property="og:url" content="https://pospal.gr/guides/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="POSPal Οδηγοί | Βίντεο εκκίνησης">
+  <meta name="twitter:description" content="Μάθε το POSPal με σύντομα βίντεο και σαφή βήματα.">
+  <link rel="icon" href="../app_icon.ico">
+  <link rel="apple-touch-icon" href="../app_icon.ico">
+  <link rel="stylesheet" href="../static/css/fonts.css">
+  <style>
+    :root {
+      --bg: #eaf0f6;
+      --top: #0f1d33;
+      --sidebar: #17273f;
+      --surface: #ffffff;
+      --line: #d3deea;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0f766e;
+      --accent-2: #14b8a6;
+      --ok-bg: #dcfce7;
+      --ok-text: #166534;
+      --in-bg: #dbeafe;
+      --in-text: #1e40af;
+      --new-bg: #e2e8f0;
+      --new-text: #334155;
+      --warn-bg: #fff7ed;
+      --warn-text: #9a3412;
+      --brand-500: #22c55e;
+      --brand-600: #16a34a;
+      --brand-700: #15803d;
+    }
 
-        body {
-            font-family: "Inter", system-ui, sans-serif;
-            color: var(--ink);
-            background: #f8fafc;
-        }
+    * { box-sizing: border-box; }
 
-        .site-container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
 
-        .surface-soft {
-            background: var(--surface);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-        }
+    .hidden { display: none !important; }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 22px;
-            border-radius: 999px;
-            font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-            will-change: transform;
-        }
+    .topbar {
+      background: var(--top);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        .btn-primary {
-            background: #16a34a;
-            color: #fff;
-            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
-        }
+    .topbar-left,
+    .topbar-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            background: #15803d;
-            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
-        }
+    .top-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
 
-        .btn-secondary {
-            border: 1px solid rgba(34, 197, 94, 0.55);
-            color: #166534;
-            background: #ffffff;
-        }
+    .top-logo img {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: block;
+    }
 
-        .btn-secondary:hover {
-            border-color: #16a34a;
-            color: #14532d;
-            background: #f0fdf4;
-            transform: translateY(-1px);
-        }
-    </style>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Σε ποιους απευθύνονται οι οδηγοί;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Οι οδηγοί απευθύνονται σε ιδιοκτήτες, managers και ομάδες καφετέριας, beach bar, εστιατορίου και food truck."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Από ποιον οδηγό να ξεκινήσω;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Αν ξεκινάς τώρα, ξεκίνα από τον οδηγό Πρώτη εβδομάδα και μετά δες οδηγούς για QR ή για τον τύπο καταστήματός σου."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Οι οδηγοί είναι μόνο για QR menu;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Όχι. Υπάρχουν οδηγοί για QR menu, για ροή παραγγελιοληψίας και για πρακτικά σενάρια ανά τύπο επιχείρησης."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Το POSPal είναι φορολογικός POS;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Πού βλέπω τιμές και αγορά άδειας;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Μπορείς να δεις τις τιμές στη σελίδα Τιμές και να προχωρήσεις από τη σελίδα αγοράς άδειας."
-                    }
-                }
-            ]
-        }
-    </script>
+    .tb-btn {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 11px;
+      border-radius: 9px;
+      font-size: .88rem;
+      font-weight: 700;
+      transition: background .16s ease, transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+
+    .tb-btn:hover { background: rgba(255, 255, 255, 0.12); }
+    .tb-btn[aria-disabled="true"] { opacity: .56; pointer-events: none; }
+
+    .tb-btn.cta {
+      border-color: var(--brand-600);
+      background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+    }
+
+    .tb-btn.cta:hover {
+      background: linear-gradient(135deg, var(--brand-700), var(--brand-600));
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(21, 128, 61, 0.4);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      min-height: calc(100vh - 58px);
+    }
+
+    .sidebar {
+      background: var(--sidebar);
+      color: #dbeafe;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 12px;
+      overflow: auto;
+    }
+
+    .sidebar h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .module {
+      margin-top: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .module-title {
+      margin: 0;
+      padding: 9px 10px;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #bfdbfe;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .lesson-link {
+      display: block;
+      text-decoration: none;
+      color: #e2e8f0;
+      font-size: .9rem;
+      font-weight: 700;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .lesson-link small {
+      display: block;
+      margin-top: 4px;
+      color: #94a3b8;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700;
+    }
+
+    .lesson-link.active {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.22), rgba(15, 118, 110, 0.16));
+      color: #fff;
+    }
+
+    .lesson-link.soon {
+      opacity: .82;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    .content {
+      padding: 14px;
+      overflow: auto;
+    }
+
+    .surface {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .panel {
+      padding: 14px;
+    }
+
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .panel-head h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      line-height: 1.15;
+    }
+
+    .status-pill {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 800;
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+      white-space: nowrap;
+    }
+
+    .status-pill.is-soon {
+      background: #e2e8f0;
+      color: #334155;
+      border-color: #cbd5e1;
+    }
+
+    .video-shell {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0b1220;
+      display: grid;
+      place-items: center;
+    }
+
+    .video-box {
+      position: relative;
+      width: min(100%, max(240px, calc((100vh - 260px) * 1.7778)));
+      width: min(100%, max(240px, calc((100svh - 260px) * 1.7778)));
+      aspect-ratio: 16 / 9;
+      background: #0b1220;
+    }
+
+    .video-box iframe,
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #cbd5e1;
+      padding: 16px;
+    }
+
+    .video-placeholder p {
+      margin: 8px 0 0;
+      max-width: 58ch;
+      line-height: 1.45;
+      font-size: .95rem;
+    }
+
+    .guide-context-notice {
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1e3a8a;
+      padding: 10px 12px;
+      font-size: .9rem;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .guide-next-steps {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 12px;
+    }
+
+    .guide-next-steps h2 {
+      margin: 0;
+      font-size: .95rem;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .guide-next-actions {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .guide-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid #99afcb;
+      background: #fff;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .84rem;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .guide-action-btn.cta {
+      border-color: var(--brand-600);
+      background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+      color: #fff;
+    }
+
+    .guide-copy-status {
+      margin-top: 8px;
+      font-size: .8rem;
+      color: #64748b;
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      font-size: .82rem;
+      color: #475569;
+    }
+
+    .footer-note a {
+      color: #0f172a;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer-note a:hover { text-decoration: underline; }
+
+    @media (max-width: 1060px) {
+      .layout { grid-template-columns: minmax(0, 1fr); }
+      .sidebar { order: 2; }
+      .content { order: 1; }
+      .guide-next-actions {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-height: 760px) {
+      .panel-head h1 { font-size: 1.2rem; }
+      .panel { padding: 10px; }
+      .content { padding: 10px; }
+      .video-box {
+        width: min(100%, max(220px, calc((100vh - 220px) * 1.7778)));
+        width: min(100%, max(220px, calc((100svh - 220px) * 1.7778)));
+      }
+    }
+  </style>
 </head>
-<body class="min-h-screen">
-    <header class="py-6">
-        <div class="site-container flex items-center justify-between gap-4">
-            <a href="/" class="flex items-center gap-3">
-                <img src="/app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-                <span class="text-lg font-semibold tracking-tight">
-                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
-                </span>
-            </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-                <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
-                <a href="/guides/" class="text-slate-900">Οδηγοί</a>
-                <a href="/download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
-            </nav>
+<body data-video-url="">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a class="top-logo" href="../index.html" aria-label="POSPal αρχική">
+        <img src="../app_icon.ico" alt="POSPal">
+        <span>POSPal</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <a class="tb-btn cta" href="../download/">Λήψη για Windows</a>
+      <a class="tb-btn hidden" data-open-youtube href="#" target="_blank" rel="noopener">Άνοιγμα στο YouTube</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Πλοήγηση οδηγών">
+      <h2>Οδηγοί POSPal</h2>
+
+      <section class="module">
+        <h3 class="module-title">Ξεκίνημα</h3>
+        <a class="lesson-link active"
+           href="?lesson=0"
+           data-lesson-id="0"
+           data-title="Οδηγός 0: Στήσιμο εκτυπωτή"
+           data-status="available"
+           data-video="https://youtu.be/p0FNRfv0vVo">
+          Οδηγός 0: Στήσιμο εκτυπωτή
+          <small>διαθέσιμο</small>
+        </a>
+        <a class="lesson-link soon"
+           href="?lesson=1"
+           data-lesson-id="1"
+           data-title="Οδηγός 1: Εγκατάσταση POSPal"
+           data-status="soon"
+           data-video="">
+          Οδηγός 1: Εγκατάσταση POSPal
+          <small>σύντομα</small>
+        </a>
+        <a class="lesson-link soon"
+           href="?lesson=2"
+           data-lesson-id="2"
+           data-title="Οδηγός 2: Πρώτο μενού και QR"
+           data-status="soon"
+           data-video="">
+          Οδηγός 2: Πρώτο μενού και QR
+          <small>σύντομα</small>
+        </a>
+        <a class="lesson-link soon"
+           href="?lesson=3"
+           data-lesson-id="3"
+           data-title="Οδηγός 3: Πρώτη εβδομάδα"
+           data-status="soon"
+           data-video="">
+          Οδηγός 3: Πρώτη εβδομάδα
+          <small>σύντομα</small>
+        </a>
+      </section>
+
+      <section class="module">
+        <h3 class="module-title">Καθημερινή χρήση</h3>
+        <a class="lesson-link soon" href="?lesson=4" data-lesson-id="4" data-title="Οδηγός 4: Ροή παραγγελιοληψίας" data-status="soon" data-video="">Οδηγός 4: Ροή παραγγελιοληψίας<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=5" data-lesson-id="5" data-title="Οδηγός 5: Λογαριασμός και πληρωμές" data-status="soon" data-video="">Οδηγός 5: Λογαριασμός και πληρωμές<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=6" data-lesson-id="6" data-title="Οδηγός 6: Τιμές και ενεργοποίηση" data-status="soon" data-video="">Οδηγός 6: Τιμές και ενεργοποίηση<small>σύντομα</small></a>
+      </section>
+
+      <section class="module">
+        <h3 class="module-title">Προχωρημένοι οδηγοί</h3>
+        <a class="lesson-link soon" href="?lesson=7" data-lesson-id="7" data-title="Οδηγός 7: Στήσιμο beach bar" data-status="soon" data-video="">Οδηγός 7: Στήσιμο beach bar<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=8" data-lesson-id="8" data-title="Οδηγός 8: Custom DNS τεχνική λύση" data-status="soon" data-video="">Οδηγός 8: Custom DNS τεχνική λύση<small>σύντομα</small></a>
+        <a class="lesson-link soon" href="?lesson=9" data-lesson-id="9" data-title="Οδηγός 9: Εποχική οργάνωση" data-status="soon" data-video="">Οδηγός 9: Εποχική οργάνωση<small>σύντομα</small></a>
+      </section>
+    </aside>
+
+    <main class="content">
+      <article class="surface panel">
+        <div class="panel-head">
+          <h1 id="lessonTitle">Οδηγός 0: Στήσιμο εκτυπωτή</h1>
+          <span class="status-pill" id="lessonStatus">διαθέσιμο</span>
         </div>
-    </header>
+        <div id="mobileDownloadNotice" class="guide-context-notice hidden">
+          Η εγκατάσταση γίνεται σε Windows PC. Δες το βίντεο και μετά άνοιξε τη λήψη από υπολογιστή.
+        </div>
 
-    <main class="pb-16">
-        <div class="site-container">
-            <article class="surface-soft p-8">
-                <h1 class="text-3xl sm:text-4xl font-display font-semibold text-slate-900">Οδηγοί για PDA και QR μενού στην εστίαση</h1>
-                <p class="mt-3 text-slate-600 text-lg">Εδώ θα βρεις οδηγούς εστίασης για να οργανώσεις καλύτερα τη ροή παραγγελιών και το QR μενού στο κατάστημά σου.</p>
-
-                <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                    <a href="/systima-paraggeliolipsias.html" class="btn btn-secondary">Δες το σύστημα</a>
-                    <a href="/times.html" class="btn btn-secondary">Δες τιμές</a>
-                </div>
-
-                <div class="mt-8 grid gap-4">
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Πώς να χρησιμοποιήσεις αυτή τη σελίδα</h2>
-                        <p class="mt-2 text-slate-600">Διάλεξε οδηγό ανά θέμα και προτεραιότητα. Ξεκίνα από αυτά που επηρεάζουν άμεσα τη βάρδιά σου.</p>
-                        <ul class="mt-3 space-y-2 text-slate-700">
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Πρώτα διάβασε οδηγούς για καθημερινή ροή.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Μετά δες θεματικά άρθρα για QR και setup.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Συνδύασε τους οδηγούς με demo και τιμές.</span></li>
-                        </ul>
-                    </section>
-
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Οδηγοί για PDA και ροή παραγγελιοληψίας</h2>
-                        <p class="mt-2 text-slate-600">Πρακτικά άρθρα για να οργανώσεις τη λειτουργία της ομάδας από την πρώτη εβδομάδα.</p>
-                        <ul class="mt-3 space-y-2 text-slate-700">
-                            <li><a href="/guides/first-week-optimization/" class="text-brand-700 font-semibold hover:underline">Πρώτη εβδομάδα: λίστα ελέγχου</a></li>
-                            <li><a href="/guides/cafe-optimization.html" class="text-brand-700 font-semibold hover:underline">Καφετέρια: βελτιστοποίηση ροής</a></li>
-                            <li><a href="/guides/food-truck-mobile/" class="text-brand-700 font-semibold hover:underline">Food truck: παραγγελιοληψία από κινητό</a></li>
-                            <li><a href="/asyrmati-paraggeliolipsia.html" class="text-brand-700 font-semibold hover:underline">Ασύρματη παραγγελιοληψία στην πράξη</a></li>
-                            <li><a href="/paraggelies-gia-estiash.html" class="text-brand-700 font-semibold hover:underline">Παραγγελίες στην εστίαση</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Οδηγοί για QR μενού και κατάλογο</h2>
-                        <p class="mt-2 text-slate-600">Υλικό για να στήσεις QR μενού με καθαρή δομή και σωστή παρουσίαση στον πελάτη.</p>
-                        <ul class="mt-3 space-y-2 text-slate-700">
-                            <li><a href="/guides/qr-menu-best-practices.html" class="text-brand-700 font-semibold hover:underline">QR μενού: καλές πρακτικές</a></li>
-                            <li><a href="/menu-estiatoriou.html" class="text-brand-700 font-semibold hover:underline">Μενού εστιατορίου και τιμοκατάλογος</a></li>
-                            <li><a href="/guides/beach-bar-setup.html" class="text-brand-700 font-semibold hover:underline">Beach bar setup: πρακτικός οδηγός</a></li>
-                            <li><a href="/guides/seasonal-management/" class="text-brand-700 font-semibold hover:underline">Εποχικό κατάστημα: οργάνωση και στήσιμο</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Οδηγοί ανά τύπο καταστήματος</h2>
-                        <p class="mt-2 text-slate-600">Αν θέλεις να ξεκινήσεις ανάλογα με το μοντέλο της επιχείρησής σου, επίλεξε μία από τις παρακάτω διαδρομές.</p>
-                        <ul class="mt-3 space-y-2 text-slate-700">
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Καφετέρια: <a href="/guides/cafe-optimization.html" class="text-brand-700 font-semibold hover:underline">οδηγός ροής</a>.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Beach bar: <a href="/guides/beach-bar-setup.html" class="text-brand-700 font-semibold hover:underline">setup και εκκίνηση</a>.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Food truck: <a href="/guides/food-truck-mobile/" class="text-brand-700 font-semibold hover:underline">mobile ροή</a>.</span></li>
-                        </ul>
-                    </section>
-
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Γιατί POSPal</h2>
-                        <p class="mt-2 text-slate-600">Το POSPal είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής. Δεν είναι φορολογικός POS και λειτουργεί δίπλα στο φορολογικό σύστημα. Δες τη βασική σελίδα του <a href="/systima-paraggeliolipsias.html" class="text-brand-700 font-semibold hover:underline">συστήματος παραγγελιοληψίας</a>.</p>
-                    </section>
-
-                    <section class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h2 class="text-lg font-semibold text-slate-900">Επόμενα βήματα</h2>
-                        <p class="mt-2 text-slate-600">Αφού διαβάσεις τους οδηγούς, προχώρα σε αξιολόγηση κόστους και ενεργοποίηση άδειας.</p>
-                        <ul class="mt-3 space-y-2 text-slate-700">
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span><a href="/times.html" class="text-brand-700 font-semibold hover:underline">Δες τιμές</a>.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span><a href="/buy-license.html" class="text-brand-700 font-semibold hover:underline">Αγορά άδειας</a>.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span><a href="/systima-paraggeliolipsias.html" class="text-brand-700 font-semibold hover:underline">Επιστροφή στο σύστημα</a>.</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">✓</span><span><a href="/installation-guide.html" class="text-brand-700 font-semibold hover:underline">Οδηγός εγκατάστασης</a>.</span></li>
-                        </ul>
-                    </section>
-                </div>
-            </article>
-
-            <section class="mt-10 surface-soft p-7">
-                <h2 class="text-xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-                <div class="mt-4 space-y-3">
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Σε ποιους απευθύνονται οι οδηγοί;</summary>
-                        <p class="mt-2 text-slate-600">Οι οδηγοί απευθύνονται σε ιδιοκτήτες, managers και ομάδες καφετέριας, beach bar, εστιατορίου και food truck.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Από ποιον οδηγό να ξεκινήσω;</summary>
-                        <p class="mt-2 text-slate-600">Αν ξεκινάς τώρα, ξεκίνα από τον οδηγό <a href="/guides/first-week-optimization/" class="text-brand-700 font-semibold hover:underline">Πρώτη εβδομάδα</a> και μετά δες QR ή οδηγούς ανά τύπο καταστήματος.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Οι οδηγοί είναι μόνο για QR menu;</summary>
-                        <p class="mt-2 text-slate-600">Όχι. Υπάρχουν οδηγοί για QR menu, για ροή παραγγελιοληψίας και για πρακτικά σενάρια ανά τύπο επιχείρησης.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal είναι φορολογικός POS;</summary>
-                        <p class="mt-2 text-slate-600">Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Είναι σύστημα παραγγελιοληψίας και διαχείρισης ροής.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Πού βλέπω τιμές και αγορά άδειας;</summary>
-                        <p class="mt-2 text-slate-600">Μπορείς να δεις τις επιλογές στη σελίδα <a href="/times.html" class="text-brand-700 font-semibold hover:underline">Τιμές</a> και να προχωρήσεις από το <a href="/buy-license.html" class="text-brand-700 font-semibold hover:underline">Αγορά άδειας</a>.</p>
-                    </details>
-                </div>
-            </section>
-
-            <div class="mt-10 text-center">
-                <a href="/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
+        <section class="video-shell">
+          <div class="video-box" id="videoBox">
+            <div class="video-placeholder" id="videoPlaceholder">
+              <strong>Το κεντρικό video εκκίνησης θα εμφανιστεί εδώ</strong>
+              <p>Μπορείς να βάλεις YouTube URL στο `data-video-url` ή να ανοίξεις τη σελίδα με `?yt=YOUTUBE_URL`.</p>
             </div>
-        </div>
+          </div>
+        </section>
+        <section class="guide-next-steps">
+          <h2>Επόμενο βήμα μετά το βίντεο</h2>
+          <div class="guide-next-actions">
+            <a class="guide-action-btn cta" href="../download/">Κατέβασε σε υπολογιστή Windows</a>
+            <button type="button" id="copyDownloadLinkBtn" class="guide-action-btn">Αντιγραφή συνδέσμου λήψης</button>
+            <button type="button" id="shareDownloadLinkBtn" class="guide-action-btn hidden">Στείλε τον σύνδεσμο στον εαυτό σου</button>
+          </div>
+          <p id="guideCopyStatus" class="guide-copy-status" aria-live="polite"></p>
+        </section>
+
+        <p class="footer-note">Υποστήριξη: <a href="mailto:support@pospal.gr">support@pospal.gr</a> • Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή.</p>
+      </article>
     </main>
+  </div>
 
-    <footer class="pb-10">
-        <div class="site-container">
-            <div class="surface-soft px-6 py-6 text-sm text-slate-600">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <img src="/app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
-                        <span>POSPal</span>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="/POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
-                        <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
-                        <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
-                    </div>
-                </div>
-                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικός POS. Δουλεύει δίπλα στο υπάρχον σύστημα και καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
-            </div>
-        </div>
-    </footer>
+  <script>
+    (function () {
+      var inlineVideoUrl = (document.body.getAttribute("data-video-url") || "").trim();
+      var lessonLinks = Array.prototype.slice.call(document.querySelectorAll("[data-lesson-id]"));
+      var lessonTitle = document.getElementById("lessonTitle");
+      var lessonStatus = document.getElementById("lessonStatus");
+      var videoBox = document.getElementById("videoBox");
+      var openYoutube = document.querySelector("[data-open-youtube]");
+      var mobileDownloadNotice = document.getElementById("mobileDownloadNotice");
+      var copyDownloadLinkBtn = document.getElementById("copyDownloadLinkBtn");
+      var shareDownloadLinkBtn = document.getElementById("shareDownloadLinkBtn");
+      var guideCopyStatus = document.getElementById("guideCopyStatus");
+      var desktopDownloadUrl = window.location.origin + "/download/";
+
+      if (!lessonLinks.length || !lessonTitle || !lessonStatus || !videoBox) {
+        return;
+      }
+
+      function getQueryParams() {
+        return new URLSearchParams(window.location.search || "");
+      }
+
+      function isLessonAvailable(linkEl) {
+        return (linkEl.getAttribute("data-status") || "soon") === "available";
+      }
+
+      function getFirstAvailableLesson() {
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          if (isLessonAvailable(lessonLinks[i])) {
+            return lessonLinks[i];
+          }
+        }
+        return lessonLinks[0];
+      }
+
+      function getStorageKey(lessonId) {
+        return "pospal_lesson_" + lessonId + "_video_url";
+      }
+
+      function getStoredVideo(lessonId) {
+        try {
+          return (window.localStorage.getItem(getStorageKey(lessonId)) || "").trim();
+        } catch (error) {
+          return "";
+        }
+      }
+
+      function setStoredVideo(lessonId, videoUrl) {
+        if (!videoUrl) {
+          return;
+        }
+        try {
+          window.localStorage.setItem(getStorageKey(lessonId), videoUrl);
+        } catch (error) {
+          // Ignore localStorage errors.
+        }
+      }
+
+      function toEmbedUrl(url) {
+        if (!url) {
+          return "";
+        }
+        if (url.indexOf("youtube.com/embed/") !== -1) {
+          return url;
+        }
+        var watchMatch = url.match(/[?&]v=([^&#]+)/);
+        if (watchMatch && watchMatch[1]) {
+          return "https://www.youtube.com/embed/" + watchMatch[1];
+        }
+        var shortMatch = url.match(/youtu\.be\/([^?&#/]+)/);
+        if (shortMatch && shortMatch[1]) {
+          return "https://www.youtube.com/embed/" + shortMatch[1];
+        }
+        return "";
+      }
+
+      function getLessonById(lessonId) {
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          if ((lessonLinks[i].getAttribute("data-lesson-id") || "") === String(lessonId)) {
+            return lessonLinks[i];
+          }
+        }
+        return getFirstAvailableLesson();
+      }
+
+      function getSelectedLessonIdFromQuery() {
+        var params = getQueryParams();
+        var requested = (params.get("lesson") || "").trim();
+        var firstAvailable = getFirstAvailableLesson();
+        if (!requested) {
+          return firstAvailable.getAttribute("data-lesson-id") || "0";
+        }
+        var selected = getLessonById(requested);
+        if (!isLessonAvailable(selected)) {
+          return firstAvailable.getAttribute("data-lesson-id") || "0";
+        }
+        return selected.getAttribute("data-lesson-id") || "0";
+      }
+
+      function setOpenYoutubeUrl(rawVideoUrl) {
+        if (!openYoutube) {
+          return;
+        }
+        if (!rawVideoUrl) {
+          openYoutube.classList.add("hidden");
+          openYoutube.removeAttribute("href");
+          return;
+        }
+        openYoutube.classList.remove("hidden");
+        openYoutube.setAttribute("href", rawVideoUrl);
+      }
+
+      function applyContextMode() {
+        var fromParam = (getQueryParams().get("from") || "").trim();
+        if (mobileDownloadNotice && fromParam === "mobile-download") {
+          mobileDownloadNotice.classList.remove("hidden");
+        }
+      }
+
+      function setGuideCopyStatus(message) {
+        if (!guideCopyStatus) {
+          return;
+        }
+        guideCopyStatus.textContent = message;
+      }
+
+      async function copyDownloadLink() {
+        try {
+          if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            throw new Error("clipboard_not_supported");
+          }
+          await navigator.clipboard.writeText(desktopDownloadUrl);
+          setGuideCopyStatus("Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για λήψη.");
+          return;
+        } catch (error) {
+          try {
+            var area = document.createElement("textarea");
+            area.value = desktopDownloadUrl;
+            area.setAttribute("readonly", "");
+            area.style.position = "absolute";
+            area.style.left = "-9999px";
+            document.body.appendChild(area);
+            area.select();
+            area.setSelectionRange(0, area.value.length);
+            var ok = document.execCommand("copy");
+            document.body.removeChild(area);
+            if (ok) {
+              setGuideCopyStatus("Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για λήψη.");
+              return;
+            }
+          } catch (fallbackError) {
+            // Continue to helper message below.
+          }
+        }
+
+        setGuideCopyStatus("Αν δεν έγινε αντιγραφή, χρησιμοποίησε αυτόν τον σύνδεσμο σε PC Windows: " + desktopDownloadUrl);
+      }
+
+      async function shareDownloadLink() {
+        if (!navigator.share) {
+          return;
+        }
+
+        try {
+          await navigator.share({
+            title: "Λήψη POSPal για Windows",
+            text: "Άνοιξε αυτόν τον σύνδεσμο σε υπολογιστή Windows για να ξεκινήσει η λήψη POSPal.",
+            url: desktopDownloadUrl
+          });
+          setGuideCopyStatus("Ο σύνδεσμος στάλθηκε. Άνοιξέ τον από υπολογιστή Windows για λήψη.");
+        } catch (error) {
+          if (error && error.name === "AbortError") {
+            return;
+          }
+          setGuideCopyStatus("Αν δεν έγινε αποστολή, πάτησε «Αντιγραφή συνδέσμου λήψης».");
+        }
+      }
+
+      function renderPlaceholder(titleText, soon) {
+        var placeholder = document.createElement("div");
+        placeholder.className = "video-placeholder";
+        placeholder.id = "videoPlaceholder";
+
+        var strong = document.createElement("strong");
+        strong.textContent = soon
+          ? "Το βίντεο του " + titleText + " θα προστεθεί σύντομα"
+          : "Το βίντεο του " + titleText + " θα εμφανιστεί εδώ";
+
+        var paragraph = document.createElement("p");
+        paragraph.textContent = soon
+          ? "Θα ενεργοποιηθεί μόλις ανέβει το αντίστοιχο tutorial στο YouTube."
+          : "Μπορείς να περάσεις YouTube URL με ?lesson=ID&yt=YOUTUBE_URL για να εμφανιστεί άμεσα.";
+
+        placeholder.appendChild(strong);
+        placeholder.appendChild(paragraph);
+        videoBox.appendChild(placeholder);
+      }
+
+      function renderLocalFileFallback(titleText, rawVideoUrl) {
+        var placeholder = document.createElement("div");
+        placeholder.className = "video-placeholder";
+        placeholder.id = "videoPlaceholder";
+
+        var strong = document.createElement("strong");
+        strong.textContent = "Το ενσωματωμένο YouTube player δεν φορτώνει σε τοπικό αρχείο";
+
+        var paragraph = document.createElement("p");
+        paragraph.textContent = "Άνοιξε το βίντεο στο YouTube ή τρέξε τη σελίδα από κανονικό domain/server.";
+
+        placeholder.appendChild(strong);
+        placeholder.appendChild(paragraph);
+
+        if (rawVideoUrl) {
+          var link = document.createElement("a");
+          link.href = rawVideoUrl;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.className = "guide-action-btn cta";
+          link.style.marginTop = "12px";
+          link.textContent = "Άνοιγμα στο YouTube";
+          placeholder.appendChild(link);
+        }
+
+        videoBox.appendChild(placeholder);
+      }
+
+      function renderVideoForLesson(linkEl, lessonId) {
+        var params = getQueryParams();
+        var queryVideo = (params.get("yt") || "").trim();
+        var queryLesson = (params.get("lesson") || "").trim();
+        var dataVideo = (linkEl.getAttribute("data-video") || "").trim();
+        var rawVideoUrl = "";
+
+        if (queryVideo && (queryLesson === String(lessonId) || !queryLesson)) {
+          setStoredVideo(lessonId, queryVideo);
+          rawVideoUrl = queryVideo;
+        } else if (dataVideo) {
+          rawVideoUrl = dataVideo;
+        } else if (lessonId === "0" && inlineVideoUrl) {
+          rawVideoUrl = inlineVideoUrl;
+        } else {
+          rawVideoUrl = getStoredVideo(lessonId);
+        }
+
+        var isLocalFile = window.location.protocol === "file:";
+        var embed = toEmbedUrl(rawVideoUrl);
+        var titleText = linkEl.getAttribute("data-title") || "Οδηγός POSPal";
+        var soon = (linkEl.getAttribute("data-status") || "soon") !== "available";
+
+        videoBox.innerHTML = "";
+
+        if (isLocalFile && rawVideoUrl) {
+          renderLocalFileFallback(titleText, rawVideoUrl);
+          setOpenYoutubeUrl(rawVideoUrl);
+          return;
+        }
+
+        if (!embed) {
+          renderPlaceholder(titleText, soon);
+          setOpenYoutubeUrl("");
+          return;
+        }
+
+        var iframe = document.createElement("iframe");
+        iframe.src = embed;
+        iframe.title = titleText;
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.setAttribute("loading", "lazy");
+        videoBox.appendChild(iframe);
+        setOpenYoutubeUrl(rawVideoUrl);
+      }
+
+      function updateUrl(lessonId) {
+        var params = getQueryParams();
+        params.set("lesson", String(lessonId));
+        params.delete("yt");
+        var next = window.location.pathname + "?" + params.toString();
+        window.history.replaceState({}, "", next);
+      }
+
+      function renderLesson(lessonId, updateAddress) {
+        var current = getLessonById(lessonId);
+        if (!isLessonAvailable(current)) {
+          current = getFirstAvailableLesson();
+        }
+        var id = current.getAttribute("data-lesson-id") || "0";
+        var title = current.getAttribute("data-title") || "Οδηγός POSPal";
+        var status = current.getAttribute("data-status") || "soon";
+
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          lessonLinks[i].classList.toggle("active", lessonLinks[i] === current);
+        }
+
+        lessonTitle.textContent = title;
+        lessonStatus.textContent = status === "available" ? "διαθέσιμο" : "σύντομα";
+        lessonStatus.classList.toggle("is-soon", status !== "available");
+
+        renderVideoForLesson(current, id);
+
+        if (updateAddress) {
+          updateUrl(id);
+        }
+      }
+
+      for (var j = 0; j < lessonLinks.length; j += 1) {
+        if (!isLessonAvailable(lessonLinks[j])) {
+          lessonLinks[j].setAttribute("aria-disabled", "true");
+          lessonLinks[j].setAttribute("tabindex", "-1");
+        }
+      }
+
+      if (copyDownloadLinkBtn) {
+        copyDownloadLinkBtn.addEventListener("click", copyDownloadLink);
+      }
+
+      if (navigator.share && shareDownloadLinkBtn) {
+        shareDownloadLinkBtn.classList.remove("hidden");
+        shareDownloadLinkBtn.addEventListener("click", shareDownloadLink);
+      }
+
+      for (var i = 0; i < lessonLinks.length; i += 1) {
+        if (!isLessonAvailable(lessonLinks[i])) {
+          continue;
+        }
+        lessonLinks[i].addEventListener("click", function (event) {
+          event.preventDefault();
+          var id = this.getAttribute("data-lesson-id") || "0";
+          renderLesson(id, true);
+        });
+      }
+
+      applyContextMode();
+      renderLesson(getSelectedLessonIdFromQuery(), false);
+    })();
+  </script>
 </body>
 </html>
 

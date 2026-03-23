@@ -34,12 +34,7 @@
 
   function isDemoOrAppPath(pathname) {
     return (
-      /^\/pospal_demo(?:_desktop|_index)?\.html$/.test(pathname) ||
-      pathname === "/pospaldesktop.html" ||
-      /^\/pospal-demo-[^/]+\.html$/.test(pathname) ||
-      /^\/pospal-demo-coffee-[^/]+\.html$/.test(pathname) ||
-      pathname === "/qr-menu-demo.html" ||
-      pathname === "/managementcomponent.html"
+      pathname === "/qr-menu-demo.html"
     );
   }
 

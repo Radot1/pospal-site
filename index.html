@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
-    <script src="/static/js/ga-consent.js"></script>
-<script defer src="/static/js/ga-events.js"></script>
+    <script src="./static/js/ga-consent.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F851JG8PL6"></script>
+    <script>
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-F851JG8PL6');
+      window.gtag('config', 'AW-17981190399');
+    </script>
+    <script defer src="./static/js/ga-events.js"></script>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vnzrn7y23s");
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSPal | PDA παραγγελιοληψία για εστίαση | €18,90/μήνα</title>
     <meta name="description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα. Δες demo και κατέβασε το POSPal.">
     <link rel="canonical" href="https://pospal.gr/">
@@ -400,71 +414,6 @@
             font-weight: 700;
         }
 
-        .hero-mobile-value,
-        .hero-mobile-actions {
-            display: none;
-        }
-
-        .hero-mobile-value {
-            padding: 15px 16px;
-            border-radius: 20px;
-            border: 1px solid rgba(187, 247, 208, 0.85);
-            background:
-                radial-gradient(circle at 88% 10%, rgba(34, 197, 94, 0.14), transparent 44%),
-                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
-        }
-
-        .hero-mobile-value-title {
-            margin: 0;
-            font-size: 1.25rem;
-            line-height: 1.25;
-            color: #0f172a;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
-
-        .hero-mobile-value-list {
-            margin-top: 10px;
-            display: grid;
-            gap: 8px;
-            color: #334155;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-
-        .hero-mobile-value-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .hero-mobile-value-list li::before {
-            content: "\2713";
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            margin-top: 1px;
-            background: #dcfce7;
-            color: #15803d;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .hero-mobile-actions {
-            gap: 10px;
-            align-items: stretch;
-        }
-
-        .hero-mobile-actions .btn {
-            width: 100%;
-            justify-content: center;
-        }
-
         .experience-demo {
             z-index: 2;
             position: relative;
@@ -744,7 +693,7 @@
 
         @media (max-width: 1024px) {
             .qr-live-section {
-                padding: 12px 0 24px;
+                padding: 24px 0 24px;
             }
 
             .hero-includes-card {
@@ -789,9 +738,8 @@
             }
 
             .qr-live-preview-frame {
-                --qr-live-max-height: min(84vh, 760px);
-                width: min(100%, calc(var(--qr-live-max-height) * 0.5625));
-                aspect-ratio: 9 / 16;
+                --qr-live-max-height: min(72vh, 680px);
+                width: min(100%, calc(var(--qr-live-max-height) * 0.74));
             }
         }
 
@@ -996,7 +944,7 @@
 
             .experience-viewport {
                 min-height: auto;
-                padding-bottom: 0;
+                padding-bottom: 12px;
             }
 
             .experience-stage {
@@ -1077,11 +1025,11 @@
             .mobile-phases {
                 margin-top: 12px;
                 display: grid;
-                gap: 12px;
+                gap: 24px;
             }
 
             .mobile-phase {
-                min-height: auto;
+                min-height: 60vh;
                 display: flex;
                 align-items: flex-start;
             }
@@ -1144,11 +1092,11 @@
 
         @media (max-width: 1024px) {
             main > section:first-of-type {
-                padding-top: 12px;
+                padding-top: 24px;
             }
 
             .hero-copy {
-                gap: 8px;
+                gap: 12px;
             }
 
             .chip-row {
@@ -1160,7 +1108,7 @@
                 flex-wrap: nowrap;
                 align-items: center;
                 gap: 8px;
-                font-size: 0.75rem;
+                font-size: 0.78rem;
                 line-height: 1.2;
                 white-space: nowrap;
                 overflow-x: auto;
@@ -1168,7 +1116,7 @@
                 scrollbar-width: none;
                 width: fit-content;
                 max-width: 100%;
-                padding: 5px 9px;
+                padding: 6px 10px;
                 border-radius: 999px;
                 background: #f0fdf4;
                 border: 1px solid rgba(187, 247, 208, 0.85);
@@ -1183,53 +1131,8 @@
                 display: none;
             }
 
-            .hero-copy .text-base {
-                display: none;
-            }
-
             .hero-copy .text-base p {
                 margin-top: 4px;
-            }
-
-            .hero-copy h1 {
-                font-size: 1.82rem;
-                line-height: 1.12;
-                letter-spacing: -0.01em;
-            }
-
-            .hero-mobile-actions {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-                margin-top: 4px;
-            }
-
-            .hero-mobile-value {
-                display: block;
-                padding: 12px 13px;
-            }
-
-            .hero-mobile-value-title {
-                font-size: 1.12rem;
-                line-height: 1.2;
-            }
-
-            .hero-mobile-value-list {
-                margin-top: 8px;
-                gap: 6px;
-                font-size: 0.92rem;
-                line-height: 1.34;
-            }
-
-            .hero-mobile-actions .btn {
-                padding: 10px 16px;
-                font-size: 0.95rem;
-            }
-
-            .hero-desktop-download,
-            .hero-includes-inline,
-            .hero-scroll-hint {
-                display: none !important;
             }
 
             .hero-copy > .flex {
@@ -1370,6 +1273,219 @@
         .card-hover:hover {
             transform: translateY(-4px);
             box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+        }
+
+        .guide-launcher-main {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .guide-launcher-copy {
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-actions {
+            margin-top: auto;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .guide-mobile-note {
+            display: none;
+            margin-top: 10px;
+            color: #64748b;
+            font-size: 0.88rem;
+            line-height: 1.35;
+        }
+
+        .guide-video-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 220px;
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(15, 23, 42, 0.2);
+            color: #e2e8f0;
+            background: linear-gradient(140deg, #0f172a 0%, #1e293b 55%, #166534 100%);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .guide-video-card::before {
+            content: "";
+            position: absolute;
+            inset: -40% -20% auto auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.24), rgba(34, 197, 94, 0));
+            pointer-events: none;
+        }
+
+        .guide-video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.22);
+        }
+
+        .guide-video-top {
+            position: relative;
+            z-index: 1;
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #cbd5e1;
+        }
+
+        .guide-video-title {
+            position: relative;
+            z-index: 1;
+            margin-top: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            max-width: 24ch;
+        }
+
+        .guide-video-meta {
+            position: relative;
+            z-index: 1;
+            margin-top: 6px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .guide-video-play {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 46px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            color: #ffffff;
+        }
+
+        .guide-path {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(226, 232, 240, 0.9);
+            display: grid;
+            gap: 10px;
+        }
+
+        .guide-path-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 14px;
+            border: 1px solid rgba(203, 213, 225, 0.95);
+            background: #ffffff;
+            padding: 11px 12px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .guide-path-row:hover {
+            border-color: rgba(34, 197, 94, 0.55);
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .guide-path-row.is-current {
+            border-color: rgba(34, 197, 94, 0.65);
+            background: #f8fff9;
+        }
+
+        .guide-step {
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #14532d;
+            background: rgba(34, 197, 94, 0.16);
+        }
+
+        .guide-row-copy {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .guide-row-copy strong {
+            font-size: 0.96rem;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        .guide-row-copy small {
+            margin-top: 1px;
+            font-size: 0.8rem;
+            color: #64748b;
+            line-height: 1.3;
+        }
+
+        .guide-row-tag {
+            margin-left: auto;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #166534;
+            border-radius: 999px;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            padding: 4px 8px;
+            background: #f0fdf4;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 960px) {
+            .guide-launcher-main {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-launcher-copy {
+                min-height: 0;
+            }
+
+            .guide-video-card {
+                min-height: 180px;
+            }
+
+            .guide-actions {
+                margin-top: 14px;
+                padding-top: 0;
+            }
+
+            .guide-mobile-note {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .guide-path-row {
+                align-items: flex-start;
+            }
+
+            .guide-row-tag {
+                margin-left: 0;
+            }
         }
 
         .faq-list {
@@ -1566,16 +1682,15 @@
                         </span>
                     </div>
                     <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                        <a href="./POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="/download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
+                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
+                        <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
                     </nav>
                     <div class="header-actions hidden lg:flex items-center gap-3">
                         <span class="header-tagline">Κατέβασε και ξεκίνα δοκιμή.</span>
-                        <a href="/download/" class="btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
+                        <a href="./download/" class="btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
                     </div>
-                    <a href="/download/" class="hidden sm:inline-flex lg:hidden btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
+                    <a href="./download/" class="hidden sm:inline-flex lg:hidden btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
                     <button id="mobile-menu" class="sm:hidden text-slate-600" aria-label="Menu">
                         <span class="text-2xl">≡</span>
                     </button>
@@ -1583,10 +1698,9 @@
                 </div>
                 <div id="mobile-menu-dropdown" class="hidden md:hidden surface-soft mt-3 px-4 py-3">
                     <div class="flex flex-col gap-3 text-sm font-medium text-slate-600">
-                        <a href="./POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="/download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
+                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
+                        <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
                     </div>
                 </div>
             </div>
@@ -1610,17 +1724,6 @@
                                 <span>Γρήγορη ροή</span>
                                 <span>Χωρίς δέσμευση</span>
                             </div>
-                            <div class="hero-mobile-actions">
-                                <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                                <a href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer" class="btn btn-secondary">Άνοιξε QR menu</a>
-                            </div>
-                            <div class="hero-mobile-value">
-                                <h2 class="hero-mobile-value-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
-                                <ul class="hero-mobile-value-list">
-                                    <li>Χωρίς κάρτα και χωρίς στοιχεία.</li>
-                                    <li>Παραγγελιοληψία, τραπέζια και QR μενού στο ίδιο πακέτο.</li>
-                                </ul>
-                            </div>
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
                             </div>
@@ -1633,8 +1736,8 @@
                                     <div class="hero-includes-item">Απλή λειτουργία</div>
                                 </div>
                             </div>
-                            <div class="flex hero-desktop-download">
-                                <a href="/download/" class="btn btn-primary hero-download-cta">Κατέβασε για Windows</a>
+                            <div class="flex">
+                                <a href="./download/" class="btn btn-primary hero-download-cta">Κατέβασε για Windows</a>
                             </div>
                             <div class="hero-scroll-hint">
                                 <span class="hero-scroll-line"></span>
@@ -1695,7 +1798,6 @@
                                                 <div class="mobile-phase-list-item">Λειτουργία τραπεζιών</div>
                                                 <div class="mobile-phase-list-item">Απλή λειτουργία (χωρίς τραπέζια)</div>
                                             </div>
-                                            <a class="mt-5 btn btn-primary" href="/download/">Κατέβασε για Windows</a>
                                         </div>
                                     </section>
                                 </div>
@@ -1729,7 +1831,7 @@
                                 </div>
                                 <div class="qr-live-actions">
                                     <a href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer" class="btn qr-live-btn-primary">Άνοιξε QR menu</a>
-                                    <a href="/download/" class="btn qr-live-btn-secondary">Κατέβασε Windows</a>
+                                    <a href="./download/" class="btn qr-live-btn-secondary">Κατέβασε Windows</a>
                                 </div>
                                 <p class="qr-live-meta">Ανοίγει σε νέο tab.</p>
                             </div>
@@ -1744,8 +1846,7 @@
                     <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">&#932;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#949;&#954;&#960;&#955;&#942;&#958;&#949;&#953;&#962;</h2>
                     <p class="text-slate-600 mt-3">&#8364;18,90/&#956;&#942;&#957;&#945;. 30 &#951;&#956;&#941;&#961;&#949;&#962; &#948;&#959;&#954;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
                     <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="./POSPal_Demo_Index.html" class="btn btn-secondary">&#916;&#949;&#962; Demo</a>
-                        <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
+                        <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
                     </div>
                     <p class="mt-3 text-xs text-slate-500">&#913;&#954;&#973;&#961;&#969;&#963;&#951; &#972;&#960;&#959;&#964;&#949; &#952;&#941;&#955;&#949;&#953;&#962;.</p>
                     <p class="mt-1 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικό POS. Δουλεύει δίπλα στο υπάρχον σύστημα.</p>
@@ -1753,59 +1854,50 @@
             </section>
 
             <section class="py-12">
-                <div class="surface-soft p-8 reveal">
-                    <div class="text-center">
-                        <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">Οδηγοί για PDA &amp; QR μενού</h2>
-                        <p class="text-slate-600 mt-3">Γρήγορες απαντήσεις σε αυτά που ψάχνουν πιο συχνά οι επιχειρήσεις εστίασης.</p>
+                <div class="surface-soft p-6 sm:p-8 reveal">
+                    <div class="guide-launcher-main">
+                        <div class="guide-launcher-copy">
+                            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Οδηγοί POSPal</p>
+                            <h2 class="mt-2 text-2xl sm:text-3xl font-display font-semibold text-slate-900">Ξεκίνα με τους οδηγούς POSPal</h2>
+                            <div class="guide-actions">
+                                <a href="./guides/index.html?lesson=0" class="btn btn-primary">Δες Οδηγό 0</a>
+                                <a href="./download/" class="btn btn-secondary">Λήψη για Windows</a>
+                            </div>
+                            <p class="guide-mobile-note">Η λήψη γίνεται σε υπολογιστή Windows.</p>
+                        </div>
+                        <a class="guide-video-card" href="./guides/index.html?lesson=0" aria-label="Άνοιγμα βίντεο Οδηγού 0">
+                            <span class="guide-video-play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false" aria-hidden="true">
+                                    <path d="M8 6.5v11l9-5.5-9-5.5z"></path>
+                                </svg>
+                            </span>
+                            <span class="guide-video-top">Οδηγός 0 • Βίντεο</span>
+                            <span class="guide-video-title">Στήσιμο εκτυπωτή από το μηδέν</span>
+                            <span class="guide-video-meta">8-12 λεπτά • πρακτική εγκατάσταση</span>
+                        </a>
                     </div>
-                    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        <a class="surface card-hover p-6" href="./pda-pos-leitourgei.html">
-                            <h3 class="text-lg font-semibold text-slate-900">PDA: πώς λειτουργεί</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Η ροή παραγγελιοληψίας σε 4 απλά βήματα.</p>
+                    <div class="guide-path" aria-label="Προτεινόμενη σειρά οδηγών">
+                        <a class="guide-path-row is-current" href="./guides/index.html?lesson=0">
+                            <span class="guide-step">0</span>
+                            <span class="guide-row-copy">
+                                <strong>Στήσιμο εκτυπωτή</strong>
+                                <small>Απαραίτητο πριν από την εγκατάσταση</small>
+                            </span>
+                            <span class="guide-row-tag">Τώρα</span>
                         </a>
-                        <a class="surface card-hover p-6" href="./times.html">
-                            <h3 class="text-lg font-semibold text-slate-900">Τιμές</h3>
-                            <p class="mt-2 text-slate-600 text-sm">€18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</p>
+                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
+                            <span class="guide-step">1</span>
+                            <span class="guide-row-copy">
+                                <strong>Εγκατάσταση POSPal</strong>
+                                <small>Συνέχεια αμέσως μετά τον Οδηγό 0</small>
+                            </span>
                         </a>
-                        <a class="surface card-hover p-6" href="./pda-gia-kafeteries.html">
-                            <h3 class="text-lg font-semibold text-slate-900">PDA για καφετέρια</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Τραπέζια + πακέτο, με απλή λειτουργία.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./paraggelio-lipsia-gia-beach-bar.html">
-                            <h3 class="text-lg font-semibold text-slate-900">Beach bar</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Γρήγορο στήσιμο, δουλειά σε tablet/κινητό.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./menu-estiatoriou.html">
-                            <h3 class="text-lg font-semibold text-slate-900">μενου εστιατοριου</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Τιμοκατάλογος και οργάνωση καταλόγου εστίασης.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./pda-ti-einai.html">
-                            <h3 class="text-lg font-semibold text-slate-900">pda τι ειναι</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Σύντομη και καθαρή εξήγηση για τη ροή PDA.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./asyrmati-paraggeliolipsia.html">
-                            <h3 class="text-lg font-semibold text-slate-900">Ασύρματη παραγγελιοληψία</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Ασύρματη ροή για βάρδιες με ένταση.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./qr-menu-gia-estiash.html">
-                            <h3 class="text-lg font-semibold text-slate-900">qr menu</h3>
-                            <p class="mt-2 text-slate-600 text-sm">QR και qr code menu με άμεση ενημέρωση καταλόγου.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./paraggelies-gia-estiash.html">
-                            <h3 class="text-lg font-semibold text-slate-900">παραγγελειεσ</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Ενιαία ροή παραγγελιών στην εστίαση.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./systima-paraggeliolipsias.html">
-                            <h3 class="text-lg font-semibold text-slate-900">συστημα παραγγελιοληψιασ</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Προγραμματα pda, επιλογή λύσης και ξεκάθαρο κόστος.</p>
-                        </a>
-                        <a class="surface card-hover p-6" href="./installation-guide.html">
-                            <h3 class="text-lg font-semibold text-slate-900">Οδηγός εγκατάστασης</h3>
-                            <p class="mt-2 text-slate-600 text-sm">Βήματα για λήψη, ρύθμιση και πρώτη δοκιμή ροής.</p>
-                        </a>
-                        <a class="surface card-hover p-6 sm:col-span-2 lg:col-span-2" href="./guides/">
-                            <h3 class="text-lg font-semibold text-slate-900">Όλοι οι οδηγοί</h3>
-                            <p class="mt-2 text-slate-600 text-sm">QR μενού, καφετέρια, εποχικά, food truck, πρώτη εβδομάδα.</p>
+                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
+                            <span class="guide-step">2</span>
+                            <span class="guide-row-copy">
+                                <strong>Πρώτο μενού και QR</strong>
+                                <small>Γρήγορη ενεργοποίηση για την πρώτη βάρδια</small>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -1926,9 +2018,8 @@
                             <span>POSPal</span>
                         </div>
                          <div class="flex flex-wrap gap-4">
-                             <a href="./POSPal_Demo_Index.html" class="hover:text-slate-900">Demo</a>
                              <a href="./times.html" class="hover:text-slate-900">Τιμές</a>
-                             <a href="./guides/" class="hover:text-slate-900">Οδηγοί</a>
+                             <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
                              <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
                          </div>
                     </div>
@@ -2541,6 +2632,5 @@
     </script>
 </body>
 </html>
-
 
 
