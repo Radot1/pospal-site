@@ -1296,6 +1296,14 @@
             gap: 10px;
         }
 
+        .guide-mobile-note {
+            display: none;
+            margin-top: 10px;
+            color: #64748b;
+            font-size: 0.88rem;
+            line-height: 1.35;
+        }
+
         .guide-video-card {
             position: relative;
             display: flex;
@@ -1463,6 +1471,10 @@
             .guide-actions {
                 margin-top: 14px;
                 padding-top: 0;
+            }
+
+            .guide-mobile-note {
+                display: block;
             }
         }
 
@@ -1671,7 +1683,7 @@
                     </div>
                     <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
+                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
                         <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
                     </nav>
                     <div class="header-actions hidden lg:flex items-center gap-3">
@@ -1687,7 +1699,7 @@
                 <div id="mobile-menu-dropdown" class="hidden md:hidden surface-soft mt-3 px-4 py-3">
                     <div class="flex flex-col gap-3 text-sm font-medium text-slate-600">
                         <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
+                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
                         <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
                     </div>
                 </div>
@@ -1848,8 +1860,10 @@
                             <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Οδηγοί POSPal</p>
                             <h2 class="mt-2 text-2xl sm:text-3xl font-display font-semibold text-slate-900">Ξεκίνα με τους οδηγούς POSPal</h2>
                             <div class="guide-actions">
-                                <a href="./guides/index.html" class="btn btn-secondary">Όλοι οι οδηγοί</a>
+                                <a href="./guides/index.html?lesson=0" class="btn btn-primary">Δες Οδηγό 0</a>
+                                <a href="./download/" class="btn btn-secondary">Λήψη για Windows</a>
                             </div>
+                            <p class="guide-mobile-note">Η λήψη γίνεται σε υπολογιστή Windows.</p>
                         </div>
                         <a class="guide-video-card" href="./guides/index.html?lesson=0" aria-label="Άνοιγμα βίντεο Οδηγού 0">
                             <span class="guide-video-play" aria-hidden="true">
@@ -1871,14 +1885,14 @@
                             </span>
                             <span class="guide-row-tag">Τώρα</span>
                         </a>
-                        <a class="guide-path-row" href="./guides/index.html?lesson=1">
+                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
                             <span class="guide-step">1</span>
                             <span class="guide-row-copy">
                                 <strong>Εγκατάσταση POSPal</strong>
                                 <small>Συνέχεια αμέσως μετά τον Οδηγό 0</small>
                             </span>
                         </a>
-                        <a class="guide-path-row" href="./guides/index.html?lesson=2">
+                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
                             <span class="guide-step">2</span>
                             <span class="guide-row-copy">
                                 <strong>Πρώτο μενού και QR</strong>
@@ -2005,7 +2019,7 @@
                         </div>
                          <div class="flex flex-wrap gap-4">
                              <a href="./times.html" class="hover:text-slate-900">Τιμές</a>
-                             <a href="./guides/index.html" class="hover:text-slate-900">Οδηγοί</a>
+                             <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
                              <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
                          </div>
                     </div>

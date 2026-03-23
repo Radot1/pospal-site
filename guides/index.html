@@ -197,6 +197,8 @@
 
     .lesson-link.soon {
       opacity: .82;
+      pointer-events: none;
+      cursor: not-allowed;
     }
 
     .content {
@@ -291,6 +293,68 @@
       font-size: .95rem;
     }
 
+    .guide-context-notice {
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1e3a8a;
+      padding: 10px 12px;
+      font-size: .9rem;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .guide-next-steps {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 12px;
+    }
+
+    .guide-next-steps h2 {
+      margin: 0;
+      font-size: .95rem;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .guide-next-actions {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .guide-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid #99afcb;
+      background: #fff;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .84rem;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .guide-action-btn.cta {
+      border-color: var(--brand-600);
+      background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+      color: #fff;
+    }
+
+    .guide-copy-status {
+      margin-top: 8px;
+      font-size: .8rem;
+      color: #64748b;
+    }
+
     .footer-note {
       margin-top: 10px;
       font-size: .82rem;
@@ -309,6 +373,9 @@
       .layout { grid-template-columns: minmax(0, 1fr); }
       .sidebar { order: 2; }
       .content { order: 1; }
+      .guide-next-actions {
+        flex-direction: column;
+      }
     }
 
     @media (max-height: 760px) {
@@ -347,7 +414,7 @@
            data-lesson-id="0"
            data-title="Οδηγός 0: Στήσιμο εκτυπωτή"
            data-status="available"
-           data-video="">
+           data-video="https://youtu.be/p0FNRfv0vVo">
           Οδηγός 0: Στήσιμο εκτυπωτή
           <small>διαθέσιμο</small>
         </a>
@@ -401,6 +468,9 @@
           <h1 id="lessonTitle">Οδηγός 0: Στήσιμο εκτυπωτή</h1>
           <span class="status-pill" id="lessonStatus">διαθέσιμο</span>
         </div>
+        <div id="mobileDownloadNotice" class="guide-context-notice hidden">
+          Η εγκατάσταση γίνεται σε Windows PC. Δες το βίντεο και μετά άνοιξε τη λήψη από υπολογιστή.
+        </div>
 
         <section class="video-shell">
           <div class="video-box" id="videoBox">
@@ -409,6 +479,15 @@
               <p>Μπορείς να βάλεις YouTube URL στο `data-video-url` ή να ανοίξεις τη σελίδα με `?yt=YOUTUBE_URL`.</p>
             </div>
           </div>
+        </section>
+        <section class="guide-next-steps">
+          <h2>Επόμενο βήμα μετά το βίντεο</h2>
+          <div class="guide-next-actions">
+            <a class="guide-action-btn cta" href="../download/">Κατέβασε σε υπολογιστή Windows</a>
+            <button type="button" id="copyDownloadLinkBtn" class="guide-action-btn">Αντιγραφή συνδέσμου λήψης</button>
+            <button type="button" id="shareDownloadLinkBtn" class="guide-action-btn hidden">Στείλε τον σύνδεσμο στον εαυτό σου</button>
+          </div>
+          <p id="guideCopyStatus" class="guide-copy-status" aria-live="polite"></p>
         </section>
 
         <p class="footer-note">Υποστήριξη: <a href="mailto:support@pospal.gr">support@pospal.gr</a> • Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή.</p>
@@ -424,6 +503,11 @@
       var lessonStatus = document.getElementById("lessonStatus");
       var videoBox = document.getElementById("videoBox");
       var openYoutube = document.querySelector("[data-open-youtube]");
+      var mobileDownloadNotice = document.getElementById("mobileDownloadNotice");
+      var copyDownloadLinkBtn = document.getElementById("copyDownloadLinkBtn");
+      var shareDownloadLinkBtn = document.getElementById("shareDownloadLinkBtn");
+      var guideCopyStatus = document.getElementById("guideCopyStatus");
+      var desktopDownloadUrl = window.location.origin + "/download/";
 
       if (!lessonLinks.length || !lessonTitle || !lessonStatus || !videoBox) {
         return;
@@ -431,6 +515,19 @@
 
       function getQueryParams() {
         return new URLSearchParams(window.location.search || "");
+      }
+
+      function isLessonAvailable(linkEl) {
+        return (linkEl.getAttribute("data-status") || "soon") === "available";
+      }
+
+      function getFirstAvailableLesson() {
+        for (var i = 0; i < lessonLinks.length; i += 1) {
+          if (isLessonAvailable(lessonLinks[i])) {
+            return lessonLinks[i];
+          }
+        }
+        return lessonLinks[0];
       }
 
       function getStorageKey(lessonId) {
@@ -480,16 +577,21 @@
             return lessonLinks[i];
           }
         }
-        return lessonLinks[0];
+        return getFirstAvailableLesson();
       }
 
       function getSelectedLessonIdFromQuery() {
         var params = getQueryParams();
         var requested = (params.get("lesson") || "").trim();
+        var firstAvailable = getFirstAvailableLesson();
         if (!requested) {
-          return lessonLinks[0].getAttribute("data-lesson-id") || "0";
+          return firstAvailable.getAttribute("data-lesson-id") || "0";
         }
-        return getLessonById(requested).getAttribute("data-lesson-id") || "0";
+        var selected = getLessonById(requested);
+        if (!isLessonAvailable(selected)) {
+          return firstAvailable.getAttribute("data-lesson-id") || "0";
+        }
+        return selected.getAttribute("data-lesson-id") || "0";
       }
 
       function setOpenYoutubeUrl(rawVideoUrl) {
@@ -503,6 +605,72 @@
         }
         openYoutube.classList.remove("hidden");
         openYoutube.setAttribute("href", rawVideoUrl);
+      }
+
+      function applyContextMode() {
+        var fromParam = (getQueryParams().get("from") || "").trim();
+        if (mobileDownloadNotice && fromParam === "mobile-download") {
+          mobileDownloadNotice.classList.remove("hidden");
+        }
+      }
+
+      function setGuideCopyStatus(message) {
+        if (!guideCopyStatus) {
+          return;
+        }
+        guideCopyStatus.textContent = message;
+      }
+
+      async function copyDownloadLink() {
+        try {
+          if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            throw new Error("clipboard_not_supported");
+          }
+          await navigator.clipboard.writeText(desktopDownloadUrl);
+          setGuideCopyStatus("Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για λήψη.");
+          return;
+        } catch (error) {
+          try {
+            var area = document.createElement("textarea");
+            area.value = desktopDownloadUrl;
+            area.setAttribute("readonly", "");
+            area.style.position = "absolute";
+            area.style.left = "-9999px";
+            document.body.appendChild(area);
+            area.select();
+            area.setSelectionRange(0, area.value.length);
+            var ok = document.execCommand("copy");
+            document.body.removeChild(area);
+            if (ok) {
+              setGuideCopyStatus("Ο σύνδεσμος αντιγράφηκε. Άνοιξέ τον σε υπολογιστή Windows για λήψη.");
+              return;
+            }
+          } catch (fallbackError) {
+            // Continue to helper message below.
+          }
+        }
+
+        setGuideCopyStatus("Αν δεν έγινε αντιγραφή, χρησιμοποίησε αυτόν τον σύνδεσμο σε PC Windows: " + desktopDownloadUrl);
+      }
+
+      async function shareDownloadLink() {
+        if (!navigator.share) {
+          return;
+        }
+
+        try {
+          await navigator.share({
+            title: "Λήψη POSPal για Windows",
+            text: "Άνοιξε αυτόν τον σύνδεσμο σε υπολογιστή Windows για να ξεκινήσει η λήψη POSPal.",
+            url: desktopDownloadUrl
+          });
+          setGuideCopyStatus("Ο σύνδεσμος στάλθηκε. Άνοιξέ τον από υπολογιστή Windows για λήψη.");
+        } catch (error) {
+          if (error && error.name === "AbortError") {
+            return;
+          }
+          setGuideCopyStatus("Αν δεν έγινε αποστολή, πάτησε «Αντιγραφή συνδέσμου λήψης».");
+        }
       }
 
       function renderPlaceholder(titleText, soon) {
@@ -525,6 +693,34 @@
         videoBox.appendChild(placeholder);
       }
 
+      function renderLocalFileFallback(titleText, rawVideoUrl) {
+        var placeholder = document.createElement("div");
+        placeholder.className = "video-placeholder";
+        placeholder.id = "videoPlaceholder";
+
+        var strong = document.createElement("strong");
+        strong.textContent = "Το ενσωματωμένο YouTube player δεν φορτώνει σε τοπικό αρχείο";
+
+        var paragraph = document.createElement("p");
+        paragraph.textContent = "Άνοιξε το βίντεο στο YouTube ή τρέξε τη σελίδα από κανονικό domain/server.";
+
+        placeholder.appendChild(strong);
+        placeholder.appendChild(paragraph);
+
+        if (rawVideoUrl) {
+          var link = document.createElement("a");
+          link.href = rawVideoUrl;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.className = "guide-action-btn cta";
+          link.style.marginTop = "12px";
+          link.textContent = "Άνοιγμα στο YouTube";
+          placeholder.appendChild(link);
+        }
+
+        videoBox.appendChild(placeholder);
+      }
+
       function renderVideoForLesson(linkEl, lessonId) {
         var params = getQueryParams();
         var queryVideo = (params.get("yt") || "").trim();
@@ -543,11 +739,18 @@
           rawVideoUrl = getStoredVideo(lessonId);
         }
 
+        var isLocalFile = window.location.protocol === "file:";
         var embed = toEmbedUrl(rawVideoUrl);
         var titleText = linkEl.getAttribute("data-title") || "Οδηγός POSPal";
         var soon = (linkEl.getAttribute("data-status") || "soon") !== "available";
 
         videoBox.innerHTML = "";
+
+        if (isLocalFile && rawVideoUrl) {
+          renderLocalFileFallback(titleText, rawVideoUrl);
+          setOpenYoutubeUrl(rawVideoUrl);
+          return;
+        }
 
         if (!embed) {
           renderPlaceholder(titleText, soon);
@@ -575,6 +778,9 @@
 
       function renderLesson(lessonId, updateAddress) {
         var current = getLessonById(lessonId);
+        if (!isLessonAvailable(current)) {
+          current = getFirstAvailableLesson();
+        }
         var id = current.getAttribute("data-lesson-id") || "0";
         var title = current.getAttribute("data-title") || "Οδηγός POSPal";
         var status = current.getAttribute("data-status") || "soon";
@@ -594,7 +800,26 @@
         }
       }
 
+      for (var j = 0; j < lessonLinks.length; j += 1) {
+        if (!isLessonAvailable(lessonLinks[j])) {
+          lessonLinks[j].setAttribute("aria-disabled", "true");
+          lessonLinks[j].setAttribute("tabindex", "-1");
+        }
+      }
+
+      if (copyDownloadLinkBtn) {
+        copyDownloadLinkBtn.addEventListener("click", copyDownloadLink);
+      }
+
+      if (navigator.share && shareDownloadLinkBtn) {
+        shareDownloadLinkBtn.classList.remove("hidden");
+        shareDownloadLinkBtn.addEventListener("click", shareDownloadLink);
+      }
+
       for (var i = 0; i < lessonLinks.length; i += 1) {
+        if (!isLessonAvailable(lessonLinks[i])) {
+          continue;
+        }
         lessonLinks[i].addEventListener("click", function (event) {
           event.preventDefault();
           var id = this.getAttribute("data-lesson-id") || "0";
@@ -602,6 +827,7 @@
         });
       }
 
+      applyContextMode();
       renderLesson(getSelectedLessonIdFromQuery(), false);
     })();
   </script>
