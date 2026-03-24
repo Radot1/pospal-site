@@ -893,7 +893,7 @@
         }
 
         .mobile-offer-card {
-            padding: 16px;
+            padding: 14px;
             border-radius: 18px;
             border: 1px solid rgba(187, 247, 208, 0.85);
             background:
@@ -911,39 +911,8 @@
             color: #0f172a;
         }
 
-        .mobile-offer-list {
-            margin-top: 10px;
-            display: grid;
-            gap: 8px;
-            color: #334155;
-            font-size: 0.94rem;
-            line-height: 1.4;
-        }
-
-        .mobile-offer-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 9px;
-        }
-
-        .mobile-offer-list li::before {
-            content: "\2713";
-            width: 19px;
-            height: 19px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            margin-top: 1px;
-            color: #15803d;
-            background: #dcfce7;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
         .mobile-offer-actions {
-            margin-top: 14px;
+            margin-top: 10px;
             display: grid;
             gap: 8px;
         }
@@ -957,7 +926,7 @@
             .hero-copy {
                 display: flex;
                 flex-direction: column;
-                gap: 16px;
+                gap: 10px;
             }
 
             .chip-row {
@@ -965,19 +934,6 @@
             }
 
             .hero-pill-line {
-                display: flex;
-                flex-wrap: nowrap;
-                align-items: center;
-                gap: 8px;
-                font-size: 0.78rem;
-                line-height: 1.2;
-                white-space: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-            }
-
-            .hero-pill-line::-webkit-scrollbar {
                 display: none;
             }
 
@@ -987,18 +943,14 @@
             }
 
             .hero-copy .text-base {
-                font-size: 0.98rem;
-            }
-
-            .hero-copy .text-base p {
-                margin-top: 6px;
-            }
-
-            .hero-copy .text-base p:first-child {
-                margin-top: 0;
+                display: none;
             }
 
             .hero-scroll-hint {
+                display: none;
+            }
+
+            .hero-includes-card {
                 display: none;
             }
 
@@ -1139,7 +1091,7 @@
             }
 
             .hero-copy {
-                gap: 12px;
+                gap: 10px;
             }
 
             .chip-row {
@@ -1147,39 +1099,7 @@
             }
 
             .hero-pill-line {
-                display: flex;
-                flex-wrap: nowrap;
-                align-items: center;
-                gap: 8px;
-                font-size: 0.78rem;
-                line-height: 1.2;
-                white-space: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                width: fit-content;
-                max-width: 100%;
-                padding: 6px 10px;
-                border-radius: 999px;
-                background: #f0fdf4;
-                border: 1px solid rgba(187, 247, 208, 0.85);
-                box-shadow: 0 8px 18px rgba(22, 163, 74, 0.08);
-            }
-
-            .hero-pill-line span {
-                gap: 6px;
-            }
-
-            .hero-pill-line::-webkit-scrollbar {
                 display: none;
-            }
-
-            .hero-copy .text-base p {
-                margin-top: 4px;
-            }
-
-            .hero-copy > .flex {
-                gap: 12px;
             }
         }
 
@@ -1772,10 +1692,6 @@
                             </div>
                             <div class="mobile-offer-card mobile-only">
                                 <h2 class="mobile-offer-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
-                                <ul class="mobile-offer-list">
-                                    <li>Χωρίς κάρτα και χωρίς λογαριασμό.</li>
-                                    <li>Μέσα στο πακέτο: παραγγελιοληψία, τραπέζια και QR μενού.</li>
-                                </ul>
                                 <div class="mobile-offer-actions">
                                     <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
                                     <a href="./guides/index.html?lesson=0" class="btn btn-secondary">Άνοιξε Οδηγούς</a>
@@ -1789,9 +1705,6 @@
                                     <div class="hero-includes-item">QR μενού με αυτόματη ενημέρωση</div>
                                     <div class="hero-includes-item">Απλή λειτουργία</div>
                                 </div>
-                            </div>
-                            <div class="flex">
-                                <a href="./download/" class="btn btn-primary hero-download-cta">Κατέβασε για Windows</a>
                             </div>
                             <div class="hero-scroll-hint">
                                 <span class="hero-scroll-line"></span>
