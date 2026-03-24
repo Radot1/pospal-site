@@ -20,7 +20,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSPal | PDA παραγγελιοληψία για εστίαση | €18,90/μήνα</title>
-    <meta name="description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα. Δες demo και κατέβασε το POSPal.">
+    <meta name="description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα. Κατέβασε το POSPal ή άνοιξε τους οδηγούς.">
     <link rel="canonical" href="https://pospal.gr/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
@@ -892,6 +892,67 @@
             box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
         }
 
+        .mobile-offer-card {
+            padding: 16px;
+            border-radius: 18px;
+            border: 1px solid rgba(187, 247, 208, 0.85);
+            background:
+                radial-gradient(circle at 90% 14%, rgba(34, 197, 94, 0.12), transparent 46%),
+                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .mobile-offer-title {
+            margin: 0;
+            font-size: 1.34rem;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+        }
+
+        .mobile-offer-list {
+            margin-top: 10px;
+            display: grid;
+            gap: 8px;
+            color: #334155;
+            font-size: 0.94rem;
+            line-height: 1.4;
+        }
+
+        .mobile-offer-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+        }
+
+        .mobile-offer-list li::before {
+            content: "\2713";
+            width: 19px;
+            height: 19px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            margin-top: 1px;
+            color: #15803d;
+            background: #dcfce7;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .mobile-offer-actions {
+            margin-top: 14px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .mobile-offer-actions .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
         @media (max-width: 1024px) {
             .hero-copy {
                 display: flex;
@@ -938,8 +999,7 @@
             }
 
             .hero-scroll-hint {
-                font-size: 0.7rem;
-                opacity: 0.7;
+                display: none;
             }
 
             .experience-viewport {
@@ -984,7 +1044,7 @@
             }
 
             .demo-frame-hero {
-                --hero-ratio: 9 / 19.5;
+                --hero-ratio: 9 / 16;
                 width: 92vw;
                 max-width: 420px;
                 min-height: 60vh;
@@ -1017,33 +1077,16 @@
                 pointer-events: none;
             }
 
-            .mobile-phase-indicator,
-            .mobile-phases {
-                display: flex;
-            }
-
-            .mobile-phases {
-                margin-top: 12px;
-                display: grid;
-                gap: 24px;
-            }
-
-            .mobile-phase {
-                min-height: 60vh;
-                display: flex;
-                align-items: flex-start;
-            }
-
-            .mobile-phase-card {
-                width: 100%;
-            }
-
             .mobile-only {
                 display: block;
             }
 
             .mobile-section-label {
                 display: block;
+            }
+
+            .hero-download-cta {
+                display: none;
             }
         }
 
@@ -1727,6 +1770,17 @@
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
                             </div>
+                            <div class="mobile-offer-card mobile-only">
+                                <h2 class="mobile-offer-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
+                                <ul class="mobile-offer-list">
+                                    <li>Χωρίς κάρτα και χωρίς λογαριασμό.</li>
+                                    <li>Μέσα στο πακέτο: παραγγελιοληψία, τραπέζια και QR μενού.</li>
+                                </ul>
+                                <div class="mobile-offer-actions">
+                                    <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
+                                    <a href="./guides/index.html?lesson=0" class="btn btn-secondary">Άνοιξε Οδηγούς</a>
+                                </div>
+                            </div>
                             <div class="hero-includes-card hero-includes-inline">
                                 <h2 class="hero-includes-title">Τι περιλαμβάνει το πακέτο</h2>
                                 <div class="hero-includes-list">
@@ -1757,7 +1811,7 @@
                                                 <li>Παραγγελιοληψία, τραπέζια και QR μενού στο ίδιο πακέτο.</li>
                                             </ul>
                                             <div class="value-panel-actions">
-                                                <a class="btn value-panel-link" href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer">Άνοιξε QR menu</a>
+                                                <a class="btn value-panel-link" href="./guides/index.html?lesson=0">Άνοιξε Οδηγούς</a>
                                             </div>
                                         </div>
                                         <div class="experience-demo">
@@ -1789,18 +1843,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mobile-phases" id="mobile-phases">
-                                    <section class="mobile-phase" data-mobile-phase="1">
-                                        <div class="surface-soft mobile-phase-card">
-                                            <div class="mobile-phase-eyebrow">Τι περιλαμβάνει</div>
-                                            <div class="mobile-phase-list">
-                                                <div class="mobile-phase-list-item">Λήψη παραγγελιών εκτός Wi-Fi</div>
-                                                <div class="mobile-phase-list-item">Λειτουργία τραπεζιών</div>
-                                                <div class="mobile-phase-list-item">Απλή λειτουργία (χωρίς τραπέζια)</div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1824,16 +1866,16 @@
                             <div class="qr-live-copy">
                                 <p class="qr-live-eyebrow">Επίσης περιλαμβάνει</p>
                                 <h2 class="qr-live-title">Live QR menu για τον χώρο σου</h2>
-                                <p class="qr-live-body">Άνοιξέ το τώρα και δες την εμπειρία όπως θα τη δει ο πελάτης.</p>
+                                <p class="qr-live-body">Δες το preview εδώ και συνέχισε με τον Οδηγό 0 για να το στήσεις σωστά.</p>
                                 <div class="qr-live-chips">
                                     <span class="qr-live-chip">Αυτόματες ενημερώσεις</span>
                                     <span class="qr-live-chip">Ένας σύνδεσμος παντού</span>
                                 </div>
                                 <div class="qr-live-actions">
-                                    <a href="https://menus-5ar.pages.dev/s/pospal" target="_blank" rel="noreferrer" class="btn qr-live-btn-primary">Άνοιξε QR menu</a>
+                                    <a href="./guides/index.html?lesson=0" class="btn qr-live-btn-primary">Άνοιξε Οδηγούς</a>
                                     <a href="./download/" class="btn qr-live-btn-secondary">Κατέβασε Windows</a>
                                 </div>
-                                <p class="qr-live-meta">Ανοίγει σε νέο tab.</p>
+                                <p class="qr-live-meta">Ξεκίνα από τον Οδηγό 0.</p>
                             </div>
                         </div>
                     </div>
