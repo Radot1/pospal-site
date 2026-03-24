@@ -729,17 +729,32 @@
                 max-width: 26ch;
             }
 
-            .qr-live-body {
-                font-size: 0.95rem;
-            }
-
             .qr-live-preview-shell {
                 width: min(100%, 520px);
             }
 
             .qr-live-preview-frame {
-                --qr-live-max-height: min(72vh, 680px);
-                width: min(100%, calc(var(--qr-live-max-height) * 0.74));
+                --qr-live-max-height: min(82vh, 900px);
+                width: min(100%, calc(var(--qr-live-max-height) * 0.62));
+                aspect-ratio: 9 / 16;
+            }
+
+            .qr-live-copy {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .qr-live-eyebrow,
+            .qr-live-body,
+            .qr-live-chips,
+            .qr-live-meta {
+                display: none;
+            }
+
+            .qr-live-actions {
+                margin-top: 0;
             }
         }
 
@@ -1777,18 +1792,11 @@
                                 </div>
                             </div>
                             <div class="qr-live-copy">
-                                <p class="qr-live-eyebrow">Επίσης περιλαμβάνει</p>
                                 <h2 class="qr-live-title">Live QR menu για τον χώρο σου</h2>
-                                <p class="qr-live-body">Δες το preview εδώ και συνέχισε με τον Οδηγό 0 για να το στήσεις σωστά.</p>
-                                <div class="qr-live-chips">
-                                    <span class="qr-live-chip">Αυτόματες ενημερώσεις</span>
-                                    <span class="qr-live-chip">Ένας σύνδεσμος παντού</span>
-                                </div>
                                 <div class="qr-live-actions">
-                                    <a href="./guides/index.html?lesson=0" class="btn qr-live-btn-primary">Άνοιξε Οδηγούς</a>
-                                    <a href="./download/" class="btn qr-live-btn-secondary">Κατέβασε Windows</a>
+                                    <a href="./download/" class="btn qr-live-btn-primary">Κατέβασε για Windows</a>
+                                    <a href="./guides/index.html?lesson=0" class="btn qr-live-btn-secondary">Άνοιξε Οδηγούς</a>
                                 </div>
-                                <p class="qr-live-meta">Ξεκίνα από τον Οδηγό 0.</p>
                             </div>
                         </div>
                     </div>
