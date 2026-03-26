@@ -915,13 +915,23 @@
 
         .mobile-offer-actions {
             margin-top: 10px;
-            display: grid;
+            display: flex;
+            flex-wrap: wrap;
             gap: 8px;
         }
 
         .mobile-offer-actions .btn {
-            width: 100%;
             justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            .mobile-offer-actions {
+                display: grid;
+            }
+
+            .mobile-offer-actions .btn {
+                width: 100%;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -1692,7 +1702,7 @@
                             <div class="text-base sm:text-lg text-slate-600 space-y-2">
                                 <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
                             </div>
-                            <div class="mobile-offer-card mobile-only">
+                            <div class="mobile-offer-card">
                                 <h2 class="mobile-offer-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
                                 <div class="mobile-offer-actions">
                                     <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
