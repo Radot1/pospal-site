@@ -4,13 +4,14 @@
 - Property: POSPal
 - Stream URL: `https://www.pospal.gr`
 - Measurement ID: `G-F851JG8PL6`
-- KPI priority: download-first
+- KPI priority: download-first, guides second
+- Demo interactions are proof/context only, not a conversion KPI.
 
 ## Key Events
 Mark these as Key events in GA4:
 - `trial_start_click` (primary)
 - `download_click` (primary)
-- `demo_click` (secondary)
+- `guide_journey_start` (secondary, if guide-entry tracking is active)
 
 ## Custom Dimensions (Event Scope)
 Create these event-scoped custom dimensions in GA4:
@@ -69,13 +70,16 @@ Create custom insights for:
 - `trial_start_click` drop > 20% week-over-week
 - `download_click` drop > 20% week-over-week
 - `download_click` equals 0 for 6 hours
+- `guide_journey_start` drop > 20% week-over-week, if marked as a key event
 
 ## Post-Deploy QA
 - Validate in Realtime and DebugView:
-  - `demo_click`
   - `download_click`
   - `trial_start_click`
+  - `guide_journey_start`, where present
   - `pricing_view`
   - `faq_expand`
+- Optional proof/context event only:
+  - `demo_click`
 - Validate desktop `/download/` autostart event:
   - `installer_autostart`

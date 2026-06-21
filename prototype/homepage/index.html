@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>POSPal Homepage Prototype</title>
+  <meta name="description" content="Throwaway homepage design prototype for POSPal.">
+  <link rel="icon" href="../../app_icon.ico">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-variant="A">
+  <!-- PROTOTYPE: Three homepage directions, switchable with ?variant=A|B|C. Do not ship directly. -->
+  <a class="skip-link" href="#variant-a">Μετάβαση στο περιεχόμενο</a>
+
+  <main id="variant-a" class="variant variant-a" data-variant-panel="A">
+    <header class="a-header shell">
+      <a class="brand brand-on-dark" href="../../index.html" aria-label="POSPal αρχική">
+        <img src="../../app_icon.ico" alt="" width="38" height="38">
+        <span><b>POS</b>Pal</span>
+      </a>
+      <nav aria-label="Κύρια πλοήγηση">
+        <a href="../../times.html">Τιμές</a>
+        <a href="../../guides/">Οδηγοί</a>
+        <a href="../../support.html">Υποστήριξη</a>
+      </nav>
+      <a class="button button-light button-small" href="../../download/">Κατέβασε για Windows</a>
+    </header>
+
+    <section class="a-hero shell" aria-labelledby="a-title">
+      <div class="a-copy">
+        <p class="signal"><span></span> Από το τραπέζι στην κουζίνα</p>
+        <h1 id="a-title">Η παραγγελία μπαίνει μία φορά. Μετά, βρίσκει τον δρόμο της.</h1>
+        <p class="lead">Το POSPal εγκαθίσταται σε Windows και ενώνει τραπέζια, απλή λειτουργία, κουζίνα και QR μενού σε μία καθαρή ροή.</p>
+        <div class="a-actions">
+          <a class="button button-green" href="../../download/">Κατέβασε για Windows</a>
+          <a class="text-link text-link-light" href="../../guides/">Δες τον οδηγό εγκατάστασης <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="offer-line"><strong>€18,90/μήνα</strong><span>30 ημέρες δωρεάν</span><span>χωρίς κάρτα</span></p>
+      </div>
+
+      <div class="a-product" aria-label="Πραγματική οθόνη POSPal και ροή παραγγελίας">
+        <div class="route-label route-label-in">1 · Λήψη παραγγελίας</div>
+        <div class="screen-window screen-window-desktop">
+          <div class="window-bar"><i></i><i></i><i></i><span>POSPal · τραπέζια</span></div>
+          <div class="iframe-crop">
+            <iframe src="../../pospal-demo-coffee-desktop.html" title="Πραγματική οθόνη POSPal σε λειτουργία τραπεζιών" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="route-track" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="order-slip" aria-hidden="true">
+          <p>ΚΟΥΖΙΝΑ</p>
+          <strong>ΤΡΑΠΕΖΙ 07</strong>
+          <ul><li>2 × Freddo</li><li>1 × Τοστ</li><li>χωρίς ντομάτα</li></ul>
+          <small>12:42 · #184</small>
+        </div>
+        <div class="route-label route-label-out">3 · Καθαρή έξοδος</div>
+      </div>
+    </section>
+
+    <section class="a-ready" aria-labelledby="a-ready-title">
+      <div class="shell ready-inner">
+        <div>
+          <p class="section-index">Πριν κατεβάσεις</p>
+          <h2 id="a-ready-title">Ξέρεις από πριν τι χρειάζεσαι.</h2>
+        </div>
+        <ul class="ready-list">
+          <li><span>01</span><strong>Υπολογιστής Windows</strong><small>Η βάση του συστήματος</small></li>
+          <li><span>02</span><strong>Συμβατός εκτυπωτής</strong><small>Έλεγχος πριν την εγκατάσταση</small></li>
+          <li><span>03</span><strong>Κινητό ή tablet</strong><small>Για την ομάδα στη βάρδια</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="a-flow shell" aria-labelledby="a-flow-title">
+      <div class="section-heading section-heading-wide">
+        <p>Μία διαδρομή, τρεις τρόποι δουλειάς</p>
+        <h2 id="a-flow-title">Το κατάστημα αλλάζει ρυθμό. Η ροή μένει κοινή.</h2>
+      </div>
+      <div class="flow-rail">
+        <article>
+          <span class="rail-node">Τ</span>
+          <div><h3>Τραπέζια</h3><p>Ο σερβιτόρος βλέπει τραπέζια, ανοίγει παραγγελίες και κρατά την εικόνα της σάλας.</p></div>
+        </article>
+        <article>
+          <span class="rail-node">Α</span>
+          <div><h3>Απλή λειτουργία</h3><p>Για πάγκο, πακέτο ή γρήγορη καταχώριση χωρίς τραπέζια.</p></div>
+        </article>
+        <article>
+          <span class="rail-node">QR</span>
+          <div><h3>QR μενού</h3><p>Ο ίδιος κατάλογος εμφανίζεται στο κινητό του πελάτη, χωρίς δεύτερη διαχείριση.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="a-onboarding" aria-labelledby="a-onboard-title">
+      <div class="shell onboarding-grid">
+        <div class="onboarding-copy">
+          <p>Δεν σε αφήνουμε στο «κατέβηκε».</p>
+          <h2 id="a-onboard-title">Τέσσερις οδηγοί μέχρι την πρώτη βάρδια.</h2>
+          <a class="button button-ink" href="../../guides/">Άνοιξε τους οδηγούς</a>
+        </div>
+        <ol class="step-stack">
+          <li><span>0</span><div><strong>Εκτυπωτής και εξοπλισμός</strong><small>Έλεγχος πριν την εγκατάσταση</small></div></li>
+          <li><span>1</span><div><strong>Εγκατάσταση σε Windows</strong><small>Από το αρχείο στην πρώτη εκκίνηση</small></div></li>
+          <li><span>2</span><div><strong>Πρώτο μενού και QR</strong><small>Ο βασικός κατάλογος στο κινητό</small></div></li>
+          <li><span>3</span><div><strong>Πρώτη δοκιμαστική βάρδια</strong><small>Μία παραγγελία από άκρη σε άκρη</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="a-close shell" aria-labelledby="a-close-title">
+      <p>Όλα μέσα. Χωρίς μεσάζοντα.</p>
+      <h2 id="a-close-title">€18,90 τον μήνα.<br>30 ημέρες για να το κρίνεις.</h2>
+      <div class="close-actions">
+        <a class="button button-green" href="../../download/">Κατέβασε για Windows</a>
+        <span>Χωρίς κάρτα · χωρίς προσωπικά στοιχεία · ακύρωση όποτε θέλεις</span>
+      </div>
+      <small>Το POSPal δεν είναι φορολογικό POS ή ταμειακή. Δουλεύει δίπλα στο υπάρχον φορολογικό σου σύστημα.</small>
+    </section>
+
+    <footer class="a-footer shell">
+      <span>POSPal · Παραγγελιοληψία και ροή κουζίνας</span>
+      <div><a href="../../privacy.html">Απόρρητο</a><a href="../../support.html">Υποστήριξη</a></div>
+    </footer>
+  </main>
+
+  <main id="variant-b" class="variant variant-b" data-variant-panel="B" hidden>
+    <div class="b-utility">ΠΡΩΤΗ ΕΚΚΙΝΗΣΗ / ΕΚΔΟΣΗ 01</div>
+    <header class="b-header manual-shell">
+      <a class="brand brand-on-light" href="../../index.html" aria-label="POSPal αρχική">
+        <img src="../../app_icon.ico" alt="" width="38" height="38">
+        <span><b>POS</b>Pal</span>
+      </a>
+      <nav aria-label="Κύρια πλοήγηση"><a href="../../times.html">Τιμές</a><a href="../../guides/">Οδηγοί</a><a href="../../support.html">Βοήθεια</a></nav>
+      <a class="button button-manual" href="../../download/">Λήψη για Windows ↓</a>
+    </header>
+
+    <section class="b-hero manual-shell" aria-labelledby="b-title">
+      <aside class="manual-index" aria-label="Περιεχόμενα σελίδας">
+        <p>ΔΙΑΔΡΟΜΗ ΕΚΚΙΝΗΣΗΣ</p>
+        <ol><li class="active">Κατανόηση</li><li>Εξοπλισμός</li><li>Εγκατάσταση</li><li>Πρώτη βάρδια</li></ol>
+        <div class="manual-stamp">30<br><small>ΗΜΕΡΕΣ<br>ΔΩΡΕΑΝ</small></div>
+      </aside>
+      <div class="manual-main">
+        <p class="manual-code">POSPAL / START HERE</p>
+        <h1 id="b-title">Κατέβασε το POSPal.<br>Στήσε τη ροή σου βήμα-βήμα.</h1>
+        <p class="lead">Παραγγελιοληψία για καφέ, εστιατόρια και εποχικές επιχειρήσεις, με ξεκάθαρες οδηγίες από τον εκτυπωτή ως την πρώτη βάρδια.</p>
+        <div class="manual-actions">
+          <a class="button button-manual-primary" href="../../download/">Κατέβασε για Windows</a>
+          <a class="button button-outline-square" href="#b-equipment">Δες πρώτα τον εξοπλισμό</a>
+        </div>
+        <div class="manual-facts"><span>€18,90/μήνα</span><span>χωρίς κάρτα</span><span>χωρίς στοιχεία</span></div>
+      </div>
+      <div class="manual-visual">
+        <div class="manual-tab">ΠΡΑΓΜΑΤΙΚΗ ΟΘΟΝΗ</div>
+        <div class="screen-window screen-window-manual">
+          <div class="window-bar"><i></i><i></i><i></i><span>POSPal</span></div>
+          <div class="iframe-crop">
+            <iframe data-src="../../pospal-demo-coffee-desktop.html" title="Πραγματική οθόνη POSPal" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <p class="figure-caption"><b>ΕΙΚ. 1</b> Η λειτουργία τραπεζιών μέσα στο POSPal.</p>
+      </div>
+    </section>
+
+    <section id="b-equipment" class="b-equipment manual-shell" aria-labelledby="b-equipment-title">
+      <div class="manual-section-number">00</div>
+      <div class="manual-section-copy"><p>ΕΛΕΓΧΟΣ ΕΤΟΙΜΟΤΗΤΑΣ</p><h2 id="b-equipment-title">Πριν κατεβάσεις, έλεγξε τρία πράγματα.</h2></div>
+      <div class="check-table">
+        <div><span>01</span><strong>Υπολογιστής Windows</strong><small>Εκεί εγκαθίσταται το POSPal.</small><b>ΑΠΑΡΑΙΤΗΤΟ</b></div>
+        <div><span>02</span><strong>Συμβατός εκτυπωτής</strong><small>Τον ελέγχεις στον Οδηγό 0.</small><b>ΕΛΕΓΧΟΣ</b></div>
+        <div><span>03</span><strong>Κινητό ή tablet</strong><small>Για τη λήψη παραγγελιών στη βάρδια.</small><b>ΓΙΑ ΤΗΝ ΟΜΑΔΑ</b></div>
+      </div>
+    </section>
+
+    <section class="b-steps manual-shell" aria-labelledby="b-steps-title">
+      <div class="manual-section-number">01</div>
+      <div class="manual-section-copy"><p>ΟΛΟΚΛΗΡΩΜΕΝΗ ΕΚΚΙΝΗΣΗ</p><h2 id="b-steps-title">Κάθε βήμα τελειώνει με έναν έλεγχο.</h2></div>
+      <ol class="manual-steps">
+        <li><span>0</span><div><p>ΠΡΟΕΤΟΙΜΑΣΙΑ</p><h3>Στήσε τον εκτυπωτή</h3><small>Τελικός έλεγχος: βγαίνει σωστά η δοκιμαστική εκτύπωση.</small></div><a href="../../guides/">Άνοιγμα →</a></li>
+        <li><span>1</span><div><p>WINDOWS</p><h3>Εγκατάστησε το POSPal</h3><small>Τελικός έλεγχος: η εφαρμογή ανοίγει κανονικά.</small></div><a href="../../guides/">Άνοιγμα →</a></li>
+        <li><span>2</span><div><p>ΚΑΤΑΛΟΓΟΣ</p><h3>Φτιάξε το πρώτο μενού</h3><small>Τελικός έλεγχος: το QR ανοίγει σωστά από κινητό.</small></div><a href="../../guides/">Άνοιγμα →</a></li>
+        <li><span>3</span><div><p>ΔΟΚΙΜΗ</p><h3>Τρέξε την πρώτη παραγγελία</h3><small>Τελικός έλεγχος: η παραγγελία φτάνει εκεί που πρέπει.</small></div><a href="../../guides/">Άνοιγμα →</a></li>
+      </ol>
+    </section>
+
+    <section class="b-product manual-shell" aria-labelledby="b-product-title">
+      <div class="manual-section-number">02</div>
+      <div class="manual-section-copy"><p>ΤΙ ΠΕΡΙΛΑΜΒΑΝΕΤΑΙ</p><h2 id="b-product-title">Ένα πρόγραμμα. Τρεις καθημερινές λειτουργίες.</h2></div>
+      <div class="manual-columns">
+        <div><b>ΛΕΙΤΟΥΡΓΙΑ Α</b><h3>Τραπέζια</h3><p>Ανοιχτές παραγγελίες και εικόνα της σάλας.</p></div>
+        <div><b>ΛΕΙΤΟΥΡΓΙΑ Β</b><h3>Απλή λειτουργία</h3><p>Πάγκος, πακέτο και γρήγορη καταχώριση.</p></div>
+        <div><b>ΛΕΙΤΟΥΡΓΙΑ Γ</b><h3>QR μενού</h3><p>Ο ίδιος κατάλογος στο κινητό του πελάτη.</p></div>
+      </div>
+    </section>
+
+    <section class="b-close manual-shell">
+      <div><p>ΕΤΟΙΜΟΣ ΝΑ ΞΕΚΙΝΗΣΕΙΣ;</p><h2>30 ημέρες για να κάνεις όλη τη διαδρομή.</h2></div>
+      <div><strong>€18,90<small>/μήνα μετά τη δοκιμή</small></strong><a class="button button-manual-primary" href="../../download/">Κατέβασε για Windows</a></div>
+      <small class="manual-legal">Το POSPal δεν είναι φορολογικό POS ή ταμειακή. Δουλεύει δίπλα στο υπάρχον φορολογικό σύστημα.</small>
+    </section>
+  </main>
+
+  <main id="variant-c" class="variant variant-c" data-variant-panel="C" hidden>
+    <header class="c-header offer-shell">
+      <a class="brand brand-on-green" href="../../index.html" aria-label="POSPal αρχική">
+        <img src="../../app_icon.ico" alt="" width="38" height="38">
+        <span><b>POS</b>Pal</span>
+      </a>
+      <nav aria-label="Κύρια πλοήγηση"><a href="../../times.html">Τι περιλαμβάνει</a><a href="../../guides/">Πώς στήνεται</a><a href="../../support.html">Βοήθεια</a></nav>
+      <a class="c-header-link" href="../../download/">ΛΗΨΗ ΓΙΑ WINDOWS ↘</a>
+    </header>
+
+    <section class="c-hero offer-shell" aria-labelledby="c-title">
+      <div class="offer-main">
+        <p class="offer-kicker">ΠΑΡΑΓΓΕΛΙΟΛΗΨΙΑ ΧΩΡΙΣ ΜΕΣΑΖΟΝΤΑ</p>
+        <h1 id="c-title">Όλη η ροή.<br><span>€18,90</span> τον μήνα.</h1>
+        <p>Τραπέζια, απλή λειτουργία, κουζίνα και QR μενού σε ένα πρόγραμμα για Windows. Το κατεβάζεις, το δοκιμάζεις και αποφασίζεις εσύ.</p>
+        <div class="c-actions"><a class="button button-white" href="../../download/">Κατέβασε για Windows</a><a href="../../guides/">Πρώτα δες πώς στήνεται →</a></div>
+      </div>
+      <aside class="offer-ticket" aria-label="Όροι προσφοράς">
+        <div class="ticket-top"><span>POSPAL / DIRECT</span><span>#1890</span></div>
+        <p>30 ΗΜΕΡΕΣ</p><strong>ΔΩΡΕΑΝ</strong>
+        <ul><li>Χωρίς κάρτα</li><li>Χωρίς προσωπικά στοιχεία</li><li>Ακύρωση όποτε θέλεις</li></ul>
+        <div class="ticket-cut"></div>
+        <small>WINDOWS INSTALLER<br>POSPal-win-Setup.exe</small>
+      </aside>
+    </section>
+
+    <section class="c-included" aria-labelledby="c-included-title">
+      <div class="offer-shell included-grid">
+        <div class="included-title"><p>ΤΟ ΠΑΚΕΤΟ</p><h2 id="c-included-title">Δεν διαλέγεις λειτουργίες. Είναι ήδη μέσα.</h2></div>
+        <div class="included-list">
+          <div><span>ΜΕΣΑ</span><strong>Λειτουργία τραπεζιών</strong></div>
+          <div><span>ΜΕΣΑ</span><strong>Απλή λειτουργία</strong></div>
+          <div><span>ΜΕΣΑ</span><strong>QR μενού</strong></div>
+          <div><span>ΜΕΣΑ</span><strong>Ροή προς κουζίνα</strong></div>
+          <div class="not-included"><span>ΟΧΙ</span><strong>Φορολογικό POS ή ταμειακή</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-proof offer-shell" aria-labelledby="c-proof-title">
+      <div class="proof-screen">
+        <div class="screen-window screen-window-offer">
+          <div class="window-bar"><i></i><i></i><i></i><span>POSPal · πραγματική λειτουργία</span></div>
+          <div class="iframe-crop">
+            <iframe data-src="../../pospal-demo-coffee-desktop.html" title="Πραγματική οθόνη POSPal" tabindex="-1"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="proof-copy"><p>ΟΧΙ ΑΛΛΟ MOCKUP</p><h2 id="c-proof-title">Αυτό είναι το πρόγραμμα που κατεβάζεις.</h2><p>Βλέπεις την πραγματική λειτουργία τραπεζιών πριν εγκαταστήσεις. Μετά ακολουθείς τους οδηγούς για τον δικό σου κατάλογο και εξοπλισμό.</p><a href="../../guides/">Δες τη διαδρομή εγκατάστασης →</a></div>
+    </section>
+
+    <section class="c-setup offer-shell" aria-labelledby="c-setup-title">
+      <div class="setup-heading"><p>ΑΠΟ ΤΟ DOWNLOAD ΣΤΗ ΒΑΡΔΙΑ</p><h2 id="c-setup-title">Τέσσερα καθαρά βήματα.</h2></div>
+      <ol>
+        <li><span>0</span><strong>Εξοπλισμός</strong><small>Εκτυπωτής και απαιτήσεις</small></li>
+        <li><span>1</span><strong>Εγκατάσταση</strong><small>POSPal σε Windows</small></li>
+        <li><span>2</span><strong>Μενού + QR</strong><small>Ο πρώτος κατάλογος</small></li>
+        <li><span>3</span><strong>Πρώτη βάρδια</strong><small>Δοκιμή από άκρη σε άκρη</small></li>
+      </ol>
+    </section>
+
+    <section class="c-close">
+      <div class="offer-shell c-close-inner">
+        <div><p>ΚΑΤΕΒΑΣΕ. ΔΟΚΙΜΑΣΕ. ΑΠΟΦΑΣΙΣΕ.</p><h2>Δεν χρειάζεται να μιλήσεις με πωλητή.</h2></div>
+        <div><a class="button button-black" href="../../download/">Κατέβασε για Windows</a><small>€18,90/μήνα μετά τις 30 δωρεάν ημέρες</small></div>
+      </div>
+    </section>
+
+    <footer class="c-footer offer-shell"><span>POSPal</span><p>Παραγγελιοληψία και ροή κουζίνας. Όχι φορολογικό POS.</p><div><a href="../../privacy.html">Απόρρητο</a><a href="../../support.html">Υποστήριξη</a></div></footer>
+  </main>
+
+  <div id="prototype-switcher" class="prototype-switcher" role="group" aria-label="Εναλλαγή πρωτοτύπων">
+    <button id="variant-prev" type="button" aria-label="Προηγούμενη εκδοχή">←</button>
+    <div><small>ΠΡΩΤΟΤΥΠΟ</small><strong id="variant-label" aria-live="polite">A — Η διαδρομή της παραγγελίας</strong></div>
+    <button id="variant-next" type="button" aria-label="Επόμενη εκδοχή">→</button>
+  </div>
+
+  <script src="./prototype.js"></script>
+</body>
+</html>

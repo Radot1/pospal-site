@@ -8,9 +8,10 @@ Guidance for agents working on the POSPal marketing site.
 - Use MARKETING_PLAN.md as the source of truth.
 
 ## Objectives
-- Primary: drive traffic to the demo.
-- Secondary: drive downloads of POSPal-win-Setup.exe (installer).
-- Emphasize 30-day free trial with no info required.
+- Primary: drive downloads of `POSPal-win-Setup.exe` (Windows installer).
+- Secondary: drive guide engagement after or around the download, especially installation/setup guides.
+- Emphasize the 30-day free trial with no card and no personal information required.
+- Demo traffic is no longer a goal. Keep any demo content small and proof-oriented only; do not create or promote a dedicated demo funnel unless explicitly approved.
 
 ## Audience
 - Greek hospitality businesses (cafes, restaurants, beach bars, food trucks, seasonal).
@@ -28,10 +29,20 @@ Guidance for agents working on the POSPal marketing site.
 - Direct subscription; no middleman; cancel anytime.
 
 ## CTA rules
-- Primary CTA: Demo.
-- Secondary CTA: Download POSPal-win-Setup.exe.
+- Primary CTA: Download `POSPal-win-Setup.exe`.
+- Primary public CTA wording should usually be `Κατέβασε για Windows` or trial wording that still points to the download flow.
+- Secondary CTA: Guides, especially installation/setup guides.
+- Do not make Demo the primary CTA.
+- Do not add a dedicated demo page, demo nav item, or demo-first funnel unless explicitly approved.
 - Do NOT link to POSPal.exe directly.
-- Use pospal-artifacts as the download host (URL TBD).
+- Use pospal-artifacts as the download host:
+  `https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe`
+
+## Funnel rules
+- Search and landing pages should answer the query quickly, then move the visitor toward download.
+- Guides are a commitment/investment step after interest in the product, not a replacement for the download CTA.
+- A small embedded demo or screenshot can support trust, but should not distract from download.
+- Old or dead demo URLs should not remain as destinations; redirect them to the current download-led path when site edits are approved.
 
 ## Content rules
 - Greek-only public copy (English internal notes are OK).
@@ -64,9 +75,17 @@ Guidance for agents working on the POSPal marketing site.
 - Keep links and sitemap updated when pages change.
 
 ## Workflow constraints
-- Do not edit the website without explicit approval.
+- Do not edit the website without explicit approval, except under the redesign branch mandate below.
 - Draft copy/structure first, then implement after approval.
 - Ground all outputs in repository context files (for example this `AGENTS.md` and `MARKETING_PLAN.md`) before drafting or editing.
+
+## Redesign branch mandate
+- On `redesign/new-website`, the user has explicitly approved experimental website edits, throwaway prototypes, and substantial visual departures without per-change approval.
+- Improvise boldly and surprise the user; the existing site is product/SEO context, not a visual template that must be preserved.
+- Prototype multiple genuinely different structures before promoting a direction into production files.
+- Product truth, Greek-only public copy, download rules, fiscal-POS clarity, real asset requirements, and the ban on fabricated proof remain mandatory.
+- Preserve existing search equity through measured URL decisions and tested one-hop redirects; do not rewrite ranking URLs for aesthetics alone.
+- Do not deploy, push, or merge the redesign unless the user explicitly requests it.
 
 ## Testing
 - No automated tests required (static site).

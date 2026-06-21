@@ -1,9 +1,11 @@
 ## POSPal Marketing Plan (Working Draft)
 
-### 1) Goals (TBD)
+### 1) Goals
 - Primary goal: distribute `POSPal-win-Setup.exe` (Windows installer) from the public `pospal-artifacts` repo.
-- Secondary goals: keep a working demo and promote a 30-day free trial with no info required.
-- Target conversion action: download `POSPal-win-Setup.exe` (primary) and visit demo (secondary).
+- Secondary goal: get interested visitors to invest time in setup/usage guides after or around the download.
+- Demo is no longer a conversion goal. Keep any demo content small and proof-oriented only; do not build a dedicated demo funnel.
+- Target conversion action: download `POSPal-win-Setup.exe`.
+- Supporting conversion actions: open installation/setup guides, view pricing, and continue toward first use.
 - Time horizon: TBD.
 
 ### 2) Audience (TBD)
@@ -20,12 +22,12 @@
 - Positioning rule: POSPal is a kitchen/order workflow tool that can run alongside existing compliance POS systems.
 - Compliance clarity: POSPal does not handle the fiscal layer; it focuses on ordering + kitchen flow and can run alongside the fiscal POS.
 - Competitive alternatives: distributor-sold PDA/POS tools with maintenance plans and opaque pricing.
-- Proof points: demo and screenshots (no testimonials yet; early-stage startup).
+- Proof points: screenshots, small embedded demo/proof section, guides, clear setup flow (no testimonials yet; early-stage startup).
 
 ### 4) Offer & Pricing (TBD)
 - Plan name(s): POSPal Subscription.
 - Price point(s): EUR 18.90 / month.
-- Trial details: 30-day free trial, no information required.
+- Trial details: 30-day free trial, no card and no personal information required.
 - Cancellation terms: cancel anytime, just like common subscriptions (Netflix/Spotify).
 
 ### 5) Messaging Pillars (TBD)
@@ -33,29 +35,32 @@
 - Pillar 2: modern UI with clear, honest pricing.
 - Pillar 3: direct subscription, no distributor or maintenance plan.
 
-### 6) Funnel & CTA (TBD)
+### 6) Funnel & CTA
 - Top-of-funnel: home page + SEO.
-- Mid-funnel: demo and installation guide.
+- Mid-funnel: pricing, download page, and installation/setup guide.
 - Bottom-of-funnel: download installer and start trial.
-- Primary CTA: download `POSPal-win-Setup.exe` (link TBD).
-- Secondary CTA: open the demo.
+- Primary CTA: download `POSPal-win-Setup.exe`.
+- Secondary CTA: open installation/setup guides.
+- Demo CTA: not a primary or secondary CTA. Use demo only as lightweight proof/context if it helps confidence.
+- Download URL: `https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe`
 
-### 7) Website Plan (TBD)
-- Key pages: Home, Demo, Installation Guide, Guides.
-- Page order / nav: Home, Demo, Guides, Installation, Download.
-- Required sections on home: what it is/is not (not a legal POS), features, pricing, trial, demo, download.
+### 7) Website Plan
+- Key pages: Home, Download, Pricing, Guides/Installation, Support, SEO landing pages.
+- Page order / nav: Home, Pricing, Guides, Support, Download.
+- Required sections on home: what it is/is not (not a fiscal POS), features, pricing, 30-day trial, download, guides.
+- Optional home proof: small embedded demo/screenshot section, only if it supports the download decision.
 - SEO targets: Greek hospitality order management, QR menu, PDA ordering, kitchen workflow.
  - Above-the-fold feature labels (working): "Λειτουργία τραπεζιών", "Απλή λειτουργία (χωρίς τραπέζια)", "QR Μενού".
 
 ### 8) Assets & Proof (TBD)
 - Testimonials / quotes: none yet.
-- Screenshots / demos: demo page, app screenshots.
+- Screenshots / demos: app screenshots and small embedded proof/demo sections only; no dedicated demo funnel.
 - Logos / badges: none yet.
 - Case studies: none yet.
 
-### 9) Metrics (TBD)
+### 9) Metrics
 - North-star metric: installer downloads.
-- Supporting metrics: demo visits, installation guide views.
+- Supporting metrics: download page visits, `download_click`, `trial_start_click`, installation guide views, pricing page views, Search Console CTR on commercial/non-brand queries.
 - Baselines (if any): none yet.
 
 ### 9.1) Product Opportunities (Internal, Not Promised)
@@ -70,12 +75,16 @@
 - [ ] Proof points (data, testimonials)
 - [ ] Visual direction
 - [ ] Clear "not a legal POS" explanation without hurting conversion
-- [ ] Hosting location for `POSPal-win-Setup.exe` (pospal-artifacts public repo)
-- [ ] `POSPal-win-Setup.exe` public URL (pending)
+- [x] Hosting location for `POSPal-win-Setup.exe` (pospal-artifacts public repo)
+- [x] `POSPal-win-Setup.exe` public URL confirmed
+- [ ] Old/dead demo URLs need a download-led redirect plan
+- [ ] Retired guide URLs need real HTTP redirects instead of meta-refresh pages
 
 ### 11) Next Actions
 - Finalize positioning statement
-- Confirm download host for `POSPal-win-Setup.exe` (pospal-artifacts public repo)
-- Add homepage note: not a legal POS (FAQ + pricing footnote + footer)
-- Update site copy + CTAs
+- Update repo instructions and marketing plan to download-first
+- Remove demo-first assumptions from site copy, nav, sitemap, and redirects where they remain
+- Add or keep homepage note: not a fiscal POS (FAQ + pricing footnote + footer)
+- Update site copy + CTAs toward download-first flow
+- Rewrite SEO titles/meta for stronger download/trial CTR on existing ranking pages
 - Fix asset/link integrity + sitemap
