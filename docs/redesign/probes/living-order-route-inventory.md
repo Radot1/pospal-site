@@ -1,6 +1,6 @@
 # Living Order Route: Plan and Delivery Log
 
-*Updated: 2026-06-21*
+*Updated: 2026-06-22*
 
 ## Status
 
@@ -54,6 +54,25 @@ The visual also had to:
   - `4 · Στην κουζίνα`
 - Removed redundant or unclear labels such as `τοπικός έλεγχος`, `σωστή έξοδος`, `Η παραγγελία πέρασε`, and the unrelated QR mode strip.
 - Replaced signal-strength bars with a disconnected Wi-Fi symbol.
+
+### Fit Section Redesign
+
+- Redesigned only the V3 homepage fit section in `prototype/homepage-v3/index.html` and `prototype/homepage-v3/styles.css`; the completed `.route-theatre` markup, styling, and behavior were not changed.
+- Replaced the generic four-cell matrix with a clearer operational setup hierarchy:
+  - Windows computer as the required host;
+  - phone or tablet for wireless ordering on the same local network;
+  - thermal printer as optional for printed kitchen tickets.
+- Separated the fiscal boundary from the equipment list so it no longer reads as another hardware requirement.
+- Replaced the overconfident fit headline with the direct `Τι χρειάζεσαι για να ξεκινήσεις.`
+- Added a section-level `Κατέβασε για Windows` action with the verified 30-day trial terms.
+- Changed the equipment content to a semantic list and added descriptive labelling for the fiscal clarification.
+- Added fit-specific responsive typography and scroll offsets so the sticky header does not obscure the section when reached through an anchor.
+- Verified at `1440px`, `1024px`, `768px`, `375px`, and `320px` with:
+  - no horizontal overflow or unintended overlap;
+  - no broken images, duplicate IDs, console errors, or page errors;
+  - clean Impeccable detector output;
+  - clean JavaScript syntax and Git whitespace checks;
+  - zero changed `.route-theatre` lines.
 
 ### Authentic Product Evidence
 

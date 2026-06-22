@@ -149,87 +149,153 @@
 
     <section class="fit-section" aria-labelledby="fit-title">
       <div class="shell fit-grid">
-        <div>
+        <div class="fit-intro">
           <p class="signal-label">Πριν το κατεβάσεις</p>
-          <h2 id="fit-title">Ξέρεις τι χρειάζεται. Ξέρεις και τι δεν είναι.</h2>
+          <h2 id="fit-title">Τι χρειάζεσαι για να ξεκινήσεις.</h2>
+          <p class="fit-lead">Η εφαρμογή εγκαθίσταται σε υπολογιστή Windows. Οι συσκευές της βάρδιας συνδέονται στο ίδιο τοπικό δίκτυο.</p>
+          <div class="fit-action">
+            <a class="button button-primary" href="../../download/">Κατέβασε για Windows</a>
+            <small>30 ημέρες δωρεάν, χωρίς κάρτα ή προσωπικά στοιχεία.</small>
+          </div>
         </div>
-        <div class="fit-list">
-          <p><strong>Υπολογιστής Windows</strong><span>Εκεί εγκαθίσταται το POSPal.</span></p>
-          <p><strong>Κινητό ή tablet</strong><span>Συνδέεται στο ίδιο τοπικό δίκτυο.</span></p>
-          <p><strong>Εκτυπωτής προαιρετικά</strong><span>Μόνο αν θέλεις έντυπα δελτία κουζίνας.</span></p>
-          <p><strong>Δίπλα στο φορολογικό σύστημα</strong><span>Δεν είναι ταμειακή ή φορολογικό POS.</span></p>
+        <div class="fit-setup">
+          <ul class="fit-equipment" aria-label="Βασικό στήσιμο POSPal">
+            <li class="fit-node fit-host">
+              <span class="fit-status">Απαραίτητο</span>
+              <strong>Υπολογιστής Windows</strong>
+              <p>Εδώ εγκαθίσταται και τρέχει το POSPal.</p>
+            </li>
+            <li class="fit-node fit-device">
+              <span class="fit-status">Για ασύρματη παραγγελιοληψία</span>
+              <strong>Κινητό ή tablet</strong>
+              <p>Συνδέεται στο ίδιο τοπικό δίκτυο.</p>
+            </li>
+            <li class="fit-node fit-printer">
+              <span class="fit-status">Προαιρετικό</span>
+              <strong>Θερμικός εκτυπωτής</strong>
+              <p>Μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
+            </li>
+          </ul>
+          <aside class="fit-boundary" aria-label="Διευκρίνιση για το φορολογικό σύστημα">
+            <span class="fit-boundary-mark" aria-hidden="true">≠</span>
+            <div>
+              <strong>Δίπλα, όχι στη θέση του.</strong>
+              <p>Το POSPal λειτουργεί δίπλα στο υπάρχον φορολογικό σου σύστημα. Δεν είναι ταμειακή ή φορολογικό POS.</p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="qr-section" aria-labelledby="qr-title">
       <div class="shell qr-grid">
-        <div class="qr-visual" aria-label="Προεπισκόπηση QR μενού και ροής προϊόντων">
-          <div class="qr-code-card" aria-hidden="true">
-            <span>QR</span>
-            <small>μενού πελάτη</small>
-          </div>
+        <figure class="qr-proof">
+          <a class="qr-scan-card" href="https://menu.pospal.gr/s/pospal" aria-label="Άνοιξε το δημοσιευμένο δείγμα QR μενού">
+            <img src="../../static/qr-menu-live-code.png" width="576" height="576" loading="lazy" decoding="async" alt="">
+            <span><strong>Σκάναρέ το</strong><small>Ανοίγει το ίδιο δείγμα.</small></span>
+          </a>
           <div class="qr-phone">
-            <img src="../../docs/redesign/captures/app-qr-menu-preview-mobile.png" alt="Προεπισκόπηση QR μενού πελάτη από το POSPal">
+            <img src="../../static/qr-menu-live-preview.png" width="430" height="932" loading="lazy" decoding="async" alt="Δημοσιευμένο δείγμα QR μενού POSPal με κατηγορίες, φίλτρα και προϊόντα">
           </div>
-          <div class="qr-route-note" aria-hidden="true">ίδια προϊόντα · ίδια συνδρομή</div>
-        </div>
-        <div>
-          <p class="signal-label">QR μενού χωρίς έξτρα module</p>
-          <h2 id="qr-title">Το QR μενού δεν είναι πρόσθετο. Είναι μέρος της ίδιας ροής.</h2>
-          <p>Περνάς προϊόντα στο POSPal και έχεις μενού πελάτη με προσαρμόσιμη εμφάνιση. Δεν το πουλάμε ως ξεχωριστό module και δεν προσθέτουμε δεύτερη χρέωση.</p>
-          <div class="qr-points">
-            <p><strong>Προϊόντα από ένα σημείο</strong><span>Η ίδια λογική καταλόγου τροφοδοτεί παραγγελία και μενού πελάτη.</span></p>
-            <p><strong>Εμφάνιση που αλλάζει</strong><span>Το μενού μπορεί να προσαρμοστεί στην εικόνα του καταστήματος.</span></p>
-            <p><strong>Χωρίς έξτρα κόστος module</strong><span>Περιλαμβάνεται στη συνδρομή POSPal.</span></p>
+          <figcaption>Το QR ανοίγει αυτό το δημοσιευμένο δείγμα.</figcaption>
+        </figure>
+        <div class="qr-copy">
+          <p class="signal-label">Περιλαμβάνεται στη συνδρομή</p>
+          <h2 id="qr-title">Προϊόντα και QR μενού, από το ίδιο σημείο.</h2>
+          <p class="qr-lead">Διαχειρίζεσαι προϊόντα και εμφάνιση από το POSPal. Χωρίς ξεχωριστή χρέωση.</p>
+          <dl class="qr-ledger">
+            <div><dt>Περιλαμβάνεται</dt><dd>QR μενού</dd></div>
+            <div><dt>Προσαρμόζεται</dt><dd>Εμφάνιση καταστήματος</dd></div>
+            <div><dt>Έξτρα χρέωση</dt><dd>Καμία</dd></div>
+          </dl>
+          <div class="qr-actions">
+            <a class="button button-primary" href="../../download/">Κατέβασε για Windows</a>
+            <a class="qr-sample-link" href="https://menu.pospal.gr/s/pospal">Άνοιξε το δείγμα μενού</a>
           </div>
-          <a class="button button-on-dark" href="../../qr-menu-demo.html">Δες δείγμα QR μενού</a>
         </div>
       </div>
     </section>
 
     <section class="onboarding-section" aria-labelledby="onboarding-title">
       <div class="shell onboarding-grid">
-        <div>
-          <p class="signal-label">Οδηγοί που κάνουν δουλειά</p>
-          <h2 id="onboarding-title">Η εγκατάσταση πρέπει να μοιάζει εφικτή πριν πατήσεις download.</h2>
-          <p>Ο επισκέπτης που θέλει direct λύση φοβάται το στήσιμο. Εδώ του δείχνουμε τη διαδρομή: τι χρειάζεται, τι ανοίγει, τι δοκιμάζει, και πού πάει αν κολλήσει.</p>
-          <a class="button button-secondary" href="../../guides/">Άνοιξε τους οδηγούς</a>
+        <div class="onboarding-copy">
+          <p class="signal-label">Από τον εξοπλισμό στην πρώτη βάρδια</p>
+          <h2 id="onboarding-title">Το στήσιμο, σε καθαρή σειρά.</h2>
+          <p>Ξεκινάς από τον εξοπλισμό και φτάνεις σε μία δοκιμαστική παραγγελία πριν από την πρώτη βάρδια.</p>
+          <a class="button button-primary" href="../../download/">Κατέβασε για Windows</a>
         </div>
-        <div class="onboarding-board">
+        <div class="onboarding-runway">
           <ol>
-            <li><span>Εξοπλισμός</span><strong>Windows, δίκτυο, προαιρετικός εκτυπωτής.</strong><small>Ξεκινάς γνωρίζοντας αν ταιριάζει στο κατάστημά σου.</small></li>
-            <li><span>Εγκατάσταση</span><strong>Κατεβάζεις, ανοίγεις, ελέγχεις σύνδεση.</strong><small>Η πρώτη επαφή γίνεται χωρίς κάρτα ή προσωπικά στοιχεία.</small></li>
-            <li><span>Μενού και QR</span><strong>Περνάς προϊόντα και βλέπεις το μενού πελάτη.</strong><small>Το QR δεν μπαίνει ως δεύτερο έργο.</small></li>
-            <li><span>Πρώτη βάρδια</span><strong>Δοκιμάζεις παραγγελία από άκρη σε άκρη.</strong><small>Κινητό, Windows και κουζίνα ελέγχονται μαζί.</small></li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">1</span>
+              <div>
+                <small>Πριν κατεβάσεις</small>
+                <h3>Έλεγξε τον εξοπλισμό</h3>
+                <p>Windows, τοπικό δίκτυο και προαιρετικός εκτυπωτής.</p>
+                <a href="../../guides/index.html?lesson=0">Άνοιξε τον οδηγό εξοπλισμού <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">2</span>
+              <div>
+                <small>Στον υπολογιστή</small>
+                <h3>Εγκατέστησε το POSPal</h3>
+                <p>Κατέβασε, άνοιξε και έλεγξε τη σύνδεση.</p>
+                <a href="../../guides/index.html?lesson=1">Άνοιξε τον οδηγό εγκατάστασης <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">3</span>
+              <div>
+                <small>Μέσα στο POSPal</small>
+                <h3>Πέρασε το πρώτο μενού</h3>
+                <p>Πρόσθεσε προϊόντα και έλεγξε το QR μενού.</p>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">4</span>
+              <div>
+                <small>Πριν από την πρώτη βάρδια</small>
+                <h3>Κάνε μία δοκιμαστική παραγγελία</h3>
+                <p>Έλεγξε κινητό, Windows και κουζίνα μαζί.</p>
+              </div>
+            </li>
           </ol>
-          <p class="support-note"><strong>Χρειάζεσαι βοήθεια;</strong> Οι οδηγοί είναι η κύρια διαδρομή. Υπάρχει και πρακτική βοήθεια μέσω email, χωρίς υπόσχεση επιτόπιας εγκατάστασης ή SLA.</p>
+          <aside class="onboarding-support" aria-label="Βοήθεια για το στήσιμο">
+            <strong>Αν κολλήσεις, στείλε μήνυμα.</strong>
+            <p><a href="mailto:support@pospal.gr">support@pospal.gr</a> · Η βοήθεια γίνεται από απόσταση, χωρίς επιτόπια εγκατάσταση.</p>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="pricing-section" aria-labelledby="pricing-title">
-      <div class="shell pricing-grid">
-        <div>
-          <p class="signal-label">Μήνα με τον μήνα</p>
-          <h2 id="pricing-title">Δεν αγοράζεις πακέτο. Δοκιμάζεις ροή.</h2>
-          <p>Η παλιά αγορά σε σπρώχνει σε μεγάλο εφάπαξ κόστος, ετήσια συντήρηση και πρόσθετα modules. Το POSPal ξεκινά ως κυλιόμενη συνδρομή, με ξεκάθαρο όριο: το στήνεις εσύ με οδηγούς.</p>
-          <div class="market-contrast" aria-label="Διαφορά μοντέλου τιμολόγησης">
-            <p><span>Συνηθισμένο μοντέλο</span><strong>μεγάλο αρχικό κόστος + ετήσια συντήρηση + modules</strong></p>
-            <p><span>POSPal</span><strong>€18,90/μήνα για πρώτους χρήστες, όσο η συνδρομή μένει ενεργή</strong></p>
+      <div class="shell pricing-wrap">
+        <header class="pricing-heading">
+          <div>
+            <p class="signal-label">Μία καθαρή τιμή</p>
+            <h2 id="pricing-title">Μία συνδρομή. Όλη η ροή.</h2>
           </div>
-        </div>
-        <div class="ledger">
-          <span>Τιμή πρώτων χρηστών</span>
-          <strong>€18,90<small>/μήνα</small></strong>
-          <dl>
-            <div><dt>Τραπέζια και απλή λειτουργία</dt><dd>Μέσα</dd></div>
-            <div><dt>Ροή κουζίνας</dt><dd>Μέσα</dd></div>
-            <div><dt>QR μενού</dt><dd>Μέσα</dd></div>
-            <div><dt>Ακύρωση</dt><dd>Σταματά την επόμενη ανανέωση</dd></div>
-          </dl>
-          <p>Το POSPal δεν είναι ταμειακή ή φορολογικό POS.</p>
-          <a class="button button-primary" href="../../download/">Ξεκίνα 30 ημέρες δωρεάν</a>
+          <p>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού στην ίδια συνδρομή.</p>
+        </header>
+        <div class="pricing-offer">
+          <div class="pricing-price-block">
+            <span>Τιμή πρώτων χρηστών</span>
+            <p class="pricing-price"><strong>€18,90</strong><small>/μήνα</small></p>
+            <p class="pricing-retention">Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+            <a class="button button-primary" href="../../download/">Ξεκίνα 30 ημέρες δωρεάν</a>
+            <small class="pricing-trial">Χωρίς κάρτα και χωρίς προσωπικά στοιχεία.</small>
+          </div>
+          <div class="pricing-terms">
+            <dl>
+              <div><dt>Περιλαμβάνονται</dt><dd>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού</dd></div>
+              <div><dt>Χρέωση εγκατάστασης</dt><dd>Καμία</dd></div>
+              <div><dt>Χρέωση συντήρησης</dt><dd>Καμία</dd></div>
+              <div><dt>Ακύρωση</dt><dd>Σταματά την επόμενη ανανέωση</dd></div>
+            </dl>
+            <p class="pricing-cancellation">Μετά την ακύρωση, η πρόσβαση συνεχίζεται μέχρι το τέλος της ήδη πληρωμένης περιόδου.</p>
+            <p class="pricing-boundary">Το POSPal δεν είναι ταμειακή ή φορολογικό POS.</p>
+          </div>
         </div>
       </div>
     </section>
