@@ -82,6 +82,50 @@ A small, real product demonstration inside the homepage's QR-menu beat: a scanna
 
 The homepage summary of four outcome-led stages: equipment, installation, menu and QR, and first shift. It links to complete published guides rather than reproducing full instructions or advertising unfinished destinations.
 
+### Academy
+
+The broader customer education system for POSPal. It includes setup, daily operation, QR menu, staff devices, equipment, troubleshooting, and owner/admin topics, while keeping the first-use path visibly first.
+
+### Guides hub
+
+The public Academy entry point at `/guides/`, labelled `Οδηγοί` in navigation. It opens directly into the classroom lesson environment with the first available Start Here lesson selected by default, rather than sending visitors through a separate course landing page. The site does not create a competing `/academy/` route while this URL has search and product continuity.
+
+### Lesson URL
+
+A stable public URL for one Academy lesson under `/guides/`. Each Lesson URL renders the same classroom lesson environment with that lesson selected. Lesson URLs support search, sharing, support replies, and direct links from homepage, download, pricing, and support pages.
+
+### Video-led lesson
+
+The initial Academy lesson format. The video carries the teaching, while surrounding text stays minimal and supports orientation, lesson state, and the next action.
+
+### Confidence-first Academy
+
+The Academy's first success measure is customer confidence to keep learning and reach first use. Progress indicators are lightweight and local; the Academy is not an account-based learning management system.
+
+### Classroom lesson environment
+
+The canonical Academy interface shape selected for `/guides/`. It uses a course/player layout: top course bar, left lesson outline, main video lesson, manual completion, and next action. It does not include a supporting or companion panel. It replaces the earlier card-style guide hub direction while keeping the public `Οδηγοί` label and `/guides/` URL.
+
+### Academy interaction boundary
+
+The Academy never includes quizzes, forums, comments, discussions, certificates, scores, or social learning features. It is a guided video-learning and setup-confidence surface, not a learning management system or community product.
+
+### Lesson completion
+
+A lesson is complete when the customer explicitly marks it complete. Completion is stored locally in the browser when available and is not inferred from video watch time. Completion is a confidence cue only; it does not unlock content or require an account.
+
+### Start Here path
+
+The required Academy path that takes a customer from download to one successful test order before the first live shift. It is the critical onboarding route inside the broader Academy.
+
+### Academy launch scope
+
+The first production Academy launch includes only the complete Start Here path as real lessons. Broader Academy modules may appear in the lesson outline as `Σύντομα`, but they are not published as indexable lessons until their content exists.
+
+### Academy outline
+
+The classroom sidebar shows the full Academy module shape from day one. Start Here contains real launch lessons; broader modules remain collapsed and clearly marked `Σύντομα` until their lessons are ready.
+
 ### Guide-completion gate
 
 The redesigned homepage may be prototyped before the onboarding curriculum is finished, but it does not launch until all four guides linked by the onboarding preview are complete and published at stable URLs.
@@ -182,6 +226,10 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The dedicated QR-menu beat may contain live QR proof.
 - The homepage journey presents guides through the onboarding preview.
 - The onboarding preview is governed by the guide-completion gate.
+- The Guides hub uses the classroom lesson environment.
+- The Academy launch scope contains the Start Here path first.
+- The classroom lesson environment uses the Academy outline.
+- The Academy follows the Academy interaction boundary.
 - The landing-page design is selected through the design probes.
 - Design probes are compared with the probe scorecard.
 - Design probes operate within the probe boundary.

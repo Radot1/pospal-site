@@ -1,6 +1,6 @@
 # Living Order Route: Plan and Delivery Log
 
-*Updated: 2026-06-22*
+*Updated: 2026-06-23*
 
 ## Status
 
@@ -73,6 +73,67 @@ The visual also had to:
   - clean Impeccable detector output;
   - clean JavaScript syntax and Git whitespace checks;
   - zero changed `.route-theatre` lines.
+
+### Full Homepage Section Completion Pass
+
+- Completed the remaining `prototype/homepage-v3/` landing-page sections after the route and fit work:
+  - `.qr-section .shell.qr-grid`
+  - `.onboarding-section`
+  - `.pricing-section`
+  - `.faq-section`
+  - `.final-cta`
+  - `.site-footer`
+- QR section now uses real proof assets instead of fake/unpublished preview material:
+  - `static/qr-menu-live-code.png`
+  - `static/qr-menu-live-preview.png`
+- QR copy keeps the feature positioned as included product proof, not a separate demo funnel or paid module.
+- Onboarding section now presents a practical setup sequence with real links to the currently available guide lessons where appropriate.
+- Pricing section now emphasizes one subscription, the first-user price, included workflow areas, cancellation, and the non-fiscal-POS boundary.
+- FAQ section was rebuilt from Search Console intent and final-buyer objections:
+  - PDA meaning;
+  - POSPal order-taking flow;
+  - fiscal POS boundary;
+  - equipment requirements;
+  - self-installation;
+  - pricing;
+  - cancellation.
+- Final CTA now acts as a download handoff with trial terms, Windows setup expectations, and a secondary guide link.
+- Footer now includes a semantic utility navigation, support address, privacy link, download link, and the fiscal POS boundary.
+- The protected `.route-theatre` section was not modified during these later section passes.
+
+### Full Homepage Verification
+
+- Verified the completed V3 homepage sections at `1440px`, `1024px`, `768px`, `375px`, and `320px`.
+- Repeated checks passed across the section passes:
+  - no page or section horizontal overflow;
+  - no duplicate IDs;
+  - no console or page errors;
+  - keyboard-operable FAQ disclosure controls;
+  - footer and final CTA links with 44px or greater target heights;
+  - local footer destination checks for download, pricing, guides, support, and privacy;
+  - no forbidden direct `POSPal.exe`, demo-first, or fake cookie-settings links;
+  - clean Impeccable detector output;
+  - clean `prototype/homepage-v3/motion.js` syntax;
+  - `git diff --check` clean apart from the repository's existing LF/CRLF warning.
+
+### Search Console-Informed Next Direction
+
+- User-provided Search Console export:
+  - `C:\Users\bzoum\Downloads\pospal.gr-Performance-on-Search-2026-06-23.zip`
+- Highest-impression demand is around:
+  - `pda τι ειναι`
+  - `pda σερβιτορου`
+  - `pda εστιαση`
+  - `pda πωσ λειτουργει`
+  - `συστημα παραγγελιοληψιασ`
+  - `ασυρματη παραγγελιοληψια`
+  - `προγραμμα παραγγελιοληψιασ`
+- Recommended next sequence:
+  1. Productionize the approved V3 homepage after final review.
+  2. Build a stronger onboarding curriculum and guide hub before creating many new SEO pages.
+  3. Refresh existing high-impression SEO pages before creating net-new pages.
+  4. Build a dedicated QR-menu page as an included-feature/product-proof page, not a separate demo funnel.
+  5. Audit sitemap, canonical, redirect, and URL hygiene before launch.
 
 ### Authentic Product Evidence
 

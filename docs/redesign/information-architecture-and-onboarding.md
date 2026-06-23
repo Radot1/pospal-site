@@ -105,15 +105,24 @@ Requirements:
 
 ### Guides `/guides/`
 
-**Job:** Present a complete, confidence-building curriculum and resume progress.
+**Job:** Present the POSPal Academy as a teaching environment: a complete, confidence-building curriculum with a required Start Here path and broader learning tracks.
 
-The hub should show only published guides. Each guide must have a stable, crawlable URL. Query parameters may preserve old links but should not be the only public URL.
+The hub remains publicly labelled `Οδηγοί` and keeps `/guides/` as the canonical URL. Internally, it is the Academy. Do not create a competing `/academy/` route.
+
+The selected interface direction is the classroom lesson environment from `prototype/academy-odoo-lab/?variant=classroom`. `/guides/` should open directly into this course/player surface with the first available Start Here lesson selected by default, rather than acting as a separate course landing page, marketing landing page, or blog archive.
+
+The hub should show published lessons and clearly labelled upcoming lessons. Each lesson must have a stable, crawlable URL that renders the same classroom environment with that lesson selected. Query parameters may preserve old links but should not be the only public URL.
+
+The classroom sidebar shows the full Academy module shape from day one. Start Here is open and actionable at launch; broader modules are collapsed and clearly marked `Σύντομα`.
 
 Proposed guide routes:
 
 - `/guides/printer-setup/`
-- `/guides/installation/`
-- `/guides/first-menu-and-qr/`
+- `/guides/windows-installation/`
+- `/guides/connect-staff-devices/`
+- `/guides/first-menu/`
+- `/guides/qr-menu/`
+- `/guides/test-order/`
 - `/guides/first-shift/`
 
 ### Support `/support.html`
@@ -157,89 +166,123 @@ No redirect ships until the destination contains equivalent intent and the map h
 
 ## Onboarding Curriculum
 
-Onboarding is part of the product promise. The redesigned site should not launch with Guides 0-3 incomplete.
+Onboarding is part of the product promise, but the education system is broader than setup alone. The Academy is video-led at first, with minimal supporting text for orientation, lesson state, completion, and the next action.
 
-### Guide 0: Printer And Equipment Preparation
+The Academy never includes quizzes, forums, comments, discussions, certificates, scores, or social learning features. It is not an LMS or community surface.
 
-**Outcome:** The venue has the required Windows computer, a verified compatible printer/setup, and the information needed to install POSPal.
+### Academy Launch Gate
 
-Content:
+The Academy can launch when the Start Here path is complete. Broader modules may be visible with planned lessons marked `Σύντομα`, but they are not published as indexable lesson URLs until real lesson content exists.
 
-- Supported host requirements.
-- Verified printer types and connection requirements.
-- Staff device requirements.
-- Network requirements, if applicable.
-- Physical connection checklist.
-- Printer test procedure.
-- Readiness checkpoint.
-- Next action: download and install POSPal.
+Required launch lessons:
 
-Do not publish exact compatibility or timing claims until tested.
+- What you need before installing.
+- Install POSPal on Windows.
+- Connect the first staff phone or tablet.
+- Run the first test order.
 
-### Guide 1: Windows Installation
+Production launch URLs:
 
-**Outcome:** POSPal is installed and opens successfully.
+- `/guides/`
+- `/guides/printer-setup/`
+- `/guides/windows-installation/`
+- `/guides/connect-staff-devices/`
+- `/guides/test-order/`
 
-Content:
+### Module 1: Ξεκίνα εδώ
 
-- Installer filename and trusted download source.
-- Browser download behavior.
-- Windows installation steps.
-- Expected prompts and screens.
-- First launch.
-- Common download/install errors.
-- Success checkpoint.
-- Next action: create the first menu.
+**Outcome:** The customer gets from download to one successful test order before the first live shift.
 
-### Guide 2: First Menu And QR
+Initial lessons:
 
-**Outcome:** A basic catalogue exists and the QR menu can be checked from a phone.
+- What you need before installing.
+- Install POSPal on Windows.
+- Connect the first staff phone or tablet.
+- Run the first test order.
 
-Content:
+This Start Here path must stay visually first in the Academy.
 
-- Minimum useful catalogue.
-- Categories, products, and prices.
-- QR generation/publishing flow.
-- Mobile verification.
-- Common catalogue/QR problems.
-- Success checkpoint.
-- Next action: prepare the first shift.
+### Module 2: Κατάλογος και προϊόντα
 
-### Guide 3: First Real Shift
+**Outcome:** The customer understands how to prepare and adjust the working catalogue.
 
-**Outcome:** The operator has tested the end-to-end order flow before serving customers.
+Initial lessons:
 
-Content:
+- Categories.
+- Products.
+- Prices.
+- Simple changes before a shift.
 
-- Choose table or simple mode.
-- Connect/test the staff device.
-- Enter a test order.
-- Verify kitchen/order output.
-- Correct or cancel a test order using only verified product behavior.
-- First-shift checklist.
-- Escalation path if a checkpoint fails.
-- Next action: begin the trial workflow and review subscription timing.
+### Module 3: QR μενού
+
+**Outcome:** The customer can check and present the included QR menu with confidence.
+
+Initial lessons:
+
+- QR menu appearance.
+- Mobile check.
+- Publishing or sharing the QR.
+- Common QR mistakes.
+
+### Module 4: Παραγγελιοληψία στη βάρδια
+
+**Outcome:** The customer sees how POSPal behaves during a real service flow.
+
+Initial lessons:
+
+- Table mode.
+- Simple mode.
+- Waiter phone or tablet use.
+- Kitchen workflow.
+
+### Module 5: Εξοπλισμός και σύνδεση
+
+**Outcome:** The customer understands the basic physical and local-network setup.
+
+Initial lessons:
+
+- Windows computer.
+- Local network.
+- Thermal printer.
+- Staff devices.
+
+### Module 6: Λογαριασμός και υποστήριξη
+
+**Outcome:** The customer understands subscription, cancellation, support, and the product boundary.
+
+Initial lessons:
+
+- Subscription.
+- Cancellation.
+- What to send to support.
+- What POSPal is not.
 
 ## Guide Page Template
 
-Every guide uses the same functional structure:
+Every video-led lesson uses the same classroom lesson environment:
 
-1. Plain outcome statement.
-2. Verified estimated time.
-3. Prerequisites and equipment.
-4. Numbered steps with real screenshots.
-5. Visible success checkpoint.
-6. Troubleshooting matched to each failure point.
-7. Support escalation.
-8. One next-guide CTA.
-9. Persistent progress that does not block content when JavaScript is unavailable.
+1. Top course bar with POSPal Academy identity, current path, support, and download action.
+2. Left lesson outline grouped by module, showing available and upcoming lessons.
+3. Lesson title, module context, and one short statement of what the customer will learn.
+4. Video player or clearly labelled `Σύντομα` placeholder.
+5. Manual completion action.
+6. Previous and next lesson links.
+7. Support link where the lesson touches setup risk.
+8. Persistent local progress that does not block content when JavaScript is unavailable.
 
-Video may supplement a guide but cannot be the only explanation.
+Do not include a supporting or companion panel beside the video. Keep the page video-first with minimal orientation, completion, and navigation.
+
+Completion is explicit: the customer marks a lesson complete. Do not infer completion from video watch time. Completion is stored in `localStorage` only, requires no account or login, and never gates access to another lesson. If JavaScript or `localStorage` is unavailable, lessons remain usable without saved progress.
+
+Do not add quizzes, forums, comments, discussions, certificates, scores, or social learning features to this template.
 
 ## CTA Rules
 
 - Primary public CTA: `Κατέβασε για Windows`.
 - Secondary CTA: a specific guide, normally the installation path.
+- Inside the classroom environment, primary lesson actions are completion and next lesson.
+- The classroom top bar may always include `Κατέβασε για Windows`, but it should not dominate the lesson.
+- `/guides/windows-installation/` may make the download action more prominent because downloading the installer is part of the task.
 - Never label a guide link generically when the destination is known.
 - Do not point Guide 1 or Guide 2 labels to Guide 0.
 - SEO pages may use contextual CTA text, but the destination remains download or the relevant guide.

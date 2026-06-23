@@ -334,8 +334,8 @@
       ".pospal-consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}" +
       ".pospal-consent-btn{border:1px solid #cbd5e1;border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:600;cursor:pointer;background:#fff;color:#0f172a}" +
       ".pospal-consent-btn:hover{background:#f8fafc}" +
-      ".pospal-consent-btn-primary{background:#16a34a;border-color:#16a34a;color:#fff}" +
-      ".pospal-consent-btn-primary:hover{background:#15803d}" +
+      ".pospal-consent-btn-primary{background:#15803d;border-color:#15803d;color:#fff}" +
+      ".pospal-consent-btn-primary:hover{background:#166534}" +
       ".pospal-consent-panel{position:fixed;left:16px;right:16px;top:50%;transform:translateY(-50%);max-width:560px;margin:0 auto;background:#fff;border:1px solid rgba(148,163,184,.35);box-shadow:0 14px 32px rgba(15,23,42,.25);border-radius:16px;padding:16px;z-index:2147483002}" +
       ".pospal-consent-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #e2e8f0}" +
       ".pospal-consent-row:last-of-type{border-bottom:0}" +
@@ -346,7 +346,7 @@
       ".pospal-cookie-settings-float{position:fixed;left:12px;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147482999;border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#0f172a;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.16)}" +
       ".pospal-cookie-settings-float:hover{background:#f8fafc}" +
       ".pospal-cookie-settings-icon{display:block;width:20px;height:20px}" +
-      "@media (max-width:640px){.pospal-consent-banner,.pospal-consent-panel{left:10px;right:10px}.pospal-cookie-settings-float{width:40px;height:40px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}.pospal-cookie-settings-icon{width:18px;height:18px}}";
+      "@media (max-width:640px){.pospal-consent-banner,.pospal-consent-panel{left:10px;right:10px}.pospal-cookie-settings-float{width:44px;height:44px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}.pospal-cookie-settings-icon{width:18px;height:18px}}";
     document.head.appendChild(style);
   }
 
