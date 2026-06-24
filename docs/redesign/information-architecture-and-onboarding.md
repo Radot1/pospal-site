@@ -2,6 +2,56 @@
 
 *Draft for approval: 2026-06-19*
 
+## Status Update: 2026-06-24
+
+The main landing page direction is `prototype/homepage-v3/`. The paired onboarding surface is the production `/guides/` simple video guide surface.
+
+Earlier Academy/course-player guidance in this document is superseded where it mentions a classroom sidebar, full course outline, manual completion, local progress, or visible upcoming modules. The active guide direction is simpler:
+
+- `/guides/` opens a focused video guide page.
+- Only published videos are shown.
+- `/guides/printer-setup/` and `/guides/windows-installation/` are the current real guide URLs.
+- Unfinished guide URLs remain `noindex` and are not listed in the selector.
+- The UI should feel like practical support material, not a course platform.
+
+## Direction Update: 2026-06-24
+
+The redesign is a full ranking, conversion, and onboarding system, not a two-page launch made only from the homepage and guides.
+
+The active site system has three layers:
+
+1. **Conversion core**: pages that turn qualified visitors into Windows downloads.
+   - `/`
+   - `/download/`
+   - `/times.html`
+   - `/support.html`
+   - `/guides/`
+2. **Onboarding core**: guide pages that make the download feel safe and help a customer reach first useful operation.
+   - `/guides/`
+   - `/guides/printer-setup/`
+   - `/guides/windows-installation/`
+   - the next real guide for first menu / QR setup when content exists
+   - the next real guide for first test order or first shift when content exists
+3. **SEO acquisition layer**: existing and future search-intent pages that answer specific Greek hospitality queries, then route visitors into download, pricing, or the relevant guide.
+   - Preserve and improve existing ranking URLs before creating many new pages.
+   - Prioritize the current Search Console demand around PDA meaning, waiter PDA, PDA in hospitality, how PDA works, order-taking systems, wireless ordering, cafe use cases, beach-bar use cases, pricing, and QR menu intent.
+
+Immediate sequencing:
+
+1. Start with the redesigned `/download/` page because it is the conversion handoff from the homepage, SEO pages, pricing, and guides.
+2. Redesign `/times.html` next so price, trial, cancellation, inclusion, and product boundaries match the new homepage.
+3. Bring `/support.html` and `/guides/` into the same restrained visual system without turning guides into a course platform.
+4. Rewrite high-impression existing SEO pages before creating net-new pages:
+   - `/pda-ti-einai.html`
+   - `/pda-pos-leitourgei.html`
+   - `/pda-gia-kafeteries.html`
+   - `/systima-paraggeliolipsias.html`
+   - `/asyrmati-paraggeliolipsia.html`
+   - `/paraggelio-lipsia-gia-beach-bar.html`
+5. Add new SEO pages only when Search Console demand cannot be served cleanly by an existing preserved URL. The strongest current candidate is a focused waiter PDA page for the `pda servitorou` intent.
+
+Do not create broad content inventory for its own sake. Every new or rewritten page must have a clear role in one of the three layers and must route toward the download flow or a real onboarding step.
+
 ## Objective
 
 Create one clear path from discovery to a successful first shift:
@@ -92,6 +142,18 @@ Keep `/times.html` as the working canonical because it has the stronger Search C
 
 **Job:** Deliver the correct installer and hand the visitor into onboarding.
 
+Resolved decision, 2026-06-24: `/download/` is an installer handoff page, not another sales page. It confirms the installer, trial terms, Windows requirement, and immediate next step. It should not repeat the full homepage argument, broad feature set, pricing section, or SEO explainer content.
+
+Resolved decision, 2026-06-24: do not build a complicated post-click state after the installer click. The browser will start the download. The page only needs simple surrounding guidance, especially for mobile visitors who need to understand that a Windows `.exe` file should be downloaded and opened on a computer, not on a phone or tablet.
+
+Resolved decision, 2026-06-24: use a light mobile/desktop split. Desktop and laptop visitors see the installer download as the dominant action. Mobile and tablet visitors are guided first to open or share `/download/` on a Windows computer. The `.exe` link may remain available for transparency, but it should not be the dominant mobile action.
+
+Resolved decision, 2026-06-24: the body-level next-step CTA on `/download/` points directly to `/guides/windows-installation/`, not generic `/guides/`. Use human installation-guide language such as "open the installation guide"; avoid "Guide 0" phrasing because the active guide direction is not a course platform.
+
+Resolved decision, 2026-06-24: keep reassurance on `/download/` compact. Below the installer action, use only short support blocks for what the visitor is downloading, what they need before opening it, and the fiscal-POS boundary. Do not add full feature cards, screenshot carousels, testimonials, pricing ledgers, long FAQ sections, or SEO explainer content to this page.
+
+Resolved decision, 2026-06-24: the primary conversion on `/download/` is only a real click on the installer URL and should emit `download_click`. Page views, hash-link clicks, guide clicks, and copy/share actions are not primary download conversions. Mobile copy/share, installation-guide clicks, and support clicks may be tracked as secondary events.
+
 Requirements:
 
 - One semantic `h1` and one visible primary download action.
@@ -100,7 +162,7 @@ Requirements:
 - Prefer an explicit download click so analytics measure intent accurately.
 - Keep the core action usable without JavaScript.
 - On mobile, show copy/share and guide actions without collecting email.
-- After the click, show filename, expected browser behavior, Guide 0, and support.
+- Show the expected filename, basic browser/download-folder expectation, and `/guides/windows-installation/` as the next installation guide without requiring a dynamic post-click flow.
 - Emit `download_click` only from a real user click.
 
 ### Guides `/guides/`

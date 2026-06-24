@@ -1,6 +1,46 @@
-# POSPal Academy Plan
+# POSPal Customer Guides Plan
 
-*Working plan confirmed through `grill-with-docs`: 2026-06-23*
+*Original working plan confirmed through `grill-with-docs`: 2026-06-23*
+
+## Status Update: 2026-06-24
+
+The classroom/course-player direction in this document is superseded.
+
+Current decision:
+
+- Public label remains `Οδηγοί`.
+- Canonical hub remains `/guides/`.
+- The active guide interface is a simple video guide surface, not an Academy/course UI.
+- No sidebar, no course outline, no manual completion, no progress state, no quizzes, no forums, no discussions.
+- Only real published videos appear in the guide selector.
+- Future guide topics stay out of navigation and sitemap until their content exists.
+- The active redesign pair is `prototype/homepage-v3/` plus `/guides/`.
+- `prototype/academy-v1/` and `prototype/academy-odoo-lab/` were deleted after the simple `/guides/` surface was selected.
+
+The historical plan below is retained for decision traceability only. Do not use its classroom/sidebar/completion requirements as implementation guidance unless the user explicitly reopens that direction.
+
+## Implementation Log: 2026-06-24
+
+Current shipped redesign working state:
+
+- The active main landing-page prototype is `prototype/homepage-v3/`.
+- The paired onboarding surface is the production `/guides/` route.
+- `/guides/`, `/guides/printer-setup/`, and `/guides/windows-installation/` use the simple video guide surface.
+- The guide surface intentionally has no sidebar, no course outline, no completion button, no progress state, no notes panel, no quizzes, no forums, and no discussions.
+- Only the two real published setup videos appear in the selector.
+- `/guides/connect-staff-devices/` and `/guides/test-order/` remain `noindex` and redirect back to `/guides/` while content is unfinished.
+- `prototype/homepage-v3/` now links to `/guides/`, `/guides/printer-setup/`, and `/guides/windows-installation/`.
+- Discarded prototype folders were deleted: `prototype/homepage/`, `prototype/homepage-v2/`, `prototype/homepage-hero-lab/`, `prototype/academy-v1/`, and `prototype/academy-odoo-lab/`.
+- `prototype/README.md` records that `homepage-v3/` is the only remaining prototype and that `/guides/` is the paired onboarding surface.
+- `prototype/homepage-v3/styles.css` no longer depends on deleted `homepage-v2` fonts; it uses existing `static/fonts/Inter-*.woff2`.
+
+Verification completed after deletion:
+
+- `http://127.0.0.1:4176/prototype/homepage-v3/` returned `200`.
+- `http://127.0.0.1:4176/guides/` returned `200`.
+- Homepage V3 had no links to deleted prototype folders.
+- Kept pages had no broken images and no horizontal overflow.
+- Remaining guide-page console noise came from external YouTube/DoubleClick resources, not missing local files.
 
 ## Purpose
 

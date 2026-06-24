@@ -44,7 +44,7 @@ POSPal runs alongside the customer's fiscal system. It is neither a cash registe
 
 ### Download handoff
 
-Homepage download calls to action lead to `/download/`, not directly to the installer artifact. The download page provides the explicit installer click, requirements, expected filename, mobile guidance, and the next onboarding step.
+Homepage, pricing, guide, and SEO download calls to action lead to `/download/`, not directly to the installer artifact. The download page is an installer handoff page: it provides the explicit installer click, requirements, expected filename, mobile guidance, and the next onboarding step without repeating the full sales argument or adding a complicated post-click state.
 
 ### Evidence strategy
 
@@ -82,49 +82,45 @@ A small, real product demonstration inside the homepage's QR-menu beat: a scanna
 
 The homepage summary of four outcome-led stages: equipment, installation, menu and QR, and first shift. It links to complete published guides rather than reproducing full instructions or advertising unfinished destinations.
 
-### Academy
+### Customer guides
 
-The broader customer education system for POSPal. It includes setup, daily operation, QR menu, staff devices, equipment, troubleshooting, and owner/admin topics, while keeping the first-use path visibly first.
+The customer education surface for POSPal. It includes setup, daily operation, QR menu, staff devices, equipment, troubleshooting, and owner/admin topics over time, while keeping the first-use path visibly first.
 
 ### Guides hub
 
-The public Academy entry point at `/guides/`, labelled `Οδηγοί` in navigation. It opens directly into the classroom lesson environment with the first available Start Here lesson selected by default, rather than sending visitors through a separate course landing page. The site does not create a competing `/academy/` route while this URL has search and product continuity.
+The public customer-guides entry point at `/guides/`, labelled `Οδηγοί` in navigation. It opens directly into the first available setup video guide with a small selector for the currently published guide videos. It is not a course platform, blog archive, or separate marketing landing page. The site does not create a competing `/academy/` route while this URL has search and product continuity.
 
-### Lesson URL
+### Guide URL
 
-A stable public URL for one Academy lesson under `/guides/`. Each Lesson URL renders the same classroom lesson environment with that lesson selected. Lesson URLs support search, sharing, support replies, and direct links from homepage, download, pricing, and support pages.
+A stable public URL for one customer guide under `/guides/`. Each Guide URL renders the same simple video guide surface with that guide selected. Guide URLs support search, sharing, support replies, and direct links from homepage, download, pricing, and support pages.
 
-### Video-led lesson
+### Video-led guide
 
-The initial Academy lesson format. The video carries the teaching, while surrounding text stays minimal and supports orientation, lesson state, and the next action.
+The initial customer guide format. The video carries the teaching, while surrounding text stays minimal and supports orientation and the next action.
 
-### Confidence-first Academy
+### Confidence-first guides
 
-The Academy's first success measure is customer confidence to keep learning and reach first use. Progress indicators are lightweight and local; the Academy is not an account-based learning management system.
+The customer guides' first success measure is customer confidence to keep learning and reach first use. The guides are not an account-based learning management system and do not use progress, scoring, or completion mechanics.
 
-### Classroom lesson environment
+### Simple video guide surface
 
-The canonical Academy interface shape selected for `/guides/`. It uses a course/player layout: top course bar, left lesson outline, main video lesson, manual completion, and next action. It does not include a supporting or companion panel. It replaces the earlier card-style guide hub direction while keeping the public `Οδηγοί` label and `/guides/` URL.
+The canonical `/guides/` interface shape. It uses a quiet support-page layout: compact POSPal header, short guide title, a small selector for the two published setup videos, one large video, and one or two next actions. It does not use a sidebar, course outline, manual completion, progress state, supporting panel, quizzes, forums, discussions, or LMS-style mechanics.
 
-### Academy interaction boundary
+### Guide interaction boundary
 
-The Academy never includes quizzes, forums, comments, discussions, certificates, scores, or social learning features. It is a guided video-learning and setup-confidence surface, not a learning management system or community product.
-
-### Lesson completion
-
-A lesson is complete when the customer explicitly marks it complete. Completion is stored locally in the browser when available and is not inferred from video watch time. Completion is a confidence cue only; it does not unlock content or require an account.
+The guides never include quizzes, forums, comments, discussions, certificates, scores, progress bars, manual completion, or social learning features. They are a guided video-learning and setup-confidence surface, not a learning management system or community product.
 
 ### Start Here path
 
-The required Academy path that takes a customer from download to one successful test order before the first live shift. It is the critical onboarding route inside the broader Academy.
+The required guide path that takes a customer from download to one successful test order before the first live shift. It is the critical onboarding route inside the broader customer guides.
 
-### Academy launch scope
+### Guides launch scope
 
-The first production Academy launch includes only the complete Start Here path as real lessons. Broader Academy modules may appear in the lesson outline as `Σύντομα`, but they are not published as indexable lessons until their content exists.
+The first production guides launch includes only real published setup guides. Broader guide topics are not shown as navigation items and are not published as indexable URLs until their content exists.
 
-### Academy outline
+### Active redesign pair
 
-The classroom sidebar shows the full Academy module shape from day one. Start Here contains real launch lessons; broader modules remain collapsed and clearly marked `Σύντομα` until their lessons are ready.
+The active redesign work is the pair of `prototype/homepage-v3/` for the main landing page and `/guides/` for the simple video guide surface. Earlier prototype folders are design evidence only unless the user explicitly reopens them.
 
 ### Guide-completion gate
 
@@ -140,7 +136,7 @@ The ordered criteria for selecting a design probe: five-second product comprehen
 
 ### Probe boundary
 
-Design probes live under `/prototype/homepage-v2/`, carry `noindex`, remain outside the sitemap, and do not modify the production homepage. They may use clearly labelled screenshot placeholders. Real product captures are required before the selected direction is promoted to production.
+Design probes live under `/prototype/`, carry `noindex`, remain outside the sitemap, and do not modify the production homepage. `prototype/homepage-v3/` is the selected active homepage prototype. Earlier prototype folders were deleted after selection; only screenshots and notes in `docs/redesign/` remain as historical design evidence.
 
 ### Primary navigation
 
@@ -190,6 +186,18 @@ The implementation model for the marketing site: plain HTML and CSS provide the 
 
 The ordered landing-page story: hero, fit requirements, real order flow, table and simple modes, a dedicated QR-menu beat, onboarding path, price, FAQ, and final download. Onboarding follows product value so that strong guidance builds confidence without making the product appear difficult at first contact.
 
+### Conversion core
+
+The set of primary site pages whose job is to turn qualified visitors into Windows downloads: homepage, download, pricing, support, and guides. These pages share the same download-first hierarchy and must make the next step clear without creating a demo or sales-call funnel.
+
+### Onboarding core
+
+The set of guide pages that help a customer move from download to first useful operation. These pages make self-setup credible through real published instructions and must not advertise unfinished guide destinations as if they were complete.
+
+### SEO acquisition layer
+
+The set of search-intent pages that answer specific Greek hospitality queries before routing visitors toward download, pricing, or a relevant guide. Existing ranking URLs are improved and preserved before new pages are added.
+
 ### Early-adopter price
 
 The EUR 18.90 monthly subscription price offered to customers who subscribe during the early-adopter period. A customer keeps this monthly price for as long as that subscription remains active. Future public pricing may increase, but an unconfirmed future amount is not advertised.
@@ -226,10 +234,10 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The dedicated QR-menu beat may contain live QR proof.
 - The homepage journey presents guides through the onboarding preview.
 - The onboarding preview is governed by the guide-completion gate.
-- The Guides hub uses the classroom lesson environment.
-- The Academy launch scope contains the Start Here path first.
-- The classroom lesson environment uses the Academy outline.
-- The Academy follows the Academy interaction boundary.
+- The Guides hub uses the simple video guide surface.
+- The Guides launch scope contains the Start Here path first.
+- The simple video guide surface belongs to the active redesign pair.
+- The customer guides follow the guide interaction boundary.
 - The landing-page design is selected through the design probes.
 - Design probes are compared with the probe scorecard.
 - Design probes operate within the probe boundary.
@@ -245,6 +253,10 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The website redesign must remain compatible with the hosting platform.
 - The hosting platform is implemented through the static-first architecture.
 - The homepage follows the homepage journey.
+- The website redesign is delivered through the conversion core, onboarding core, and SEO acquisition layer.
+- The conversion core routes visitors into the download handoff.
+- The onboarding core supports the self-setup model.
+- The SEO acquisition layer preserves existing search equity while creating demand-specific paths into the conversion core.
 - The hero may show the early-adopter price beneath the primary promise; its full entitlement is explained in the pricing section.
 - Presentation of the early-adopter price follows honest urgency.
 - The pricing stage of the homepage journey uses the subscription ledger.

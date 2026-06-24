@@ -36,6 +36,10 @@ body {
   line-height: 1.58;
 }
 
+body.download-page {
+  overflow-x: clip;
+}
+
 img,
 iframe {
   display: block;
@@ -145,6 +149,12 @@ p {
   margin-left: auto;
   color: #c5d4c8;
   font-size: 0.92rem;
+}
+
+.desktop-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
 }
 
 .desktop-nav a:hover {
@@ -1155,6 +1165,26 @@ p {
   max-width: 790px;
 }
 
+.download-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  color: #d9e7dc;
+  list-style: none;
+}
+
+.download-terms li {
+  min-height: 34px;
+  padding: 0.42rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
 .installer-ticket {
   position: relative;
   max-width: 430px;
@@ -1248,53 +1278,52 @@ p {
   line-height: 1.45;
 }
 
-.download-handoff {
+.download-device {
   color: var(--ink);
   background: var(--green);
 }
 
-.download-handoff-grid,
-.download-next-grid,
+.download-device-grid,
 .download-boundary {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: clamp(3rem, 8vw, 8rem);
 }
 
-.download-handoff-grid {
+.download-device-grid {
   padding-block: 70px;
 }
 
-.download-handoff h2,
-.download-next h2,
+.download-device h2,
+.download-reassurance h2,
 .download-boundary h2 {
   margin-bottom: 0;
   font: 800 clamp(2.4rem, 5vw, 4.7rem)/1 var(--display);
   letter-spacing: -0.04em;
 }
 
-.download-handoff h2 {
+.download-device h2 {
   max-width: 13ch;
 }
 
-.download-handoff-grid > div:first-child > p,
-.download-next-copy > p:first-child,
+.device-copy > p,
+.download-reassurance-head > p,
 .download-boundary > div > p {
   margin-bottom: 0.6rem;
   color: var(--green-dark);
   font-weight: 800;
 }
 
-.handoff-actions {
+.device-actions {
   align-self: end;
 }
 
-.handoff-actions > p:first-child {
+.device-actions > p:first-child {
   max-width: 58ch;
   font-size: 1.08rem;
 }
 
-.handoff-actions > div {
+.device-actions > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -1308,54 +1337,59 @@ p {
   font-weight: 700;
 }
 
-.download-next {
+.download-reassurance {
   padding-block: 110px;
   color: var(--ink);
   background: var(--paper);
 }
 
-.download-next-copy h2 {
-  max-width: 15ch;
-  margin-bottom: 1.4rem;
-}
-
-.download-next-copy > p:not(:first-child) {
-  max-width: 55ch;
-  color: var(--muted-light);
-}
-
-.download-next-copy .button {
-  margin-top: 0.8rem;
-}
-
-.download-steps {
-  margin: 0;
-  padding: 0;
-  border-top: 2px solid var(--ink);
-  list-style: none;
-}
-
-.download-steps li {
+.download-reassurance-head {
   display: grid;
-  grid-template-columns: 70px 1fr;
-  gap: 1rem;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid #8d928d;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: end;
+  margin-bottom: 3rem;
 }
 
-.download-steps li > span {
+.download-reassurance h2 {
+  max-width: 15ch;
+}
+
+.download-reassurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.download-reassurance-grid article {
+  min-width: 0;
+  padding: 1.35rem 1.35rem 1.55rem;
+  border-right: 1px solid #8d928d;
+}
+
+.download-reassurance-grid article:last-child {
+  border-right: 0;
+}
+
+.download-reassurance-grid article > span {
   color: var(--green-dark);
   font: 800 0.85rem/1.4 "Courier New", monospace;
 }
 
-.download-steps strong {
+.download-reassurance-grid h3 {
+  margin: 0.6rem 0 0.45rem;
   font: 800 1.15rem/1.25 var(--display);
 }
 
-.download-steps p {
-  max-width: 60ch;
-  margin: 0.3rem 0 0;
+.download-reassurance-grid p {
+  margin: 0;
   color: var(--muted-light);
+  overflow-wrap: anywhere;
+}
+
+.download-reassurance-grid .text-link {
+  margin-top: 1rem;
 }
 
 .download-boundary {
@@ -1854,6 +1888,12 @@ p {
   gap: 1rem;
 }
 
+.footer-inner a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+
 @media (max-width: 1320px) {
   .motion-active .shift-rail {
     display: none;
@@ -1919,10 +1959,23 @@ p {
   }
 
   .download-hero,
-  .download-handoff-grid,
-  .download-next-grid,
+  .download-device-grid,
+  .download-reassurance-head,
   .download-boundary {
     grid-template-columns: 1fr;
+  }
+
+  .download-reassurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-reassurance-grid article {
+    border-right: 0;
+    border-bottom: 1px solid #8d928d;
+  }
+
+  .download-reassurance-grid article:last-child {
+    border-bottom: 0;
   }
 
   .download-hero {
@@ -2125,12 +2178,25 @@ p {
   .installer-ticket {
     justify-self: center;
     box-shadow: 10px 10px 0 #173620;
+    transform: none;
   }
 
-  .download-handoff-grid,
-  .download-next,
+  .download-device-grid,
+  .download-reassurance,
   .download-boundary {
     padding-block: 76px;
+  }
+
+  .download-device {
+    border-top: 3px solid var(--ink);
+  }
+
+  .download-device-grid {
+    gap: 1.8rem;
+  }
+
+  .device-actions > div {
+    display: grid;
   }
 
   .pricing-hero {

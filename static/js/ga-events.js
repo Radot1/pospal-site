@@ -111,24 +111,8 @@
   }
 
   function classifyDownload(pathname, elementId) {
-    if (elementId === "copy-link-btn") {
-      return "copy_link_mobile";
-    }
-
     if (elementId === "manual-download") {
       return "installer_manual";
-    }
-
-    if (!pathname) {
-      return "";
-    }
-
-    if (
-      pathname === "/download" ||
-      pathname === "/download/" ||
-      pathname.indexOf("/download/") !== -1
-    ) {
-      return "download_page";
     }
 
     if (pathname.indexOf("pospal-win-setup.exe") !== -1) {
@@ -163,20 +147,11 @@
 
   function classifyTrialStart(pathname, elementId, textMatch, classMatch) {
     var isDownloadTarget =
-      elementId === "copy-link-btn" ||
       elementId === "manual-download" ||
-      (pathname &&
-        (pathname === "/download" ||
-          pathname === "/download/" ||
-          pathname.indexOf("/download/") !== -1 ||
-          pathname.indexOf("pospal-win-setup.exe") !== -1));
+      (pathname && pathname.indexOf("pospal-win-setup.exe") !== -1);
 
     if (!isDownloadTarget) {
       return "";
-    }
-
-    if (elementId === "copy-link-btn") {
-      return "copy_link_mobile";
     }
 
     if (elementId === "manual-download") {
