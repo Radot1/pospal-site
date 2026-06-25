@@ -120,7 +120,7 @@ The first production guides launch includes only real published setup guides. Br
 
 ### Active redesign pair
 
-The active redesign work is the pair of `prototype/homepage-v3/` for the main landing page and `/guides/` for the simple video guide surface. Earlier prototype folders are design evidence only unless the user explicitly reopens them.
+The active redesign work is the pair of `prototype/homepage-v3/` as the kept main landing page and `/guides/` for the simple video guide surface. Earlier prototype folders are design evidence only unless the user explicitly reopens them.
 
 ### Guide-completion gate
 
@@ -136,7 +136,7 @@ The ordered criteria for selecting a design probe: five-second product comprehen
 
 ### Probe boundary
 
-Design probes live under `/prototype/`, carry `noindex`, remain outside the sitemap, and do not modify the production homepage. `prototype/homepage-v3/` is the selected active homepage prototype. Earlier prototype folders were deleted after selection; only screenshots and notes in `docs/redesign/` remain as historical design evidence.
+Design probes live under `/prototype/`, carry `noindex`, remain outside the sitemap, and do not modify the production homepage. `prototype/homepage-v3/` is no longer one option among probes; it is the kept main landing page for the redesign workspace until production promotion. Earlier prototype folders were deleted after selection; only screenshots and notes in `docs/redesign/` remain as historical design evidence.
 
 ### Primary navigation
 

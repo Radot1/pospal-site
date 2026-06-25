@@ -37,7 +37,50 @@ body {
 }
 
 body.download-page {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 52% 34%, #ffffff 0%, #f4f5f2 40%, #e7ebe7 74%, #dfe5df 100%);
   overflow-x: clip;
+}
+
+.download-page .site-header {
+  color: var(--ink);
+  background: rgba(244, 245, 242, 0.94);
+  border-bottom: 1px solid var(--line-light);
+  backdrop-filter: blur(12px);
+}
+
+.download-page .desktop-nav {
+  color: #152219;
+  font-weight: 750;
+}
+
+.download-page .desktop-nav a:hover {
+  color: var(--green-dark);
+}
+
+.download-page .brand b {
+  color: var(--green-dark);
+}
+
+.download-page .header-download {
+  color: var(--ink);
+  background: var(--green);
+}
+
+.download-page .mobile-menu summary {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.download-page .mobile-menu nav {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--ink);
+}
+
+.download-page .mobile-menu nav a:hover {
+  background: #e4ebe5;
 }
 
 img,
@@ -1152,259 +1195,329 @@ p {
 }
 
 /* Download funnel */
-.download-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.65fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: center;
-  min-height: 690px;
-  padding-block: 76px 100px;
-}
-
-.download-hero .hero-copy h1 {
-  max-width: 790px;
-}
-
-.download-terms {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin: 1.35rem 0 0;
-  padding: 0;
-  color: #d9e7dc;
-  list-style: none;
-}
-
-.download-terms li {
-  min-height: 34px;
-  padding: 0.42rem 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 0.88rem;
-  font-weight: 750;
-}
-
-.installer-ticket {
+.download-simple {
   position: relative;
-  max-width: 430px;
-  padding: 1.4rem 1.5rem 1.6rem;
-  color: var(--ink);
-  background: var(--paper);
-  border: 2px solid var(--green);
-  box-shadow: 18px 18px 0 #173620;
-  transform: rotate(1.25deg);
-  font-family: "Courier New", monospace;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.22fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+  min-height: calc(100vh - 86px);
+  padding-block: clamp(3rem, 8vh, 6rem);
 }
 
-.installer-ticket::before,
-.installer-ticket::after {
+.download-simple::before {
   content: "";
   position: absolute;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: 8px;
-  background: repeating-linear-gradient(90deg, transparent 0 8px, var(--ink) 8px 9px);
+  right: min(14vw, 180px);
+  bottom: clamp(2.5rem, 7vh, 5rem);
+  width: min(44vw, 560px);
+  height: 130px;
+  border: 2px solid rgba(53, 237, 120, 0.38);
+  border-left: 0;
+  border-bottom: 0;
+  pointer-events: none;
 }
 
-.installer-ticket::before { top: 64px; }
-.installer-ticket::after { bottom: 12px; }
-
-.installer-ticket-top,
-.installer-ticket dl > div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+.download-simple-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 470px;
 }
 
-.installer-ticket-top {
-  padding-bottom: 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.installer-file-mark {
-  display: grid;
-  place-items: center;
-  width: 78px;
-  height: 92px;
-  margin: 2rem 0 1.5rem;
-  color: var(--ink);
-  background: var(--green);
-  clip-path: polygon(0 0, 72% 0, 100% 24%, 100% 100%, 0 100%);
-  font-size: 1.2rem;
-  font-weight: 900;
-}
-
-.installer-ticket > p {
-  margin-bottom: 0.2rem;
-  color: var(--muted-light);
-  font-size: 0.78rem;
-}
-
-.installer-ticket > strong {
-  display: block;
-  overflow-wrap: anywhere;
-  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
-  line-height: 1.15;
-}
-
-.installer-ticket dl {
-  margin: 1.6rem 0;
-  padding-block: 0.7rem;
-  border-top: 1px dashed var(--ink);
-  border-bottom: 1px dashed var(--ink);
-}
-
-.installer-ticket dl > div {
-  padding: 0.35rem 0;
-}
-
-.installer-ticket dt,
-.installer-ticket dd {
-  margin: 0;
-}
-
-.installer-ticket dd {
-  font-weight: 800;
-  text-align: right;
-}
-
-.installer-ticket small {
-  display: block;
-  padding-bottom: 0.5rem;
-  color: var(--muted-light);
-  line-height: 1.45;
-}
-
-.download-device {
-  color: var(--ink);
-  background: var(--green);
-}
-
-.download-device-grid,
-.download-boundary {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: clamp(3rem, 8vw, 8rem);
-}
-
-.download-device-grid {
-  padding-block: 70px;
-}
-
-.download-device h2,
-.download-reassurance h2,
-.download-boundary h2 {
-  margin-bottom: 0;
-  font: 800 clamp(2.4rem, 5vw, 4.7rem)/1 var(--display);
-  letter-spacing: -0.04em;
-}
-
-.download-device h2 {
-  max-width: 13ch;
-}
-
-.device-copy > p,
-.download-reassurance-head > p,
-.download-boundary > div > p {
-  margin-bottom: 0.6rem;
+.download-signal {
+  margin-bottom: 1rem;
   color: var(--green-dark);
-  font-weight: 800;
+  font-size: 0.82rem;
+  font-weight: 850;
 }
 
-.device-actions {
-  align-self: end;
+.download-product-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+  color: var(--ink);
+  font: 850 2rem/1 var(--display);
 }
 
-.device-actions > p:first-child {
-  max-width: 58ch;
+.download-product-mark img {
+  border-radius: 10px;
+}
+
+.download-product-mark b {
+  color: var(--green-dark);
+}
+
+.download-simple h1 {
+  max-width: 15ch;
+  margin-bottom: 1rem;
+  font: 800 clamp(1.9rem, 3.2vw, 2.65rem)/1.08 var(--display);
+  letter-spacing: -0.025em;
+}
+
+.download-simple-copy > p {
+  max-width: 38rem;
+  color: #26342b;
   font-size: 1.08rem;
 }
 
-.device-actions > div {
+.download-install-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.download-install-button {
+  display: inline-grid;
+  min-width: min(100%, 270px);
+  min-height: 58px;
+  padding: 0.75rem 1.1rem;
+  color: var(--ink);
+  background: var(--green);
+  font-weight: 800;
+  line-height: 1.15;
+  transition: background-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
+}
+
+.download-install-button:hover {
+  background: #28d968;
+  transform: translateY(-1px);
+}
+
+.download-install-button small {
+  margin-top: 0.18rem;
+  color: #124b27;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.download-os {
+  display: inline-flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 1rem;
+  color: var(--ink);
+  border: 1px solid #9ea9a0;
+  background: rgba(255, 255, 255, 0.42);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.download-simple-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  color: #aebcaf;
+  font-size: 0.88rem;
+  list-style: none;
+}
+
+.download-simple-facts li::before {
+  content: "•";
+  margin-right: 0.45rem;
+  color: var(--green);
+}
+
+.download-next-step {
+  margin-top: 1.7rem;
+  color: #aebcaf;
+  font-size: 0.95rem;
+}
+
+.download-next-step a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(53, 237, 120, 0.8);
+  text-underline-offset: 0.22em;
+}
+
+.download-app-visual {
+  margin: 0;
+}
+
+.download-app-visual figcaption {
+  margin-bottom: 0.7rem;
+  color: #8ea198;
+  font-size: 0.85rem;
+  font-weight: 750;
+  text-align: right;
+}
+
+.download-monitor {
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #101821;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+}
+
+.download-monitor::after {
+  content: "";
+  position: absolute;
+  right: 14%;
+  bottom: -34px;
+  left: 14%;
+  height: 34px;
+  background: linear-gradient(180deg, #15202c, transparent);
+  clip-path: polygon(36% 0, 64% 0, 75% 100%, 25% 100%);
+  opacity: 0.85;
+}
+
+.download-monitor img {
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: left top;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.download-mobile-note {
+  color: var(--ink);
+  background: var(--green);
+}
+
+.download-mobile-note-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding-block: 1.35rem;
+}
+
+.download-mobile-note h2 {
+  margin-bottom: 0.2rem;
+  font: 850 1.2rem/1.2 var(--display);
+}
+
+.download-mobile-note p {
+  margin: 0;
+  max-width: 65ch;
+}
+
+.download-mobile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
 }
 
 .copy-status {
-  min-height: 1.6em;
-  margin: 0.8rem 0 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.download-reassurance {
-  padding-block: 110px;
-  color: var(--ink);
-  background: var(--paper);
-}
-
-.download-reassurance-head {
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: clamp(2rem, 7vw, 7rem);
-  align-items: end;
-  margin-bottom: 3rem;
-}
-
-.download-reassurance h2 {
-  max-width: 15ch;
-}
-
-.download-reassurance-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-}
-
-.download-reassurance-grid article {
-  min-width: 0;
-  padding: 1.35rem 1.35rem 1.55rem;
-  border-right: 1px solid #8d928d;
-}
-
-.download-reassurance-grid article:last-child {
-  border-right: 0;
-}
-
-.download-reassurance-grid article > span {
-  color: var(--green-dark);
-  font: 800 0.85rem/1.4 "Courier New", monospace;
-}
-
-.download-reassurance-grid h3 {
-  margin: 0.6rem 0 0.45rem;
-  font: 800 1.15rem/1.25 var(--display);
-}
-
-.download-reassurance-grid p {
+  flex-basis: 100%;
+  min-height: 1.4em;
   margin: 0;
+  font-size: 0.86rem;
+  font-weight: 750;
+  text-align: right;
+}
+
+.download-small-print {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding-block: 2.4rem 4rem;
+  color: #aebcaf;
+  font-size: 0.95rem;
+}
+
+.download-small-print p {
+  margin: 0;
+}
+
+.download-small-print strong {
+  color: #fff;
+}
+
+.download-page .download-simple-facts {
   color: var(--muted-light);
+}
+
+.download-page .download-simple-facts li::before {
+  content: "";
+  display: inline-block;
+  width: 0.28rem;
+  height: 0.28rem;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  background: var(--green-dark);
+}
+
+.download-page .download-next-step {
+  color: #26342b;
+}
+
+.download-page .download-next-step a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration-color: var(--green-dark);
+}
+
+.download-page .download-app-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.download-page .download-app-visual figcaption {
+  color: var(--green-dark);
+  font-weight: 850;
+}
+
+.download-page .download-monitor {
+  border: 9px solid #050906;
+  border-radius: 12px 12px 8px 8px;
+  background: #101915;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(53, 237, 120, 0.18);
+}
+
+.download-page .download-monitor::after {
+  right: 8%;
+  bottom: -18px;
+  left: 8%;
+  height: 18px;
+  background: linear-gradient(90deg, #29352e, #0b120d 18%, #0b120d 82%, #29352e);
+  border-radius: 0 0 16px 16px;
+  clip-path: none;
+  opacity: 1;
+}
+
+.download-page .download-monitor img {
+  border: 0;
+  border-radius: 5px;
+}
+
+.download-file-strip {
+  position: absolute;
+  right: 1.4rem;
+  bottom: -2.2rem;
+  display: grid;
+  gap: 0.12rem;
+  min-width: min(300px, calc(100% - 2.8rem));
+  padding: 0.8rem 0.9rem;
+  color: var(--ink);
+  background: var(--green);
+  box-shadow: 7px 7px 0 #173620;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.download-file-strip span {
   overflow-wrap: anywhere;
 }
 
-.download-reassurance-grid .text-link {
-  margin-top: 1rem;
+.download-file-strip strong {
+  color: #124b27;
+  font-size: 0.72rem;
 }
 
-.download-boundary {
-  align-items: start;
-  padding-block: 100px;
-}
-
-.download-boundary h2 {
-  max-width: 13ch;
-}
-
-.download-boundary > p {
-  max-width: 62ch;
-  color: #c5d4c8;
-  font-size: 1.12rem;
+.download-page .download-small-print {
+  color: #cbd7ce;
+  background: var(--ink);
+  box-shadow: 0 0 0 100vmax var(--ink);
+  clip-path: inset(0 -100vmax);
 }
 
 /* Pricing */
@@ -1958,32 +2071,18 @@ p {
     padding-block: 2rem 6rem;
   }
 
-  .download-hero,
-  .download-device-grid,
-  .download-reassurance-head,
-  .download-boundary {
+  .download-simple,
+  .download-mobile-note-inner,
+  .download-small-print {
     grid-template-columns: 1fr;
   }
 
-  .download-reassurance-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .download-reassurance-grid article {
-    border-right: 0;
-    border-bottom: 1px solid #8d928d;
-  }
-
-  .download-reassurance-grid article:last-child {
-    border-bottom: 0;
-  }
-
-  .download-hero {
+  .download-simple {
     min-height: auto;
   }
 
-  .installer-ticket {
-    width: min(100%, 430px);
+  .download-app-visual {
+    width: min(100%, 560px);
     justify-self: end;
   }
 
@@ -2167,36 +2266,78 @@ p {
     justify-self: center;
   }
 
-  .download-hero {
-    padding-block: 50px 80px;
+  .download-simple {
+    padding-block: 46px 62px;
   }
 
-  .download-hero .hero-copy h1 {
-    font-size: clamp(2.75rem, 14vw, 4.5rem);
+  .download-simple::before {
+    display: none;
   }
 
-  .installer-ticket {
-    justify-self: center;
-    box-shadow: 10px 10px 0 #173620;
-    transform: none;
+  .download-product-mark {
+    margin-bottom: 1.4rem;
+    font-size: 1.95rem;
   }
 
-  .download-device-grid,
-  .download-reassurance,
-  .download-boundary {
-    padding-block: 76px;
+  .download-product-mark img {
+    width: 48px;
+    height: 48px;
   }
 
-  .download-device {
-    border-top: 3px solid var(--ink);
+  .download-simple h1 {
+    font-size: clamp(1.85rem, 8.5vw, 2.35rem);
   }
 
-  .download-device-grid {
-    gap: 1.8rem;
-  }
-
-  .device-actions > div {
+  .download-install-row,
+  .download-mobile-actions {
     display: grid;
+  }
+
+  .download-install-button,
+  .download-os {
+    width: 100%;
+  }
+
+  .download-app-visual {
+    justify-self: center;
+    width: 100%;
+  }
+
+  .download-app-visual figcaption {
+    text-align: left;
+  }
+
+  .download-monitor {
+    padding: 6px;
+    border-width: 7px;
+  }
+
+  .download-monitor::after {
+    display: none;
+  }
+
+  .download-monitor img {
+    max-height: 260px;
+  }
+
+  .download-file-strip {
+    position: static;
+    min-width: 0;
+    margin-top: 0.75rem;
+    box-shadow: 5px 5px 0 #173620;
+  }
+
+  .download-mobile-note-inner,
+  .download-small-print {
+    gap: 1rem;
+  }
+
+  .download-mobile-actions {
+    justify-content: stretch;
+  }
+
+  .copy-status {
+    text-align: left;
   }
 
   .pricing-hero {

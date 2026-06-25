@@ -4,13 +4,13 @@
 
 ## Status
 
-`Living Order Route` is the selected homepage direction. The current high-fidelity implementation lives in:
+`Living Order Route` is the selected homepage direction. Homepage V3 is the kept main landing page for the redesign workspace. The current high-fidelity implementation lives in:
 
 - `prototype/homepage-v3/index.html`
 - `prototype/homepage-v3/styles.css`
 - `prototype/homepage-v3/motion.js`
 
-It remains a `noindex` prototype outside the sitemap. It has not been promoted to production, pushed, merged, or deployed.
+It remains outside the production sitemap until explicit promotion, push, merge, or deploy approval. It is no longer treated as one disposable probe among alternatives.
 
 ## Original Plan
 

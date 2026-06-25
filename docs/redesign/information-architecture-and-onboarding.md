@@ -4,7 +4,7 @@
 
 ## Status Update: 2026-06-24
 
-The main landing page direction is `prototype/homepage-v3/`. The paired onboarding surface is the production `/guides/` simple video guide surface.
+The kept main landing page for the redesign workspace is `prototype/homepage-v3/`. This is the active homepage direction, not a disposable prototype branch. The paired onboarding surface is the production `/guides/` simple video guide surface.
 
 Earlier Academy/course-player guidance in this document is superseded where it mentions a classroom sidebar, full course outline, manual completion, local progress, or visible upcoming modules. The active guide direction is simpler:
 
@@ -21,7 +21,8 @@ The redesign is a full ranking, conversion, and onboarding system, not a two-pag
 The active site system has three layers:
 
 1. **Conversion core**: pages that turn qualified visitors into Windows downloads.
-   - `/`
+   - `prototype/homepage-v3/` as the kept main landing page until production promotion
+   - `/` may temporarily redirect to `prototype/homepage-v3/` during local redesign review
    - `/download/`
    - `/times.html`
    - `/support.html`
