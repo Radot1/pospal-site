@@ -2,7 +2,7 @@
   const guides = [
     {
       slug: "printer-setup",
-      url: "/guides/printer-setup/",
+      url: "/guides/?guide=printer-setup",
       title: "Τι χρειάζεσαι πριν εγκαταστήσεις το POSPal",
       shortTitle: "Πριν την εγκατάσταση",
       duration: "6 λεπτά",
@@ -12,7 +12,7 @@
     },
     {
       slug: "windows-installation",
-      url: "/guides/windows-installation/",
+      url: "/guides/?guide=windows-installation",
       title: "Εγκατάσταση POSPal σε Windows",
       shortTitle: "Εγκατάσταση σε Windows",
       duration: "8 λεπτά",
@@ -24,8 +24,8 @@
   ];
 
   const legacyMap = {
-    "0": "/guides/printer-setup/",
-    "1": "/guides/windows-installation/",
+    "0": "/guides/?guide=printer-setup",
+    "1": "/guides/?guide=windows-installation",
     "2": "/guides/",
   };
 
@@ -39,7 +39,8 @@
   const app = document.getElementById("academy-app");
   if (!app) return;
 
-  const currentSlug = app.closest("[data-academy-current]")?.dataset.academyCurrent || guides[0].slug;
+  const requestedGuide = params.get("guide");
+  const currentSlug = requestedGuide || app.closest("[data-academy-current]")?.dataset.academyCurrent || guides[0].slug;
   const foundIndex = guides.findIndex((guide) => guide.slug === currentSlug);
   if (foundIndex === -1) {
     window.location.replace("/guides/");
@@ -76,7 +77,7 @@
         <span translate="no">POS<b>Pal</b></span>
       </a>
       <nav aria-label="Κύρια πλοήγηση οδηγών">
-        <a href="/support.html">Υποστήριξη</a>
+        <a href="/">Αρχική</a>
         <a class="academy-topbar-primary" href="/download/">Κατέβασε για Windows</a>
       </nav>
     </header>

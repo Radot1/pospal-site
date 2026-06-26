@@ -1201,8 +1201,8 @@ p {
   grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.22fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  min-height: calc(100vh - 86px);
-  padding-block: clamp(3rem, 8vh, 6rem);
+  min-height: min(760px, calc(100vh - 86px));
+  padding-block: clamp(2.5rem, 6vh, 4.5rem);
 }
 
 .download-simple::before {
@@ -1309,7 +1309,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
-  margin: 1.1rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   color: #aebcaf;
   font-size: 0.88rem;
@@ -1323,12 +1323,16 @@ p {
 }
 
 .download-next-step {
-  margin-top: 1.7rem;
+  margin-top: 1.15rem;
   color: #aebcaf;
   font-size: 0.95rem;
 }
 
 .download-next-step a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding-inline: 0.08rem;
   color: #fff;
   text-decoration: underline;
   text-decoration-color: rgba(53, 237, 120, 0.8);
@@ -1400,7 +1404,7 @@ p {
 }
 
 .download-mobile-actions {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.6rem;
@@ -1459,6 +1463,7 @@ p {
 .download-page .download-app-visual {
   position: relative;
   z-index: 2;
+  display: grid;
 }
 
 .download-page .download-app-visual figcaption {
@@ -1490,12 +1495,11 @@ p {
 }
 
 .download-file-strip {
-  position: absolute;
-  right: 1.4rem;
-  bottom: -2.2rem;
+  justify-self: end;
   display: grid;
   gap: 0.12rem;
-  min-width: min(300px, calc(100% - 2.8rem));
+  width: min(300px, calc(100% - 1.2rem));
+  margin-top: 0.85rem;
   padding: 0.8rem 0.9rem;
   color: var(--ink);
   background: var(--green);
@@ -1518,6 +1522,12 @@ p {
   background: var(--ink);
   box-shadow: 0 0 0 100vmax var(--ink);
   clip-path: inset(0 -100vmax);
+}
+
+.download-page .pospal-consent-banner {
+  width: min(420px, calc(100% - 32px));
+  padding: 12px;
+  border-radius: 10px;
 }
 
 /* Pricing */
@@ -2077,6 +2087,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .download-mobile-actions {
+    display: flex;
+  }
+
   .download-simple {
     min-height: auto;
   }
@@ -2298,6 +2312,10 @@ p {
     width: 100%;
   }
 
+  .download-page .download-os {
+    display: none;
+  }
+
   .download-app-visual {
     justify-self: center;
     width: 100%;
@@ -2321,10 +2339,22 @@ p {
   }
 
   .download-file-strip {
-    position: static;
     min-width: 0;
+    width: 100%;
     margin-top: 0.75rem;
     box-shadow: 5px 5px 0 #173620;
+  }
+
+  .download-page .download-next-step a {
+    min-height: 26px;
+  }
+
+  .download-page .pospal-consent-banner {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: auto;
+    padding: 10px;
   }
 
   .download-mobile-note-inner,

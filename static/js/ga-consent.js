@@ -33,9 +33,7 @@
   }
 
   function isDemoOrAppPath(pathname) {
-    return (
-      pathname === "/qr-menu-demo.html"
-    );
+    return false;
   }
 
   function isEmbeddedContext() {

@@ -42,6 +42,24 @@ Verification completed after deletion:
 - Kept pages had no broken images and no horizontal overflow.
 - Remaining guide-page console noise came from external YouTube/DoubleClick resources, not missing local files.
 
+## Implementation Log: 2026-06-26
+
+The guide surface was consolidated as part of the three-page redesign surface.
+
+Current decision:
+
+- `/guides/` is the only public guide/onboarding page.
+- Individual guide lesson URLs were removed from the public HTML surface.
+- The two real guide videos are still selectable inside `/guides/` using query-state URLs:
+  - `/guides/?guide=printer-setup`
+  - `/guides/?guide=windows-installation`
+- Old lesson URLs redirect to the single guide page:
+  - `/guides/printer-setup/` -> `/guides/?guide=printer-setup`
+  - `/guides/windows-installation/` -> `/guides/?guide=windows-installation`
+- Download-page next-step links now point to `/guides/`.
+
+This supersedes older guidance in this file that required separate stable public lesson URLs for the current redesign branch. Keep the single-page guide model unless the user explicitly reopens guide URL expansion.
+
 ## Purpose
 
 Build a confidence-first customer education system at `/guides/`. The public navigation remains `Οδηγοί`; internally the system is the POSPal Academy.

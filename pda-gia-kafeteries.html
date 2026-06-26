@@ -1,287 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-    <script src="/static/js/ga-consent.js"></script>
-<script defer src="/static/js/ga-events.js"></script>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDA για καφετέριες: ροή τραπεζιών στην πράξη | POSPal</title>
-    <meta name="description" content="PDA για καφετέριες με παραγγελιοληψία σε τραπέζια, πιο γρήγορη ροή και λιγότερα λάθη. Δες σύστημα, τιμές και ξεκίνα.">
-    <link rel="canonical" href="https://pospal.gr/pda-gia-kafeteries.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="el_GR">
-    <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="PDA για καφετέριες: ροή τραπεζιών στην πράξη | POSPal">
-    <meta property="og:description" content="Παραγγελιοληψία σε τραπέζια για καφετέρια με καθαρή ροή, σταθερή τιμή και απλά επόμενα βήματα.">
-    <meta property="og:url" content="https://pospal.gr/pda-gia-kafeteries.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="PDA για καφετέριες: ροή τραπεζιών στην πράξη | POSPal">
-    <meta name="twitter:description" content="Παραγγελιοληψία σε τραπέζια για καφετέρια με καθαρή ροή, σταθερή τιμή και απλά επόμενα βήματα.">
-    <link rel="icon" href="/app_icon.ico">
-    <link rel="apple-touch-icon" href="/app_icon.ico">
-    <link rel="stylesheet" href="/static/css/fonts.css">
-    <script src="/static/vendor/tailwindcdn.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Inter', 'system-ui', 'sans-serif']
-                    },
-                    colors: {
-                        brand: {
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --ink: #0f172a;
-            --surface: #ffffff;
-            --radius-lg: 22px;
-        }
-
-        body {
-            font-family: "Inter", system-ui, sans-serif;
-            color: var(--ink);
-            background: #f8fafc;
-        }
-
-        .site-container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        .surface-soft {
-            background: var(--surface);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 22px;
-            border-radius: 999px;
-            font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-            will-change: transform;
-        }
-
-        .btn-primary {
-            background: #16a34a;
-            color: #fff;
-            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            background: #15803d;
-            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(34, 197, 94, 0.55);
-            color: #166534;
-            background: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            border-color: #16a34a;
-            color: #14532d;
-            background: #f0fdf4;
-            transform: translateY(-1px);
-        }
-    </style>
-    <script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f6f1">
+  <title>PDA για καφετέριες και παραγγελιοληψία | POSPal</title>
+  <meta name="description" content="PDA για καφετέριες: παραγγελιοληψία από κινητό ή tablet σε τραπέζια και πάγκο, POSPal σε Windows, ροή κουζίνας και 30 ημέρες δωρεάν δοκιμή.">
+  <link rel="canonical" href="https://pospal.gr/pda-gia-kafeteries.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="POSPal">
+  <meta property="og:title" content="PDA για καφετέριες και παραγγελιοληψία | POSPal">
+  <meta property="og:description" content="Δες πώς δουλεύει η παραγγελιοληψία καφετέριας με συσκευή σερβιτόρου και POSPal σε Windows.">
+  <meta property="og:url" content="https://pospal.gr/pda-gia-kafeteries.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PDA για καφετέριες και παραγγελιοληψία | POSPal">
+  <meta name="twitter:description" content="Παραγγελιοληψία σε τραπέζια, πάγκο και ροή κουζίνας για καφετέριες.">
+  <link rel="icon" href="/app_icon.ico">
+  <link rel="apple-touch-icon" href="/app_icon.ico">
+  <link rel="stylesheet" href="/static/css/fonts.css">
+  <link rel="stylesheet" href="/static/css/seo-acquisition.css">
+  <script src="/static/js/ga-consent.js"></script>
+  <script defer src="/static/js/ga-events.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Τι σημαίνει PDA για καφετέρια;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Σημαίνει λήψη παραγγελίας από συσκευή και άμεση διαβίβαση στη ροή εκτέλεσης."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Βοηθά στην παραγγελιοληψία σε τραπέζια;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Ναι. Η λειτουργία τραπεζιών βοηθά την ομάδα να καταγράφει και να διαχειρίζεται παραγγελίες πιο οργανωμένα."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Τι κερδίζω σε ώρες αιχμής;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Πιο καθαρή ροή, ταχύτερη διαβίβαση παραγγελιών και λιγότερα λάθη στη μεταφορά."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Είναι φορολογικός POS;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Πού βλέπω τιμές και έναρξη;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Από τη σελίδα Τιμών βλέπεις τη χρέωση και από τη σελίδα αγοράς ξεκινάς συνδρομή."
-                    }
-                }
-            ]
+          "@type": "Question",
+          "name": "Τι σημαίνει PDA για καφετέριες;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Σημαίνει ότι ο σερβιτόρος περνά την παραγγελία από κινητό ή tablet και αυτή καταλήγει οργανωμένα στο POSPal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Χρειάζεται ειδική συσκευή PDA;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι απαραίτητα. Η ομάδα μπορεί να χρησιμοποιήσει κινητό ή tablet που δουλεύει στο τοπικό δίκτυο του καταστήματος."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ταιριάζει σε καφετέρια με πάγκο και τραπέζια;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι. Το POSPal υποστηρίζει λειτουργία τραπεζιών και απλή λειτουργία χωρίς τραπέζια."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Το POSPal είναι φορολογικό POS ή ταμειακή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι. Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας δίπλα στο υπάρχον φορολογικό σύστημα."
+          }
         }
-    </script>
+      ]
+    }
+  </script>
 </head>
-<body class="min-h-screen">
-    <header class="py-6">
-        <div class="site-container flex items-center justify-between gap-4">
-            <a href="/" class="flex items-center gap-3">
-                <img src="/app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-                <span class="text-lg font-semibold tracking-tight">
-                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
-                </span>
-            </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
-                <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
-                <a href="/download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
-            </nav>
+<body class="seo-page">
+  <a class="seo-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="seo-header">
+    <div class="seo-shell seo-header-inner">
+      <a class="seo-brand" href="/" aria-label="POSPal, αρχική">
+        <img src="/app_icon.ico" alt="" width="38" height="38">
+        <span>POS<b>Pal</b></span>
+      </a>
+      <nav class="seo-nav" aria-label="Κύρια πλοήγηση">
+        <a href="/">Αρχική</a>
+        <a href="/times.html">Τιμές</a>
+        <a href="/guides/">Οδηγοί</a>
+        <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
+      </nav>
+      <a class="seo-button seo-button-primary seo-header-cta" href="/download/">Κατέβασε για Windows</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="seo-hero" aria-labelledby="cafe-title">
+      <div class="seo-shell seo-hero-grid">
+        <div>
+          <p class="seo-signal">PDA για καφετέριες</p>
+          <h1 id="cafe-title" class="wide">Παραγγελιοληψία για καφέδες, τραπέζια και πάγκο.</h1>
+          <p class="seo-lead">Σε μια καφετέρια οι παραγγελίες αλλάζουν ρυθμό όλη μέρα. Το POSPal βοηθά την ομάδα να περνά παραγγελίες από κινητό ή tablet, να τις συγκεντρώνει σε υπολογιστή Windows και να κρατά καθαρή συνέχεια προς πάγκο, κουζίνα ή εξυπηρέτηση.</p>
+          <div class="seo-actions" aria-label="Επόμενες ενέργειες">
+            <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="seo-button seo-button-secondary" href="/guides/">Δες τον οδηγό εγκατάστασης</a>
+          </div>
+          <p class="seo-trial-line"><strong>30 ημέρες δωρεάν</strong><span>χωρίς κάρτα</span><span>χωρίς προσωπικά στοιχεία</span></p>
         </div>
-    </header>
+        <figure class="seo-hero-panel seo-screen-card">
+          <img src="/static/img/pospal-desktop-order.png" alt="Παραγγελία POSPal σε υπολογιστή Windows για ροή καφετέριας" width="1280" height="900" fetchpriority="high">
+          <figcaption>Η παραγγελία καταλήγει στο POSPal, ώστε η ομάδα να βλέπει τι συνεχίζει προς παρασκευή ή εξυπηρέτηση.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <main class="pb-16">
-        <div class="site-container">
-            <section class="surface-soft p-8">
-                <p class="text-sm font-semibold text-emerald-700">PDA για καφετέρια • Ροή τραπεζιών</p>
-                <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">PDA για καφετέριες με καθαρή ροή παραγγελιών</h1>
-                <p class="mt-3 text-slate-600 text-lg">Αν ψάχνεις «pda για καφετεριεσ» και παραγγελιοληψία σε τραπέζια, αυτό που μετράει είναι η ταχύτητα, η καθαρή ροή και λιγότερα λάθη στη βάρδια.</p>
-                <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a href="/times.html" class="btn btn-secondary">Δες τιμές</a>
-                    <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                </div>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Παραγγελιοληψία σε τραπέζια</h2>
-                <p class="mt-3 text-slate-600">Η παραγγελία καταχωρείται από τη συσκευή και περνά άμεσα στη ροή εκτέλεσης.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Καταγραφή παραγγελίας στο τραπέζι</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Άμεση διαβίβαση χωρίς χαρτί</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Πιο καθαρή εικόνα για την ομάδα</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Ταχύτητα σε ώρα αιχμής</h2>
-                <p class="mt-3 text-slate-600">Στις έντονες ώρες, η απλή ροή κάνει τη διαφορά.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Γρηγορότερη διαβίβαση παραγγελιών</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Λιγότερη τριβή στη συνεννόηση</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Πιο σταθερή εξυπηρέτηση</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Λιγότερα λάθη, καλύτερη ροή</h2>
-                <p class="mt-3 text-slate-600">Όταν η παραγγελία περνά ψηφιακά, μειώνονται οι αστοχίες στη μεταφορά.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Μία καταχώριση, καθαρή διαδρομή</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Κοινή εικόνα για ομάδα σάλας και εκτέλεσης</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Λιγότερες επαναλήψεις</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Γιατί POSPal</h2>
-                <p class="mt-3 text-slate-600">Το POSPal είναι σύστημα παραγγελιοληψίας και διαχείρισης παραγγελιών για εστίαση.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Εστίαση στη ροή παραγγελιών</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δεν είναι φορολογικός POS</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δεν είναι ταμειακή και δεν εκδίδει αποδείξεις</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δουλεύει δίπλα στο υπάρχον φορολογικό σύστημα</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Επόμενα βήματα</h2>
-                <p class="mt-3 text-slate-600">Πρώτα δες το σύστημα, μετά τις τιμές και έπειτα ξεκίνα συνδρομή.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><a class="text-brand-700 font-semibold hover:underline" href="/systima-paraggeliolipsias.html">Δες το σύστημα παραγγελιοληψίας</a></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><a class="text-brand-700 font-semibold hover:underline" href="/times.html">Δες τις τιμές</a></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><a class="text-brand-700 font-semibold hover:underline" href="/buy-license.html">Ξεκίνα συνδρομή</a></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-                <div class="mt-4 space-y-3">
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Τι σημαίνει PDA για καφετέρια;</summary>
-                        <p class="mt-2 text-slate-600">Σημαίνει λήψη παραγγελίας από συσκευή και άμεση διαβίβαση στη ροή εκτέλεσης.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Βοηθά στην παραγγελιοληψία σε τραπέζια;</summary>
-                        <p class="mt-2 text-slate-600">Ναι. Η λειτουργία τραπεζιών βοηθά την ομάδα να καταγράφει και να διαχειρίζεται παραγγελίες πιο οργανωμένα.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Τι κερδίζω σε ώρες αιχμής;</summary>
-                        <p class="mt-2 text-slate-600">Πιο καθαρή ροή, ταχύτερη διαβίβαση παραγγελιών και λιγότερα λάθη στη μεταφορά.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Είναι φορολογικός POS;</summary>
-                        <p class="mt-2 text-slate-600">Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Πού βλέπω τιμές και έναρξη;</summary>
-                        <p class="mt-2 text-slate-600">Από τη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/times.html">Τιμές</a> και τη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/buy-license.html">Αγορά άδειας</a>.</p>
-                    </details>
-                </div>
-            </section>
-
-            <div class="mt-10 text-center">
-                <a href="/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
-            </div>
+    <section class="seo-band seo-band-dark" aria-labelledby="cafe-flow-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Η ροή στην καφετέρια</p>
+          <h2 id="cafe-flow-title">Από το τραπέζι ή τον πάγκο στο POSPal.</h2>
+          <p>Το ζητούμενο δεν είναι η συσκευή από μόνη της. Είναι να μη χάνεται η παραγγελία όταν η βάρδια κινείται γρήγορα.</p>
         </div>
-    </main>
-
-    <footer class="pb-10">
-        <div class="site-container">
-            <div class="surface-soft px-6 py-6 text-sm text-slate-600">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <img src="/app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
-                        <span>POSPal</span>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="/times.html" class="hover:text-slate-900">Τιμές</a>
-                        <a href="/guides/" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="/privacy.html" class="hover:text-slate-900">Πολιτική απορρήτου</a>
-                        <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
-                    </div>
-                </div>
-                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή και δεν συνδέεται με φορολογικές αρχές. Καλύπτει παραγγελιοληψία και διαχείριση ροής.</p>
-            </div>
+        <div class="seo-step-grid">
+          <article class="seo-step">
+            <span>1</span>
+            <h3>Στο τραπέζι</h3>
+            <p>Ο σερβιτόρος περνά καφέδες, ποτά, σημειώσεις και ποσότητες από κινητό ή tablet.</p>
+          </article>
+          <article class="seo-step">
+            <span>2</span>
+            <h3>Στον πάγκο</h3>
+            <p>Η ίδια εγκατάσταση μπορεί να δουλέψει και με απλή λειτουργία χωρίς τραπέζια.</p>
+          </article>
+          <article class="seo-step">
+            <span>3</span>
+            <h3>Στον υπολογιστή Windows</h3>
+            <p>Το POSPal συγκεντρώνει την παραγγελία και κρατά τη συνέχεια οργανωμένη.</p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <section class="seo-band" aria-labelledby="rush-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Ώρες αιχμής</p>
+          <h2 id="rush-title">Όταν ο ρυθμός αλλάζει, η ροή πρέπει να μένει απλή.</h2>
+          <p>Πρωινός καφές, μεσημεριανό πέρασμα και βραδινά τραπέζια έχουν διαφορετικό βάρος. Η ομάδα χρειάζεται κοινή εικόνα, όχι περισσότερη συνεννόηση.</p>
+        </div>
+        <div class="seo-card-grid">
+          <article class="seo-card">
+            <span>Λιγότερη μεταφορά</span>
+            <h3>Μία καταχώριση</h3>
+            <p>Η παραγγελία μπαίνει μία φορά και συνεχίζει στη ροή.</p>
+          </article>
+          <article class="seo-card">
+            <span>Καθαρή εικόνα</span>
+            <h3>Τι έχει περαστεί</h3>
+            <p>Η ομάδα βλέπει πιο καθαρά τι έχει καταχωρηθεί.</p>
+          </article>
+          <article class="seo-card">
+            <span>Πρακτική δοκιμή</span>
+            <h3>Στο δικό σου μενού</h3>
+            <p>Το κατεβάζεις και το δοκιμάζεις πριν αποφασίσεις.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-band" aria-labelledby="cafe-related-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Η καφετέρια μέσα στο σύστημα</p>
+          <h2 id="cafe-related-title">Αν ψάχνεις γενική ή τεχνική απάντηση, πήγαινε στο σωστό σημείο.</h2>
+          <p>Η σελίδα αυτή μένει εστιασμένη στην καφετέρια. Οι σχετικές σελίδες εξηγούν τον ορισμό του PDA, τα βήματα λειτουργίας και το ευρύτερο σύστημα παραγγελιοληψίας.</p>
+        </div>
+        <div class="seo-card-grid" aria-label="Σχετικές σελίδες για PDA και παραγγελιοληψία">
+          <article class="seo-card">
+            <span>Ορισμός</span>
+            <h3><a href="/pda-ti-einai.html">PDA τι είναι</a></h3>
+            <p>Για τον επισκέπτη που ψάχνει πρώτα τι σημαίνει PDA στην εστίαση.</p>
+          </article>
+          <article class="seo-card">
+            <span>Ροή</span>
+            <h3><a href="/pda-pos-leitourgei.html">PDA πώς λειτουργεί</a></h3>
+            <p>Τα βήματα από κινητό ή tablet μέχρι POSPal σε Windows.</p>
+          </article>
+          <article class="seo-card">
+            <span>Σύστημα</span>
+            <h3><a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a></h3>
+            <p>Η ευρύτερη σελίδα για ροή παραγγελιών, κουζίνα και QR μενού.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-band seo-band-muted" aria-labelledby="setup-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Τι χρειάζεται</p>
+          <h2 id="setup-title">Μικρό στήσιμο για πραγματική δοκιμή.</h2>
+          <p>Ξεκίνα με έναν υπολογιστή Windows, τοπικό δίκτυο και μια συσκευή προσωπικού. Οι οδηγοί σε βοηθούν να περάσεις από τη λήψη στην πρώτη δοκιμή.</p>
+        </div>
+        <div class="seo-ledger" aria-label="Βασικό στήσιμο PDA για καφετέρια">
+          <div class="seo-ledger-row"><span>Windows υπολογιστής</span><p>Εκεί εγκαθίσταται και τρέχει το POSPal.</p></div>
+          <div class="seo-ledger-row"><span>Κινητό ή tablet</span><p>Για παραγγελίες από τραπέζι ή σημείο εξυπηρέτησης.</p></div>
+          <div class="seo-ledger-row"><span>Τοπικό δίκτυο</span><p>Για να επικοινωνεί η συσκευή με τον υπολογιστή του καταστήματος.</p></div>
+          <div class="seo-ledger-row"><span>Προαιρετικός εκτυπωτής</span><p>Αν χρειάζεσαι έντυπα δελτία για παρασκευή ή κουζίνα.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-band seo-band-dark" aria-labelledby="cafe-boundary-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Καθαρό όριο</p>
+          <h2 id="cafe-boundary-title">Παραγγελιοληψία, όχι ταμειακή.</h2>
+        </div>
+        <aside class="seo-boundary">
+          <strong>Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή.</strong>
+          <p>Καλύπτει τη λήψη παραγγελιών, τη ροή κουζίνας και το QR μενού. Το φορολογικό κομμάτι μένει στο υπάρχον σύστημα της καφετέριας.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-band" aria-labelledby="cafe-faq-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Συχνές ερωτήσεις</p>
+          <h2 id="cafe-faq-title">Πριν δοκιμάσεις PDA στην καφετέρια.</h2>
+        </div>
+        <div class="seo-faq">
+          <details>
+            <summary>Τι σημαίνει PDA για καφετέριες;</summary>
+            <p>Σημαίνει ότι ο σερβιτόρος περνά την παραγγελία από κινητό ή tablet και αυτή καταλήγει οργανωμένα στο POSPal.</p>
+          </details>
+          <details>
+            <summary>Χρειάζεται ειδική συσκευή PDA;</summary>
+            <p>Όχι απαραίτητα. Η ομάδα μπορεί να χρησιμοποιήσει κινητό ή tablet που δουλεύει στο τοπικό δίκτυο του καταστήματος.</p>
+          </details>
+          <details>
+            <summary>Ταιριάζει σε καφετέρια με πάγκο και τραπέζια;</summary>
+            <p>Ναι. Το POSPal υποστηρίζει λειτουργία τραπεζιών και απλή λειτουργία χωρίς τραπέζια.</p>
+          </details>
+          <details>
+            <summary>Το POSPal είναι φορολογικό POS ή ταμειακή;</summary>
+            <p>Όχι. Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας δίπλα στο υπάρχον φορολογικό σύστημα.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-final" aria-labelledby="final-title">
+      <div class="seo-shell seo-final-inner">
+        <div>
+          <p>Δοκίμασέ το πριν αλλάξεις ροή.</p>
+          <h2 id="final-title">Κατέβασε το POSPal για την καφετέρια σου.</h2>
+        </div>
+        <div class="seo-actions">
+          <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
+          <a class="seo-button seo-button-secondary" href="/guides/">Άνοιξε τους οδηγούς</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer-inner">
+      <p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
+      <nav aria-label="Σύνδεσμοι σελίδας">
+        <a href="/">Αρχική</a>
+        <a href="/download/">Κατέβασε</a>
+        <a href="/guides/">Οδηγοί</a>
+        <a href="/times.html">Τιμές</a>
+        <a href="/pda-ti-einai.html">PDA τι είναι</a>
+        <a href="/pda-gia-servitoro/">PDA σερβιτόρου</a>
+        <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

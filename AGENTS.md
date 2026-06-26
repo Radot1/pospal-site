@@ -78,6 +78,7 @@ Guidance for agents working on the POSPal marketing site.
 - Do not edit the website without explicit approval, except under the redesign branch mandate below.
 - Draft copy/structure first, then implement after approval.
 - Ground all outputs in repository context files (for example this `AGENTS.md` and `MARKETING_PLAN.md`) before drafting or editing.
+- Permanent lock: `index.html`, `download/index.html`, and `guides/index.html` are locked forever unless the user explicitly replaces this rule. Do not edit these files, and do not change shared CSS or JS in a way that alters their rendering.
 
 ## Redesign branch mandate
 - On `redesign/new-website`, the user has explicitly approved experimental website edits, throwaway prototypes, and substantial visual departures without per-change approval.

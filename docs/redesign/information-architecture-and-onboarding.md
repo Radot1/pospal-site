@@ -53,6 +53,99 @@ Immediate sequencing:
 
 Do not create broad content inventory for its own sake. Every new or rewritten page must have a clear role in one of the three layers and must route toward the download flow or a real onboarding step.
 
+## Implementation Log: 2026-06-26
+
+The redesign public surface was narrowed by explicit direction to the three agreed pages:
+
+- `/` is now the kept Homepage V3 direction and no longer redirects to `prototype/homepage-v3/`.
+- `/download/` is the simple installer handoff page.
+- `/guides/` is the single guide/onboarding page.
+
+Implementation notes:
+
+- Promoted Homepage V3 from `prototype/homepage-v3/index.html` into root `index.html`.
+- Removed the old prototype HTML entry point so `/prototype/homepage-v3/` is no longer a separate local page.
+- Kept `prototype/homepage-v3/styles.css` and `prototype/homepage-v3/motion.js` only as root-page assets.
+- Removed old public HTML pages from the working tree, including pricing, support, privacy, demo, SEO article pages, and individual guide lesson pages.
+- Kept the Google verification HTML file because it is site infrastructure, not a public marketing page.
+- Updated navigation and footer links on the agreed pages so the public path is only `/`, `/download/`, and `/guides/`.
+- Updated `/guides/` so the two available guide videos live inside the single page via `?guide=printer-setup` and `?guide=windows-installation`, rather than separate public lesson URLs.
+- Updated `/download/` so its next-step guide link points to `/guides/`.
+- Rebuilt `sitemap.xml` to list only `/`, `/download/`, and `/guides/`.
+- Added `_redirects` entries so old public URLs collapse into one-hop destinations on `/`, `/download/`, or `/guides/` instead of becoming dead links.
+- Cleaned analytics helper logic so it no longer treats removed demo or legacy SEO pages as active public surfaces.
+
+Current public HTML entry points after cleanup:
+
+- `index.html`
+- `download/index.html`
+- `guides/index.html`
+- `google768162376caa4dfd.html` remains only for Google verification.
+
+Verification performed:
+
+- `http://127.0.0.1:4176/` returned `200`.
+- `http://127.0.0.1:4176/download/` returned `200`.
+- `http://127.0.0.1:4176/guides/` returned `200`.
+- `http://127.0.0.1:4176/guides/?guide=windows-installation` returned `200`.
+- Browser audit found one `h1` per agreed page and no horizontal overflow.
+- JavaScript syntax checks passed for `static/js/academy.js`, `static/js/ga-consent.js`, `static/js/ga-events.js`, and `prototype/homepage-v3/motion.js`.
+- Link scans found no remaining old-page links in `index.html`, `download/index.html`, `guides/index.html`, `static/js/academy.js`, `static/js/ga-consent.js`, `static/js/ga-events.js`, or `sitemap.xml`.
+
+Important follow-up:
+
+- The site now intentionally sacrifices the previous broad SEO page inventory. If this direction is kept, redirects must be reviewed before deployment because removed URLs previously represented search landing pages.
+- The root page still uses `prototype/homepage-v3/styles.css` and `prototype/homepage-v3/motion.js` as assets. This is acceptable for local redesign work, but the assets should eventually move into `static/` before production cleanup.
+
+## SEO Acquisition Update: 2026-06-26
+
+After reviewing the Search Console opportunity around PDA queries, the redesign restored a small SEO acquisition batch while keeping the locked homepage, download page, and guides page unchanged.
+
+## Cluster-Led SEO Update: 2026-06-26
+
+The SEO backlog is now cluster-led, not restoration-led. Use `docs/redesign/search-console-intent-map-2026-06-23.md` as the Search Console source of truth for the current acquisition backlog.
+
+Hard rule: `/`, `/download/`, and `/guides/` are permanently locked. Do not edit `index.html`, `download/index.html`, or `guides/index.html`, and do not change shared CSS or JS in a way that alters those pages. All other restored acquisition pages are unlocked for SEO, CRO, accessibility, and visual polish.
+
+Default priority:
+
+1. Optimize the PDA education and waiter/service clusters.
+2. Strengthen internal links across unlocked acquisition pages.
+3. Treat `/systima-paraggeliolipsias.html` as the broad long-term παραγγελιοληψία hub.
+4. Keep `/times.html` as conversion reassurance for price, trial, cancellation, and product boundaries.
+5. Add no new public SEO routes unless fresh data shows an intent that cannot be served by an existing unlocked page.
+
+Implemented pages:
+
+- `/pda-ti-einai.html` answers the broad "PDA τι είναι" and "PDA στην εστίαση" intent.
+- `/pda-gia-servitoro/` answers the focused "PDA σερβιτόρου" workflow intent.
+
+Design and content decisions:
+
+- Both pages use a page-scoped stylesheet at `static/css/pda-acquisition.css`.
+- The visual system was adjusted to match the active homepage direction: light acquisition hero, centered copy, green primary CTA, compact trial reassurance, and one dark workflow/proof band below the first screen.
+- The pages were shortened to avoid article-like density. Each now keeps only the hero, workflow proof, practical fit/boundary section, FAQ, and final CTA.
+- Public copy remains Greek-only and monotonic, with natural use of `παραγγελιοληψία`, `ασύρματη`, and `σερβιτόρος`.
+- Primary CTA remains `/download/` with `Κατέβασε για Windows`; secondary CTA remains `/guides/`.
+- Both pages clearly state that POSPal is not a fiscal POS and not a cash register.
+- `/pda-ti-einai.html` remains a real file rather than a redirect.
+- `/pda-gia-servitoro/` was added as a real directory route for GitHub Pages compatibility.
+
+Verification performed:
+
+- Both local URLs returned `200` on `http://127.0.0.1:4181/`.
+- Locked files `index.html`, `download/index.html`, and `guides/index.html` retained their pre-polish SHA-256 hashes.
+- Each page has exactly one `h1`, a self-canonical URL, FAQPage schema, and no `noindex`.
+- Link checks on the two pages found no direct `POSPal.exe`, demo-first, or artifact-host download links.
+- Playwright checks passed for desktop, tablet, 390px, and 320px: no horizontal overflow.
+- Axe desktop scans reported zero violations for both pages.
+- Visible interactive targets were brought to a 44px minimum in the page-scoped CSS.
+
+Remaining SEO follow-up:
+
+- `/pda-pos-leitourgei.html` remains the next high-priority preserved SEO page because the Search Console baseline shows meaningful existing demand.
+- Cafe, wireless ordering, beach-bar, QR-menu, and order-taking system intents still need deliberate keep/redirect/rebuild decisions before deployment.
+
 ## Objective
 
 Create one clear path from discovery to a successful first shift:
