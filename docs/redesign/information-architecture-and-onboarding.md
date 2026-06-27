@@ -191,6 +191,44 @@ Remaining SEO follow-up:
 - `/pda-pos-leitourgei.html` remains the next high-priority preserved SEO page because the Search Console baseline shows meaningful existing demand.
 - Cafe, wireless ordering, beach-bar, QR-menu, and order-taking system intents still need deliberate keep/redirect/rebuild decisions before deployment.
 
+## Final Visual Evidence Update: 2026-06-27
+
+The repeated product screenshots that showed the old test menu were replaced in-place. No backup copies were kept.
+
+Updated assets:
+
+- `static/img/pospal-desktop-order.png`
+- `docs/redesign/captures/app-route-desktop-order.png`
+- `docs/redesign/captures/app-route-mobile-order.png`
+- `static/qr-menu-live-preview.png`
+
+Evidence source:
+
+- Product captures came from the running local POSPal app at `http://127.0.0.1:5000`.
+- The current controlled fixture is the Brunch Cafe dataset, including Coffee, Brunch Plates, Sandwiches, Fresh & Sweet, and Juices & Drinks.
+- The desktop order capture shows a real order workflow with Espresso, Cappuccino, Iced Latte, Chicken Club, Halloumi Pita, and a total of `EUR 32.80`.
+- The mobile route capture shows the table/order surface rather than the old menu test data.
+- The QR menu preview was captured from `https://menu.pospal.gr/s/pospal` using the same live Brunch Cafe menu data, with only the live page controls hidden for a cleaner marketing preview.
+- The QR code asset was not regenerated in this pass; the homepage links around it still point to `https://menu.pospal.gr/s/pospal`.
+
+Additional launch-blocker fixes completed in the same pass:
+
+- Homepage route motion now runs continuously and the former replay button acts as a pause/resume control.
+- Homepage footer now exposes the full launch site structure for discovery across the public pages.
+- Tablet overflow from the homepage footer and route decoration was fixed in `prototype/homepage-v3/styles.css`.
+- The route motion controls now use `role="group"` for the labelled control wrapper.
+
+Verification performed:
+
+- Visual inspection passed for the replaced desktop capture, route desktop capture, route mobile capture, and QR menu preview.
+- Affected public routes were checked locally at `http://127.0.0.1:4176/`.
+- Checked routes: `/`, `/download/`, `/pda-ti-einai.html`, `/pda-pos-leitourgei.html`, `/pda-gia-servitoro/`, `/pda-gia-kafeteries.html`, `/systima-paraggeliolipsias.html`, `/asyrmati-paraggeliolipsia.html`, and `/paraggelio-lipsia-gia-beach-bar.html`.
+- Browser checks passed at desktop, tablet, 390px, and 320px with no horizontal overflow.
+- Replaced image URLs returned local `200`.
+- Focused QR mobile checks confirmed the QR code and menu preview load when the homepage QR section enters view.
+- Axe on the homepage reported zero first-party serious or critical violations after the ARIA fix.
+- Static search found no old `coffee/pizza`, repeated cappuccino test-order strings, `buy-license.html`, `support.html`, `privacy.html`, `POSPal.exe`, or forbidden direct installer references in the checked public page files.
+
 ## Objective
 
 Create one clear path from discovery to a successful first shift:

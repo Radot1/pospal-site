@@ -1,19 +1,41 @@
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700 900;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
-  --seo-ink: #111812;
-  --seo-ink-soft: #344238;
-  --seo-bg: #f4f6f1;
+  --seo-ink: #07120b;
+  --seo-ink-soft: #56625a;
+  --seo-bg: #f4f5f2;
   --seo-surface: #ffffff;
-  --seo-line: #cfd8cf;
-  --seo-line-strong: #8fa08f;
-  --seo-green: #21d767;
-  --seo-green-dark: #0c6f34;
+  --seo-line: #aeb5ae;
+  --seo-line-strong: #789080;
+  --seo-green: #35ed78;
+  --seo-green-dark: #0f7a38;
+  --seo-green-hover: #65f296;
   --seo-aqua: #d9f4ec;
   --seo-amber: #ffd166;
   --seo-rust: #a84f2d;
-  --seo-shadow: 0 8px 14px rgba(17, 24, 18, 0.08);
+  --seo-shadow: 0 8px 14px rgba(7, 18, 11, 0.08);
   --seo-radius: 8px;
-  --seo-font: "Inter", "Segoe UI", system-ui, sans-serif;
+  --seo-font: Commissioner, "Segoe UI", sans-serif;
 }
 
 * {
@@ -27,8 +49,7 @@ html {
 body.seo-page {
   margin: 0;
   color: var(--seo-ink);
-  background:
-    linear-gradient(180deg, #fbfcf8 0%, var(--seo-bg) 42%, #ecf3ee 100%);
+  background: var(--seo-bg);
   font-family: var(--seo-font);
   font-size: 16px;
   line-height: 1.6;
@@ -88,7 +109,7 @@ body.seo-page p {
   z-index: 20;
   top: 0;
   color: var(--seo-ink);
-  background: rgba(251, 252, 248, 0.95);
+  background: rgba(244, 245, 242, 0.95);
   border-bottom: 1px solid var(--seo-line);
   backdrop-filter: blur(14px);
 }
@@ -97,7 +118,7 @@ body.seo-page p {
   display: flex;
   align-items: center;
   gap: 1.4rem;
-  min-height: 76px;
+  min-height: 72px;
 }
 
 .seo-brand {
@@ -146,7 +167,7 @@ body.seo-page p {
   min-height: 48px;
   padding: 0.84rem 1.12rem;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 8px;
   font-weight: 800;
   line-height: 1.15;
   text-align: center;
@@ -155,7 +176,7 @@ body.seo-page p {
 .seo-button-primary {
   color: #07120b;
   background: var(--seo-green);
-  border-color: #0f9c49;
+  border-color: transparent;
 }
 
 body.seo-page a.seo-button-primary {
@@ -163,7 +184,7 @@ body.seo-page a.seo-button-primary {
 }
 
 .seo-button-primary:hover {
-  background: #5bf08d;
+  background: var(--seo-green-hover);
 }
 
 .seo-button-secondary {
@@ -185,10 +206,12 @@ body.seo-page a.seo-button-secondary {
   min-height: 44px;
   padding-inline: 1rem;
   font-size: 0.92rem;
+  white-space: nowrap;
 }
 
 .seo-hero {
   padding: 82px 0 64px;
+  background: radial-gradient(circle at 50% 34%, #ffffff 0%, #f4f5f2 42%, #e7ebe7 72%, #dfe5df 100%);
 }
 
 .seo-hero-grid {
@@ -214,13 +237,14 @@ body.seo-page a.seo-button-secondary {
   height: 0.65rem;
   background: var(--seo-green);
   border-radius: 999px;
-  box-shadow: 0 0 0 5px rgba(33, 215, 103, 0.18);
+  box-shadow: 0 0 0 5px rgba(53, 237, 120, 0.18);
 }
 
 .seo-hero h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   margin-bottom: 1.1rem;
-  font-size: 56px;
+  font-size: clamp(3rem, 4.9vw, 4.45rem);
+  font-weight: 800;
   line-height: 0.98;
 }
 
@@ -640,7 +664,7 @@ body.seo-page .pospal-consent-btn {
 
   .seo-header-inner {
     gap: 0.8rem;
-    min-height: 70px;
+    min-height: 68px;
   }
 
   .seo-brand {

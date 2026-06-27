@@ -26,6 +26,14 @@ The frozen public page set for the launch candidate: `/`, `/download/`, `/guides
 
 The only allowed change to a locked launch page or its shared rendering dependencies after lock is a narrowly scoped first-party launch blocker fix, such as accessibility, tap-target, overflow, broken-route, or critical crawlability repair. It does not permit new content, SEO rewrites, visual redesign, or route expansion.
 
+### Narrow visual polish pass
+
+An explicitly approved exception for `/download/` and `/guides/` on `redesign/new-website` that aligns colors, typography, spacing, CTA shape, header/footer consistency, and mobile rendering with the homepage reference. It does not permit a new funnel, new pages, broad content rewrites, or changes to the homepage.
+
+### Cookie banner polish boundary
+
+The shared cookie banner may be adjusted during the narrow visual polish pass only to reduce mobile obstruction, preserve consent clarity, and keep buttons usable. The consent model and banner copy are not redesigned, and the homepage must be visually verified before and after any shared banner change.
+
 ### Launch guide boundary
 
 The launch rule that `/guides/` is the only public onboarding and support destination. Support pages and individual guide URLs redirect to `/guides/` until the guide system is complete enough to justify standalone public routes.
@@ -61,6 +69,10 @@ POSPal runs alongside the customer's fiscal system. It is neither a cash registe
 ### Download handoff
 
 Homepage, pricing, guide, and SEO download calls to action lead to `/download/`, not directly to the installer artifact. The download page is an installer handoff page: it provides the explicit installer click, requirements, expected filename, mobile guidance, and the next onboarding step without repeating the full sales argument or adding a complicated post-click state.
+
+### Pure download handoff
+
+The approved treatment for `/download/` during visual polish. It may be visually aligned with the homepage, but it remains a focused installer handoff rather than a mini landing page, feature pitch, proof page, or expanded sales argument.
 
 ### Evidence strategy
 
@@ -122,6 +134,10 @@ The customer guides' first success measure is customer confidence to keep learni
 
 The canonical `/guides/` interface shape. It uses a quiet support-page layout: compact POSPal header, short guide title, a small selector for the two published setup videos, one large video, and one or two next actions. It does not use a sidebar, course outline, manual completion, progress state, supporting panel, quizzes, forums, discussions, or LMS-style mechanics.
 
+### Quiet guide polish
+
+The approved visual direction for `/guides/` during the narrow visual polish pass. It borrows the homepage's color tokens, CTA shape, header rhythm, footer completeness, and typography confidence while remaining a quiet support surface rather than adopting the homepage's dramatic hero, route theatre, pricing cards, or sales pacing.
+
 ### Guide interaction boundary
 
 The guides never include quizzes, forums, comments, discussions, certificates, scores, progress bars, manual completion, or social learning features. They are a guided video-learning and setup-confidence surface, not a learning management system or community product.
@@ -164,7 +180,7 @@ Natural monotonic Greek written consistently in the second-person singular. Copy
 
 ### Shared hero promise
 
-The fixed content used by every design probe: `Η παραγγελιοληψία σου. Χωρίς μεσάζοντα.` It describes table mode, simple mode, kitchen workflow, customizable QR menu, Windows installation, guided self-setup, the early-adopter price, and the 30-day trial without card or personal information. Its primary action is `Κατέβασε για Windows`.
+The current homepage promise: `Από το τραπέζι μέχρι την κουζίνα. Χωρίς διακοπές.` It describes table mode, simple mode, kitchen workflow, customizable QR menu, Windows installation, guided self-setup, the early-adopter price, and the 30-day trial without card or personal information. Its primary action is `Κατέβασε για Windows`. The older `Χωρίς μεσάζοντα` language remains a direct-relationship theme rather than the protected hero headline.
 
 ### Hero setup action
 
@@ -214,6 +230,14 @@ The set of guide pages that help a customer move from download to first useful o
 
 The set of search-intent pages that answer specific Greek hospitality queries before routing visitors toward download, pricing, or a relevant guide. Existing ranking URLs are improved and preserved before new pages are added.
 
+### SEO polish deferral
+
+The redesign-scope rule that deeper visual unification of SEO acquisition pages is deferred to a separate SEO batch. During the narrow visual polish pass, SEO pages may receive only low-risk shared-token, header, and CTA alignment that does not change layout, page structure, route intent, or content hierarchy.
+
+### PDA template migration
+
+The deferred decision about whether PDA-intent SEO pages such as `/pda-gia-kafeteries.html` should move from the SEO acquisition layout into the PDA acquisition layout. It is not part of the narrow visual polish pass.
+
 ### SEO expansion gate
 
 The rule that prevents SEO growth from becoming thin page sprawl. A new SEO page is allowed only when Search Console shows a real intent cluster, existing pages cannot answer it cleanly, the page has a distinct funnel job, it can meet the current quality bar, and it ships in a small tested batch.
@@ -244,10 +268,12 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The website redesign reaches launch candidate when page inventory, docs, redirects, sitemap, and final QA are aligned.
 - The launch candidate uses the launch inventory as its frozen page set.
 - The launch candidate allows only the launch blocker exception after page lock.
+- The narrow visual polish pass is an approved exception for `/download/` and `/guides/` during the redesign branch work.
+- The narrow visual polish pass may include cookie banner changes only within the cookie banner polish boundary.
 - The launch inventory follows the launch guide boundary.
 - The landing-page design uses the existing brand identity as an anchor.
 - The homepage targets the switcher first.
-- The switcher's direct relationship is expressed by the promise `Η παραγγελιοληψία σου. Χωρίς μεσάζοντα.`
+- The switcher's direct relationship is supported by the `Χωρίς μεσάζοντα` commercial theme rather than carried by the current hero headline.
 - The direct relationship is evidenced by direct download, a public month-to-month price, and cancellation without a fixed-term service contract.
 - The direct relationship uses subscription cancellation rather than immediate termination.
 - The self-setup model requires strong onboarding rather than a paid setup service.
@@ -255,6 +281,7 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The self-setup model is supported by the support model.
 - Product-fit communication includes the fiscal boundary.
 - The homepage journey converts through the download handoff.
+- The download handoff uses the pure download handoff treatment.
 - Product proof and the support model implement the evidence strategy.
 - The landing-page design follows the visual tone.
 - The visual tone is expressed through the canvas.
@@ -267,6 +294,7 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The homepage journey presents guides through the onboarding preview.
 - The onboarding preview is governed by the guide-completion gate.
 - The Guides hub uses the simple video guide surface.
+- The simple video guide surface follows quiet guide polish during the narrow visual polish pass.
 - The Guides launch scope contains the Start Here path first.
 - The simple video guide surface belongs to the active redesign pair.
 - The customer guides follow the guide interaction boundary.
@@ -289,6 +317,8 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The conversion core routes visitors into the download handoff.
 - The onboarding core supports the self-setup model.
 - The SEO acquisition layer preserves existing search equity while creating demand-specific paths into the conversion core.
+- The SEO acquisition layer follows SEO polish deferral during the narrow visual polish pass.
+- PDA template migration is deferred outside the narrow visual polish pass.
 - The SEO acquisition layer grows through the SEO expansion gate rather than through default legacy-page restoration.
 - The SEO expansion gate applies the SEO page quality bar before any page enters the sitemap.
 - The SEO acquisition layer is reviewed through the post-launch SEO rhythm after launch.

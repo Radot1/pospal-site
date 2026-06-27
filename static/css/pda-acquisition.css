@@ -27,6 +27,7 @@
   --pda-forest-deep: #06100a;
   --pda-green: #35ed78;
   --pda-green-dark: #0f7a38;
+  --pda-green-hover: #65f296;
   --pda-amber: #ffb21a;
   --pda-muted: #56625a;
   --pda-line: #cbd0cb;
@@ -186,7 +187,7 @@ body.pda-acquisition-page {
 }
 
 .pda-button-primary:hover {
-  background: #28d968;
+  background: var(--pda-green-hover);
 }
 
 .pda-button-secondary {

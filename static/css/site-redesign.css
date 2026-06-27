@@ -1,6 +1,42 @@
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Commissioner;
+  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark light;
   --green: #35ed78;
+  --green-hover: #65f296;
   --green-soft: #94eeb1;
   --green-dark: #0f7a38;
   --ink: #07120b;
@@ -15,8 +51,8 @@
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --display: "Trebuchet MS", "Segoe UI", sans-serif;
-  --body: "Segoe UI Variable", "Segoe UI", sans-serif;
+  --display: Commissioner, "Segoe UI", sans-serif;
+  --body: Commissioner, "Segoe UI", sans-serif;
 }
 
 * {
@@ -50,6 +86,10 @@ body.download-page {
   backdrop-filter: blur(12px);
 }
 
+.download-page .header-inner {
+  min-height: 72px;
+}
+
 .download-page .desktop-nav {
   color: #152219;
   font-weight: 750;
@@ -66,6 +106,7 @@ body.download-page {
 .download-page .header-download {
   color: var(--ink);
   background: var(--green);
+  border-color: transparent;
 }
 
 .download-page .mobile-menu summary {
@@ -1202,8 +1243,8 @@ p {
   grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.22fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  min-height: min(760px, calc(100vh - 86px));
-  padding-block: clamp(2.5rem, 6vh, 4.5rem);
+  min-height: min(700px, calc(100vh - 72px));
+  padding-block: clamp(2rem, 5vh, 3.4rem);
 }
 
 .download-simple::before {
@@ -1230,6 +1271,7 @@ p {
   color: var(--green-dark);
   font-size: 0.82rem;
   font-weight: 850;
+  letter-spacing: 0.025em;
 }
 
 .download-product-mark {
@@ -1250,10 +1292,10 @@ p {
 }
 
 .download-simple h1 {
-  max-width: 15ch;
+  max-width: 14ch;
   margin-bottom: 1rem;
-  font: 800 clamp(1.9rem, 3.2vw, 2.65rem)/1.08 var(--display);
-  letter-spacing: -0.025em;
+  font: 800 clamp(2.25rem, 4vw, 3.35rem)/1.03 var(--display);
+  letter-spacing: -0.035em;
 }
 
 .download-simple-copy > p {
@@ -1277,13 +1319,14 @@ p {
   padding: 0.75rem 1.1rem;
   color: var(--ink);
   background: var(--green);
+  border-radius: 8px;
   font-weight: 800;
   line-height: 1.15;
   transition: background-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
 }
 
 .download-install-button:hover {
-  background: #28d968;
+  background: var(--green-hover);
   transform: translateY(-1px);
 }
 
@@ -1301,6 +1344,7 @@ p {
   padding: 0 1rem;
   color: var(--ink);
   border: 1px solid #9ea9a0;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.42);
   font-size: 0.9rem;
   font-weight: 800;
@@ -1382,8 +1426,10 @@ p {
 }
 
 .download-mobile-note {
-  color: var(--ink);
-  background: var(--green);
+  color: #f8fff9;
+  background: var(--ink-soft);
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
 }
 
 .download-mobile-note-inner {
@@ -1402,6 +1448,17 @@ p {
 .download-mobile-note p {
   margin: 0;
   max-width: 65ch;
+  color: #d6e2da;
+}
+
+.download-mobile-note .button-ink {
+  color: var(--ink);
+  background: var(--green);
+}
+
+.download-mobile-note .button-outline-ink {
+  color: #f8fff9;
+  border-color: #789080;
 }
 
 .download-mobile-actions {

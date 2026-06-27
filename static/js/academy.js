@@ -113,5 +113,19 @@
         </nav>
       </section>
     </div>
+
+    <footer class="academy-footer">
+      <div class="academy-footer-inner">
+        <div>
+          <strong translate="no">POSPal</strong>
+          <span>Οδηγοί εγκατάστασης και πρώτης χρήσης.</span>
+        </div>
+        <nav aria-label="Σύνδεσμοι οδηγών">
+          <a href="/">Αρχική</a>
+          <a href="/download/">Κατέβασε για Windows</a>
+          <a href="#academy-title">Πίσω στον οδηγό</a>
+        </nav>
+      </div>
+    </footer>
   `;
 })();

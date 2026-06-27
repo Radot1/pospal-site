@@ -67,7 +67,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .route-theatre{position:relative;z-index:3;color:#fff;background:
   radial-gradient(circle at 26% 62%,#35ed7820 0 10%,transparent 32%),
   radial-gradient(circle at 74% 44%,#35ed7818 0 8%,transparent 30%),
-  linear-gradient(180deg,#102117 0%,#06100a 100%)}
+  linear-gradient(180deg,#102117 0%,#06100a 100%);overflow:hidden}
 .route-theatre:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#ffffff00 0%,#06100a88 100%);pointer-events:none}
 .route-shell{position:relative;padding:clamp(1.75rem,3vw,2.5rem) 0 clamp(3rem,6vw,5rem)}
 .route-scene{position:relative;min-height:570px;margin:0;isolation:isolate}
@@ -350,6 +350,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .onboarding-copy h2{max-width:12ch;font-size:clamp(2.8rem,6vw,3.8rem)}
   .pricing-heading{grid-template-columns:1fr;gap:1rem}
   .pricing-heading h2{max-width:12ch;font-size:clamp(2.8rem,6vw,3.8rem)}
+  .footer-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:2rem}
+  .footer-sitemap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-boundary{max-width:none}
 }
 @media (max-width:720px){
   :root{--shell:min(100% - 1.25rem,1180px)}
