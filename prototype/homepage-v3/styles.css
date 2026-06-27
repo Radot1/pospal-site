@@ -36,12 +36,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .button-secondary{border-color:var(--ink);background:transparent;color:var(--ink)}
 .button-on-dark{border-color:#789080;background:transparent;color:var(--white)}
 .site-header{position:sticky;z-index:30;top:0;display:flex;align-items:center;gap:1.25rem;min-height:72px;padding:.6rem max(1rem,calc((100vw - 1180px)/2));background:#f4f5f2f2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.brand{display:inline-flex;align-items:center;gap:.65rem;font-size:1.08rem;font-weight:800;letter-spacing:-.03em}
+.brand{display:inline-flex;align-items:center;gap:.65rem;min-width:44px;min-height:44px;font-size:1.08rem;font-weight:800;letter-spacing:-.03em}
 .brand img{border-radius:8px}
 .brand b{color:var(--green-dark)}
 .desktop-nav{display:flex;gap:2rem;margin-left:auto;font-size:.92rem;font-weight:700}
-.desktop-nav a{min-height:40px;display:inline-flex;align-items:center}
-.header-cta{min-height:42px;font-size:.88rem}
+.desktop-nav a{min-height:44px;display:inline-flex;align-items:center}
+.header-cta{min-height:44px;font-size:.88rem}
 .mobile-nav{display:none;margin-left:auto;position:relative}
 .mobile-nav summary{min-height:44px;padding:.65rem .85rem;border:1px solid var(--ink);border-radius:8px;font-weight:800;cursor:pointer;list-style:none}
 .mobile-nav summary::-webkit-details-marker{display:none}
@@ -269,11 +269,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .final-next-step a{display:inline-flex;align-items:center;min-height:44px;font-weight:800;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
 .final-next-step a:hover{color:var(--green-dark)}
 .site-footer{padding:3rem 0 1.5rem;background:#07120b;color:#cbd7ce}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:clamp(1.5rem,4vw,3rem);align-items:start}
+.footer-grid{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(260px,1.8fr) minmax(180px,.7fr) minmax(220px,.8fr);gap:clamp(1.5rem,4vw,3rem);align-items:start}
 .footer-grid p{margin:0}
-.footer-brand strong,.footer-contact span{display:block;margin-bottom:.35rem;color:#fff;font-weight:800}
+.footer-brand strong,.footer-contact span,.footer-sitemap span{display:block;margin-bottom:.35rem;color:#fff;font-weight:800}
 .footer-brand p,.footer-boundary{color:#cbd7ce}
 .footer-nav{display:grid;gap:.15rem}
+.footer-sitemap{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem 1.5rem}
+.footer-sitemap div{display:grid;align-content:start;gap:.05rem}
 .footer-grid a{display:inline-flex;align-items:center;justify-self:start;min-height:44px;color:#dce8df;font-weight:700}
 .footer-contact{font-style:normal}
 .footer-boundary{max-width:34ch}
@@ -284,16 +286,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .desktop-nav a:hover,.footer-grid a:hover{text-decoration:underline;text-underline-offset:4px}
 }
 @media (prefers-reduced-motion:no-preference){
-  .route-theatre.is-running .route-progress{animation:route-progress 8s linear both}
-  .route-theatre.is-running .route-pulse{animation:route-pulse 8s linear both}
-  .route-theatre.is-running .sync-badge{animation:sync-pop 8s var(--ease) both}
-  .route-theatre.is-running .ticket{animation:ticket-print 8s var(--ease) both}
-  .route-theatre.is-running .order-token{animation:order-token 8s var(--ease) both}
-  .route-theatre.is-running .device-toast{animation:device-toast 8s var(--ease) both}
-  .route-theatre.is-running .offline-mark{animation:offline-mark 8s var(--ease) both}
-  .route-theatre.is-running .laptop-screen{animation:laptop-sync 8s var(--ease) both}
-  .route-theatre.is-running .ticket mark{animation:kitchen-stamp 8s var(--ease) both}
-  .route-theatre.is-running .wifi-radius{animation:wifi-breathe 8s var(--ease) both}
+  .route-theatre.is-running .route-progress{animation:route-progress 8s linear infinite}
+  .route-theatre.is-running .route-pulse{animation:route-pulse 8s linear infinite}
+  .route-theatre.is-running .sync-badge{animation:sync-pop 8s var(--ease) infinite}
+  .route-theatre.is-running .ticket{animation:ticket-print 8s var(--ease) infinite}
+  .route-theatre.is-running .order-token{animation:order-token 8s var(--ease) infinite}
+  .route-theatre.is-running .device-toast{animation:device-toast 8s var(--ease) infinite}
+  .route-theatre.is-running .offline-mark{animation:offline-mark 8s var(--ease) infinite}
+  .route-theatre.is-running .laptop-screen{animation:laptop-sync 8s var(--ease) infinite}
+  .route-theatre.is-running .ticket mark{animation:kitchen-stamp 8s var(--ease) infinite}
+  .route-theatre.is-running .wifi-radius{animation:wifi-breathe 8s var(--ease) infinite}
   .route-theatre.is-paused *{animation-play-state:paused!important}
   @keyframes route-progress{0%,8%{stroke-dashoffset:1094}88%,100%{stroke-dashoffset:0}}
   @keyframes route-pulse{0%,8%{stroke-dashoffset:0;opacity:0}14%{opacity:1}84%{stroke-dashoffset:-1000;opacity:1}90%,100%{stroke-dashoffset:-1094;opacity:0}}
@@ -451,6 +453,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .final-proof-list div{grid-template-columns:1fr;gap:.3rem;padding:.75rem 0}
   .final-proof-list dd{text-align:left}
   .footer-grid{grid-template-columns:1fr;gap:1.35rem}
+  .footer-sitemap{grid-template-columns:1fr;gap:.85rem}
   .footer-grid a{min-height:44px}
   .footer-nav{gap:0}
   .footer-boundary{max-width:none}

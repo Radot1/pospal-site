@@ -330,7 +330,7 @@
       ".pospal-consent-title{margin:0 0 8px;font-size:1rem;font-weight:700;color:#0f172a}" +
       ".pospal-consent-text{margin:0;font-size:.92rem;line-height:1.4;color:#334155}" +
       ".pospal-consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}" +
-      ".pospal-consent-btn{border:1px solid #cbd5e1;border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:600;cursor:pointer;background:#fff;color:#0f172a}" +
+      ".pospal-consent-btn{min-height:44px;border:1px solid #cbd5e1;border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:600;cursor:pointer;background:#fff;color:#0f172a}" +
       ".pospal-consent-btn:hover{background:#f8fafc}" +
       ".pospal-consent-btn-primary{background:#15803d;border-color:#15803d;color:#fff}" +
       ".pospal-consent-btn-primary:hover{background:#166534}" +
@@ -344,7 +344,7 @@
       ".pospal-cookie-settings-float{position:fixed;left:12px;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147482999;border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#0f172a;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.16)}" +
       ".pospal-cookie-settings-float:hover{background:#f8fafc}" +
       ".pospal-cookie-settings-icon{display:block;width:20px;height:20px}" +
-      "@media (max-width:640px){.pospal-consent-banner{left:8px;right:8px;bottom:8px;width:auto;padding:10px;border-radius:12px}.pospal-consent-panel{left:10px;right:10px}.pospal-consent-title{margin-bottom:4px;font-size:.92rem}.pospal-consent-text{font-size:.78rem;line-height:1.32}.pospal-consent-actions{gap:6px;margin-top:10px}.pospal-consent-btn{min-height:38px;padding:7px 10px;font-size:.78rem}.pospal-cookie-settings-float{width:44px;height:44px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}.pospal-cookie-settings-icon{width:18px;height:18px}}";
+      "@media (max-width:640px){.pospal-consent-banner{left:8px;right:8px;bottom:8px;width:auto;padding:10px;border-radius:12px}.pospal-consent-panel{left:10px;right:10px}.pospal-consent-title{margin-bottom:4px;font-size:.92rem}.pospal-consent-text{font-size:.78rem;line-height:1.32}.pospal-consent-actions{gap:6px;margin-top:10px}.pospal-consent-btn{min-height:44px;padding:7px 10px;font-size:.78rem}.pospal-cookie-settings-float{width:44px;height:44px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}.pospal-cookie-settings-icon{width:18px;height:18px}}";
     document.head.appendChild(style);
   }
 

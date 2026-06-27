@@ -14,6 +14,22 @@ The homepage's layout, typography, visual language, copy hierarchy, imagery, and
 
 The redesign of POSPal's marketing experience, beginning with the landing page. It may make substantial visual and structural departures, but it does not imply a brand redesign.
 
+### Launch candidate
+
+The closing state for the redesigned marketing site: page inventory is frozen, docs match the implemented site, redirects and sitemap are final-checked, and only blocker fixes remain. It is not a prompt to add new routes, restore more old pages, or redesign locked pages.
+
+### Launch inventory
+
+The frozen public page set for the launch candidate: `/`, `/download/`, `/guides/`, `/times.html`, the PDA and παραγγελιοληψία SEO acquisition pages, and required site infrastructure. It excludes `/support.html`, standalone QR pages, individual guide URLs, demo pages, privacy pages, and further legacy restorations until post-launch data justifies them.
+
+### Launch blocker exception
+
+The only allowed change to a locked launch page or its shared rendering dependencies after lock is a narrowly scoped first-party launch blocker fix, such as accessibility, tap-target, overflow, broken-route, or critical crawlability repair. It does not permit new content, SEO rewrites, visual redesign, or route expansion.
+
+### Launch guide boundary
+
+The launch rule that `/guides/` is the only public onboarding and support destination. Support pages and individual guide URLs redirect to `/guides/` until the guide system is complete enough to justify standalone public routes.
+
 ### Switcher
 
 An owner, manager, or operator of a Greek hospitality business who already understands or uses ordering software and wants a direct, affordable alternative. The homepage addresses this audience first while remaining understandable to first-time buyers.
@@ -198,6 +214,18 @@ The set of guide pages that help a customer move from download to first useful o
 
 The set of search-intent pages that answer specific Greek hospitality queries before routing visitors toward download, pricing, or a relevant guide. Existing ranking URLs are improved and preserved before new pages are added.
 
+### SEO expansion gate
+
+The rule that prevents SEO growth from becoming thin page sprawl. A new SEO page is allowed only when Search Console shows a real intent cluster, existing pages cannot answer it cleanly, the page has a distinct funnel job, it can meet the current quality bar, and it ships in a small tested batch.
+
+### SEO page quality bar
+
+The minimum standard for any SEO acquisition page before it enters the sitemap. It must answer the query immediately, have complete on-page SEO and schema only where visible, show a real POSPal workflow, state the fiscal boundary where relevant, route toward download and guides, avoid fake proof or demo funnels, pass mobile and accessibility checks, and have a distinct reason to exist.
+
+### Post-launch SEO rhythm
+
+The operating cadence for SEO after the launch candidate ships. Wait 28 days before judging movement, review Search Console by intent cluster, prefer improving existing pages and snippets before creating new pages, and open new SEO batches only when the SEO expansion gate is met.
+
 ### Early-adopter price
 
 The EUR 18.90 monthly subscription price offered to customers who subscribe during the early-adopter period. A customer keeps this monthly price for as long as that subscription remains active. Future public pricing may increase, but an unconfirmed future amount is not advertised.
@@ -213,6 +241,10 @@ The pricing presentation showing one early-adopter monthly price, the included p
 ## Relationships
 
 - The website redesign changes the landing-page design.
+- The website redesign reaches launch candidate when page inventory, docs, redirects, sitemap, and final QA are aligned.
+- The launch candidate uses the launch inventory as its frozen page set.
+- The launch candidate allows only the launch blocker exception after page lock.
+- The launch inventory follows the launch guide boundary.
 - The landing-page design uses the existing brand identity as an anchor.
 - The homepage targets the switcher first.
 - The switcher's direct relationship is expressed by the promise `Η παραγγελιοληψία σου. Χωρίς μεσάζοντα.`
@@ -257,6 +289,9 @@ The pricing presentation showing one early-adopter monthly price, the included p
 - The conversion core routes visitors into the download handoff.
 - The onboarding core supports the self-setup model.
 - The SEO acquisition layer preserves existing search equity while creating demand-specific paths into the conversion core.
+- The SEO acquisition layer grows through the SEO expansion gate rather than through default legacy-page restoration.
+- The SEO expansion gate applies the SEO page quality bar before any page enters the sitemap.
+- The SEO acquisition layer is reviewed through the post-launch SEO rhythm after launch.
 - The hero may show the early-adopter price beneath the primary promise; its full entitlement is explained in the pricing section.
 - Presentation of the early-adopter price follows honest urgency.
 - The pricing stage of the homepage journey uses the subscription ledger.

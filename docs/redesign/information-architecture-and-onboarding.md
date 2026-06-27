@@ -2,6 +2,51 @@
 
 *Draft for approval: 2026-06-19*
 
+## Launch Candidate Update: 2026-06-27
+
+The redesign is now being closed as a launch candidate. The launch inventory is frozen unless final QA finds a blocker:
+
+- `/`
+- `/download/`
+- `/guides/`
+- `/times.html`
+- `/pda-ti-einai.html`
+- `/pda-pos-leitourgei.html`
+- `/pda-gia-servitoro/`
+- `/pda-gia-kafeteries.html`
+- `/systima-paraggeliolipsias.html`
+- `/asyrmati-paraggeliolipsia.html`
+- `/paraggelio-lipsia-gia-beach-bar.html`
+- required infrastructure files such as sitemap, redirects, robots, manifest, and Google verification
+
+Hard lock: `/`, `/download/`, and `/guides/` stay locked. Do not edit `index.html`, `download/index.html`, or `guides/index.html`, and do not change shared CSS or JS in a way that alters those pages, except for narrowly scoped first-party launch blocker fixes such as accessibility, tap-target, overflow, broken-route, or critical crawlability repairs. This exception does not allow new content, SEO rewrites, visual redesign, or route expansion.
+
+Accessibility decision, 2026-06-27: keep the embedded YouTube guide video because it is central to the onboarding surface. Axe issues from YouTube's internal iframe player are treated as third-party exceptions; first-party accessibility issues must still be fixed.
+
+Current route decisions:
+
+- `/support.html` is not part of the launch inventory. It redirects to `/guides/`.
+- `/guides/` is the only public guide route for launch.
+- Guide variants may exist as state inside `/guides/`, including query-driven selection, but standalone guide URLs are not launch pages.
+- Demo, privacy, support, QR, individual guide, and additional legacy SEO URLs remain outside the launch inventory unless a future post-launch data review reopens them.
+- Older Academy/classroom/sidebar/lesson-route language in this document is historical and superseded for the launch candidate.
+
+Final QA bar before closing launch candidate:
+
+- Locked hashes unchanged for `/`, `/download/`, and `/guides/`.
+- Sitemap contains exactly the launch inventory.
+- Removed and legacy URLs resolve through tested one-hop redirects.
+- Every sitemap URL returns local `200`.
+- Every public page has one `h1`, title, meta description, canonical, and no accidental `noindex`.
+- SEO pages with FAQ schema have matching visible FAQ.
+- No direct `POSPal.exe`, demo funnel, `buy-license.html`, dead support/privacy links, or dead individual guide links.
+- Browser checks pass at desktop, tablet, 390px, and 320px.
+- No horizontal overflow; visible interactive targets meet the agreed tap-target standard.
+- Axe reports zero first-party serious or critical violations; documented third-party exceptions are allowed.
+- Cookie banner does not block understanding or the primary CTA.
+- JavaScript syntax checks pass.
+- Documentation matches the launch inventory, launch guide boundary, and SEO expansion gate.
+
 ## Status Update: 2026-06-24
 
 The kept main landing page for the redesign workspace is `prototype/homepage-v3/`. This is the active homepage direction, not a disposable prototype branch. The paired onboarding surface is the production `/guides/` simple video guide surface.

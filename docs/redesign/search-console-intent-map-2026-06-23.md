@@ -26,6 +26,10 @@ Permanent page lock: `/`, `/download/`, and `/guides/` stay locked. The files `i
 | QR / menu | tiny measured query volume in this export | Watch | no new page in this pass | Do not build from GSC demand alone. Revisit if product strategy or fresh data supports it. |
 | Retired support/demo/guide URLs | mostly zero-click or non-acquisition pages | Consolidate / Ignore | existing redirects | Keep one-hop redirects unless a real published destination exists. No demo funnel. |
 
+## QR/Menu Launch Stance
+
+Do not add a standalone QR/menu SEO page before launch. QR menu remains a product value point inside existing pages, but the measured Search Console opportunity is currently much weaker than PDA and order-taking. Old QR URLs stay redirected one-hop unless a future post-launch review shows enough demand and product proof for a page that passes the SEO expansion gate.
+
 ## Current Backlog Source
 
 1. Optimize the PDA education and waiter/service cluster first.
@@ -33,6 +37,24 @@ Permanent page lock: `/`, `/download/`, and `/guides/` stay locked. The files `i
 3. Keep `/times.html` as the reassurance destination for price/trial concerns.
 4. Keep generic παραγγελιοληψία as a long-term hub, not a quick restoration sprint.
 5. Add new public SEO pages only when a query cluster cannot be served cleanly by an existing unlocked page.
+
+## Launch Candidate SEO Page Tiers
+
+Core SEO pages to protect and measure:
+
+- `/pda-ti-einai.html`
+- `/pda-pos-leitourgei.html`
+- `/pda-gia-servitoro/`
+
+Support SEO pages to keep, but not expand from by default:
+
+- `/pda-gia-kafeteries.html`
+- `/systima-paraggeliolipsias.html`
+- `/times.html`
+- `/paraggelio-lipsia-gia-beach-bar.html`
+- `/asyrmati-paraggeliolipsia.html`
+
+All current SEO pages stay in the launch inventory because they have distinct intent, route toward download/guides, and pass the SEO page quality bar. Lower-priority support pages are measurement surfaces, not permission to create adjacent thin pages before fresh data.
 
 ## Measurement
 
@@ -42,3 +64,15 @@ Evaluate after at least 28 days post-launch:
 - PDA service clicks: `pda σερβιτορου`, `pda εστιαση`, `προγραμμα pda`, `pda παραγγελιοληψια`.
 - Generic παραγγελιοληψία movement: impressions and average position on broad system/program terms.
 - Page-level engagement for `/pda-ti-einai.html`, `/pda-pos-leitourgei.html`, `/pda-gia-servitoro/`, `/systima-paraggeliolipsias.html`, and `/times.html`.
+
+## Post-Launch SEO Rhythm
+
+Wait 28 days before judging SEO movement. Review Search Console by intent cluster, not by random individual URLs.
+
+Default action order:
+
+1. Improve an existing page.
+2. Improve title, description, first-screen answer, or internal links.
+3. Create a new page only when the SEO expansion gate is met.
+
+New SEO batches should be small: one focused improvement pass or 1-2 new pages max. Each review should record query cluster, evidence, decision, page action, and next measurement date.

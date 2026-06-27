@@ -172,6 +172,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-height: 44px;
   font-family: var(--display);
   font-size: 1.12rem;
   font-weight: 750;
@@ -197,7 +198,7 @@ p {
 .desktop-nav a {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
+  min-height: 44px;
 }
 
 .desktop-nav a:hover {
@@ -276,7 +277,7 @@ p {
 }
 
 .button-small {
-  min-height: 40px;
+  min-height: 44px;
   padding: 0.65rem 0.9rem;
   font-size: 0.86rem;
 }
@@ -2014,7 +2015,7 @@ p {
 .footer-inner a {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
+  min-height: 44px;
 }
 
 @media (max-width: 1320px) {
