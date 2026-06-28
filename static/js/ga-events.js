@@ -94,6 +94,10 @@
       return "installer_file";
     }
 
+    if (pathname === "/download" || pathname === "/download/") {
+      return "download_page";
+    }
+
     return "";
   }
 
@@ -108,7 +112,9 @@
   function classifyTrialStart(pathname, elementId, textMatch, classMatch) {
     var isDownloadTarget =
       elementId === "manual-download" ||
-      (pathname && pathname.indexOf("pospal-win-setup.exe") !== -1);
+      (pathname && pathname.indexOf("pospal-win-setup.exe") !== -1) ||
+      pathname === "/download" ||
+      pathname === "/download/";
 
     if (!isDownloadTarget) {
       return "";
@@ -192,6 +198,7 @@
             page_path: payload.page_path,
             page_type: payload.page_type,
             event_version: payload.event_version,
+            transport_type: "beacon",
             cta_variant: downloadVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
@@ -205,6 +212,7 @@
             page_path: payload.page_path,
             page_type: payload.page_type,
             event_version: payload.event_version,
+            transport_type: "beacon",
             cta_variant: trialVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
