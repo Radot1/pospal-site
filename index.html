@@ -1,2619 +1,420 @@
-<!DOCTYPE html>
-<html lang="el">
+<!doctype html>
+<html lang="el" class="no-js">
 <head>
-    <script src="./static/js/ga-consent.js"></script>
-    <script defer src="./static/js/ga-events.js"></script>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POSPal | PDA παραγγελιοληψία για εστίαση | €18,90/μήνα</title>
-    <meta name="description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα. Κατέβασε το POSPal ή άνοιξε τους οδηγούς.">
-    <link rel="canonical" href="https://pospal.gr/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="el_GR">
-    <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="POSPal | PDA παραγγελιοληψία για εστίαση | €18,90/μήνα">
-    <meta property="og:description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.">
-    <meta property="og:url" content="https://pospal.gr/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="POSPal | PDA παραγγελιοληψία για εστίαση | €18,90/μήνα">
-    <meta name="twitter:description" content="PDA παραγγελιοληψία για εστιατόρια, καφετέριες &amp; beach bar. Τιμή €18,90/μήνα με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.">
-    <link rel="icon" href="./app_icon.ico">
-    <link rel="apple-touch-icon" href="./app_icon.ico">
-    <link rel="stylesheet" href="./static/css/fonts.css">
-    <script src="./static/vendor/tailwindcdn.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Inter', 'system-ui', 'sans-serif']
-                    },
-                    colors: {
-                        brand: {
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --ink: #0f172a;
-            --muted: #64748b;
-            --line: rgba(148, 163, 184, 0.25);
-            --surface: #ffffff;
-            --surface-strong: #ffffff;
-            --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.12);
-            --shadow-md: 0 10px 24px rgba(15, 23, 42, 0.08);
-            --radius-xl: 28px;
-            --radius-lg: 22px;
-            --radius-md: 16px;
-        }
-
-        body {
-            font-family: "Inter", system-ui, sans-serif;
-            color: var(--ink);
-            background: #f8fafc;
-        }
-
-        .surface {
-            background: var(--surface);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            border-radius: var(--radius-xl);
-            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
-        }
-
-        .surface-soft {
-            background: #ffffff;
-            border: 1px solid rgba(226, 232, 240, 0.85);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-        }
-
-        .site-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        .hero-container {
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        #site-header {
-            --header-compact: 0;
-            --header-max: 1500px;
-            --header-min: 1280px;
-            --header-shift: 0px;
-        }
-
-        .header-shell {
-            max-width: calc(var(--header-max) - (var(--header-max) - var(--header-min)) * var(--header-compact));
-            margin: 0 auto;
-            padding: calc(12px - 4px * var(--header-compact)) 16px;
-            transform: translateX(calc(var(--header-shift) * var(--header-compact)));
-            transition: max-width 0.2s ease, padding 0.2s ease, transform 0.2s ease;
-        }
-
-        .banner-surface {
-            position: relative;
-            overflow: hidden;
-            padding-top: calc(12px - 2px * var(--header-compact));
-            padding-bottom: calc(12px - 2px * var(--header-compact));
-            box-shadow: 0 10px 22px rgba(15, 23, 42, calc(0.06 + 0.06 * var(--header-compact)));
-            border-color: rgba(226, 232, 240, calc(0.85 + 0.15 * var(--header-compact)));
-            transition: box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-
-        .header-actions {
-            gap: calc(12px - 10px * var(--header-compact));
-        }
-
-        .header-tagline {
-            display: inline-block;
-            font-size: 0.85rem;
-            color: #64748b;
-            font-weight: 500;
-            max-width: calc(240px * (1 - var(--header-compact)));
-            overflow: hidden;
-            white-space: nowrap;
-            opacity: calc(1 - var(--header-compact));
-            transform: translateY(calc(-6px * var(--header-compact)));
-            transition: max-width 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        .header-download {
-            max-width: calc(200px * (1 - var(--header-compact)));
-            overflow: hidden;
-            white-space: nowrap;
-            opacity: calc(1 - var(--header-compact));
-            transform: translateY(calc(-6px * var(--header-compact)));
-            transition: max-width 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        .scroll-progress {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 2px;
-            width: 0;
-            background: linear-gradient(90deg, #16a34a, #22c55e);
-            opacity: var(--header-compact);
-            transition: width 0.2s ease, opacity 0.2s ease;
-        }
-
-        @media (min-width: 640px) {
-            .site-container,
-            .hero-container {
-                padding: 0 24px;
-            }
-
-            .header-shell {
-                padding: calc(12px - 4px * var(--header-compact)) 24px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .site-container,
-            .hero-container {
-                padding: 0 32px;
-            }
-
-            .header-shell {
-                padding: calc(12px - 4px * var(--header-compact)) 32px;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .site-container {
-                max-width: 1400px;
-            }
-            #site-header {
-                --header-min: 1400px;
-            }
-        }
-
-        @media (min-width: 1536px) {
-            .hero-container {
-                max-width: 1560px;
-            }
-            #site-header {
-                --header-max: 1560px;
-            }
-        }
-
-        .demo-frame {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: var(--radius-xl);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            background: #ffffff;
-            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-        }
-
-        .demo-frame::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), transparent 60%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .demo-frame-hero {
-            --hero-ratio: 16 / 10;
-            width: 100%;
-            aspect-ratio: var(--hero-ratio);
-            height: auto;
-            margin-inline: auto;
-            transform-origin: top center;
-            will-change: transform;
-        }
-
-        .demo-frame-qr {
-            --qr-max-height: calc(100vh - var(--header-offset, 120px) - 64px);
-            --qr-target-width: 414px;
-            width: min(var(--qr-target-width), calc(var(--qr-max-height) * 0.4615));
-            max-width: 92vw;
-            aspect-ratio: 9 / 19.5;
-            height: auto;
-            justify-self: start;
-            border-radius: 34px;
-            box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.08);
-            overscroll-behavior: contain;
-        }
-
-        .experience-viewport {
-            position: relative;
-            min-height: 190vh;
-            overflow: visible;
-            --experience-progress: 0;
-        }
-
-        .experience-stage {
-            position: sticky;
-            top: calc(var(--header-offset, 120px) + 12px);
-            display: grid;
-            align-items: stretch;
-            --experience-progress: 0;
-            --hero-demo-height: auto;
-            width: 100%;
-        }
-
-        .experience-left {
-            display: grid;
-            align-items: start;
-            position: relative;
-        }
-
-        .experience-left > * {
-            grid-area: 1 / 1;
-        }
-
-        .experience-value-panel {
-            z-index: 3;
-            width: min(100%, 680px);
-            justify-self: center;
-            padding: clamp(22px, 2.8vw, 30px);
-            border-radius: 28px;
-            border: 1px solid rgba(187, 247, 208, 0.85);
-            background:
-                radial-gradient(circle at 85% 12%, rgba(34, 197, 94, 0.14), transparent 45%),
-                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
-            box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12);
-            transform: translateY(0) scale(1);
-            opacity: 1;
-            pointer-events: auto;
-            will-change: opacity, transform;
-        }
-
-        .value-panel-title {
-            margin-top: 0;
-            font-size: clamp(1.45rem, 2.5vw, 2rem);
-            line-height: 1.2;
-            font-weight: 700;
-            color: #0f172a;
-            letter-spacing: -0.01em;
-        }
-
-        .value-panel-list {
-            margin-top: 16px;
-            display: grid;
-            gap: 10px;
-            color: #334155;
-            font-size: 0.98rem;
-            line-height: 1.45;
-        }
-
-        .value-panel-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .value-panel-list li::before {
-            content: "\2713";
-            width: 21px;
-            height: 21px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            margin-top: 1px;
-            color: #15803d;
-            background: #dcfce7;
-            font-size: 12px;
-            font-weight: 700;
-            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
-        }
-
-        .value-panel-actions {
-            margin-top: 18px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .value-panel-link {
-            padding: 10px 18px;
-            border: 1px solid #cbd5e1;
-            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-            color: #1e293b;
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            text-decoration: none;
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.95),
-                0 10px 22px rgba(15, 23, 42, 0.1);
-        }
-
-        .value-panel-link:hover {
-            border-color: #94a3b8;
-            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
-            color: #0f172a;
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.95),
-                0 14px 26px rgba(15, 23, 42, 0.14);
-            transform: translateY(-1px);
-        }
-
-        .hero-includes-card {
-            padding: 16px 18px;
-            border-radius: 20px;
-            border: 1px solid rgba(226, 232, 240, 0.95);
-            background: #ffffff;
-            box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
-        }
-
-        .hero-includes-inline {
-            margin-top: 8px;
-        }
-
-        .hero-includes-title {
-            margin: 0;
-            font-size: 0.92rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            color: #0f172a;
-        }
-
-        .hero-includes-list {
-            margin-top: 10px;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px 14px;
-        }
-
-        .hero-includes-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            color: #334155;
-            font-size: 0.9rem;
-            line-height: 1.35;
-        }
-
-        .hero-includes-item::before {
-            content: "\2713";
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            margin-top: 1px;
-            background: #dcfce7;
-            color: #15803d;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .experience-demo {
-            z-index: 2;
-            position: relative;
-            justify-self: center;
-            display: inline-flex;
-            width: min(100%, 960px);
-            max-width: 100%;
-            opacity: 0;
-            transform: translateY(16px) scale(0.975);
-            transform-origin: top center;
-            pointer-events: none;
-            will-change: opacity, transform;
-        }
-
-        .stage-hint {
-            position: absolute;
-            top: 18px;
-            left: 18px;
-            z-index: 5;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            font-size: 0.93rem;
-            letter-spacing: 0.01em;
-            font-weight: 700;
-            color: #166534;
-            background: #fffde8;
-            border: 2px solid rgba(22, 101, 52, 0.65);
-            border-radius: 12px;
-            box-shadow: 3px 3px 0 rgba(22, 101, 52, 0.26);
-            opacity: 0;
-            transform: rotate(-4deg) translateY(-6px);
-            transition: opacity 220ms ease, transform 220ms ease;
-            pointer-events: none;
-        }
-
-        .stage-hint-hand {
-            display: inline-block;
-            font-size: 1.05rem;
-            line-height: 1;
-            transform-origin: 70% 80%;
-            animation: hand-tap 1.1s ease-in-out infinite;
-        }
-
-        .stage-hint::before {
-            content: "";
-            position: absolute;
-            inset: 3px;
-            border-radius: 8px;
-            border: 1px dashed rgba(22, 101, 52, 0.42);
-        }
-
-        .stage-hint::after {
-            content: "\2198";
-            position: absolute;
-            right: -18px;
-            top: 18px;
-            font-size: 1.05rem;
-            color: #166534;
-            transform: rotate(8deg);
-        }
-
-        @keyframes hand-tap {
-            0%, 100% {
-                transform: rotate(-10deg) translateY(0);
-            }
-            40% {
-                transform: rotate(8deg) translateY(-2px);
-            }
-            70% {
-                transform: rotate(-6deg) translateY(1px);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .stage-hint-hand {
-                animation: none;
-            }
-        }
-
-        .qr-bullets {
-            margin-top: 16px;
-            display: grid;
-            gap: 10px;
-        }
-
-        .qr-bullet {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            color: #475569;
-            font-size: 0.95rem;
-        }
-
-        .qr-bullet-icon {
-            width: 24px;
-            height: 24px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            background: #dcfce7;
-            color: #15803d;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
-        }
-
-        .qr-bullet-text {
-            line-height: 1.4;
-        }
-        .qr-live-section {
-            padding: clamp(40px, 5vw, 64px) 0 32px;
-            position: relative;
-            will-change: opacity, transform;
-        }
-
-        .qr-live-card {
-            padding: clamp(18px, 2.1vw, 30px);
-            border-radius: 30px;
-            border: 1px solid rgba(187, 247, 208, 0.75);
-            background:
-                radial-gradient(circle at 14% 12%, rgba(34, 197, 94, 0.14), transparent 44%),
-                radial-gradient(circle at 92% 85%, rgba(15, 23, 42, 0.06), transparent 48%),
-                #ffffff;
-            box-shadow: 0 20px 42px rgba(15, 23, 42, 0.12);
-        }
-
-        .qr-live-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-            gap: clamp(18px, 2.6vw, 38px);
-            align-items: center;
-        }
-
-        .qr-live-copy {
-            max-width: 32rem;
-        }
-
-        .qr-live-eyebrow {
-            font-size: 0.7rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: #166534;
-        }
-
-        .qr-live-title {
-            margin-top: 6px;
-            font-size: clamp(1.35rem, 2vw, 1.86rem);
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #0f172a;
-            max-width: 20ch;
-        }
-
-        .qr-live-body {
-            margin-top: 8px;
-            color: #334155;
-            font-size: 0.95rem;
-            line-height: 1.4;
-            max-width: 44ch;
-        }
-
-        .qr-live-chips {
-            margin-top: 12px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .qr-live-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(187, 247, 208, 0.9);
-            background: #f0fdf4;
-            color: #166534;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            line-height: 1.2;
-        }
-
-        .qr-live-chip::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: #22c55e;
-            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
-        }
-
-        .qr-live-actions {
-            margin-top: 14px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .qr-live-btn-primary {
-            background: #16a34a;
-            color: #ffffff;
-            border: 1px solid transparent;
-            box-shadow: 0 16px 32px rgba(22, 163, 74, 0.28);
-            padding: 12px 22px;
-            font-size: 0.94rem;
-            font-weight: 700;
-        }
-
-        .qr-live-btn-primary:hover {
-            background: #15803d;
-            box-shadow: 0 20px 36px rgba(21, 128, 61, 0.3);
-        }
-
-        .qr-live-btn-secondary {
-            background: #ffffff;
-            color: #166534;
-            border: 1px solid rgba(34, 197, 94, 0.55);
-            box-shadow: none;
-            padding: 11px 18px;
-            font-size: 0.88rem;
-            font-weight: 600;
-        }
-
-        .qr-live-btn-secondary:hover {
-            background: #f0fdf4;
-            color: #14532d;
-            border-color: #16a34a;
-        }
-
-        .qr-live-meta {
-            margin-top: 8px;
-            color: #64748b;
-            font-size: 0.78rem;
-            font-weight: 500;
-        }
-
-        .qr-live-preview-wrap {
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .qr-live-preview-shell {
-            width: min(100%, 860px);
-            padding: 10px;
-            border-radius: 30px;
-            border: 1px solid rgba(226, 232, 240, 0.95);
-            background: #f8fafc;
-            box-shadow: 0 22px 38px rgba(15, 23, 42, 0.16);
-        }
-
-        .qr-live-preview-frame {
-            --qr-live-max-height: calc(100vh - var(--header-offset, 120px) - 72px);
-            position: relative;
-            width: min(100%, calc(var(--qr-live-max-height) * 0.68));
-            max-height: var(--qr-live-max-height);
-            margin-inline: auto;
-            aspect-ratio: 4 / 5;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #ffffff;
-        }
-
-        .qr-live-preview-frame iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block;
-            background: #ffffff;
-        }
-
-        @media (max-width: 1024px) {
-            .qr-live-section {
-                padding: 24px 0 24px;
-            }
-
-            .hero-includes-card {
-                padding: 14px 14px 15px;
-            }
-
-            .hero-includes-inline {
-                margin-top: 4px;
-            }
-
-            .hero-includes-list {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .qr-live-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .qr-live-preview-wrap {
-                order: 1;
-                justify-content: center;
-            }
-
-            .qr-live-copy {
-                order: 2;
-                max-width: none;
-            }
-
-            .qr-live-title {
-                font-size: 1.35rem;
-                max-width: 26ch;
-            }
-
-            .qr-live-preview-shell {
-                width: min(100%, 520px);
-            }
-
-            .qr-live-preview-frame {
-                --qr-live-max-height: min(82vh, 900px);
-                width: min(100%, calc(var(--qr-live-max-height) * 0.62));
-                aspect-ratio: 9 / 16;
-            }
-
-            .qr-live-copy {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-
-            .qr-live-eyebrow,
-            .qr-live-body,
-            .qr-live-chips,
-            .qr-live-meta {
-                display: none;
-            }
-
-            .qr-live-actions {
-                margin-top: 0;
-            }
-        }
-
-        .frame-body {
-            position: relative;
-            flex: 1;
-            height: 100%;
-            padding: 8px;
-            background: #f8fafc;
-            overflow: hidden;
-        }
-
-        .demo-frame-qr .frame-body {
-            padding: 6px;
-            overscroll-behavior: contain;
-        }
-
-        .demo-frame-qr .demo-iframe {
-            border-radius: 24px;
-        }
-
-        .demo-scale {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform-origin: top left;
-        }
-
-        .demo-placeholder {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(248, 250, 252, 0.7);
-            color: #64748b;
-            font-size: 0.9rem;
-            z-index: 2;
-        }
-
-        .demo-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            pointer-events: none;
-            border-radius: 18px;
-            background: #fff;
-            box-shadow: 0 0 0 1px rgba(226, 232, 240, 0.9);
-            display: block;
-            overscroll-behavior: contain;
-        }
-
-
-        .demo-iframe.is-interactive {
-            pointer-events: auto;
-        }
-
-        .mobile-phase-indicator,
-        .mobile-phases,
-        .mobile-only {
-            display: none;
-        }
-
-        .mobile-phase-card {
-            padding: 18px;
-        }
-
-        .mobile-section-label {
-            display: none;
-            font-size: 0.75rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #64748b;
-            margin-bottom: 10px;
-        }
-
-        .mobile-demo-overlay {
-            display: none;
-            position: absolute;
-            inset: 0;
-            z-index: 4;
-            align-items: center;
-            justify-content: center;
-            background: rgba(15, 23, 42, 0.08);
-            backdrop-filter: blur(1px);
-            transition: opacity 220ms ease, visibility 220ms ease;
-        }
-
-        .mobile-demo-overlay span {
-            background: rgba(15, 23, 42, 0.9);
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 999px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-            box-shadow: 0 12px 22px rgba(15, 23, 42, 0.25);
-        }
-
-        .mobile-phase-eyebrow {
-            font-size: 0.7rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #64748b;
-        }
-
-        .mobile-phase-title {
-            margin-top: 10px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #0f172a;
-        }
-
-        .mobile-phase-body {
-            margin-top: 10px;
-            color: #475569;
-            font-size: 0.98rem;
-            line-height: 1.6;
-        }
-
-        .mobile-phase-list {
-            margin-top: 14px;
-            display: grid;
-            gap: 10px;
-        }
-
-        .mobile-phase-list-item {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            color: #475569;
-            font-size: 0.95rem;
-        }
-
-        .mobile-phase-list-item::before {
-            content: "✓";
-            width: 24px;
-            height: 24px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            background: #dcfce7;
-            color: #15803d;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 6px 14px rgba(22, 163, 74, 0.12);
-        }
-
-        .mobile-offer-card {
-            padding: 14px;
-            border-radius: 18px;
-            border: 1px solid rgba(187, 247, 208, 0.85);
-            background:
-                radial-gradient(circle at 90% 14%, rgba(34, 197, 94, 0.12), transparent 46%),
-                linear-gradient(180deg, #ffffff 0%, #f8fff9 100%);
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-        }
-
-        .mobile-offer-title {
-            margin: 0;
-            font-size: 1.34rem;
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            color: #0f172a;
-        }
-
-        .mobile-offer-actions {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .mobile-offer-actions .btn {
-            justify-content: center;
-        }
-
-        @media (max-width: 640px) {
-            .mobile-offer-actions {
-                display: grid;
-            }
-
-            .mobile-offer-actions .btn {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .hero-copy {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .chip-row {
-                display: none;
-            }
-
-            .hero-pill-line {
-                display: none;
-            }
-
-            .hero-copy h1 {
-                font-size: 2.1rem;
-                line-height: 1.2;
-            }
-
-            .hero-copy .text-base {
-                display: none;
-            }
-
-            .hero-scroll-hint {
-                display: none;
-            }
-
-            .hero-includes-card {
-                display: none;
-            }
-
-            .experience-viewport {
-                min-height: auto;
-                padding-bottom: 12px;
-            }
-
-            .experience-stage {
-                position: static;
-                top: auto;
-                gap: 12px;
-                width: 100% !important;
-                transform: none !important;
-                align-items: flex-start;
-            }
-
-            .experience-left {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-
-            .experience-left > * {
-                grid-area: auto;
-            }
-
-            .experience-demo {
-                opacity: 1;
-                transform: none;
-                justify-self: center;
-                align-self: center;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                pointer-events: auto;
-            }
-
-            .experience-value-panel,
-            .stage-hint {
-                display: none !important;
-            }
-
-            .demo-frame-hero {
-                --hero-ratio: 9 / 16;
-                width: 92vw;
-                max-width: 420px;
-                min-height: 60vh;
-                border-radius: 34px;
-                box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.08);
-            }
-
-            .demo-frame-hero .frame-body {
-                padding: 6px;
-                background: #f8fafc;
-                border-radius: 28px;
-            }
-
-            .demo-frame-hero .demo-iframe {
-                border-radius: 22px;
-                pointer-events: none;
-            }
-
-            .demo-frame-hero.is-mobile-active .demo-iframe {
-                pointer-events: auto;
-            }
-
-            .mobile-demo-overlay {
-                display: flex;
-            }
-
-            .demo-frame-hero.is-mobile-active .mobile-demo-overlay {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-            }
-
-            .mobile-only {
-                display: block;
-            }
-
-            .mobile-section-label {
-                display: block;
-            }
-
-            .hero-download-cta {
-                display: none;
-            }
-        }
-
-        .mini-window {
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            border-radius: var(--radius-md);
-            background: #f8fafc;
-            padding: 12px;
-        }
-
-        .mini-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 11px;
-            font-weight: 600;
-            color: #475569;
-            margin-bottom: 10px;
-        }
-
-        .chip-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .hero-pill-line {
-            display: none;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: #166534;
-        }
-
-        .hero-pill-line span {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-pill-line span + span::before {
-            content: "\2022";
-            color: #22c55e;
-        }
-
-        @media (max-width: 1024px) {
-            main > section:first-of-type {
-                padding-top: 24px;
-            }
-
-            .hero-copy {
-                gap: 10px;
-            }
-
-            .chip-row {
-                display: none;
-            }
-
-            .hero-pill-line {
-                display: none;
-            }
-        }
-
-        .chip {
-            border: 1px solid rgba(187, 247, 208, 0.9);
-            border-radius: 999px;
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 600;
-            color: #166534;
-            background: #f0fdf4;
-        }
-
-        .chip.is-active {
-            background: #16a34a;
-            color: #fff;
-            border-color: #16a34a;
-        }
-
-        .hero-copy {
-            transition: opacity 0.2s ease;
-            will-change: transform, opacity;
-        }
-
-        .hero-grid {
-            align-items: start;
-        }
-
-        .hero-scroll-hint {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #64748b;
-            letter-spacing: 0.02em;
-        }
-
-        .hero-scroll-line {
-            width: 38px;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, rgba(34, 197, 94, 0.7), rgba(16, 185, 129, 0.1));
-        }
-
-        .hero-scroll-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: #22c55e;
-            box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
-        }
-
-        .hero-download-cta {
-            padding: 14px 30px;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
-            animation: hero-download-pulse 1.8s ease-out 0.45s 1;
-        }
-
-        .hero-download-cta:hover {
-            box-shadow: 0 24px 46px rgba(22, 163, 74, 0.4);
-        }
-
-        @keyframes hero-download-pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
-            }
-            50% {
-                transform: scale(1.03);
-                box-shadow: 0 26px 50px rgba(22, 163, 74, 0.42);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 20px 40px rgba(22, 163, 74, 0.34);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .hero-download-cta {
-                animation: none;
-            }
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 999px;
-            font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-            will-change: transform;
-        }
-
-        .btn-primary {
-            background: #16a34a;
-            color: #fff;
-            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            background: #15803d;
-            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(34, 197, 94, 0.55);
-            color: #166534;
-            background: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            border-color: #16a34a;
-            color: #14532d;
-            background: #f0fdf4;
-            transform: translateY(-1px);
-        }
-
-        .btn-sm {
-            padding: 8px 16px;
-            font-size: 0.85rem;
-        }
-
-        .card-hover {
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
-        }
-
-        .guide-launcher-main {
-            display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-            gap: 18px;
-            align-items: stretch;
-        }
-
-        .guide-launcher-copy {
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .guide-actions {
-            margin-top: auto;
-            padding-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .guide-mobile-note {
-            display: none;
-            margin-top: 10px;
-            color: #64748b;
-            font-size: 0.88rem;
-            line-height: 1.35;
-        }
-
-        .guide-video-card {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            min-height: 220px;
-            padding: 18px;
-            border-radius: 18px;
-            border: 1px solid rgba(15, 23, 42, 0.2);
-            color: #e2e8f0;
-            background: linear-gradient(140deg, #0f172a 0%, #1e293b 55%, #166534 100%);
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .guide-video-card::before {
-            content: "";
-            position: absolute;
-            inset: -40% -20% auto auto;
-            width: 220px;
-            height: 220px;
-            border-radius: 999px;
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.24), rgba(34, 197, 94, 0));
-            pointer-events: none;
-        }
-
-        .guide-video-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.22);
-        }
-
-        .guide-video-top {
-            position: relative;
-            z-index: 1;
-            font-size: 0.8rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: #cbd5e1;
-        }
-
-        .guide-video-title {
-            position: relative;
-            z-index: 1;
-            margin-top: 8px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 1.3;
-            max-width: 24ch;
-        }
-
-        .guide-video-meta {
-            position: relative;
-            z-index: 1;
-            margin-top: 6px;
-            font-size: 0.9rem;
-            color: #cbd5e1;
-        }
-
-        .guide-video-play {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            width: 46px;
-            height: 46px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.14);
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            color: #ffffff;
-        }
-
-        .guide-path {
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(226, 232, 240, 0.9);
-            display: grid;
-            gap: 10px;
-        }
-
-        .guide-path-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-radius: 14px;
-            border: 1px solid rgba(203, 213, 225, 0.95);
-            background: #ffffff;
-            padding: 11px 12px;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        .guide-path-row:hover {
-            border-color: rgba(34, 197, 94, 0.55);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
-            transform: translateY(-1px);
-        }
-
-        .guide-path-row.is-current {
-            border-color: rgba(34, 197, 94, 0.65);
-            background: #f8fff9;
-        }
-
-        .guide-step {
-            width: 32px;
-            height: 32px;
-            flex: 0 0 32px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #14532d;
-            background: rgba(34, 197, 94, 0.16);
-        }
-
-        .guide-row-copy {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
-
-        .guide-row-copy strong {
-            font-size: 0.96rem;
-            color: #0f172a;
-            line-height: 1.3;
-        }
-
-        .guide-row-copy small {
-            margin-top: 1px;
-            font-size: 0.8rem;
-            color: #64748b;
-            line-height: 1.3;
-        }
-
-        .guide-row-tag {
-            margin-left: auto;
-            font-size: 0.72rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: #166534;
-            border-radius: 999px;
-            border: 1px solid rgba(34, 197, 94, 0.4);
-            padding: 4px 8px;
-            background: #f0fdf4;
-            white-space: nowrap;
-        }
-
-        @media (max-width: 960px) {
-            .guide-launcher-main {
-                grid-template-columns: 1fr;
-            }
-
-            .guide-launcher-copy {
-                min-height: 0;
-            }
-
-            .guide-video-card {
-                min-height: 180px;
-            }
-
-            .guide-actions {
-                margin-top: 14px;
-                padding-top: 0;
-            }
-
-            .guide-mobile-note {
-                display: block;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .guide-path-row {
-                align-items: flex-start;
-            }
-
-            .guide-row-tag {
-                margin-left: 0;
-            }
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 16px;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            overflow: hidden;
-        }
-
-        .faq-trigger {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 18px 22px;
-            background: transparent;
-            border: none;
-            text-align: left;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #0f172a;
-            cursor: pointer;
-        }
-
-        .faq-icon {
-            width: 28px;
-            height: 28px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #f1f5f9;
-            color: #0f172a;
-            font-size: 0.9rem;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .faq-panel {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.28s ease, opacity 0.2s ease;
-        }
-
-        .faq-panel-content {
-            padding: 0 22px 18px;
-            color: #475569;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .faq-item.is-open .faq-panel {
-            opacity: 1;
-        }
-
-        .faq-item.is-open .faq-icon {
-            transform: rotate(180deg);
-            background: #dcfce7;
-            color: #15803d;
-        }
-
-        .faq-item.is-open .faq-trigger {
-            color: #0f172a;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                opacity: 1;
-                transform: none;
-            }
-        }
-    </style>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "Organization",
-                    "name": "POSPal",
-                    "url": "https://pospal.gr/",
-                    "logo": "https://pospal.gr/app_icon.ico"
-                },
-                {
-                    "@type": "WebSite",
-                    "name": "POSPal",
-                    "url": "https://pospal.gr/"
-                },
-                {
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Πώς λειτουργεί η παραγγελιοληψία (PDA) στο POSPal;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Η ομάδα παίρνει παραγγελίες από κινητό, tablet ή υπολογιστή και η ροή προς κουζίνα γίνεται άμεσα. Είναι φτιαγμένο για καθημερινή χρήση στην εστίαση."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Υπάρχει δωρεάν δοκιμή 30 ημερών χωρίς στοιχεία;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Ναι. Κατεβάζεις, εγκαθιστάς και ξεκινάς. 30 ημέρες δωρεάν, χωρίς κάρτα και χωρίς στοιχεία."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Το QR μενού περιλαμβάνεται δωρεάν και ενημερώνεται αυτόματα;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Ναι. Είναι μέσα στο πακέτο, δημιουργείται από τον κατάλογο, ενημερώνεται αυτόματα με κάθε αλλαγή και φιλοξενείται δωρεάν για πάντα."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "PDA για καφετέρια: καλύπτει τραπέζια και πακέτο;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Ναι. Έχει λειτουργία τραπεζιών και απλή λειτουργία, οπότε δουλεύει άνετα σε καφετέρια."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Παραγγελιοληψία για beach bar: είναι κατάλληλο;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Ναι. Λειτουργεί σε tablet/κινητό, στήνεται γρήγορα και η συνδρομή είναι μηνιαία, την ακυρώνεις όποτε θέλεις."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Σύστημα παραγγελιοληψίας: ποια είναι η τιμή;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "€18,90/μήνα, με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Λειτουργεί μαζί με το υπάρχον POS σε εστιατόριο ή καφετέρια;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Ναι, μπορεί να τρέχει παράλληλα με το υπάρχον σύστημα POS."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Σε ποιες συσκευές δουλεύει;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Σε tablet, κινητό και υπολογιστή μέσα στον χώρο σας."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Είναι φορολογικό POS;",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Όχι. Το POSPal είναι σύστημα παραγγελιοληψίας και ροής κουζίνας που δουλεύει δίπλα στο υπάρχον φορολογικό POS."
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f5f2">
+  <title>POSPal | Παραγγελιοληψία για εστίαση σε Windows</title>
+  <meta name="description" content="Το POSPal είναι πρόγραμμα παραγγελιοληψίας και ροής κουζίνας για Windows. 30 ημέρες δωρεάν, χωρίς κάρτα ή προσωπικά στοιχεία.">
+  <link rel="canonical" href="https://pospal.gr/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="POSPal">
+  <meta property="og:title" content="POSPal | Παραγγελιοληψία για εστίαση">
+  <meta property="og:description" content="Κατέβασε το POSPal για Windows και στήσε παραγγελιοληψία, ροή κουζίνας και QR μενού με οδηγούς.">
+  <meta property="og:url" content="https://pospal.gr/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/app_icon.ico">
+  <link rel="stylesheet" href="/prototype/homepage-v3/styles.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
 </head>
-<body class="min-h-screen">
-    <div class="relative z-10">
-        <header id="site-header" class="sticky top-0 z-50">
-            <div class="header-shell">
-                <div class="surface-soft banner-surface px-4 py-3 flex items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <img src="./app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-                        <span class="text-xl font-semibold tracking-tight">
-                            <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
-                        </span>
-                    </div>
-                    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                        <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="./support.html" class="hover:text-slate-900">Υποστήριξη</a>
-                        <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
-                    </nav>
-                    <div class="header-actions hidden lg:flex items-center gap-3">
-                        <span class="header-tagline">Κατέβασε και ξεκίνα δοκιμή.</span>
-                        <a href="./download/" class="btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
-                    </div>
-                    <a href="./download/" class="hidden sm:inline-flex lg:hidden btn btn-primary btn-sm header-download">Κατέβασε για Windows</a>
-                    <button id="mobile-menu" class="sm:hidden text-slate-600" aria-label="Menu">
-                        <span class="text-2xl">≡</span>
-                    </button>
-                    <div class="scroll-progress" id="scroll-progress"></div>
-                </div>
-                <div id="mobile-menu-dropdown" class="hidden md:hidden surface-soft mt-3 px-4 py-3">
-                    <div class="flex flex-col gap-3 text-sm font-medium text-slate-600">
-                        <a href="#pricing" class="hover:text-slate-900">Τιμές</a>
-                        <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="./support.html" class="hover:text-slate-900">Υποστήριξη</a>
-                        <a href="./download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
-                    </div>
-                </div>
+<body>
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="POSPal, αρχική">
+      <img src="/app_icon.ico" width="36" height="36" alt="">
+      <span>POS<b>Pal</b></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
+      <a href="/guides/">Οδηγοί</a>
+    </nav>
+    <a class="button button-primary header-cta" href="/download/">Κατέβασε για Windows</a>
+    <details class="mobile-nav">
+      <summary aria-label="Άνοιγμα μενού">Μενού</summary>
+      <nav aria-label="Πλοήγηση κινητού">
+        <a href="/guides/">Οδηγοί</a>
+        <a href="/download/">Κατέβασε για Windows</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="signal-label">Παραγγελιοληψία για εστίαση · Εγκατάσταση σε Windows</p>
+          <h1 id="hero-title">Από το τραπέζι μέχρι την κουζίνα. <span>Χωρίς διακοπές.</span></h1>
+          <p class="hero-lead">Το POSPal κρατά την παραγγελία ζωντανή: τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού σε ένα πρόγραμμα που κατεβάζεις και στήνεις με οδηγούς.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="button button-secondary" href="/guides/">Δες το στήσιμο</a>
+          </div>
+          <p class="trial-line"><strong>30 ημέρες δωρεάν</strong> · χωρίς κάρτα · χωρίς προσωπικά στοιχεία</p>
+        </div>
+
+        <div class="offer-panel" aria-label="Ειδική τιμή για τους πρώτους χρήστες">
+          <span>Ειδική τιμή για τους πρώτους χρήστες</span>
+          <strong>€18,90<small>/μήνα</small></strong>
+          <p>Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+        </div>
+      </div>
+
+      <div class="route-theatre" data-route-theatre>
+        <div class="shell route-shell">
+          <p class="sr-only" id="route-description">Η εικόνα δείχνει παραγγελία που καταχωρείται σε συσκευή σερβιτόρου, αποθηκεύεται προσωρινά όταν βγει από το Wi-Fi, συγχρονίζεται όταν επιστρέψει στο τοπικό δίκτυο και περνά στο POSPal και στην κουζίνα.</p>
+
+          <figure class="route-scene" aria-labelledby="route-title" aria-describedby="route-description">
+            <div class="route-scene-label">
+              <span>Η διαδρομή της παραγγελίας</span>
+              <strong id="route-title">Εκτός Wi‑Fi, η παραγγελία παραμένει στη συσκευή.</strong>
+              <small>Μόλις επιστρέψει, συγχρονίζεται με το POSPal και συνεχίζει στην κουζίνα.</small>
             </div>
+            <div class="route-controls" role="group" aria-label="Έλεγχος κίνησης διαδρομής">
+              <button class="motion-replay" type="button" data-motion-replay aria-pressed="false" aria-label="Παύση κίνησης διαδρομής">Παύση</button>
+            </div>
+            <div class="venue-depth" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wifi-radius" aria-hidden="true"></div>
+            <svg class="route-svg route-svg-desktop" viewBox="0 0 1180 460" aria-hidden="true" preserveAspectRatio="none">
+              <path class="route-shadow" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-line" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-progress" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-pulse" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+            </svg>
+            <svg class="route-svg route-svg-tablet" viewBox="0 0 1000 700" aria-hidden="true" preserveAspectRatio="none">
+              <path class="route-shadow" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-line" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-progress" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-pulse" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+            </svg>
+            <div class="order-token" aria-hidden="true">
+              <span>#1</span>
+            </div>
+            <div class="route-chip chip-offline" aria-hidden="true"><span>1</span> Εκτός Wi‑Fi</div>
+            <div class="route-chip chip-device" aria-hidden="true"><span>2</span> Αποθηκεύτηκε στη συσκευή</div>
+            <div class="route-chip chip-local" aria-hidden="true"><span>3</span> Επιστροφή και συγχρονισμός</div>
+            <div class="route-chip chip-ready" aria-hidden="true"><span>4</span> Στην κουζίνα</div>
+
+            <figure class="node node-phone">
+              <figcaption><strong>Σερβιτόρος</strong></figcaption>
+              <div class="offline-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4.7 9.1a11.5 11.5 0 0 1 12.8-1.7M7.6 12.2a7.2 7.2 0 0 1 6.6-1.4M10.5 15.3a3 3 0 0 1 2.9-.2M3 3l18 18"></path>
+                </svg>
+              </div>
+              <div class="phone-frame">
+                <img src="/docs/redesign/captures/app-route-mobile-order.png" width="430" height="900" alt="Πραγματική οθόνη POSPal σε κινητό με την παραγγελία 1 στο τραπέζι 1">
+                <div class="device-toast" aria-hidden="true"><span>✓</span> Αποθηκεύτηκε στη συσκευή</div>
+              </div>
+            </figure>
+
+            <div class="sync-badge" aria-hidden="true">
+              <span class="sync-icon">↻</span>
+            </div>
+
+            <figure class="node node-laptop">
+              <figcaption><strong>POSPal σε Windows</strong></figcaption>
+              <div class="laptop-frame">
+                <div class="laptop-screen">
+                  <img src="/docs/redesign/captures/app-route-desktop-order.png" width="1280" height="900" alt="Πραγματική οθόνη POSPal σε Windows με την παραγγελία 1 στο τραπέζι 1">
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+            </figure>
+
+            <figure class="node node-kitchen">
+              <figcaption><strong>Κουζίνα</strong></figcaption>
+              <div class="printer-frame" aria-hidden="true">
+                <div class="printer-top"></div>
+                <div class="ticket">
+                  <b>ΠΑΡΑΓΓΕΛΙΑ #1</b>
+                  <span>Τραπέζι 1</span>
+                  <span>6 καπουτσίνο</span>
+                  <mark>ΕΛΗΦΘΗ</mark>
+                </div>
+              </div>
+            </figure>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-band" aria-label="Τι περιλαμβάνεται">
+      <div class="shell proof-grid">
+        <p><span>Κινητό</span><strong>Παραγγελία στο χέρι</strong><small>Κινητό ή tablet στο τοπικό δίκτυο.</small></p>
+        <p><span>Εκτός εμβέλειας</span><strong>Δεν χάνεται η καταχώρηση</strong><small>Η συσκευή κρατά την παραγγελία προσωρινά.</small></p>
+        <p><span>Windows</span><strong>Έλεγχος στον υπολογιστή</strong><small>Η κύρια εφαρμογή τρέχει στο κατάστημα.</small></p>
+        <p><span>Έξοδος</span><strong>Κουζίνα και QR μαζί</strong><small>Ροή κουζίνας και QR μενού στην ίδια συνδρομή.</small></p>
+      </div>
+    </section>
+
+    <section class="fit-section" aria-labelledby="fit-title">
+      <div class="shell fit-grid">
+        <div class="fit-intro">
+          <p class="signal-label">Πριν το κατεβάσεις</p>
+          <h2 id="fit-title">Τι χρειάζεσαι για να ξεκινήσεις.</h2>
+          <p class="fit-lead">Η εφαρμογή εγκαθίσταται σε υπολογιστή Windows. Οι συσκευές της βάρδιας συνδέονται στο ίδιο τοπικό δίκτυο.</p>
+          <div class="fit-action">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <small>30 ημέρες δωρεάν, χωρίς κάρτα ή προσωπικά στοιχεία.</small>
+          </div>
+        </div>
+        <div class="fit-setup">
+          <ul class="fit-equipment" aria-label="Βασικό στήσιμο POSPal">
+            <li class="fit-node fit-host">
+              <span class="fit-status">Απαραίτητο</span>
+              <strong>Υπολογιστής Windows</strong>
+              <p>Εδώ εγκαθίσταται και τρέχει το POSPal.</p>
+            </li>
+            <li class="fit-node fit-device">
+              <span class="fit-status">Για ασύρματη παραγγελιοληψία</span>
+              <strong>Κινητό ή tablet</strong>
+              <p>Συνδέεται στο ίδιο τοπικό δίκτυο.</p>
+            </li>
+            <li class="fit-node fit-printer">
+              <span class="fit-status">Προαιρετικό</span>
+              <strong>Θερμικός εκτυπωτής</strong>
+              <p>Μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
+            </li>
+          </ul>
+          <aside class="fit-boundary" aria-label="Διευκρίνιση για το φορολογικό σύστημα">
+            <span class="fit-boundary-mark" aria-hidden="true">≠</span>
+            <div>
+              <strong>Δίπλα, όχι στη θέση του.</strong>
+              <p>Το POSPal λειτουργεί δίπλα στο υπάρχον φορολογικό σου σύστημα. Δεν είναι ταμειακή ή φορολογικό POS.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="qr-section" aria-labelledby="qr-title">
+      <div class="shell qr-grid">
+        <figure class="qr-proof">
+          <a class="qr-scan-card" href="https://menu.pospal.gr/s/pospal" aria-label="Άνοιξε το δημοσιευμένο δείγμα QR μενού">
+            <img src="/static/qr-menu-live-code.png" width="576" height="576" loading="lazy" decoding="async" alt="">
+            <span><strong>Σκάναρέ το</strong><small>Ανοίγει το ίδιο δείγμα.</small></span>
+          </a>
+          <div class="qr-phone">
+            <img src="/static/qr-menu-live-preview.png" width="430" height="932" loading="lazy" decoding="async" alt="Δημοσιευμένο δείγμα QR μενού POSPal με κατηγορίες, φίλτρα και προϊόντα">
+          </div>
+          <figcaption>Το QR ανοίγει αυτό το δημοσιευμένο δείγμα.</figcaption>
+        </figure>
+        <div class="qr-copy">
+          <p class="signal-label">Περιλαμβάνεται στη συνδρομή</p>
+          <h2 id="qr-title">Προϊόντα και QR μενού, από το ίδιο σημείο.</h2>
+          <p class="qr-lead">Διαχειρίζεσαι προϊόντα και εμφάνιση από το POSPal. Χωρίς ξεχωριστή χρέωση.</p>
+          <dl class="qr-ledger">
+            <div><dt>Περιλαμβάνεται</dt><dd>QR μενού</dd></div>
+            <div><dt>Προσαρμόζεται</dt><dd>Εμφάνιση καταστήματος</dd></div>
+            <div><dt>Έξτρα χρέωση</dt><dd>Καμία</dd></div>
+          </dl>
+          <div class="qr-actions">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="qr-sample-link" href="https://menu.pospal.gr/s/pospal">Άνοιξε το δείγμα μενού</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="onboarding-section" aria-labelledby="onboarding-title">
+      <div class="shell onboarding-grid">
+        <div class="onboarding-copy">
+          <p class="signal-label">Από τον εξοπλισμό στην πρώτη βάρδια</p>
+          <h2 id="onboarding-title">Το στήσιμο, σε καθαρή σειρά.</h2>
+          <p>Ξεκινάς από τον εξοπλισμό και φτάνεις σε μία δοκιμαστική παραγγελία πριν από την πρώτη βάρδια.</p>
+          <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+        </div>
+        <div class="onboarding-runway">
+          <ol>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">1</span>
+              <div>
+                <small>Πριν κατεβάσεις</small>
+                <h3>Έλεγξε τον εξοπλισμό</h3>
+                <p>Windows, τοπικό δίκτυο και προαιρετικός εκτυπωτής.</p>
+                <a href="/guides/">Άνοιξε τον οδηγό εξοπλισμού <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">2</span>
+              <div>
+                <small>Στον υπολογιστή</small>
+                <h3>Εγκατέστησε το POSPal</h3>
+                <p>Κατέβασε, άνοιξε και έλεγξε τη σύνδεση.</p>
+                <a href="/guides/">Άνοιξε τον οδηγό εγκατάστασης <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">3</span>
+              <div>
+                <small>Μέσα στο POSPal</small>
+                <h3>Πέρασε το πρώτο μενού</h3>
+                <p>Πρόσθεσε προϊόντα και έλεγξε το QR μενού.</p>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">4</span>
+              <div>
+                <small>Πριν από την πρώτη βάρδια</small>
+                <h3>Κάνε μία δοκιμαστική παραγγελία</h3>
+                <p>Έλεγξε κινητό, Windows και κουζίνα μαζί.</p>
+              </div>
+            </li>
+          </ol>
+          <aside class="onboarding-support" aria-label="Βοήθεια για το στήσιμο">
+            <strong>Αν κολλήσεις, στείλε μήνυμα.</strong>
+            <p><a href="mailto:support@pospal.gr">support@pospal.gr</a> · Η βοήθεια γίνεται από απόσταση, χωρίς επιτόπια εγκατάσταση.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" aria-labelledby="pricing-title">
+      <div class="shell pricing-wrap">
+        <header class="pricing-heading">
+          <div>
+            <p class="signal-label">Μία καθαρή τιμή</p>
+            <h2 id="pricing-title">Μία συνδρομή. Όλη η ροή.</h2>
+          </div>
+          <p>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού στην ίδια συνδρομή.</p>
         </header>
+        <div class="pricing-offer">
+          <div class="pricing-price-block">
+            <span>Τιμή πρώτων χρηστών</span>
+            <p class="pricing-price"><strong>€18,90</strong><small>/μήνα</small></p>
+            <p class="pricing-retention">Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+            <a class="button button-primary" href="/download/">Ξεκίνα 30 ημέρες δωρεάν</a>
+            <small class="pricing-trial">Χωρίς κάρτα και χωρίς προσωπικά στοιχεία.</small>
+          </div>
+          <div class="pricing-terms">
+            <dl>
+              <div><dt>Περιλαμβάνονται</dt><dd>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού</dd></div>
+              <div><dt>Χρέωση εγκατάστασης</dt><dd>Καμία</dd></div>
+              <div><dt>Χρέωση συντήρησης</dt><dd>Καμία</dd></div>
+              <div><dt>Ακύρωση</dt><dd>Σταματά την επόμενη ανανέωση</dd></div>
+            </dl>
+            <p class="pricing-cancellation">Μετά την ακύρωση, η πρόσβαση συνεχίζεται μέχρι το τέλος της ήδη πληρωμένης περιόδου.</p>
+            <p class="pricing-boundary">Το POSPal δεν είναι ταμειακή ή φορολογικό POS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <main class="pb-20">
-            <section class="pt-12 lg:pt-20 pb-16">
-                <div class="hero-container">
-                    <div class="hero-grid grid lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-10 items-start">
-                        <div class="hero-copy space-y-6 reveal max-w-xl lg:max-w-none">
-                            <div class="chip-row">
-                                <span class="chip">Συνεχίζει εκτός εμβέλειας</span>
-                                <span class="chip">Γρήγορη ροή</span>
-                                <span class="chip">Συνδρομή χωρίς δέσμευση</span>
-                            </div>
-                            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-slate-900 leading-tight">
-                                Το σύστημα παραγγελιοληψίας που θέλει η ομάδα σου.
-                            </h1>
-                            <div class="hero-pill-line">
-                                <span>Εκτός Wi-Fi</span>
-                                <span>Γρήγορη ροή</span>
-                                <span>Χωρίς δέσμευση</span>
-                            </div>
-                            <div class="text-base sm:text-lg text-slate-600 space-y-2">
-                                <p>Λήψη παραγγελιών εκτός Wi-Fi. Ενσωματωμένο QR μενού που δημιουργείται από τον κατάλογό σου, ενημερώνεται αυτόματα και φιλοξενείται δωρεάν για πάντα.</p>
-                            </div>
-                            <div class="mobile-offer-card">
-                                <h2 class="mobile-offer-title">€18,90/μήνα • 30 ημέρες δωρεάν</h2>
-                                <div class="mobile-offer-actions">
-                                    <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                                    <a href="./guides/index.html?lesson=0" class="btn btn-secondary">Άνοιξε Οδηγούς</a>
-                                </div>
-                            </div>
-                            <div class="hero-includes-card hero-includes-inline">
-                                <h2 class="hero-includes-title">Τι περιλαμβάνει το πακέτο</h2>
-                                <div class="hero-includes-list">
-                                    <div class="hero-includes-item">Παραγγελιοληψία εκτός Wi-Fi</div>
-                                    <div class="hero-includes-item">Λειτουργία τραπεζιών</div>
-                                    <div class="hero-includes-item">QR μενού με αυτόματη ενημέρωση</div>
-                                    <div class="hero-includes-item">Απλή λειτουργία</div>
-                                </div>
-                            </div>
-                            <div class="hero-scroll-hint">
-                                <span class="hero-scroll-line"></span>
-                                <span class="hero-scroll-dot"></span>
-                                <span>&#922;&#973;&#955;&#951;&#963;&#949; &#947;&#953;&#945; &#963;&#965;&#957;&#941;&#967;&#949;&#953;&#945;</span>
-                            </div>
-                        </div>
-                        <div class="reveal">
-                            <div class="experience-viewport" id="experience-viewport">
-                                <div class="experience-stage" id="experience-stage">
-                                    <div class="experience-left">
-                                        <div class="mobile-section-label mobile-only">Παραγγελιοληψία</div>
-                                        <div class="experience-value-panel surface-soft" id="experience-value-panel">
-                                            <h3 class="value-panel-title">€18,90/μήνα • 30 ημέρες δωρεάν</h3>
-                                            <ul class="value-panel-list">
-                                                <li>Χωρίς κάρτα και χωρίς λογαριασμό.</li>
-                                                <li>Παραγγελιοληψία, τραπέζια και QR μενού στο ίδιο πακέτο.</li>
-                                            </ul>
-                                            <div class="value-panel-actions">
-                                                <a class="btn value-panel-link" href="./guides/index.html?lesson=0">Άνοιξε Οδηγούς</a>
-                                            </div>
-                                        </div>
-                                        <div class="experience-demo">
-                                            <div class="demo-frame demo-frame-hero" data-mode="desktop">
-                                            <div class="stage-hint" id="stage-hint">
-                                                <span>Δοκίμασέ το</span>
-                                                <span class="stage-hint-hand" aria-hidden="true">☝</span>
-                                            </div>
-                                            <div class="mobile-demo-overlay" id="mobile-demo-overlay">
-                                                <span>Δοκίμασέ με</span>
-                                            </div>
-                                              <div class="frame-body" id="hero-frame">
-                                                  <div class="demo-placeholder" id="demo-placeholder">
-                                                      Φόρτωση demo...
-                                                  </div>
-                                                  <div class="demo-scale" id="hero-scale">
-                                                      <iframe
-                                                          id="hero-demo"
-                                                          class="demo-iframe is-interactive"
-                                                          title="Demo POSPal"
-                                                          loading="lazy"
-                                                          data-src-mobile="./pospal-demo-coffee-mobile.html"
-                                                          data-src-desktop="./pospal-demo-coffee-desktop.html"
-                                                          data-src-qr="./qr-menu-demo.html"
-                                                      ></iframe>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="qr-live-section">
-                <div class="site-container">
-                    <div class="qr-live-card reveal">
-                        <div class="qr-live-grid">
-                            <div class="qr-live-preview-wrap">
-                                <div class="qr-live-preview-shell">
-                                    <div class="qr-live-preview-frame">
-                                        <iframe
-                                            title="QR μενού POSPal"
-                                            loading="lazy"
-                                            src="./qr-menu-demo.html?slug=pospal"
-                                        ></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="qr-live-copy">
-                                <h2 class="qr-live-title">Live QR menu για τον χώρο σου</h2>
-                                <div class="qr-live-actions">
-                                    <a href="https://menu.pospal.gr/s/pospal" class="btn qr-live-btn-primary">Δες το QR μενού</a>
-                                    <a href="./download/" class="btn qr-live-btn-secondary">Κατέβασε για Windows</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="shell faq-grid">
+        <div>
+          <p class="signal-label">Σύντομες απαντήσεις</p>
+          <h2 id="faq-title">Οι ερωτήσεις πριν το κατεβάσεις.</h2>
+          <p class="faq-intro">PDA, παραγγελιοληψία, εγκατάσταση, τιμή και φορολογικό σύστημα, χωρίς ασάφειες.</p>
+        </div>
+        <div>
+          <div class="faq-list">
+            <details open>
+              <summary>Τι είναι το PDA σερβιτόρου;</summary>
+              <p>Στην εστίαση, PDA λέγεται συνήθως η συσκευή που χρησιμοποιεί ο σερβιτόρος για να πάρει παραγγελία ασύρματα. Στο POSPal η παραγγελία μπαίνει από κινητό ή tablet και περνά στο POSPal στον υπολογιστή Windows.</p>
+            </details>
+            <details>
+              <summary>Πώς λειτουργεί η παραγγελιοληψία στο POSPal;</summary>
+              <p>Περνάς παραγγελία από τραπέζι ή από απλή λειτουργία, τη βλέπεις στη ροή κουζίνας και κρατάς τον ίδιο κατάλογο για το QR μενού πελάτη.</p>
+            </details>
+            <details class="faq-boundary">
+              <summary>Είναι το POSPal ταμειακή ή φορολογικό POS;</summary>
+              <p>Όχι. Το POSPal οργανώνει παραγγελιοληψία και ροή κουζίνας. Δεν εκδίδει αποδείξεις και δεν αντικαθιστά την ταμειακή ή το φορολογικό POS του καταστήματος.</p>
+            </details>
+            <details>
+              <summary>Τι χρειάζομαι για να ξεκινήσω;</summary>
+              <p>Χρειάζεσαι έναν υπολογιστή Windows για το POSPal, τοπικό δίκτυο στο κατάστημα και κινητό ή tablet για την ομάδα. Εκτυπωτής χρειάζεται μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
+            </details>
+            <details>
+              <summary>Χρειάζομαι τεχνικό για εγκατάσταση;</summary>
+              <p>Το μοντέλο είναι αυτοεγκατάσταση με οδηγούς. Κατεβάζεις, ανοίγεις το POSPal και ελέγχεις τη σύνδεση βήμα βήμα. Για βοήθεια υπάρχει υποστήριξη, χωρίς υπόσχεση επιτόπιας εγκατάστασης.</p>
+            </details>
+            <details>
+              <summary>Πόσο κοστίζει και τι περιλαμβάνει;</summary>
+              <p>Η τιμή πρώτων χρηστών είναι €18,90 τον μήνα μετά από 30 ημέρες δωρεάν δοκιμή. Περιλαμβάνει τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού.</p>
+            </details>
+            <details>
+              <summary>Τι γίνεται όταν ακυρώσω;</summary>
+              <p>Σταματά η επόμενη ανανέωση. Η πρόσβαση συνεχίζεται μέχρι το τέλος της ήδη πληρωμένης περιόδου.</p>
+            </details>
+          </div>
+          <div class="faq-actions">
+            <p>Θέλεις να το δοκιμάσεις στο δικό σου κατάστημα;</p>
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="guide-link" href="/guides/">Δες τους οδηγούς εγκατάστασης</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="site-container">
-            <section id="pricing" class="py-12">
-                <div class="surface-soft p-8 text-center reveal">
-                    <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">&#932;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#949;&#954;&#960;&#955;&#942;&#958;&#949;&#953;&#962;</h2>
-                    <p class="text-slate-600 mt-3">&#8364;18,90/&#956;&#942;&#957;&#945;. 30 &#951;&#956;&#941;&#961;&#949;&#962; &#948;&#959;&#954;&#953;&#956;&#942; &#967;&#969;&#961;&#943;&#962; &#954;&#940;&#961;&#964;&#945;.</p>
-                    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="./download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                    </div>
-                    <p class="mt-3 text-xs text-slate-500">&#913;&#954;&#973;&#961;&#969;&#963;&#951; &#972;&#960;&#959;&#964;&#949; &#952;&#941;&#955;&#949;&#953;&#962;.</p>
-                    <p class="mt-1 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικό POS. Δουλεύει δίπλα στο υπάρχον σύστημα.</p>
-                </div>
-            </section>
-
-            <section class="py-12">
-                <div class="surface-soft p-6 sm:p-8 reveal">
-                    <div class="guide-launcher-main">
-                        <div class="guide-launcher-copy">
-                            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Οδηγοί POSPal</p>
-                            <h2 class="mt-2 text-2xl sm:text-3xl font-display font-semibold text-slate-900">Ξεκίνα με τους οδηγούς POSPal</h2>
-                            <div class="guide-actions">
-                                <a href="./guides/index.html?lesson=0" class="btn btn-primary">Δες Οδηγό 0</a>
-                                <a href="./download/" class="btn btn-secondary">Λήψη για Windows</a>
-                            </div>
-                            <p class="guide-mobile-note">Η λήψη γίνεται σε υπολογιστή Windows.</p>
-                        </div>
-                        <a class="guide-video-card" href="./guides/index.html?lesson=0" aria-label="Άνοιγμα βίντεο Οδηγού 0">
-                            <span class="guide-video-play" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false" aria-hidden="true">
-                                    <path d="M8 6.5v11l9-5.5-9-5.5z"></path>
-                                </svg>
-                            </span>
-                            <span class="guide-video-top">Οδηγός 0 • Βίντεο</span>
-                            <span class="guide-video-title">Στήσιμο εκτυπωτή από το μηδέν</span>
-                            <span class="guide-video-meta">8-12 λεπτά • πρακτική εγκατάσταση</span>
-                        </a>
-                    </div>
-                    <div class="guide-path" aria-label="Προτεινόμενη σειρά οδηγών">
-                        <a class="guide-path-row is-current" href="./guides/index.html?lesson=0">
-                            <span class="guide-step">0</span>
-                            <span class="guide-row-copy">
-                                <strong>Στήσιμο εκτυπωτή</strong>
-                                <small>Απαραίτητο πριν από την εγκατάσταση</small>
-                            </span>
-                            <span class="guide-row-tag">Τώρα</span>
-                        </a>
-                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
-                            <span class="guide-step">1</span>
-                            <span class="guide-row-copy">
-                                <strong>Εγκατάσταση POSPal</strong>
-                                <small>Συνέχεια αμέσως μετά τον Οδηγό 0</small>
-                            </span>
-                        </a>
-                        <a class="guide-path-row" href="./guides/index.html?lesson=0">
-                            <span class="guide-step">2</span>
-                            <span class="guide-row-copy">
-                                <strong>Πρώτο μενού και QR</strong>
-                                <small>Γρήγορη ενεργοποίηση για την πρώτη βάρδια</small>
-                            </span>
-                        </a>
-                    </div>
-                    <p class="mt-6 text-sm text-slate-500">
-                        Οδηγοί απόφασης:
-                        <a href="/dwrean-dokimi-30-imeron/" class="font-medium text-slate-700 hover:text-slate-900">Δωρεάν δοκιμή</a>
-                        ·
-                        <a href="/pda-gia-kafeteria/" class="font-medium text-slate-700 hover:text-slate-900">PDA για καφετέρια</a>
-                        ·
-                        <a href="/times-systimatos-parageliolipsias/" class="font-medium text-slate-700 hover:text-slate-900">Τιμές συστήματος</a>
-                        ·
-                        <a href="/qr-menu-estiasis/" class="font-medium text-slate-700 hover:text-slate-900">QR menu</a>
-                        ·
-                        <a href="/asyrmati-parageliolipsia-estiasi/" class="font-medium text-slate-700 hover:text-slate-900">Ασύρματη παραγγελιοληψία</a>
-                    </p>
-                </div>
-            </section>
-
-            <section class="py-4">
-                <div class="surface-soft p-6 sm:p-7 reveal">
-                    <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Υποστήριξη POSPal</p>
-                    <h2 class="mt-2 text-xl sm:text-2xl font-display font-semibold text-slate-900">Χρειάζεσαι βοήθεια στο στήσιμο;</h2>
-                    <p class="mt-3 text-slate-600">Αν κολλήσεις, μας στέλνεις email και απαντάμε. Βοήθεια στο στήσιμο, στην πρώτη χρήση και σε πραγματικά προβλήματα.</p>
-                    <p class="mt-3 text-lg sm:text-xl text-slate-700">Email: <a href="mailto:support@pospal.gr" class="font-semibold text-brand-700 hover:underline">support@pospal.gr</a></p>
-                    <a href="./support.html" class="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900 hover:underline">Δες πώς δουλεύει η υποστήριξη</a>
-                </div>
-            </section>
-
-            <section class="py-12">
-                <div class="faq-list reveal">
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-1">
-                            <span>Πώς λειτουργεί η παραγγελιοληψία (PDA) στο POSPal;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-1">
-                            <div class="faq-panel-content">
-                                <p>Η ομάδα παίρνει παραγγελίες από κινητό, tablet ή υπολογιστή και η ροή προς κουζίνα γίνεται άμεσα. Είναι φτιαγμένο για καθημερινή χρήση στην εστίαση.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-2">
-                            <span>Υπάρχει δωρεάν δοκιμή 30 ημερών χωρίς στοιχεία;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-2">
-                            <div class="faq-panel-content">
-                                <p>Ναι. Κατεβάζεις, εγκαθιστάς και ξεκινάς. 30 ημέρες δωρεάν, χωρίς κάρτα και χωρίς στοιχεία.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-3">
-                            <span>Το QR μενού περιλαμβάνεται δωρεάν και ενημερώνεται αυτόματα;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-3">
-                            <div class="faq-panel-content">
-                                <p>Ναι. Είναι μέσα στο πακέτο και ενημερώνεται αυτόματα με κάθε αλλαγή στον κατάλογο.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-4">
-                            <span>PDA για καφετέρια: καλύπτει τραπέζια και πακέτο;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-4">
-                            <div class="faq-panel-content">
-                                <p>Ναι. Έχει λειτουργία τραπεζιών και απλή λειτουργία, οπότε δουλεύει άνετα σε καφετέρια.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-5">
-                            <span>Παραγγελιοληψία για beach bar: είναι κατάλληλο;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-5">
-                            <div class="faq-panel-content">
-                                <p>Ναι. Λειτουργεί σε tablet/κινητό, στήνεται γρήγορα και η συνδρομή είναι μηνιαία, την ακυρώνεις όποτε θέλεις.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-6">
-                            <span>Σύστημα παραγγελιοληψίας: ποια είναι η τιμή;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-6">
-                            <div class="faq-panel-content">
-                                <p>€18,90/μήνα, με 30 ημέρες δωρεάν δοκιμή χωρίς κάρτα.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-7">
-                            <span>Λειτουργεί μαζί με το υπάρχον POS σε εστιατόριο ή καφετέρια;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-7">
-                            <div class="faq-panel-content">
-                                <p>Ναι, μπορεί να τρέχει παράλληλα με το υπάρχον σύστημα POS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-8">
-                            <span>Σε ποιες συσκευές δουλεύει;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-8">
-                            <div class="faq-panel-content">
-                                <p>Σε tablet, κινητό και υπολογιστή μέσα στον χώρο σας.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item surface-soft" data-faq-item>
-                        <button class="faq-trigger" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-9">
-                            <span>Είναι φορολογικό POS;</span>
-                            <span class="faq-icon" aria-hidden="true">&#9662;</span>
-                        </button>
-                        <div class="faq-panel" data-faq-panel id="faq-panel-9">
-                            <div class="faq-panel-content">
-                                <p>Όχι. Το POSPal είναι σύστημα παραγγελιοληψίας και ροής κουζίνας που δουλεύει δίπλα στο υπάρχον φορολογικό POS.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="shell final-grid">
+        <div class="final-copy">
+          <p class="signal-label">Το επόμενο βήμα</p>
+          <h2 id="final-title">Κατέβασε το POSPal και δοκίμασέ το στη δική σου ροή.</h2>
+          <p class="final-lead">Ξεκινάς από τον υπολογιστή Windows του καταστήματος. Βάζεις τον κατάλογο, ελέγχεις τη σύνδεση και κάνεις δοκιμή πριν το βάλεις σε βάρδια.</p>
+        </div>
+        <div class="final-panel" aria-label="Σύνοψη λήψης POSPal">
+          <dl class="final-proof-list">
+            <div>
+              <dt>Δοκιμή</dt>
+              <dd>30 ημέρες δωρεάν</dd>
             </div>
-        </main>
-
-        <footer class="pb-12">
-            <div class="site-container">
-                <div class="surface-soft px-6 py-6 text-sm text-slate-600">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <img src="./app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
-                            <span>POSPal</span>
-                        </div>
-                         <div class="flex flex-wrap gap-4">
-                             <a href="./times.html" class="hover:text-slate-900">Τιμές</a>
-                             <a href="./guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
-                             <a href="/privacy.html" class="hover:text-slate-900">Πολιτική απορρήτου</a>
-                             <a href="./support.html" class="hover:text-slate-900">Υποστήριξη</a>
-                         </div>
-                    </div>
-                    <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικό POS. Δουλεύει δίπλα στο υπάρχον σύστημα και καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
-                </div>
+            <div>
+              <dt>Έναρξη</dt>
+              <dd>Χωρίς κάρτα ή προσωπικά στοιχεία</dd>
             </div>
-        </footer>
+            <div>
+              <dt>Εγκατάσταση</dt>
+              <dd>Σε υπολογιστή Windows, με οδηγούς</dd>
+            </div>
+          </dl>
+          <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+          <p class="final-next-step">Μετά το κατέβασμα, άνοιξε τον <a href="/guides/">οδηγό εγκατάστασης</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <strong>POSPal</strong>
+        <p>Παραγγελιοληψία και ροή κουζίνας για Windows.</p>
+      </div>
+      <nav class="footer-nav footer-sitemap" aria-label="Χάρτης σελίδων">
+        <div>
+          <span>Βασικά</span>
+          <a href="/">Αρχική</a>
+          <a href="/download/">Κατέβασε για Windows</a>
+          <a href="/guides/">Οδηγοί</a>
+          <a href="/times.html">Τιμές</a>
+        </div>
+        <div>
+          <span>PDA</span>
+          <a href="/pda-ti-einai.html">PDA τι είναι</a>
+          <a href="/pda-pos-leitourgei.html">PDA πώς λειτουργεί</a>
+          <a href="/pda-gia-servitoro/">PDA για σερβιτόρο</a>
+          <a href="/pda-gia-kafeteries.html">PDA για καφετέριες</a>
+        </div>
+        <div>
+          <span>Παραγγελιοληψία</span>
+          <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
+          <a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a>
+          <a href="/paraggelio-lipsia-gia-beach-bar.html">Παραγγελιοληψία για beach bar</a>
+        </div>
+      </nav>
+      <address class="footer-contact">
+        <span>Υποστήριξη</span>
+        <a href="mailto:support@pospal.gr">support@pospal.gr</a>
+      </address>
+      <p class="footer-boundary">Δεν είναι ταμειακή ή φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα.</p>
     </div>
+  </footer>
 
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu');
-        const mobileMenu = document.getElementById('mobile-menu-dropdown');
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        const siteHeader = document.getElementById('site-header');
-        const scrollProgress = document.getElementById('scroll-progress');
-        const updateHeader = () => {
-            if (!siteHeader) return;
-            const scrollY = window.scrollY || 0;
-            const compactStart = 8;
-            const compactRange = 480;
-            const compactProgress = Math.min(Math.max((scrollY - compactStart) / compactRange, 0), 1);
-            siteHeader.style.setProperty('--header-compact', compactProgress.toFixed(3));
-            const headerRect = siteHeader.getBoundingClientRect();
-            document.documentElement.style.setProperty('--header-offset', `${headerRect.height}px`);
-            if (scrollProgress) {
-                const doc = document.documentElement;
-                const maxScroll = doc.scrollHeight - window.innerHeight;
-                const progress = maxScroll > 0 ? Math.min(scrollY / maxScroll, 1) : 0;
-                scrollProgress.style.width = `${progress * 100}%`;
-            }
-        };
-        updateHeader();
-        window.addEventListener('scroll', updateHeader, { passive: true });
-        window.addEventListener('resize', updateHeader);
-
-        const heroCopy = document.querySelector('.hero-copy');
-        const heroScrollHint = document.querySelector('.hero-scroll-hint');
-        const experienceViewport = document.getElementById('experience-viewport');
-        const experienceStage = document.getElementById('experience-stage');
-        const experienceValuePanel = document.getElementById('experience-value-panel');
-        const experienceDemo = document.querySelector('.experience-demo');
-        const heroDemoFrame = document.querySelector('.demo-frame-hero');
-        const stageHint = document.getElementById('stage-hint');
-        const qrLiveSection = document.querySelector('.qr-live-section');
-        const applyExperienceMobileLayout = () => {
-            if (!experienceStage) return;
-            experienceStage.style.removeProperty('min-height');
-            experienceStage.style.removeProperty('--experience-progress');
-            if (experienceViewport) {
-                experienceViewport.style.removeProperty('--experience-progress');
-            }
-            if (experienceValuePanel) {
-                experienceValuePanel.style.removeProperty('opacity');
-                experienceValuePanel.style.removeProperty('transform');
-                experienceValuePanel.style.removeProperty('pointer-events');
-            }
-            if (experienceDemo) {
-                experienceDemo.style.removeProperty('opacity');
-                experienceDemo.style.removeProperty('transform');
-                experienceDemo.style.removeProperty('pointer-events');
-            }
-            if (stageHint) {
-                stageHint.style.removeProperty('opacity');
-                stageHint.style.removeProperty('transform');
-            }
-            if (heroCopy) {
-                heroCopy.style.removeProperty('opacity');
-                heroCopy.style.removeProperty('transform');
-            }
-            if (heroScrollHint) {
-                heroScrollHint.style.removeProperty('opacity');
-                heroScrollHint.style.removeProperty('transform');
-                heroScrollHint.style.removeProperty('pointer-events');
-            }
-            if (qrLiveSection) {
-                qrLiveSection.style.removeProperty('opacity');
-                qrLiveSection.style.removeProperty('transform');
-                qrLiveSection.style.removeProperty('pointer-events');
-            }
-        };
-
-        let experienceTarget = 0;
-        let experienceCurrent = 0;
-        let experienceRaf = null;
-        let experienceFrameTime = 0;
-        let experienceDemoCenterOffset = 0;
-        let experienceDemoScaleMax = 1;
-        const HERO_DEMO_RATIO = 16 / 10;
-        const SCROLL_DEADZONE = 0.05;
-        const SCROLL_TAIL = 0.1;
-        const STAGE_OUTRO_START = 0.84;
-        const STAGE_OUTRO_SPAN = 0.16;
-
-        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-        const ease = (t) => t * t * (3 - 2 * t);
-        const cueWindow = (value, start, peak, end) => {
-            if (value <= start || value >= end) return 0;
-            if (value < peak) return (value - start) / (peak - start);
-            return (end - value) / (end - peak);
-        };
-
-        const updateExperienceStageHeight = (progress = experienceCurrent) => {
-            if (!experienceStage) return;
-            const panelHeight = experienceValuePanel ? experienceValuePanel.offsetHeight : 0;
-            const demoHeight = heroDemoFrame ? heroDemoFrame.offsetHeight : 0;
-            if (panelHeight <= 0 && demoHeight <= 0) return;
-
-            const stageReveal = ease(clamp((progress - 0.015) / 0.9, 0, 1));
-            const demoReveal = ease(clamp((stageReveal - 0.14) / 0.76, 0, 1));
-            const demoCenterProgress = ease(clamp((demoReveal - 0.12) / 0.72, 0, 1));
-            const outroProgress = ease(clamp((progress - STAGE_OUTRO_START) / STAGE_OUTRO_SPAN, 0, 1));
-            const demoGrow = 1 + (experienceDemoScaleMax - 1) * demoCenterProgress;
-            const demoBaseScale = 0.975 + 0.025 * demoReveal;
-            const demoScale = Math.max(demoBaseScale * demoGrow * (1 - 0.08 * outroProgress), 1);
-            const targetDemoHeight = demoHeight * demoScale;
-            const expandedHeight = Math.max(panelHeight, targetDemoHeight) + 32;
-            const requiredHeight = panelHeight + (expandedHeight - panelHeight) * demoReveal;
-            if (requiredHeight > 0) {
-                experienceStage.style.minHeight = `${Math.ceil(requiredHeight)}px`;
-            }
-        };
-
-        const updateExperienceCenterOffset = () => {
-            experienceDemoCenterOffset = 0;
-            if (!experienceViewport) return;
-            if (window.matchMedia('(max-width: 1024px)').matches) return;
-            const viewportRect = experienceViewport.getBoundingClientRect();
-            if (viewportRect.width <= 0) return;
-            const sourceCenter = viewportRect.left + viewportRect.width / 2;
-            const targetCenter = window.innerWidth / 2;
-            experienceDemoCenterOffset = targetCenter - sourceCenter;
-        };
-
-        const updateExperienceDemoScaleMax = () => {
-            experienceDemoScaleMax = 1;
-            if (!experienceViewport) return;
-            if (window.matchMedia('(max-width: 1024px)').matches) return;
-            const viewportRect = experienceViewport.getBoundingClientRect();
-            if (viewportRect.width <= 0) return;
-            const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-offset')) || 120;
-            const safeHeight = Math.max(window.innerHeight - headerOffset - 28, 360);
-            const maxWidthByHeight = safeHeight * HERO_DEMO_RATIO;
-            const maxWidthByScreen = Math.max(window.innerWidth - 48, viewportRect.width);
-            const targetWidth = Math.max(viewportRect.width, Math.min(maxWidthByHeight, maxWidthByScreen, 1680));
-            experienceDemoScaleMax = targetWidth / viewportRect.width;
-        };
-
-        const applyExperienceProgress = (progress) => {
-            if (!experienceStage || !experienceViewport) return;
-            experienceStage.style.setProperty('--experience-progress', progress.toFixed(3));
-            experienceViewport.style.setProperty('--experience-progress', progress.toFixed(3));
-
-            const stageReveal = ease(clamp((progress - 0.015) / 0.9, 0, 1));
-            const panelFade = ease(clamp(stageReveal / 0.62, 0, 1));
-            const panelVisibility = 1 - panelFade;
-            const demoReveal = ease(clamp((stageReveal - 0.14) / 0.76, 0, 1));
-            const demoCenterProgress = ease(clamp((demoReveal - 0.12) / 0.72, 0, 1));
-            const outroProgress = ease(clamp((progress - STAGE_OUTRO_START) / STAGE_OUTRO_SPAN, 0, 1));
-            const demoShiftX = experienceDemoCenterOffset * demoCenterProgress;
-            const demoGrow = 1 + (experienceDemoScaleMax - 1) * demoCenterProgress;
-            const demoBaseScale = 0.975 + 0.025 * demoReveal;
-            const demoScale = demoBaseScale * demoGrow * (1 - 0.08 * outroProgress);
-            const demoVisibility = demoReveal * (1 - 0.78 * outroProgress);
-
-            if (experienceValuePanel) {
-                experienceValuePanel.style.opacity = panelVisibility.toFixed(3);
-                experienceValuePanel.style.transform = `translateY(${(1 - panelVisibility) * -18}px) scale(${0.975 + 0.025 * panelVisibility})`;
-                experienceValuePanel.style.pointerEvents = panelVisibility > 0.35 ? 'auto' : 'none';
-            }
-
-            if (experienceDemo) {
-                experienceDemo.style.opacity = demoVisibility.toFixed(3);
-                experienceDemo.style.transform = `translate(${demoShiftX}px, ${(1 - demoReveal) * 16 - 18 * outroProgress}px) scale(${demoScale})`;
-                experienceDemo.style.pointerEvents = (demoReveal > 0.45 && outroProgress < 0.45) ? 'auto' : 'none';
-            }
-
-            if (heroCopy) {
-                heroCopy.style.opacity = (1 - stageReveal * 0.45).toFixed(3);
-                heroCopy.style.transform = `translateY(${-10 * stageReveal}px)`;
-            }
-
-            if (heroScrollHint) {
-                const hintFade = ease(clamp((stageReveal - 0.03) / 0.34, 0, 1));
-                heroScrollHint.style.opacity = (1 - hintFade).toFixed(3);
-                heroScrollHint.style.transform = `translateY(${8 * hintFade}px)`;
-                heroScrollHint.style.pointerEvents = hintFade < 0.95 ? 'auto' : 'none';
-            }
-
-            if (stageHint) {
-                const cueStrength = cueWindow(demoReveal, 0.14, 0.3, 0.52);
-                stageHint.style.opacity = cueStrength.toFixed(3);
-                stageHint.style.transform = `rotate(-4deg) translateY(${(1 - cueStrength) * -4}px)`;
-            }
-
-            if (qrLiveSection) {
-                const qrIntro = ease(clamp((progress - 0.82) / 0.18, 0, 1));
-                const qrOpacity = 0.32 + 0.68 * qrIntro;
-                qrLiveSection.style.opacity = qrOpacity.toFixed(3);
-                qrLiveSection.style.transform = `translateY(${(1 - qrIntro) * 28}px)`;
-                qrLiveSection.style.pointerEvents = qrIntro > 0.22 ? 'auto' : 'none';
-            }
-
-            updateExperienceStageHeight(progress);
-        };
-
-        const tickExperience = (timestamp) => {
-            const delta = experienceTarget - experienceCurrent;
-            if (!experienceFrameTime) {
-                experienceFrameTime = timestamp;
-            }
-            const dt = Math.min(Math.max(timestamp - experienceFrameTime, 0), 48);
-            experienceFrameTime = timestamp;
-            const smoothing = 1 - Math.exp(-dt / 120);
-            experienceCurrent += delta * smoothing;
-            if (Math.abs(delta) < 0.001) {
-                experienceCurrent = experienceTarget;
-            }
-            applyExperienceProgress(experienceCurrent);
-            if (experienceCurrent !== experienceTarget) {
-                experienceRaf = requestAnimationFrame(tickExperience);
-            } else {
-                experienceRaf = null;
-                experienceFrameTime = 0;
-            }
-        };
-
-        const updateExperienceTarget = () => {
-            if (!experienceStage || !experienceViewport) return;
-            if (window.matchMedia('(max-width: 1024px)').matches) {
-                applyExperienceMobileLayout();
-                return;
-            }
-
-            const rect = experienceViewport.getBoundingClientRect();
-            const maxScroll = Math.max(rect.height - window.innerHeight, 1);
-            const scrolled = Math.min(Math.max(-rect.top, 0), maxScroll);
-            const rawProgress = scrolled / maxScroll;
-            const start = SCROLL_DEADZONE;
-            const end = 1 - SCROLL_TAIL;
-            const normalized = clamp((rawProgress - start) / (end - start), 0, 1);
-            experienceTarget = ease(normalized);
-            if (!experienceRaf) {
-                experienceRaf = requestAnimationFrame(tickExperience);
-            }
-        };
-
-        updateExperienceCenterOffset();
-        updateExperienceDemoScaleMax();
-        updateExperienceStageHeight();
-        updateExperienceTarget();
-        window.addEventListener('scroll', updateExperienceTarget, { passive: true });
-        window.addEventListener('resize', () => {
-            updateExperienceCenterOffset();
-            updateExperienceDemoScaleMax();
-            updateExperienceStageHeight();
-            updateExperienceTarget();
-        });
-        window.addEventListener('load', () => {
-            updateExperienceCenterOffset();
-            updateExperienceDemoScaleMax();
-            updateExperienceStageHeight();
-            updateExperienceTarget();
-        });
-
-        const revealItems = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        revealItems.forEach(item => revealObserver.observe(item));
-
-        const heroDemo = document.getElementById('hero-demo');
-        const demoPlaceholder = document.getElementById('demo-placeholder');
-        const heroFrame = document.getElementById('hero-frame');
-        const heroScale = document.getElementById('hero-scale');
-        const mobilePhaseLabel = null;
-        const mobilePhaseDots = [];
-        const mobilePhases = document.querySelectorAll('[data-mobile-phase]');
-        const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
-        const mobileDemoOverlay = document.getElementById('mobile-demo-overlay');
-        const enableMobileSwap = false;
-        let isMobileDemoActivated = false;
-        let currentMobilePhase = 0;
-        let mobilePhaseMode = null;
-        let mobileFadeTimeout = null;
-        let mobileFadeReleaseTimeout = null;
-        let heroLoadToken = 0;
-        const DEMO_SIZES = {
-            mobile: { width: 360, height: 640 },
-            desktop: { width: 1600, height: 1000 },
-            qr: { width: 360, height: 640 }
-        };
-        let currentDemoMode = null;
-
-        const isMobileDevice = () => {
-            if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
-                return navigator.userAgentData.mobile;
-            }
-            const ua = navigator.userAgent || '';
-            const uaMobile = /Android|iPhone|iPad|iPod|Mobi/i.test(ua);
-            const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
-            return uaMobile || (coarsePointer && window.matchMedia('(max-width: 900px)').matches);
-        };
-
-        const hideHeroPlaceholder = () => {
-            if (demoPlaceholder) {
-                demoPlaceholder.classList.add('hidden');
-            }
-        };
-
-        function updateMobileDemoHeight() {
-            if (!heroDemoFrame || !experienceStage) return;
-            if (!window.matchMedia('(max-width: 1024px)').matches) return;
-            const rect = heroDemoFrame.getBoundingClientRect();
-            if (rect.height > 0) {
-                experienceStage.style.setProperty('--mobile-demo-height', `${Math.ceil(rect.height)}px`);
-            }
-        }
-
-        const updateMobileDemoOverlay = () => {
-            if (!heroDemoFrame || !mobileDemoOverlay) return;
-            if (!mobileMediaQuery.matches) {
-                heroDemoFrame.classList.remove('is-mobile-active');
-                mobileDemoOverlay.setAttribute('hidden', '');
-                return;
-            }
-            mobileDemoOverlay.removeAttribute('hidden');
-            heroDemoFrame.classList.toggle('is-mobile-active', isMobileDemoActivated);
-        };
-
-        const applyHeroScale = () => {
-            if (!heroFrame || !heroScale) return;
-            const baseWidth = parseFloat(heroScale.dataset.baseWidth || '0');
-            const baseHeight = parseFloat(heroScale.dataset.baseHeight || '0');
-            if (!baseWidth || !baseHeight) return;
-            const styles = getComputedStyle(heroFrame);
-            const paddingX = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight);
-            const paddingY = parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
-            const availWidth = heroFrame.clientWidth - paddingX;
-            const availHeight = heroFrame.clientHeight - paddingY;
-            const scale = Math.min(availWidth / baseWidth, availHeight / baseHeight);
-            const offsetX = (availWidth - baseWidth * scale) / 2 + parseFloat(styles.paddingLeft);
-            const offsetY = (availHeight - baseHeight * scale) / 2 + parseFloat(styles.paddingTop);
-            heroScale.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-            updateMobileDemoHeight();
-        };
-
-        if (heroDemo) {
-            heroDemo.addEventListener('load', () => {
-                applyHeroScale();
-                hideHeroPlaceholder();
-                if (heroDemoFrame) {
-                    heroDemoFrame.classList.remove('is-mobile-fading');
-                }
-            });
-        }
-
-        const scheduleHeroFallback = () => {
-            if (!heroDemo) return;
-            const token = ++heroLoadToken;
-            heroDemo.dataset.loadToken = String(token);
-            setTimeout(() => {
-                if (heroDemo.dataset.loadToken === String(token)) {
-                    applyHeroScale();
-                    hideHeroPlaceholder();
-                }
-            }, 1500);
-        };
-        const chooseDemoSrc = () => {
-            if (!heroDemo || !heroScale || !heroFrame) return;
-            const isMobileLayout = mobileMediaQuery.matches;
-            let mode = 'desktop';
-            if (isMobileLayout) {
-                mode = enableMobileSwap && mobilePhaseMode === 'qr' ? 'qr' : 'mobile';
-            }
-            const src = mode === 'qr'
-                ? heroDemo.dataset.srcQr
-                : (mode === 'mobile' ? heroDemo.dataset.srcMobile : heroDemo.dataset.srcDesktop);
-            const size = DEMO_SIZES[mode] || DEMO_SIZES.desktop;
-
-            if (currentDemoMode !== mode) {
-                currentDemoMode = mode;
-                if (heroDemoFrame) {
-                    heroDemoFrame.dataset.mode = mode;
-                }
-                if (demoPlaceholder) {
-                    demoPlaceholder.classList.remove('hidden');
-                }
-                heroScale.dataset.baseWidth = size.width;
-                heroScale.dataset.baseHeight = size.height;
-                heroScale.style.width = `${size.width}px`;
-                heroScale.style.height = `${size.height}px`;
-                heroDemo.style.width = `${size.width}px`;
-                heroDemo.style.height = `${size.height}px`;
-                heroDemo.setAttribute('src', src);
-                scheduleHeroFallback();
-            } else if (!heroDemo.getAttribute('src')) {
-                heroDemo.setAttribute('src', src);
-                scheduleHeroFallback();
-            }
-        };
-        const setMobilePhase = (phase) => {
-            if (!enableMobileSwap) return;
-            if (!experienceStage) return;
-            const nextPhase = Number(phase);
-            if (!Number.isFinite(nextPhase)) return;
-            if (currentMobilePhase === nextPhase) return;
-            currentMobilePhase = nextPhase;
-            const nextMode = nextPhase === 2 ? 'qr' : null;
-            if (mobilePhaseLabel) {
-                mobilePhaseLabel.textContent = nextPhase === 2 ? 'QR Μενού' : 'Παραγγελιοληψία';
-            }
-            mobilePhaseDots.forEach((dot) => {
-                dot.classList.toggle('is-active', dot.dataset.mobileDot === String(nextPhase));
-            });
-            experienceStage.classList.toggle('is-mobile-phase-2', nextPhase === 2);
-            if (demoPlaceholder) {
-                demoPlaceholder.classList.remove('hidden');
-            }
-            if (mobileMediaQuery.matches && heroDemoFrame && nextMode !== mobilePhaseMode) {
-                if (mobileFadeTimeout) {
-                    clearTimeout(mobileFadeTimeout);
-                }
-                if (mobileFadeReleaseTimeout) {
-                    clearTimeout(mobileFadeReleaseTimeout);
-                }
-                heroDemoFrame.classList.add('is-mobile-fading');
-                mobileFadeTimeout = window.setTimeout(() => {
-                    mobilePhaseMode = nextMode;
-                    chooseDemoSrc();
-                }, 160);
-                mobileFadeReleaseTimeout = window.setTimeout(() => {
-                    heroDemoFrame.classList.remove('is-mobile-fading');
-                }, 650);
-            } else {
-                mobilePhaseMode = nextMode;
-                chooseDemoSrc();
-            }
-        };
-        const initMobilePhaseObserver = () => {
-            if (!enableMobileSwap) return;
-            if (!mobilePhases.length) return;
-            const observer = new IntersectionObserver((entries) => {
-                if (!mobileMediaQuery.matches) return;
-                const viewportCenter = window.innerHeight * 0.5;
-                let closest = null;
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    const rect = entry.boundingClientRect;
-                    const distance = Math.abs((rect.top + rect.height / 2) - viewportCenter);
-                    if (!closest || distance < closest.distance) {
-                        closest = { distance, phase: entry.target.dataset.mobilePhase };
-                    }
-                });
-                if (closest) {
-                    setMobilePhase(closest.phase);
-                }
-            }, { threshold: 0, rootMargin: '-30% 0px -30% 0px' });
-            mobilePhases.forEach((phase) => observer.observe(phase));
-        };
-        const handleMobileLayoutChange = () => {
-            updateMobileDemoOverlay();
-            if (!mobileMediaQuery.matches) {
-                if (mobileFadeTimeout) {
-                    clearTimeout(mobileFadeTimeout);
-                }
-                if (mobileFadeReleaseTimeout) {
-                    clearTimeout(mobileFadeReleaseTimeout);
-                }
-                if (heroDemoFrame) {
-                    heroDemoFrame.classList.remove('is-mobile-fading');
-                }
-                mobilePhaseMode = null;
-                if (experienceStage) {
-                    experienceStage.classList.remove('is-mobile-phase-2');
-                }
-                if (mobilePhaseLabel) {
-                    mobilePhaseLabel.textContent = 'Παραγγελιοληψία';
-                }
-                mobilePhaseDots.forEach((dot) => {
-                    dot.classList.toggle('is-active', dot.dataset.mobileDot === '1');
-                });
-                chooseDemoSrc();
-                return;
-            }
-            if (enableMobileSwap) {
-                const nextPhase = currentMobilePhase || 1;
-                setMobilePhase(nextPhase);
-            }
-            updateMobileDemoHeight();
-        };
-        const initDemo = () => {
-            chooseDemoSrc();
-        };
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(initDemo, { timeout: 1200 });
-        } else {
-            window.addEventListener('load', initDemo);
-        }
-
-        if (mobileDemoOverlay) {
-            mobileDemoOverlay.addEventListener('click', () => {
-                isMobileDemoActivated = true;
-                updateMobileDemoOverlay();
-            });
-        }
-
-        initMobilePhaseObserver();
-        handleMobileLayoutChange();
-        if (typeof mobileMediaQuery.addEventListener === 'function') {
-            mobileMediaQuery.addEventListener('change', handleMobileLayoutChange);
-        } else if (typeof mobileMediaQuery.addListener === 'function') {
-            mobileMediaQuery.addListener(handleMobileLayoutChange);
-        }
-
-        if (heroFrame && 'ResizeObserver' in window) {
-            const heroResizeObserver = new ResizeObserver(() => {
-                chooseDemoSrc();
-                applyHeroScale();
-            });
-            heroResizeObserver.observe(heroFrame);
-        } else {
-            window.addEventListener('resize', () => {
-                chooseDemoSrc();
-                applyHeroScale();
-            });
-        }
-
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabPanels = document.querySelectorAll('.tab-panel');
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const target = button.dataset.tab;
-                tabButtons.forEach(btn => btn.classList.remove('is-active'));
-                button.classList.add('is-active');
-                tabPanels.forEach(panel => {
-                    panel.classList.toggle('hidden', panel.dataset.panel !== target);
-                });
-            });
-        });
-        if (tabButtons.length) {
-            tabButtons[0].classList.add('is-active');
-        }
-
-        const faqItems = document.querySelectorAll('[data-faq-item]');
-        const closeFaqItem = (item) => {
-            if (!item) return;
-            item.classList.remove('is-open');
-            const trigger = item.querySelector('[data-faq-trigger]');
-            const panel = item.querySelector('[data-faq-panel]');
-            if (trigger) {
-                trigger.setAttribute('aria-expanded', 'false');
-            }
-            if (panel) {
-                panel.style.maxHeight = '0px';
-                panel.setAttribute('aria-hidden', 'true');
-            }
-        };
-        const openFaqItem = (item) => {
-            if (!item) return;
-            item.classList.add('is-open');
-            const trigger = item.querySelector('[data-faq-trigger]');
-            const panel = item.querySelector('[data-faq-panel]');
-            if (trigger) {
-                trigger.setAttribute('aria-expanded', 'true');
-            }
-            if (panel) {
-                panel.style.maxHeight = `${panel.scrollHeight}px`;
-                panel.setAttribute('aria-hidden', 'false');
-            }
-        };
-        if (faqItems.length) {
-            faqItems.forEach((item) => {
-                closeFaqItem(item);
-                const trigger = item.querySelector('[data-faq-trigger]');
-                if (!trigger) return;
-                trigger.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('is-open');
-                    faqItems.forEach((other) => {
-                        if (other !== item) {
-                            closeFaqItem(other);
-                        }
-                    });
-                    if (isOpen) {
-                        closeFaqItem(item);
-                    } else {
-                        openFaqItem(item);
-                    }
-                });
-            });
-            window.addEventListener('resize', () => {
-                faqItems.forEach((item) => {
-                    if (!item.classList.contains('is-open')) return;
-                    const panel = item.querySelector('[data-faq-panel]');
-                    if (panel) {
-                        panel.style.maxHeight = `${panel.scrollHeight}px`;
-                    }
-                });
-            });
-        }
-    </script>
+  <script src="/prototype/homepage-v3/motion.js" defer></script>
 </body>
 </html>

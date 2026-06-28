@@ -1,302 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-    <script src="/static/js/ga-consent.js"></script>
-    <script defer src="/static/js/ga-events.js"></script>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Σύστημα παραγγελιοληψίας: τιμές | POSPal</title>
-    <meta name="description" content="Δες τιμές POSPal για καφετέρια, beach bar, εστιατόριο και food truck. Καθαρό κόστος συνδρομής και άμεση αγορά άδειας.">
-    <link rel="canonical" href="https://pospal.gr/times.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="el_GR">
-    <meta property="og:site_name" content="POSPal">
-    <meta property="og:title" content="Σύστημα παραγγελιοληψίας τιμές | POSPal">
-    <meta property="og:description" content="Τιμές POSPal για εστίαση με καθαρή μηνιαία συνδρομή και δοκιμή 30 ημερών χωρίς κάρτα.">
-    <meta property="og:url" content="https://pospal.gr/times.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Σύστημα παραγγελιοληψίας τιμές | POSPal">
-    <meta name="twitter:description" content="Τιμές POSPal για εστίαση με καθαρή μηνιαία συνδρομή και δοκιμή 30 ημερών χωρίς κάρτα.">
-    <link rel="icon" href="/app_icon.ico">
-    <link rel="apple-touch-icon" href="/app_icon.ico">
-    <link rel="stylesheet" href="/static/css/fonts.css">
-    <script src="/static/vendor/tailwindcdn.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Inter', 'system-ui', 'sans-serif']
-                    },
-                    colors: {
-                        brand: {
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --ink: #0f172a;
-            --muted: #64748b;
-            --surface: #ffffff;
-            --line: rgba(148, 163, 184, 0.25);
-            --radius-lg: 22px;
-            --radius-md: 16px;
-        }
-
-        body {
-            font-family: "Inter", system-ui, sans-serif;
-            color: var(--ink);
-            background: #f8fafc;
-        }
-
-        .site-container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        .surface-soft {
-            background: var(--surface);
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 22px;
-            border-radius: 999px;
-            font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-            will-change: transform;
-        }
-
-        .btn-primary {
-            background: #16a34a;
-            color: #fff;
-            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            background: #15803d;
-            box-shadow: 0 22px 44px rgba(22, 163, 74, 0.28);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(34, 197, 94, 0.55);
-            color: #166534;
-            background: #ffffff;
-        }
-
-        .btn-secondary:hover {
-            border-color: #16a34a;
-            color: #14532d;
-            background: #f0fdf4;
-            transform: translateY(-1px);
-        }
-    </style>
-    <script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f6f1">
+  <title>Σύστημα παραγγελιοληψίας τιμές | POSPal</title>
+  <meta name="description" content="Δες την τιμή του POSPal: 30 ημέρες δωρεάν χωρίς κάρτα ή προσωπικά στοιχεία και μετά €18,90 τον μήνα για παραγγελιοληψία, κουζίνα και QR μενού.">
+  <link rel="canonical" href="https://pospal.gr/times.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="POSPal">
+  <meta property="og:title" content="Σύστημα παραγγελιοληψίας τιμές | POSPal">
+  <meta property="og:description" content="30 ημέρες δωρεάν χωρίς κάρτα. Μετά, €18,90 τον μήνα για όλη τη ροή παραγγελίας.">
+  <meta property="og:url" content="https://pospal.gr/times.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Σύστημα παραγγελιοληψίας τιμές | POSPal">
+  <meta name="twitter:description" content="Δωρεάν δοκιμή 30 ημερών και μία καθαρή μηνιαία τιμή για POSPal.">
+  <link rel="icon" href="/app_icon.ico">
+  <link rel="apple-touch-icon" href="/app_icon.ico">
+  <link rel="stylesheet" href="/static/css/fonts.css">
+  <link rel="stylesheet" href="/static/css/seo-acquisition.css">
+  <script src="/static/js/ga-consent.js"></script>
+  <script defer src="/static/js/ga-events.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Ποια είναι η τιμή του POSPal;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Η τιμή είναι €18,90 τον μήνα μετά από δοκιμή 30 ημερών χωρίς κάρτα."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Τι περιλαμβάνει η συνδρομή;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Η συνδρομή περιλαμβάνει παραγγελιοληψία, λειτουργία τραπεζιών, απλή λειτουργία χωρίς τραπέζια, QR μενού και ροή παραγγελιών προς κουζίνα."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Για ποιους τύπους καταστημάτων κάνει;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Κάνει για καφετέρια, beach bar, εστιατόριο και food truck."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Το POSPal είναι φορολογικός POS ή ταμειακή;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Όχι. Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή, δεν εκδίδει αποδείξεις και δεν συνδέεται με φορολογικές αρχές."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Πού μπορώ να δω περισσότερα για το σύστημα;",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Μπορείς να δεις τη σελίδα «Σύστημα παραγγελιοληψίας» για αναλυτική παρουσίαση πριν προχωρήσεις σε αγορά άδειας."
-                    }
-                }
-            ]
+          "@type": "Question",
+          "name": "Ποια είναι η τιμή του POSPal;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μετά τη δωρεάν δοκιμή 30 ημερών, το POSPal κοστίζει €18,90 τον μήνα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Χρειάζεται κάρτα για τη δοκιμή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι. Η δοκιμή ξεκινά χωρίς κάρτα και χωρίς προσωπικά στοιχεία."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι περιλαμβάνει η τιμή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Περιλαμβάνει παραγγελιοληψία για τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Το POSPal είναι φορολογικό POS ή ταμειακή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι. Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας δίπλα στο υπάρχον φορολογικό σύστημα."
+          }
         }
-    </script>
+      ]
+    }
+  </script>
 </head>
-<body class="min-h-screen">
-    <header class="py-6">
-        <div class="site-container flex items-center justify-between gap-4">
-            <a href="/" class="flex items-center gap-3">
-                <img src="/app_icon.ico" alt="POSPal" class="w-10 h-10 rounded-2xl">
-                <span class="text-lg font-semibold tracking-tight">
-                    <span class="text-brand-600">POS</span><span class="text-slate-900">Pal</span>
-                </span>
-            </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                <a href="/times.html" class="text-slate-900">Τιμές</a>
-                <a href="/guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
-                <a href="/download/" class="text-brand-600 hover:text-brand-700">Λήψη για Windows</a>
-            </nav>
+<body class="seo-page">
+  <a class="seo-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="seo-header">
+    <div class="seo-shell seo-header-inner">
+      <a class="seo-brand" href="/" aria-label="POSPal, αρχική">
+        <img src="/app_icon.ico" alt="" width="38" height="38">
+        <span>POS<b>Pal</b></span>
+      </a>
+      <nav class="seo-nav" aria-label="Κύρια πλοήγηση">
+        <a href="/">Αρχική</a>
+        <a href="/guides/">Οδηγοί</a>
+        <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
+      </nav>
+      <a class="seo-button seo-button-primary seo-header-cta" href="/download/">Κατέβασε για Windows</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="seo-hero" aria-labelledby="pricing-title">
+      <div class="seo-shell seo-hero-grid">
+        <div>
+          <p class="seo-signal">Τιμές συστήματος παραγγελιοληψίας</p>
+          <h1 id="pricing-title" class="wide">Μία καθαρή τιμή για όλη τη ροή.</h1>
+          <p class="seo-lead">Το POSPal ξεκινά με δωρεάν δοκιμή 30 ημερών. Δεν ζητά κάρτα και δεν ζητά προσωπικά στοιχεία για να το δοκιμάσεις στον υπολογιστή Windows του καταστήματος. Μετά τη δοκιμή, η τιμή είναι €18,90 τον μήνα.</p>
+          <div class="seo-actions" aria-label="Επόμενες ενέργειες">
+            <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="seo-button seo-button-secondary" href="/guides/">Δες τον οδηγό εγκατάστασης</a>
+          </div>
+          <p class="seo-trial-line"><strong>30 ημέρες δωρεάν</strong><span>χωρίς κάρτα</span><span>χωρίς προσωπικά στοιχεία</span></p>
         </div>
-    </header>
+        <aside class="seo-hero-panel" aria-label="Τιμή POSPal">
+          <div class="seo-panel-head"><span>POSPal</span><span>Μηνιαία συνδρομή</span></div>
+          <div class="seo-price-core">
+            <span>Μετά τη δοκιμή</span>
+            <strong>€18,90 <small>/ μήνα</small></strong>
+            <p>Μία τιμή για παραγγελιοληψία, ροή κουζίνας και QR μενού. Ακύρωση όποτε θέλεις.</p>
+            <a class="seo-button seo-button-primary" href="/download/">Ξεκίνα με δωρεάν δοκιμή</a>
+          </div>
+          <ul class="seo-panel-list">
+            <li><span>Δοκιμή</span><b>30 ημέρες</b></li>
+            <li><span>Κάρτα</span><b>Δεν χρειάζεται</b></li>
+            <li><span>Δέσμευση</span><b>Καμία</b></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    <main class="pb-16">
-        <div class="site-container">
-            <section class="surface-soft p-8" id="pricing-top">
-                <p class="text-sm font-semibold text-emerald-700">Τιμές POSPal • Εστίαση</p>
-                <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-slate-900">Σύστημα παραγγελιοληψίας τιμές για εστίαση</h1>
-                <p class="mt-3 text-slate-600 text-lg">Αν ψάχνεις «συστημα παραγγελιοληψιασ τιμεσ» ή «τιμές POSPal», εδώ θα δεις καθαρά τι πληρώνεις, τι περιλαμβάνεται και πώς ξεκινάς.</p>
-                <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a href="#pricing-table" class="btn btn-secondary">Δες τιμές</a>
-                    <a href="/download/" class="btn btn-primary">Κατέβασε για Windows</a>
-                </div>
-            </section>
-
-            <section class="mt-8 surface-soft p-8" id="pricing-table">
-                <h2 class="text-2xl font-semibold text-slate-900">Τιμές POSPal</h2>
-                <p class="mt-3 text-slate-600">Μία καθαρή μηνιαία συνδρομή, χωρίς πολύπλοκα πακέτα.</p>
-                <div class="mt-6 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <p class="text-sm font-semibold text-emerald-700">Μηνιαία συνδρομή</p>
-                        <p class="mt-2 text-4xl font-bold text-slate-900">€18,90<span class="text-base font-semibold text-slate-600">/μήνα</span></p>
-                        <ul class="mt-4 space-y-2 text-slate-700">
-                            <li class="flex gap-2"><span class="text-emerald-600">•</span><span>30 ημέρες δωρεάν δοκιμή χωρίς κάρτα</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Μηνιαία χρέωση</span></li>
-                            <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Άμεση έναρξη με εγκατάσταση</span></li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="text-lg font-semibold text-slate-900">Χρήσιμοι σύνδεσμοι</h3>
-                        <ul class="mt-4 space-y-3 text-slate-700">
-                            <li><a class="text-brand-700 font-semibold hover:underline" href="/dwrean-dokimi-30-imeron/">Δες αναλυτικά τη δοκιμή 30 ημερών</a></li>
-                            <li><a class="text-brand-700 font-semibold hover:underline" href="/systima-paraggeliolipsias.html">Δες αναλυτικά το σύστημα παραγγελιοληψίας</a></li>
-                            <li><a class="text-brand-700 font-semibold hover:underline" href="/buy-license.html">Πήγαινε σε αγορά άδειας</a></li>
-                            <li><a class="text-brand-700 font-semibold hover:underline" href="/guides/index.html?lesson=0">Δες τον οδηγό εγκατάστασης</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Τι περιλαμβάνει η συνδρομή</h2>
-                <p class="mt-3 text-slate-600">Η συνδρομή περιλαμβάνει τα βασικά εργαλεία για καθημερινή ροή παραγγελιών.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Λειτουργία τραπεζιών</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Απλή λειτουργία χωρίς τραπέζια</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>QR μενού από τον κατάλογό σου</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Ροή παραγγελιών προς κουζίνα</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Χρήση σε tablet, κινητό ή υπολογιστή</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Για ποιους κάνει</h2>
-                <p class="mt-3 text-slate-600">Το POSPal απευθύνεται σε επιχειρήσεις εστίασης που θέλουν καθαρή και γρήγορη ροή.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Καφετέρια</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Beach bar</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Εστιατόριο</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Food truck</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Γιατί POSPal</h2>
-                <p class="mt-3 text-slate-600">Ξεκάθαρη τοποθέτηση και ξεκάθαρη χρήση, χωρίς ασάφειες.</p>
-                <ul class="mt-4 space-y-2 text-slate-700">
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Είναι σύστημα παραγγελιοληψίας και διαχείρισης παραγγελιών</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δεν είναι φορολογικός POS</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δεν είναι ταμειακή και δεν εκδίδει αποδείξεις</span></li>
-                    <li class="flex gap-2"><span class="text-emerald-600">•</span><span>Δεν συνδέεται με φορολογικές αρχές</span></li>
-                </ul>
-            </section>
-
-            <section class="mt-8 surface-soft p-8">
-                <h2 class="text-2xl font-semibold text-slate-900">Συχνές ερωτήσεις</h2>
-                <div class="mt-4 space-y-3">
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Ποια είναι η τιμή του POSPal;</summary>
-                        <p class="mt-2 text-slate-600">Η τιμή είναι €18,90 τον μήνα μετά από δοκιμή 30 ημερών χωρίς κάρτα.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Τι περιλαμβάνει η συνδρομή;</summary>
-                        <p class="mt-2 text-slate-600">Περιλαμβάνει παραγγελιοληψία, λειτουργία τραπεζιών, απλή λειτουργία, QR μενού και ροή παραγγελιών προς κουζίνα.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Για ποιους τύπους καταστημάτων κάνει;</summary>
-                        <p class="mt-2 text-slate-600">Κάνει για καφετέρια, beach bar, εστιατόριο και food truck.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Το POSPal είναι φορολογικός POS ή ταμειακή;</summary>
-                        <p class="mt-2 text-slate-600">Όχι. Δεν είναι φορολογικός POS, δεν είναι ταμειακή, δεν εκδίδει αποδείξεις και δεν συνδέεται με φορολογικές αρχές.</p>
-                    </details>
-                    <details class="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                        <summary class="cursor-pointer font-semibold text-slate-900">Πού μπορώ να δω περισσότερα πριν αγοράσω;</summary>
-                        <p class="mt-2 text-slate-600">Δες τη σελίδα <a class="text-brand-700 font-semibold hover:underline" href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a> και μετά προχώρησε σε <a class="text-brand-700 font-semibold hover:underline" href="/buy-license.html">αγορά άδειας</a>.</p>
-                    </details>
-                </div>
-                <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a href="#pricing-table" class="btn btn-secondary">Δες τιμές</a>
-                    <a href="/buy-license.html" class="btn btn-primary">Μετάβαση σε αγορά άδειας</a>
-                </div>
-            </section>
-
-            <div class="mt-10 text-center">
-                <a href="/" class="text-sm font-semibold text-slate-600 hover:text-slate-900">← Πίσω στην αρχική</a>
-            </div>
+    <section class="seo-band" aria-labelledby="pricing-related-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Πριν συγκρίνεις τιμή</p>
+          <h2 id="pricing-related-title">Δες πρώτα ποια ροή αγοράζεις.</h2>
+          <p>Η τιμή έχει νόημα όταν είναι καθαρό τι καλύπτει: παραγγελιοληψία, POSPal σε Windows, ροή κουζίνας και QR μενού. Οι σχετικές σελίδες εξηγούν το σύστημα και τη χρήση PDA.</p>
         </div>
-    </main>
-
-    <footer class="pb-10">
-        <div class="site-container">
-            <div class="surface-soft px-6 py-6 text-sm text-slate-600">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <img src="/app_icon.ico" alt="POSPal" class="w-8 h-8 rounded-xl">
-                        <span>POSPal</span>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="/guides/index.html?lesson=0" class="hover:text-slate-900">Οδηγοί</a>
-                        <a href="/privacy.html" class="hover:text-slate-900">Πολιτική απορρήτου</a>
-                        <a href="mailto:support@pospal.gr" class="hover:text-slate-900">Υποστήριξη</a>
-                    </div>
-                </div>
-                <p class="mt-4 text-xs text-slate-500">Σημείωση: Το POSPal δεν είναι φορολογικός POS, δεν είναι ταμειακή, δεν εκδίδει αποδείξεις και δεν συνδέεται με φορολογικές αρχές. Καλύπτει παραγγελιοληψία και ροή κουζίνας.</p>
-            </div>
+        <div class="seo-card-grid" aria-label="Σχετικές σελίδες τιμής POSPal">
+          <article class="seo-card">
+            <span>Σύστημα</span>
+            <h3><a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a></h3>
+            <p>Η ευρύτερη εικόνα για το τι οργανώνει το POSPal στη βάρδια.</p>
+          </article>
+          <article class="seo-card">
+            <span>PDA</span>
+            <h3><a href="/pda-ti-einai.html">PDA τι είναι</a></h3>
+            <p>Ο σύντομος ορισμός για PDA και ασύρματη παραγγελιοληψία.</p>
+          </article>
+          <article class="seo-card">
+            <span>Στήσιμο</span>
+            <h3><a href="/guides/">Οδηγοί εγκατάστασης</a></h3>
+            <p>Τα πρακτικά βήματα πριν δοκιμάσεις το POSPal στη δική σου εγκατάσταση.</p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <section class="seo-band seo-band-muted" aria-labelledby="included-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Τι περιλαμβάνει</p>
+          <h2 id="included-title">Δεν αγοράζεις κομμάτια της ροής.</h2>
+          <p>Η συνδρομή είναι για το σύνολο της καθημερινής παραγγελιοληψίας: τραπέζια, γρήγορες παραγγελίες, κουζίνα και QR μενού.</p>
+        </div>
+        <div class="seo-card-grid">
+          <article class="seo-card">
+            <span>Τραπέζια</span>
+            <h3>Παραγγελίες ανά τραπέζι</h3>
+            <p>Για καφετέριες, εστιατόρια και χώρους με σάλα.</p>
+          </article>
+          <article class="seo-card">
+            <span>Απλή λειτουργία</span>
+            <h3>Χωρίς τραπέζια</h3>
+            <p>Για πάγκο, take away, γρήγορη εξυπηρέτηση ή μικρό μενού.</p>
+          </article>
+          <article class="seo-card">
+            <span>Κουζίνα</span>
+            <h3>Καθαρή συνέχεια</h3>
+            <p>Η παραγγελία περνά στη ροή εκτέλεσης χωρίς χειρόγραφες μεταφορές.</p>
+          </article>
+          <article class="seo-card">
+            <span>QR μενού</span>
+            <h3>Περιλαμβάνεται</h3>
+            <p>Το μενού δουλεύει ως μέρος της ίδιας βάσης προϊόντων.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-band" aria-labelledby="clarity-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Πριν πληρώσεις</p>
+          <h2 id="clarity-title">Τι ξέρεις από την αρχή.</h2>
+          <p>Η τιμή πρέπει να είναι εύκολη απόφαση. Πρώτα το δοκιμάζεις στη δική σου ροή, μετά αποφασίζεις αν αξίζει τη θέση του στη βάρδια.</p>
+        </div>
+        <div class="seo-ledger" aria-label="Όροι τιμής POSPal">
+          <div class="seo-ledger-row"><span>Δωρεάν δοκιμή</span><p>30 ημέρες για να δεις τη ροή στο κατάστημά σου.</p></div>
+          <div class="seo-ledger-row"><span>Χωρίς κάρτα</span><p>Δεν χρειάζεται κάρτα για να ξεκινήσει η δοκιμή.</p></div>
+          <div class="seo-ledger-row"><span>Χωρίς προσωπικά στοιχεία</span><p>Η δοκιμή ξεκινά χωρίς φόρμα προσωπικών δεδομένων.</p></div>
+          <div class="seo-ledger-row"><span>Μετά τη δοκιμή</span><p>€18,90 τον μήνα, με ακύρωση όποτε θέλεις.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-band seo-band-dark" aria-labelledby="boundary-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Σημαντικό όριο</p>
+          <h2 id="boundary-title">Η τιμή δεν κρύβει φορολογική υπόσχεση.</h2>
+        </div>
+        <aside class="seo-boundary">
+          <strong>Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή.</strong>
+          <p>Καλύπτει την παραγγελιοληψία, τη ροή κουζίνας και το QR μενού. Δουλεύει δίπλα στο υπάρχον φορολογικό σύστημα του καταστήματος.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-band" aria-labelledby="pricing-faq-title">
+      <div class="seo-shell seo-section-grid">
+        <div class="seo-section-heading">
+          <p class="seo-signal">Συχνές ερωτήσεις</p>
+          <h2 id="pricing-faq-title">Οι βασικές απαντήσεις για την τιμή.</h2>
+        </div>
+        <div class="seo-faq">
+          <details>
+            <summary>Ποια είναι η τιμή του POSPal;</summary>
+            <p>Μετά τη δωρεάν δοκιμή 30 ημερών, το POSPal κοστίζει €18,90 τον μήνα.</p>
+          </details>
+          <details>
+            <summary>Χρειάζεται κάρτα για τη δοκιμή;</summary>
+            <p>Όχι. Η δοκιμή ξεκινά χωρίς κάρτα και χωρίς προσωπικά στοιχεία.</p>
+          </details>
+          <details>
+            <summary>Τι περιλαμβάνει η τιμή;</summary>
+            <p>Περιλαμβάνει παραγγελιοληψία για τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού.</p>
+          </details>
+          <details>
+            <summary>Το POSPal είναι φορολογικό POS ή ταμειακή;</summary>
+            <p>Όχι. Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία και ροή κουζίνας δίπλα στο υπάρχον φορολογικό σύστημα.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-final" aria-labelledby="final-title">
+      <div class="seo-shell seo-final-inner">
+        <div>
+          <p>Πρώτα δοκιμή. Μετά απόφαση.</p>
+          <h2 id="final-title">Κατέβασε το POSPal και δες το στη δική σου βάρδια.</h2>
+        </div>
+        <div class="seo-actions">
+          <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
+          <a class="seo-button seo-button-secondary" href="/guides/">Άνοιξε τους οδηγούς</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer-inner">
+      <p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
+      <nav aria-label="Σύνδεσμοι σελίδας">
+        <a href="/">Αρχική</a>
+        <a href="/download/">Κατέβασε</a>
+        <a href="/guides/">Οδηγοί</a>
+        <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
+        <a href="/pda-ti-einai.html">PDA τι είναι</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

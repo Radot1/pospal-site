@@ -1,16 +1,5 @@
 ﻿(function () {
   var EVENT_VERSION = "v1.1";
-  var SEO_ARTICLE_PATHS = [
-    "/asyrmati-paraggeliolipsia.html",
-    "/menu-estiatoriou.html",
-    "/paraggelies-gia-estiash.html",
-    "/paraggelio-lipsia-gia-beach-bar.html",
-    "/pda-gia-kafeteries.html",
-    "/pda-pos-leitourgei.html",
-    "/pda-ti-einai.html",
-    "/qr-menu-gia-estiash.html",
-    "/systima-paraggeliolipsias.html",
-  ];
 
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -41,9 +30,7 @@
   }
 
   function isDemoOrAppPath(pathname) {
-    return (
-      pathname === "/qr-menu-demo.html"
-    );
+    return false;
   }
 
   function isMarketingPage(pathname) {
@@ -55,10 +42,6 @@
       return "home";
     }
 
-    if (pathname === "/times.html") {
-      return "pricing";
-    }
-
     if (
       pathname === "/download" ||
       pathname === "/download/" ||
@@ -67,14 +50,10 @@
       return "download";
     }
 
-    if (pathname === "/buy-license.html") {
-      return "buy";
-    }
-
     if (pathname === "/guides/index.html") {
       try {
-        var lessonParam = new URLSearchParams(window.location.search || "").get("lesson");
-        if (lessonParam === "0") {
+        var guideParam = new URLSearchParams(window.location.search || "").get("guide");
+        if (guideParam) {
           return "install_guide";
         }
       } catch (error) {
@@ -85,10 +64,6 @@
 
     if (pathname === "/guides" || pathname.indexOf("/guides/") === 0) {
       return "guides";
-    }
-
-    if (SEO_ARTICLE_PATHS.indexOf(pathname) !== -1) {
-      return "seo_article";
     }
 
     return "other";
@@ -111,43 +86,12 @@
   }
 
   function classifyDownload(pathname, elementId) {
-    if (elementId === "copy-link-btn") {
-      return "copy_link_mobile";
-    }
-
     if (elementId === "manual-download") {
       return "installer_manual";
     }
 
-    if (!pathname) {
-      return "";
-    }
-
-    if (
-      pathname === "/download" ||
-      pathname === "/download/" ||
-      pathname.indexOf("/download/") !== -1
-    ) {
-      return "download_page";
-    }
-
     if (pathname.indexOf("pospal-win-setup.exe") !== -1) {
       return "installer_file";
-    }
-
-    return "";
-  }
-
-  function classifyDemo(pathname, textMatch, classMatch) {
-    if (pathname && pathname.indexOf("demo") !== -1) {
-      return "demo_page";
-    }
-
-    if (
-      textMatch.indexOf("demo") !== -1 &&
-      (classMatch.indexOf("btn") !== -1 || classMatch.indexOf("button") !== -1)
-    ) {
-      return "demo_button";
     }
 
     return "";
@@ -163,20 +107,11 @@
 
   function classifyTrialStart(pathname, elementId, textMatch, classMatch) {
     var isDownloadTarget =
-      elementId === "copy-link-btn" ||
       elementId === "manual-download" ||
-      (pathname &&
-        (pathname === "/download" ||
-          pathname === "/download/" ||
-          pathname.indexOf("/download/") !== -1 ||
-          pathname.indexOf("pospal-win-setup.exe") !== -1));
+      (pathname && pathname.indexOf("pospal-win-setup.exe") !== -1);
 
     if (!isDownloadTarget) {
       return "";
-    }
-
-    if (elementId === "copy-link-btn") {
-      return "copy_link_mobile";
     }
 
     if (elementId === "manual-download") {
@@ -240,9 +175,7 @@
           textMatch,
           classMatch
         );
-        var demoVariant = classifyDemo(pathname, textMatch, classMatch);
-
-        if (!downloadVariant && !trialVariant && !demoVariant && !journeyLevel) {
+        if (!downloadVariant && !trialVariant && !journeyLevel) {
           return;
         }
 
@@ -273,19 +206,6 @@
             page_type: payload.page_type,
             event_version: payload.event_version,
             cta_variant: trialVariant,
-            cta_text: payload.cta_text,
-            cta_href: payload.cta_href,
-            cta_id: payload.cta_id,
-            cta_classes: payload.cta_classes,
-          });
-        }
-
-        if (demoVariant) {
-          sendEvent("demo_click", {
-            page_path: payload.page_path,
-            page_type: payload.page_type,
-            event_version: payload.event_version,
-            cta_variant: demoVariant,
             cta_text: payload.cta_text,
             cta_href: payload.cta_href,
             cta_id: payload.cta_id,
