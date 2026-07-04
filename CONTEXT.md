@@ -252,7 +252,7 @@ The operating cadence for SEO after the launch candidate ships. Wait 28 days bef
 
 ### Early-adopter price
 
-The EUR 24.90 monthly subscription price offered to customers who subscribe during the early-adopter period. A customer keeps this monthly price for as long as that subscription remains active. Future public pricing may increase, but an unconfirmed future amount is not advertised.
+The EUR 23.90 monthly subscription price offered to customers who subscribe during the early-adopter period. A customer keeps this monthly price for as long as that subscription remains active. Future public pricing may increase, but an unconfirmed future amount is not advertised.
 
 ### Honest urgency
 

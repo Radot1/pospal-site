@@ -14,7 +14,7 @@ The redesign changes the landing-page layout, typography, visual language, copy 
 >
 > Τραπέζια, απλή λειτουργία, ροή κουζίνας και προσαρμόσιμο QR μενού σε ένα πρόγραμμα για Windows. Το κατεβάζεις και το στήνεις με οδηγούς βήμα-βήμα.
 >
-> **Τιμή πρώτων χρηστών: €24,90/μήνα**
+> **Τιμή πρώτων χρηστών: €23,90/μήνα**
 > Την κρατάς όσο η συνδρομή παραμένει ενεργή. 30 ημέρες δωρεάν, χωρίς κάρτα ή προσωπικά στοιχεία.
 
 Primary CTA: `Κατέβασε για Windows` -> `/download/`
@@ -23,7 +23,7 @@ Secondary CTA: `Δες τι χρειάζεσαι για το στήσιμο` -> 
 
 ## Commercial Model
 
-- EUR 24.90 per month is the early-adopter price.
+- EUR 23.90 per month is the early-adopter price.
 - Customers keep that price while their subscription remains active.
 - Subscription renews month to month; cancellation stops the next renewal rather than ending current access immediately.
 - All current modes are included: tables, simple mode, kitchen workflow, and QR menu.

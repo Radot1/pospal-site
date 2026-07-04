@@ -71,7 +71,7 @@ This points to a CTR and intent-match problem more than a pure indexing problem.
 - Current pages: `https://pospal.gr/times.html` and `/times-systimatos-parageliolipsias/`.
 - Interpretation: commercial intent exists, but the page set may be split and not sharp enough.
 - Likely action: consolidate pricing intent and make the SERP promise explicit.
-- Desired angle: EUR 24.90/month, 30 days free, no card, includes tables/simple mode/QR menu, not fiscal POS.
+- Desired angle: EUR 23.90/month, 30 days free, no card, includes tables/simple mode/QR menu, not fiscal POS.
 
 ### 7. Wireless ordering
 - Queries: `ασυρματη παραγγελιοληψια`, `παραγγελιοληψια ασυρματη`, `ασύρματη παραγγελιοληψία`
