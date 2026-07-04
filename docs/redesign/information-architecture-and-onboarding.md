@@ -305,7 +305,7 @@ Use real product screens. A small interactive proof may support the workflow sec
 
 Required content:
 
-- EUR 18.90/month.
+- EUR 24.90/month.
 - Thirty days free without a card or personal information.
 - All included modes/features.
 - Cancel-anytime language.
