@@ -114,11 +114,12 @@
   }
 
   function guideNav() {
-    return guides.map((guide) => `
+    return guides.map((guide, index) => `
       <li class="${guide.slug === current.slug ? "is-current" : ""}">
         <a href="${guide.url}"${guide.slug === current.slug ? ' aria-current="page"' : ""}>
+          <b>${String(index + 1).padStart(2, "0")}</b>
           <span>${escapeText(guide.shortTitle)}</span>
-          <small>Βίντεο · ${escapeText(guide.duration)}</small>
+          <small>${guide.duration === "Βίντεο" ? "Οδηγός βίντεο" : `Βίντεο · ${escapeText(guide.duration)}`}</small>
         </a>
       </li>
     `).join("");
