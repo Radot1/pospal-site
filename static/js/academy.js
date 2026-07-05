@@ -21,12 +21,66 @@
       intro: "Κατέβασε το αρχείο εγκατάστασης, άνοιξέ το στον υπολογιστή της επιχείρησης και έλεγξε ότι το POSPal ξεκινά κανονικά.",
       downloadFocus: true,
     },
+    {
+      slug: "app-tour",
+      url: "/guides/?guide=app-tour",
+      title: "Περιήγηση στο POSPal",
+      shortTitle: "Περιήγηση",
+      duration: "Βίντεο",
+      video: "https://www.youtube.com/embed/POZUAfynPYE",
+      youtube: "https://youtu.be/POZUAfynPYE",
+      intro: "Δες το βασικό περιβάλλον του POSPal, πώς είναι οργανωμένες οι λειτουργίες και πώς κινείται ο χρήστης μέσα στην εφαρμογή.",
+    },
+    {
+      slug: "settings",
+      url: "/guides/?guide=settings",
+      title: "Ρυθμίσεις του POSPal",
+      shortTitle: "Ρυθμίσεις",
+      duration: "Βίντεο",
+      video: "https://www.youtube.com/embed/IY2f3hRGlH8",
+      youtube: "https://youtu.be/IY2f3hRGlH8",
+      intro: "Δες τις βασικές ρυθμίσεις της εφαρμογής, όπως εκτυπωτές, συσκευή, λειτουργίες, αποδείξεις και επιλογές διαχείρισης.",
+    },
+    {
+      slug: "qr-menu",
+      url: "/guides/?guide=qr-menu",
+      title: "QR menu POSPal",
+      shortTitle: "QR menu",
+      duration: "Βίντεο",
+      video: "https://www.youtube.com/embed/AvokJphL4zk",
+      youtube: "https://youtu.be/AvokJphL4zk",
+      intro: "Δες το QR menu του POSPal, τι εμφανίζεται στον πελάτη και ποιες λειτουργίες προσφέρει χωρίς επιπλέον κόστος.",
+    },
+    {
+      slug: "account",
+      url: "/guides/?guide=account",
+      title: "Διαχείριση λογαριασμού POSPal",
+      shortTitle: "Λογαριασμός",
+      duration: "Βίντεο",
+      video: "https://www.youtube.com/embed/TVMczUWJVpk",
+      youtube: "https://youtu.be/TVMczUWJVpk",
+      intro: "Δες πού βρίσκονται οι πληροφορίες άδειας, η κατάσταση της συνδρομής και το portal χρέωσης για αλλαγές ή ακύρωση.",
+    },
+    {
+      slug: "troubleshooting",
+      url: "/guides/?guide=troubleshooting",
+      title: "Αντιμετώπιση προβλημάτων POSPal",
+      shortTitle: "Προβλήματα",
+      duration: "Βίντεο",
+      video: "https://www.youtube.com/embed/VaTsP1x8gWk",
+      youtube: "https://youtu.be/VaTsP1x8gWk",
+      intro: "Δες βασικές λύσεις για συνηθισμένα θέματα, όπως σύνδεση κινητού ή tablet, αλλαγή θύρας, πρόσβαση και αναφορά προβλήματος.",
+    },
   ];
 
   const legacyMap = {
     "0": "/guides/?guide=printer-setup",
     "1": "/guides/?guide=windows-installation",
-    "2": "/guides/",
+    "2": "/guides/?guide=app-tour",
+    "3": "/guides/?guide=settings",
+    "4": "/guides/?guide=qr-menu",
+    "5": "/guides/?guide=account",
+    "6": "/guides/?guide=troubleshooting",
   };
 
   const params = new URLSearchParams(window.location.search);
@@ -109,7 +163,7 @@
         <nav class="academy-actions" aria-label="Ενέργειες οδηγού">
           <a href="${current.youtube}" target="_blank" rel="noopener">Άνοιγμα στο YouTube</a>
           ${current.downloadFocus ? `<a class="academy-action-primary" href="/download/">Κατέβασε για Windows</a>` : ""}
-          ${next ? `<a class="academy-action-primary" href="${next.url}">Συνέχεια στην εγκατάσταση</a>` : ""}
+          ${next ? `<a class="academy-action-primary" href="${next.url}">Επόμενο βίντεο</a>` : ""}
         </nav>
       </section>
     </div>

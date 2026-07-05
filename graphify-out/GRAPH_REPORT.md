@@ -122,3 +122,7 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.08172043010752689 - nodes in this community are weakly interconnected._
 - **Should `Pricing And Trial` be split into smaller, more focused modules?**
   _Cohesion score 0.09881422924901186 - nodes in this community are weakly interconnected._
+
+## Latest Guide Video Update
+
+Added semantic nodes for the 7 public POSPal YouTube guide videos now rendered by `static/js/academy.js` and `/guides/?guide=...`.

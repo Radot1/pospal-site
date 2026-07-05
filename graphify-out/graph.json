@@ -79,7 +79,8 @@
         "confidence_score": 0.85,
         "source_file": "CONTEXT.md"
       }
-    ]
+    ],
+    "updated_at": "2026-07-05T07:25:21.060152+00:00"
   },
   "nodes": [
     {
@@ -2436,6 +2437,110 @@
       "id": "mobile_viewport_density_fix",
       "community": 3,
       "norm_label": "mobile viewport density fix"
+    },
+    {
+      "id": "guide_video_catalog",
+      "label": "7 POSPal Guide Videos",
+      "norm_label": "7 pospal guide videos",
+      "file_type": "concept",
+      "source_file": "guides/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-07-05T07:25:21.059977+00:00",
+      "author": null,
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_printer_setup",
+      "label": "??????? ???????? ???????? ??? POSPal",
+      "norm_label": "??????? ???????? ???????? ??? pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/p0FNRfv0vVo",
+      "captured_at": "2026-07-05T07:25:21.059989+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_windows_installation",
+      "label": "??????????? POSPal ?? Windows",
+      "norm_label": "??????????? pospal ?? windows",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/2XJvWmfJWwk",
+      "captured_at": "2026-07-05T07:25:21.059991+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_app_tour",
+      "label": "????????? ??? POSPal",
+      "norm_label": "????????? ??? pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/POZUAfynPYE",
+      "captured_at": "2026-07-05T07:25:21.059993+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_settings",
+      "label": "????????? ??? POSPal",
+      "norm_label": "????????? ??? pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/IY2f3hRGlH8",
+      "captured_at": "2026-07-05T07:25:21.059995+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_qr_menu",
+      "label": "QR menu POSPal",
+      "norm_label": "qr menu pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/AvokJphL4zk",
+      "captured_at": "2026-07-05T07:25:21.059996+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_account",
+      "label": "?????????? ??????????? POSPal",
+      "norm_label": "?????????? ??????????? pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/TVMczUWJVpk",
+      "captured_at": "2026-07-05T07:25:21.059997+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
+    },
+    {
+      "id": "guide_video_troubleshooting",
+      "label": "???????????? ??????????? POSPal",
+      "norm_label": "???????????? ??????????? pospal",
+      "file_type": "concept",
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "source_url": "https://youtu.be/VaTsP1x8gWk",
+      "captured_at": "2026-07-05T07:25:21.059999+00:00",
+      "author": "POSPal",
+      "contributor": null,
+      "community": 1
     }
   ],
   "links": [
@@ -6426,6 +6531,206 @@
       "weight": 1.0,
       "source": "mobile_viewport_density_fix",
       "target": "prototype_homepage_v3"
+    },
+    {
+      "source": "guide_video_catalog",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guides/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_catalog",
+      "target": "simple_guides_surface",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "guides/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_academy",
+      "target": "guide_video_catalog",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_printer_setup",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_printer_setup",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_windows_installation",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_windows_installation",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_app_tour",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_app_tour",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_settings",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_settings",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_qr_menu",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_qr_menu",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_account",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_account",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_troubleshooting",
+      "target": "guide_video_catalog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_troubleshooting",
+      "target": "guides_page",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_qr_menu",
+      "target": "qr_menu_included",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_account",
+      "target": "direct_subscription_model",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "guide_video_troubleshooting",
+      "target": "download_page_handoff",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "static/js/academy.js",
+      "source_location": null,
+      "weight": 1.0
     }
   ],
   "hyperedges": [
