@@ -114,15 +114,21 @@
   }
 
   function guideNav() {
-    return guides.map((guide, index) => `
+    return guides.map((guide, index) => {
+      const position = index + 1;
+      const isCurrent = guide.slug === current.slug;
+      const duration = guide.duration === "Βίντεο" ? "Οδηγός βίντεο" : `Βίντεο · ${guide.duration}`;
+
+      return `
       <li class="${guide.slug === current.slug ? "is-current" : ""}">
-        <a href="${guide.url}"${guide.slug === current.slug ? ' aria-current="page"' : ""}>
-          <b>${String(index + 1).padStart(2, "0")}</b>
+        <a href="${guide.url}" aria-label="Βίντεο ${position} από ${guides.length}: ${escapeText(guide.shortTitle)}. ${escapeText(duration)}"${isCurrent ? ' aria-current="page"' : ""}>
+          <b>${String(position).padStart(2, "0")}</b>
           <span>${escapeText(guide.shortTitle)}</span>
-          <small>${guide.duration === "Βίντεο" ? "Οδηγός βίντεο" : `Βίντεο · ${escapeText(guide.duration)}`}</small>
+          <small>${escapeText(duration)}</small>
         </a>
       </li>
-    `).join("");
+    `;
+    }).join("");
   }
 
   app.innerHTML = `
@@ -183,4 +189,13 @@
       </div>
     </footer>
   `;
+
+  requestAnimationFrame(() => {
+    const guideList = app.querySelector(".academy-guide-list");
+    const currentGuide = guideList?.querySelector(".is-current");
+    if (!guideList || !currentGuide) return;
+
+    guideList.scrollLeft =
+      currentGuide.offsetLeft - (guideList.clientWidth - currentGuide.clientWidth) / 2;
+  });
 })();
