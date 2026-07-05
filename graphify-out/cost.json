@@ -1,0 +1,32 @@
+{
+  "runs": [
+    {
+      "date": "2026-07-05T05:55:27.124485+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 54,
+      "mode": "structural-code-only"
+    },
+    {
+      "date": "2026-07-05T05:57:03.503732+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 54,
+      "mode": "structural-code-only"
+    },
+    {
+      "date": "2026-07-05T06:10:57.768440+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 54
+    },
+    {
+      "date": "2026-07-05T06:12:13.792778+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 52
+    }
+  ],
+  "total_input_tokens": 0,
+  "total_output_tokens": 0
+}

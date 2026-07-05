@@ -1,0 +1,272 @@
+{
+  "assets/desktop-support.js": {
+    "mtime": 1771173898.668126,
+    "ast_hash": "c673d3b24a6794b4da03eb8aa147e35f",
+    "semantic_hash": "c673d3b24a6794b4da03eb8aa147e35f"
+  },
+  "package.json": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "c1019474283b535714aeb3abedc8908b",
+    "semantic_hash": "c1019474283b535714aeb3abedc8908b"
+  },
+  "prototype/homepage-v3/motion.js": {
+    "mtime": 1782627927.8918886,
+    "ast_hash": "10576e7c1a1194490a23f2717f552ace",
+    "semantic_hash": "10576e7c1a1194490a23f2717f552ace"
+  },
+  "static/js/academy-progress.js": {
+    "mtime": 1774291123.9680572,
+    "ast_hash": "4515f6a2753350ecf8c55554165f4e30",
+    "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
+  },
+  "static/js/academy.js": {
+    "mtime": 1782627927.897927,
+    "ast_hash": "0ad70033498bdb677e3caf20b5c37634",
+    "semantic_hash": "0ad70033498bdb677e3caf20b5c37634"
+  },
+  "static/js/decision-pages.js": {
+    "mtime": 1774739191.1576633,
+    "ast_hash": "2dafcdc6e03a41e214ea2a1ab6a6e0c3",
+    "semantic_hash": "2dafcdc6e03a41e214ea2a1ab6a6e0c3"
+  },
+  "static/js/ga-consent.js": {
+    "mtime": 1782627927.897927,
+    "ast_hash": "d950b954b3aebb919f21c1170bd9969a",
+    "semantic_hash": "d950b954b3aebb919f21c1170bd9969a"
+  },
+  "static/js/ga-events.js": {
+    "mtime": 1782629222.8973727,
+    "ast_hash": "4d3df5adecea77348c510d17439e4ee0",
+    "semantic_hash": "4d3df5adecea77348c510d17439e4ee0"
+  },
+  "static/js/guides-curriculum.js": {
+    "mtime": 1774291123.9740572,
+    "ast_hash": "49b5a7e5b7bdfc3a1c87698e4533bf20",
+    "semantic_hash": "49b5a7e5b7bdfc3a1c87698e4533bf20"
+  },
+  "static/js/guides-journey.js": {
+    "mtime": 1774291123.9740572,
+    "ast_hash": "53eaf7ad4d9c545293c47c84e667a160",
+    "semantic_hash": "53eaf7ad4d9c545293c47c84e667a160"
+  },
+  "static/js/home-motion.js": {
+    "mtime": 1782627927.8989286,
+    "ast_hash": "ff9fcf00a2071693e71f9dc0ce77bde6",
+    "semantic_hash": "ff9fcf00a2071693e71f9dc0ce77bde6"
+  },
+  "static/js/qrcode.min.js": {
+    "mtime": 1762090673.1238184,
+    "ast_hash": "517b55d3688ce9ef1085a3d9632bcb97",
+    "semantic_hash": "517b55d3688ce9ef1085a3d9632bcb97"
+  },
+  "static/pricing.js": {
+    "mtime": 1764344258.8328414,
+    "ast_hash": "e3e5954b7721dac89427874ae7ad5752",
+    "semantic_hash": "e3e5954b7721dac89427874ae7ad5752"
+  },
+  "static/vendor/tailwindcdn.js": {
+    "mtime": 1762090779.415601,
+    "ast_hash": "7a614b9a197e532c00d09a23b0996b5f",
+    "semantic_hash": "7a614b9a197e532c00d09a23b0996b5f"
+  },
+  ".agents/product-marketing.md": {
+    "mtime": 1782627926.8604274,
+    "ast_hash": "a30e738599b19654ddc937bb40c2808e",
+    "semantic_hash": "a30e738599b19654ddc937bb40c2808e"
+  },
+  ".github/workflows/static.yml": {
+    "mtime": 1783182882.0768602,
+    "ast_hash": "3a88d09aac142787e0bab8b7e80bb610",
+    "semantic_hash": "3a88d09aac142787e0bab8b7e80bb610"
+  },
+  ".impeccable/critique/2026-06-22T15-08-59Z__prototype-homepage-v3-index-html.md": {
+    "mtime": 1782627926.8625047,
+    "ast_hash": "f332d58b97388dfdac0e7ba68e9d4255",
+    "semantic_hash": "f332d58b97388dfdac0e7ba68e9d4255"
+  },
+  "AGENTS.md": {
+    "mtime": 1783230855.301978,
+    "ast_hash": "5dcfd4c9275414d7aa71b57d2d564f1f",
+    "semantic_hash": "5dcfd4c9275414d7aa71b57d2d564f1f"
+  },
+  "CONTEXT.md": {
+    "mtime": 1783183867.9405577,
+    "ast_hash": "8083b0a49e670d05f5e1634f94d25f66",
+    "semantic_hash": "8083b0a49e670d05f5e1634f94d25f66"
+  },
+  "MARKETING_PLAN.md": {
+    "mtime": 1783183867.939553,
+    "ast_hash": "f45a3e351718cc613743378fec91708d",
+    "semantic_hash": "f45a3e351718cc613743378fec91708d"
+  },
+  "PRODUCT.md": {
+    "mtime": 1782627926.8650556,
+    "ast_hash": "b22cdfe4a8d657e2154fbaf7f54ae73d",
+    "semantic_hash": "b22cdfe4a8d657e2154fbaf7f54ae73d"
+  },
+  "README.md": {
+    "mtime": 1782627926.8650556,
+    "ast_hash": "756886b331efdc8aff8c9d7bd8e9c937",
+    "semantic_hash": "756886b331efdc8aff8c9d7bd8e9c937"
+  },
+  "SEO_OPPORTUNITIES.md": {
+    "mtime": 1783183867.9415972,
+    "ast_hash": "49a8ee3544dc813366e187b669d2ea51",
+    "semantic_hash": "49a8ee3544dc813366e187b669d2ea51"
+  },
+  "USER_PREFERENCES.md": {
+    "mtime": 1774713805.079326,
+    "ast_hash": "27ac033294d0c066bd79da669b72a91c",
+    "semantic_hash": "27ac033294d0c066bd79da669b72a91c"
+  },
+  "asyrmati-paraggeliolipsia.html": {
+    "mtime": 1783183867.943331,
+    "ast_hash": "882622c477c0e00dc5bf1539bd662352",
+    "semantic_hash": "882622c477c0e00dc5bf1539bd662352"
+  },
+  "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
+    "mtime": 1782627926.8684068,
+    "ast_hash": "68e9ed434ad2e224d72ccd54b1f3a1ae",
+    "semantic_hash": "68e9ed434ad2e224d72ccd54b1f3a1ae"
+  },
+  "docs/redesign/academy-plan.md": {
+    "mtime": 1783230975.1205812,
+    "ast_hash": "c8535e83cf30ff4ed25ada279a0540a2",
+    "semantic_hash": "c8535e83cf30ff4ed25ada279a0540a2"
+  },
+  "docs/redesign/academy-technical-seo-audit.md": {
+    "mtime": 1782627926.869549,
+    "ast_hash": "42e9b06afe01d8219514c59d20fba5e9",
+    "semantic_hash": "42e9b06afe01d8219514c59d20fba5e9"
+  },
+  "docs/redesign/homepage-concepts.md": {
+    "mtime": 1783183867.9479601,
+    "ast_hash": "951993e10fc8fae329c7563b635ff101",
+    "semantic_hash": "951993e10fc8fae329c7563b635ff101"
+  },
+  "docs/redesign/homepage-design-brief.md": {
+    "mtime": 1783183867.946857,
+    "ast_hash": "b6dd2eb681e4c2c76f6d5621b289f05f",
+    "semantic_hash": "b6dd2eb681e4c2c76f6d5621b289f05f"
+  },
+  "docs/redesign/information-architecture-and-onboarding.md": {
+    "mtime": 1783183867.9479601,
+    "ast_hash": "f8eedb02b0b24944857ef31d3242111c",
+    "semantic_hash": "f8eedb02b0b24944857ef31d3242111c"
+  },
+  "docs/redesign/probes/living-order-route-inventory.md": {
+    "mtime": 1783230983.417359,
+    "ast_hash": "c7522ecafeef88d156b7e0e12b07806a",
+    "semantic_hash": "c7522ecafeef88d156b7e0e12b07806a"
+  },
+  "docs/redesign/search-console-intent-map-2026-06-23.md": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "7d8cb9dff12f29d9d6340b175f03b3a3",
+    "semantic_hash": "7d8cb9dff12f29d9d6340b175f03b3a3"
+  },
+  "docs/redesign/technical-seo-baseline-2026-06-19.md": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "88b60996f3a8433c56bbe964fc6625c3",
+    "semantic_hash": "88b60996f3a8433c56bbe964fc6625c3"
+  },
+  "download/index.html": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "7596e57e1c1885a42169f14de07f2a74",
+    "semantic_hash": "7596e57e1c1885a42169f14de07f2a74"
+  },
+  "google768162376caa4dfd.html": {
+    "mtime": 1762090813.5857258,
+    "ast_hash": "f6fb6e619e5507813de0bb130c853004",
+    "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
+  },
+  "guides/index.html": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "a57a7d249dead99670fc62e603853e28",
+    "semantic_hash": "a57a7d249dead99670fc62e603853e28"
+  },
+  "guides/internal/GA4_SETUP_CHECKLIST.md": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "4c36d0a1bee49032fb2e49083398262e",
+    "semantic_hash": "4c36d0a1bee49032fb2e49083398262e"
+  },
+  "guides/internal/SPECIALIST_GUIDE_TEMPLATE.md": {
+    "mtime": 1774291123.8953903,
+    "ast_hash": "3b141ba379b109954c9f6f9429c1ba86",
+    "semantic_hash": "3b141ba379b109954c9f6f9429c1ba86"
+  },
+  "guides/internal/UTM_GOVERNANCE.md": {
+    "mtime": 1772208386.5742924,
+    "ast_hash": "0b44885978c6d078c303568e2fc830fb",
+    "semantic_hash": "0b44885978c6d078c303568e2fc830fb"
+  },
+  "index.html": {
+    "mtime": 1783183867.9415972,
+    "ast_hash": "644a81efa6b0a220c275216e4b8a840b",
+    "semantic_hash": "644a81efa6b0a220c275216e4b8a840b"
+  },
+  "paraggelio-lipsia-gia-beach-bar.html": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "58f56d45f64b2dc1552ae408140192f9",
+    "semantic_hash": "58f56d45f64b2dc1552ae408140192f9"
+  },
+  "pda-gia-kafeteries.html": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "d56efcc8227b3121f6941c08c678fb20",
+    "semantic_hash": "d56efcc8227b3121f6941c08c678fb20"
+  },
+  "pda-gia-servitoro/index.html": {
+    "mtime": 1782627927.882365,
+    "ast_hash": "19272960aef9c19272c57a67a8394917",
+    "semantic_hash": "19272960aef9c19272c57a67a8394917"
+  },
+  "pda-pos-leitourgei.html": {
+    "mtime": 1782627927.8907685,
+    "ast_hash": "baf7db7e46e4adfd7aedfe10b947622b",
+    "semantic_hash": "baf7db7e46e4adfd7aedfe10b947622b"
+  },
+  "pda-ti-einai.html": {
+    "mtime": 1782627927.8907685,
+    "ast_hash": "ff12e37ef2ba1438fa17d06d17bc6a6d",
+    "semantic_hash": "ff12e37ef2ba1438fa17d06d17bc6a6d"
+  },
+  "prototype/README.md": {
+    "mtime": 1782627927.8918886,
+    "ast_hash": "eb3e3f7fe3853c85300a954b96a6a7b7",
+    "semantic_hash": "eb3e3f7fe3853c85300a954b96a6a7b7"
+  },
+  "robots.txt": {
+    "mtime": 1771173649.857075,
+    "ast_hash": "3ceb0a1f5a64a2632d96000de994ba45",
+    "semantic_hash": "3ceb0a1f5a64a2632d96000de994ba45"
+  },
+  "short.md": {
+    "mtime": 1782627927.8939009,
+    "ast_hash": "6d790bb9ff3936c31530c3d6e057f779",
+    "semantic_hash": "6d790bb9ff3936c31530c3d6e057f779"
+  },
+  "systima-paraggeliolipsias.html": {
+    "mtime": 1783183867.9443402,
+    "ast_hash": "6d87173c4a5517920b111f3f5c3ef662",
+    "semantic_hash": "6d87173c4a5517920b111f3f5c3ef662"
+  },
+  "times.html": {
+    "mtime": 1783183867.9458454,
+    "ast_hash": "7082b710de77be585e734e3268806ec8",
+    "semantic_hash": "7082b710de77be585e734e3268806ec8"
+  },
+  "static/img/pospal-desktop-order.png": {
+    "mtime": 1782627927.8974218,
+    "ast_hash": "1c2574e25332bce8d63bd4b25236aa29",
+    "semantic_hash": "1c2574e25332bce8d63bd4b25236aa29"
+  },
+  "static/qr-menu-live-code.png": {
+    "mtime": 1782627927.89993,
+    "ast_hash": "2d3aebb3c99a50ec9aa3e0585ed48c4b",
+    "semantic_hash": "2d3aebb3c99a50ec9aa3e0585ed48c4b"
+  },
+  "static/qr-menu-live-preview.png": {
+    "mtime": 1782627927.89993,
+    "ast_hash": "7a6376803f96c6e20d391294bb34ceb8",
+    "semantic_hash": "7a6376803f96c6e20d391294bb34ceb8"
+  }
+}

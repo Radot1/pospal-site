@@ -73,6 +73,13 @@ Guidance for agents working on the POSPal marketing site.
 - Do not reference missing assets.
 - Prefer static/ for new assets.
 - Keep links and sitemap updated when pages change.
+- Do not commit generated screenshots, Playwright captures, design probes, or review artifacts. Use `tmp/` for temporary verification output and delete it before finishing.
+- Public/live image assets must live under `static/`. `docs/redesign/captures/` is not an asset library; keep only already-referenced legacy files there until they are moved to `static/`.
+
+## Repository hygiene
+- Keep the repo lean. Do not add screenshot archives, duplicate design iterations, or generated review outputs to Git.
+- Before finishing cleanup or structural repo changes, update `graphify-out/` so future agents query the current project shape.
+- If new generated-artifact locations appear, add them to `.gitignore` in the same change that introduces them.
 
 ## Workflow constraints
 - Do not edit the website without explicit approval, except under the redesign branch mandate below.

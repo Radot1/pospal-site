@@ -285,8 +285,7 @@ The selected prototype direction lives in `prototype/academy-odoo-lab/`.
 
 - Winning variant: `?variant=classroom`.
 - Shape: Odoo-inspired course/player environment with top course bar, left lesson outline, main video lesson, manual completion, and next action.
-- Desktop proof: `docs/redesign/captures/academy-odoo-classroom-localhost-1440.png`.
-- Mobile proof: `docs/redesign/captures/academy-odoo-classroom-390-cdp.png`.
+- Historical desktop/mobile proof screenshots were removed during repository cleanup; regenerate temporary captures under `tmp/` if this prototype is reopened.
 - The prototype is intentionally `noindex, nofollow`.
 - Completion is manual and stored in `localStorage`.
 - Public copy is Greek; internal notes remain English.

@@ -189,13 +189,7 @@ Checks passed:
 - pause, resume, completion, and replay behavior;
 - Git whitespace validation.
 
-Final visual captures are stored as:
-
-- `docs/redesign/captures/homepage-v3-route-delivery-1440.png`
-- `docs/redesign/captures/homepage-v3-route-delivery-1024.png`
-- `docs/redesign/captures/homepage-v3-route-delivery-768.png`
-- `docs/redesign/captures/homepage-v3-route-delivery-375.png`
-- `docs/redesign/captures/homepage-v3-route-delivery-320.png`
+Historical final visual captures were removed during repository cleanup. Regenerate temporary captures under `tmp/` if this route direction is reopened.
 
 ## Remaining Work
 
