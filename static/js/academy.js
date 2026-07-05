@@ -6,6 +6,7 @@
       title: "Τι χρειάζεσαι πριν εγκαταστήσεις το POSPal",
       shortTitle: "Πριν την εγκατάσταση",
       duration: "6 λεπτά",
+      navMeta: "Εξοπλισμός · 6 λεπτά",
       video: "https://www.youtube.com/embed/p0FNRfv0vVo",
       youtube: "https://youtu.be/p0FNRfv0vVo",
       intro: "Έλεγξε πρώτα τον υπολογιστή, τον εκτυπωτή, το τοπικό δίκτυο και τις συσκευές που θα χρησιμοποιεί η ομάδα.",
@@ -16,6 +17,7 @@
       title: "Εγκατάσταση POSPal σε Windows",
       shortTitle: "Εγκατάσταση σε Windows",
       duration: "8 λεπτά",
+      navMeta: "Εγκατάσταση · 8 λεπτά",
       video: "https://www.youtube.com/embed/2XJvWmfJWwk",
       youtube: "https://youtu.be/2XJvWmfJWwk",
       intro: "Κατέβασε το αρχείο εγκατάστασης, άνοιξέ το στον υπολογιστή της επιχείρησης και έλεγξε ότι το POSPal ξεκινά κανονικά.",
@@ -25,8 +27,9 @@
       slug: "app-tour",
       url: "/guides/?guide=app-tour",
       title: "Περιήγηση στο POSPal",
-      shortTitle: "Περιήγηση",
+      shortTitle: "Πρώτη περιήγηση",
       duration: "Βίντεο",
+      navMeta: "Βασική χρήση",
       video: "https://www.youtube.com/embed/POZUAfynPYE",
       youtube: "https://youtu.be/POZUAfynPYE",
       intro: "Δες το βασικό περιβάλλον του POSPal, πώς είναι οργανωμένες οι λειτουργίες και πώς κινείται ο χρήστης μέσα στην εφαρμογή.",
@@ -35,8 +38,9 @@
       slug: "settings",
       url: "/guides/?guide=settings",
       title: "Ρυθμίσεις του POSPal",
-      shortTitle: "Ρυθμίσεις",
+      shortTitle: "Ρυθμίσεις POSPal",
       duration: "Βίντεο",
+      navMeta: "Εκτυπωτές και συσκευές",
       video: "https://www.youtube.com/embed/IY2f3hRGlH8",
       youtube: "https://youtu.be/IY2f3hRGlH8",
       intro: "Δες τις βασικές ρυθμίσεις της εφαρμογής, όπως εκτυπωτές, συσκευή, λειτουργίες, αποδείξεις και επιλογές διαχείρισης.",
@@ -47,6 +51,7 @@
       title: "QR menu POSPal",
       shortTitle: "QR menu",
       duration: "Βίντεο",
+      navMeta: "Μενού για πελάτες",
       video: "https://www.youtube.com/embed/AvokJphL4zk",
       youtube: "https://youtu.be/AvokJphL4zk",
       intro: "Δες το QR menu του POSPal, τι εμφανίζεται στον πελάτη και ποιες λειτουργίες προσφέρει χωρίς επιπλέον κόστος.",
@@ -57,6 +62,7 @@
       title: "Διαχείριση λογαριασμού POSPal",
       shortTitle: "Λογαριασμός",
       duration: "Βίντεο",
+      navMeta: "Συνδρομή και άδεια",
       video: "https://www.youtube.com/embed/TVMczUWJVpk",
       youtube: "https://youtu.be/TVMczUWJVpk",
       intro: "Δες πού βρίσκονται οι πληροφορίες άδειας, η κατάσταση της συνδρομής και το portal χρέωσης για αλλαγές ή ακύρωση.",
@@ -65,8 +71,9 @@
       slug: "troubleshooting",
       url: "/guides/?guide=troubleshooting",
       title: "Αντιμετώπιση προβλημάτων POSPal",
-      shortTitle: "Προβλήματα",
+      shortTitle: "Λύση προβλημάτων",
       duration: "Βίντεο",
+      navMeta: "Βασικοί έλεγχοι",
       video: "https://www.youtube.com/embed/VaTsP1x8gWk",
       youtube: "https://youtu.be/VaTsP1x8gWk",
       intro: "Δες βασικές λύσεις για συνηθισμένα θέματα, όπως σύνδεση κινητού ή tablet, αλλαγή θύρας, πρόσβαση και αναφορά προβλήματος.",
@@ -117,14 +124,14 @@
     return guides.map((guide, index) => {
       const position = index + 1;
       const isCurrent = guide.slug === current.slug;
-      const duration = guide.duration === "Βίντεο" ? "Οδηγός βίντεο" : `Βίντεο · ${guide.duration}`;
+      const navMeta = guide.navMeta || (guide.duration === "Βίντεο" ? "Οδηγός βίντεο" : `Βίντεο · ${guide.duration}`);
 
       return `
       <li class="${guide.slug === current.slug ? "is-current" : ""}">
-        <a href="${guide.url}" aria-label="Βίντεο ${position} από ${guides.length}: ${escapeText(guide.shortTitle)}. ${escapeText(duration)}"${isCurrent ? ' aria-current="page"' : ""}>
+        <a href="${guide.url}" aria-label="Βίντεο ${position} από ${guides.length}: ${escapeText(guide.shortTitle)}. ${escapeText(navMeta)}"${isCurrent ? ' aria-current="page"' : ""}>
           <b>${String(position).padStart(2, "0")}</b>
           <span>${escapeText(guide.shortTitle)}</span>
-          <small>${escapeText(duration)}</small>
+          <small>${escapeText(navMeta)}</small>
         </a>
       </li>
     `;
