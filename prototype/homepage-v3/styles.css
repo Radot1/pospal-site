@@ -115,8 +115,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .node-phone{left:4%;top:38%}
 .device-toast{position:absolute;z-index:4;left:50%;bottom:1rem;display:flex;align-items:center;gap:.35rem;width:max-content;max-width:calc(100% - 1rem);padding:.45rem .55rem;border:1px solid #9fdab4;border-radius:7px;background:#f4fff7;color:#075c2a;font-size:.66rem;font-weight:800;box-shadow:0 5px 8px #0004;transform:translateX(-50%)}
 .device-toast span{display:grid;place-items:center;width:1.05rem;height:1.05rem;border-radius:50%;background:var(--green-dark);color:#fff;font-size:.66rem}
-.sync-badge{position:absolute;z-index:4;left:36%;top:49%;display:grid;place-items:center;width:96px;height:96px;border:1px solid #4a735b;border-radius:50%;background:#0d2819;color:var(--green);box-shadow:0 0 0 7px #35ed7812,0 8px 12px #0005}
-.sync-icon{font-size:2rem;line-height:1}
 .node-laptop{left:45%;top:20%;width:430px}
 .laptop-frame{position:relative}
 .laptop-screen{padding:.55rem;border:9px solid #050906;border-radius:12px;box-shadow:0 30px 70px #0009,0 0 0 1px #35ed781a}
@@ -288,7 +286,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media (prefers-reduced-motion:no-preference){
   .route-theatre.is-running .route-progress{animation:route-progress 8s linear infinite}
   .route-theatre.is-running .route-pulse{animation:route-pulse 8s linear infinite}
-  .route-theatre.is-running .sync-badge{animation:sync-pop 8s var(--ease) infinite}
   .route-theatre.is-running .ticket{animation:ticket-print 8s var(--ease) infinite}
   .route-theatre.is-running .order-token{animation:order-token 8s var(--ease) infinite}
   .route-theatre.is-running .device-toast{animation:device-toast 8s var(--ease) infinite}
@@ -299,7 +296,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .route-theatre.is-paused *{animation-play-state:paused!important}
   @keyframes route-progress{0%,8%{stroke-dashoffset:1094}88%,100%{stroke-dashoffset:0}}
   @keyframes route-pulse{0%,8%{stroke-dashoffset:0;opacity:0}14%{opacity:1}84%{stroke-dashoffset:-1000;opacity:1}90%,100%{stroke-dashoffset:-1094;opacity:0}}
-  @keyframes sync-pop{0%,42%,100%{transform:scale(.96);box-shadow:0 0 0 4px #35ed7810,0 8px 12px #0005}52%,68%{transform:scale(1.06);box-shadow:0 0 0 13px #35ed7826,0 8px 12px #0005}}
   @keyframes ticket-print{0%,70%{transform:translateY(-8px) rotate(1.5deg)}82%,100%{transform:translateY(0) rotate(1.5deg)}}
   @keyframes order-token{
     0%,12%{transform:translate3d(0,0,0);background:#ffb21a;border-color:#8b7130}
@@ -327,7 +323,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .node-phone{left:2%;top:26%}
   .phone-frame{width:170px}
   .phone-frame img{height:290px}
-  .sync-badge{left:40%;top:38%;width:88px;height:88px}
   .node-laptop{left:30%;top:52%;width:min(430px,56vw)}
   .laptop-screen img{height:245px}
   .node-kitchen{right:1%;top:23%;width:175px}
@@ -382,13 +377,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .node-phone{order:4}
   .chip-device{order:5}
   .chip-local{order:6}
-  .sync-badge{order:7}
-  .node-laptop{order:8}
-  .chip-ready{order:9}
-  .node-kitchen{order:10}
-  .node,.sync-badge{position:relative;inset:auto;left:auto;right:auto;top:auto;grid-column:2;width:100%;justify-self:stretch}
+  .node-laptop{order:7}
+  .chip-ready{order:8}
+  .node-kitchen{order:9}
+  .node{position:relative;inset:auto;left:auto;right:auto;top:auto;grid-column:2;width:100%;justify-self:stretch}
   .node figcaption{justify-content:center;margin-bottom:.7rem}
-  .sync-badge{width:82px;height:82px;justify-self:center;transform:none}
   .phone-frame{margin-inline:auto;width:190px}
   .phone-frame img{height:330px}
   .offline-mark{right:calc(50% - 113px)}

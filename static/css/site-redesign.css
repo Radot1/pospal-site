@@ -103,12 +103,6 @@ body.download-page {
   color: var(--green-dark);
 }
 
-.download-page .header-download {
-  color: var(--ink);
-  background: var(--green);
-  border-color: transparent;
-}
-
 .download-page .mobile-menu summary {
   color: var(--ink);
   border-color: var(--ink);
@@ -137,6 +131,7 @@ a {
 button,
 summary,
 a {
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1274,23 +1269,6 @@ p {
   letter-spacing: 0.025em;
 }
 
-.download-product-mark {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.4rem;
-  color: var(--ink);
-  font: 850 2rem/1 var(--display);
-}
-
-.download-product-mark img {
-  border-radius: 10px;
-}
-
-.download-product-mark b {
-  color: var(--green-dark);
-}
-
 .download-simple h1 {
   max-width: 14ch;
   margin-bottom: 1rem;
@@ -1335,19 +1313,6 @@ p {
   color: #124b27;
   font-size: 0.78rem;
   font-weight: 650;
-}
-
-.download-os {
-  display: inline-flex;
-  align-items: center;
-  min-height: 58px;
-  padding: 0 1rem;
-  color: var(--ink);
-  border: 1px solid #9ea9a0;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.42);
-  font-size: 0.9rem;
-  font-weight: 800;
 }
 
 .download-simple-facts {
@@ -1426,6 +1391,7 @@ p {
 }
 
 .download-mobile-note {
+  display: none;
   color: #f8fff9;
   background: var(--ink-soft);
   border-top: 1px solid var(--line-dark);
@@ -1495,7 +1461,8 @@ p {
 }
 
 .download-page .download-simple-facts {
-  color: var(--muted-light);
+  color: #26342b;
+  font-weight: 650;
 }
 
 .download-page .download-simple-facts li::before {
@@ -1550,29 +1517,6 @@ p {
 .download-page .download-monitor img {
   border: 0;
   border-radius: 5px;
-}
-
-.download-file-strip {
-  justify-self: end;
-  display: grid;
-  gap: 0.12rem;
-  width: min(300px, calc(100% - 1.2rem));
-  margin-top: 0.85rem;
-  padding: 0.8rem 0.9rem;
-  color: var(--ink);
-  background: var(--green);
-  box-shadow: 7px 7px 0 #173620;
-  font-size: 0.82rem;
-  font-weight: 850;
-}
-
-.download-file-strip span {
-  overflow-wrap: anywhere;
-}
-
-.download-file-strip strong {
-  color: #124b27;
-  font-size: 0.72rem;
 }
 
 .download-page .download-small-print {
@@ -2083,8 +2027,16 @@ p {
 
 @media (max-width: 980px) {
 
+  .download-mobile-note {
+    display: block;
+  }
+
   .desktop-nav {
     display: none;
+  }
+
+  .download-page .mobile-menu {
+    display: block;
   }
 
   .header-download {
@@ -2346,16 +2298,6 @@ p {
     display: none;
   }
 
-  .download-product-mark {
-    margin-bottom: 1.4rem;
-    font-size: 1.95rem;
-  }
-
-  .download-product-mark img {
-    width: 48px;
-    height: 48px;
-  }
-
   .download-simple h1 {
     font-size: clamp(1.85rem, 8.5vw, 2.35rem);
   }
@@ -2365,13 +2307,8 @@ p {
     display: grid;
   }
 
-  .download-install-button,
-  .download-os {
+  .download-install-button {
     width: 100%;
-  }
-
-  .download-page .download-os {
-    display: none;
   }
 
   .download-app-visual {
@@ -2394,13 +2331,6 @@ p {
 
   .download-monitor img {
     max-height: 260px;
-  }
-
-  .download-file-strip {
-    min-width: 0;
-    width: 100%;
-    margin-top: 0.75rem;
-    box-shadow: 5px 5px 0 #173620;
   }
 
   .download-page .download-next-step a {
