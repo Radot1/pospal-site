@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-*Last updated: 2026-06-19*
+*Last updated: 2026-08-02*
 
 ## Product Overview
 
@@ -12,7 +12,7 @@
 
 **Product type:** Locally installed Windows software with a direct monthly subscription and hosted supporting services. Do not describe it as fully self-hosted until the complete architecture supports that claim.
 
-**Business model:** EUR 18.90 per month after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
+**Business model:** EUR 23.90 per month after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
 
 ## Target Audience
 
@@ -38,7 +38,7 @@
 
 | Persona | Cares about | Challenge | Value we promise |
 |---------|-------------|-----------|------------------|
-| Owner / financial buyer | Clear monthly cost, control, cancellation | Opaque pricing and dependency on a distributor | EUR 18.90/month, direct subscription, cancel anytime |
+| Owner / financial buyer | Clear monthly cost, control, cancellation | Opaque pricing and dependency on a distributor | EUR 23.90/month, direct subscription, cancel anytime |
 | Manager / operator | Reliable shift flow and fast setup | Fragmented tools and unclear first steps | One workflow for tables, simple mode, kitchen flow, and QR menu |
 | Staff user | Fast, understandable order entry | Slow or confusing tools during service | Modern mobile/tablet order-taking with a shared workflow |
 | Setup helper / technical influencer | Compatibility and troubleshooting clarity | Uncertainty about Windows, printer, and network setup | Concrete prerequisites, guides, expected outcomes, and escalation |
@@ -72,7 +72,7 @@ Public marketing copy must not name competitors.
 
 **Key differentiators:**
 
-- Transparent EUR 18.90 monthly price.
+- Transparent EUR 23.90 monthly price.
 - Thirty-day trial without a card or personal information.
 - Direct subscription without a distributor or maintenance plan.
 - Table mode, simple mode, kitchen flow, and QR menu in one package.
@@ -141,7 +141,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 ## Proof Points
 
-**Verified product proof:** EUR 18.90/month; 30-day no-card/no-personal-information trial; table mode; simple mode; QR menu; Windows installer; direct subscription; cancel anytime; works alongside an existing fiscal POS.
+**Verified product proof:** EUR 23.90/month; 30-day no-card/no-personal-information trial; table mode; simple mode; QR menu; Windows installer; direct subscription; cancel anytime; works alongside an existing fiscal POS.
 
 **Available evidence:** Real application screens, a small embedded proof/demo, setup guides, pricing, and the public download flow.
 
@@ -149,7 +149,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 | Value theme | Current proof |
 |-------------|---------------|
-| Transparent cost | Public EUR 18.90/month price and trial terms |
+| Transparent cost | Public EUR 23.90/month price and trial terms |
 | Direct access | Public Windows installer and direct subscription |
 | Complete workflow | Table mode, simple mode, QR menu, and kitchen flow |
 | Honest boundary | Explicitly not a fiscal POS or cash register |

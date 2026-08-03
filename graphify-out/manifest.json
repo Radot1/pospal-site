@@ -20,9 +20,9 @@
     "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
   },
   "static/js/academy.js": {
-    "mtime": 1782627927.897927,
-    "ast_hash": "0ad70033498bdb677e3caf20b5c37634",
-    "semantic_hash": "0ad70033498bdb677e3caf20b5c37634"
+    "mtime": 1783238097.3453782,
+    "ast_hash": "83acfd3032e1d4b2b6bf7ef8962a460c",
+    "semantic_hash": "83acfd3032e1d4b2b6bf7ef8962a460c"
   },
   "static/js/decision-pages.js": {
     "mtime": 1774739191.1576633,
@@ -70,9 +70,9 @@
     "semantic_hash": "7a614b9a197e532c00d09a23b0996b5f"
   },
   ".agents/product-marketing.md": {
-    "mtime": 1782627926.8604274,
-    "ast_hash": "a30e738599b19654ddc937bb40c2808e",
-    "semantic_hash": "a30e738599b19654ddc937bb40c2808e"
+    "mtime": 1785689948.4038012,
+    "ast_hash": "ab68cda23a6051e4a0cb336971cd5c49",
+    "semantic_hash": "ab68cda23a6051e4a0cb336971cd5c49"
   },
   ".github/workflows/static.yml": {
     "mtime": 1783182882.0768602,
@@ -170,9 +170,9 @@
     "semantic_hash": "88b60996f3a8433c56bbe964fc6625c3"
   },
   "download/index.html": {
-    "mtime": 1782627927.882365,
-    "ast_hash": "7596e57e1c1885a42169f14de07f2a74",
-    "semantic_hash": "7596e57e1c1885a42169f14de07f2a74"
+    "mtime": 1785687807.572347,
+    "ast_hash": "238bb70f92802c786e062d94664e0546",
+    "semantic_hash": "238bb70f92802c786e062d94664e0546"
   },
   "google768162376caa4dfd.html": {
     "mtime": 1762090813.5857258,
@@ -180,9 +180,9 @@
     "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
   },
   "guides/index.html": {
-    "mtime": 1782627927.882365,
-    "ast_hash": "a57a7d249dead99670fc62e603853e28",
-    "semantic_hash": "a57a7d249dead99670fc62e603853e28"
+    "mtime": 1783236214.480212,
+    "ast_hash": "cb1382e5a9f42c0b03b869981402a4d1",
+    "semantic_hash": "cb1382e5a9f42c0b03b869981402a4d1"
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {
     "mtime": 1782627927.882365,
@@ -200,9 +200,9 @@
     "semantic_hash": "0b44885978c6d078c303568e2fc830fb"
   },
   "index.html": {
-    "mtime": 1783183867.9415972,
-    "ast_hash": "644a81efa6b0a220c275216e4b8a840b",
-    "semantic_hash": "644a81efa6b0a220c275216e4b8a840b"
+    "mtime": 1785687342.633917,
+    "ast_hash": "6595388260fa62933fbef0a122802d54",
+    "semantic_hash": "6595388260fa62933fbef0a122802d54"
   },
   "paraggelio-lipsia-gia-beach-bar.html": {
     "mtime": 1782627927.882365,
@@ -268,5 +268,10 @@
     "mtime": 1782627927.89993,
     "ast_hash": "7a6376803f96c6e20d391294bb34ceb8",
     "semantic_hash": "7a6376803f96c6e20d391294bb34ceb8"
+  },
+  "docs/seo/post-redesign-evaluation-2026-08-02.md": {
+    "mtime": 1785690317.3247747,
+    "ast_hash": "937df9c0d36887b57b35ed3a00cb54c6",
+    "semantic_hash": "937df9c0d36887b57b35ed3a00cb54c6"
   }
 }
