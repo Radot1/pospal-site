@@ -37,7 +37,7 @@ Semrush is optional for competitor, backlink, keyword-volume, and SERP evidence.
 | --- | --- | --- |
 | 1. Measurement baseline | In progress | Matched GSC/GA4 periods, event inventory, and baseline scorecard |
 | 2. Technical health | Complete with open field-data inputs | Live crawl recorded; GSC coverage/CWV remain N/A |
-| 3. Search-performance diagnosis | Awaiting post-launch export | Baseline retained; brand/non-brand and intent-cluster deltas need fresh GSC data |
+| 3. Search-performance diagnosis | In progress; top-line imported | Matched query/page comparison is still needed for brand/non-brand and intent-cluster deltas |
 | 4. Query-to-page mapping | Complete provisionally | Ownership and overlap risks recorded; GSC query-by-page confirmation pending |
 | 5. On-page audits | Complete provisionally | Five priority pages scored; field data and exact SERP positions remain N/A |
 | 6. Architecture and authority | Complete provisionally | Internal-link map recorded; backlink export remains N/A |
@@ -87,8 +87,8 @@ Do not compare a complete period against a partial current period.
 | Source | Status | Evidence / limitation |
 | --- | --- | --- |
 | Pre-launch GSC export | Available | Measured; export ends 2026-06-21 |
-| Post-launch GSC export | N/A | No newer export found in the workspace or Downloads |
-| GA4 implementation | Available in code | Measured; property ID `G-F851JG8PL6` loads after consent |
+| Post-launch GSC export | Partially available | Measured; the 2026-08-02 three-month export supports a matched daily top-line, but not matched query/page deltas |
+| GA4 implementation | Defective | Measured; the custom `gtag()` wrapper queues Arrays instead of the required `arguments` object, so no GA4 collection request is sent |
 | GA4 report/export | N/A | No traffic or event export available locally |
 | Download event | Implemented | Measured; explicit installer clicks emit `download_click` |
 | Trial CTA event | Implemented | Measured; qualifying CTAs emit `trial_start_click` |
@@ -107,9 +107,9 @@ Do not compare a complete period against a partial current period.
 
 | Funnel stage | Primary metric | Current availability |
 | --- | --- | --- |
-| Search visibility | Non-brand impressions by intent cluster | Awaiting post-launch GSC export |
-| Ranking | Position by cluster and landing page | Awaiting post-launch GSC export |
-| Search appeal | CTR for queries in positions 3–15 | Awaiting post-launch GSC export |
+| Search visibility | Non-brand impressions by intent cluster | Top-line available; matched query comparison still required |
+| Ranking | Position by cluster and landing page | Aggregate trend available; matched page/query comparison still required |
+| Search appeal | CTR for queries in positions 3–15 | Aggregate trend available; matched query comparison still required |
 | Acquisition | Organic landing-page sessions | Awaiting GA4 export |
 | Product interest | `download_click` users and rate | Instrumented; awaiting GA4 export |
 | Onboarding interest | Guide entry and progress events | Instrumented; awaiting GA4 export |
@@ -200,9 +200,43 @@ Decision rules:
 | Download clicks rise while Search Console is flat | Redesign helped conversion rather than SEO |
 | No meaningful demand appears | Do not create a new page |
 
+### Keyword-quality validation gate
+
+GSC impressions are evidence that Google associates POSPal with a query, not proof that the query attracts a suitable buyer. A keyword or intent cluster must be tested on five dimensions before it becomes a growth target:
+
+| Dimension | Question | Evidence |
+| --- | --- | --- |
+| Product fit | Can POSPal truthfully satisfy the intent without implying fiscal-POS capabilities? | Product scope and actual features |
+| Buyer fit | Is the searcher plausibly a Greek hospitality owner, manager, or operator? | SERP intent and real customer language |
+| Demand | Does the cluster produce repeat impressions rather than isolated variants? | Matched GSC periods; optional third-party volume estimate |
+| Attainability | Are relevant product pages ranking, or is the SERP dominated by a different intent/category? | Current Greek SERP composition and ranking trend |
+| Business response | Does the landing page lead to pricing, guides, or installer interest? | GA4 landing-page and funnel events after tracking is repaired |
+
+Initial hypotheses, not final keyword decisions:
+
+- `pda σερβιτόρου`: strong product and buyer fit; validate download/guide response.
+- `σύστημα παραγγελιοληψίας`: commercially relevant but broad; validate whether searchers expect fiscal POS, delivery, or online ordering that POSPal does not provide.
+- `ασύρματη παραγγελιοληψία` and price variants: commercially promising; validate demand and attainable SERP position.
+- `pda τι είναι` and `pda πώς λειτουργεί`: informational acquisition terms; judge them by assisted movement toward product pages, not direct downloads alone.
+- Brand terms: protect and monitor, but do not count them as non-brand SEO growth.
+
+The first test batch will select one commercial cluster and one informational cluster. Each cluster receives one intended landing page, a written intent hypothesis, and a 28-day observation window. Success is evaluated through impressions, position, CTR, landing-page engagement, and download/guide actions. New pages are not justified by search volume alone.
+
 ### Current status
 
-The post-launch delta cannot be calculated responsibly without the new export. Public search results confirm that current PDA, pricing, generic ordering, wireless ordering, download, and guide pages are discoverable and have been crawled recently, so total crawl exclusion is not the leading diagnosis.
+The unfiltered three-month export dated 2026-08-02 supports a matched 28-day site-level comparison around the redesign. It does not contain period-by-period query or page columns, so it cannot yet identify which intent clusters or landing pages caused the change.
+
+| Period | Clicks | Impressions | CTR | Weighted position |
+| --- | ---: | ---: | ---: | ---: |
+| 2026-05-31 to 2026-06-27 | 45 | 1,780 | 2.53% | 9.08 |
+| 2026-06-28 to 2026-07-25 | 50 | 1,998 | 2.50% | 14.34 |
+| Change | +11.1% | +12.2% | -0.03 pp | -5.26 positions |
+
+Interpretation: the redesign period gained visibility and clicks, but click efficiency did not improve. The weaker aggregate position can be produced by new impressions at lower ranks, so it is not sufficient evidence of a broad ranking loss. A matched query/page comparison is required before changing content.
+
+The 2026-08-03 export is not suitable for the baseline because it is filtered to `Search appearance: Product snippets`; it records zero clicks and represents only that search feature.
+
+Public search results confirm that current PDA, pricing, generic ordering, wireless ordering, download, and guide pages are discoverable and have been crawled recently, so total crawl exclusion is not the leading diagnosis.
 
 Public results also continue to display some retired URLs that now return `404`. That strengthens the Phase 2 redirect priority.
 
@@ -478,8 +512,9 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 | Date | Finding | Evidence | Decision / next step |
 | --- | --- | --- | --- |
-| 2026-08-02 | No post-launch GSC export is locally available | Measured | Request matched Queries and Pages exports; continue with technical and structural checks |
-| 2026-08-02 | GA4 and key funnel events exist in code | Measured | Validate property configuration and obtain matched GA4 report |
+| 2026-08-03 | Three-month GSC export imported | Measured | Top-line post-launch clicks and impressions increased about 11% and 12%; request one matched comparison export to identify the responsible queries and pages |
+| 2026-08-03 | Product-snippet-filtered GSC export is unsuitable for the main baseline | Measured | Exclude it from overall growth conclusions |
+| 2026-08-03 | GA4 collection failure isolated to the custom `gtag()` queue wrapper | Measured A/B test | Replace Array queue entries with `arguments`, then verify Realtime before using GA4 for conversion strategy |
 | 2026-08-02 | GitHub asset totals cannot measure redesign lift alone | Measured | Use only as supporting download evidence, not attribution |
 | 2026-08-02 | €18.90 existed only in stale internal product context | Measured | Resolved: internal context corrected to verified €23.90 |
 | 2026-08-02 | Core pages are permanently locked | Repository rule | Diagnose them, but target unlocked acquisition pages unless the user explicitly replaces the lock |
@@ -493,4 +528,4 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 ## Next Update
 
-Import the post-launch GSC and GA4 evidence, then complete Phase 3 deltas and approve the Days 0–14 implementation batch. The first implementation priority is real legacy `301` redirects.
+Obtain one unfiltered Search Console comparison export for the last complete 28 days versus the previous 28 days, including Queries and Pages. Use it to complete the intent-cluster and landing-page deltas before selecting the first content change. Repair and verify GA4 separately before conversion conclusions are drawn.
