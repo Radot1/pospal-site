@@ -35,9 +35,9 @@ Semrush is optional for competitor, backlink, keyword-volume, and SERP evidence.
 
 | Phase | Status | Exit condition |
 | --- | --- | --- |
-| 1. Measurement baseline | In progress | Matched GSC/GA4 periods, event inventory, and baseline scorecard |
+| 1. Measurement baseline | GSC complete; GA4 accumulating | Matched GSC baseline imported; GA4 has collected trustworthy events only since 2026-08-03 |
 | 2. Technical health | Complete with open field-data inputs | Live crawl recorded; GSC coverage/CWV remain N/A |
-| 3. Search-performance diagnosis | In progress; top-line imported | Matched query/page comparison is still needed for brand/non-brand and intent-cluster deltas |
+| 3. Search-performance diagnosis | Matched export analyzed | Site, query, page, intent-cluster, search-appearance, country, and device deltas recorded; query-by-page confirmation remains |
 | 4. Query-to-page mapping | Complete provisionally | Ownership and overlap risks recorded; GSC query-by-page confirmation pending |
 | 5. On-page audits | Complete provisionally | Five priority pages scored; field data and exact SERP positions remain N/A |
 | 6. Architecture and authority | Complete provisionally | Internal-link map recorded; backlink export remains N/A |
@@ -82,16 +82,16 @@ The baseline is useful for intent discovery but is not a valid direct comparison
 
 Do not compare a complete period against a partial current period.
 
-### Data availability audit — 2026-08-02
+### Data availability audit — 2026-08-03
 
 | Source | Status | Evidence / limitation |
 | --- | --- | --- |
 | Pre-launch GSC export | Available | Measured; export ends 2026-06-21 |
-| Post-launch GSC export | Partially available | Measured; the 2026-08-02 three-month export supports a matched daily top-line, but not matched query/page deltas |
-| GA4 implementation | Defective | Measured; the custom `gtag()` wrapper queues Arrays instead of the required `arguments` object, so no GA4 collection request is sent |
-| GA4 report/export | N/A | No traffic or event export available locally |
-| Download event | Implemented | Measured; explicit installer clicks emit `download_click` |
-| Trial CTA event | Implemented | Measured; qualifying CTAs emit `trial_start_click` |
+| Post-launch GSC export | Available | Measured; the unfiltered 2026-08-03 comparison export contains last 28 days versus previous 28 days for Queries, Pages, Countries, Devices, and Search appearance |
+| GA4 implementation | Fixed and live | Measured in Chrome Realtime; page views, sessions, enhanced-measurement events, and custom events now collect after preserving the `arguments` queue shape |
+| GA4 report/export | Accumulating | Trustworthy collection begins 2026-08-03; no matched historical conversion period exists yet |
+| Download event | Verified | Measured in GA4 Realtime; explicit installer clicks emit `download_click`, and the event is configured as a key event |
+| Trial CTA event | Verified | Measured in GA4 Realtime; qualifying CTAs emit `trial_start_click`, and the event is configured as a key event |
 | Guide entry/progress events | Implemented | Measured; guide journey and step events exist |
 | Completed installation | N/A | Requires product-side telemetry; a website click does not prove installation |
 | GitHub release asset counts | Available but limited | Counts are cumulative per release asset and reset with each release |
@@ -107,9 +107,9 @@ Do not compare a complete period against a partial current period.
 
 | Funnel stage | Primary metric | Current availability |
 | --- | --- | --- |
-| Search visibility | Non-brand impressions by intent cluster | Top-line available; matched query comparison still required |
-| Ranking | Position by cluster and landing page | Aggregate trend available; matched page/query comparison still required |
-| Search appeal | CTR for queries in positions 3–15 | Aggregate trend available; matched query comparison still required |
+| Search visibility | Non-brand impressions by intent cluster | Matched visible-query comparison available; anonymized queries limit complete attribution |
+| Ranking | Position by cluster and landing page | Matched query and page tables available; query-by-page mapping still required |
+| Search appeal | CTR for queries in positions 3–15 | Matched query and page comparison available |
 | Acquisition | Organic landing-page sessions | Awaiting GA4 export |
 | Product interest | `download_click` users and rate | Instrumented; awaiting GA4 export |
 | Onboarding interest | Guide entry and progress events | Instrumented; awaiting GA4 export |
@@ -117,10 +117,10 @@ Do not compare a complete period against a partial current period.
 
 ### Phase 1 open inputs
 
-- Search Console: last 28 days vs previous 28 days; exports for Queries and Pages.
 - Search Console: Indexing > Pages summary and Core Web Vitals report.
+- Search Console: page-filtered query exports for the three PDA pages to confirm or reject cannibalization.
 - GA4: organic landing pages with sessions, users, `download_click`, `trial_start_click`, and guide events for the same matched periods.
-- Confirmation that GA4 key events and custom dimensions in `guides/internal/GA4_SETUP_CHECKLIST.md` were configured in the GA4 property, not only in code.
+- Audit the unexpected `ads_conversion_Page_view_Page_load_pos_1` key event observed on page load so aggregate conversion reporting is not inflated.
 
 ### Product-truth check
 
@@ -177,12 +177,29 @@ Pre-launch Search Console evidence shows that legacy URLs represented at least *
 
 **Required fix:** implement real edge/server `301` redirects. Valid approaches include redirect rules at the proxied DNS/CDN layer or hosting on a platform that applies `_redirects`. Do not treat client-side JavaScript or meta refresh as the intended permanent solution. Test every rule for status and one-hop destination before deployment.
 
+### Redirect implementation audit — 2026-08-03
+
+- **Measured:** production is deployed by `.github/workflows/static.yml` to GitHub Pages. The workflow uploads the repository as static files and provides no request-time redirect layer.
+- **Measured:** `pospal.gr` resolves directly to the four GitHub Pages IPv4 addresses. Its authoritative nameservers are `dns1.papaki.gr` and `dns2.papaki.gr`; traffic is not currently proxied through Cloudflare.
+- **Measured:** all 28 exact legacy sources in `_redirects` still return `404`, while all 28 declared destinations resolve to a final `200` response.
+- **Measured:** the repository README explicitly notes that GitHub Pages ignores `_redirects`. Editing that file alone cannot repair the live responses.
+- **Decision — 2026-08-03:** do not add a CDN, proxy, or new hosting tool solely to recover these redirects. The retired files are already deleted, absent from the sitemap, and not used by current internal links, so their `404` responses are acceptable. Treat the lost legacy signals as accepted SEO debt rather than a blocker for current-page growth.
+
+The mapping itself needs a short relevance review before import:
+
+- `/buy-license.html` described the POSPal subscription and price, so `/times.html` is a closer equivalent than `/download/`.
+- `/privacy.html` has no honest current equivalent. Redirecting it to `/guides/` is semantically incorrect; either restore an approved privacy page or let the retired URL remain unavailable rather than create a soft-404-style redirect.
+- `/menu-estiatoriou.html` and `/paraggelies-gia-estiash.html` should be checked against the current ordering-system hub instead of automatically sending both to `/`.
+- Trial, corrected-slug, demo, and retired-guide mappings have clear current equivalents, subject to final one-hop testing.
+
+If redirect-capable hosting is adopted for another reason in the future, do not import the current `_redirects` list unchanged. Relevance-review the map first. No redirect infrastructure work is active now.
+
 ### Phase 2 open inputs
 
 - GSC Indexing > Pages totals and reasons.
 - GSC Core Web Vitals report for mobile and desktop.
 - Optional URL Inspection for the three core PDA pages and the highest-value broken legacy URLs.
-- Hosting/DNS ownership information needed to choose the real `301` implementation.
+- No hosting input is required; legacy `404` responses are accepted by decision on 2026-08-03.
 
 ## Phase 3 — Search-Performance Diagnosis
 
@@ -224,30 +241,55 @@ The first test batch will select one commercial cluster and one informational cl
 
 ### Current status
 
-The unfiltered three-month export dated 2026-08-02 supports a matched 28-day site-level comparison around the redesign. It does not contain period-by-period query or page columns, so it cannot yet identify which intent clusters or landing pages caused the change.
+Source: `pospal.gr-Performance-on-Search-2026-08-03 (1).zip`, unfiltered Web search comparison for the last 28 days versus the previous 28 days.
 
-| Period | Clicks | Impressions | CTR | Weighted position |
-| --- | ---: | ---: | ---: | ---: |
-| 2026-05-31 to 2026-06-27 | 45 | 1,780 | 2.53% | 9.08 |
-| 2026-06-28 to 2026-07-25 | 50 | 1,998 | 2.50% | 14.34 |
-| Change | +11.1% | +12.2% | -0.03 pp | -5.26 positions |
+| Metric | Last 28 days | Previous 28 days | Change |
+| --- | ---: | ---: | ---: |
+| Clicks | 51 | 44 | +7 / +15.9% |
+| Impressions | 2,088 | 1,888 | +200 / +10.6% |
+| CTR | 2.44% | 2.33% | +0.11 pp |
 
-Interpretation: the redesign period gained visibility and clicks, but click efficiency did not improve. The weaker aggregate position can be produced by new impressions at lower ranks, so it is not sufficient evidence of a broad ranking loss. A matched query/page comparison is required before changing content.
+Site totals use the mutually exclusive Device and Country dimensions, which both sum to 51/44 clicks and 2,088/1,888 impressions. The Pages dimension sums to 51/45 clicks and 2,536/2,136 impressions because page-grouped Search Console rows are not safely additive at property level; page rows are used only for individual landing-page deltas.
 
-The 2026-08-03 export is not suitable for the baseline because it is filtered to `Search appearance: Product snippets`; it records zero clicks and represents only that search feature.
+The site gained clicks, impressions, and a small amount of CTR, but the visible-query table shows that growth was predominantly branded. Visible brand queries produced 18 clicks versus 10, while all visible non-brand queries produced 12 clicks versus 11. Search Console suppressed or anonymized the remaining queries: the visible query table accounts for 30 of 51 current clicks and 21 of 44 previous clicks. Brand/non-brand attribution is therefore directional rather than complete.
+
+### Matched intent-cluster deltas — visible queries
+
+| Cluster | Clicks now / before | Impressions now / before | CTR now / before | Weighted position now / before | Interpretation |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Brand | 18 / 10 | 29 / 14 | 62.07% / 71.43% | 2.79 / 1.71 | Main source of visible click growth; protect, but do not count as non-brand SEO growth |
+| PDA meaning/process | 3 / 3 | 552 / 450 | 0.54% / 0.67% | 6.30 / 7.65 | Visibility and position improved; clicks stayed flat |
+| PDA generic/other | 2 / 1 | 350 / 116 | 0.57% / 0.86% | 10.19 / 12.79 | Strong expansion led by generic `pda`, but mostly near the bottom of page one |
+| PDA hospitality/use-case | 7 / 7 | 197 / 211 | 3.55% / 3.32% | 4.28 / 3.12 | Commercial non-brand clicks held flat; position weakened slightly |
+| Generic order-taking | 0 / 0 | 286 / 240 | 0% / 0% | 63.83 / 37.34 | More impressions but materially weaker rankings and no response |
+
+### Landing-page deltas
+
+| Page | Click delta | Impression delta | CTR delta | Ranking movement (positive = better) | Decision signal |
+| --- | ---: | ---: | ---: | ---: | --- |
+| `/` | +15 | +25 | +9.54 pp | -27.88 positions | Homepage growth is consistent with stronger brand activity; the mixed query set makes average position misleading |
+| `/pda-ti-einai.html` | -1 | +372 | -0.49 pp | +0.06 positions | Largest visibility gain, stable ranking, but no click growth; query mix and snippet promise need page-filtered review |
+| `/pda-pos-leitourgei.html` | -5 | -28 | -2.05 pp | -3.82 positions | Clearest priority-page decline; confirm its exact lost queries before editing |
+| `/systima-paraggeliolipsias.html` | -1 | +27 | -0.32 pp | -36.58 positions | Broad visibility is low quality and non-converting; do not expand this topic without SERP and query mapping evidence |
+| `/download/` | 0 | +29 | 0 pp | +7.64 positions | Discoverability improved strongly, but the locked page received no search clicks in this period |
+| `/guides/` | 0 | +22 | 0 pp | +0.26 positions | More high-ranking impressions, but no search clicks; keep as an onboarding destination rather than a primary acquisition bet |
+| `/times-systimatos-parageliolipsias/` | -1 | -6 | -5.00 pp | -0.09 positions | Retired URL still received 14 impressions around position 2.79, strengthening the redirect priority |
+
+### Device and search-appearance deltas
+
+- **Mobile:** 29 clicks versus 36, despite impressions rising from 1,320 to 1,469. CTR fell from 2.73% to 1.97%, and average position weakened from 5.94 to 7.15.
+- **Desktop:** 22 clicks versus 7, with impressions rising only from 557 to 604. CTR improved from 1.26% to 3.64%. The entire net click gain came from desktop.
+- **Product snippets:** 349 impressions versus 85, but zero clicks in both periods. The +264 product-snippet impressions exceed the site's net +200-impression increase; search-appearance dimensions are not additive, but this still shows that rich-result exposure grew while producing no traffic.
+
+Interpretation: the redesign did not fail, but it has not yet produced meaningful non-brand click growth. It expanded informational PDA visibility and improved branded/desktop response while mobile acquisition weakened. No new keyword page is justified from this export alone.
+
+The earlier 2026-08-03 export without `(1)` is still excluded because it was filtered to `Search appearance: Product snippets`. The `(1)` export is the valid unfiltered comparison.
 
 Public search results confirm that current PDA, pricing, generic ordering, wireless ordering, download, and guide pages are discoverable and have been crawled recently, so total crawl exclusion is not the leading diagnosis.
 
 Public results also continue to display some retired URLs that now return `404`. That strengthens the Phase 2 redirect priority.
 
-The next GSC analysis must produce these tables:
-
-1. site totals, matched 28-day periods;
-2. brand vs non-brand totals;
-3. intent-cluster deltas;
-4. landing-page deltas;
-5. query-by-page matrix for the three PDA pages;
-6. device split, because the pre-launch baseline was 69% mobile impressions and 70% mobile clicks.
+The site totals, visible brand/non-brand split, intent-cluster deltas, landing-page deltas, and device split are now complete. The remaining Search Console decision gate is a query-by-page matrix for the three PDA pages; the standard comparison export lists Queries and Pages separately and cannot prove cannibalization.
 
 ## Phase 4 — Query-to-Page Mapping
 
@@ -263,6 +305,29 @@ The next GSC analysis must produce these tables:
 | `/times.html` | Price and trial reassurance | Does commercial traffic proceed to download? |
 
 No page will be merged or redirected before a query-by-page export confirms overlap.
+
+### Page-filtered query evidence — 2026-08-03
+
+Sources: `gsc-pda-ti-einai.zip.zip` and `gsc-pda-pos-leitourgei.zip`, each filtered to the exact page and comparing the last 28 days with the previous 28 days.
+
+| Query and page | Clicks now / before | Impressions now / before | Position now / before | Interpretation |
+| --- | ---: | ---: | ---: | --- |
+| `pda τι ειναι` — definition page | 2 / 1 | 448 / 361 | 6.71 / 7.82 | Correct ownership and improving visibility |
+| `pda πωσ λειτουργει` — definition page | 1 / 0 | 18 / 8 | 5.28 / 6.50 | Definition page is expanding into the process intent |
+| `pda πωσ λειτουργει` — process page | 0 / 1 | 19 / 21 | 6.21 / 3.95 | Dedicated process page lost its click and 2.26 ranking positions |
+| `pda σερβιτορου` — definition page | 5 / 7 | 40 / 145 | 2.27 / 2.12 | Google strongly selects the definition page for waiter intent |
+| `pda σερβιτορου` — process page | 0 / 0 | 5 / 0 | 7.40 / N/A | Minor additional overlap |
+
+Full page totals remain the most reliable page-level numbers because Search Console suppresses or anonymizes some query and device rows:
+
+- Definition page: 23 versus 24 clicks; 1,652 versus 1,280 impressions; 1.39% versus 1.88% CTR; position 6.05 versus 6.11.
+- Process page: 3 versus 8 clicks; 194 versus 222 impressions; 1.55% versus 3.60% CTR; position 9.57 versus 5.75.
+
+**Measured conclusion:** definition/process cannibalization is now confirmed for `pda πωσ λειτουργει`. The two pages received almost equal current impressions for the exact process query, but the definition page ranked better and received the click. The definition title explicitly claims both “τι είναι” and “πώς δουλεύει,” while the process page is dedicated to “πώς λειτουργεί.” The first content test should therefore differentiate their search promises rather than add another page.
+
+The waiter page produced no page-filtered Search Console data and is absent from the unfiltered Pages export. Technically it is live: `200`, self-canonical, indexable in its delivered HTML, included in `sitemap.xml`, and internally linked from the homepage and several acquisition pages. Public exact-URL search did not surface it.
+
+Search Console URL Inspection on 2026-08-03 confirms: **URL is not on Google — Discovered, currently not indexed**. Google discovered it through `https://pospal.gr/sitemap.xml`, detected no referring page, and has never crawled it; last crawl, page fetch, crawl permission, indexing permission, and both canonical fields are therefore N/A. This is a single-page crawl-prioritization/indexing issue, not evidence of a robots, canonical, or server-response block. The user requested indexing once on 2026-08-03. Do not resubmit repeatedly; recheck URL Inspection after 7–14 days.
 
 ### Ownership assessment — 2026-08-02
 
@@ -284,7 +349,20 @@ No page will be merged or redirected before a query-by-page export confirms over
 - All three PDA pages reuse the same product screenshot and a closely matched five-section structure.
 - Each page does provide a different H1 and direct opening answer, so consolidation is not automatic.
 
-**Decision:** separate the definition and process promises more clearly, but wait for the GSC query-by-page matrix before choosing between differentiation and consolidation.
+**Decision:** the query-by-page matrix now supports differentiation. Restrict the definition page's title/snippet promise to “τι είναι” and make the process page the unambiguous owner of “πώς λειτουργεί.” Do not consolidate yet: the process page still has 194 impressions and three page-level clicks, although those clicks are hidden in the visible query table. Check the waiter URL in Search Console URL Inspection before deciding whether to retain, strengthen, or retire that page.
+
+### First metadata test — implemented locally on 2026-08-03
+
+| Page | Element | Current | Proposed |
+| --- | --- | --- | --- |
+| `/pda-ti-einai.html` | Title, 51 → 52 characters | `PDA τι είναι και πώς δουλεύει στην εστίαση \| POSPal` | `PDA τι είναι: έννοια και χρήση στην εστίαση \| POSPal` |
+| `/pda-ti-einai.html` | Description, 168 → 156 characters | Current definition/process description | `Τι είναι το PDA στην εστίαση, ποια συσκευή χρησιμοποιεί ο σερβιτόρος και τι χρειάζεται για ασύρματη παραγγελιοληψία με το POSPal σε Windows. Μάθε τα βασικά.` |
+| `/pda-pos-leitourgei.html` | Title, 40 → 50 characters | `PDA πώς λειτουργεί στην εστίαση \| POSPal` | `PDA πώς λειτουργεί: 3 βήματα στην εστίαση \| POSPal` |
+| `/pda-pos-leitourgei.html` | Description, 179 → 151 characters | Current overlong process description | `Δες πώς λειτουργεί το PDA σε 3 βήματα: παραγγελία από κινητό ή tablet, τοπικό δίκτυο και συνέχεια στο POSPal για Windows. Δοκίμασέ το 30 ημέρες δωρεάν.` |
+
+Test scope: change only these four metadata values. Keep both URLs, H1s, body content, internal links, schema, and layout stable so the query-ownership effect can be evaluated cleanly. Baseline metrics are the page-filtered 2026-08-03 exports. Evaluate after one complete 28-day period; monitor the exact `pda πωσ λειτουργει` query on both URLs.
+
+Implementation note: the four approved `<title>` and meta-description values were changed locally on 2026-08-03. No URL, H1, body-copy, internal-link, schema, or layout changes were included. The measurement window begins only after these changes are deployed.
 
 ## Phase 5 — On-Page Audit Order
 
@@ -413,8 +491,10 @@ The final roadmap will use small batches and a 28-day measurement cadence:
 
 | Action | Why | Done when |
 | --- | --- | --- |
-| Validate GA4 property configuration and live events | Event code exists, but property-side key events/dimensions and actual collection are not evidenced | `download_click`, trial CTA, guide entry, and page context appear once in DebugView and matched reports |
-| Obtain matched GSC and GA4 exports | Without them, “no improvement” cannot be decomposed into visibility, CTR, traffic, or conversion | Required 28-day tables are stored and the Phase 3 delta is complete |
+| Accumulate the first trustworthy GA4 comparison period | Collection was repaired on 2026-08-03, so historical conversion reporting is unavailable | Organic landing sessions and primary funnel events can be compared over one complete period |
+| Audit the automatic Google Ads page-load conversion | `ads_conversion_Page_view_Page_load_pos_1` appeared as a key event during live QA and may inflate aggregate conversion totals | Intended conversion purpose is confirmed or the event is removed from conversion reporting |
+
+Completed on 2026-08-03: GA4 Realtime received page views, `download_click`, and `trial_start_click`; both custom events appeared as key events. The matched GSC comparison export was also imported and analyzed.
 
 These become true P0 incidents only if tracking is absent/duplicated or important pages are excluded from Google. No current P0 ranking blocker is confirmed.
 
@@ -422,12 +502,12 @@ These become true P0 incidents only if tracking is absent/duplicated or importan
 
 | Priority | Action | Evidence | Owner type |
 | ---: | --- | --- | --- |
-| 1 | Implement all legacy mappings as real one-hop `301` redirects | 28/28 tested rules currently return `404`; old URLs had at least 303 impressions and 3 clicks | Hosting/DNS |
-| 2 | Recalculate brand/non-brand and intent-cluster performance | Current diagnosis lacks post-launch first-party data | Measurement |
-| 3 | Confirm or reject PDA definition/process cannibalization | Titles overlap and main content shares 21.4% normalized trigrams | SEO/content |
-| 4 | Differentiate the definition, process, and waiter pages using genuinely distinct information | Current pages are structurally sound but templated and evidence-light | Product/content |
+| 1 | Build a page-filtered PDA query matrix | The standard export cannot map queries to pages or prove cannibalization | Measurement |
+| 2 | Diagnose the mobile decline by page and query | Mobile lost 7 clicks while desktop gained 15; aggregate growth hides the weaker mobile result | SEO/content |
+| 3 | Confirm or reject PDA definition/process cannibalization | Titles overlap, main content shares 21.4% normalized trigrams, and the process page lost 5 clicks | SEO/content |
+| 4 | Differentiate the definition, process, and waiter pages only if the query matrix supports it | Current pages are structurally sound but templated and evidence-light | Product/content |
 | 5 | Add contextual links to pricing from relevant unlocked acquisition pages | Pricing has zero main-content inbound links | SEO/content |
-| 6 | Support the beach-bar URL contextually if fresh GSC confirms value | Only one non-self inbound link, not contextual; historical position was strong | SEO/content |
+| 6 | Support the beach-bar URL contextually if fresh GSC confirms value | It retained 20 impressions around position 8.65 but still produced no clicks | SEO/content |
 
 #### P2 — Supporting improvements
 
@@ -512,6 +592,20 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 | Date | Finding | Evidence | Decision / next step |
 | --- | --- | --- | --- |
+| 2026-08-03 | Definition/process metadata differentiation implemented locally | User-approved, evidence-led test | Deploy without accompanying page changes, then compare exact-query ownership after 28 complete days |
+| 2026-08-03 | Page-filtered GSC data confirms definition/process overlap | Measured | Differentiate the definition and process search promises; do not add or consolidate pages yet |
+| 2026-08-03 | Waiter page is live but has no GSC performance row | Measured live technical checks; indexing N/A | Use URL Inspection to determine whether it is indexed before changing or retiring it |
+| 2026-08-03 | Waiter page is discovered but has never been crawled or indexed | User-provided Search Console URL Inspection | Run Test Live URL; if eligible, request indexing once and monitor for 7–14 days |
+| 2026-08-03 | Indexing requested for the waiter page | User-provided Search Console action | Do not repeat the request; recheck URL Inspection after 7–14 days |
+| 2026-08-03 | Redirect recovery would require additional hosting/proxy infrastructure | Measured, plus user preference | Keep the retired pages deleted and accept their `404` responses; remove redirect deployment from the active growth plan |
+| 2026-08-03 | GitHub Pages cannot execute the declared path redirects | Measured from deployment workflow, README, DNS, and live HTTP responses | Accepted; current deleted pages remain `404` rather than adding another infrastructure layer |
+| 2026-08-03 | Current DNS bypasses Cloudflare | Measured; apex resolves to GitHub Pages and nameservers remain at Papaki | No action; keep the existing simple hosting arrangement |
+| 2026-08-03 | The redirect map contains relevance problems | Measured against archived page titles/H1s and current destinations | Preserve this review only if redirect-capable hosting is adopted later |
+| 2026-08-03 | Matched unfiltered GSC comparison imported | Measured | Property totals increased from 44 to 51 clicks and from 1,888 to 2,088 impressions; CTR improved from 2.33% to 2.44% |
+| 2026-08-03 | Visible non-brand click growth was effectively flat | Measured; visible-query rows only | Brand clicks rose from 10 to 18, while visible non-brand clicks rose from 11 to 12; do not describe the result as broad SEO growth |
+| 2026-08-03 | Product-snippet exposure grew without clicks | Measured | Product-snippet impressions rose by 264, exceeding the property's net +200-impression gain, while clicks remained zero; audit query/page source before treating schema visibility as useful growth |
+| 2026-08-03 | Mobile acquisition weakened while desktop drove the net gain | Measured | Diagnose page/query/device mix before selecting snippet or content changes |
+| 2026-08-03 | GA4 collection and primary click events verified live | Measured in Chrome Realtime | Start the trustworthy conversion baseline on 2026-08-03; audit the unexpected Google Ads page-load key event separately |
 | 2026-08-03 | Three-month GSC export imported | Measured | Top-line post-launch clicks and impressions increased about 11% and 12%; request one matched comparison export to identify the responsible queries and pages |
 | 2026-08-03 | Product-snippet-filtered GSC export is unsuitable for the main baseline | Measured | Exclude it from overall growth conclusions |
 | 2026-08-03 | GA4 collection failure isolated to the custom `gtag()` queue wrapper | Measured A/B test | Replace Array queue entries with `arguments`, then verify Realtime before using GA4 for conversion strategy |
@@ -519,7 +613,7 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 | 2026-08-02 | €18.90 existed only in stale internal product context | Measured | Resolved: internal context corrected to verified €23.90 |
 | 2026-08-02 | Core pages are permanently locked | Repository rule | Diagnose them, but target unlocked acquisition pages unless the user explicitly replaces the lock |
 | 2026-08-02 | All current sitemap URLs are technically crawlable and internally linked | Measured | No current-page crawl blocker; obtain GSC coverage/CWV field data |
-| 2026-08-02 | All 28 declared legacy redirects tested return `404` | Measured | P1: implement real one-hop `301` redirects at the host/edge and verify |
+| 2026-08-02 | All 28 declared legacy redirects tested return `404` | Measured | Closed as accepted debt on 2026-08-03; keep hosting simple and leave retired pages deleted |
 | 2026-08-02 | Legacy URLs had at least 3 clicks and 303 impressions before launch | Measured | Prioritize pricing, menu, download/trial, and guide redirect mappings |
 | 2026-08-02 | PDA definition/process content has 21.4% trigram overlap | Measured | Confirm query cannibalization in GSC before differentiation or consolidation |
 | 2026-08-02 | Pricing has zero contextual inbound links | Measured | Add natural pricing links from relevant unlocked acquisition pages |
@@ -528,4 +622,4 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 ## Next Update
 
-Obtain one unfiltered Search Console comparison export for the last complete 28 days versus the previous 28 days, including Queries and Pages. Use it to complete the intent-cluster and landing-page deltas before selecting the first content change. Repair and verify GA4 separately before conversion conclusions are drawn.
+The minimal definition/process metadata test is implemented locally and ready to deploy. After deployment, confirm the live metadata and allow Google to recrawl both URLs; then compare exact-query ownership over one complete 28-day period against the 2026-08-03 page-filtered baseline. Separately, recheck the waiter page's indexing status 7–14 days after the indexing request made on 2026-08-03. Do not make additional changes to these two test pages during the measurement window unless a material technical fault appears.
