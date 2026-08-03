@@ -36,7 +36,7 @@ Semrush is optional for competitor, backlink, keyword-volume, and SERP evidence.
 | Phase | Status | Exit condition |
 | --- | --- | --- |
 | 1. Measurement baseline | GSC complete; GA4 accumulating | Matched GSC baseline imported; GA4 has collected trustworthy events only since 2026-08-03 |
-| 2. Technical health | Complete with open field-data inputs | Live crawl recorded; GSC coverage/CWV remain N/A |
+| 2. Technical health | Complete; one URL under observation | Current sitemap coverage verified in GSC: 10 indexed, only the waiter page excluded; CWV has no field data |
 | 3. Search-performance diagnosis | Matched export analyzed | Site, query, page, intent-cluster, search-appearance, country, and device deltas recorded; query-by-page confirmation remains |
 | 4. Query-to-page mapping | Complete provisionally | Ownership and overlap risks recorded; GSC query-by-page confirmation pending |
 | 5. On-page audits | Complete provisionally | Five priority pages scored; field data and exact SERP positions remain N/A |
@@ -194,12 +194,20 @@ The mapping itself needs a short relevance review before import:
 
 If redirect-capable hosting is adopted for another reason in the future, do not import the current `_redirects` list unchanged. Relevance-review the map first. No redirect infrastructure work is active now.
 
-### Phase 2 open inputs
+### Search Console indexing coverage — 2026-08-03
 
-- GSC Indexing > Pages totals and reasons.
-- GSC Core Web Vitals report for mobile and desktop.
-- Optional URL Inspection for the three core PDA pages and the highest-value broken legacy URLs.
-- No hosting input is required; legacy `404` responses are accepted by decision on 2026-08-03.
+- **Measured in Search Console; report last updated 2026-07-24:** the unfiltered property view contains 14 indexed URLs and 20 excluded URLs. This includes historical, deleted, redirected, and alternate URL variants, so it is not the correct measure of current-site coverage.
+- **Measured with the current `sitemap.xml` filter:** 10 of the 11 submitted URLs are indexed. The only submitted exclusion is one `Discovered – currently not indexed` URL: the already-known `/pda-gia-servitoro/` page. Submitted `Crawled – currently not indexed` count is zero.
+- **Measured:** the four URLs in the unfiltered `Crawled – currently not indexed` group are historical guide URLs. Three now return `404`; `/guides/index.html` returns `200` but correctly canonicalizes to `/guides/`. None is in the current sitemap.
+- **Measured:** Core Web Vitals reports `No data` for both mobile and desktop. This is N/A rather than a pass or failure. The HTTPS summary reports 11 HTTPS URLs and zero non-HTTPS URLs.
+
+**Conclusion:** there is no site-wide indexing failure. Current sitemap coverage is 90.9%, with one isolated crawl-prioritization case already under observation. No technical site change or validation request is justified now.
+
+### Phase 2 monitoring
+
+- Recheck `/pda-gia-servitoro/` in URL Inspection between 2026-08-10 and 2026-08-17.
+- Keep Core Web Vitals marked N/A until Google has sufficient field data.
+- No hosting input is required; legacy `404` responses remain accepted by decision on 2026-08-03.
 
 ## Phase 3 — Search-Performance Diagnosis
 
@@ -281,15 +289,44 @@ The site gained clicks, impressions, and a small amount of CTR, but the visible-
 - **Desktop:** 22 clicks versus 7, with impressions rising only from 557 to 604. CTR improved from 1.26% to 3.64%. The entire net click gain came from desktop.
 - **Product snippets:** 349 impressions versus 85, but zero clicks in both periods. The +264 product-snippet impressions exceed the site's net +200-impression increase; search-appearance dimensions are not additive, but this still shows that rich-result exposure grew while producing no traffic.
 
+### Mobile-filtered diagnosis — 2026-08-03
+
+Source: live Search Console report filtered to `Device: Mobile`, comparing the last 28 days with the previous 28 days.
+
+| Metric | Last 28 days | Previous 28 days | Change |
+| --- | ---: | ---: | ---: |
+| Clicks | 29 | 36 | -7 / -19.4% |
+| Impressions | 1,469 | 1,320 | +149 / +11.3% |
+| CTR | 1.97% | 2.73% | -0.76 pp |
+| Average position | 7.15 | 5.94 | 1.21 positions worse |
+
+Search Console's visible mobile query rows contain 15 clicks in each period. Therefore, all seven net lost clicks belong to privacy-suppressed query rows and cannot be attributed honestly to a named keyword. The visible page table contains 15 versus 16 clicks, so only one of the seven lost clicks can be assigned to a displayed landing-page row; six remain suppressed at page level.
+
+| Visible mobile row | Clicks now / before | Impressions now / before | Position now / before | Diagnosis |
+| --- | ---: | ---: | ---: | --- |
+| `/pda-ti-einai.html` | 8 / 8 | 889 / 614 | 6.6 / 6.8 | Visibility expanded strongly and rank improved slightly; lower CTR is dilution from 275 additional impressions, not a page-ranking loss |
+| `/` | 7 / 4 | 17 / 14 | 18.7 / 12.1 | Clicks and CTR improved; mixed branded query composition makes average position misleading |
+| `/pda-pos-leitourgei.html` | 0 / 1 | 24 / 22 | 6.0 / 3.8 | Small real decline already covered by the live definition/process metadata test |
+| `/systima-paraggeliolipsias.html` | 0 / 1 | 41 / 41 | 44.0 / 10.4 | Average-position collapse is mainly query-mix expansion into weak or irrelevant terms, not a uniform loss across its intended query |
+| `pda σερβιτορου` | 4 / 6 | 33 / 138 | 2.1 / 2.2 | Ranking and CTR improved, but impressions fell by 105; the two-click loss is exposure/demand loss rather than worse ranking |
+| `pda εστιαση` | 2 / 0 | 136 / 45 | 4.7 / 5.2 | Healthy non-brand visibility and click growth |
+| `pda τι ειναι` | 1 / 1 | 395 / 318 | 6.8 / 8.0 | More impressions and a better position, with clicks flat |
+| `pda` | 1 / 0 | 223 / 39 | 9.0 / 15.9 | Large new generic-query exposure and materially better ranking, but still low CTR |
+| `pda πωσ λειτουργει` | 0 / 1 | 21 / 22 | 3.8 / 3.6 | Stable exposure with a one-click fluctuation; the metadata differentiation test is the appropriate bounded response |
+
+The ordering-system page drilldown shows why its average position looks alarming: new mobile impressions came from `παραγγελιοληψια` around position 79.5 and the irrelevant `συστημα αναμονης πελατων` around position 63.1. Its visible intended query `συστημα παραγγελιοληψιασ` had only three current impressions around position 29.7 versus four around 16.8. With one page-level click lost and the click-producing query suppressed, this is insufficient evidence for another content change.
+
+**Measured conclusion:** there is no evidence of a site-wide mobile technical failure or broad ranking loss. The CTR decline is primarily consistent with expansion into generic, informational, and lower-click-propensity impressions. Visible-query clicks were flat, and the entire seven-click net decline is hidden by Search Console privacy thresholds. Keep the active metadata test isolated; do not launch a separate mobile rewrite from this dataset.
+
 Interpretation: the redesign did not fail, but it has not yet produced meaningful non-brand click growth. It expanded informational PDA visibility and improved branded/desktop response while mobile acquisition weakened. No new keyword page is justified from this export alone.
 
 The earlier 2026-08-03 export without `(1)` is still excluded because it was filtered to `Search appearance: Product snippets`. The `(1)` export is the valid unfiltered comparison.
 
 Public search results confirm that current PDA, pricing, generic ordering, wireless ordering, download, and guide pages are discoverable and have been crawled recently, so total crawl exclusion is not the leading diagnosis.
 
-Public results also continue to display some retired URLs that now return `404`. That strengthens the Phase 2 redirect priority.
+Public results also continue to display some retired URLs that now return `404`. Their lost signals remain accepted SEO debt under the 2026-08-03 hosting decision.
 
-The site totals, visible brand/non-brand split, intent-cluster deltas, landing-page deltas, and device split are now complete. The remaining Search Console decision gate is a query-by-page matrix for the three PDA pages; the standard comparison export lists Queries and Pages separately and cannot prove cannibalization.
+The site totals, visible brand/non-brand split, intent-cluster deltas, landing-page deltas, device diagnosis, and PDA query-by-page matrix are now complete. Search Console cannot expose the privacy-suppressed mobile queries responsible for the remaining click loss, so no further segmentation can recover that attribution from this report.
 
 ## Phase 4 — Query-to-Page Mapping
 
@@ -351,7 +388,7 @@ Search Console URL Inspection on 2026-08-03 confirms: **URL is not on Google —
 
 **Decision:** the query-by-page matrix now supports differentiation. Restrict the definition page's title/snippet promise to “τι είναι” and make the process page the unambiguous owner of “πώς λειτουργεί.” Do not consolidate yet: the process page still has 194 impressions and three page-level clicks, although those clicks are hidden in the visible query table. Check the waiter URL in Search Console URL Inspection before deciding whether to retain, strengthen, or retire that page.
 
-### First metadata test — implemented locally on 2026-08-03
+### First metadata test — deployed and verified on 2026-08-03
 
 | Page | Element | Current | Proposed |
 | --- | --- | --- | --- |
@@ -362,7 +399,9 @@ Search Console URL Inspection on 2026-08-03 confirms: **URL is not on Google —
 
 Test scope: change only these four metadata values. Keep both URLs, H1s, body content, internal links, schema, and layout stable so the query-ownership effect can be evaluated cleanly. Baseline metrics are the page-filtered 2026-08-03 exports. Evaluate after one complete 28-day period; monitor the exact `pda πωσ λειτουργει` query on both URLs.
 
-Implementation note: the four approved `<title>` and meta-description values were changed locally on 2026-08-03. No URL, H1, body-copy, internal-link, schema, or layout changes were included. The measurement window begins only after these changes are deployed.
+Implementation note: the four approved `<title>` and meta-description values were deployed and verified live on 2026-08-03. Both URLs returned `200`, exposed the exact test metadata, retained their self-canonicals, had no meta or HTTP `X-Robots-Tag` indexing block, and remained present in `sitemap.xml`. No URL, H1, body-copy, internal-link, schema, or layout changes were included.
+
+Measurement window: use the 28 complete days from **2026-08-04 through 2026-08-31**. Review the result on **2026-09-02 or later** to allow for Search Console reporting delay. Keep both test pages stable during this period.
 
 ## Phase 5 — On-Page Audit Order
 
@@ -502,12 +541,12 @@ These become true P0 incidents only if tracking is absent/duplicated or importan
 
 | Priority | Action | Evidence | Owner type |
 | ---: | --- | --- | --- |
-| 1 | Build a page-filtered PDA query matrix | The standard export cannot map queries to pages or prove cannibalization | Measurement |
-| 2 | Diagnose the mobile decline by page and query | Mobile lost 7 clicks while desktop gained 15; aggregate growth hides the weaker mobile result | SEO/content |
-| 3 | Confirm or reject PDA definition/process cannibalization | Titles overlap, main content shares 21.4% normalized trigrams, and the process page lost 5 clicks | SEO/content |
-| 4 | Differentiate the definition, process, and waiter pages only if the query matrix supports it | Current pages are structurally sound but templated and evidence-light | Product/content |
-| 5 | Add contextual links to pricing from relevant unlocked acquisition pages | Pricing has zero main-content inbound links | SEO/content |
-| 6 | Support the beach-bar URL contextually if fresh GSC confirms value | It retained 20 impressions around position 8.65 but still produced no clicks | SEO/content |
+| 1 | Hold the definition/process metadata test stable through 2026-08-31 | The approved four-field test is live and needs an uncontaminated 28-day window | Measurement |
+| 2 | Validate keyword demand and competitor coverage before proposing another page | GSC validates current demand but cannot show total market demand or competitor gaps | Research |
+| 3 | Recheck waiter-page indexing between 2026-08-10 and 2026-08-17 | It is the only current sitemap URL not indexed; one indexing request was made on 2026-08-03 | Measurement |
+| 4 | Hold mobile pages stable and remeasure after the metadata test | Visible mobile-query clicks were flat; all seven net lost clicks are privacy-suppressed, and visibility expansion diluted CTR | Measurement |
+| 5 | Add contextual links to pricing only after target-query validation | Pricing has zero main-content inbound links, but anchor and source-page choices should follow validated commercial demand | SEO/content |
+| 6 | Support the beach-bar URL only if keyword validation confirms useful demand | It retained 20 impressions around position 8.65 but still produced no clicks | SEO/content |
 
 #### P2 — Supporting improvements
 
@@ -592,7 +631,8 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 | Date | Finding | Evidence | Decision / next step |
 | --- | --- | --- | --- |
-| 2026-08-03 | Definition/process metadata differentiation implemented locally | User-approved, evidence-led test | Deploy without accompanying page changes, then compare exact-query ownership after 28 complete days |
+| 2026-08-03 | Current sitemap indexing coverage is 10 of 11 URLs | Measured in GSC with the `sitemap.xml` filter; the waiter page is the only exclusion | Treat indexing as healthy overall; monitor the waiter URL without changing the site |
+| 2026-08-03 | Definition/process metadata differentiation deployed and verified live | Measured live: both URLs `200`, exact metadata present, self-canonical, indexable, and in sitemap | Hold both pages stable from 2026-08-04 through 2026-08-31; evaluate on 2026-09-02 or later |
 | 2026-08-03 | Page-filtered GSC data confirms definition/process overlap | Measured | Differentiate the definition and process search promises; do not add or consolidate pages yet |
 | 2026-08-03 | Waiter page is live but has no GSC performance row | Measured live technical checks; indexing N/A | Use URL Inspection to determine whether it is indexed before changing or retiring it |
 | 2026-08-03 | Waiter page is discovered but has never been crawled or indexed | User-provided Search Console URL Inspection | Run Test Live URL; if eligible, request indexing once and monitor for 7–14 days |
@@ -604,7 +644,7 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 | 2026-08-03 | Matched unfiltered GSC comparison imported | Measured | Property totals increased from 44 to 51 clicks and from 1,888 to 2,088 impressions; CTR improved from 2.33% to 2.44% |
 | 2026-08-03 | Visible non-brand click growth was effectively flat | Measured; visible-query rows only | Brand clicks rose from 10 to 18, while visible non-brand clicks rose from 11 to 12; do not describe the result as broad SEO growth |
 | 2026-08-03 | Product-snippet exposure grew without clicks | Measured | Product-snippet impressions rose by 264, exceeding the property's net +200-impression gain, while clicks remained zero; audit query/page source before treating schema visibility as useful growth |
-| 2026-08-03 | Mobile acquisition weakened while desktop drove the net gain | Measured | Diagnose page/query/device mix before selecting snippet or content changes |
+| 2026-08-03 | Mobile decline is concentrated in privacy-suppressed data, not a visible broad ranking loss | Measured with a mobile-filtered matched GSC comparison | Visible-query clicks were flat at 15 versus 15; do not launch a mobile rewrite, and remeasure after the active metadata test |
 | 2026-08-03 | GA4 collection and primary click events verified live | Measured in Chrome Realtime | Start the trustworthy conversion baseline on 2026-08-03; audit the unexpected Google Ads page-load key event separately |
 | 2026-08-03 | Three-month GSC export imported | Measured | Top-line post-launch clicks and impressions increased about 11% and 12%; request one matched comparison export to identify the responsible queries and pages |
 | 2026-08-03 | Product-snippet-filtered GSC export is unsuitable for the main baseline | Measured | Exclude it from overall growth conclusions |
@@ -622,4 +662,4 @@ Numeric SEO growth targets will be set after the current post-launch baseline is
 
 ## Next Update
 
-The minimal definition/process metadata test is implemented locally and ready to deploy. After deployment, confirm the live metadata and allow Google to recrawl both URLs; then compare exact-query ownership over one complete 28-day period against the 2026-08-03 page-filtered baseline. Separately, recheck the waiter page's indexing status 7–14 days after the indexing request made on 2026-08-03. Do not make additional changes to these two test pages during the measurement window unless a material technical fault appears.
+The mobile-decline diagnosis is closed without a new website change: visible mobile-query clicks were flat, while the seven-click net loss sits entirely in privacy-suppressed rows. The definition/process metadata test remains live; freeze both test pages through 2026-08-31 and evaluate them on 2026-09-02 or later against the page-filtered 2026-08-03 baseline. The next scheduled checkpoint is narrower and earlier: recheck the waiter page's URL Inspection status between 2026-08-10 and 2026-08-17, 7–14 days after its indexing request. Do not request indexing again before that checkpoint. Independent keyword-demand and competitor validation can proceed meanwhile, but it must produce evidence before any new page is proposed.
