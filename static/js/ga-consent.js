@@ -53,11 +53,10 @@
     window.gtag =
       window.gtag ||
       function () {
-        var args = Array.prototype.slice.call(arguments);
-        if (args[0] === "event" && !isAnyTrackingAllowed()) {
+        if (arguments[0] === "event" && !isAnyTrackingAllowed()) {
           return;
         }
-        window.dataLayer.push(args);
+        window.dataLayer.push(arguments);
       };
   }
 
