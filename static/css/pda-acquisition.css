@@ -60,6 +60,13 @@ body.pda-acquisition-page {
   text-decoration: none;
 }
 
+.pda-acquisition-page a,
+.pda-acquisition-page button,
+.pda-acquisition-page summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(15, 122, 56, 0.18);
+}
+
 .pda-acquisition-page img {
   display: block;
   max-width: 100%;
@@ -616,7 +623,7 @@ body.pda-acquisition-page .pospal-consent-btn {
   .pda-header-cta {
     margin-left: auto;
     padding-inline: .82rem;
-    font-size: .78rem;
+    font-size: .84rem;
   }
 
   .pda-brand span {
@@ -624,11 +631,17 @@ body.pda-acquisition-page .pospal-consent-btn {
   }
 
   .pda-hero-grid {
-    padding: 2.6rem 0 1.25rem;
+    padding: 2.25rem 0 1.1rem;
   }
 
   .pda-hero h1 {
-    font-size: 2.65rem;
+    font-size: clamp(2.05rem, 10.5vw, 2.55rem);
+  }
+
+  .pda-hero h1.pda-title-long {
+    font-size: clamp(1.82rem, 8.4vw, 2.2rem);
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .pda-lead {
@@ -643,10 +656,16 @@ body.pda-acquisition-page .pospal-consent-btn {
     padding-top: 2.4rem;
   }
 
+  .pda-route-grid,
+  .pda-fit-grid,
+  .pda-faq-grid {
+    gap: 1.75rem;
+  }
+
   .pda-route-copy h2,
   .pda-fit-grid h2,
   .pda-faq-grid h2 {
-    font-size: 2.45rem;
+    font-size: clamp(2.05rem, 9vw, 2.35rem);
   }
 
   .pda-route-band,
@@ -657,7 +676,17 @@ body.pda-acquisition-page .pospal-consent-btn {
 
   .pda-fit-section,
   .pda-faq-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
+  }
+
+  .pda-fit-cards article {
+    min-height: 0;
+    padding: 1.15rem;
+  }
+
+  .pda-fit-cards span,
+  .pda-proof-row small {
+    font-size: .82rem;
   }
 
   .pda-screen img {
@@ -675,6 +704,10 @@ body.pda-acquisition-page .pospal-consent-btn {
 
   .pda-final h2 {
     font-size: 2rem;
+  }
+
+  .pda-final-inner {
+    padding-block: 2.4rem;
   }
 
   .pda-footer-inner {
@@ -696,13 +729,17 @@ body.pda-acquisition-page .pospal-consent-btn {
   }
 
   .pda-hero h1 {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
+  }
+
+  .pda-hero h1.pda-title-long {
+    font-size: 1.82rem;
   }
 
   .pda-route-copy h2,
   .pda-fit-grid h2,
   .pda-faq-grid h2 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   .pda-fit-cards article,

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Η ροή από τον σερβιτόρο μέχρι το POSPal και την κουζίνα.">
   <link rel="icon" href="/app_icon.ico">
   <link rel="apple-touch-icon" href="/app_icon.ico">
+  <link rel="preload" href="/static/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/static/css/pda-acquisition.css">
   <script src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
@@ -81,7 +82,7 @@
       <div class="pda-shell pda-hero-grid">
         <div class="pda-hero-copy">
           <p class="pda-signal">PDA σερβιτόρου · Κινητό ή tablet στη βάρδια</p>
-          <h1 id="waiter-title">PDA σερβιτόρου για παραγγελιοληψία</h1>
+          <h1 id="waiter-title" class="pda-title-long">PDA σερβιτόρου για παραγγελιοληψία</h1>
           <p class="pda-lead">Το PDA σερβιτόρου είναι η συσκευή που κρατά το προσωπικό για να περνά παραγγελίες χωρίς χειρόγραφη μεταφορά. Με το POSPal μπορεί να είναι κινητό ή tablet στο τοπικό δίκτυο, ενώ ο υπολογιστής Windows συγκεντρώνει τη ροή.</p>
           <div class="pda-actions" aria-label="Επόμενες ενέργειες">
             <a class="pda-button pda-button-primary" href="/download/">Κατέβασε για Windows</a>
@@ -106,7 +107,7 @@
           <p>Η συσκευή του σερβιτόρου είναι η αρχή. Το POSPal κρατά τη ροή συγκεντρωμένη στον υπολογιστή.</p>
         </div>
         <figure class="pda-screen">
-          <img src="/static/img/pospal-desktop-order.png" alt="POSPal σε Windows με παραγγελία που έχει περάσει στη ροή" width="1280" height="900" loading="eager">
+          <img src="/static/img/pospal-desktop-order.png" alt="POSPal σε Windows με παραγγελία που έχει περάσει στη ροή" width="1280" height="900" loading="eager" decoding="async">
           <figcaption>Η παραγγελία δεν μένει στη συσκευή. Συνεχίζει στο POSPal για την ομάδα.</figcaption>
         </figure>
       </div>

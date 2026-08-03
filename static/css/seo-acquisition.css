@@ -66,6 +66,13 @@ body.seo-page a {
   text-decoration: none;
 }
 
+.seo-page a,
+.seo-page button,
+.seo-page summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(15, 122, 56, 0.18);
+}
+
 body.seo-page h1,
 body.seo-page h2,
 body.seo-page h3,
@@ -349,6 +356,10 @@ body.seo-page a.seo-button-secondary {
 }
 
 .seo-screen-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: left top;
   border: 1px solid #3a493d;
   border-radius: 6px;
 }
@@ -686,6 +697,11 @@ body.seo-page .pospal-consent-btn {
     padding: 42px 0 48px;
   }
 
+  .seo-hero-grid,
+  .seo-section-grid {
+    gap: 1.5rem;
+  }
+
   .seo-hero h1 {
     max-width: none;
     font-size: 34px;
@@ -701,6 +717,16 @@ body.seo-page .pospal-consent-btn {
     grid-template-columns: 1fr;
   }
 
+  .seo-trial-line {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem 0.75rem;
+  }
+
+  .seo-trial-line span:last-child {
+    grid-column: 1 / -1;
+  }
+
   .seo-button {
     width: 100%;
   }
@@ -713,6 +739,15 @@ body.seo-page .pospal-consent-btn {
     padding: 48px 0;
   }
 
+  .seo-screen-card {
+    padding: 0.65rem;
+  }
+
+  .seo-card,
+  .seo-step {
+    padding: 1rem;
+  }
+
   .seo-section-heading h2,
   .seo-final h2 {
     font-size: 28px;
@@ -720,6 +755,10 @@ body.seo-page .pospal-consent-btn {
 
   .seo-ledger-row {
     grid-template-columns: 1fr;
+  }
+
+  .seo-final {
+    padding: 48px 0;
   }
 }
 
