@@ -92,7 +92,6 @@ Create one internal entity record containing:
 | Public disambiguator | `POSPal.gr` | User-approved |
 | Canonical descriptor | `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα` | User-approved |
 | Official URL | `https://pospal.gr/` | Verified |
-| Legal publisher | `ΡΟΜΠΕΡΤΟΣ ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ` | User-confirmed |
 | Business form | `Ατομική επιχείρηση` | User-confirmed |
 | Distinctive title | `POSPal` | User-confirmed |
 | Founder/owner | `Robert Airey` in Latin characters | User-confirmed |

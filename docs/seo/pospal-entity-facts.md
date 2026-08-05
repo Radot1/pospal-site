@@ -27,7 +27,6 @@ Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 | Field | Value | Evidence status | Use |
 | --- | --- | --- | --- |
 | Business form | `Ατομική επιχείρηση` | Confirmed by the owner on 2026-08-05 | Visible publisher description |
-| Legal publisher name | `ΡΟΜΠΕΡΤΟΣ ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ` | Confirmed by the owner on 2026-08-05 | `Organization.legalName` after public-display approval |
 | Distinctive title | `POSPal` | Confirmed by the owner on 2026-08-05 | Public organization/trading name |
 | Public founder/owner name | `Robert Airey` | Confirmed by the owner on 2026-08-05; retain Latin characters | Visible entity-page attribution and founder/owner identity |
 | Public business location | `Mytilini, Lesvos, Greece` | Confirmed by the owner on 2026-08-05 | Visible publisher location; use natural Greek spelling in Greek public copy |
@@ -54,7 +53,7 @@ No additional user-supplied identity fact is required for the first entity-page 
 
 | Order | Question | Answer | Status |
 | ---: | --- | --- | --- |
-| 1 | Legal publisher/company name | `Ατομική επιχείρηση`, legal publisher `ΡΟΜΠΕΡΤΟΣ ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ`, distinctive title `POSPal` | Confirmed |
+| 1 | Public business identity | `Ατομική επιχείρηση`, distinctive title `POSPal` | Confirmed |
 | 2 | Public founder/owner display name | `Robert Airey`, always in Latin characters | Confirmed |
 | 3 | Public business city and country | `Mytilini, Lesvos, Greece` | Confirmed |
 | 4 | Public telephone | No public phone | Confirmed |

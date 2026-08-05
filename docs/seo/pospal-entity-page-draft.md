@@ -68,7 +68,6 @@ Target: `/guides/`
 | --- | --- |
 | Δημιουργός και ιδιοκτήτης | `Robert Airey` |
 | Νομική μορφή | `Ατομική επιχείρηση` |
-| Νόμιμη επωνυμία | `ΡΟΜΠΕΡΤΟΣ ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ` |
 | Διακριτικός τίτλος | `POSPal` |
 | Τοποθεσία | `Μυτιλήνη, Λέσβος, Ελλάδα` |
 | Πρώτη δημόσια διάθεση | `Μάιος 2025` |
@@ -135,7 +134,6 @@ This graph is a specification for the approved visible copy. It must be added on
       "@type": "Organization",
       "@id": "https://pospal.gr/#organization",
       "name": "POSPal",
-      "legalName": "ΡΟΜΠΕΡΤΟΣ ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ",
       "url": "https://pospal.gr/",
       "description": "Ατομική επιχείρηση που αναπτύσσει και υποστηρίζει το POSPal, σύστημα παραγγελιοληψίας και ροής κουζίνας για την εστίαση.",
       "email": "support@pospal.gr",
