@@ -32,7 +32,7 @@
   "static/js/ga-consent.js": {
     "mtime": 1785772038.4376678,
     "ast_hash": "66ead96e4ef3b5e2248bf1ed13137887",
-    "semantic_hash": ""
+    "semantic_hash": "66ead96e4ef3b5e2248bf1ed13137887"
   },
   "static/js/ga-events.js": {
     "mtime": 1782629222.8973727,
@@ -54,25 +54,15 @@
     "ast_hash": "ff9fcf00a2071693e71f9dc0ce77bde6",
     "semantic_hash": "ff9fcf00a2071693e71f9dc0ce77bde6"
   },
-  "static/js/qrcode.min.js": {
-    "mtime": 1762090673.1238184,
-    "ast_hash": "517b55d3688ce9ef1085a3d9632bcb97",
-    "semantic_hash": "517b55d3688ce9ef1085a3d9632bcb97"
-  },
   "static/pricing.js": {
     "mtime": 1764344258.8328414,
     "ast_hash": "e3e5954b7721dac89427874ae7ad5752",
     "semantic_hash": "e3e5954b7721dac89427874ae7ad5752"
   },
-  "static/vendor/tailwindcdn.js": {
-    "mtime": 1762090779.415601,
-    "ast_hash": "7a614b9a197e532c00d09a23b0996b5f",
-    "semantic_hash": "7a614b9a197e532c00d09a23b0996b5f"
-  },
   ".agents/product-marketing.md": {
-    "mtime": 1785907846.4632392,
-    "ast_hash": "7fe7c3602c5e9c4598dc91bb512c5f5b",
-    "semantic_hash": ""
+    "mtime": 1785924937.2006273,
+    "ast_hash": "dcaa84b02bf0b19181543d26c5fb0688",
+    "semantic_hash": "dcaa84b02bf0b19181543d26c5fb0688"
   },
   ".github/workflows/static.yml": {
     "mtime": 1783182882.0768602,
@@ -120,9 +110,9 @@
     "semantic_hash": "27ac033294d0c066bd79da669b72a91c"
   },
   "asyrmati-paraggeliolipsia.html": {
-    "mtime": 1785777982.00014,
-    "ast_hash": "a85e7831e9038a08c161925390077843",
-    "semantic_hash": ""
+    "mtime": 1785927205.0595622,
+    "ast_hash": "63d8160219a54f5cec323dd7243d5712",
+    "semantic_hash": "63d8160219a54f5cec323dd7243d5712"
   },
   "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
     "mtime": 1782627926.8684068,
@@ -207,27 +197,27 @@
   "paraggelio-lipsia-gia-beach-bar.html": {
     "mtime": 1785777982.00014,
     "ast_hash": "d0adec1156cded8d005d54f8fba353c6",
-    "semantic_hash": ""
+    "semantic_hash": "d0adec1156cded8d005d54f8fba353c6"
   },
   "pda-gia-kafeteries.html": {
     "mtime": 1785777982.00014,
     "ast_hash": "42b36ee6713c50af6591779cce0d7c0c",
-    "semantic_hash": ""
+    "semantic_hash": "42b36ee6713c50af6591779cce0d7c0c"
   },
   "pda-gia-servitoro/index.html": {
     "mtime": 1785778300.3978071,
     "ast_hash": "af84f06284723be1e3816a65ab7e930f",
-    "semantic_hash": ""
+    "semantic_hash": "af84f06284723be1e3816a65ab7e930f"
   },
   "pda-pos-leitourgei.html": {
     "mtime": 1785778300.3968062,
     "ast_hash": "e8560ba207899b554a067861ef28618c",
-    "semantic_hash": ""
+    "semantic_hash": "e8560ba207899b554a067861ef28618c"
   },
   "pda-ti-einai.html": {
     "mtime": 1785778300.3968062,
     "ast_hash": "54f19c700959f9a569e44ffb34458209",
-    "semantic_hash": ""
+    "semantic_hash": "54f19c700959f9a569e44ffb34458209"
   },
   "prototype/README.md": {
     "mtime": 1782627927.8918886,
@@ -245,14 +235,14 @@
     "semantic_hash": "6d790bb9ff3936c31530c3d6e057f779"
   },
   "systima-paraggeliolipsias.html": {
-    "mtime": 1785908614.900846,
-    "ast_hash": "5830649d51ade9f0f800a6640a6692ce",
-    "semantic_hash": ""
+    "mtime": 1785927205.0595622,
+    "ast_hash": "8b8e784d3e076c9bcd669134f8ee5a8d",
+    "semantic_hash": "8b8e784d3e076c9bcd669134f8ee5a8d"
   },
   "times.html": {
     "mtime": 1785777981.999138,
     "ast_hash": "11619ff73b0c5d1735c0c66e5ebd9847",
-    "semantic_hash": ""
+    "semantic_hash": "11619ff73b0c5d1735c0c66e5ebd9847"
   },
   "static/img/pospal-desktop-order.png": {
     "mtime": 1782627927.8974218,
@@ -272,66 +262,126 @@
   "docs/seo/post-redesign-evaluation-2026-08-02.md": {
     "mtime": 1785776385.1385648,
     "ast_hash": "d2b42090f3e00c6714a366c740ab95ee",
-    "semantic_hash": ""
+    "semantic_hash": "d2b42090f3e00c6714a366c740ab95ee"
   },
   "docs/mobile-audit-2026-08-03.md": {
     "mtime": 1785778300.3978071,
     "ast_hash": "6cb4dbaccf28d496b6e2c256c37d30e2",
-    "semantic_hash": ""
+    "semantic_hash": "6cb4dbaccf28d496b6e2c256c37d30e2"
   },
   "docs/seo/ai-discovery-benchmark/CUSTOMER_DISCOVERY_INTAKE.md": {
-    "mtime": 1785858244.5758603,
-    "ast_hash": "c93962063f4aaab73ba50310dbee389b",
-    "semantic_hash": ""
+    "mtime": 1785910984.5058775,
+    "ast_hash": "f9171a98af062aa90d3f40e8fdec73df",
+    "semantic_hash": "f9171a98af062aa90d3f40e8fdec73df"
   },
   "docs/seo/ai-discovery-benchmark/PROMPTS.md": {
-    "mtime": 1785875510.3877053,
-    "ast_hash": "cf9decbf1604a639baf6444d7804ae8e",
-    "semantic_hash": ""
+    "mtime": 1785910984.5129857,
+    "ast_hash": "73553c7e1b90a586a22ebd58ba7fa19d",
+    "semantic_hash": "73553c7e1b90a586a22ebd58ba7fa19d"
   },
   "docs/seo/ai-discovery-benchmark/RUNBOOK.md": {
-    "mtime": 1785875510.3877053,
-    "ast_hash": "25d8670dae7a7c9032fa9da4350ffb69",
-    "semantic_hash": ""
+    "mtime": 1785910984.5139873,
+    "ast_hash": "430a3f8dadbca7a9022b4a68926c362a",
+    "semantic_hash": "430a3f8dadbca7a9022b4a68926c362a"
   },
   "docs/seo/ai-discovery-benchmark/SCORECARD.md": {
-    "mtime": 1785875492.0134692,
-    "ast_hash": "41dbe5f9945cd3e42e5734ca0a11b7f9",
-    "semantic_hash": ""
+    "mtime": 1785910984.5149887,
+    "ast_hash": "27de901e2a77a77c9e44d7a95e012837",
+    "semantic_hash": "27de901e2a77a77c9e44d7a95e012837"
   },
   "docs/seo/ai-discovery-measurement-proposal.md": {
-    "mtime": 1785861674.4882798,
-    "ast_hash": "ae7193d4b81a974fc3b9096eaae0c43e",
-    "semantic_hash": ""
+    "mtime": 1785910984.516497,
+    "ast_hash": "3e3925a31fcf483793a174ff32737817",
+    "semantic_hash": "3e3925a31fcf483793a174ff32737817"
   },
   "docs/seo/chatgpt-discovery-work-plan.md": {
-    "mtime": 1785906041.300561,
-    "ast_hash": "6eb71d365ae7c7c45a752abc37ddffec",
-    "semantic_hash": ""
+    "mtime": 1785926961.7409322,
+    "ast_hash": "b6638dce3ad91ca7c58cbd6255b6aacd",
+    "semantic_hash": "b6638dce3ad91ca7c58cbd6255b6aacd"
   },
   "docs/seo/pospal-entity-facts.md": {
-    "mtime": 1785908078.3072624,
-    "ast_hash": "437e4453b2503e66e508ec60b4a07a56",
-    "semantic_hash": ""
+    "mtime": 1785911429.5637133,
+    "ast_hash": "568eecc76229b4b1e3f44a3d0099f1fa",
+    "semantic_hash": "568eecc76229b4b1e3f44a3d0099f1fa"
   },
   "docs/seo/pospal-entity-foundation-proposal.md": {
-    "mtime": 1785908078.3072624,
-    "ast_hash": "c95619c7c07e29fad7b8bcafccbafa71",
-    "semantic_hash": ""
+    "mtime": 1785911429.5637133,
+    "ast_hash": "3ba8f745e1ef4e4b9d31041499989cb2",
+    "semantic_hash": "3ba8f745e1ef4e4b9d31041499989cb2"
   },
   "docs/seo/pospal-entity-page-draft.md": {
-    "mtime": 1785908078.3072624,
-    "ast_hash": "46b1788929c788a479780940db83629d",
-    "semantic_hash": ""
+    "mtime": 1785911429.5637133,
+    "ast_hash": "8c9ae52919cb9a72d3601bab9d759576",
+    "semantic_hash": "8c9ae52919cb9a72d3601bab9d759576"
   },
   "sxetika-me-to-pospal/index.html": {
-    "mtime": 1785910104.9323525,
-    "ast_hash": "39eb51e5268270fadc984b9803eb72cb",
-    "semantic_hash": ""
+    "mtime": 1785911429.5622087,
+    "ast_hash": "a406beb07617ba3960acab43902e7131",
+    "semantic_hash": "a406beb07617ba3960acab43902e7131"
   },
   "static/img/pospal-mark-64.png": {
     "mtime": 1785910017.386696,
     "ast_hash": "671a0c8d2550be1ec71686cb787020f0",
-    "semantic_hash": ""
+    "semantic_hash": "671a0c8d2550be1ec71686cb787020f0"
+  },
+  "docs/seo/pospal-product-fact-checklist.md": {
+    "mtime": 1785924906.6649587,
+    "ast_hash": "20520505cef37b951016a2d84679508c",
+    "semantic_hash": "20520505cef37b951016a2d84679508c"
+  },
+  "docs/seo/pospal-proof-system.md": {
+    "mtime": 1785912857.0631487,
+    "ast_hash": "ec9d95cdd4fc84b8cb221efcc464a8d0",
+    "semantic_hash": "ec9d95cdd4fc84b8cb221efcc464a8d0"
+  },
+  "docs/seo/pospal-generic-hub-improvement-spec.md": {
+    "mtime": 1785925032.5600538,
+    "ast_hash": "ed16963d68b3414af8e5bd1b141c1511",
+    "semantic_hash": "ed16963d68b3414af8e5bd1b141c1511"
+  },
+  "docs/seo/pospal-independent-verification-fact-pack.md": {
+    "mtime": 1785922020.2074857,
+    "ast_hash": "f894a8f018b81631f6736b4f7b3e555e",
+    "semantic_hash": "f894a8f018b81631f6736b4f7b3e555e"
+  },
+  "docs/seo/pospal-seo-claim-map.md": {
+    "mtime": 1785921416.4253523,
+    "ast_hash": "c2230ddf0d24268488800e5cf04425cc",
+    "semantic_hash": "c2230ddf0d24268488800e5cf04425cc"
+  },
+  "docs/seo/pospal-seo-proof-execution-tracker.md": {
+    "mtime": 1785927586.527637,
+    "ast_hash": "d8387e4889f60d14409761ee9247941c",
+    "semantic_hash": "d8387e4889f60d14409761ee9247941c"
+  },
+  "docs/seo/pospal-seo-proof-measurement-protocol.md": {
+    "mtime": 1785926961.7409322,
+    "ast_hash": "c806dcc8960f9c554d08ffce1998ec56",
+    "semantic_hash": "c806dcc8960f9c554d08ffce1998ec56"
+  },
+  "docs/seo/proof-records/PRF-2026-001.md": {
+    "mtime": 1785924937.2006273,
+    "ast_hash": "3d22da01752b82a0d2cc1a95ccca918c",
+    "semantic_hash": "3d22da01752b82a0d2cc1a95ccca918c"
+  },
+  "docs/seo/proof-records/PRF-2026-002.md": {
+    "mtime": 1785921631.0399833,
+    "ast_hash": "85b437c3bb52ef941b47f49868d34e99",
+    "semantic_hash": "85b437c3bb52ef941b47f49868d34e99"
+  },
+  "docs/seo/pospal-repository-backed-website-proposal.md": {
+    "mtime": 1785926961.7398202,
+    "ast_hash": "298c6d42a4c7500ffe97ce52df5dd1f9",
+    "semantic_hash": "298c6d42a4c7500ffe97ce52df5dd1f9"
+  },
+  "docs/seo/pospal-repository-backed-release-audit-2026-08-05.md": {
+    "mtime": 1785927081.4240623,
+    "ast_hash": "33c6087d2b8173617dadbba297bd2539",
+    "semantic_hash": "33c6087d2b8173617dadbba297bd2539"
+  },
+  "static/css/seo-acquisition.css": {
+    "mtime": 1785927227.582776,
+    "ast_hash": "04a357c4d6c4497c88d84646e4e3fcf4",
+    "semantic_hash": "04a357c4d6c4497c88d84646e4e3fcf4"
   }
 }

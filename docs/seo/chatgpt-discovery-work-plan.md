@@ -1,6 +1,7 @@
 # POSPal ChatGPT and AI Discovery Work Plan
 
-Status: Ready to execute
+Status: In progress — controlled evidence and Release 1 implementation complete; live measurement is next
+Last updated: 2026-08-05
 Planning model: dependency-ordered steps, not a calendar roadmap
 Primary outcome: POSPal is independently discovered and accurately recommended for relevant Greek hospitality ordering queries
 Primary conversion: download `POSPal-win-Setup.exe`
@@ -9,7 +10,7 @@ Primary conversion: download `POSPal-win-Setup.exe`
 
 This plan covers the public surfaces currently associated with POSPal:
 
-- `https://pospal.gr/` and the 11 URLs in its sitemap;
+- `https://pospal.gr/` and the 12 URLs in its sitemap;
 - external sources that can help an answer engine verify POSPal independently.
 
 Repository rules remain in force:
@@ -34,8 +35,9 @@ Related internal sources:
 
 ### What is already working
 
-- **Measured:** all 11 `pospal.gr` sitemap URLs return `200` to an `OAI-SearchBot` user agent.
-- **Measured:** all 11 URLs have a title, one H1, and a self-referencing canonical.
+- **Measured at baseline:** all 11 original `pospal.gr` sitemap URLs returned `200` to an `OAI-SearchBot` user agent.
+- **Measured at baseline:** all 11 original URLs had a title, one H1, and a self-referencing canonical.
+- **Verified after the entity release:** the sitemap now contains 12 URLs, including the live `/sxetika-me-to-pospal/` page with a title, one H1, and a self-referencing canonical.
 - **Measured:** `robots.txt` permits crawling and declares the marketing sitemap.
 - **Measured:** current HTML is served as UTF-8.
 - **Measured:** the marketing site explains Windows installation, ordinary phones/tablets, pricing, the trial, kitchen flow, QR menu, and the fiscal-POS boundary.
@@ -48,8 +50,10 @@ Conclusion: crawlability is not the main reason POSPal is absent from generic re
 
 - **Measured:** the site has no approved testimonials, customer logos, case studies, or quantified customer outcomes.
 - **Measured:** the marketing site uses real application screens and guides, but the acquisition pages largely repeat the same product explanation.
-- **Measured:** the core pages do not expose `Organization`, `WebSite`, or `SoftwareApplication` JSON-LD. Eight acquisition pages expose only `FAQPage` schema.
-- **Estimated:** there is no strong public entity home containing verified company identity, product ownership, official profiles, and support facts.
+- **Measured at baseline:** the core pages did not expose `Organization`, `WebSite`, or `SoftwareApplication` JSON-LD. Eight acquisition pages exposed only `FAQPage` schema.
+- **Delivered in Step 2:** `/sxetika-me-to-pospal/` now provides a dedicated public entity home with approved identity, ownership, location, support, product, pricing, and official-profile facts.
+- **Delivered in Step 2:** the entity page exposes supported `Organization`, `SoftwareApplication`, `WebPage`, and `BreadcrumbList` JSON-LD. `WebSite` schema remains deferred while the homepage is locked.
+- **Still open:** POSPal lacks independently authored customer proof, reviews, case studies, and third-party verification.
 
 ### Gap 2: generic-query authority is weak
 
@@ -83,11 +87,10 @@ It lacks the evidence an answer engine needs when comparing candidates:
 
 One or two fresh ChatGPT conversations are not a valid trend. Results can vary by search mode, model, memory, locale, prompt wording, and source availability.
 
-The site already has GA4 download events, but it still needs:
+The site already has GA4 download events and a repeatable prompt benchmark, but it still needs:
 
 - a ChatGPT/AI referral report;
-- a repeatable generic-prompt benchmark;
-- saved citation/source observations;
+- post-release benchmark reruns after each released batch is crawlable;
 - exact customer conversations from people who report discovering POSPal through ChatGPT.
 
 ## What we will not do
@@ -129,51 +132,64 @@ Exit criteria:
 
 Detailed proposal: [POSPal entity foundation](pospal-entity-foundation-proposal.md)
 
+Release outcome: [`/sxetika-me-to-pospal/`](https://pospal.gr/sxetika-me-to-pospal/) is live, included in the sitemap, and uses the approved public identity and structured-data graph.
+
 Tasks:
 
-- [ ] Approve one consistent descriptor, for example `POSPal.gr — Παραγγελιοληψία για εστίαση στην Ελλάδα`.
-- [ ] Confirm the legal/company details that may be published: legal name, trading name, location, support email, telephone if applicable, launch date, and official profiles.
-- [ ] Create a truthful public entity/company page if it passes the SEO expansion gate and has a distinct trust job.
-- [ ] Define stable JSON-LD identifiers such as `https://pospal.gr/#organization`, `#website`, and `#software`.
-- [ ] Add `Organization`, `WebSite`, and `SoftwareApplication` schema only where visible page content supports every property.
-- [ ] Add `sameAs` only for real official profiles controlled by POSPal.
-- [ ] Keep price, operating system, publisher, and product description consistent across schema and visible content.
-- [ ] Do not add `aggregateRating` until genuine public reviews exist.
+- [x] Approve the canonical descriptor: `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα`.
+- [x] Confirm the public business facts that may be published: business form, trading name, founder/owner display name, location, support email, public-phone decision, launch date, and official profiles.
+- [x] Create a truthful public entity page with a distinct identity and trust job.
+- [x] Define stable JSON-LD identifiers for `https://pospal.gr/#organization`, `https://pospal.gr/#software`, and the entity page.
+- [x] Add supported `Organization` and `SoftwareApplication` schema together with `WebPage` and `BreadcrumbList`; defer `WebSite` schema while the homepage remains locked.
+- [x] Add `sameAs` only for verified official profiles controlled by POSPal.
+- [x] Keep price, VAT treatment, operating system, publisher, and product description consistent across structured data and visible content.
+- [x] Do not add `aggregateRating` until genuine public reviews exist.
 - [ ] Review trademark/name-collision risk separately before adopting a new permanent trading label.
+
+Privacy decision:
+
+- The owner's official legal name is private and must not appear in public copy, structured data, or current repository documentation.
+- Use `Robert Airey` in Latin characters as the public founder/owner identity.
 
 Lock note:
 
-The strongest site-wide entity placement would normally include the homepage. That work remains blocked by the permanent homepage lock until the user explicitly replaces it. Entity work can begin on a new approved entity page and unlocked acquisition pages.
+The strongest site-wide entity placement would normally include the homepage. That work remains blocked by the permanent homepage lock until the user explicitly replaces it. The entity page was released without changing the locked homepage, download page, or guides page.
 
 Exit criteria:
 
-- The same entity name, product definition, URL, price, and official profiles appear consistently across controlled sources.
-- Search engines can distinguish the Greek ordering product from the unrelated international Pospal product.
+- **Achieved for controlled sources:** the same entity name, product definition, URL, price, VAT treatment, and official profiles appear consistently on the released entity page and its structured data.
+- **Awaiting measurement:** search engines and answer engines distinguish the Greek ordering product from the unrelated international Pospal product after the page is crawled.
 
 ### Step 3: build a reusable proof system
 
-Required inputs:
+Repository-evidence decision: on 2026-08-05 the owner directed that the application not be installed for this SEO phase. Current private application source, maintained product contracts, and maintained tests may establish narrow controlled first-party facts. They do not establish independent proof, broad compatibility, customer outcomes, or authentic model-specific hardware evidence.
 
-- a customer willing to be named;
-- permission to use the business name, images, and verified figures;
-- verified equipment and printer information;
-- real installation and usage evidence.
+Delivered artifacts:
+
+- [POSPal proof system](pospal-proof-system.md);
+- [product-fact checklist](pospal-product-fact-checklist.md);
+- [SEO claim-to-query map](pospal-seo-claim-map.md);
+- [proof execution tracker](pospal-seo-proof-execution-tracker.md);
+- [controlled artifact record](proof-records/PRF-2026-001.md);
+- [blank customer-proof template](proof-records/PRF-2026-002.md);
+- [independent verification fact pack](pospal-independent-verification-fact-pack.md);
+- [repository-backed website proposal](pospal-repository-backed-website-proposal.md).
 
 Tasks:
 
-- [ ] Create a case-study evidence template: venue, problem, equipment, setup, workflow, verified result, limitations, customer approval, and review date.
-- [ ] Record one complete installation and first test order.
-- [ ] Build a verified compatibility table for Windows versions, devices, network requirements, and tested printer models.
-- [ ] Document what works locally, what happens outside Wi-Fi, and what requires internet.
-- [ ] Record support channels and actual support boundaries.
+- [x] Create a case-study evidence template: venue, problem, equipment, setup, workflow, verified result, limitations, customer approval, and review date.
+- [x] Record installer identity/integrity without executing it; close installation as unnecessary for the current website proposal.
+- [x] Build a source-backed fact register for Windows packaging, staff-device access, local-network requirements, narrow reconnect behavior, and printer routing.
+- [x] Document what works locally, the same-device reconnect boundary, and the functions with separate internet dependencies.
+- [x] Record support channels and actual support boundaries.
 - [ ] Publish the first named, customer-approved operational example.
 - [ ] Publish aggregate product data only after the collection method is documented and the figures are reproducible.
 
-Exit criteria:
+Exit criteria for controlled repository evidence:
 
-- At least one public proof asset can be independently checked.
-- Every number has a source, owner, measurement method, and customer approval where required.
-- The proof asset contains honest limitations, not only positive claims.
+- **Achieved:** every proposed website fact maps to a controlled source and an explicit limitation.
+- **Achieved:** unsupported compatibility, customer, integration, figure, and outcome claims remain excluded.
+- **Still open as a separate authority layer:** a named customer or independent author publishes a checkable real-world account under its own control.
 
 ### Step 4: make the existing generic hub the definitive POSPal source
 
@@ -183,20 +199,20 @@ Do not create a replacement URL.
 
 Tasks:
 
-- [ ] Make the category and intended buyer explicit in the H1 and opening answer.
-- [ ] Explain clearly who should choose this type of workflow and who needs a fiscal POS, managed hardware, delivery suite, or other product type instead.
-- [ ] Add exact equipment and network requirements.
-- [ ] Add the real phone/tablet → Windows → kitchen/printer workflow.
-- [ ] Explain local/offline behavior using only verified product facts.
-- [ ] Include current price, trial, cancellation, and whether VAT is included.
-- [ ] Add verified printer compatibility and setup evidence.
-- [ ] Add the first approved case study or operational proof asset.
-- [ ] Add a factual limitations section.
-- [ ] Add an answer-first FAQ based on real buyer and support questions.
-- [ ] Add a category-choice section without naming competitors publicly.
-- [ ] Keep download primary and installation guides secondary.
-- [ ] Add only schema types supported by the visible page.
-- [ ] Add contextual links from relevant unlocked pages and to `/times.html` where price is part of the decision.
+- [x] Make the category and intended buyer explicit in the H1 and opening answer.
+- [x] Explain the intended workflow and the fiscal/non-integration product boundary.
+- [x] Add the source-verified equipment and reachable-local-network requirements without claiming broad compatibility.
+- [x] Add the implemented phone/tablet → Windows → kitchen/printer workflow.
+- [x] Explain the narrow same-device reconnect behavior and separate internet dependencies using source-verified facts.
+- [x] Include current price, trial, cancellation, and whether VAT is included.
+- [x] Add Windows-installed printer requirements, roles, category routing, and the setup test-print boundary; exclude model compatibility.
+- [x] Reserve named customer or independent operational proof for a later authority layer; do not block the controlled-fact release on it.
+- [x] Add a factual limitations section.
+- [x] Add an answer-first FAQ based on real buyer and support questions.
+- [x] Add category/use-case routing without naming competitors publicly.
+- [x] Keep download primary and installation guides secondary.
+- [x] Add only schema types supported by the visible page.
+- [x] Add contextual links from relevant unlocked pages and to `/times.html` where price is part of the decision.
 
 Exit criteria:
 
@@ -268,24 +284,19 @@ Work starts at the first unchecked item whose dependencies are available.
 
 | Order | Item | Status | Dependency |
 | ---: | --- | --- | --- |
-| 1 | Create the fixed AI prompt benchmark and results format | Ready | None |
+| 1 | Create the fixed AI prompt benchmark and results format | Complete | None |
 | 2 | Create the GA4 AI-referral report | Ready | GA4 access |
-| 3 | Approve the canonical POSPal entity descriptor | Pending | Brand decision |
-| 4 | Gather publishable company/entity facts | Pending | User input |
-| 5 | Prepare the proof/case-study evidence template | Ready | None |
+| 3 | Approve the canonical POSPal entity descriptor | Complete | Brand decision |
+| 4 | Gather publishable company/entity facts | Complete | User input |
+| 5 | Prepare the proof/case-study evidence template | Complete | None |
 | 6 | Select the first customer-approved proof source | Pending | Customer permission |
-| 7 | Draft the generic-hub improvement specification | Pending | Verified proof and product facts |
-| 8 | Implement the generic-hub batch | Pending | Explicit website-edit approval |
+| 7 | Draft the generic-hub improvement specification | Complete | Repository-backed product facts |
+| 8 | Implement the generic-hub and wireless batch | Complete | Explicit website-edit approval received 2026-08-05 |
 | 9 | Begin independent outreach | Pending | Entity and proof packs complete |
 
 ## Inputs needed as work progresses
 
-- Whether €23.90 includes VAT.
-- Verified Windows, network, printer, and offline-behavior details.
-- Public legal/company identity details.
-- Official social and video profiles.
-- Support channels and real operating boundaries.
-- A first customer who can approve a named example.
+- A first customer only when POSPal is ready to add a named independent authority layer.
 - Search Console Links export.
 - Access to GA4 reports for AI-referral measurement.
 

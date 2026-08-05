@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-*Last updated: 2026-08-02*
+*Last updated: 2026-08-05*
 
 ## Product Overview
 
@@ -143,11 +143,13 @@ The phrases below are search or stakeholder language, not verified customer test
 
 ## Proof Points
 
-**Verified product proof:** EUR 23.90/month including VAT; 30-day no-card/no-personal-information trial; table mode; simple mode; QR menu; Windows installer; direct subscription; cancel anytime; works alongside an existing fiscal POS.
+**Verified product proof:** EUR 23.90/month including VAT; 30-day no-card/no-personal-information trial; table mode; simple mode; kitchen workflow; QR customer-menu publisher; Windows x64 package target; local-link access for staff phones/tablets without a native mobile app; same-device reconnect queue for supported staff actions; Windows-installed printer roles and category routing; Greek and English application UI; direct subscription; cancel anytime; works alongside an existing fiscal POS.
+
+Technical product facts above are source-verified from the private POSPal application repository and maintained tests reviewed on 2026-08-05. They are controlled first-party evidence, not broad compatibility certification, customer proof, or independent validation.
 
 **Available evidence:** Real application screens, a small embedded proof/demo, setup guides, pricing, and the public download flow.
 
-**Unavailable evidence:** No approved testimonials, customer logos, case studies, or quantified customer outcomes. Do not fabricate them.
+**Unavailable evidence:** No approved testimonials, customer logos, case studies, quantified customer outcomes, broad OS/browser/device compatibility matrix, or authentic model-specific printer evidence. Do not fabricate them.
 
 | Value theme | Current proof |
 |-------------|---------------|
