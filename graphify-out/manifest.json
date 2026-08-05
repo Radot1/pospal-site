@@ -30,9 +30,9 @@
     "semantic_hash": "2dafcdc6e03a41e214ea2a1ab6a6e0c3"
   },
   "static/js/ga-consent.js": {
-    "mtime": 1782627927.897927,
-    "ast_hash": "d950b954b3aebb919f21c1170bd9969a",
-    "semantic_hash": "d950b954b3aebb919f21c1170bd9969a"
+    "mtime": 1785772038.4376678,
+    "ast_hash": "66ead96e4ef3b5e2248bf1ed13137887",
+    "semantic_hash": ""
   },
   "static/js/ga-events.js": {
     "mtime": 1782629222.8973727,
@@ -70,9 +70,9 @@
     "semantic_hash": "7a614b9a197e532c00d09a23b0996b5f"
   },
   ".agents/product-marketing.md": {
-    "mtime": 1785689948.4038012,
-    "ast_hash": "ab68cda23a6051e4a0cb336971cd5c49",
-    "semantic_hash": "ab68cda23a6051e4a0cb336971cd5c49"
+    "mtime": 1785907846.4632392,
+    "ast_hash": "7fe7c3602c5e9c4598dc91bb512c5f5b",
+    "semantic_hash": ""
   },
   ".github/workflows/static.yml": {
     "mtime": 1783182882.0768602,
@@ -120,9 +120,9 @@
     "semantic_hash": "27ac033294d0c066bd79da669b72a91c"
   },
   "asyrmati-paraggeliolipsia.html": {
-    "mtime": 1783183867.943331,
-    "ast_hash": "882622c477c0e00dc5bf1539bd662352",
-    "semantic_hash": "882622c477c0e00dc5bf1539bd662352"
+    "mtime": 1785777982.00014,
+    "ast_hash": "a85e7831e9038a08c161925390077843",
+    "semantic_hash": ""
   },
   "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
     "mtime": 1782627926.8684068,
@@ -205,29 +205,29 @@
     "semantic_hash": "6595388260fa62933fbef0a122802d54"
   },
   "paraggelio-lipsia-gia-beach-bar.html": {
-    "mtime": 1782627927.882365,
-    "ast_hash": "58f56d45f64b2dc1552ae408140192f9",
-    "semantic_hash": "58f56d45f64b2dc1552ae408140192f9"
+    "mtime": 1785777982.00014,
+    "ast_hash": "d0adec1156cded8d005d54f8fba353c6",
+    "semantic_hash": ""
   },
   "pda-gia-kafeteries.html": {
-    "mtime": 1782627927.882365,
-    "ast_hash": "d56efcc8227b3121f6941c08c678fb20",
-    "semantic_hash": "d56efcc8227b3121f6941c08c678fb20"
+    "mtime": 1785777982.00014,
+    "ast_hash": "42b36ee6713c50af6591779cce0d7c0c",
+    "semantic_hash": ""
   },
   "pda-gia-servitoro/index.html": {
-    "mtime": 1782627927.882365,
-    "ast_hash": "19272960aef9c19272c57a67a8394917",
-    "semantic_hash": "19272960aef9c19272c57a67a8394917"
+    "mtime": 1785778300.3978071,
+    "ast_hash": "af84f06284723be1e3816a65ab7e930f",
+    "semantic_hash": ""
   },
   "pda-pos-leitourgei.html": {
-    "mtime": 1782627927.8907685,
-    "ast_hash": "baf7db7e46e4adfd7aedfe10b947622b",
-    "semantic_hash": "baf7db7e46e4adfd7aedfe10b947622b"
+    "mtime": 1785778300.3968062,
+    "ast_hash": "e8560ba207899b554a067861ef28618c",
+    "semantic_hash": ""
   },
   "pda-ti-einai.html": {
-    "mtime": 1782627927.8907685,
-    "ast_hash": "ff12e37ef2ba1438fa17d06d17bc6a6d",
-    "semantic_hash": "ff12e37ef2ba1438fa17d06d17bc6a6d"
+    "mtime": 1785778300.3968062,
+    "ast_hash": "54f19c700959f9a569e44ffb34458209",
+    "semantic_hash": ""
   },
   "prototype/README.md": {
     "mtime": 1782627927.8918886,
@@ -245,14 +245,14 @@
     "semantic_hash": "6d790bb9ff3936c31530c3d6e057f779"
   },
   "systima-paraggeliolipsias.html": {
-    "mtime": 1783183867.9443402,
-    "ast_hash": "6d87173c4a5517920b111f3f5c3ef662",
-    "semantic_hash": "6d87173c4a5517920b111f3f5c3ef662"
+    "mtime": 1785908614.900846,
+    "ast_hash": "5830649d51ade9f0f800a6640a6692ce",
+    "semantic_hash": ""
   },
   "times.html": {
-    "mtime": 1783183867.9458454,
-    "ast_hash": "7082b710de77be585e734e3268806ec8",
-    "semantic_hash": "7082b710de77be585e734e3268806ec8"
+    "mtime": 1785777981.999138,
+    "ast_hash": "11619ff73b0c5d1735c0c66e5ebd9847",
+    "semantic_hash": ""
   },
   "static/img/pospal-desktop-order.png": {
     "mtime": 1782627927.8974218,
@@ -270,8 +270,68 @@
     "semantic_hash": "7a6376803f96c6e20d391294bb34ceb8"
   },
   "docs/seo/post-redesign-evaluation-2026-08-02.md": {
-    "mtime": 1785690317.3247747,
-    "ast_hash": "937df9c0d36887b57b35ed3a00cb54c6",
-    "semantic_hash": "937df9c0d36887b57b35ed3a00cb54c6"
+    "mtime": 1785776385.1385648,
+    "ast_hash": "d2b42090f3e00c6714a366c740ab95ee",
+    "semantic_hash": ""
+  },
+  "docs/mobile-audit-2026-08-03.md": {
+    "mtime": 1785778300.3978071,
+    "ast_hash": "6cb4dbaccf28d496b6e2c256c37d30e2",
+    "semantic_hash": ""
+  },
+  "docs/seo/ai-discovery-benchmark/CUSTOMER_DISCOVERY_INTAKE.md": {
+    "mtime": 1785858244.5758603,
+    "ast_hash": "c93962063f4aaab73ba50310dbee389b",
+    "semantic_hash": ""
+  },
+  "docs/seo/ai-discovery-benchmark/PROMPTS.md": {
+    "mtime": 1785875510.3877053,
+    "ast_hash": "cf9decbf1604a639baf6444d7804ae8e",
+    "semantic_hash": ""
+  },
+  "docs/seo/ai-discovery-benchmark/RUNBOOK.md": {
+    "mtime": 1785875510.3877053,
+    "ast_hash": "25d8670dae7a7c9032fa9da4350ffb69",
+    "semantic_hash": ""
+  },
+  "docs/seo/ai-discovery-benchmark/SCORECARD.md": {
+    "mtime": 1785875492.0134692,
+    "ast_hash": "41dbe5f9945cd3e42e5734ca0a11b7f9",
+    "semantic_hash": ""
+  },
+  "docs/seo/ai-discovery-measurement-proposal.md": {
+    "mtime": 1785861674.4882798,
+    "ast_hash": "ae7193d4b81a974fc3b9096eaae0c43e",
+    "semantic_hash": ""
+  },
+  "docs/seo/chatgpt-discovery-work-plan.md": {
+    "mtime": 1785906041.300561,
+    "ast_hash": "6eb71d365ae7c7c45a752abc37ddffec",
+    "semantic_hash": ""
+  },
+  "docs/seo/pospal-entity-facts.md": {
+    "mtime": 1785908078.3072624,
+    "ast_hash": "437e4453b2503e66e508ec60b4a07a56",
+    "semantic_hash": ""
+  },
+  "docs/seo/pospal-entity-foundation-proposal.md": {
+    "mtime": 1785908078.3072624,
+    "ast_hash": "c95619c7c07e29fad7b8bcafccbafa71",
+    "semantic_hash": ""
+  },
+  "docs/seo/pospal-entity-page-draft.md": {
+    "mtime": 1785908078.3072624,
+    "ast_hash": "46b1788929c788a479780940db83629d",
+    "semantic_hash": ""
+  },
+  "sxetika-me-to-pospal/index.html": {
+    "mtime": 1785910104.9323525,
+    "ast_hash": "39eb51e5268270fadc984b9803eb72cb",
+    "semantic_hash": ""
+  },
+  "static/img/pospal-mark-64.png": {
+    "mtime": 1785910017.386696,
+    "ast_hash": "671a0c8d2550be1ec71686cb787020f0",
+    "semantic_hash": ""
   }
 }

@@ -6,13 +6,15 @@
 
 **One-liner:** POSPal is a locally installed ordering and kitchen-workflow tool for Greek hospitality businesses that want direct, transparent access without a distributor.
 
+**Canonical public descriptor:** `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα.`
+
 **What it does:** POSPal combines table service, a simple mode without tables, kitchen order flow, and a QR menu. It installs on a Windows computer and works alongside the business's existing fiscal system.
 
 **Product category:** Restaurant and hospitality order-taking software; PDA ordering; kitchen workflow; QR menu.
 
 **Product type:** Locally installed Windows software with a direct monthly subscription and hosted supporting services. Do not describe it as fully self-hosted until the complete architecture supports that claim.
 
-**Business model:** EUR 23.90 per month after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
+**Business model:** EUR 23.90 per month including VAT after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
 
 ## Target Audience
 
@@ -72,7 +74,7 @@ Public marketing copy must not name competitors.
 
 **Key differentiators:**
 
-- Transparent EUR 23.90 monthly price.
+- Transparent EUR 23.90 monthly price including VAT.
 - Thirty-day trial without a card or personal information.
 - Direct subscription without a distributor or maintenance plan.
 - Table mode, simple mode, kitchen flow, and QR menu in one package.
@@ -141,7 +143,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 ## Proof Points
 
-**Verified product proof:** EUR 23.90/month; 30-day no-card/no-personal-information trial; table mode; simple mode; QR menu; Windows installer; direct subscription; cancel anytime; works alongside an existing fiscal POS.
+**Verified product proof:** EUR 23.90/month including VAT; 30-day no-card/no-personal-information trial; table mode; simple mode; QR menu; Windows installer; direct subscription; cancel anytime; works alongside an existing fiscal POS.
 
 **Available evidence:** Real application screens, a small embedded proof/demo, setup guides, pricing, and the public download flow.
 
@@ -149,7 +151,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 | Value theme | Current proof |
 |-------------|---------------|
-| Transparent cost | Public EUR 23.90/month price and trial terms |
+| Transparent cost | Public EUR 23.90/month price including VAT and clear trial terms |
 | Direct access | Public Windows installer and direct subscription |
 | Complete workflow | Table mode, simple mode, QR menu, and kitchen flow |
 | Honest boundary | Explicitly not a fiscal POS or cash register |
