@@ -1,10 +1,21 @@
 # POSPal ChatGPT and AI Discovery Work Plan
 
-Status: In progress — controlled evidence and Release 1 implementation complete; live measurement is next
-Last updated: 2026-08-05
+Status: In progress — proof system and Release 1 are live; indexing submissions are complete; independent verification is next
+Last updated: 2026-08-06
 Planning model: dependency-ordered steps, not a calendar roadmap
 Primary outcome: POSPal is independently discovered and accurately recommended for relevant Greek hospitality ordering queries
 Primary conversion: download `POSPal-win-Setup.exe`
+
+## Current checkpoint
+
+- Release 1 was committed as `e678480` and pushed to `main` on 2026-08-05.
+- The owner reviewed the live generic hub and wireless-ordering page.
+- Google Search Console indexing requests were submitted for both released URLs and `https://pospal.gr/sitemap.xml` was resubmitted.
+- The corresponding Bing Webmaster Tools submission was completed.
+- The measurement baseline date is 2026-08-05. The 7-, 14-, and 28-day observations remain pending.
+- These are submission and review records, not evidence that either search engine has indexed, ranked, or cited the pages.
+- The reusable independent-reviewer outreach kit is prepared and points to the completed fact pack.
+- The next dependency-ready action is to select one genuine recipient for a narrow, independently controlled review.
 
 ## Scope and rules
 
@@ -62,26 +73,11 @@ Conclusion: crawlability is not the main reason POSPal is absent from generic re
 - **Measured:** the existing international Pospal product dominates broad English brand searches and has a much larger public footprint.
 - **Measured from the current SEO evaluation:** generic ordering queries produced impressions but no clicks; non-brand growth is roughly flat.
 
-### Gap 3: the broad category hub is too light to be a definitive source
+### Gap 3: the controlled category source is stronger, but independent operational proof is still absent
 
-`/systima-paraggeliolipsias.html` correctly owns the generic category, but it currently provides mostly:
+`/systima-paraggeliolipsias.html` still owns the generic category. Release 1 now adds the repository-verified workflow, reachable-local-network requirements, narrow reconnect boundary, separate internet dependencies, Windows-installed printer roles and routing, test-print boundary, fit/non-fit guidance, price, trial, limitations, and answer-first FAQ content.
 
-- a short product definition;
-- the three-step workflow;
-- venue summaries;
-- equipment requirements;
-- the fiscal-POS boundary;
-- four FAQ answers.
-
-It lacks the evidence an answer engine needs when comparing candidates:
-
-- verified printer and device compatibility;
-- a complete annotated workflow;
-- real installation evidence;
-- support facts;
-- explicit fit and non-fit criteria;
-- customer-approved operational proof;
-- verifiable product or usage data.
+The page deliberately does not claim broad device, browser, Windows-version, or printer-model compatibility. It also does not contain customer outcomes, customer-approved operational proof, or independently authored conclusions. Those remain authority-layer work rather than reasons to add more first-party copy.
 
 ### Gap 4: measurement is not yet a controlled AI-discovery system
 
@@ -197,6 +193,8 @@ Target URL: `/systima-paraggeliolipsias.html`
 
 Do not create a replacement URL.
 
+Release outcome: the generic hub and its supporting wireless-ordering page were released in commit `e678480`, reviewed live by the owner, and submitted to Google Search Console and Bing Webmaster Tools on 2026-08-05.
+
 Tasks:
 
 - [x] Make the category and intended buyer explicit in the H1 and opening answer.
@@ -252,12 +250,20 @@ Priority source types:
 
 Tasks:
 
-- [ ] Create an outreach fact pack with the canonical entity name, verified description, price, trial, screenshots, limitations, and download URL.
+- [x] Create an outreach fact pack with the canonical entity name, verified description, price, trial, screenshots, limitations, and download URL.
+- [x] Prepare one reusable Greek outreach message and reviewer handoff checklist.
 - [ ] Ask named customers to describe the real setup in their own channels.
 - [ ] Offer working software and evidence to reviewers without controlling their conclusion.
 - [ ] Publish Greek video transcripts so the workflow is crawlable as text.
 - [ ] Track the referring page, entity wording, target URL, and whether the mention is independently authored.
 - [ ] Reject paid fabricated reviews, bulk directories, link exchanges, and irrelevant backlink packages.
+
+Immediate next action:
+
+- Select one genuine customer, reviewer, publication, video creator, or relevant partner for a narrow review.
+- Keep the verification scope narrow: the reviewer chooses which fact IDs to test and controls the conclusion and publication.
+- Record the contact, selected fact IDs, evidence owner, sent date, response, resulting URL, and review date in the proof execution tracker.
+- Do not describe outreach, software access, or a private review as independent proof until a qualifying third party publishes a checkable conclusion under its own control.
 
 Exit criteria:
 
@@ -269,6 +275,12 @@ Exit criteria:
 
 Tasks:
 
+- [x] Review the two Release 1 pages live after deployment.
+- [x] Submit both released URLs for indexing in Google Search Console.
+- [x] Resubmit `https://pospal.gr/sitemap.xml` in Google Search Console.
+- [x] Complete the corresponding Bing Webmaster Tools submission.
+- [x] Record 2026-08-05 as the Release 1 measurement baseline date.
+- [ ] Record the 7-, 14-, and 28-day Search Console and Bing observations without treating submission as indexing.
 - [ ] Rerun the fixed prompt benchmark only after a released batch is crawlable.
 - [ ] Compare mention rate, top-three mention rate, citation share, independent-source citation rate, and exclusion reasons.
 - [ ] Compare AI referral sessions and installer-download rate.
@@ -292,7 +304,11 @@ Work starts at the first unchecked item whose dependencies are available.
 | 6 | Select the first customer-approved proof source | Pending | Customer permission |
 | 7 | Draft the generic-hub improvement specification | Complete | Repository-backed product facts |
 | 8 | Implement the generic-hub and wireless batch | Complete | Explicit website-edit approval received 2026-08-05 |
-| 9 | Begin independent outreach | Pending | Entity and proof packs complete |
+| 9 | Review Release 1 live and submit it to Google Search Console and Bing | Complete | Release deployed |
+| 10 | Prepare the reusable independent-reviewer outreach kit | Complete | Entity and proof packs complete |
+| 11 | Select one genuine independent-review recipient | **Next** | Outreach kit complete |
+| 12 | Begin controlled independent outreach | Pending | A genuine recipient is available |
+| 13 | Record the 7-, 14-, and 28-day Release 1 observations | Waiting | Measurement checkpoints reached |
 
 ## Inputs needed as work progresses
 

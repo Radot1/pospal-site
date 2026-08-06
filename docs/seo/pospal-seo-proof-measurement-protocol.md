@@ -1,6 +1,6 @@
 # POSPal SEO Proof Measurement Protocol
 
-Status: Active for `RB-2026-01`; deployment timestamp pending
+Status: Active for live `RB-2026-01`; dated observation checkpoints registered
 Created: 2026-08-05
 Primary business outcome: qualified downloads of `POSPal-win-Setup.exe`
 Secondary outcome: useful engagement with installation/setup guidance
@@ -55,18 +55,29 @@ Create one row before any approved public change. Documentation-only work is not
 | Field | Value |
 | --- | --- |
 | Batch ID | `RB-2026-01` |
-| Public release timestamp | Pending GitHub Actions deployment after push |
-| Git reference/deployment reference | Pending commit and deployment reference |
+| Public release timestamp | `2026-08-05T14:04:21+03:00` |
+| Git reference/deployment reference | Commit `e678480`; successful GitHub Actions run `30999951234` |
 | Changed public URLs | `/systima-paraggeliolipsias.html`; `/asyrmati-paraggeliolipsia.html` |
 | Evidence IDs used | `FAC-BND-001`, `FAC-BND-002`, `FAC-CAP-001`, `FAC-OFR-001`, `FAC-OFR-002`, `FAC-WIN-001`–`FAC-WIN-005`, `FAC-DEV-001`–`FAC-DEV-003`, `FAC-NET-001`–`FAC-NET-008`, `FAC-PRN-001`–`FAC-PRN-007`, `FAC-WRK-001`–`FAC-WRK-003`, `FAC-QR-001` |
 | Search intent | Generic ordering-system evaluation; wireless/local-network behavior and reconnect limits |
 | Change class | Metadata, copy, controlled evidence, FAQ schema, internal links, and page-specific design |
 | Primary hypothesis | Source-specific workflow and connection information will improve non-brand relevance, AI retrieval accuracy, and qualified download intent for the two intended page owners |
 | Guardrail | No broad compatibility, independent proof, customer outcome, integration, or fiscal claim; no PDA-experiment contamination |
-| Concurrent changes | Proof-system documentation and graph refresh; no pricing, tracking, locked-page, or PDA-page change |
-| Crawl/index state | Pre-push local candidate; live discovery/crawl/canonical/index checks pending |
+| Concurrent changes | Proof-system documentation and graph refresh; 2026-08-06 sitemap `lastmod` correction for the two released URLs; no pricing, tracking, locked-page, PDA-page, or public page-content change |
+| Crawl/index state | Both URLs are live, return `200`, expose the intended self-canonical content, and were submitted to Google Search Console and Bing Webmaster Tools on 2026-08-05; indexing and ranking remain unconfirmed |
 | Earliest evaluation date | 2026-09-05, subject to successful deployment, crawlability, complete windows, and reporting delay |
-| Decision | Hold for deployment and exposure |
+| Decision | Hold for exposure and the registered observation checkpoints |
+
+### Registered observation checkpoints
+
+The dates below are collection points, not promises of indexing or ranking movement. Record zeroes and unavailable data rather than leaving a checkpoint ambiguous.
+
+| Date | Checkpoint | Required evidence | Decision boundary |
+| --- | --- | --- | --- |
+| 2026-08-12 | 7-day observation | GSC URL Inspection or coverage state, sitemap processing, selected canonical, Bing crawl/index state, first known crawl if available | Discovery check only; do not judge ranking or copy performance |
+| 2026-08-19 | 14-day observation | Updated crawl/index state, visible query impressions, page ownership, search-snippet freshness, Bing state | Directional note only; hold when exposure or volume is incomplete |
+| 2026-09-02 | 28-day observation and PDA experiment review | GSC and Bing observation, consented GA4 counts since 2026-08-03, PDA experiment evidence, AI benchmark readiness | Capture the observation; rerun the frozen AI benchmark only if the released pages are crawl-refreshed |
+| 2026-09-05 or later | Release 1 decision | Complete equal-duration GSC windows with reporting delay, available GA4 funnel data, AI benchmark when eligible, independent-source state | Continue, hold, iterate, reverse, or insufficient evidence |
 
 ## Batch boundaries
 

@@ -1,8 +1,8 @@
 # POSPal SEO Proof Execution Tracker
 
-Status: Release 1 implemented and audited; deployment pending push
+Status: Release 1 live; independent-reviewer outreach kit prepared; recipient selection next
 Started: 2026-08-05
-Last updated: 2026-08-05 — `RB-2026-01` implementation and pre-push audit complete
+Last updated: 2026-08-06 — live review, sitemap correction, outreach kit, and measurement checkpoints prepared
 Owner: POSPal
 Primary outcome: improve discovery and accurate recommendation for relevant Greek hospitality ordering queries
 Primary conversion: download `POSPal-win-Setup.exe`
@@ -56,6 +56,7 @@ The proof system exists to improve SEO and AI discovery. Controlled source revie
 | 5 | Prepare independent-verification materials | Complete | [Independent verification fact pack](pospal-independent-verification-fact-pack.md) | A factual pack can be handed to a customer, directory, or reviewer who controls its conclusion |
 | 6 | Create the release measurement protocol | Complete | [SEO proof measurement protocol](pospal-seo-proof-measurement-protocol.md) | One protocol connects GSC, AI citations, referrals, and installer-download behavior to release decisions |
 | 7 | Refresh graphify and verify repository integrity | Complete | Current `graphify-out/`: 869 nodes, 985 edges, 10 hyperedges, 87 active communities | New artifacts are queryable; graph health and Git hygiene checks pass |
+| 8 | Prepare independent-review outreach | Complete | [Independent reviewer outreach kit](pospal-independent-reviewer-outreach-kit.md) | One privacy-safe Greek message, reviewer checklist, narrow scope map, follow-up, tracking record, and send gate are ready |
 
 ## SEO outcome map
 
@@ -76,8 +77,8 @@ The proof system exists to improve SEO and AI discovery. Controlled source revie
 | Exact staff-device/browser environment | Broad compatibility evidence only | Not documented | Avoid OS/browser/version compatibility claims |
 | Exact printer make/model/interface | Model-specific compatibility only | No authentic public model record | Publish Windows-installed printer roles/routing, not hardware compatibility |
 | Named customer and granular permission | Step 3 public proof | Not present | Prepare the approval pack and blank record without inventing a customer |
-| Explicit website-edit approval | Proposed implementation | Not yet given | Proposal is complete; no website file changes until approval |
-| External author or customer publication | Step 5 independent citation | Not selected | Prepare factual outreach/reviewer materials only; do not contact anyone |
+| Explicit website-edit approval | Release 1 and sitemap correction | Approved for Release 1 on 2026-08-05 and for the sitemap polish on 2026-08-06 | Preserve the permanent page locks and keep later public changes approval-gated |
+| External author or customer publication | Step 5 independent citation | No recipient selected | Use the completed outreach kit to select one relevant recipient; do not infer contact or publication |
 | GA4 and Search Console access/exports | Step 6 reporting | Not available in repository | Define report schema, filters, decision rules, and required exports |
 
 ## Update protocol
@@ -188,10 +189,20 @@ For every step:
 - Preserved the permanently locked homepage, download page, and guides page. Preserved every PDA experiment page.
 - Refreshed `graphify-out/` after the final copy/design state: 869 nodes, 985 edges, 10 hyperedges, and 87 active communities; graph health reported zero missing/dangling endpoints, self-loops, duplicate edges, or collapsed edges.
 
+### 2026-08-06 — live review and independent-review preparation
+
+- Verified that all 12 sitemap URLs return `200`, use self-referencing canonicals, expose one H1, declare Greek language and a mobile viewport, and remain index-eligible.
+- Verified the canonical host redirects, permissive `robots.txt`, live sitemap, internal destinations, image alternatives, structured-data parsing, and mobile Lighthouse lab state.
+- Corrected the sitemap `lastmod` values for the two pages significantly updated in `RB-2026-01`; no public page copy, metadata, URL, CSS, JavaScript, tracking, locked page, or PDA experiment changed.
+- Used `copywriting` to prepare the [independent reviewer outreach kit](pospal-independent-reviewer-outreach-kit.md) in natural Greek without requesting a positive conclusion.
+- Used `ponytail` to reuse the existing measurement protocol rather than create a duplicate log.
+- Registered the 7-, 14-, and 28-day observations plus the post-reporting-delay decision point in the [measurement protocol](pospal-seo-proof-measurement-protocol.md).
+- No recipient was selected or contacted. No private contact, correspondence, endorsement, result, or publication was added.
+
 ## Next execution point
 
-1. Commit and push `RB-2026-01` so GitHub Actions can publish it.
-2. Record the commit, deployment timestamp, and live crawl/canonical checks in the batch register.
-3. Measure Release 1 only after it is live and crawlable; keep the PDA metadata experiment isolated through its 2026-09-02 review.
-4. Consider the separate pricing-page batch only after Release 1 has a readable result.
-5. Treat named customer or independent-review evidence as a later authority layer, not an installation dependency.
+1. Select one genuine customer, reviewer, publication, video creator, or relevant partner for a narrow independent review.
+2. Keep private contact details and raw correspondence outside Git; record only the privacy-safe outreach fields.
+3. Record the 7-day observation on 2026-08-12 and the 14-day observation on 2026-08-19 without treating submission as indexing.
+4. Record the 28-day observation and review the PDA metadata experiment on 2026-09-02; make the Release 1 decision on 2026-09-05 or later after reporting delay.
+5. Consider another public content or performance batch only after Release 1 has a readable result.
