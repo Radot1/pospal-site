@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-08-29T10:18:35.735783+00:00",
+  "nodes": {
+    "beach_bar_order_page": {
+      "code_fingerprint": "916b46325c68421bf2d0fc0550a0f6ec4bec67f4d482a96554a24bd4269a69c4",
+      "label": "Beach Bar Order-taking Page",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "cafe_pda_page": {
+      "code_fingerprint": "acc2ec18a76d7b723bff4f3ea4315910f17f1dc8e12f020c106dbf35b81edf45",
+      "label": "Cafe PDA Page",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "pda-gia-kafeteries.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_redesign_homepage_design_brief_commercial_model": {
+      "code_fingerprint": "a4990b7bd6c3caf8adb3e780efd6a0725f744773d05e56ea95e9da528b0e56cb",
+      "label": "Commercial Model",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "docs/redesign/homepage-design-brief.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "download_first_funnel": {
+      "code_fingerprint": "1390d3f6f2f02de250e863fc1f09b34089e27fb18f044087e82f9a309a953f23",
+      "label": "Download-first Funnel",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "MARKETING_PLAN.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "download_index_installer_handoff": {
+      "code_fingerprint": "582b3b060b494e08bc16d2cf90fd2aafce5def67f5b36ce6bccbb9497fc95a52",
+      "label": "Windows Installer Handoff",
+      "last": "2026-08-29T10:10:22.037051+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T10:10:22.037051+00:00",
+          "outcome": "useful",
+          "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
+        }
+      ],
+      "score": 0.999867985,
+      "source_file": "download/index.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "greek_hospitality_audience": {
+      "code_fingerprint": "1390d3f6f2f02de250e863fc1f09b34089e27fb18f044087e82f9a309a953f23",
+      "label": "Greek Hospitality Audience",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "MARKETING_PLAN.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "pda_definition_page": {
+      "code_fingerprint": "392cfa4584ca9d30b657d15f5530b34316c15bc96dc814637411bc0e2d45d2c0",
+      "label": "PDA Definition Page",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "pda-ti-einai.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "pda_how_it_works_page": {
+      "code_fingerprint": "7d3298b81a7ae7401d18bdb9fa86ff563c268c2dc55a44d0a679b964b15aaa79",
+      "label": "PDA How-it-works Page",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "pda-pos-leitourgei.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "systima_paraggeliolipsias_non_fiscal_boundary": {
+      "code_fingerprint": "bc34475b966d4b3dc5e9d4c1e124c15df8a25b407e94da4c601232bb07bb6da3",
+      "label": "Ordering Workflow Not Fiscal POS",
+      "last": "2026-08-29T10:10:22.037051+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T10:10:22.037051+00:00",
+          "outcome": "useful",
+          "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
+        }
+      ],
+      "score": 0.999867985,
+      "source_file": "systima-paraggeliolipsias.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "systima_paraggeliolipsias_ordering_system_hub_page": {
+      "code_fingerprint": "bc34475b966d4b3dc5e9d4c1e124c15df8a25b407e94da4c601232bb07bb6da3",
+      "label": "Ordering System Hub Page",
+      "last": "2026-08-29T10:10:22.037051+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T10:10:22.037051+00:00",
+          "outcome": "useful",
+          "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
+        }
+      ],
+      "score": 0.999867985,
+      "source_file": "systima-paraggeliolipsias.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "systima_paraggeliolipsias_staff_device_to_windows_route": {
+      "code_fingerprint": "bc34475b966d4b3dc5e9d4c1e124c15df8a25b407e94da4c601232bb07bb6da3",
+      "label": "Staff Device to Windows Route",
+      "last": "2026-08-29T10:10:22.037051+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T10:10:22.037051+00:00",
+          "outcome": "useful",
+          "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
+        }
+      ],
+      "score": 0.999867985,
+      "source_file": "systima-paraggeliolipsias.html",
+      "status": "tentative",
+      "uses": 1
+    },
+    "waiter_pda_page": {
+      "code_fingerprint": "76c7dd39d039b42173d849c265b18e5a9c93dc2182f2ce4e00417d19d59ae098",
+      "label": "Waiter PDA Page",
+      "last": "2026-08-29T09:02:09.394201+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-29T09:02:09.394201+00:00",
+          "outcome": "useful",
+          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
+        }
+      ],
+      "score": 0.998774282,
+      "source_file": "pda-gia-servitoro/index.html",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}
