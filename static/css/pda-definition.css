@@ -1,8 +1,8 @@
 .pda-definition-page {
+  position: relative;
   --pda-def-warm: #f0efe9;
   --pda-def-paper: #fbfaf6;
   --pda-def-yellow: #ffc63d;
-  --pda-def-red: #ff6b4a;
 }
 
 .pda-definition-page .pda-def-hero {
@@ -30,7 +30,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
   gap: clamp(2.5rem, 6vw, 6rem);
   align-items: center;
   min-height: calc(100svh - 72px);
@@ -39,25 +39,25 @@
 
 .pda-definition-page .pda-def-hero h1 {
   max-width: 830px;
-  margin-bottom: 1.55rem;
+  margin-bottom: 1.4rem;
   font-size: clamp(3.5rem, 7.3vw, 6.8rem);
-  line-height: .88;
-  letter-spacing: -.055em;
+  line-height: .9;
+  letter-spacing: -.045em;
 }
 
 .pda-definition-page .pda-def-intro {
   max-width: 670px;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
   font-size: clamp(1.08rem, 1.7vw, 1.34rem);
   line-height: 1.48;
 }
 
 .pda-definition-page .pda-def-hero .pda-actions {
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 
 .pda-definition-page .pda-def-trial {
-  margin: .9rem 0 0;
+  margin: .85rem 0 0;
   color: var(--pda-muted);
   font-size: .88rem;
   font-weight: 600;
@@ -101,15 +101,31 @@
 }
 
 .pda-definition-page .pda-def-proposition strong {
-  margin-top: 1.7rem;
+  margin-top: 1.5rem;
   color: var(--pda-green);
   font-size: clamp(2rem, 4.1vw, 3.6rem);
-  line-height: .96;
-  letter-spacing: -.045em;
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+
+.pda-definition-page .pda-def-shift,
+.pda-definition-page .pda-def-flow,
+.pda-definition-page .pda-def-price,
+.pda-definition-page .pda-def-faq,
+.pda-definition-page .pda-def-final {
+  padding: clamp(4.5rem, 9vw, 8rem) 0;
+}
+
+.pda-definition-page .pda-def-shift h2,
+.pda-definition-page .pda-def-flow h2,
+.pda-definition-page .pda-def-price h2,
+.pda-definition-page .pda-def-faq h2,
+.pda-definition-page .pda-def-final h2 {
+  font-size: clamp(2.65rem, 5.5vw, 5.5rem);
+  letter-spacing: -.04em;
 }
 
 .pda-definition-page .pda-def-shift {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
   background: var(--pda-white);
 }
 
@@ -120,24 +136,40 @@
   align-items: start;
 }
 
-.pda-definition-page .pda-def-shift h2,
-.pda-definition-page .pda-def-founder h2,
-.pda-definition-page .pda-def-flow h2,
-.pda-definition-page .pda-def-price h2,
-.pda-definition-page .pda-def-requirements h2,
-.pda-definition-page .pda-def-faq h2,
-.pda-definition-page .pda-def-final h2 {
-  font-size: clamp(2.65rem, 5.5vw, 5.5rem);
-  letter-spacing: -.045em;
-}
-
 .pda-definition-page .pda-def-shift h2 {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
 }
 
 .pda-definition-page .pda-def-shift-copy > p:not(.pda-signal) {
   max-width: 570px;
   font-size: 1.07rem;
+}
+
+.pda-definition-page .pda-def-founder-quote {
+  margin: 2rem 0 0;
+  padding: 1.5rem 0 0 1.5rem;
+  border-top: 1px solid var(--pda-ink);
+  border-left: 4px solid var(--pda-green-dark);
+}
+
+.pda-definition-page .pda-def-founder-quote p {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.pda-definition-page .pda-def-founder-quote p + p {
+  margin-top: .55rem;
+  color: var(--pda-green-dark);
+}
+
+.pda-definition-page .pda-def-founder-quote footer {
+  margin-top: 1rem;
+  color: var(--pda-muted);
+  font-size: .84rem;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .pda-definition-page .pda-def-shift-board {
@@ -185,80 +217,25 @@
 }
 
 .pda-definition-page .pda-def-scene .pda-def-scene-hit {
-  margin: 1.8rem 0 0;
-  padding-top: 1.6rem;
+  margin: 1.6rem 0 0;
+  padding-top: 1.4rem;
   color: var(--pda-white);
   border-top: 1px solid #385040;
-  font-size: clamp(1.55rem, 3vw, 2.6rem);
+  font-size: clamp(1.45rem, 2.8vw, 2.4rem);
   font-weight: 800;
   line-height: 1.05;
 }
 
-.pda-definition-page .pda-def-founder {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
-  color: var(--pda-white);
-  background: var(--pda-forest-deep);
-}
-
-.pda-definition-page .pda-def-founder-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  align-items: center;
-}
-
-.pda-definition-page .pda-def-founder h2 {
-  max-width: 820px;
-  margin-bottom: 1.25rem;
-}
-
-.pda-definition-page .pda-def-founder .pda-signal,
-.pda-definition-page .pda-def-final .pda-signal {
-  color: var(--pda-green);
-}
-
-.pda-definition-page .pda-def-founder-copy > p:not(.pda-signal):not(.pda-def-signature) {
-  max-width: 700px;
-  color: #d1dbd4;
-  font-size: 1.08rem;
-}
-
-.pda-definition-page .pda-def-founder-copy .pda-def-founder-answer {
-  color: var(--pda-green) !important;
-  font-size: clamp(1.45rem, 2.6vw, 2.15rem) !important;
-  font-weight: 800;
-}
-
-.pda-definition-page .pda-def-signature {
-  margin: 2rem 0 0;
-  color: var(--pda-white);
-  font-weight: 800;
-}
-
-.pda-definition-page .pda-def-missile {
-  position: relative;
-  margin: 0;
-  padding: clamp(2rem, 5vw, 4rem);
-  color: var(--pda-ink);
-  background: var(--pda-def-yellow);
-  font-size: clamp(2.2rem, 4.7vw, 4.5rem);
-  font-weight: 800;
-  line-height: .96;
-  letter-spacing: -.045em;
-  transform: rotate(1.2deg);
-}
-
 .pda-definition-page .pda-def-flow {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
   background: var(--pda-def-paper);
 }
 
 .pda-definition-page .pda-def-section-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, .65fr);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .55fr);
   gap: 3rem;
   align-items: end;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .pda-definition-page .pda-def-section-head h2 {
@@ -283,12 +260,12 @@
 
 .pda-definition-page .pda-def-steps li {
   position: relative;
-  padding: 4rem 2rem 2rem 0;
+  padding: 3.5rem 1.7rem 1rem 0;
   counter-increment: pda-step;
 }
 
 .pda-definition-page .pda-def-steps li + li {
-  padding-left: 2rem;
+  padding-left: 1.7rem;
   border-left: 1px solid var(--pda-line);
 }
 
@@ -309,13 +286,13 @@
 }
 
 .pda-definition-page .pda-def-steps li + li::before {
-  left: 2rem;
+  left: 1.7rem;
 }
 
 .pda-definition-page .pda-def-steps h3 {
-  margin-bottom: .8rem;
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-  line-height: 1.05;
+  margin-bottom: .65rem;
+  font-size: clamp(1.3rem, 2.1vw, 1.75rem);
+  line-height: 1.08;
 }
 
 .pda-definition-page .pda-def-steps p {
@@ -324,101 +301,80 @@
 }
 
 .pda-definition-page .pda-def-proof {
-  display: grid;
-  grid-template-columns: minmax(260px, .55fr) minmax(0, 1.45fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: stretch;
-  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
-.pda-definition-page .pda-def-browser-fact {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 360px;
-  padding: clamp(1.5rem, 4vw, 2.6rem);
-  color: var(--pda-white);
-  background: var(--pda-green-dark);
+.pda-definition-page .pda-def-proof-note {
+  max-width: 720px;
+  margin: 0 0 1.25rem;
+  padding-left: 1rem;
+  color: var(--pda-muted);
+  border-left: 4px solid var(--pda-green-dark);
 }
 
-.pda-definition-page .pda-def-browser-fact span {
-  margin-bottom: auto;
-  color: #d6f6df;
-  font-size: .82rem;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.pda-definition-page .pda-def-browser-fact strong {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  line-height: .85;
-  letter-spacing: -.05em;
-}
-
-.pda-definition-page .pda-def-browser-fact p {
-  margin: 1.25rem 0 0;
-  color: #e4f5e8;
+.pda-definition-page .pda-def-proof-note strong {
+  color: var(--pda-ink);
 }
 
 .pda-definition-page .pda-def-windows-proof {
+  max-width: 920px;
   margin: 0;
-  padding: clamp(.75rem, 2vw, 1.2rem);
+  padding: clamp(.7rem, 2vw, 1.1rem);
   background: var(--pda-ink);
 }
 
 .pda-definition-page .pda-def-windows-proof img {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 520px;
+  max-height: 560px;
   object-fit: contain;
   background: #111;
 }
 
 .pda-definition-page .pda-def-windows-proof figcaption {
-  padding: 1rem .35rem .2rem;
+  padding: .85rem .25rem .1rem;
   color: #d5ddd7;
   font-size: .86rem;
-}
-
-.pda-definition-page .pda-def-price {
-  padding: clamp(4.5rem, 9vw, 7rem) 0;
-  background: var(--pda-def-yellow);
-}
-
-.pda-definition-page .pda-def-price-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: center;
-}
-
-.pda-definition-page .pda-def-price h2 {
-  max-width: 830px;
-  margin-bottom: 1.4rem;
-}
-
-.pda-definition-page .pda-def-price .pda-signal {
-  color: var(--pda-ink);
-}
-
-.pda-definition-page .pda-def-price-copy p {
-  max-width: 690px;
-  font-size: 1.08rem;
 }
 
 .pda-definition-page .pda-def-text-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  margin-top: .5rem;
+  margin-top: .6rem;
   border-bottom: 2px solid currentColor;
   font-weight: 800;
 }
 
+.pda-definition-page .pda-def-price {
+  background: var(--pda-def-yellow);
+}
+
+.pda-definition-page .pda-def-price-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, .8fr) minmax(0, 1.2fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.pda-definition-page .pda-def-price .pda-signal {
+  color: var(--pda-ink);
+}
+
+.pda-definition-page .pda-def-price h2 {
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+
+.pda-definition-page .pda-def-price-copy > p:not(.pda-signal) {
+  max-width: 680px;
+  font-size: 1.06rem;
+}
+
 .pda-definition-page .pda-def-price-mark {
-  padding-left: clamp(1.5rem, 4vw, 3rem);
-  border-left: 3px solid var(--pda-ink);
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+  border-right: 3px solid var(--pda-ink);
 }
 
 .pda-definition-page .pda-def-price-mark strong,
@@ -427,72 +383,117 @@
 }
 
 .pda-definition-page .pda-def-price-mark strong {
-  font-size: clamp(4.5rem, 10vw, 9rem);
-  line-height: .8;
-  letter-spacing: -.07em;
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  line-height: .82;
+  letter-spacing: -.065em;
 }
 
 .pda-definition-page .pda-def-price-mark span {
-  margin-top: 1.3rem;
+  margin-top: 1.1rem;
   font-size: 1.08rem;
   font-weight: 800;
 }
 
 .pda-definition-page .pda-def-price-mark small {
   display: block;
-  margin-top: .4rem;
+  margin-top: .35rem;
   font-size: .86rem;
 }
 
-.pda-definition-page .pda-def-requirements {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
-  background: var(--pda-white);
-}
-
-.pda-definition-page .pda-def-requirements-grid {
+.pda-definition-page .pda-def-fit {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: start;
-}
-
-.pda-definition-page .pda-def-requirements h2 {
-  margin-bottom: 1.5rem;
-}
-
-.pda-definition-page .pda-def-requirements-copy > p:not(.pda-signal) {
-  max-width: 700px;
-  font-size: 1.07rem;
-}
-
-.pda-definition-page .pda-def-truths {
+  grid-template-columns: minmax(260px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  padding-top: clamp(2rem, 5vw, 3.5rem);
   border-top: 2px solid var(--pda-ink);
 }
 
-.pda-definition-page .pda-def-truth {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--pda-line);
-}
-
-.pda-definition-page .pda-def-truth span {
-  display: block;
-  margin-bottom: .35rem;
-  color: var(--pda-green-dark);
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-
-.pda-definition-page .pda-def-truth h3 {
-  margin-bottom: .6rem;
-  font-size: 1.35rem;
-  line-height: 1.08;
-}
-
-.pda-definition-page .pda-def-truth p {
+.pda-definition-page .pda-def-fit h3 {
+  max-width: 430px;
   margin: 0;
-  color: var(--pda-muted);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+
+.pda-definition-page .pda-def-fit ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--pda-ink);
+  list-style: none;
+}
+
+.pda-definition-page .pda-def-fit li {
+  position: relative;
+  margin: 0;
+  padding: 2.6rem 1.15rem 1rem 0;
+  font-weight: 800;
+}
+
+.pda-definition-page .pda-def-fit li + li {
+  padding-left: 1.15rem;
+  border-left: 1px solid rgba(7, 18, 11, .35);
+}
+
+.pda-definition-page .pda-def-fit li::before {
+  content: "✓";
+  position: absolute;
+  top: .7rem;
+  left: 0;
+  font-weight: 900;
+}
+
+.pda-definition-page .pda-def-fit li + li::before {
+  left: 1.15rem;
+}
+
+.pda-definition-page .pda-def-detail-list {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--pda-ink);
+}
+
+.pda-definition-page .pda-def-detail-list details {
+  border-bottom: 1px solid rgba(7, 18, 11, .45);
+}
+
+.pda-definition-page .pda-def-detail-list summary {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 0;
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.pda-definition-page .pda-def-detail-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.pda-definition-page .pda-def-detail-list summary::after {
+  content: "+";
+  position: absolute;
+  top: .85rem;
+  right: .15rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.pda-definition-page .pda-def-detail-list details[open] summary::after {
+  content: "−";
+}
+
+.pda-definition-page .pda-def-detail-list p {
+  max-width: 850px;
+  margin: 0;
+  padding: 0 2.5rem 1.2rem 0;
+}
+
+.pda-definition-page .pda-def-detail-list a {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: .18em;
 }
 
 .pda-definition-page .pda-def-fiscal {
@@ -500,8 +501,8 @@
   grid-template-columns: auto 1fr;
   gap: 1.25rem;
   align-items: start;
-  margin-top: clamp(3rem, 6vw, 5rem);
-  padding: 1.5rem 0;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding: 1.35rem 0;
   border-top: 1px solid var(--pda-ink);
   border-bottom: 1px solid var(--pda-ink);
 }
@@ -513,11 +514,9 @@
 .pda-definition-page .pda-def-fiscal p {
   max-width: 820px;
   margin: 0;
-  color: var(--pda-muted);
 }
 
 .pda-definition-page .pda-def-faq {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
   background: var(--pda-def-paper);
 }
 
@@ -534,7 +533,6 @@
 }
 
 .pda-definition-page .pda-def-final {
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
   color: var(--pda-white);
   background: var(--pda-forest-deep);
 }
@@ -547,11 +545,11 @@
 }
 
 .pda-definition-page .pda-def-final h2 {
-  max-width: 950px;
-  margin-bottom: 1.5rem;
+  max-width: 850px;
+  margin-bottom: 1rem;
 }
 
-.pda-definition-page .pda-def-final-copy > p:not(.pda-signal) {
+.pda-definition-page .pda-def-final-copy > p {
   max-width: 720px;
   color: #d1dbd4;
   font-size: 1.08rem;
@@ -561,12 +559,22 @@
   color: #b9c7bd;
 }
 
+.pda-definition-page .pda-footer-inner {
+  padding-bottom: 4.75rem;
+}
+
+.pda-definition-page .pospal-cookie-settings-float {
+  position: absolute;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  left: auto;
+}
+
 @media (max-width: 980px) {
   .pda-definition-page .pda-def-hero-grid,
   .pda-definition-page .pda-def-shift-grid,
-  .pda-definition-page .pda-def-founder-grid,
   .pda-definition-page .pda-def-price-grid,
-  .pda-definition-page .pda-def-requirements-grid,
+  .pda-definition-page .pda-def-fit,
   .pda-definition-page .pda-def-faq-grid,
   .pda-definition-page .pda-def-final-grid {
     grid-template-columns: 1fr;
@@ -582,7 +590,17 @@
 
   .pda-definition-page .pda-def-section-head {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  .pda-definition-page .pda-def-price-mark {
+    padding: 0 0 1.8rem;
+    border-right: 0;
+    border-bottom: 3px solid var(--pda-ink);
+  }
+
+  .pda-definition-page .pda-def-fit ul {
+    max-width: 820px;
   }
 
   .pda-definition-page .pda-def-faq h2 {
@@ -595,103 +613,249 @@
 }
 
 @media (max-width: 740px) {
+  .pda-definition-page .pda-def-shift,
+  .pda-definition-page .pda-def-flow,
+  .pda-definition-page .pda-def-price,
+  .pda-definition-page .pda-def-faq,
+  .pda-definition-page .pda-def-final {
+    padding: 2.75rem 0;
+  }
+
   .pda-definition-page .pda-def-hero-grid {
-    padding: 3rem 0 4.5rem;
+    gap: 2rem;
+    padding: 2.5rem 0 3.25rem;
   }
 
   .pda-definition-page .pda-def-hero h1 {
-    font-size: clamp(3rem, 15vw, 4.35rem);
+    margin-bottom: 1.1rem;
+    font-size: clamp(2.65rem, 12vw, 3.1rem);
+    line-height: .95;
+    letter-spacing: -.035em;
+  }
+
+  .pda-definition-page .pda-def-intro {
+    margin-bottom: .65rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .pda-definition-page .pda-def-hero .pda-actions {
+    margin-top: 1.3rem;
+  }
+
+  .pda-definition-page .pda-def-trial {
+    font-size: .82rem;
+    line-height: 1.45;
   }
 
   .pda-definition-page .pda-def-proposition {
-    margin-right: 12px;
-    box-shadow: 12px 12px 0 var(--pda-green);
+    margin-right: 10px;
+    padding: 1.4rem;
+    box-shadow: 10px 10px 0 var(--pda-green);
+    transform: none;
+  }
+
+  .pda-definition-page .pda-def-proposition::before {
+    top: .9rem;
+    right: .9rem;
+  }
+
+  .pda-definition-page .pda-def-proposition span {
+    font-size: 1rem;
+  }
+
+  .pda-definition-page .pda-def-proposition strong {
+    margin-top: 1.1rem;
+    font-size: 1.85rem;
+  }
+
+  .pda-definition-page .pda-def-shift h2,
+  .pda-definition-page .pda-def-flow h2,
+  .pda-definition-page .pda-def-price h2,
+  .pda-definition-page .pda-def-faq h2,
+  .pda-definition-page .pda-def-final h2 {
+    font-size: clamp(2rem, 9vw, 2.25rem);
+    line-height: 1;
+    letter-spacing: -.035em;
   }
 
   .pda-definition-page .pda-def-shift-grid,
-  .pda-definition-page .pda-def-founder-grid,
   .pda-definition-page .pda-def-price-grid,
-  .pda-definition-page .pda-def-requirements-grid,
+  .pda-definition-page .pda-def-fit,
   .pda-definition-page .pda-def-faq-grid,
   .pda-definition-page .pda-def-final-grid {
-    gap: 2.25rem;
+    gap: 1.8rem;
+  }
+
+  .pda-definition-page .pda-def-shift-copy > p:not(.pda-signal),
+  .pda-definition-page .pda-def-price-copy > p:not(.pda-signal),
+  .pda-definition-page .pda-def-final-copy > p {
+    font-size: 1rem;
+  }
+
+  .pda-definition-page .pda-def-founder-quote {
+    margin-top: 1.4rem;
+    padding: 1.1rem 0 0 1rem;
+  }
+
+  .pda-definition-page .pda-def-founder-quote p {
+    font-size: 1.2rem;
   }
 
   .pda-definition-page .pda-def-shift-numbers strong {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  .pda-definition-page .pda-def-shift-numbers p {
+    padding: 1.1rem;
+  }
+
+  .pda-definition-page .pda-def-shift-numbers span {
+    font-size: .86rem;
+  }
+
+  .pda-definition-page .pda-def-scene {
+    padding: 1.25rem;
+  }
+
+  .pda-definition-page .pda-def-scene p {
+    font-size: 1rem;
+  }
+
+  .pda-definition-page .pda-def-scene .pda-def-scene-hit {
+    margin-top: 1.25rem;
+    padding-top: 1.1rem;
+    font-size: 1.45rem;
+  }
+
+  .pda-definition-page .pda-def-section-head {
+    margin-bottom: 2.25rem;
   }
 
   .pda-definition-page .pda-def-steps {
     grid-template-columns: 1fr;
-    margin-left: 1.3rem;
+    margin-left: 1.15rem;
     border-top: 0;
     border-left: 2px solid var(--pda-ink);
   }
 
   .pda-definition-page .pda-def-steps li,
   .pda-definition-page .pda-def-steps li + li {
-    padding: 0 0 2.5rem 2.8rem;
+    padding: 0 0 2rem 2.4rem;
     border-left: 0;
+  }
+
+  .pda-definition-page .pda-def-steps li:last-child {
+    padding-bottom: 0;
   }
 
   .pda-definition-page .pda-def-steps li::before,
   .pda-definition-page .pda-def-steps li + li::before {
-    top: -.55rem;
-    left: -1.4rem;
+    top: -.45rem;
+    left: -1.35rem;
+  }
+
+  .pda-definition-page .pda-def-steps h3 {
+    font-size: 1.25rem;
   }
 
   .pda-definition-page .pda-def-proof {
-    grid-template-columns: 1fr;
+    margin-top: 2rem;
   }
 
-  .pda-definition-page .pda-def-browser-fact {
-    min-height: 260px;
+  .pda-definition-page .pda-def-proof-note {
+    margin-bottom: 1rem;
+    font-size: .95rem;
+  }
+
+  .pda-definition-page .pda-def-windows-proof {
+    padding: .55rem;
+  }
+
+  .pda-definition-page .pda-def-windows-proof figcaption {
+    padding: .7rem .15rem .05rem;
+    font-size: .78rem;
   }
 
   .pda-definition-page .pda-def-price-mark {
-    padding: 1.5rem 0 0;
-    border-top: 3px solid var(--pda-ink);
+    padding-bottom: 1.4rem;
+  }
+
+  .pda-definition-page .pda-def-price-mark strong {
+    font-size: clamp(3.65rem, 18vw, 4.4rem);
+    letter-spacing: -.055em;
+  }
+
+  .pda-definition-page .pda-def-fit {
+    margin-top: 2.4rem;
+    padding-top: 1.8rem;
+  }
+
+  .pda-definition-page .pda-def-fit h3 {
+    font-size: 1.7rem;
+  }
+
+  .pda-definition-page .pda-def-fit ul {
+    grid-template-columns: 1fr;
+  }
+
+  .pda-definition-page .pda-def-fit li,
+  .pda-definition-page .pda-def-fit li + li {
+    padding: .9rem 0 .9rem 2rem;
+    border-top: 1px solid rgba(7, 18, 11, .3);
     border-left: 0;
+  }
+
+  .pda-definition-page .pda-def-fit li::before,
+  .pda-definition-page .pda-def-fit li + li::before {
+    top: .9rem;
+    left: .2rem;
+  }
+
+  .pda-definition-page .pda-def-detail-list {
+    margin-top: 1.8rem;
+  }
+
+  .pda-definition-page .pda-def-detail-list summary {
+    min-height: 48px;
+    padding: .9rem 2.25rem .9rem 0;
+  }
+
+  .pda-definition-page .pda-def-detail-list p {
+    padding-right: 0;
+    font-size: .95rem;
   }
 
   .pda-definition-page .pda-def-fiscal {
     grid-template-columns: 1fr;
+    gap: .55rem;
+    margin-top: 1.8rem;
   }
 
   .pda-definition-page .pda-def-fiscal strong {
     white-space: normal;
   }
+
+  .pda-definition-page .pda-def-fiscal p {
+    font-size: .95rem;
+  }
+
+  .pda-definition-page .pda-def-final .pda-button {
+    width: 100%;
+  }
+
 }
 
-@media (max-width: 430px) {
+@media (max-width: 360px) {
   .pda-definition-page .pda-def-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.55rem;
   }
 
-  .pda-definition-page .pda-def-shift h2,
-  .pda-definition-page .pda-def-founder h2,
-  .pda-definition-page .pda-def-flow h2,
-  .pda-definition-page .pda-def-price h2,
-  .pda-definition-page .pda-def-requirements h2,
-  .pda-definition-page .pda-def-faq h2,
-  .pda-definition-page .pda-def-final h2 {
-    font-size: 2.45rem;
-  }
-
-  .pda-definition-page .pda-def-shift-numbers {
-    grid-template-columns: 1fr;
-  }
-
-  .pda-definition-page .pda-def-shift-numbers p + p {
-    border-top: 1px solid #385040;
-    border-left: 0;
-  }
-
-  .pda-definition-page .pda-def-missile {
-    font-size: 2.15rem;
+  .pda-definition-page .pda-def-proposition strong {
+    font-size: 1.7rem;
   }
 
   .pda-definition-page .pda-def-price-mark strong {
-    font-size: 4.25rem;
+    font-size: 3.5rem;
   }
 }

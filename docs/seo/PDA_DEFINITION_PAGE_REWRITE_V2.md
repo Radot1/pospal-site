@@ -1,4 +1,4 @@
-# PDA τι είναι — founder-voice rewrite V2
+# PDA τι είναι — current page record
 
 Status: Implemented in `pda-ti-einai.html`  
 Target: `/pda-ti-einai.html`  
@@ -10,261 +10,161 @@ Last updated: 2026-08-30
 
 > Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.
 
-The page must answer the definition query immediately and then sell this product stance. It must not fall back into glossary copy or repetitive SEO cards.
+The page answers the definition query immediately, then makes POSPal's position useful to an owner. It must not drift back into glossary copy, repetitive SEO cards or an equipment catalogue.
 
-## SEO title
+## Mobile distillation decision
+
+The first founder-voice version was still too long on a real phone: roughly 10.6 screens at 390 px and 13 screens at 320 px. The mobile-first version keeps the same indexable HTML on desktop and mobile, but removes duplicated arguments and moves secondary technical detail into native disclosure rows.
+
+The page now has six sections:
+
+1. Definition, core proposition and Windows download
+2. The recognisable `Ποιος έχει το PDA;` shift problem plus Robert's position
+3. Three-step product flow and real Windows product proof
+4. Price, trial, minimum requirements and technical qualifications
+5. Five-question FAQ with matching FAQ schema
+6. Short download close
+
+The separate founder section, missile panel, standalone browser panel, separate requirements section and three duplicate FAQ questions were removed. Price now appears before technical caveats.
+
+## Search elements preserved
+
+**Title**
 
 PDA τι είναι: έννοια και χρήση στην εστίαση | POSPal
 
-## Meta description
+**Meta description**
 
 PDA τι είναι στην εστίαση; Με το POSPal το κινητό ή το tablet του σερβιτόρου γίνεται PDA, χωρίς έξτρα χρέωση ανά συσκευή. 30 ημέρες δωρεάν χωρίς κάρτα.
 
-## Hero
+**Canonical**
 
-**Μικρός τίτλος**
-
-PDA στην εστίαση
+`https://pospal.gr/pda-ti-einai.html`
 
 **H1**
 
 PDA τι είναι στην εστίαση;
 
-**Κείμενο**
+## Current public copy and structure
+
+### 1. Definition and offer
 
 PDA σημαίνει Personal Digital Assistant, δηλαδή προσωπικός ψηφιακός βοηθός. Στην εστίαση, PDA λέμε τη συσκευή που κρατά ο σερβιτόρος για να περνά παραγγελίες.
 
-Με το POSPal, αυτή η συσκευή μπορεί να είναι το κινητό που έχει ήδη στην τσέπη του.
+Με το POSPal, αυτή η συσκευή μπορεί να είναι κατάλληλο κινητό ή tablet της ομάδας σου.
 
-**Κεντρική δήλωση**
+**Core proposition**
 
 Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.
 
-**Κύριο κουμπί**
+**Primary CTA**
 
-Κατέβασε για Windows
+Κατέβασε για Windows → `/download/`
 
-Προορισμός: `/download/`
-
-**Δεύτερο κουμπί**
-
-Δες πώς δουλεύει
-
-Προορισμός: `#pospal-pda-flow`
-
-**Γραμμή προσφοράς**
+**Offer line**
 
 30 ημέρες δωρεάν · Χωρίς κάρτα ή προσωπικά στοιχεία · Μετά 23,90 €/μήνα με ΦΠΑ
 
-## Η στιγμή που όλοι γνωρίζουν
+### 2. The shift problem and founder position
 
 **H2**
 
 «Ποιος έχει το PDA;»
 
-**Κείμενο**
+Πέντε άτομα. Δύο PDA. Το ένα φορτίζει. Το άλλο είναι στην άλλη άκρη του μαγαζιού.
 
-Πέντε άτομα στη βάρδια. Δύο PDA.
+Ο σερβιτόρος είναι στο τραπέζι. Το PDA όχι.
 
-Το ένα φορτίζει. Το άλλο το έχει κάποιος στην άλλη άκρη του μαγαζιού.
+> Δεν έφτιαξα το POSPal για να σου πουλήσω συσκευές.
+>
+> Το έφτιαξα για να παίρνεις παραγγελίες.
+>
+> Robert · Ιδρυτής της POSPal
 
-Ο πελάτης θέλει να παραγγείλει. Ο σερβιτόρος είναι εκεί. Το PDA όχι.
+The visual keeps the `5 άτομα / 2 PDA` comparison side by side, including on narrow phones, and ends with: `Η βάρδια δεν χρειάζεται να περιμένει μια συσκευή.`
 
-Και αρχίζει το γνωστό: «Ποιος έχει το PDA;»
+### 3. How the phone becomes a PDA
 
-Όταν η ομάδα μοιράζεται λίγα PDA, η βάρδια αρχίζει να οργανώνεται γύρω από τις συσκευές. Θα έπρεπε να συμβαίνει το αντίθετο.
+1. POSPal στον υπολογιστή: εγκαθίσταται στον υπολογιστή Windows του καταστήματος.
+2. Browser στο κινητό: το κινητό ή tablet ανοίγει την παραγγελιοληψία και επικοινωνεί με τον υπολογιστή μέσα από το προσβάσιμο τοπικό δίκτυο.
+3. Παραγγελία στην κουζίνα: η παραγγελία φτάνει στο POSPal και συνεχίζει στο σημείο προετοιμασίας που έχει οριστεί.
 
-Με το POSPal δεν πληρώνεις ξεχωριστά για κάθε PDA. Κατάλληλα κινητά ή tablet της ομάδας μπορούν να ανοίξουν την παραγγελιοληψία μέσα από το τοπικό δίκτυο του καταστήματος.
+Visible product qualification:
 
-## Η θέση του ιδρυτή
+> Στο κινητό δεν εγκαθιστάς εφαρμογή. Ανοίγεις την παραγγελιοληψία από τον browser.
 
-**H2**
+The real Windows order screenshot remains. No mobile product interface is invented. The contextual link to `/pda-gia-servitoro/` remains.
 
-Δεν έφτιαξα το POSPal για να σου πουλήσω συσκευές.
+### 4. Price and fit
 
-**Κείμενο**
+**Price first**
 
-Το έφτιαξα για να παίρνεις παραγγελίες.
+23,90 € τον μήνα με ΦΠΑ
 
-Δεν θέλω να χρειάζεσαι άλλο ένα μηχάνημα κάθε φορά που μπαίνει ακόμη ένας σερβιτόρος στη βάρδια.
-
-Δεν υπάρχει έξτρα χρέωση ανά PDA.
-
-**Υπογραφή**
-
-Robert · Ιδρυτής της POSPal
-
-**Μεγάλη γραμμή**
-
-Παίρνουμε παραγγελία ή εκτοξεύουμε πύραυλο;
-
-## Πώς γίνεται το κινητό PDA
-
-<a id="pospal-pda-flow"></a>
-
-### 1. Κατεβάζεις το POSPal σε Windows
-
-Το POSPal εγκαθίσταται στον υπολογιστή του καταστήματος. Εκεί συγκεντρώνονται οι παραγγελίες και η δουλειά της βάρδιας.
-
-### 2. Συνδέεις τα κινητά ή τα tablet
-
-Το POSPal εμφανίζει έναν τοπικό σύνδεσμο και ένα QR σύνδεσης. Η συσκευή ανοίγει την παραγγελιοληψία από τον browser και πρέπει να μπορεί να «βλέπει» τον υπολογιστή Windows μέσα από το τοπικό δίκτυο.
-
-### 3. Η ομάδα στέλνει τις παραγγελίες
-
-Ο σερβιτόρος διαλέγει είδη, ποσότητες, επιλογές και σημειώσεις. Η παραγγελία φτάνει στο POSPal και συνεχίζει προς την κουζίνα, το μπαρ ή άλλο σημείο προετοιμασίας που έχεις ορίσει.
-
-**Λεζάντα πραγματικής εικόνας κινητού**
-
-Η παραγγελιοληψία ανοίγει από τον browser του κινητού. Δεν χρειάζεται ξεχωριστή εφαρμογή.
-
-**Λεζάντα πραγματικής εικόνας Windows**
-
-Οι παραγγελίες συγκεντρώνονται στο POSPal στον υπολογιστή Windows.
-
-**Σύνδεσμος μετά την ενότητα**
-
-Δες τι χρειάζεται για να χρησιμοποιήσεις κινητό ή tablet ως PDA σερβιτόρου.
-
-Προορισμός: `/pda-gia-servitoro/`
-
-## Τι πληρώνεις
+30 ημέρες δωρεάν · Χωρίς κάρτα
 
 **H2**
 
-Πληρώνεις για το POSPal. Όχι για κάθε χέρι που κρατά κινητό.
+Μία συνδρομή. Όχι χρέωση για κάθε PDA.
 
-**Κείμενο**
+**Visible minimum requirements**
 
-Η συνδρομή είναι 23,90 € τον μήνα με ΦΠΑ μετά τη δωρεάν δοκιμή.
+- Υπολογιστής Windows στο κατάστημα
+- Κατάλληλο κινητό ή tablet με browser
+- Προσβάσιμο τοπικό δίκτυο μεταξύ των συσκευών
 
-Δεν υπάρχει έξτρα χρέωση ανά PDA. Στην ίδια συνδρομή περιλαμβάνονται η λειτουργία τραπεζιών, η απλή λειτουργία, η ροή κουζίνας και το QR μενού.
+Secondary detail is available in three native disclosure rows: internet-dependent functions, printer testing and practical device capacity. The link to `/asyrmati-paraggeliolipsia.html` remains inside the network detail.
 
-Ακυρώνεις όποτε θέλεις.
+The fiscal boundary stays visible rather than hidden:
 
-**Σύνδεσμος**
+> Δεν είναι φορολογικό POS. Το POSPal καλύπτει την παραγγελιοληψία και τη ροή κουζίνας. Λειτουργεί δίπλα στο φορολογικό σύστημα που ήδη χρησιμοποιείς. Δεν το αντικαθιστά.
 
-Δες αναλυτικά την τιμή
+### 5. FAQ
 
-Προορισμός: `/times.html`
+The visible FAQ and JSON-LD contain the same five questions, in the same order:
 
-## Τι χρειάζεται πραγματικά
+1. Τι σημαίνουν τα αρχικά PDA;
+2. Χρειάζεται να αγοράσω ειδική συσκευή PDA;
+3. Λειτουργεί χωρίς σήμα ή internet;
+4. Μπορώ να χρησιμοποιήσω τον θερμικό εκτυπωτή που έχω;
+5. Το POSPal αντικαθιστά την ταμειακή ή το φορολογικό POS;
 
-**H2**
-
-Σήμα κινητής; Όχι. Τοπικό δίκτυο; Ναι.
-
-**Κείμενο**
-
-Τα κινητά δεν χρειάζονται σήμα κινητής για να στείλουν παραγγελίες. Χρειάζονται όμως πρόσβαση στο τοπικό δίκτυο του καταστήματος, ώστε να επικοινωνούν με τον υπολογιστή Windows.
-
-Internet χρειάζεται για συγκεκριμένες λειτουργίες του POSPal, όπως η δημοσίευση του QR μενού, ο έλεγχος της άδειας και οι ενημερώσεις.
-
-Αν θέλεις έντυπα δελτία, ο θερμικός εκτυπωτής πρέπει να είναι εγκατεστημένος στα Windows και να ελεγχθεί με πραγματική δοκιμαστική εκτύπωση. Αυτό δεν σημαίνει ότι λειτουργεί κάθε μοντέλο ή κάθε τρόπος σύνδεσης.
-
-**Σύνδεσμος**
-
-Δες πώς συνδέονται οι συσκευές
-
-Προορισμός: `/asyrmati-paraggeliolipsia.html`
-
-## Σημαντική διευκρίνιση
-
-Το POSPal καλύπτει την παραγγελιοληψία και τη ροή κουζίνας. Δεν είναι ταμειακή και δεν είναι φορολογικό POS.
-
-Λειτουργεί δίπλα στο φορολογικό σύστημα που ήδη χρησιμοποιείς. Δεν το αντικαθιστά.
-
-## Συχνές ερωτήσεις
-
-### Τι σημαίνουν τα αρχικά PDA;
-
-PDA σημαίνει Personal Digital Assistant, δηλαδή προσωπικός ψηφιακός βοηθός. Στην εστίαση ο όρος χρησιμοποιείται για τη φορητή συσκευή από την οποία ο σερβιτόρος περνά την παραγγελία.
-
-### Χρειάζεται να αγοράσω ειδική συσκευή PDA;
-
-Όχι. Με το POSPal μπορείς να χρησιμοποιήσεις κινητό ή tablet που ανοίγει τη σελίδα παραγγελιοληψίας και επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο.
-
-### Υπάρχει χρέωση για κάθε PDA ή κινητό;
-
-Όχι. Το POSPal δεν χρεώνει ανά PDA. Η συσκευή πρέπει να μπορεί να ανοίξει την παραγγελιοληψία και να επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο.
-
-### Πόσα κινητά μπορούν να χρησιμοποιήσουν οι σερβιτόροι;
-
-Δεν υπάρχει χρέωση ανά συσκευή. Το πόσα κινητά μπορούν να δουλέψουν καλά ταυτόχρονα εξαρτάται από τον υπολογιστή, το δίκτυο και το στήσιμο του καταστήματος. Δοκίμασέ το με τη δική σου ομάδα μέσα στις 30 δωρεάν ημέρες.
-
-### Χρειάζεται εφαρμογή στο κινητό ή το tablet;
-
-Όχι. Ο σερβιτόρος ανοίγει τη σελίδα παραγγελιοληψίας από τον browser της συσκευής μέσω του τοπικού συνδέσμου ή του QR σύνδεσης.
-
-### Λειτουργεί χωρίς σήμα ή internet;
-
-Δεν χρειάζεται σήμα κινητής τηλεφωνίας για την τοπική παραγγελιοληψία. Χρειάζεται όμως η συσκευή να μπορεί να επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο. Internet χρειάζεται για λειτουργίες όπως η δημοσίευση του QR μενού, ο έλεγχος της άδειας και οι ενημερώσεις.
-
-### Μπορώ να χρησιμοποιήσω τον θερμικό εκτυπωτή που έχω;
-
-Το POSPal εμφανίζει θερμικούς εκτυπωτές που είναι εγκατεστημένοι στα Windows. Αυτό δεν σημαίνει ότι λειτουργεί κάθε μοντέλο ή σύνδεση. Κάνε πραγματική δοκιμαστική εκτύπωση πριν το χρησιμοποιήσεις σε βάρδια.
-
-### Το POSPal αντικαθιστά την ταμειακή ή το φορολογικό POS;
-
-Όχι. Το POSPal είναι εργαλείο παραγγελιοληψίας και ροής κουζίνας. Η ταμειακή και το φορολογικό POS παραμένουν ξεχωριστά.
-
-## Τελική ενότητα
+### 6. Download close
 
 **H2**
 
-Πριν πληρώσεις για άλλο PDA, δοκίμασε το κινητό που έχεις ήδη.
-
-**Κείμενο**
-
-Κατέβασε το POSPal για Windows. Σύνδεσε ένα κινητό ή tablet και στείλε μια πραγματική δοκιμαστική παραγγελία.
+Δοκίμασέ το στο δικό σου μαγαζί.
 
 Αν σου κάνει, συνεχίζεις. Αν όχι, το διαγράφεις.
 
-**Κύριο κουμπί**
+**Primary CTA**
 
-Κατέβασε για Windows
+Κατέβασε για Windows → `/download/`
 
-Προορισμός: `/download/`
+**Support line**
 
-**Γραμμή κάτω από το κουμπί**
+Η εγκατάσταση γίνεται στον υπολογιστή Windows του καταστήματος.
 
-30 ημέρες δωρεάν · Χωρίς κάρτα · Μετά 23,90 €/μήνα με ΦΠΑ
+## Mobile visual rules implemented
 
-## Footer line
+- Page sections use roughly 44 px vertical padding below 740 px.
+- Mobile H2s are roughly 32–36 px and the H1 uses looser spacing than the first version.
+- Body copy stays at 16 px or above.
+- The `5 / 2` figures remain side by side on narrow screens.
+- The standalone browser graphic is gone; the real screenshot arrives sooner.
+- The final CTA becomes full width on mobile.
+- The cookie-settings control sits in reserved footer space on this page, so it does not cover the founder line or mobile content while scrolling.
+- All changes live in `static/css/pda-definition.css`; shared CSS and the permanently locked pages are untouched.
 
-POSPal · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.
+## Copy guardrails
 
-## Visual and structural direction
-
-- Do not reuse the current sequence of repeated three-card grids.
-- Give this page its own body class and page-specific styling so changes do not alter the waiter page or any locked page.
-- The hero should be tighter and more asymmetric. The central proposition must be visible without scrolling.
-- Build the `Ποιος έχει το PDA;` section as a recognisable shift scene, using short dialogue or a simple device-sharing visual rather than another feature grid.
-- Use one founder block with Robert's name and the missile line. Do not spread jokes through every section.
-- Show a real mobile order-taking screen next to the real Windows order screen. Do not invent a mobile interface or use a generic stock phone.
-- Present the three setup steps as one connected journey from phone to Windows to preparation, not as three unrelated SEO cards.
-- Keep the requirements and fiscal boundary visually calm and explicit.
-- Preserve the current URL, canonical, one-H1 structure, natural `PDA τι είναι` answer, internal links and matching FAQ schema.
-
-## Copy guardrails applied
-
-- `No charge per PDA` is founder-confirmed product policy.
 - Do not promise compatibility with every phone, tablet, browser, printer or network.
-- Do not convert `χωρίς σήμα` into `χωρίς τοπικό δίκτυο`.
-- Do not claim every alternative intentionally restricts hardware. Describe the device-sharing problem without naming competitors.
-- Do not add testimonials, savings figures or customer outcomes that do not exist.
+- Do not turn `χωρίς σήμα κινητής` into `χωρίς τοπικό δίκτυο`.
+- Do not imply unlimited practical capacity; it depends on the computer, network and venue setup.
+- Do not name competitors or invent their motives.
+- Do not invent testimonials, savings figures or customer outcomes.
+- Keep the exact core proposition unchanged when it is used.
 
-## Final voice review
+## Voice review
 
-Reviewed with the `pospal-voice` skill on 2026-08-30.
-
-- The definition is answered immediately, but the page no longer stays in glossary mode.
-- The central argument is a real shift moment: the server is ready to take the order, but the shared PDA is somewhere else.
-- The founder block states POSPal's product position without turning the whole page into an advert.
-- The missile line appears once, where the dedicated-device argument earns it.
-- Network, printer, pricing and fiscal boundaries remain explicit without taking over the page.
-- No testimonial, customer outcome, compatibility promise or competitor accusation has been invented.
-
-Implemented on 2026-08-30 with page-specific styling in `static/css/pda-definition.css`.
-
-A real mobile order-taking screenshot is still unavailable in the repository. The live implementation therefore uses a clearly labelled browser/network explanation beside the real Windows screenshot. It does not display or imply a fake mobile interface. Replace that explanation with real mobile product proof when an approved screenshot becomes available.
+The page follows the `pospal-voice` standard: short Greek sentences, a real shift moment, one direct founder statement and no generic SEO filler. The joke-heavy missile block was removed from this definition page because the mobile version needed the product argument to move faster.

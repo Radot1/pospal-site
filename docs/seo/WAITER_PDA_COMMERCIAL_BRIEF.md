@@ -1,365 +1,178 @@
-# Waiter PDA Commercial Page Brief
+# PDA σερβιτόρου — υλοποιημένη κατεύθυνση
 
-Status: Draft for review — no live-page edits made  
-Target page: `/pda-gia-servitoro/`  
-Page role: Commercial decision page for ordinary-phone/tablet ordering  
-Last updated: 2026-08-29
+Status: Implemented locally; pending user review and publication
 
-## Decision
+Target page: `/pda-gia-servitoro/`
 
-Rebuild this page around the owner choosing an ordering workflow, not the person learning what a PDA is.
+Page role: Commercial decision page for phone/tablet ordering
+Last updated: 2026-08-30
 
-The page should own the practical commercial meaning of `PDA σερβιτόρου`:
+## Η απόφαση
 
-> The waiter can take orders from an ordinary phone or tablet while POSPal runs on the venue's Windows computer and continues the order into the kitchen workflow.
+Η σελίδα γράφτηκε για τον ιδιοκτήτη που διαλέγει τι θα χρησιμοποιεί η ομάδα του στη βάρδια. Δεν είναι δεύτερη σελίδα ορισμού του PDA.
 
-Its primary action is the Windows trial download. Price, trial terms, equipment requirements, and the non-fiscal boundary must be visible before the owner is asked to commit.
+Το βασικό επιχείρημα είναι:
 
-## Evidence
+> Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.
 
-### Measured — Search Console, 2026-05-27 to 2026-08-26
+Η πραγματική ένταση είναι αναγνωρίσιμη: όταν η ομάδα μοιράζεται λίγες ειδικές συσκευές, η βάρδια αρχίζει να περιστρέφεται γύρω από το ποιος έχει το PDA. Η απάντηση του POSPal δεν είναι άλλο πακέτο hardware. Είναι λογισμικό σε Windows, με παραγγελιοληψία από κατάλληλα κινητά ή tablet στο προσβάσιμο τοπικό δίκτυο.
 
-- 1 click;
-- 54 impressions;
-- approximately 1.85% CTR.
+## Σε ποιον μιλάει
 
-Visible queries for this page include:
+- Ιδιοκτήτη, manager ή operator επιχείρησης εστίασης.
+- Άνθρωπο που παίρνει την απόφαση και μπορεί να εγκαταστήσει και να δοκιμάσει το POSPal.
+- Επιχείρηση που δεν θέλει περιττή χρέωση ανά συσκευή.
+- Ομάδα που θέλει να χρησιμοποιήσει κατάλληλα κινητά ή tablet αντί να περιμένει ένα κοινό PDA.
 
-- `pda σερβιτορου`: 0 clicks and 12 impressions;
-- `παραγγελιοληψία`: 0 clicks and 3 impressions;
-- `προγραμματα pda`: 0 clicks and 2 impressions.
-
-Meanwhile, `/pda-ti-einai.html` received 15 clicks and 260 impressions for `pda σερβιτορου`. The dedicated page is not currently recognized as the strongest answer for its intended term.
-
-### Measured — current repository HTML
-
-- title: 35 characters;
-- meta description: 166 characters;
-- main content: approximately 440 words;
-- one H1, five H2s, six H3s;
-- seven in-content links;
-- one real product image;
-- self-referencing canonical and FAQ schema present.
-
-## Audience
-
-The primary reader is an owner, manager, or operator who:
-
-- controls the ordering-software decision;
-- wants the staff to take orders away from the Windows computer;
-- does not want to buy unnecessary dedicated PDA hardware;
-- is willing to use ordinary phones or tablets on the venue's local network;
-- wants to understand price, setup, printers, trial, and limitations;
-- is prepared to download and test the product personally.
-
-This page is not primarily written for the waiter using the device. It is written for the person deciding what the waiters will use.
+Η σελίδα δεν απευθύνεται κυρίως στον σερβιτόρο. Απευθύνεται σε εκείνον που αποφασίζει τι θα χρησιμοποιεί ο σερβιτόρος.
 
 ## Search ownership
 
-### Primary target
+Primary query: `PDA σερβιτόρου`
 
-`PDA σερβιτόρου`
+Secondary language, only where it reads naturally:
 
-### Secondary targets
-
-- `PDA εστίαση`;
-- `PDA για παραγγελιοληψία`;
 - `παραγγελιοληψία από κινητό`;
 - `παραγγελιοληψία από tablet`;
-- `PDA χωρίς ειδική συσκευή`;
-- `ασύρματη παραγγελιοληψία σερβιτόρου`.
+- `PDA για παραγγελιοληψία`;
+- `ασύρματη παραγγελιοληψία σερβιτόρου`;
+- `PDA χωρίς ειδική συσκευή`.
 
-### Content boundaries
+Content boundaries:
 
-- definitions belong to `/pda-ti-einai.html`;
-- the generic three-step explanation belongs to `/pda-pos-leitourgei.html`;
-- the complete system belongs to `/systima-paraggeliolipsias.html`;
-- detailed local-network and connection behavior belongs to `/asyrmati-paraggeliolipsia.html`.
+- `/pda-ti-einai.html` owns the definition query;
+- `/pda-pos-leitourgei.html` owns the generic how-it-works query;
+- `/asyrmati-paraggeliolipsia.html` owns detailed network behaviour;
+- `/systima-paraggeliolipsias.html` owns the complete-system explanation.
 
-This page should summarize those facts only as needed to complete the owner's decision.
+## Metadata retained
 
-## Current on-page audit
-
-| Element | Score | Finding |
-| --- | ---: | --- |
-| Title | 7/10 | Exact target is present, but the 35-character title leaves the ordinary-device differentiator unused. |
-| Meta description | 6/10 | Accurate but 166 characters and missing the price, trial, and QR-menu offer. |
-| H1 and headings | 8/10 | One keyword-aligned H1 and valid hierarchy. Headings remain operational rather than commercial. |
-| Content structure | 5/10 | Explains the waiter flow, then diverts into related pages and venue examples before answering price and setup objections. |
-| Keyword alignment | 6/10 | The page uses the target naturally, but the definition page currently wins the query. Page differentiation is weak. |
-| Internal links | 7/10 | Relevant cluster links exist, but commercial destinations do not dominate the journey. |
-| Images | 8/10 | One real screenshot with descriptive alt text. Useful proof, but the page needs stronger offer proof around it. |
-| Canonical and schema | 8/10 | Canonical and FAQ schema are present. FAQ topics need to shift from definitions to buying objections. |
-| Trust and evidence | 6/10 | Accurate product details and boundaries; no independent social proof yet. |
-
-Overall structural on-page score: **6.8/10**.  
-Current commercial conversion score: **5.0/10**.
-
-## Core message
-
-### Primary promise
-
-> PDA σερβιτόρου από κινητό ή tablet, χωρίς να αγοράσεις ειδική συσκευή για κάθε άτομο.
-
-### Complete product explanation
-
-> Το POSPal εγκαθίσταται σε υπολογιστή Windows και δίνει στην ομάδα πρόσβαση στην παραγγελιοληψία από κινητά ή tablet μέσα στο προσβάσιμο τοπικό δίκτυο. Οι παραγγελίες συγκεντρώνονται στο POSPal και συνεχίζουν προς την κουζίνα ή άλλο σημείο προετοιμασίας.
-
-### Offer
-
-> 30 ημέρες δωρεάν, χωρίς κάρτα ή προσωπικά στοιχεία. Μετά τη δοκιμή, 23,90 € τον μήνα με ΦΠΑ. Ακύρωση όποτε θέλεις.
-
-## Recommended metadata
-
-### Recommended title
+Title:
 
 > PDA σερβιτόρου από κινητό ή tablet | POSPal
 
-Length: 43 characters.
+Meta description:
 
-### Alternative title
+> PDA σερβιτόρου από κινητό ή tablet, χωρίς χρέωση ανά συσκευή. POSPal σε Windows, 30 ημέρες δωρεάν χωρίς κάρτα και μετά 23,90 €/μήνα με ΦΠΑ και QR μενού.
 
-> PDA σερβιτόρου χωρίς ειδική συσκευή | POSPal
+Canonical:
 
-Length: 44 characters.
+> https://pospal.gr/pda-gia-servitoro/
 
-The recommended title is more literal and less likely to be misunderstood as a universal hardware-compatibility promise.
+## Τελική δομή — έξι ενότητες
 
-### Recommended meta description
+### 1. Hero: η θέση μας αμέσως
 
-> PDA σερβιτόρου από κινητό ή tablet, με POSPal σε Windows και ροή κουζίνας. 30 ημέρες δωρεάν χωρίς κάρτα· μετά 23,90 €/μήνα με ΦΠΑ. Περιλαμβάνει QR μενού.
+- Exact-query H1: `PDA σερβιτόρου από κινητό ή tablet`.
+- Η canonical PDA πρόταση εμφανίζεται πάνω από το fold.
+- Ένα primary CTA: `Κατέβασε για Windows`.
+- Trial, card/privacy terms και τιμή εμφανίζονται δίπλα στο CTA.
+- Μικρό οπτικό route: `Κινητό ή tablet → Τοπικό δίκτυο → POSPal σε Windows`.
+- Το `0,00 €` ανά PDA λειτουργεί ως offer proof, όχι ως διακοσμητικό στατιστικό.
 
-Length: 153 characters.
+### 2. Το πρόβλημα της βάρδιας και η founder θέση
 
-### Recommended H1
+H2:
 
-> PDA σερβιτόρου από κινητό ή tablet.
+> Ένας ακόμη σερβιτόρος δεν πρέπει να σημαίνει άλλο PDA στον λογαριασμό.
 
-## Recommended page argument
+Η σκηνή μένει συγκεκριμένη: το ένα PDA φορτίζει, το άλλο είναι στην άλλη σάλα, αλλά ο πελάτης είναι μπροστά σου.
 
-### 1. Commercial hero
+Founder line:
 
-**Signal**
+> Δεν έφτιαξα το POSPal για να σου πουλήσω συσκευές. Το έφτιαξα για να παίρνεις παραγγελίες.
 
-> Παραγγελιοληψία για τη βάρδια
+Closing line:
 
-**H1**
+> Το PDA δεν είναι σκυτάλη.
 
-> PDA σερβιτόρου από κινητό ή tablet.
+### 3. Η πραγματική διαδρομή της παραγγελίας
 
-**Lead**
+Τρία βήματα μόνο:
 
-> Το POSPal εγκαθίσταται στον υπολογιστή Windows του καταστήματος και η ομάδα περνά παραγγελίες από κινητά ή tablet στο τοπικό δίκτυο. Δεν χρειάζεται ξεχωριστή εφαρμογή στη συσκευή του σερβιτόρου.
+1. Στο τραπέζι — είδη, επιλογές και σημειώσεις από κινητό ή tablet.
+2. Στον υπολογιστή — η παραγγελία φτάνει στο POSPal μέσω του τοπικού δικτύου.
+3. Στην προετοιμασία — το POSPal συνεχίζει τη ροή προς κουζίνα, μπαρ ή άλλο ορισμένο σημείο.
 
-**Primary CTA**
+Η πραγματική οθόνη του POSPal παραμένει ως product proof. Χρησιμοποιείται το διαθέσιμο WebP με PNG fallback. Η πληροφορία ότι δεν χρειάζεται εφαρμογή στο κινητό εμφανίζεται ακριβώς πριν από την εικόνα.
 
-> Κατέβασε για Windows
+### 4. Τιμή, απαιτήσεις και όρια σε ένα decision block
 
-**Trial microcopy**
+Η απόδειξη κρατά μόνο τα δύο ποσά που έχουν σημασία:
 
-> 30 ημέρες δωρεάν · Χωρίς κάρτα ή προσωπικά στοιχεία
+- συνδρομή POSPal: 23,90 €/μήνα με ΦΠΑ;
+- χρέωση ανά PDA: 0,00 €.
 
-**Price line**
+Οι τρεις εμφανείς απαιτήσεις είναι:
 
-> Μετά τη δοκιμή: 23,90 € τον μήνα με ΦΠΑ. Ακύρωση όποτε θέλεις.
+- υπολογιστής Windows x64;
+- κατάλληλο κινητό ή tablet με browser;
+- προσβάσιμο τοπικό δίκτυο μεταξύ των συσκευών.
 
-**Secondary anchor link**
+Οι τεχνικές λεπτομέρειες παραμένουν διαθέσιμες σε τέσσερα native disclosure rows:
 
-> Δες τι χρειάζεσαι
+- προσωρινή απώλεια σύνδεσης;
+- τι χρειάζεται internet;
+- θερμικοί εκτυπωτές και πραγματική δοκιμαστική εκτύπωση;
+- πρακτικό πλήθος συσκευών.
 
-This should jump to the requirements section, not leave the page for guides immediately.
+Το μη φορολογικό όριο μένει ορατό και σαφές. Οι οδηγοί είναι secondary help link, όχι ανταγωνιστικό hero CTA.
 
-### 2. Owner benefit — ordinary devices
+### 5. Buyer FAQ
 
-**H2**
+Έξι ερωτήσεις, όλες σχετικές με την απόφαση:
 
-> Δεν χρειάζεσαι ειδικό PDA για κάθε σερβιτόρο.
+1. Χρειάζεται ειδική συσκευή PDA;
+2. Υπάρχει χρέωση ανά PDA και πόσες συσκευές μπορώ να χρησιμοποιήσω;
+3. Χρειάζεται εφαρμογή στο κινητό ή tablet;
+4. Τι γίνεται αν χαθεί προσωρινά η σύνδεση;
+5. Μπορώ να χρησιμοποιήσω τους εκτυπωτές που έχω;
+6. Αντικαθιστά το POSPal την ταμειακή ή το φορολογικό POS;
 
-Explain the benefit and its boundary together:
+Το FAQ JSON-LD πρέπει να παραμένει ακριβώς ίδιο με τις ορατές ερωτήσεις και απαντήσεις.
 
-- a compatible phone or tablet with a browser can open the local order-taking page;
-- the device must communicate with the POSPal Windows computer through the accessible local network;
-- no separate native mobile application is required;
-- POSPal remains the central Windows installation.
+### 6. Σύντομο final CTA
 
-Do not claim that every old device is compatible. Do not imply operation without a working local network.
+H2:
 
-### 3. Product route — show the actual workflow
+> Δοκίμασέ το με τη δική σου βάρδια.
 
-**H2**
+Η δοκιμή περιγράφεται ως πραγματική πράξη: σύνδεσε ένα κινητό και στείλε μια δοκιμαστική παραγγελία. Δεν επαναλαμβάνεται όλη η σελίδα.
 
-> Από το τραπέζι στο POSPal και μετά στην κουζίνα.
+## Mobile distillation
 
-Use three compact steps:
+Πριν από αυτή την αλλαγή, η σελίδα μετρούσε περίπου:
 
-1. **Ο σερβιτόρος** — selects items, quantities, options, and notes from the phone or tablet.
-2. **Το POSPal σε Windows** — receives and organizes the order on the venue's computer.
-3. **Η προετοιμασία** — continues the order through the kitchen workflow and configured printer routing where applicable.
+- 10.790 px στα 390 × 844, περίπου 12,8 οθόνες;
+- 12.292 px στα 320 × 780, περίπου 15,8 οθόνες;
+- 883 άμεσα ορατές λέξεις, χωρίς τα κλειστά FAQ answers;
+- 8 μεγάλες ενότητες, 9 H2 και 9 disclosures.
 
-Keep the real POSPal screenshot beside this section as first-party proof.
+Η mobile εκδοχή εφαρμόζει τις παρακάτω αποφάσεις:
 
-### 4. What is included
-
-**H2**
-
-> Δεν είναι μόνο η συσκευή του σερβιτόρου.
-
-Show the broader value without turning the page into a copy of the system hub:
-
-- table mode;
-- simple mode for counter/takeaway workflows;
-- kitchen/order workflow;
-- category routing to compatible thermal printers installed in Windows;
-- QR customer menu included;
-- one direct monthly subscription.
-
-Link once to the complete system page:
-
-> Δες ολόκληρο το σύστημα παραγγελιοληψίας
-
-### 5. Requirements and compatibility
-
-**H2**
-
-> Τι χρειάζεσαι για να το δοκιμάσεις στο κατάστημά σου.
-
-Required facts:
-
-- Windows x64 computer for POSPal;
-- accessible local network for phones and tablets;
-- browser-capable phone or tablet;
-- compatible thermal printer installed in Windows, only if printed preparation tickets are required;
-- internet for QR-menu publication, licence checks, and updates;
-- separate existing fiscal system.
-
-Contextual technical link:
-
-> Πώς λειτουργεί η σύνδεση στο τοπικό δίκτυο
-
-Destination: `/asyrmati-paraggeliolipsia.html`
-
-### 6. Price and risk reversal
-
-**H2**
-
-> Δοκίμασέ το στη δική σου βάρδια πριν πληρώσεις.
-
-**Offer block**
-
-> 30 ημέρες δωρεάν  
-> Χωρίς κάρτα ή προσωπικά στοιχεία  
-> 23,90 € τον μήνα με ΦΠΑ μετά τη δοκιμή  
-> Ακύρωση όποτε θέλεις
-
-**Primary CTA**
-
-> Κατέβασε για Windows
-
-**Secondary link**
-
-> Δες αναλυτικά την τιμή
-
-Destination: `/times.html`
-
-### 7. Honest product boundary
-
-**H2**
-
-> Παραγγελιοληψία και ροή κουζίνας, όχι φορολογικό POS.
-
-**Body direction**
-
-> Το POSPal δεν είναι ταμειακή και δεν είναι φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα της επιχείρησης χωρίς να δηλώνεται διασύνδεση μαζί του.
-
-Keep this visible but place it after the main value and requirements rather than allowing it to dominate the hero.
-
-### 8. Buyer FAQ
-
-Recommended questions:
-
-1. `Χρειάζεται ειδική συσκευή PDA για τον σερβιτόρο;`
-2. `Χρειάζεται εφαρμογή στο κινητό ή το tablet;`
-3. `Τι χρειάζεται στο τοπικό δίκτυο;`
-4. `Τι γίνεται αν χαθεί προσωρινά η σύνδεση;`
-5. `Μπορώ να χρησιμοποιήσω τους εκτυπωτές που έχω;`
-6. `Περιλαμβάνεται το QR μενού;`
-7. `Τι γίνεται μετά τις 30 δωρεάν ημέρες;`
-8. `Το POSPal αντικαθιστά την ταμειακή ή το φορολογικό POS;`
-
-FAQ schema must match the final visible answers exactly.
-
-### 9. Final CTA
-
-**H2**
-
-> Δοκίμασε την παραγγελιοληψία από κινητό στη δική σου βάρδια.
-
-**Supporting line**
-
-> Κατέβασε το POSPal για Windows, σύνδεσε ένα κινητό ή tablet και έλεγξε την πραγματική διαδρομή της παραγγελίας πριν αποφασίσεις.
-
-**Primary CTA**
-
-> Κατέβασε για Windows
-
-**Microcopy**
-
-> 30 ημέρες δωρεάν · Χωρίς κάρτα · Μετά 23,90 €/μήνα με ΦΠΑ
-
-## What to keep, remove, and replace
-
-### Keep
-
-- current URL and canonical;
-- one H1 containing `PDA σερβιτόρου`;
-- the real product screenshot;
-- the three-step order route;
-- the phone/tablet and local-network truth;
-- the non-fiscal boundary;
-- FAQ schema, updated with visible answers.
-
-### Remove or demote
-
-- definition-style explanation of what a PDA is;
-- the early three-card directory of other PDA pages;
-- generic venue examples that do not help the buying decision;
-- guides as an equal hero CTA;
-- repeated links back to the definition page inside the main commercial argument.
-
-### Replace with
-
-- ordinary-device value proposition;
-- exact price and trial terms;
-- setup and compatibility requirements;
-- included workflow and QR menu;
-- direct download CTA at meaningful decision points;
-- one contextual system-page link and one detailed network link.
-
-## Internal-link requirements
-
-This page cannot take ownership of `PDA σερβιτόρου` through its own copy alone. During implementation, related pages should be updated carefully:
-
-- `/pda-ti-einai.html` → prominent contextual link with anchor `PDA σερβιτόρου`;
-- `/pda-pos-leitourgei.html` → contextual link after the three-step explanation;
-- `/asyrmati-paraggeliolipsia.html` → retain contextual link for staff-device use;
-- café and beach-bar pages → link where waiter mobility is relevant;
-- avoid adding more definition-page links from this commercial page beyond necessary footer navigation.
-
-Locked pages are not part of this implementation plan.
-
-## Implementation acceptance criteria
-
-- Title and H1 clearly assign `PDA σερβιτόρου` to this page.
-- Ordinary phone/tablet use is visible in the title, H1, and first paragraph.
-- Windows and accessible local-network requirements are explicit.
-- Price, trial, cancellation, and QR inclusion are visible before the final CTA.
-- Compatible-printer language does not promise every printer will work.
-- The page does not imply full offline or cloud-shared queue operation.
-- The page does not imply that POSPal replaces the fiscal system.
-- All download CTAs go to `/download/`.
-- FAQ schema exactly matches visible FAQ copy.
-- Public copy remains natural monotonic Greek.
-
-## Approval gate
-
-After this brief is approved, produce the complete Greek page copy in Markdown. Do not edit `/pda-gia-servitoro/index.html` until that copy is approved.
+- compact hero χωρίς full-viewport ύψος;
+- μία κύρια πράξη σε κάθε decision point;
+- vertical route αντί για οριζόντιο diagram που μικραίνει;
+- three-step workflow ως σύντομη αριθμημένη λίστα;
+- price, requirements και technical caveats στην ίδια ενότητα;
+- full-width CTA στο hero και στο τέλος;
+- καθαρό footer spacing για το cookie-settings control;
+- κανένα horizontal overflow στα target widths.
+
+## Product-truth guardrails
+
+- Δεν λέμε ότι κάθε κινητό ή tablet είναι συμβατό.
+- Η συσκευή χρειάζεται browser και πρόσβαση στο προσβάσιμο τοπικό δίκτυο του Windows υπολογιστή.
+- Δεν λέμε ότι ο πρακτικός αριθμός συσκευών είναι απεριόριστος. Λέμε ότι δεν υπάρχει χρέωση ανά PDA.
+- Δεν υποσχόμαστε πλήρη offline/cloud shared-queue λειτουργία.
+- Δεν υποσχόμαστε ότι κάθε εκτυπωτής ή τρόπος σύνδεσης θα λειτουργήσει. Ζητάμε πραγματική δοκιμαστική εκτύπωση.
+- Το POSPal δεν είναι φορολογικό POS και δεν αντικαθιστά την ταμειακή.
+- Όλα τα primary download CTAs οδηγούν στο `/download/`.
+
+## Files
+
+- Page: `pda-gia-servitoro/index.html`
+- Page-specific styles: `static/css/pda-waiter.css`
+- Real product image: `static/img/pospal-desktop-order.webp` with PNG fallback
+
+Locked shared destination pages were not changed.

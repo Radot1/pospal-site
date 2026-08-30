@@ -54,14 +54,6 @@
         },
         {
           "@type": "Question",
-          "name": "Χρειάζεται internet ή μόνο τοπικό δίκτυο;",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Η τοπική παραγγελιοληψία δεν χρειάζεται σήμα κινητής, αλλά η συσκευή πρέπει να μπορεί να επικοινωνεί με τον υπολογιστή Windows στο δίκτυο του καταστήματος. Internet χρειάζεται για λειτουργίες όπως η δημοσίευση του QR μενού, ο έλεγχος άδειας και οι ενημερώσεις."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Τι γίνεται αν χαθεί προσωρινά η σύνδεση;",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -74,22 +66,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Το POSPal εμφανίζει θερμικούς εκτυπωτές που είναι ήδη εγκατεστημένοι στα Windows. Αυτό δεν σημαίνει ότι θα δουλέψει οποιοδήποτε μοντέλο ή σύνδεση. Κάνε πραγματική δοκιμαστική εκτύπωση πριν το χρησιμοποιήσεις σε βάρδια."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Περιλαμβάνεται το QR μενού;",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ναι. Το QR μενού περιλαμβάνεται στην ίδια συνδρομή και χρησιμοποιεί τον κατάλογο του POSPal ως βάση."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Τι γίνεται μετά τις 30 δωρεάν ημέρες;",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Αν θέλεις να συνεχίσεις, ενεργοποιείς τη συνδρομή των 23,90 € τον μήνα με ΦΠΑ. Αν δεν σου κάνει, δεν συνεχίζεις. Δεν χρειάζεται κάρτα ή προσωπικά στοιχεία για να ξεκινήσεις τη δοκιμή."
           }
         },
         {
@@ -122,7 +98,7 @@
     <section class="waiter-hero" aria-labelledby="waiter-title">
       <div class="pda-shell waiter-hero-grid">
         <div class="waiter-hero-copy">
-          <p class="pda-signal">PDA σερβιτόρου για πραγματική βάρδια</p>
+          <p class="pda-signal">Παραγγελιοληψία για τη βάρδια</p>
           <h1 id="waiter-title">PDA σερβιτόρου από κινητό ή tablet</h1>
           <p class="waiter-thesis">
             <span>Δεν πουλάμε PDA.</span>
@@ -130,46 +106,25 @@
             <strong>Το κινητό της ομάδας σου μπορεί να γίνει PDA.</strong>
           </p>
           <p class="waiter-lead">Το POSPal τρέχει στον υπολογιστή Windows του καταστήματος. Ο σερβιτόρος ανοίγει την παραγγελιοληψία από τον browser σε κατάλληλο κινητό ή tablet και στέλνει την παραγγελία μέσω του τοπικού δικτύου.</p>
-          <div class="pda-actions" aria-label="Επόμενες ενέργειες">
+          <div class="pda-actions">
             <a class="pda-button pda-button-primary" href="/download/">Κατέβασε για Windows</a>
-            <a class="pda-button pda-button-secondary" href="#requirements">Δες τι χρειάζεται</a>
           </div>
           <p class="waiter-trial"><strong>30 ημέρες δωρεάν</strong> · Χωρίς κάρτα ή προσωπικά στοιχεία · Μετά 23,90 €/μήνα με ΦΠΑ</p>
         </div>
 
-        <figure class="waiter-connect-board" aria-labelledby="connection-board-title">
-          <div class="waiter-board-head">
-            <span id="connection-board-title">Ενδεικτική βάρδια</span>
-            <strong><i aria-hidden="true"></i> Συσκευές έτοιμες</strong>
+        <figure class="waiter-route" aria-label="Η διαδρομή της παραγγελίας από τη συσκευή στο POSPal">
+          <div class="waiter-route-flow">
+            <span>Κινητό ή tablet</span>
+            <i aria-hidden="true">→</i>
+            <span>Τοπικό δίκτυο</span>
+            <i aria-hidden="true">→</i>
+            <strong>POSPal σε Windows</strong>
           </div>
-          <div class="waiter-connection-grid">
-            <p class="waiter-network-label">Στο ίδιο τοπικό δίκτυο του καταστήματος</p>
-            <div class="waiter-device-stack" aria-label="Κατάλληλες συσκευές της ομάδας">
-              <div class="waiter-device">
-                <i aria-hidden="true"></i>
-                <span><strong>Κινητό σάλας</strong><small>Browser</small></span>
-              </div>
-              <div class="waiter-device">
-                <i aria-hidden="true"></i>
-                <span><strong>Tablet</strong><small>Browser</small></span>
-              </div>
-              <div class="waiter-device">
-                <i aria-hidden="true"></i>
-                <span><strong>Κινητό πάγκου</strong><small>Browser</small></span>
-              </div>
-            </div>
-            <div class="waiter-bus" aria-hidden="true"><span></span></div>
-            <div class="waiter-windows-hub">
-              <img src="/app_icon.ico" alt="" width="44" height="44">
-              <span>POSPal</span>
-              <strong>Υπολογιστής Windows</strong>
-            </div>
-          </div>
-          <div class="waiter-device-fee">
+          <div class="waiter-route-fee">
             <span>Χρέωση ανά PDA</span>
             <strong>0,00 €</strong>
           </div>
-          <figcaption>Δεν υπάρχει ξεχωριστή χρέωση ανά συσκευή. Δοκίμασε τις πραγματικές συσκευές και το δίκτυο της ομάδας σου μέσα στις 30 δωρεάν ημέρες.</figcaption>
+          <figcaption>Κατάλληλη συσκευή με browser και πρόσβαση στο τοπικό δίκτυο του καταστήματος.</figcaption>
         </figure>
       </div>
     </section>
@@ -177,47 +132,16 @@
     <section class="waiter-shift" aria-labelledby="shift-question">
       <div class="pda-shell waiter-shift-grid">
         <div class="waiter-shift-copy">
-          <h2 id="shift-question">Ο σερβιτόρος είναι στο τραπέζι. Το PDA γιατί είναι αλλού;</h2>
-          <p>Όταν η ομάδα μοιράζεται λίγες ειδικές συσκευές, η βάρδια αρχίζει να γυρίζει γύρω από το «ποιος έχει το PDA;». Ένα φορτίζει. Ένα βρίσκεται στην άλλη άκρη του μαγαζιού. Ο πελάτης, βέβαια, είναι μπροστά σου.</p>
-          <p>Με το POSPal, ένα κατάλληλο κινητό ή tablet της ομάδας μπορεί να ανοίξει την παραγγελιοληψία. Δεν αγοράζεις άλλη ειδική συσκευή για κάθε σερβιτόρο. Και δεν χρεώνεσαι ανά PDA.</p>
+          <h2 id="shift-question">Ένας ακόμη σερβιτόρος δεν πρέπει να σημαίνει άλλο PDA στον λογαριασμό.</h2>
+          <p>Το ένα PDA φορτίζει. Το άλλο είναι στην άλλη σάλα. Ο πελάτης όμως είναι μπροστά σου.</p>
+          <p>Με το POSPal, κατάλληλα κινητά ή tablet της ομάδας ανοίγουν την παραγγελιοληψία. Χωρίς άλλη χρέωση για κάθε PDA.</p>
         </div>
 
-        <div class="waiter-shift-board" aria-label="Ένα συνηθισμένο πρόβλημα σε βάρδια με λίγα κοινόχρηστα PDA">
-          <div class="waiter-shift-board-head">
-            <span>Τώρα στη βάρδια</span>
-            <strong>Ποιος έχει το PDA;</strong>
-          </div>
-          <dl>
-            <div>
-              <dt>Κοινό PDA 1</dt>
-              <dd>Στη φόρτιση</dd>
-            </div>
-            <div>
-              <dt>Κοινό PDA 2</dt>
-              <dd>Στην άλλη σάλα</dd>
-            </div>
-            <div>
-              <dt>Νέα παραγγελία</dt>
-              <dd>Τώρα</dd>
-            </div>
-          </dl>
-          <p><span>Με το POSPal</span><strong>Το κινητό είναι ήδη στην τσέπη του.</strong></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="waiter-founder" aria-labelledby="founder-title">
-      <div class="pda-shell waiter-founder-grid">
-        <div>
-          <p class="waiter-section-label">Η θέση του ιδρυτή</p>
-          <h2 id="founder-title">Δεν θέλω να μετράς συσκευές πριν βγάλεις τη βάρδια.</h2>
-          <p>Δεν έφτιαξα το POSPal για να σου πουλήσω PDA. Το έφτιαξα για να παίρνεις παραγγελίες.</p>
-          <p>Με το POSPal, όποιος δουλεύει στην παραγγελιοληψία μπορεί να ανοίξει τη σελίδα από κατάλληλο κινητό ή tablet, εφόσον η συσκευή επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο. Χωρίς άλλη χρέωση για κάθε PDA.</p>
-          <p class="waiter-signature">Robert · Ιδρυτής της POSPal</p>
-        </div>
-        <blockquote class="waiter-baton">
+        <blockquote class="waiter-founder-quote">
+          <p>Δεν έφτιαξα το POSPal για να σου πουλήσω συσκευές.</p>
+          <p>Το έφτιαξα για να παίρνεις παραγγελίες.</p>
+          <cite>Robert · Ιδρυτής της POSPal</cite>
           <strong>Το PDA δεν είναι σκυτάλη.</strong>
-          <span>Δεν χρειάζεται να το δίνει ο ένας στον άλλον όλη τη βάρδια.</span>
         </blockquote>
       </div>
     </section>
@@ -225,107 +149,103 @@
     <section class="waiter-flow" aria-labelledby="flow-title">
       <div class="pda-shell">
         <header class="waiter-section-head">
-          <h2 id="flow-title">Πώς λειτουργεί το PDA σερβιτόρου με το POSPal</h2>
-          <p>Δεν εγκαθιστάς εφαρμογή στο κινητό. Το POSPal εμφανίζει έναν τοπικό σύνδεσμο και QR σύνδεσης. Ο σερβιτόρος ανοίγει τη σελίδα από τον browser.</p>
+          <h2 id="flow-title">Από το τραπέζι στο POSPal και μετά στην κουζίνα.</h2>
+          <p>Μία διαδρομή. Τρία απλά βήματα.</p>
         </header>
 
         <ol class="waiter-flow-steps">
           <li>
-            <span>Στη συσκευή</span>
-            <h3>Ανοίγει την παραγγελιοληψία</h3>
-            <p>Ο σερβιτόρος περνά είδη, ποσότητες, επιλογές και σημειώσεις από κατάλληλο κινητό ή tablet.</p>
+            <h3>Στο τραπέζι</h3>
+            <p>Ο σερβιτόρος περνά είδη, επιλογές και σημειώσεις από κατάλληλο κινητό ή tablet.</p>
           </li>
           <li>
-            <span>Στο κατάστημα</span>
-            <h3>Στέλνει μέσω του τοπικού δικτύου</h3>
-            <p>Δεν χρειάζεται σήμα κινητής για αυτή την τοπική ροή. Χρειάζεται όμως πρόσβαση στο δίκτυο του καταστήματος.</p>
+            <h3>Στον υπολογιστή</h3>
+            <p>Η παραγγελία φτάνει στο POSPal μέσω του προσβάσιμου τοπικού δικτύου.</p>
           </li>
           <li>
-            <span>Στα Windows</span>
-            <h3>Η παραγγελία φτάνει στο POSPal</h3>
-            <p>Συγκεντρώνεται με τη δουλειά της βάρδιας και συνεχίζει προς τα σημεία προετοιμασίας που έχεις ορίσει.</p>
+            <h3>Στην προετοιμασία</h3>
+            <p>Το POSPal τη συνεχίζει προς την κουζίνα, το μπαρ ή άλλο σημείο που έχεις ορίσει.</p>
           </li>
         </ol>
 
-        <div class="waiter-proof-grid">
-          <div class="waiter-browser-proof" aria-label="Τι χρειάζεται στη συσκευή του σερβιτόρου">
-            <span>Στη συσκευή</span>
-            <strong>Browser</strong>
-            <p>Τοπικός σύνδεσμος ή QR σύνδεσης. Χωρίς εγκατάσταση ξεχωριστής εφαρμογής στο κινητό.</p>
-          </div>
+        <div class="waiter-proof">
+          <p class="waiter-proof-note"><strong>Στο κινητό δεν εγκαθιστάς εφαρμογή.</strong> Η παραγγελιοληψία ανοίγει από τον browser.</p>
           <figure class="waiter-screen-proof">
-            <img src="/static/img/pospal-desktop-order.png" alt="Οθόνη παραγγελιοληψίας του POSPal σε υπολογιστή Windows" width="1280" height="900" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="/static/img/pospal-desktop-order.webp" type="image/webp">
+              <img src="/static/img/pospal-desktop-order.png" alt="Οθόνη παραγγελιοληψίας του POSPal σε υπολογιστή Windows" width="1280" height="900" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Πραγματική οθόνη παραγγελιοληψίας του POSPal στον υπολογιστή Windows.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="waiter-price" aria-labelledby="price-title">
-      <div class="pda-shell waiter-price-grid">
-        <div class="waiter-price-copy">
-          <p class="waiter-section-label">Τι πληρώνεις</p>
-          <h2 id="price-title">Μία συνδρομή. Όχι χρέωση για κάθε PDA.</h2>
-          <p>Με 23,90 € τον μήνα με ΦΠΑ έχεις παραγγελιοληψία, λειτουργία τραπεζιών, απλή λειτουργία, ροή κουζίνας και QR μενού. Δεν προσθέτουμε άλλη χρέωση επειδή σύνδεσες ακόμη ένα κατάλληλο κινητό ή tablet.</p>
-          <p>Πρώτα το δοκιμάζεις για 30 ημέρες, χωρίς κάρτα ή προσωπικά στοιχεία. Με την πραγματική ομάδα, το πραγματικό δίκτυο και τις συσκευές του καταστήματός σου.</p>
-          <a class="waiter-text-link" href="/times.html">Δες αναλυτικά την τιμή</a>
-          <p class="waiter-price-footnote"><small>Το POSPal δεν είναι ταμειακή ή φορολογικό POS. Αυτά παραμένουν ξεχωριστά.</small></p>
-        </div>
-
-        <div class="waiter-receipt" aria-label="Τι περιλαμβάνει η συνδρομή POSPal">
-          <div class="waiter-receipt-brand">
-            <img src="/app_icon.ico" alt="" width="34" height="34">
-            <strong>POSPal</strong>
+    <section id="requirements" class="waiter-decision" aria-labelledby="price-title">
+      <div class="pda-shell">
+          <div class="waiter-decision-grid">
+            <div class="waiter-receipt" aria-label="Τιμή POSPal και χρέωση ανά PDA">
+              <div class="waiter-receipt-brand">
+                <img src="/app_icon.ico" alt="" width="34" height="34">
+                <strong>POSPal</strong>
+              </div>
+              <dl>
+                <div><dt>Συνδρομή POSPal</dt><dd>23,90 €<small>/μήνα με ΦΠΑ</small></dd></div>
+                <div class="waiter-receipt-free"><dt>Χρέωση ανά PDA</dt><dd>0,00 €</dd></div>
+              </dl>
+            <p class="waiter-receipt-trial">30 ημέρες δωρεάν · Χωρίς κάρτα</p>
           </div>
-          <p>Η συνδρομή σου</p>
-          <dl>
-            <div><dt>Παραγγελιοληψία</dt><dd>Περιλαμβάνεται</dd></div>
-            <div><dt>Τραπέζια / απλή λειτουργία</dt><dd>Περιλαμβάνεται</dd></div>
-            <div><dt>Ροή κουζίνας</dt><dd>Περιλαμβάνεται</dd></div>
-            <div><dt>QR μενού</dt><dd>Περιλαμβάνεται</dd></div>
-            <div class="waiter-receipt-free"><dt>Χρέωση ανά PDA</dt><dd>0,00 €</dd></div>
-          </dl>
-          <div class="waiter-receipt-total">
-            <span>Μετά τη δοκιμή</span>
-            <strong>23,90 €</strong>
-            <small>τον μήνα με ΦΠΑ</small>
-          </div>
-          <p class="waiter-receipt-trial">30 ημέρες δωρεάν · Ακύρωση όποτε θέλεις</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="requirements" class="waiter-requirements" aria-labelledby="requirements-title">
-      <div class="pda-shell waiter-requirements-grid">
-        <div class="waiter-requirements-copy">
-          <p class="waiter-section-label">Πριν από την πρώτη βάρδια</p>
-          <h2 id="requirements-title">Τι χρειάζεται πραγματικά στο κατάστημά σου</h2>
-          <p>Το στήσιμο είναι απλό. Αυτό δεν σημαίνει ότι πρέπει να το αφήσεις αδοκίμαστο μέχρι να γεμίσει το μαγαζί.</p>
-          <p>Σύνδεσε τις πραγματικές συσκευές της ομάδας, στείλε δοκιμαστικές παραγγελίες και έλεγξε τους εκτυπωτές πριν βασιστείς στο POSPal σε κανονική βάρδια.</p>
-          <div class="waiter-requirement-links">
-            <a class="waiter-text-link" href="/asyrmati-paraggeliolipsia.html">Δες πώς συνδέονται οι συσκευές</a>
-            <a class="waiter-text-link" href="/guides/">Άνοιξε τους οδηγούς εγκατάστασης</a>
+          <div class="waiter-decision-copy">
+            <p class="waiter-section-label">Τι πληρώνεις</p>
+            <h2 id="price-title">Μία συνδρομή. Όχι χρέωση για κάθε PDA.</h2>
+            <p>Περιλαμβάνονται η παραγγελιοληψία, η λειτουργία τραπεζιών, η απλή λειτουργία, η ροή κουζίνας και το QR μενού. Ακυρώνεις όποτε θέλεις.</p>
+            <div class="waiter-decision-links">
+              <a class="waiter-text-link" href="/times.html">Δες αναλυτικά την τιμή</a>
+              <a class="waiter-text-link" href="/systima-paraggeliolipsias.html">Δες ολόκληρο το σύστημα</a>
+            </div>
           </div>
         </div>
 
-        <ul class="waiter-checklist" aria-label="Απαιτήσεις POSPal">
-          <li><span aria-hidden="true">✓</span><div><strong>Υπολογιστής Windows x64</strong><p>Εκεί εγκαθίσταται και τρέχει το POSPal.</p></div></li>
-          <li><span aria-hidden="true">✓</span><div><strong>Κατάλληλο κινητό ή tablet με browser</strong><p>Δεν χρειάζεται ξεχωριστή εφαρμογή στη συσκευή.</p></div></li>
-          <li><span aria-hidden="true">✓</span><div><strong>Προσβάσιμο τοπικό δίκτυο</strong><p>Οι συσκευές πρέπει να μπορούν να επικοινωνούν με τον υπολογιστή Windows. Ένα απομονωμένο Wi-Fi πελατών μπορεί να εμποδίσει τη σύνδεση.</p></div></li>
-          <li><span aria-hidden="true">✓</span><div><strong>Πραγματική δοκιμή εκτυπωτών</strong><p>Οι θερμικοί εκτυπωτές πρέπει να είναι εγκατεστημένοι στα Windows και να ελεγχθούν με δοκιμαστική εκτύπωση.</p></div></li>
-          <li><span aria-hidden="true">✓</span><div><strong>Δοκιμή με την πραγματική ομάδα</strong><p>Ο πρακτικός αριθμός συσκευών εξαρτάται από τον υπολογιστή, το δίκτυο και το στήσιμο του καταστήματος.</p></div></li>
-        </ul>
-      </div>
-
-      <div class="pda-shell waiter-boundaries" aria-label="Διευκρινίσεις για το δίκτυο και το φορολογικό σύστημα">
-        <div>
-          <strong>Χωρίς σήμα δεν σημαίνει χωρίς δίκτυο.</strong>
-          <p>Για την τοπική παραγγελιοληψία δεν χρειάζεται σήμα κινητής. Χρειάζεται όμως σύνδεση με το τοπικό δίκτυο. Internet χρειάζεται για λειτουργίες όπως η δημοσίευση του QR μενού, ο έλεγχος άδειας και οι ενημερώσεις.</p>
+        <div class="waiter-fit">
+          <div>
+            <p class="waiter-section-label">Για να το δοκιμάσεις</p>
+            <h3>Τρία πράγματα πριν από την πρώτη βάρδια.</h3>
+          </div>
+          <ul>
+            <li>Υπολογιστής Windows x64 στο κατάστημα</li>
+            <li>Κατάλληλο κινητό ή tablet με browser</li>
+            <li>Προσβάσιμο τοπικό δίκτυο μεταξύ των συσκευών</li>
+          </ul>
         </div>
-        <div>
+
+        <div class="waiter-detail-list">
+          <details>
+            <summary>Τι γίνεται αν χαθεί προσωρινά η σύνδεση;</summary>
+            <p>Αν μια ήδη ανοιχτή συσκευή χάσει προσωρινά τη σύνδεση, οι υποστηριζόμενες ενέργειες μένουν σε αυτή και στέλνονται με τη σειρά μόλις επανέλθει η επικοινωνία. Δεν εμφανίζονται αυτόματα στις άλλες συσκευές.</p>
+          </details>
+          <details>
+            <summary>Τι χρειάζεται internet;</summary>
+            <p>Η τοπική παραγγελιοληψία δεν χρειάζεται σήμα κινητής. Χρειάζεται όμως το τοπικό δίκτυο. Internet χρειάζεται για λειτουργίες όπως η δημοσίευση του QR μενού, ο έλεγχος άδειας και οι ενημερώσεις. <a href="/asyrmati-paraggeliolipsia.html">Δες πώς συνδέονται οι συσκευές.</a></p>
+          </details>
+          <details>
+            <summary>Τι γίνεται με τους θερμικούς εκτυπωτές;</summary>
+            <p>Πρέπει να είναι εγκατεστημένοι στα Windows. Αυτό δεν σημαίνει ότι λειτουργεί κάθε μοντέλο ή τρόπος σύνδεσης. Κάνε πραγματική δοκιμαστική εκτύπωση πριν από τη βάρδια.</p>
+          </details>
+          <details>
+            <summary>Πόσες συσκευές μπορώ να χρησιμοποιήσω;</summary>
+            <p>Δεν υπάρχει χρέωση ανά PDA. Ο πρακτικός αριθμός συσκευών εξαρτάται από τον υπολογιστή, το δίκτυο και το στήσιμο του καταστήματος.</p>
+          </details>
+        </div>
+
+        <div class="waiter-support-link">
+          <p>Θέλεις βοήθεια με το στήσιμο;</p>
+          <a class="waiter-text-link" href="/guides/">Άνοιξε τους οδηγούς εγκατάστασης</a>
+        </div>
+
+        <aside class="waiter-fiscal" aria-label="Διευκρίνιση για φορολογικό POS">
           <strong>Δεν είναι η ταμειακή σου.</strong>
-          <p>Το POSPal καλύπτει την παραγγελιοληψία και τη ροή κουζίνας. Δεν είναι ταμειακή και δεν είναι φορολογικό POS. Το φορολογικό σύστημα της επιχείρησης παραμένει ξεχωριστό.</p>
-        </div>
+          <p>Το POSPal καλύπτει την παραγγελιοληψία και τη ροή κουζίνας. Δεν είναι φορολογικό POS. Το φορολογικό σύστημα της επιχείρησης παραμένει ξεχωριστό.</p>
+        </aside>
       </div>
     </section>
 
@@ -333,7 +253,7 @@
       <div class="pda-shell waiter-faq-grid">
         <div class="waiter-faq-heading">
           <p class="waiter-section-label">Συχνές ερωτήσεις</p>
-          <h2 id="waiter-faq-title">Όσα χρειάζεται να ξέρεις για το PDA σερβιτόρου</h2>
+          <h2 id="waiter-faq-title">Τα βασικά πριν δώσεις κινητά στην ομάδα.</h2>
         </div>
         <div class="pda-faq">
           <details>
@@ -349,24 +269,12 @@
             <p>Όχι. Το POSPal εμφανίζει έναν τοπικό σύνδεσμο και QR σύνδεσης. Ο σερβιτόρος ανοίγει τη σελίδα παραγγελιοληψίας από τον browser της συσκευής.</p>
           </details>
           <details>
-            <summary>Χρειάζεται internet ή μόνο τοπικό δίκτυο;</summary>
-            <p>Η τοπική παραγγελιοληψία δεν χρειάζεται σήμα κινητής, αλλά η συσκευή πρέπει να μπορεί να επικοινωνεί με τον υπολογιστή Windows στο δίκτυο του καταστήματος. Internet χρειάζεται για λειτουργίες όπως η δημοσίευση του QR μενού, ο έλεγχος άδειας και οι ενημερώσεις.</p>
-          </details>
-          <details>
             <summary>Τι γίνεται αν χαθεί προσωρινά η σύνδεση;</summary>
             <p>Αν μια ήδη ανοιχτή συσκευή χάσει προσωρινά τη σύνδεση, οι υποστηριζόμενες ενέργειες μένουν σε αυτή και στέλνονται με τη σειρά μόλις επανέλθει η επικοινωνία. Δεν εμφανίζονται αυτόματα στις άλλες συσκευές.</p>
           </details>
           <details>
             <summary>Μπορώ να χρησιμοποιήσω τους εκτυπωτές που έχω;</summary>
             <p>Το POSPal εμφανίζει θερμικούς εκτυπωτές που είναι ήδη εγκατεστημένοι στα Windows. Αυτό δεν σημαίνει ότι θα δουλέψει οποιοδήποτε μοντέλο ή σύνδεση. Κάνε πραγματική δοκιμαστική εκτύπωση πριν το χρησιμοποιήσεις σε βάρδια.</p>
-          </details>
-          <details>
-            <summary>Περιλαμβάνεται το QR μενού;</summary>
-            <p>Ναι. Το QR μενού περιλαμβάνεται στην ίδια συνδρομή και χρησιμοποιεί τον κατάλογο του POSPal ως βάση.</p>
-          </details>
-          <details>
-            <summary>Τι γίνεται μετά τις 30 δωρεάν ημέρες;</summary>
-            <p>Αν θέλεις να συνεχίσεις, ενεργοποιείς τη συνδρομή των 23,90 € τον μήνα με ΦΠΑ. Αν δεν σου κάνει, δεν συνεχίζεις. Δεν χρειάζεται κάρτα ή προσωπικά στοιχεία για να ξεκινήσεις τη δοκιμή.</p>
           </details>
           <details>
             <summary>Το POSPal αντικαθιστά την ταμειακή ή το φορολογικό POS;</summary>
@@ -379,9 +287,8 @@
     <section class="waiter-final" aria-labelledby="waiter-final-title">
       <div class="pda-shell waiter-final-grid">
         <div>
-          <p class="waiter-section-label">Δοκίμασέ το πριν πληρώσεις άλλο εξοπλισμό</p>
-          <h2 id="waiter-final-title">Μην αγοράσεις άλλο PDA πριν δοκιμάσεις το κινητό που έχεις ήδη.</h2>
-          <p>Κατέβασε το POSPal για Windows, σύνδεσε ένα κατάλληλο κινητό ή tablet και στείλε μια πραγματική δοκιμαστική παραγγελία. Αν σου κάνει, συνεχίζεις. Αν όχι, το διαγράφεις.</p>
+          <h2 id="waiter-final-title">Δοκίμασέ το με τη δική σου βάρδια.</h2>
+          <p>Σύνδεσε ένα κινητό. Στείλε μια πραγματική δοκιμαστική παραγγελία. Αν σου κάνει, συνεχίζεις.</p>
           <p class="waiter-final-trial">30 ημέρες δωρεάν · Χωρίς κάρτα · Μετά 23,90 €/μήνα με ΦΠΑ</p>
         </div>
         <a class="pda-button pda-button-primary" href="/download/">Κατέβασε για Windows</a>
