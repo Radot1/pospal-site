@@ -1036,6 +1036,571 @@ body.seo-page .pospal-consent-btn {
   font-weight: 700;
 }
 
+/* Commercial system page. All rules remain scoped to the system-page body so
+   the permanently locked homepage, download page, and guides are unchanged. */
+body.seo-page-system {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.seo-page-system .system-hero {
+  padding: 60px 0 54px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(53, 237, 120, 0.23), transparent 30%),
+    linear-gradient(145deg, #f8faf6 0%, #edf3ee 58%, #dfe9e1 100%);
+}
+
+.seo-page-system .system-hero .seo-hero-grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+  gap: clamp(2rem, 5vw, 4.4rem);
+}
+
+.seo-page-system .system-hero h1 {
+  max-width: 20ch;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  line-height: 1.05;
+  hyphens: none;
+  overflow-wrap: normal;
+}
+
+.seo-page-system .system-hero h1 span {
+  display: block;
+  color: var(--seo-green-dark);
+}
+
+.seo-page-system .system-hero .seo-lead {
+  max-width: 58ch;
+  margin-bottom: 0.85rem;
+}
+
+.seo-page-system .system-hero-decision {
+  max-width: 56ch;
+  margin-bottom: 1.35rem;
+  color: #26352b;
+  font-size: 1.04rem;
+  font-weight: 750;
+}
+
+.seo-page-system .system-hero-proof {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  transform: rotate(1deg);
+  box-shadow: 18px 20px 0 rgba(7, 18, 11, 0.08);
+}
+
+.seo-page-system .system-proof-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.2rem 0.95rem;
+  color: #dbe8de;
+  border-bottom: 1px solid #344238;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.seo-page-system .system-proof-head a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--seo-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.seo-page-system .system-hero-proof img {
+  border: 0;
+  border-radius: 0;
+}
+
+.seo-page-system .system-hero-proof figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.9rem;
+}
+
+.seo-page-system .system-hero-proof figcaption span {
+  padding: 0.28rem 0.55rem;
+  color: #dbe8de;
+  border: 1px solid #425246;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.seo-page-system .system-definition {
+  color: #f6fff8;
+  background: #111812;
+  border-top: 1px solid #2b382e;
+  border-bottom: 1px solid #2b382e;
+}
+
+.seo-page-system .system-definition p {
+  max-width: 94ch;
+  margin: 0;
+  padding: 1.35rem 0;
+  color: #dbe8de;
+  font-size: 0.98rem;
+}
+
+.seo-page-system .system-definition strong {
+  color: var(--seo-green);
+}
+
+.seo-page-system .system-section-intro {
+  max-width: 790px;
+  margin-bottom: 2rem;
+}
+
+.seo-page-system .system-section-intro h2,
+.seo-page-system .system-offer-copy h2 {
+  max-width: 19ch;
+  margin-bottom: 0.85rem;
+  font-size: clamp(2.15rem, 4vw, 3.45rem);
+  line-height: 1.02;
+}
+
+.seo-page-system .system-section-intro > p:last-child,
+.seo-page-system .system-offer-copy > p {
+  max-width: 66ch;
+  margin-bottom: 0;
+  color: var(--seo-ink-soft);
+  font-size: 1.04rem;
+}
+
+.seo-page-system .seo-band-dark .system-section-intro > p:last-child {
+  color: #c8d8cc;
+}
+
+.seo-page-system .seo-band-dark .seo-signal {
+  color: var(--seo-green);
+}
+
+.seo-page-system .system-start {
+  background: #f8faf7;
+}
+
+.seo-page-system .system-start-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--seo-ink);
+  border-bottom: 2px solid var(--seo-ink);
+}
+
+.seo-page-system .system-start-steps li {
+  min-width: 0;
+  padding: 1.15rem;
+}
+
+.seo-page-system .system-start-steps li + li {
+  border-left: 1px solid var(--seo-line);
+}
+
+.seo-page-system .system-start-steps span,
+.seo-page-system .system-kicker {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--seo-green-dark);
+  font-size: 0.8rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.seo-page-system .system-start-steps strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1.1rem;
+}
+
+.seo-page-system .system-start-steps p {
+  margin-bottom: 0;
+  color: var(--seo-ink-soft);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.seo-page-system .system-founder-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: end;
+  max-width: 900px;
+  margin: 2rem 0 0 auto;
+  padding: 1.5rem 1.6rem;
+  background: #e6eee8;
+  border-left: 5px solid var(--seo-green-dark);
+}
+
+.seo-page-system .system-founder-note p {
+  margin-bottom: 0;
+  color: #17251c;
+  font-size: 1.06rem;
+}
+
+.seo-page-system .system-founder-attribution {
+  min-width: 110px;
+  text-align: right;
+}
+
+.seo-page-system .system-founder-attribution strong,
+.seo-page-system .system-founder-attribution span {
+  display: block;
+}
+
+.seo-page-system .system-founder-note a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.seo-page-system #how-it-starts,
+.seo-page-system #requirements {
+  scroll-margin-top: 90px;
+}
+
+.seo-page-system .system-founder-attribution span {
+  color: var(--seo-ink-soft);
+  font-size: 0.8rem;
+}
+
+.seo-page-system .system-inline-link {
+  margin: 1.25rem 0 0;
+  font-weight: 800;
+}
+
+.seo-page-system .system-inline-link a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--seo-green-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.seo-page-system .system-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1.1rem 0;
+  border-top: 1px solid #4a5a4e;
+  border-bottom: 1px solid #4a5a4e;
+}
+
+.seo-page-system .system-flow > div {
+  min-width: 0;
+}
+
+.seo-page-system .system-flow span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0.65rem;
+  color: #07120b;
+  background: var(--seo-green);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.seo-page-system .system-flow strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+  font-size: 1.03rem;
+}
+
+.seo-page-system .system-flow p {
+  margin-bottom: 0;
+  color: #c8d8cc;
+  font-size: 0.9rem;
+}
+
+.seo-page-system .system-flow i {
+  color: var(--seo-green);
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+.seo-page-system .system-workflow-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(220px, 0.72fr);
+  gap: 0.85rem;
+  align-items: stretch;
+  margin-top: 1.8rem;
+}
+
+.seo-page-system .system-workflow-details article,
+.seo-page-system .system-qr-card {
+  margin: 0;
+  padding: 1.15rem;
+  background: #172219;
+  border: 1px solid #334336;
+  border-radius: 10px;
+}
+
+.seo-page-system .system-workflow-details h3 {
+  margin-bottom: 0.55rem;
+  color: #ffffff;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.seo-page-system .system-workflow-details article > p:last-child {
+  margin-bottom: 0;
+  color: #c8d8cc;
+}
+
+.seo-page-system .seo-band-dark .system-kicker {
+  color: var(--seo-amber);
+}
+
+.seo-page-system .system-qr-card {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.seo-page-system .system-qr-card img {
+  width: 95px;
+  height: 205px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+}
+
+.seo-page-system .system-qr-card figcaption strong,
+.seo-page-system .system-qr-card figcaption span {
+  display: block;
+}
+
+.seo-page-system .system-qr-card figcaption strong {
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.seo-page-system .system-qr-card figcaption span {
+  color: #c8d8cc;
+  font-size: 0.9rem;
+}
+
+.seo-page-system .system-equipment {
+  background: #edf3ee;
+}
+
+.seo-page-system .system-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.seo-page-system .system-device-card,
+.seo-page-system .system-printer-card {
+  min-width: 0;
+  padding: 1.4rem 0 0;
+  border-top: 2px solid var(--seo-ink);
+}
+
+.seo-page-system .system-equipment-grid h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.28rem;
+  line-height: 1.18;
+}
+
+.seo-page-system .system-equipment-grid p {
+  color: var(--seo-ink-soft);
+}
+
+.seo-page-system .system-equipment-grid a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--seo-green-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.seo-page-system .system-offer {
+  color: #f8fff9;
+  background: #102719;
+}
+
+.seo-page-system .system-offer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 0.48fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.seo-page-system .system-offer-copy h2 {
+  color: #ffffff;
+}
+
+.seo-page-system .system-offer-copy > p {
+  color: #c8d8cc;
+}
+
+.seo-page-system .system-offer-copy .system-offer-footnote {
+  margin-top: 1.4rem;
+  font-size: 0.87rem;
+}
+
+.seo-page-system .system-offer-copy ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seo-page-system .system-offer-copy li {
+  position: relative;
+  padding-left: 1.55rem;
+  color: #edf7ef;
+}
+
+.seo-page-system .system-offer-copy li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--seo-green);
+  font-weight: 900;
+}
+
+.seo-page-system .system-price-card {
+  padding: 1.6rem;
+  color: #07120b;
+  background: var(--seo-green);
+  border: 1px solid #93f7b7;
+  border-radius: 12px;
+  box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.17);
+}
+
+.seo-page-system .system-price-card > span,
+.seo-page-system .system-price-card > strong,
+.seo-page-system .system-price-card > small,
+.seo-page-system .system-price-card > b {
+  display: block;
+}
+
+.seo-page-system .system-price-card > span {
+  font-weight: 850;
+}
+
+.seo-page-system .system-price-card > strong {
+  margin: 0.05rem 0 0.5rem;
+  font-size: 3.2rem;
+  line-height: 0.95;
+}
+
+.seo-page-system .system-price-card p {
+  margin-bottom: 1rem;
+  color: #14351f;
+}
+
+.seo-page-system .system-price-card hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid rgba(7, 18, 11, 0.32);
+}
+
+.seo-page-system .system-price-card > small {
+  margin-bottom: 0.2rem;
+  font-weight: 750;
+}
+
+.seo-page-system .system-price-card > b {
+  margin-bottom: 0.45rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.seo-page-system .system-price-card > b em {
+  font-size: 0.92rem;
+  font-style: normal;
+}
+
+.seo-page-system .system-price-card .seo-button-primary {
+  width: 100%;
+  background: #111812;
+  color: #ffffff;
+}
+
+.seo-page-system .system-price-card .seo-button-primary:hover {
+  background: #254430;
+}
+
+body.seo-page-system .system-price-card a.seo-button-primary {
+  color: #ffffff;
+}
+
+.seo-page-system .system-price-link {
+  display: flex;
+  justify-content: center;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.seo-page-system .system-requirements .seo-ledger-row {
+  padding: 0.88rem 1rem;
+}
+
+.seo-page-system .system-requirements-details {
+  align-self: start;
+  border: 1px solid var(--seo-line-strong);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.seo-page-system .system-requirements-details summary {
+  min-height: 48px;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.seo-page-system .system-requirements-details .seo-ledger {
+  border: 0;
+  border-top: 1px solid var(--seo-line);
+  border-radius: 0;
+}
+
+.seo-page-system .system-faq-section {
+  background: #f8faf7;
+}
+
+.seo-page-system .system-final h2 {
+  max-width: 23ch;
+}
+
+.seo-page-system .system-final small {
+  display: block;
+  margin-top: 0.85rem;
+  color: #c8d8cc;
+}
+
 .seo-page a:focus-visible,
 .seo-page button:focus-visible,
 .seo-page summary:focus-visible {
@@ -1071,6 +1636,44 @@ body.seo-page .pospal-consent-btn {
 
   .seo-header-cta {
     margin-left: auto;
+  }
+
+  .seo-page-system .system-hero .seo-hero-grid,
+  .seo-page-system .system-offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-page-system .system-hero-proof {
+    width: min(100%, 660px);
+    transform: none;
+  }
+
+  .seo-page-system .system-start-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seo-page-system .system-start-steps li:nth-child(3) {
+    border-left: 0;
+  }
+
+  .seo-page-system .system-start-steps li:nth-child(n + 3) {
+    border-top: 1px solid var(--seo-line);
+  }
+
+  .seo-page-system .system-workflow-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seo-page-system .system-qr-card {
+    grid-column: 1 / -1;
+  }
+
+  .seo-page-system .system-equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-page-system .system-price-card {
+    width: min(100%, 440px);
   }
 }
 
@@ -1220,6 +1823,337 @@ body.seo-page .pospal-consent-btn {
   }
 }
 
+/* Compact phone reading flow, including phones held in landscape. */
+@media (max-width: 620px), (max-width: 920px) and (max-height: 500px) {
+  .seo-page-system .system-hero {
+    padding: 24px 0 32px;
+  }
+
+  .seo-page-system .seo-band,
+  .seo-page-system .system-final {
+    padding: 32px 0;
+  }
+
+  body.seo-page-system {
+    line-height: 1.5;
+  }
+
+  .seo-page-system .system-hero-copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .seo-page-system .system-hero .seo-signal {
+    margin-bottom: 0.7rem;
+  }
+
+  .seo-page-system .system-hero h1 {
+    max-width: none;
+    margin-bottom: 0.85rem;
+    font-size: 29px;
+    line-height: 1.1;
+  }
+
+  .seo-page-system .system-hero h1 span {
+    margin-top: 0.45rem;
+    font-size: 24px;
+    line-height: 1.15;
+    text-wrap: auto;
+  }
+
+  .seo-page-system .system-hero .seo-lead,
+  .seo-page-system .system-hero-decision,
+  .seo-page-system .system-section-intro > p:last-child,
+  .seo-page-system .system-offer-copy > p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .seo-page-system .system-hero-decision {
+    margin-bottom: 1rem;
+  }
+
+  .seo-page-system .system-hero .seo-actions {
+    order: 2;
+    gap: 0.25rem;
+    margin: 0.85rem 0 0;
+  }
+
+  .seo-page-system .system-hero .seo-button-secondary {
+    min-height: 44px;
+    padding-block: 0.65rem;
+    border-color: transparent;
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .seo-page-system .system-hero .seo-trial-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    order: 1;
+    font-size: 0.88rem;
+  }
+
+  .seo-page-system .system-trial-price {
+    grid-row: 2;
+    color: var(--seo-ink);
+    font-weight: 700;
+  }
+
+  .seo-page-system .system-trial-terms {
+    grid-row: 3;
+  }
+
+  .seo-page-system .system-hero-proof {
+    width: min(100%, 300px);
+    justify-self: center;
+    box-shadow: 5px 6px 0 rgba(7, 18, 11, 0.08);
+    transform: none;
+  }
+
+  .seo-page-system .system-proof-head {
+    gap: 0.5rem;
+    padding-inline: 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  .seo-page-system .system-hero-proof figcaption {
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .seo-page-system .system-hero-proof figcaption span {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .seo-page-system .system-definition p {
+    padding: 1.1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .seo-page-system .system-section-intro {
+    margin-bottom: 1.1rem;
+  }
+
+  .seo-page-system .system-section-intro h2,
+  .seo-page-system .system-offer-copy h2,
+  .seo-page-system .seo-section-heading h2,
+  .seo-page-system .system-final h2 {
+    max-width: none;
+    font-size: 26px;
+    line-height: 1.12;
+  }
+
+  .seo-page-system .system-start-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-page-system .system-start-steps li + li {
+    border-left: 0;
+    border-top: 1px solid var(--seo-line);
+  }
+
+  .seo-page-system .system-start-steps li {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    column-gap: 0.6rem;
+    padding: 0.8rem 0;
+  }
+
+  .seo-page-system .system-start-steps span {
+    grid-row: 1 / 3;
+    padding-top: 0.2rem;
+  }
+
+  .seo-page-system .system-start-steps strong {
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+  }
+
+  .seo-page-system .system-start-steps p {
+    grid-column: 2;
+    font-size: 0.94rem;
+  }
+
+  .seo-page-system .system-founder-note {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-top: 1.1rem;
+    padding: 1rem;
+  }
+
+  .seo-page-system .system-founder-note p {
+    font-size: 0.98rem;
+  }
+
+  .seo-page-system .system-founder-attribution {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .seo-page-system .system-flow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .seo-page-system .system-flow > div {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    column-gap: 0.8rem;
+  }
+
+  .seo-page-system .system-flow span {
+    grid-row: 1 / 3;
+    margin: 0;
+  }
+
+  .seo-page-system .system-flow p {
+    grid-column: 2;
+  }
+
+  .seo-page-system .system-flow i {
+    display: none;
+  }
+
+  .seo-page-system .system-workflow-details {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 1rem;
+  }
+
+  .seo-page-system .system-workflow-details article {
+    padding: 1rem 0;
+    border: 0;
+    border-bottom: 1px solid #334336;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .seo-page-system .system-workflow-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .seo-page-system .system-qr-card {
+    grid-column: auto;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 0.85rem;
+    margin-top: 1rem;
+    padding: 0.85rem;
+  }
+
+  .seo-page-system .system-qr-card img {
+    width: 72px;
+    height: auto;
+  }
+
+  .seo-page-system .system-equipment-grid {
+    gap: 0.8rem;
+  }
+
+  .seo-page-system .system-equipment-grid h3 {
+    font-size: 1.18rem;
+    line-height: 1.25;
+  }
+
+  .seo-page-system .system-device-card,
+  .seo-page-system .system-printer-card {
+    padding-top: 1rem;
+  }
+
+  .seo-page-system .system-inline-link {
+    margin-top: 0.8rem;
+  }
+
+  .seo-page-system .system-offer-grid {
+    gap: 1.35rem;
+  }
+
+  .seo-page-system .system-offer-copy ul {
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+
+  .seo-page-system .system-price-card {
+    padding: 1.2rem;
+    box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.17);
+  }
+
+  .seo-page-system .system-price-card p {
+    margin-bottom: 0.7rem;
+  }
+
+  .seo-page-system .system-price-card > strong {
+    font-size: 2.4rem;
+  }
+
+  .seo-page-system .seo-faq {
+    gap: 0;
+    border-top: 1px solid var(--seo-line-strong);
+  }
+
+  .seo-page-system .seo-faq details {
+    border: 0;
+    border-bottom: 1px solid var(--seo-line);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .seo-page-system .seo-faq summary {
+    min-height: 52px;
+    padding: 0.9rem 2rem 0.9rem 0;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .seo-page-system .seo-faq summary::after {
+    right: 0.35rem;
+  }
+
+  .seo-page-system .seo-faq details p {
+    padding: 0 0 1rem;
+  }
+
+  .seo-page-system .system-requirements .seo-section-grid,
+  .seo-page-system .system-faq-section .seo-section-grid {
+    gap: 1rem;
+  }
+
+  .seo-page-system .system-requirements .seo-section-heading > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .seo-page-system .system-requirements .seo-ledger-row {
+    gap: 0.3rem;
+  }
+
+  .seo-page-system .system-final .seo-actions {
+    margin-top: 0.25rem;
+  }
+
+  .seo-page-system .seo-footer {
+    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .seo-page-system .seo-footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem 1rem;
+    width: 100%;
+  }
+
+  .seo-page-system .seo-footer nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
 @media (max-width: 340px) {
   .seo-shell {
     width: min(100% - 22px, 1120px);
@@ -1237,6 +2171,16 @@ body.seo-page .pospal-consent-btn {
   .seo-page-system .seo-hero h1,
   .seo-page-wireless .seo-hero h1 {
     font-size: 29px;
+  }
+
+  .seo-page-system .system-start-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-page-system .system-start-steps li + li,
+  .seo-page-system .system-start-steps li:nth-child(3) {
+    border-top: 1px solid var(--seo-line);
+    border-left: 0;
   }
 }
 

@@ -1,8 +1,13 @@
 # POSPal Commercial System Page Brief
 
-Status: Draft for review — no live-page changes approved or made  
+Status: Approved direction implemented locally — not pushed or published
+
 Target page: `/systima-paraggeliolipsias.html`  
-Last updated: 2026-08-29
+Last updated: 2026-08-30
+
+Current competitor study: [SYSTEM_PAGE_COMPETITOR_RESEARCH_2026-08-30.md](SYSTEM_PAGE_COMPETITOR_RESEARCH_2026-08-30.md)
+
+Implementation record: [SYSTEM_PAGE_IMPLEMENTATION_LOG.md](SYSTEM_PAGE_IMPLEMENTATION_LOG.md). The user approved the product-first, restrained founder-voice direction and implementation. The sections below preserve the original research and proposal; baseline statistics and scores are pre-rewrite observations, not current measurements. Where draft copy or layout differs, the implementation record and current HTML describe the delivered result.
 
 ## Decision
 
@@ -22,11 +27,11 @@ Secondary conversion: open the installation/setup guides when more confidence is
 
 ## Evidence and assumptions
 
-### Measured
+### Pre-rewrite observations recorded during the earlier review
 
-- Search Console review for the recent comparison period showed this page with 968 impressions and 1 click.
+- The earlier Search Console review recorded this page with 968 impressions and 1 click. This implementation pass did not reopen the account or refresh that comparison period.
 - Its observed click-through rate was therefore approximately 0.10%.
-- The current HTML contains 1,054 main-content words, one H1, ten H2s, nine contextual internal links, two real product images, a canonical URL, and FAQ structured data.
+- The current HTML contains approximately 1,107 body-content words, one H1, ten H2s, two H3s, 24 total links, three image elements, a canonical URL, and five FAQ schema questions.
 - The current title is 56 characters and the meta description is 153 characters.
 
 ### User-provided business fact
@@ -41,6 +46,14 @@ Secondary conversion: open the installation/setup guides when more confidence is
 - The best primary intent is choosing a self-managed ordering system for a Greek hospitality venue, not learning what a PDA is.
 
 Average page position, query-level conversion rate, installer completion, and page-to-trial conversion are currently N/A for this brief.
+
+### Current competitor review
+
+A current search-result and page-content review found that visible competitors repeatedly combine exact category language with broad venue coverage, complete workflow explanations, price or sales-path clarity, product visuals, FAQs, and supporting content clusters.
+
+The strongest competitors also have proof POSPal does not currently have: customer logos, named reviews, company history, public support presence, or a large product/content footprint. The page rewrite must not invent substitutes for that evidence.
+
+Several competitor pages are long, repetitive, and feature-heavy. Their useful lesson is completeness, not verbosity. POSPal's opportunity is to provide the same category confidence with a much clearer buying sequence: real shift, complete workflow, transparent offer, requirements, download.
 
 ## Audience
 
@@ -111,9 +124,9 @@ This prevents the commercial hub from competing with every supporting page while
 
 This paragraph should appear as visible page copy. It is the shortest complete explanation for both a human visitor and a system trying to extract what POSPal is.
 
-## Current on-page audit
+## Pre-rewrite on-page audit
 
-Scores describe the current repository HTML, not the proposed page.
+These are the earlier qualitative audit scores, not a current Google ranking or a post-implementation measurement.
 
 | Element | Score | Finding |
 | --- | ---: | --- |
@@ -179,9 +192,9 @@ Length: 153 characters.
 
 ### Recommended H1
 
-> Σύστημα παραγγελιοληψίας χωρίς όλη την ιστορία.
+> Σύστημα παραγγελιοληψίας για εστίαση. Χωρίς όλη την ιστορία.
 
-This combines the primary category with the campaign message instead of choosing between SEO clarity and ad continuity.
+This uses the full primary category naturally and then lands on the campaign message. It is stronger than the existing H1 because both the search intent and the point of view are visible without interpretation.
 
 ## Recommended page structure and draft copy direction
 
@@ -195,7 +208,7 @@ This is a content brief, not the final approved copy. It deliberately defines th
 
 **H1**
 
-> Σύστημα παραγγελιοληψίας χωρίς όλη την ιστορία.
+> Σύστημα παραγγελιοληψίας για εστίαση. Χωρίς όλη την ιστορία.
 
 **Lead**
 
@@ -219,11 +232,21 @@ This is a content brief, not the final approved copy. It deliberately defines th
 
 This link should jump to the requirements section on the same page. The guide link can follow after the requirements instead of competing with the first download CTA.
 
-### 2. Self-fit — qualify the DIY owner
+### 2. Recognisable shift and self-fit — qualify the DIY owner
 
-**H2**
+**Opening beat**
 
-> Θέλεις να το στήσεις μόνος σου; Εδώ ξεκινάς.
+> Παραγγελία στο τραπέζι. Εκτύπωση εκεί που πρέπει. Ενημερωμένο QR μενού από τον ίδιο κατάλογο. Και κανείς δεν ψάχνει ποιος έχει το μοναδικό PDA.
+
+**Canonical PDA proposition**
+
+> Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.
+
+Follow this immediately with the local-network and suitable-device qualification.
+
+**H2 direction**
+
+> Το σύστημα πρέπει να δουλεύει για τη βάρδια. Όχι η βάρδια για το σύστημα.
 
 **Purpose**
 
@@ -262,6 +285,10 @@ Keep both real screenshots here. Use them as proof, not decoration.
 **H2**
 
 > Το κατεβάζεις, το στήνεις και δοκιμάζεις μια πραγματική παραγγελία.
+
+**Founder-voice setup line**
+
+> Δεν χρειάζεσαι παρουσίαση για να δεις αν σου κάνει. Χρειάζεσαι μια πραγματική δοκιμαστική παραγγελία.
 
 **Three steps**
 
@@ -438,6 +465,6 @@ The ad's aggressive humour does not need to be copied throughout the page. The p
 6. Check desktop and mobile rendering without modifying shared CSS in a way that changes locked pages.
 7. After indexing, review query-level impressions, clicks, and CTR for this page; use installer and clean trial signals when available.
 
-## Approval gate
+## Approval and implementation
 
-No live-page change should be made from this brief until the proposed hierarchy and message are approved. The next deliverable after approval is a full Greek copy draft in Markdown, followed by implementation approval as a separate step.
+The user approved implementation with “Okay make it. Go” and then asked to continue. Local implementation is complete; publication remains a separate action and has not been requested for this rewrite. See the implementation record for the final structure, changes, tests and remaining limits.

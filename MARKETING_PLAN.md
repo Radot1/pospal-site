@@ -29,6 +29,8 @@
 ### 3.1) Founder voice and page ethos
 - The founder ad in Appendix A is the primary voice reference for owner-facing acquisition pages.
 - The campaign line is `Παραγγελιοληψία χωρίς όλη την ιστορία.`
+- Self-service is a central selling point, not a fallback: public pricing, direct download, guided setup and self-managed subscription. The owner does not need a sales call, quote or presentation to try or buy POSPal.
+- Keep the product first and the founder presence restrained. Robert's point of view should shape the page; one short founder note is enough. Do not turn each page into a personal letter or repeat the ad transcript.
 - The copy should recognise an actual shift problem before explaining features. For PDA pages, the central moment is `Ποιος έχει το PDA;` when too few dedicated devices are being shared.
 - Use direct language, concrete situations and dry humour. A small number of memorable lines is stronger than filling every section with jokes.
 - Preserve the ad's attitude without copying unsupported claims. `Χωρίς σήμα` means no mobile-network signal is required for local order-taking; it must never be rewritten as working without the venue's reachable local network.
@@ -57,7 +59,13 @@
 
 ### 7) Website Plan
 
-Current page-work record (2026-08-30): the founder-voice rewrite and new visuals for `/pda-gia-servitoro/` are implemented locally, not published. The maintained copy/visual brief is [WAITER_PDA_PAGE_COPY_DRAFT.md](docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md); checks and handoff are recorded in [PDA_IMPLEMENTATION_LOG.md](docs/seo/PDA_IMPLEMENTATION_LOG.md). The broader SEO roadmap remains paused while this page is reviewed.
+Current page-work record (2026-08-30): the approved commercial rewrite of `/systima-paraggeliolipsias.html` is implemented locally, not pushed or published. It prioritizes independent owners, clear price, direct trial, self-service setup/subscription, ordinary staff devices and printer reuse with an actual Windows test print. The maintained brief is [SYSTEM_PAGE_CONTENT_BRIEF.md](docs/seo/SYSTEM_PAGE_CONTENT_BRIEF.md); implementation decisions and verification are in [SYSTEM_PAGE_IMPLEMENTATION_LOG.md](docs/seo/SYSTEM_PAGE_IMPLEMENTATION_LOG.md). This is page work, not a restart of the whole SEO roadmap.
+
+Mobile follow-up (2026-08-30): phone-specific typography, compact setup/FAQ rows, earlier price visibility and screenshot magnification are implemented. At the checked 390px viewport, the page is approximately 13% shorter without removing substantive content. Portrait, landscape, tablet and desktop checks are recorded in the implementation log. Still local only.
+
+SEO audit fixes (2026-08-30): replaced the system page's oversized ICO references with lightweight derivatives of the same logo, removed repeated copy/FAQ answers, and linked directly to the existing installation and equipment videos. The page now has approximately 839 main-content words and is 6,427px tall at 390 × 844 (another 8.5% shorter). The implementation log records the updated estimated desktop/mobile scores and unmeasured live-performance/customer-proof gaps. No locked pages or shared scripts were changed; still local only.
+
+Earlier PDA work remains documented in [WAITER_PDA_PAGE_COPY_DRAFT.md](docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md) and [PDA_IMPLEMENTATION_LOG.md](docs/seo/PDA_IMPLEMENTATION_LOG.md). The user reports those two PDA pages are published; this pass does not change them.
 
 - Key pages: Home, Download, Pricing, Guides/Installation, Support, SEO landing pages.
 - Page order / nav: Home, Pricing, Guides, Support, Download.
