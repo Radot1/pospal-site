@@ -56,6 +56,9 @@
 - Download URL: `https://github.com/Radot1/pospal-artifacts/releases/latest/download/POSPal-win-Setup.exe`
 
 ### 7) Website Plan
+
+Current page-work record (2026-08-30): the founder-voice rewrite and new visuals for `/pda-gia-servitoro/` are implemented locally, not published. The maintained copy/visual brief is [WAITER_PDA_PAGE_COPY_DRAFT.md](docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md); checks and handoff are recorded in [PDA_IMPLEMENTATION_LOG.md](docs/seo/PDA_IMPLEMENTATION_LOG.md). The broader SEO roadmap remains paused while this page is reviewed.
+
 - Key pages: Home, Download, Pricing, Guides/Installation, Support, SEO landing pages.
 - Page order / nav: Home, Pricing, Guides, Support, Download.
 - Required sections on home: what it is/is not (not a fiscal POS), features, pricing, 30-day trial, download, guides.

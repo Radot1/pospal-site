@@ -60,9 +60,9 @@
     "semantic_hash": "e3e5954b7721dac89427874ae7ad5752"
   },
   ".agents/product-marketing.md": {
-    "mtime": 1785924937.2006273,
-    "ast_hash": "dcaa84b02bf0b19181543d26c5fb0688",
-    "semantic_hash": "dcaa84b02bf0b19181543d26c5fb0688"
+    "mtime": 1788087918.0267093,
+    "ast_hash": "1a7cf1b7522a4720939ee9d8fddb6a24",
+    "semantic_hash": ""
   },
   ".github/workflows/static.yml": {
     "mtime": 1783182882.0768602,
@@ -75,9 +75,9 @@
     "semantic_hash": "f332d58b97388dfdac0e7ba68e9d4255"
   },
   "AGENTS.md": {
-    "mtime": 1783230855.301978,
-    "ast_hash": "5dcfd4c9275414d7aa71b57d2d564f1f",
-    "semantic_hash": "5dcfd4c9275414d7aa71b57d2d564f1f"
+    "mtime": 1788088722.2847123,
+    "ast_hash": "226388fb481673b4239537e68dbc7170",
+    "semantic_hash": ""
   },
   "CONTEXT.md": {
     "mtime": 1783183867.9405577,
@@ -85,9 +85,9 @@
     "semantic_hash": "8083b0a49e670d05f5e1634f94d25f66"
   },
   "MARKETING_PLAN.md": {
-    "mtime": 1783183867.939553,
-    "ast_hash": "f45a3e351718cc613743378fec91708d",
-    "semantic_hash": "f45a3e351718cc613743378fec91708d"
+    "mtime": 1788093681.9465227,
+    "ast_hash": "9845f9593e5c82f02280dc2400b08969",
+    "semantic_hash": ""
   },
   "PRODUCT.md": {
     "mtime": 1782627926.8650556,
@@ -205,9 +205,9 @@
     "semantic_hash": "42b36ee6713c50af6591779cce0d7c0c"
   },
   "pda-gia-servitoro/index.html": {
-    "mtime": 1785778300.3978071,
-    "ast_hash": "af84f06284723be1e3816a65ab7e930f",
-    "semantic_hash": "af84f06284723be1e3816a65ab7e930f"
+    "mtime": 1788093456.7388923,
+    "ast_hash": "fd96efcded9d97ea3b33f1b60e12b212",
+    "semantic_hash": ""
   },
   "pda-pos-leitourgei.html": {
     "mtime": 1785778300.3968062,
@@ -215,9 +215,9 @@
     "semantic_hash": "e8560ba207899b554a067861ef28618c"
   },
   "pda-ti-einai.html": {
-    "mtime": 1785778300.3968062,
-    "ast_hash": "54f19c700959f9a569e44ffb34458209",
-    "semantic_hash": "54f19c700959f9a569e44ffb34458209"
+    "mtime": 1788089649.9909863,
+    "ast_hash": "db621e1ac48026a5922acc2ac72e9bda",
+    "semantic_hash": ""
   },
   "prototype/README.md": {
     "mtime": 1782627927.8918886,
@@ -295,9 +295,9 @@
     "semantic_hash": "3e3925a31fcf483793a174ff32737817"
   },
   "docs/seo/chatgpt-discovery-work-plan.md": {
-    "mtime": 1785926961.7409322,
-    "ast_hash": "b6638dce3ad91ca7c58cbd6255b6aacd",
-    "semantic_hash": "b6638dce3ad91ca7c58cbd6255b6aacd"
+    "mtime": 1786007676.8274648,
+    "ast_hash": "a291dae2585947af13e2eaba0ffe0a68",
+    "semantic_hash": ""
   },
   "docs/seo/pospal-entity-facts.md": {
     "mtime": 1785911429.5637133,
@@ -335,14 +335,14 @@
     "semantic_hash": "ec9d95cdd4fc84b8cb221efcc464a8d0"
   },
   "docs/seo/pospal-generic-hub-improvement-spec.md": {
-    "mtime": 1785925032.5600538,
-    "ast_hash": "ed16963d68b3414af8e5bd1b141c1511",
-    "semantic_hash": "ed16963d68b3414af8e5bd1b141c1511"
+    "mtime": 1785927822.493574,
+    "ast_hash": "0979efc807dfc9fb31a3f4a540220093",
+    "semantic_hash": ""
   },
   "docs/seo/pospal-independent-verification-fact-pack.md": {
-    "mtime": 1785922020.2074857,
-    "ast_hash": "f894a8f018b81631f6736b4f7b3e555e",
-    "semantic_hash": "f894a8f018b81631f6736b4f7b3e555e"
+    "mtime": 1785927822.493574,
+    "ast_hash": "bc0180827f3605394ac6603e874dfb9f",
+    "semantic_hash": ""
   },
   "docs/seo/pospal-seo-claim-map.md": {
     "mtime": 1785921416.4253523,
@@ -350,14 +350,14 @@
     "semantic_hash": "c2230ddf0d24268488800e5cf04425cc"
   },
   "docs/seo/pospal-seo-proof-execution-tracker.md": {
-    "mtime": 1785927586.527637,
-    "ast_hash": "d8387e4889f60d14409761ee9247941c",
-    "semantic_hash": "d8387e4889f60d14409761ee9247941c"
+    "mtime": 1786007716.579945,
+    "ast_hash": "d3b7d108fd010a1bccdfe85692bf494d",
+    "semantic_hash": ""
   },
   "docs/seo/pospal-seo-proof-measurement-protocol.md": {
-    "mtime": 1785926961.7409322,
-    "ast_hash": "c806dcc8960f9c554d08ffce1998ec56",
-    "semantic_hash": "c806dcc8960f9c554d08ffce1998ec56"
+    "mtime": 1786007735.8719811,
+    "ast_hash": "c0ea3c8891abc2c17ae55140cb68cfe8",
+    "semantic_hash": ""
   },
   "docs/seo/proof-records/PRF-2026-001.md": {
     "mtime": 1785924937.2006273,
@@ -383,5 +383,75 @@
     "mtime": 1785927227.582776,
     "ast_hash": "04a357c4d6c4497c88d84646e4e3fcf4",
     "semantic_hash": "04a357c4d6c4497c88d84646e4e3fcf4"
+  },
+  "docs/seo/OWNER_INTENT_SEO_PLAN.md": {
+    "mtime": 1788085138.7658546,
+    "ast_hash": "8f743e736a1b9d1de6995d79f22b02bb",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_AUDIENCE_AND_PAGE_REVIEW.md": {
+    "mtime": 1787999589.3351624,
+    "ast_hash": "e9f3e2e940918ae1f65b99ebb5bcb891",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_COPY_VETTING_REPORT.md": {
+    "mtime": 1788004776.261523,
+    "ast_hash": "bfb2dedf4f2b50747844f3b1865e418c",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_DEFINITION_PAGE_BRIEF.md": {
+    "mtime": 1787999589.3331618,
+    "ast_hash": "88bbf01be49f3d9379d3860bd55b2725",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_DEFINITION_PAGE_COPY_DRAFT.md": {
+    "mtime": 1788085138.7643511,
+    "ast_hash": "cf168867c6b9ba1e2f04582bf79c2860",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_DEFINITION_PAGE_REWRITE_V2.md": {
+    "mtime": 1788089538.43659,
+    "ast_hash": "b16fb2d879e1a32f47e2c6553d03fc5c",
+    "semantic_hash": ""
+  },
+  "docs/seo/PDA_IMPLEMENTATION_LOG.md": {
+    "mtime": 1788093681.9465227,
+    "ast_hash": "fc4648a1270390ee693fc2ebdaa43be0",
+    "semantic_hash": ""
+  },
+  "docs/seo/SYSTEM_PAGE_CONTENT_BRIEF.md": {
+    "mtime": 1787998207.9883385,
+    "ast_hash": "69b78673cd4ca6ec4c2ff877ca5afbc8",
+    "semantic_hash": ""
+  },
+  "docs/seo/WAITER_PDA_COMMERCIAL_BRIEF.md": {
+    "mtime": 1787999589.3341613,
+    "ast_hash": "da54447d1169c9bc536cc778da147cae",
+    "semantic_hash": ""
+  },
+  "docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md": {
+    "mtime": 1788093681.9455223,
+    "ast_hash": "aa99346c72413df9f5fb429119618539",
+    "semantic_hash": ""
+  },
+  "docs/seo/pospal-independent-reviewer-outreach-kit.md": {
+    "mtime": 1786007780.6376665,
+    "ast_hash": "6ad6f5fb8140cc51f5dea713d677e87d",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260829_090209_who_does_pospal_seo_currently_target__and_how_shou.md": {
+    "mtime": 1787994129.3935568,
+    "ast_hash": "38c7610c33f75b16eceffe0febf3c088",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to.md": {
+    "mtime": 1787998222.0308118,
+    "ast_hash": "b07c31987386b0c721aa3ad99a6f6aa3",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate.md": {
+    "mtime": 1787998979.792075,
+    "ast_hash": "a72943ccb099de493c9e7674a461b13f",
+    "semantic_hash": ""
   }
 }
