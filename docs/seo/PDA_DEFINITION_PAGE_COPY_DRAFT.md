@@ -1,6 +1,7 @@
 # PDA τι είναι — πλήρες κείμενο σελίδας
 
-Status: Implemented in `pda-ti-einai.html` on 2026-08-30  
+Status: Historical V1 draft; superseded by [the implemented founder-voice V2](PDA_DEFINITION_PAGE_REWRITE_V2.md). Do not use this draft as current public copy.
+
 Target: `/pda-ti-einai.html`  
 Voice: απλό, ενημερωτικό, χωρίς πίεση για αγορά  
 Last updated: 2026-08-29

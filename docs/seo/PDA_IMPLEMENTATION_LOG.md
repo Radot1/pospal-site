@@ -140,3 +140,25 @@ User requested a visual review and polish of the completed waiter page. This pas
 Skills: `impeccable` (polish + brand guidance, including an independent read-only CSS review), `frontend-design`, `browser:control-in-app-browser`.
 
 Status: complete locally, awaiting the user's visual review. Not committed, pushed or published.
+
+## Definition page — focused SEO improvements — 2026-08-30
+
+User approved the four recommendations for `pda-ti-einai.html` after its SEO review.
+
+- Added the meaning of PDA to the opening paragraph, before the hospitality definition.
+- Added a descriptive body link to `/pda-gia-servitoro/` after the phone-to-Windows workflow and screenshot. Windows download remains the primary action.
+- Trimmed repeated Windows/network/app setup copy from the founder block. Preserved Robert's position, the missile line, the detailed workflow and all eight FAQs.
+- Changed the below-fold screenshot to lazy loading, with a lossless WebP source and the original PNG fallback. The WebP is 90,398 bytes versus 121,808 bytes for the PNG: 25.8% smaller. Decoded RGBA pixels are identical at 1280 × 900; the original shared PNG is unchanged.
+- Updated `PDA_DEFINITION_PAGE_REWRITE_V2.md` to match these copy changes. Marked the old `PDA_DEFINITION_PAGE_COPY_DRAFT.md` as superseded to prevent future reuse of obsolete copy.
+
+### Verification
+
+- Entire HTML head is unchanged, including title, meta description, canonical, social metadata, analytics references and FAQ JSON-LD. One H1 remains; all eight visible FAQ answers still match their schema entries exactly.
+- Download buttons are unchanged. All 15 unique local link/asset paths returned HTTP 200. The new body link was clicked and reached the waiter page.
+- Desktop preview confirmed that the screenshot is initially deferred and loads the WebP when scrolled into view. Inspected the desktop opening and screenshot, 390 px image/link layout, and 320 px opening. No document overflow at those widths; the new link wraps on narrow screens.
+- Existing oversized `Browser.` label in the definition page's green explanation panel still overflows at desktop width. This predates these edits; no CSS changed in this focused pass. It remains a separate visual-polish item.
+- Locked pages, shared CSS/JS, the original PNG and the waiter page are unchanged. `git diff --check` passes. No generated screenshots or new project dependencies were added.
+
+Skills used: `pospal-voice`, `on-page-seo-auditor`, `image`, `browser:control-in-app-browser`.
+
+Status: implemented and checked locally. These changes have not been committed, pushed or published. This pass does not measure ranking, traffic or conversion gains.
