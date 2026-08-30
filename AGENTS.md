@@ -27,6 +27,15 @@ Guidance for agents working on the POSPal marketing site.
 - All-in-one workflow (tables, simple mode, QR menu included).
 - Modern UI with clear pricing.
 - Direct subscription; no middleman; cancel anytime.
+- Device freedom: POSPal does not charge per PDA. Staff can use suitable phones or tablets that can reach the Windows computer on the venue's local network.
+
+## Canonical PDA proposition
+- On PDA and wireless-ordering pages, use this exact core line when relevant:
+  `Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.`
+- Build the argument around a recognisable shift problem: when a team shares too few dedicated devices, service starts revolving around who currently has the PDA.
+- POSPal's answer is not another hardware bundle. It is direct Windows software that lets the team use suitable phones or tablets without an additional per-PDA fee.
+- Do not turn this into an unqualified device-compatibility claim. A phone or tablet still needs a browser and access to the same reachable local network as the Windows computer.
+- The founder ad and the full voice reference are recorded in `MARKETING_PLAN.md`.
 
 ## CTA rules
 - Primary CTA: Download `POSPal-win-Setup.exe`.
@@ -54,6 +63,9 @@ Guidance for agents working on the POSPal marketing site.
 - Tone: natural human Greek.
 - Prefer short, clear sentences.
 - Do not stuff keywords unnaturally.
+- When the `pospal-voice` skill is available, use it for public marketing copy, major rewrites, and voice reviews. The repository context remains the source of current product truth.
+- Give pages a point of view. Use concrete moments from a real shift, direct founder language and occasional dry humour where it fits.
+- Do not build pages out of repetitive SEO card grids. Answer the query, introduce the real operational tension, explain POSPal's position and then move toward the download.
 
 ## Language standards
 - Use monotonic Greek (μονοτονικό) consistently.

@@ -77,11 +77,16 @@ Public marketing copy must not name competitors.
 - Transparent EUR 23.90 monthly price including VAT.
 - Thirty-day trial without a card or personal information.
 - Direct subscription without a distributor or maintenance plan.
+- No additional charge per PDA; suitable staff phones or tablets can open the order-taking page on the venue's reachable local network.
 - Table mode, simple mode, kitchen flow, and QR menu in one package.
 - Locally installed Windows application with a self-managed setup path.
 - Explicitly works alongside the existing fiscal POS rather than claiming to replace it.
 
 **How we do it differently:** POSPal lets an operator download first, install with strong guidance, evaluate the complete workflow, and subscribe directly.
+
+**Canonical PDA proposition:** `Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.`
+
+This is not merely a slogan. It expresses the product stance: POSPal should not manufacture device scarcity or turn every additional waiter device into another fee. Public copy may dramatize the familiar `Ποιος έχει το PDA;` moment, but must not name competitors or claim compatibility with every phone, tablet, browser, router or network configuration.
 
 **Why that is better:** The buyer can understand the cost, requirements, setup process, and product boundary before making a commitment.
 
@@ -139,7 +144,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 **Style:** Short sentences, concrete operational details, transparent boundaries, and one clear next action.
 
-**Personality:** Honest, modern, independent, calm, and useful.
+**Personality:** Honest, modern, independent, useful and willing to have an opinion. Use recognisable moments from a real shift and occasional dry humour. Avoid sterile SEO filler, corporate software language and pages made from repetitive feature cards.
 
 ## Proof Points
 

@@ -17,12 +17,23 @@
 ### 3) Positioning (TBD)
 - One-sentence positioning: all-in-one kitchen order + QR menu tool with modern UI and a direct monthly subscription.
 - Differentiators: transparent pricing, no middleman, all features included (table mode + simple mode + QR menu).
+- Canonical PDA proposition: `Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.`
+- PDA pricing truth: there is no additional charge per PDA. Suitable phones or tablets can open the staff order-taking page when they can reach the Windows computer on the venue's local network.
 - Market framing (internal): not competing with big fiscal POS vendors; competing with "whatever barely works."
 - Market insight: Greek F&B tech is compliance-driven, not user-driven; POSPal is the user-driven layer.
 - Positioning rule: POSPal is a kitchen/order workflow tool that can run alongside existing compliance POS systems.
 - Compliance clarity: POSPal does not handle the fiscal layer; it focuses on ordering + kitchen flow and can run alongside the fiscal POS.
 - Competitive alternatives: distributor-sold PDA/POS tools with maintenance plans and opaque pricing.
 - Proof points: screenshots, small embedded demo/proof section, guides, clear setup flow (no testimonials yet; early-stage startup).
+
+### 3.1) Founder voice and page ethos
+- The founder ad in Appendix A is the primary voice reference for owner-facing acquisition pages.
+- The campaign line is `Παραγγελιοληψία χωρίς όλη την ιστορία.`
+- The copy should recognise an actual shift problem before explaining features. For PDA pages, the central moment is `Ποιος έχει το PDA;` when too few dedicated devices are being shared.
+- Use direct language, concrete situations and dry humour. A small number of memorable lines is stronger than filling every section with jokes.
+- Preserve the ad's attitude without copying unsupported claims. `Χωρίς σήμα` means no mobile-network signal is required for local order-taking; it must never be rewritten as working without the venue's reachable local network.
+- `Χρησιμοποίησε τους εκτυπωτές που ήδη έχεις` must always retain the compatibility boundary: the printer must be installed in Windows and verified with a real test print.
+- Do not name competitors or claim that every vendor deliberately restricts devices. Describe the recognisable operational situation and state POSPal's own pricing and product policy clearly.
 
 ### 4) Offer & Pricing (TBD)
 - Plan name(s): POSPal Subscription.
@@ -88,3 +99,145 @@
 - Update site copy + CTAs toward download-first flow
 - Rewrite SEO titles/meta for stronger download/trial CTR on existing ranking pages
 - Fix asset/link integrity + sitemap
+
+## Appendix A — Founder ad and voice source
+
+Founder-provided campaign script. Formatting and obvious spelling have been cleaned up for internal readability; the campaign argument and tone are unchanged.
+
+### 0:00–0:08
+
+> Γεια, είμαι ο Robert. Ιδρυτής της POSPal.
+>
+> Τι είναι η POSPal;
+>
+> Με 23,9 το μήνα σου παρέχουμε πλήρες πρόγραμμα παραγγελιοληψίας.
+
+### 0:08–0:16
+
+> Ναι, με 23,9.
+>
+> Καλά άκουσες.
+>
+> Και οι πρώτες 30 μέρες δωρεάν.
+
+### 0:16–0:22
+
+> Είναι καλό το πρόγραμμα;
+
+Beat.
+
+> Όχι.
+>
+> Το πρόγραμμα γαμάει.
+
+Keep walking.
+
+### 0:22–0:31
+
+Waiter enters order from a normal phone. Printer fires. Customer scans QR.
+
+> Στέλνεις τις παραγγελίες απευθείας από το κινητό σου, ακόμα και αν δεν έχεις σήμα.
+>
+> Και έχεις και QR menu.
+>
+> Δωρεάν.
+>
+> Ακόμα και η γιαγιά σου θα το μάθει.
+
+### 0:31–0:43
+
+Leave BBQ area. Enter construction zone.
+
+> Και τέλος πάντων, σου αρέσει να πληρώνεις μια περιουσία για επώνυμα λογισμικά που σου εγκαθιστά ο μεσάζοντάς τους;
+
+John goes around and around with a screwdriver.
+
+> Όλοι πληρώνονται από εσένα.
+>
+> Εκτός από εσένα.
+
+Keep walking.
+
+### 0:43–0:54
+
+> Και νομίζεις λοιπόν πως χρειάζεσαι PDA που διπλώνει, με περιστρεφόμενη οθόνη, φακό, GPS και τέσσερις κάμερες; Τι ακριβώς κάνουμε εδώ;
+
+Pan away to an AI shot of a missile.
+
+> Παίρνουμε παραγγελία ή εκτοξεύουμε πύραυλο;
+
+Beat.
+
+### 0:54–1:01
+
+Walk past several completely different thermal printers. One prints as you pass.
+
+> Και οι εκτυπωτές που ήδη έχεις;
+>
+> Χρησιμοποίησέ τους κι αυτούς.
+>
+> Δεν χρειάζεται να αγοράσεις τον δικό μας.
+
+An absurdly long receipt starts coming out behind Robert. Ignore it.
+
+### 1:01–1:13
+
+Step into a bulldozer bucket. It begins lowering Robert.
+
+> Σταμάτα να πληρώνεις για εξοπλισμό που δεν χρειάζεσαι.
+
+Lower.
+
+> Και για έξτρα υπηρεσίες όπως QR menu.
+
+Lower.
+
+> Και σταμάτα να υπογράφεις συμβόλαια πριν καν δοκιμάσεις το πρόγραμμα.
+
+Step off the bucket.
+
+### 1:13–1:23
+
+Someone is going mental with a sledgehammer in the background.
+
+> Κατεβάζεις το POSPal.
+>
+> Μόνος σου.
+>
+> Το δοκιμάζεις για 30 μέρες.
+
+SMASH.
+
+> Αν σου κάνει, συνεχίζεις.
+
+SMASH.
+
+> Αν όχι;
+>
+> Το διαγράφεις.
+
+### 1:23–1:31
+
+Walk toward a bad car or industrial vehicle.
+
+> Σταμάτα λοιπόν να είσαι το θύμα και ξεκίνα να σκέφτεσαι πού θα βάλεις όλα τα χρήματα που θα σου εξοικονομώ.
+
+Get in.
+
+### 1:31–1:37
+
+The car does not start. Try again. Nothing. Look at camera.
+
+> Ευτυχώς το POSPal στήνεται πιο εύκολα από αυτό.
+
+The engine starts. Drive away.
+
+### End card
+
+> POSPal
+>
+> Παραγγελιοληψία χωρίς όλη την ιστορία.
+>
+> 30 μέρες δωρεάν · Χωρίς κάρτα · 23,90 €/μήνα
+>
+> pospal.gr
