@@ -13,11 +13,11 @@
     },
     {
       slug: "windows-installation",
-      url: "/guides/?guide=windows-installation",
+      url: "/guides/windows-installation/",
       title: "Εγκατάσταση POSPal σε Windows",
       shortTitle: "Εγκατάσταση σε Windows",
-      duration: "8 λεπτά",
-      navMeta: "Εγκατάσταση · 8 λεπτά",
+      duration: "9:38",
+      navMeta: "Εγκατάσταση · 9:38",
       video: "https://www.youtube.com/embed/2XJvWmfJWwk",
       youtube: "https://youtu.be/2XJvWmfJWwk",
       intro: "Κατέβασε το αρχείο εγκατάστασης, άνοιξέ το στον υπολογιστή της επιχείρησης και έλεγξε ότι το POSPal ξεκινά κανονικά.",
@@ -25,69 +25,69 @@
     },
     {
       slug: "app-tour",
-      url: "/guides/?guide=app-tour",
-      title: "Περιήγηση στο POSPal",
-      shortTitle: "Πρώτη περιήγηση",
-      duration: "Βίντεο",
-      navMeta: "Βασική χρήση",
+      url: "/guides/app-tour/",
+      title: "Πρώτη χρήση του POSPal",
+      shortTitle: "Πρώτη χρήση",
+      duration: "8:36",
+      navMeta: "Μενού και παραγγελίες · 8:36",
       video: "https://www.youtube.com/embed/POZUAfynPYE",
       youtube: "https://youtu.be/POZUAfynPYE",
-      intro: "Δες το βασικό περιβάλλον του POSPal, πώς είναι οργανωμένες οι λειτουργίες και πώς κινείται ο χρήστης μέσα στην εφαρμογή.",
+      intro: "Σύνδεσε το κινητό, καταχώρισε μια παραγγελία και δες πώς διαχειρίζεσαι προϊόντα, τραπέζια και πληρωμές.",
     },
     {
       slug: "settings",
-      url: "/guides/?guide=settings",
+      url: "/guides/settings/",
       title: "Ρυθμίσεις του POSPal",
       shortTitle: "Ρυθμίσεις POSPal",
-      duration: "Βίντεο",
-      navMeta: "Εκτυπωτές και συσκευές",
+      duration: "14:40",
+      navMeta: "Εκτυπωτές και συσκευές · 14:40",
       video: "https://www.youtube.com/embed/IY2f3hRGlH8",
       youtube: "https://youtu.be/IY2f3hRGlH8",
       intro: "Δες τις βασικές ρυθμίσεις της εφαρμογής, όπως εκτυπωτές, συσκευή, λειτουργίες, αποδείξεις και επιλογές διαχείρισης.",
     },
     {
       slug: "qr-menu",
-      url: "/guides/?guide=qr-menu",
-      title: "QR menu POSPal",
+      url: "/guides/qr-menu/",
+      title: "Δημιουργία και δημοσίευση QR menu στο POSPal",
       shortTitle: "QR menu",
-      duration: "Βίντεο",
-      navMeta: "Μενού για πελάτες",
+      duration: "13:37",
+      navMeta: "Δημιουργία και δημοσίευση · 13:37",
       video: "https://www.youtube.com/embed/AvokJphL4zk",
       youtube: "https://youtu.be/AvokJphL4zk",
-      intro: "Δες το QR menu του POSPal, τι εμφανίζεται στον πελάτη και ποιες λειτουργίες προσφέρει χωρίς επιπλέον κόστος.",
+      intro: "Ρύθμισε την εμφάνιση και τις πληροφορίες προϊόντων, δημοσίευσε το QR menu και κατέβασε τον κωδικό QR.",
     },
     {
       slug: "account",
-      url: "/guides/?guide=account",
-      title: "Διαχείριση λογαριασμού POSPal",
+      url: "/guides/account/",
+      title: "Διαχείριση λογαριασμού, συνδρομής και άδειας POSPal",
       shortTitle: "Λογαριασμός",
-      duration: "Βίντεο",
-      navMeta: "Συνδρομή και άδεια",
+      duration: "6:18",
+      navMeta: "Συνδρομή, άδεια και πληρωμές · 6:18",
       video: "https://www.youtube.com/embed/TVMczUWJVpk",
       youtube: "https://youtu.be/TVMczUWJVpk",
-      intro: "Δες πού βρίσκονται οι πληροφορίες άδειας, η κατάσταση της συνδρομής και το portal χρέωσης για αλλαγές ή ακύρωση.",
+      intro: "Έλεγξε την άδεια και την επόμενη χρέωση, διαχειρίσου τη συνδρομή και δες πώς μεταφέρεται η άδεια σε άλλον υπολογιστή.",
     },
     {
       slug: "troubleshooting",
-      url: "/guides/?guide=troubleshooting",
-      title: "Αντιμετώπιση προβλημάτων POSPal",
+      url: "/guides/troubleshooting/",
+      title: "Αντιμετώπιση προβλημάτων και σύνδεσης κινητού στο POSPal",
       shortTitle: "Λύση προβλημάτων",
-      duration: "Βίντεο",
-      navMeta: "Βασικοί έλεγχοι",
+      duration: "5:08",
+      navMeta: "Αναφορά και σύνδεση κινητού · 5:08",
       video: "https://www.youtube.com/embed/VaTsP1x8gWk",
       youtube: "https://youtu.be/VaTsP1x8gWk",
-      intro: "Δες βασικές λύσεις για συνηθισμένα θέματα, όπως σύνδεση κινητού ή tablet, αλλαγή θύρας, πρόσβαση και αναφορά προβλήματος.",
+      intro: "Στείλε αναφορά προβλήματος, έλεγξε τη διεύθυνση σύνδεσης του κινητού και δες πότε ένα VPN μπορεί να επηρεάζει το τοπικό δίκτυο.",
     },
   ];
 
   const legacyMap = {
     "0": "/guides/printer-setup/",
-    "1": "/guides/?guide=windows-installation",
-    "2": "/guides/?guide=app-tour",
-    "3": "/guides/?guide=settings",
-    "4": "/guides/?guide=qr-menu",
-    "5": "/guides/?guide=account",
-    "6": "/guides/?guide=troubleshooting",
+    "1": "/guides/windows-installation/",
+    "2": "/guides/app-tour/",
+    "3": "/guides/settings/",
+    "4": "/guides/qr-menu/",
+    "5": "/guides/account/",
+    "6": "/guides/troubleshooting/",
   };
 
   const params = new URLSearchParams(window.location.search);
@@ -100,6 +100,36 @@
   const requestedGuide = params.get("guide");
   if (requestedGuide === "printer-setup") {
     window.location.replace("/guides/printer-setup/");
+    return;
+  }
+
+  if (requestedGuide === "windows-installation") {
+    window.location.replace("/guides/windows-installation/");
+    return;
+  }
+
+  if (requestedGuide === "app-tour") {
+    window.location.replace("/guides/app-tour/");
+    return;
+  }
+
+  if (requestedGuide === "settings") {
+    window.location.replace("/guides/settings/");
+    return;
+  }
+
+  if (requestedGuide === "qr-menu") {
+    window.location.replace("/guides/qr-menu/");
+    return;
+  }
+
+  if (requestedGuide === "account") {
+    window.location.replace("/guides/account/");
+    return;
+  }
+
+  if (requestedGuide === "troubleshooting") {
+    window.location.replace("/guides/troubleshooting/");
     return;
   }
 

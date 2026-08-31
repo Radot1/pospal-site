@@ -20,8 +20,8 @@
     "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
   },
   "static/js/academy.js": {
-    "mtime": 1788189866.0742044,
-    "ast_hash": "2f90d9a2e21a538780afaf86e6adc438",
+    "mtime": 1788194782.8745806,
+    "ast_hash": "12fab998805d1cf683baa4b1e76a2488",
     "semantic_hash": ""
   },
   "static/js/decision-pages.js": {
@@ -170,8 +170,8 @@
     "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
   },
   "guides/index.html": {
-    "mtime": 1788189772.7676206,
-    "ast_hash": "62464daebf7f5c5282eb9dd38568ae7e",
+    "mtime": 1788194782.8732536,
+    "ast_hash": "b1374fadbcbc7214c3708d24ebd3a11f",
     "semantic_hash": ""
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {
@@ -465,13 +465,13 @@
     "semantic_hash": ""
   },
   "guides/printer-setup/index.html": {
-    "mtime": 1788185217.300006,
-    "ast_hash": "1ed699f3fc743eae929ce4e46f5a96c0",
+    "mtime": 1788190601.583229,
+    "ast_hash": "7dae55c422d83d294dad0eac020d00ff",
     "semantic_hash": ""
   },
   "guides/windows-installation/index.html": {
-    "mtime": 1788185217.3037903,
-    "ast_hash": "f88cdf773f939e90dce41541c3e1f3c0",
+    "mtime": 1788191726.0528243,
+    "ast_hash": "1854c99315ddfc03382c36a250433e1b",
     "semantic_hash": ""
   },
   "static/img/pospal-desktop-order.webp": {
@@ -487,6 +487,31 @@
   "static/img/pospal-icon-96.png": {
     "mtime": 1788119501.4477117,
     "ast_hash": "112515f1e67149ef25f42539d8bca846",
+    "semantic_hash": ""
+  },
+  "guides/app-tour/index.html": {
+    "mtime": 1788192869.9627025,
+    "ast_hash": "78a56aabd1829f3b6e55fdcea3971194",
+    "semantic_hash": ""
+  },
+  "guides/settings/index.html": {
+    "mtime": 1788193430.88715,
+    "ast_hash": "ba969c8af171c3a2a1c154edd3e370d5",
+    "semantic_hash": ""
+  },
+  "guides/qr-menu/index.html": {
+    "mtime": 1788194281.5740762,
+    "ast_hash": "37dd21e0eec2a36569efc1c20d953ed7",
+    "semantic_hash": ""
+  },
+  "guides/account/index.html": {
+    "mtime": 1788194782.872132,
+    "ast_hash": "c0c7e5a5fb92454afcb3bdf91c195650",
+    "semantic_hash": ""
+  },
+  "guides/troubleshooting/index.html": {
+    "mtime": 1788194782.872132,
+    "ast_hash": "ad6ddc9959179f6b38723ac3128dcc84",
     "semantic_hash": ""
   }
 }

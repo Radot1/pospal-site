@@ -365,7 +365,7 @@
       "label": "escapeText()",
       "file_type": "code",
       "source_file": "static/js/academy.js",
-      "source_location": "L124",
+      "source_location": "L154",
       "_origin": "ast",
       "id": "static_js_academy_escapetext",
       "community": 49,
@@ -375,7 +375,7 @@
       "label": "guideNav()",
       "file_type": "code",
       "source_file": "static/js/academy.js",
-      "source_location": "L132",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "static_js_academy_guidenav",
       "community": 49,
@@ -15130,7 +15130,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "static/js/academy.js",
-      "source_location": "L124",
+      "source_location": "L154",
       "weight": 1.0,
       "source": "static_js_academy",
       "target": "static_js_academy_escapetext",
@@ -15140,7 +15140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "static/js/academy.js",
-      "source_location": "L132",
+      "source_location": "L162",
       "weight": 1.0,
       "source": "static_js_academy",
       "target": "static_js_academy_guidenav",
@@ -30314,5 +30314,5 @@
       "source_file": "CONTEXT.md"
     }
   ],
-  "built_at_commit": "bc27857bcad2a8c3695e407aa448046ec50c1c0a"
+  "built_at_commit": "a0cc262ca78029692650337ae662b7a45a1cee0e"
 }
