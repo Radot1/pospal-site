@@ -20,8 +20,8 @@
     "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
   },
   "static/js/academy.js": {
-    "mtime": 1788185217.305793,
-    "ast_hash": "e3e799c98929dd90b98ecff092905984",
+    "mtime": 1788189866.0742044,
+    "ast_hash": "2f90d9a2e21a538780afaf86e6adc438",
     "semantic_hash": ""
   },
   "static/js/decision-pages.js": {
@@ -170,8 +170,8 @@
     "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
   },
   "guides/index.html": {
-    "mtime": 1788185217.3037903,
-    "ast_hash": "3338c1383aae09cf993c72af07f3789b",
+    "mtime": 1788189772.7676206,
+    "ast_hash": "62464daebf7f5c5282eb9dd38568ae7e",
     "semantic_hash": ""
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {

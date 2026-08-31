@@ -1,0 +1,300 @@
+.guides-hub-page {
+  --guides-surface: #ffffff;
+  --guides-subtle: #eef1ee;
+  --guides-line: #c9d1ca;
+  --guides-copy: #36443b;
+  min-height: 100vh;
+  color: var(--ink);
+  background: #f7f8f6;
+}
+
+.guides-hub-page main {
+  min-height: calc(100vh - 184px);
+}
+
+.guides-page-width {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: clamp(2.75rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem);
+}
+
+.guides-intro {
+  max-width: 680px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.guides-intro h1 {
+  margin: 0 0 0.55rem;
+  font: 800 clamp(2.35rem, 4.2vw, 3.6rem) / 1.05 var(--display);
+  letter-spacing: -0.035em;
+  scroll-margin-top: 6rem;
+  text-wrap: balance;
+}
+
+.guides-intro p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--guides-copy);
+  font-size: 1.02rem;
+  text-wrap: pretty;
+}
+
+.course-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.course-summary,
+.syllabus {
+  overflow: hidden;
+  background: var(--guides-surface);
+  border: 1px solid var(--guides-line);
+  border-radius: 8px;
+}
+
+.course-summary {
+  position: sticky;
+  top: 96px;
+}
+
+.course-cover {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  background: var(--green);
+}
+
+.course-cover img {
+  border-radius: 15px;
+}
+
+.course-summary-body {
+  padding: 1.2rem;
+}
+
+.course-summary h2 {
+  margin: 0;
+  font: 800 1.3rem/1.2 var(--display);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.course-summary-body > p:not(.course-download) {
+  margin: 0.7rem 0 1.1rem;
+  color: var(--guides-copy);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.course-summary dl {
+  margin: 0;
+  border-top: 1px solid var(--guides-line);
+}
+
+.course-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--guides-line);
+}
+
+.course-summary dt,
+.course-summary dd {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.course-summary dt {
+  color: var(--guides-copy);
+}
+
+.course-summary dd {
+  font-weight: 800;
+  text-align: right;
+}
+
+.course-download {
+  margin: 1rem 0 0;
+  color: var(--guides-copy);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.course-download a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.syllabus > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 58px;
+  padding-inline: 1.1rem;
+  background: var(--guides-subtle);
+  border-bottom: 1px solid var(--guides-line);
+}
+
+.syllabus h2 {
+  margin: 0;
+  font: 800 1.15rem/1.2 var(--display);
+}
+
+.syllabus > header span {
+  color: var(--guides-copy);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.syllabus > a {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 78px;
+  padding: 0.8rem 1rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--guides-line);
+  transition: background-color 150ms var(--ease-out-quart);
+}
+
+.syllabus > a:last-child {
+  border-bottom: 0;
+}
+
+.lesson-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  padding-left: 0.1rem;
+  color: var(--green-dark);
+  background: #e1f6e7;
+  border-radius: 50%;
+  font-size: 0.66rem;
+  line-height: 1;
+}
+
+.lesson-copy,
+.lesson-copy strong,
+.lesson-copy small {
+  display: block;
+  min-width: 0;
+}
+
+.lesson-copy strong {
+  font: 800 1rem/1.3 var(--display);
+  text-wrap: pretty;
+}
+
+.lesson-copy small {
+  margin-top: 0.15rem;
+  color: var(--green-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.lesson-open {
+  min-width: 66px;
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+@media (hover: hover) {
+  .syllabus > a:hover {
+    background: #f3f6f3;
+  }
+
+  .syllabus > a:hover .lesson-copy strong,
+  .course-download a:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 760px) {
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .course-summary {
+    position: static;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .course-cover {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .guides-page-width {
+    width: min(100% - 1.5rem, 1100px);
+    padding-block: 2.25rem 4.5rem;
+  }
+
+  .guides-intro h1 {
+    font-size: 2.25rem;
+  }
+
+  .course-summary {
+    display: block;
+  }
+
+  .course-cover {
+    min-height: 154px;
+  }
+
+  .course-cover img {
+    width: 72px;
+    height: 72px;
+    border-radius: 13px;
+  }
+
+  .syllabus > header {
+    padding-inline: 0.85rem;
+  }
+
+  .syllabus > a {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    min-height: 82px;
+    padding: 0.8rem 0.85rem;
+  }
+
+  .lesson-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .lesson-open {
+    min-width: 20px;
+    overflow: hidden;
+    color: transparent;
+    font-size: 0;
+  }
+
+  .lesson-open::after {
+    content: "→";
+    color: var(--green-dark);
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .syllabus > a {
+    transition: none;
+  }
+}

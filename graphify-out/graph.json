@@ -365,7 +365,7 @@
       "label": "escapeText()",
       "file_type": "code",
       "source_file": "static/js/academy.js",
-      "source_location": "L120",
+      "source_location": "L124",
       "_origin": "ast",
       "id": "static_js_academy_escapetext",
       "community": 49,
@@ -375,7 +375,7 @@
       "label": "guideNav()",
       "file_type": "code",
       "source_file": "static/js/academy.js",
-      "source_location": "L128",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "static_js_academy_guidenav",
       "community": 49,
@@ -6878,7 +6878,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log",
-      "community": 50,
+      "community": 41,
       "norm_label": "pda_implementation_log.md"
     },
     {
@@ -6888,7 +6888,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_pda_page_implementation_log",
-      "community": 50,
+      "community": 41,
       "norm_label": "pda page implementation log"
     },
     {
@@ -6898,7 +6898,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_pages_changed",
-      "community": 50,
+      "community": 41,
       "norm_label": "pages changed"
     },
     {
@@ -6908,7 +6908,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_definition_page",
-      "community": 50,
+      "community": 41,
       "norm_label": "definition page"
     },
     {
@@ -6918,7 +6918,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_waiter_pda_page",
-      "community": 50,
+      "community": 41,
       "norm_label": "waiter-pda page"
     },
     {
@@ -6928,7 +6928,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_verification",
-      "community": 50,
+      "community": 41,
       "norm_label": "verification"
     },
     {
@@ -6938,7 +6938,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_post_implementation_on_page_score",
-      "community": 50,
+      "community": 41,
       "norm_label": "post-implementation on-page score"
     },
     {
@@ -6948,7 +6948,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_waiter_page_founder_voice_and_visual_update_2026_08_30",
-      "community": 50,
+      "community": 41,
       "norm_label": "waiter-page founder-voice and visual update \u2014 2026-08-30"
     },
     {
@@ -6958,7 +6958,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_scope_and_decisions",
-      "community": 50,
+      "community": 41,
       "norm_label": "scope and decisions"
     },
     {
@@ -6968,7 +6968,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_final_local_checks",
-      "community": 50,
+      "community": 41,
       "norm_label": "final local checks"
     },
     {
@@ -6978,7 +6978,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_local_on_page_assessment",
-      "community": 50,
+      "community": 41,
       "norm_label": "local on-page assessment"
     },
     {
@@ -6988,7 +6988,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_handoff",
-      "community": 50,
+      "community": 41,
       "norm_label": "handoff"
     },
     {
@@ -6998,7 +6998,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_visual_polish_review_2026_08_30",
-      "community": 50,
+      "community": 41,
       "norm_label": "visual polish review \u2014 2026-08-30"
     },
     {
@@ -7008,7 +7008,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_findings_and_changes",
-      "community": 50,
+      "community": 41,
       "norm_label": "findings and changes"
     },
     {
@@ -7018,7 +7018,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_verification_132",
-      "community": 50,
+      "community": 41,
       "norm_label": "verification"
     },
     {
@@ -7028,7 +7028,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_definition_page_focused_seo_improvements_2026_08_30",
-      "community": 50,
+      "community": 41,
       "norm_label": "definition page \u2014 focused seo improvements \u2014 2026-08-30"
     },
     {
@@ -7038,7 +7038,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "docs_seo_pda_implementation_log_verification_154",
-      "community": 50,
+      "community": 41,
       "norm_label": "verification"
     },
     {
@@ -12588,7 +12588,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_prf_2026_002_first_named_customer_operational_proof",
-      "community": 41,
+      "community": 50,
       "norm_label": "prf-2026-002: first named customer operational proof"
     },
     {
@@ -12598,7 +12598,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_seo_and_buyer_job",
-      "community": 41,
+      "community": 50,
       "norm_label": "seo and buyer job"
     },
     {
@@ -12608,7 +12608,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_customer_selection_gate",
-      "community": 41,
+      "community": 50,
       "norm_label": "customer selection gate"
     },
     {
@@ -12618,7 +12618,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_venue_record",
-      "community": 41,
+      "community": 50,
       "norm_label": "venue record"
     },
     {
@@ -12628,7 +12628,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_customer_evidence_request",
-      "community": 41,
+      "community": 50,
       "norm_label": "customer evidence request"
     },
     {
@@ -12638,7 +12638,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_operational_record",
-      "community": 41,
+      "community": 50,
       "norm_label": "operational record"
     },
     {
@@ -12648,7 +12648,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_permission_matrix",
-      "community": 41,
+      "community": 50,
       "norm_label": "permission matrix"
     },
     {
@@ -12658,7 +12658,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_measurement_gate_for_results",
-      "community": 41,
+      "community": 50,
       "norm_label": "measurement gate for results"
     },
     {
@@ -12668,7 +12668,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_public_proof_outline",
-      "community": 41,
+      "community": 50,
       "norm_label": "public proof outline"
     },
     {
@@ -12678,7 +12678,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_page_creation_gate",
-      "community": 41,
+      "community": 50,
       "norm_label": "page-creation gate"
     },
     {
@@ -12688,7 +12688,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_independent_corroboration_option",
-      "community": 41,
+      "community": 50,
       "norm_label": "independent corroboration option"
     },
     {
@@ -12698,7 +12698,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_current_blockers",
-      "community": 41,
+      "community": 50,
       "norm_label": "current blockers"
     },
     {
@@ -12708,7 +12708,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "docs_seo_proof_records_prf_2026_002_advancement_gate",
-      "community": 41,
+      "community": 50,
       "norm_label": "advancement gate"
     },
     {
@@ -15130,7 +15130,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "static/js/academy.js",
-      "source_location": "L120",
+      "source_location": "L124",
       "weight": 1.0,
       "source": "static_js_academy",
       "target": "static_js_academy_escapetext",
@@ -15140,7 +15140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "static/js/academy.js",
-      "source_location": "L128",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "static_js_academy",
       "target": "static_js_academy_guidenav",
@@ -30314,5 +30314,5 @@
       "source_file": "CONTEXT.md"
     }
   ],
-  "built_at_commit": "2e8f95d5a9641f2c360975e9937994bdd10ac6d5"
+  "built_at_commit": "bc27857bcad2a8c3695e407aa448046ec50c1c0a"
 }

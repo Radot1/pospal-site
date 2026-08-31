@@ -1,7 +1,7 @@
 # Graph Report - pospal-site  (2026-08-31)
 
 ## Corpus Check
-- 73 files · ~126,264 words
+- 73 files · ~126,433 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2e8f95d5`
+- Built from commit: `bc27857b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,7 +64,7 @@
 - [[_COMMUNITY_Search Console Intent Map -|Search Console Intent Map -]]
 - [[_COMMUNITY_Product Overview|Product Overview]]
 - [[_COMMUNITY_Customer-Reported ChatGPT Discovery Intake|Customer-Reported ChatGPT Discovery Intake]]
-- [[_COMMUNITY_PDA page implementation log|PDA page implementation log]]
+- [[_COMMUNITY_PRF-2026-002 First Named Customer Operational Proof|PRF-2026-002: First Named Customer Operational Proof]]
 - [[_COMMUNITY_Agent Governance|Agent Governance]]
 - [[_COMMUNITY_Graphify Update Rule|Graphify Update Rule]]
 - [[_COMMUNITY_Locked Public Pages Rule|Locked Public Pages Rule]]
@@ -359,8 +359,8 @@ Cohesion: 0.10
 Nodes (20): 10. Evidence index, 11. Approval, 12. Independent verification route, 13. Publication gate, 1. Record control, 2. Content and buyer job, 3. Venue and permission, 4. Problem and baseline (+12 more)
 
 ### Community 41 - "90-day execution sequence"
-Cohesion: 0.15
-Nodes (13): Advancement gate, Current blockers, Customer evidence request, Customer selection gate, Independent corroboration option, Measurement gate for results, Operational record, Page-creation gate (+5 more)
+Cohesion: 0.12
+Nodes (16): Definition page, Definition page — focused SEO improvements — 2026-08-30, Final local checks, Findings and changes, Handoff, Local on-page assessment, Pages changed, PDA page implementation log (+8 more)
 
 ### Community 42 - "UTM Governance (POSPal)"
 Cohesion: 0.40
@@ -382,9 +382,9 @@ Nodes (4): Locked Conversion Core, Windows Installer Handoff, Guided Onboarding 
 Cohesion: 0.50
 Nodes (3): devDependencies, @axe-core/playwright, playwright
 
-### Community 50 - "PDA page implementation log"
-Cohesion: 0.12
-Nodes (16): Definition page, Definition page — focused SEO improvements — 2026-08-30, Final local checks, Findings and changes, Handoff, Local on-page assessment, Pages changed, PDA page implementation log (+8 more)
+### Community 50 - "PRF-2026-002: First Named Customer Operational Proof"
+Cohesion: 0.15
+Nodes (13): Advancement gate, Current blockers, Customer evidence request, Customer selection gate, Independent corroboration option, Measurement gate for results, Operational record, Page-creation gate (+5 more)
 
 ### Community 87 - "Windows Installer Download"
 Cohesion: 0.04

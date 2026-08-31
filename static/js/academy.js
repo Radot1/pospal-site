@@ -103,6 +103,10 @@
     return;
   }
 
+  // The clean /guides/ URL is the static catalogue. Query URLs remain available
+  // only as a backwards-compatible bridge until each guide has its own page.
+  if (!requestedGuide) return;
+
   const app = document.getElementById("academy-app");
   if (!app) return;
 
