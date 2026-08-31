@@ -20,9 +20,9 @@
     "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
   },
   "static/js/academy.js": {
-    "mtime": 1783238097.3453782,
-    "ast_hash": "83acfd3032e1d4b2b6bf7ef8962a460c",
-    "semantic_hash": "83acfd3032e1d4b2b6bf7ef8962a460c"
+    "mtime": 1788185217.305793,
+    "ast_hash": "e3e799c98929dd90b98ecff092905984",
+    "semantic_hash": ""
   },
   "static/js/decision-pages.js": {
     "mtime": 1774739191.1576633,
@@ -85,8 +85,8 @@
     "semantic_hash": "8083b0a49e670d05f5e1634f94d25f66"
   },
   "MARKETING_PLAN.md": {
-    "mtime": 1788093681.9465227,
-    "ast_hash": "9845f9593e5c82f02280dc2400b08969",
+    "mtime": 1788119780.2304122,
+    "ast_hash": "ad53c2adaad41f84b19aed310b56208b",
     "semantic_hash": ""
   },
   "PRODUCT.md": {
@@ -110,9 +110,9 @@
     "semantic_hash": "27ac033294d0c066bd79da669b72a91c"
   },
   "asyrmati-paraggeliolipsia.html": {
-    "mtime": 1785927205.0595622,
-    "ast_hash": "63d8160219a54f5cec323dd7243d5712",
-    "semantic_hash": "63d8160219a54f5cec323dd7243d5712"
+    "mtime": 1788177860.2047145,
+    "ast_hash": "44b1df6830aa70389576d37363f3da97",
+    "semantic_hash": ""
   },
   "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
     "mtime": 1782627926.8684068,
@@ -170,9 +170,9 @@
     "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
   },
   "guides/index.html": {
-    "mtime": 1783236214.480212,
-    "ast_hash": "cb1382e5a9f42c0b03b869981402a4d1",
-    "semantic_hash": "cb1382e5a9f42c0b03b869981402a4d1"
+    "mtime": 1788185217.3037903,
+    "ast_hash": "3338c1383aae09cf993c72af07f3789b",
+    "semantic_hash": ""
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {
     "mtime": 1782627927.882365,
@@ -195,28 +195,28 @@
     "semantic_hash": "6595388260fa62933fbef0a122802d54"
   },
   "paraggelio-lipsia-gia-beach-bar.html": {
-    "mtime": 1785777982.00014,
-    "ast_hash": "d0adec1156cded8d005d54f8fba353c6",
-    "semantic_hash": "d0adec1156cded8d005d54f8fba353c6"
+    "mtime": 1788177860.207718,
+    "ast_hash": "60fd03963485502776004e869f50afbb",
+    "semantic_hash": ""
   },
   "pda-gia-kafeteries.html": {
-    "mtime": 1785777982.00014,
-    "ast_hash": "42b36ee6713c50af6591779cce0d7c0c",
-    "semantic_hash": "42b36ee6713c50af6591779cce0d7c0c"
+    "mtime": 1788177860.2067199,
+    "ast_hash": "6b257f44f6e00a329d2a76c69e0d2415",
+    "semantic_hash": ""
   },
   "pda-gia-servitoro/index.html": {
-    "mtime": 1788093456.7388923,
-    "ast_hash": "fd96efcded9d97ea3b33f1b60e12b212",
+    "mtime": 1788174868.1526816,
+    "ast_hash": "ec47265f032c77df99772927b8e5e724",
     "semantic_hash": ""
   },
   "pda-pos-leitourgei.html": {
-    "mtime": 1785778300.3968062,
-    "ast_hash": "e8560ba207899b554a067861ef28618c",
-    "semantic_hash": "e8560ba207899b554a067861ef28618c"
+    "mtime": 1788177860.2097163,
+    "ast_hash": "d07e1ccddc4bb1be0427152e8e7940c9",
+    "semantic_hash": ""
   },
   "pda-ti-einai.html": {
-    "mtime": 1788089649.9909863,
-    "ast_hash": "db621e1ac48026a5922acc2ac72e9bda",
+    "mtime": 1788174868.150679,
+    "ast_hash": "142590d31924b5fdcd43432f89df55c6",
     "semantic_hash": ""
   },
   "prototype/README.md": {
@@ -235,9 +235,9 @@
     "semantic_hash": "6d790bb9ff3936c31530c3d6e057f779"
   },
   "systima-paraggeliolipsias.html": {
-    "mtime": 1785927205.0595622,
-    "ast_hash": "8b8e784d3e076c9bcd669134f8ee5a8d",
-    "semantic_hash": "8b8e784d3e076c9bcd669134f8ee5a8d"
+    "mtime": 1788167589.391617,
+    "ast_hash": "da2c11c8c86c87d7bc58597119b71d86",
+    "semantic_hash": ""
   },
   "times.html": {
     "mtime": 1785777981.999138,
@@ -315,9 +315,9 @@
     "semantic_hash": "8c9ae52919cb9a72d3601bab9d759576"
   },
   "sxetika-me-to-pospal/index.html": {
-    "mtime": 1785911429.5622087,
-    "ast_hash": "a406beb07617ba3960acab43902e7131",
-    "semantic_hash": "a406beb07617ba3960acab43902e7131"
+    "mtime": 1788177860.2021904,
+    "ast_hash": "78ed4149fd634923be4e81b664dc3490",
+    "semantic_hash": ""
   },
   "static/img/pospal-mark-64.png": {
     "mtime": 1785910017.386696,
@@ -405,33 +405,33 @@
     "semantic_hash": ""
   },
   "docs/seo/PDA_DEFINITION_PAGE_COPY_DRAFT.md": {
-    "mtime": 1788085138.7643511,
-    "ast_hash": "cf168867c6b9ba1e2f04582bf79c2860",
+    "mtime": 1788096772.324201,
+    "ast_hash": "8d06e8f71fdd6233d8ebc0b659415020",
     "semantic_hash": ""
   },
   "docs/seo/PDA_DEFINITION_PAGE_REWRITE_V2.md": {
-    "mtime": 1788089538.43659,
-    "ast_hash": "b16fb2d879e1a32f47e2c6553d03fc5c",
+    "mtime": 1788106190.9827342,
+    "ast_hash": "97f262a67d2bdc1befe9aa62f5a9e4a6",
     "semantic_hash": ""
   },
   "docs/seo/PDA_IMPLEMENTATION_LOG.md": {
-    "mtime": 1788093681.9465227,
-    "ast_hash": "fc4648a1270390ee693fc2ebdaa43be0",
+    "mtime": 1788096922.8033788,
+    "ast_hash": "2cf5afc6e5fc81a4c6c0a955656b7bb0",
     "semantic_hash": ""
   },
   "docs/seo/SYSTEM_PAGE_CONTENT_BRIEF.md": {
-    "mtime": 1787998207.9883385,
-    "ast_hash": "69b78673cd4ca6ec4c2ff877ca5afbc8",
+    "mtime": 1788115611.704747,
+    "ast_hash": "b924b7d18092aeb04cd7c10735ce7e28",
     "semantic_hash": ""
   },
   "docs/seo/WAITER_PDA_COMMERCIAL_BRIEF.md": {
-    "mtime": 1787999589.3341613,
-    "ast_hash": "da54447d1169c9bc536cc778da147cae",
+    "mtime": 1788107205.4201057,
+    "ast_hash": "759fe4f2a05a02578a2306fe825769b6",
     "semantic_hash": ""
   },
   "docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md": {
-    "mtime": 1788093681.9455223,
-    "ast_hash": "aa99346c72413df9f5fb429119618539",
+    "mtime": 1788095723.1811755,
+    "ast_hash": "f29b8e520ec838333ab311f138717899",
     "semantic_hash": ""
   },
   "docs/seo/pospal-independent-reviewer-outreach-kit.md": {
@@ -452,6 +452,41 @@
   "graphify-out/memory/query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate.md": {
     "mtime": 1787998979.792075,
     "ast_hash": "a72943ccb099de493c9e7674a461b13f",
+    "semantic_hash": ""
+  },
+  "docs/seo/SYSTEM_PAGE_COMPETITOR_RESEARCH_2026-08-30.md": {
+    "mtime": 1788111893.5417726,
+    "ast_hash": "5c63a1a6094ee29175e78567c1aa707f",
+    "semantic_hash": ""
+  },
+  "docs/seo/SYSTEM_PAGE_IMPLEMENTATION_LOG.md": {
+    "mtime": 1788119780.2314124,
+    "ast_hash": "62dfa12b6c6918940768ca97496b8707",
+    "semantic_hash": ""
+  },
+  "guides/printer-setup/index.html": {
+    "mtime": 1788185217.300006,
+    "ast_hash": "1ed699f3fc743eae929ce4e46f5a96c0",
+    "semantic_hash": ""
+  },
+  "guides/windows-installation/index.html": {
+    "mtime": 1788185217.3037903,
+    "ast_hash": "f88cdf773f939e90dce41541c3e1f3c0",
+    "semantic_hash": ""
+  },
+  "static/img/pospal-desktop-order.webp": {
+    "mtime": 1788096734.257,
+    "ast_hash": "045029be78257f944ff1cd83323934b9",
+    "semantic_hash": ""
+  },
+  "static/img/pospal-icon-180.png": {
+    "mtime": 1788119501.4507117,
+    "ast_hash": "a3bbd2e42d1b430c97a7cdd613ee87a3",
+    "semantic_hash": ""
+  },
+  "static/img/pospal-icon-96.png": {
+    "mtime": 1788119501.4477117,
+    "ast_hash": "112515f1e67149ef25f42539d8bca846",
     "semantic_hash": ""
   }
 }

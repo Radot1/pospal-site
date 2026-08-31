@@ -1,16 +1,16 @@
-# Graph Report - pospal-site  (2026-08-30)
+# Graph Report - pospal-site  (2026-08-31)
 
 ## Corpus Check
-- 71 files · ~117,784 words
+- 73 files · ~126,264 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1411 nodes · 1493 edges · 149 communities (78 shown, 71 thin omitted)
+- 1426 nodes · 1512 edges · 148 communities (77 shown, 71 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f6e81665`
+- Built from commit: `2e8f95d5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,6 +64,7 @@
 - [[_COMMUNITY_Search Console Intent Map -|Search Console Intent Map -]]
 - [[_COMMUNITY_Product Overview|Product Overview]]
 - [[_COMMUNITY_Customer-Reported ChatGPT Discovery Intake|Customer-Reported ChatGPT Discovery Intake]]
+- [[_COMMUNITY_PDA page implementation log|PDA page implementation log]]
 - [[_COMMUNITY_Agent Governance|Agent Governance]]
 - [[_COMMUNITY_Graphify Update Rule|Graphify Update Rule]]
 - [[_COMMUNITY_Locked Public Pages Rule|Locked Public Pages Rule]]
@@ -115,8 +116,6 @@
 - [[_COMMUNITY_POSPal Repository-Backed Website Proposal|POSPal Repository-Backed Website Proposal]]
 - [[_COMMUNITY_POSPal Independent Reviewer Outreach Kit|POSPal Independent Reviewer Outreach Kit]]
 - [[_COMMUNITY_PRF-2026-001 Controlled Windows Installation and First-Order Verification|PRF-2026-001: Controlled Windows Installation and First-Order Verification]]
-- [[_COMMUNITY_POSPal Independent Verification Fact Pack|POSPal Independent Verification Fact Pack]]
-- [[_COMMUNITY_POSPal Product-Fact Checklist|POSPal Product-Fact Checklist]]
 - [[_COMMUNITY_Phase 3 — Search-Performance Diagnosis|Phase 3 — Search-Performance Diagnosis]]
 - [[_COMMUNITY_Phase 1 — Measurement Baseline|Phase 1 — Measurement Baseline]]
 - [[_COMMUNITY_Phase 2 — Technical Health|Phase 2 — Technical Health]]
@@ -166,13 +165,13 @@
 1. `Glossary` - 66 edges
 2. `POSPal Information Architecture And Onboarding Specification` - 18 edges
 3. `POSPal Owner-Intent SEO Plan` - 17 edges
-4. `PDA τι είναι — founder-voice rewrite V2` - 17 edges
-5. `POSPal Commercial System Page Brief` - 16 edges
-6. `Academy Technical SEO Audit And URL Migration Plan` - 15 edges
-7. `POSPal Technical SEO Baseline` - 15 edges
-8. `POSPal Post-Redesign SEO Evaluation` - 15 edges
-9. `Product Marketing Context` - 14 edges
-10. `POSPal Marketing Plan (Working Draft)` - 14 edges
+4. `POSPal Commercial System Page Brief` - 16 edges
+5. `Academy Technical SEO Audit And URL Migration Plan` - 15 edges
+6. `POSPal Technical SEO Baseline` - 15 edges
+7. `POSPal Post-Redesign SEO Evaluation` - 15 edges
+8. `Product Marketing Context` - 14 edges
+9. `POSPal Marketing Plan (Working Draft)` - 14 edges
+10. `POSPal Customer Guides Plan` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `POSPal Desktop Order Screenshot` --conceptually_related_to--> `Kitchen/order Workflow`  [INFERRED]
@@ -201,7 +200,7 @@
 - **PDA SEO Acquisition Cluster** — search_console_intent_map, pda_education_cluster, waiter_service_cluster, pda_definition_page, waiter_pda_page, cafe_pda_page [INFERRED 0.85]
 - **QR Menu Product Story** — qr_menu_included, static_qr_menu_live_code_image, static_qr_menu_live_preview_image, qr_menu_customer_categories, qr_menu_customer_prices [INFERRED 0.85]
 
-## Communities (149 total, 71 thin omitted)
+## Communities (148 total, 71 thin omitted)
 
 ### Community 0 - "Consent Analytics"
 Cohesion: 0.03
@@ -220,8 +219,8 @@ Cohesion: 0.06
 Nodes (35): 1. Ready Windows Visitor, 2. Mobile Researcher, 3. Organic Search Visitor, Academy Launch Gate, Approval Gates, Cluster-Led SEO Update: 2026-06-26, Core Page Roles, CTA Rules (+27 more)
 
 ### Community 4 - "Product Pricing Model"
-Cohesion: 0.11
-Nodes (18): Copy rationale, Final CTA, Implementation checklist after copy approval, Optional H1 alternatives, Proposed JSON-LD, Schema exclusions, Άμεση συνδρομή, χωρίς μεσάζοντα., Δεν αντικαθιστά την ταμειακή σου. (+10 more)
+Cohesion: 0.04
+Nodes (46): Confirmation log, Evidence rules, POSPal Entity Facts, Remaining implementation detail, User-confirmed publisher facts, Verified public facts, 1. Approve the identity facts, 2. Draft one distinct public entity page (+38 more)
 
 ### Community 5 - "Post-Redesign SEO Audit"
 Cohesion: 0.14
@@ -276,8 +275,8 @@ Cohesion: 0.11
 Nodes (19): Data-quality check, Default-mode controls, Diagnosis, Environment, Evidence for the constraint, Exact reported-scenario reproduction, Forced-Search S1 checkpoint, GA4 AI-referral funnel (+11 more)
 
 ### Community 18 - "SEO Proof Execution Pipeline"
-Cohesion: 0.11
-Nodes (18): 1. Approve the identity facts, 2. Draft one distinct public entity page, 3. Define the supported schema graph, 4. Connect controlled sources, Already visible and verified, Current state, Current structured-data gap, Exit criteria (+10 more)
+Cohesion: 0.07
+Nodes (27): 1. First screen: category, difference, price, action, 2. Recognisable shift: show the system working, 3. Complete workflow: prove the category breadth, 4. Why POSPal: make the offer comparable, 5. Setup: replace fear with a three-step test, 6. Requirements and honest limits, 7. Price, trial and final decision, 8. FAQ: cover the search and purchase objections (+19 more)
 
 ### Community 19 - "Decision Pages"
 Cohesion: 0.27
@@ -300,8 +299,8 @@ Cohesion: 0.14
 Nodes (13): Anti-Patterns Verdict, Design Health Score, Minor Observations, Overall Impression, [P1] Different concepts are presented as equivalent requirements, [P1] The headline promises more certainty than the content provides, [P2] No contextual action resolves compatibility doubt, [P2] The equal-cell matrix creates a generic narrative valley (+5 more)
 
 ### Community 24 - "POSPal AI-Discovery Prompt Bank"
-Cohesion: 0.05
-Nodes (38): Definition page, Final local checks, Handoff, Local on-page assessment, Pages changed, PDA page implementation log, Post-implementation on-page score, Scope and decisions (+30 more)
+Cohesion: 0.04
+Nodes (43): Approved direction, Changes, Commercial system page — implementation record, Estimated scorecard, same weights as the preceding audit, Follow-up: mobile optimization — 2026-08-30, Follow-up: SEO audit fixes and recheck — 2026-08-30, Handoff, Implemented fixes (+35 more)
 
 ### Community 25 - "Το POSPal, με καθαρά λόγια."
 Cohesion: 0.22
@@ -383,13 +382,17 @@ Nodes (4): Locked Conversion Core, Windows Installer Handoff, Guided Onboarding 
 Cohesion: 0.50
 Nodes (3): devDependencies, @axe-core/playwright, playwright
 
+### Community 50 - "PDA page implementation log"
+Cohesion: 0.12
+Nodes (16): Definition page, Definition page — focused SEO improvements — 2026-08-30, Final local checks, Findings and changes, Handoff, Local on-page assessment, Pages changed, PDA page implementation log (+8 more)
+
 ### Community 87 - "Windows Installer Download"
 Cohesion: 0.04
-Nodes (47): 1. Hero — identify the product and remove purchase risk, 2. Self-fit — qualify the DIY owner, 3. Complete workflow — show what the owner gets, 4. Setup path — make self-installation feel concrete, 5. Requirements — answer compatibility before it becomes fear, 6. Price and trial — give the commercial decision its own section, 7. Honest limitations — keep trust without leading with edge cases, 8. FAQ — answer purchase objections (+39 more)
+Nodes (48): 1. Hero — identify the product and remove purchase risk, 2. Recognisable shift and self-fit — qualify the DIY owner, 3. Complete workflow — show what the owner gets, 4. Setup path — make self-installation feel concrete, 5. Requirements — answer compatibility before it becomes fear, 6. Price and trial — give the commercial decision its own section, 7. Honest limitations — keep trust without leading with edge cases, 8. FAQ — answer purchase objections (+40 more)
 
 ### Community 88 - "Waiter PDA Commercial Page Brief"
-Cohesion: 0.05
-Nodes (37): 1. Commercial hero, 2. Owner benefit — ordinary devices, 3. Product route — show the actual workflow, 4. What is included, 5. Requirements and compatibility, 6. Price and risk reversal, 7. Honest product boundary, 8. Buyer FAQ (+29 more)
+Cohesion: 0.12
+Nodes (15): 1. Hero: η θέση μας αμέσως, 2. Το πρόβλημα της βάρδιας και η founder θέση, 3. Η πραγματική διαδρομή της παραγγελίας, 4. Τιμή, απαιτήσεις και όρια σε ένα decision block, 5. Buyer FAQ, 6. Σύντομο final CTA, Files, Metadata retained (+7 more)
 
 ### Community 89 - "PDA Definition Page Refocus Brief"
 Cohesion: 0.06
@@ -400,8 +403,8 @@ Cohesion: 0.07
 Nodes (29): AI recommendation direction, Business fact, Commercial page priorities, Common trigger events, Current diagnosis, Current step, Execution plan and skill map, Immediate next task (+21 more)
 
 ### Community 91 - "PDA τι είναι — founder-voice rewrite V2"
-Cohesion: 0.07
-Nodes (28): 1. Κατεβάζεις το POSPal σε Windows, 2. Συνδέεις τα κινητά ή τα tablet, 3. Η ομάδα στέλνει τις παραγγελίες, Copy guardrails applied, Final voice review, Footer line, Hero, Meta description (+20 more)
+Cohesion: 0.13
+Nodes (14): Brand Voice, Competitive Landscape, Customer Language, Differentiation, Goals, Objections, Personas, Problems & Pain Points (+6 more)
 
 ### Community 92 - "POSPal Audience and PDA Page Review"
 Cohesion: 0.07
@@ -416,7 +419,7 @@ Cohesion: 0.08
 Nodes (25): Active experiment protection, AI decision rules, AI-discovery benchmark protocol, AI-referral exploration, Batch boundaries, Completion criteria, Customer-reported discovery, Decision gate (+17 more)
 
 ### Community 95 - "PDA σερβιτόρου — κείμενο, ρόλος και οπτική κατεύθυνση"
-Cohesion: 0.10
+Cohesion: 0.09
 Nodes (21): FAQ που πρέπει να παραμένει ορατό και στο schema, H1, Hero, Meta description, PDA σερβιτόρου — κείμενο, ρόλος και οπτική κατεύθυνση, Product-truth όρια, SEO, Skills used (+13 more)
 
 ### Community 96 - "POSPal ChatGPT and AI Discovery Work Plan"
@@ -428,12 +431,12 @@ Cohesion: 0.10
 Nodes (21): 2026-08-05 — `RB-2026-01` implemented and audited, 2026-08-05 — Repository-only evidence decision and website proposal, 2026-08-05 — Step 1 complete: SEO claim layer, 2026-08-05 — Step 2 partial: controlled verification, 2026-08-05 — Step 3 prepared: named customer proof, 2026-08-05 — Step 4 complete: generic hub specification, 2026-08-05 — Step 5 complete: independent-verification materials, 2026-08-05 — Step 6 complete: release measurement protocol (+13 more)
 
 ### Community 98 - "PDA τι είναι — πλήρες κείμενο σελίδας"
-Cohesion: 0.11
-Nodes (18): Hero, Meta description, PDA, πρόγραμμα παραγγελιοληψίας και ταμειακή δεν είναι το ίδιο πράγμα, PDA τι είναι — πλήρες κείμενο σελίδας, SEO title, Και πού μπαίνει το POSPal;, Μπορεί ένα κινητό να χρησιμοποιηθεί ως PDA σερβιτόρου;, Πώς λειτουργεί το PDA σερβιτόρου με το POSPal; (+10 more)
+Cohesion: 0.06
+Nodes (32): Hero, Meta description, PDA, πρόγραμμα παραγγελιοληψίας και ταμειακή δεν είναι το ίδιο πράγμα, PDA τι είναι — πλήρες κείμενο σελίδας, SEO title, Και πού μπαίνει το POSPal;, Μπορεί ένα κινητό να χρησιμοποιηθεί ως PDA σερβιτόρου;, Πώς λειτουργεί το PDA σερβιτόρου με το POSPal; (+24 more)
 
 ### Community 99 - "Product Marketing Context"
-Cohesion: 0.05
-Nodes (33): Brand Voice, Competitive Landscape, Customer Language, Differentiation, Goals, Objections, Personas, Problems & Pain Points (+25 more)
+Cohesion: 0.06
+Nodes (32): Freeze Launch Inventory And Gate SEO Expansion, Acceptance gate, Independent reproduction path, Official links, Outreach record template, POSPal Independent Verification Fact Pack, Public-safe identity card, Publication-quality evidence checklist (+24 more)
 
 ### Community 100 - "What was checked"
 Cohesion: 0.13
@@ -450,14 +453,6 @@ Nodes (14): Canonical Greek outreach message, Customer, Equipment or hospitality
 ### Community 103 - "PRF-2026-001: Controlled Windows Installation and First-Order Verification"
 Cohesion: 0.15
 Nodes (13): Advancement gate, Artifact verification, Candidate environment observation, Current limitations, Device and network checkpoints, Evidence index, Installation checkpoints, Kitchen and printer checkpoints (+5 more)
-
-### Community 105 - "POSPal Independent Verification Fact Pack"
-Cohesion: 0.17
-Nodes (12): Acceptance gate, Independent reproduction path, Official links, Outreach record template, POSPal Independent Verification Fact Pack, Public-safe identity card, Publication-quality evidence checklist, Source-target registry (+4 more)
-
-### Community 106 - "POSPal Product-Fact Checklist"
-Cohesion: 0.18
-Nodes (11): Customer, independent, and outcome proof, Evidence labels, POSPal Product-Fact Checklist, Printer facts, Publishable controlled facts, Remaining claim boundaries, Repository-evidence decision, Source inventory (+3 more)
 
 ### Community 110 - "Phase 3 — Search-Performance Diagnosis"
 Cohesion: 0.29
@@ -504,21 +499,21 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Review who POSPal SEO is targeting and reevaluate the PDA pages that bring visitors who do not download, Source Nodes
 
 ## Knowledge Gaps
-- **993 isolated node(s):** `@axe-core/playwright`, `playwright`, `stage`, `toggle`, `Product Overview` (+988 more)
+- **1003 isolated node(s):** `@axe-core/playwright`, `playwright`, `stage`, `toggle`, `Product Overview` (+998 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **71 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `POSPal Commercial System Page Brief` connect `Windows Installer Download` to `POSPal AI-Discovery Prompt Bank`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **Why does `POSPal Post-Redesign SEO Evaluation` connect `Guide Curriculum` to `Phase 3 — Search-Performance Diagnosis`, `Phase 1 — Measurement Baseline`, `Phase 2 — Technical Health`, `Phase 6 — Architecture and Authority`, `Phase 4 — Query-to-Page Mapping`, `Phase 5 — On-Page Audit Order`, `POSPal Customer Guides Plan`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `POSPal SEO Proof Measurement Protocol` connect `POSPal SEO Proof Measurement Protocol` to `Product Marketing Context`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `POSPal ChatGPT and AI Discovery Work Plan` connect `POSPal ChatGPT and AI Discovery Work Plan` to `Product Marketing Context`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Why does `POSPal AI-Discovery Benchmark Runbook` connect `Public Asset Hygiene` to `Product Marketing Context`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `@axe-core/playwright`, `playwright`, `stage` to the rest of the system?**
-  _1018 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1028 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Consent Analytics` be split into smaller, more focused modules?**
   _Cohesion score 0.030303030303030304 - nodes in this community are weakly interconnected._
 - **Should `Guide Journey` be split into smaller, more focused modules?**

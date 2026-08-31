@@ -1,0 +1,152 @@
+.guide-article-page .academy-theatre {
+  gap: 1.15rem;
+  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.guide-article-page .academy-title-row {
+  max-width: 960px;
+}
+
+.guide-back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 0.35rem;
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.guide-article-page .academy-title-row h1 {
+  max-width: 20ch;
+  font-size: clamp(2.25rem, 4.4vw, 4rem);
+  letter-spacing: -0.04em;
+}
+
+.guide-article-page .academy-video-stage {
+  margin-top: 0.45rem;
+}
+
+.guide-article {
+  display: grid;
+  gap: clamp(2.75rem, 6vw, 4.75rem);
+  width: min(100%, 72ch);
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  color: #17241b;
+}
+
+.guide-article section {
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-article h2 {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--ink);
+  font: 800 clamp(1.65rem, 3vw, 2.35rem) / 1.08 var(--display);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.guide-article p,
+.guide-article ul,
+.guide-article ol {
+  margin: 0;
+}
+
+.guide-article p,
+.guide-article li {
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.guide-article ul {
+  display: grid;
+  gap: 0.65rem;
+  padding-left: 1.35rem;
+}
+
+.guide-article li::marker {
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.guide-steps {
+  display: grid;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+  list-style-position: inside;
+}
+
+.guide-steps > li {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.guide-steps > li::marker {
+  font-family: var(--display);
+  font-size: 1.05rem;
+}
+
+.guide-steps strong {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.08rem;
+}
+
+.guide-steps p {
+  margin-top: 0.45rem;
+  padding-left: 1.65rem;
+}
+
+.guide-ui-path {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.guide-article a {
+  color: #096b31;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.guide-next {
+  padding-top: 2rem;
+  border-top: 2px solid var(--ink);
+}
+
+@media (hover: hover) {
+  .guide-back-link:hover,
+  .guide-article a:hover {
+    color: var(--ink);
+    text-decoration-thickness: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-article-page .academy-title-row h1 {
+    font-size: clamp(2rem, 9.4vw, 2.8rem);
+  }
+
+  .guide-article {
+    gap: 3.25rem;
+    margin-top: 2.25rem;
+  }
+
+  .guide-article h2 {
+    font-size: 1.7rem;
+  }
+
+  .guide-steps > li {
+    padding-block: 1.15rem;
+  }
+
+  .guide-steps p {
+    padding-left: 0;
+  }
+}

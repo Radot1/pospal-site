@@ -2,14 +2,14 @@
   const guides = [
     {
       slug: "printer-setup",
-      url: "/guides/?guide=printer-setup",
-      title: "Τι χρειάζεσαι πριν εγκαταστήσεις το POSPal",
-      shortTitle: "Πριν την εγκατάσταση",
-      duration: "6 λεπτά",
-      navMeta: "Εξοπλισμός · 6 λεπτά",
+      url: "/guides/printer-setup/",
+      title: "Σύνδεση θερμικού εκτυπωτή στα Windows για το POSPal",
+      shortTitle: "Θερμικός εκτυπωτής",
+      duration: "2:52",
+      navMeta: "Σύνδεση USB · 2:52",
       video: "https://www.youtube.com/embed/p0FNRfv0vVo",
       youtube: "https://youtu.be/p0FNRfv0vVo",
-      intro: "Έλεγξε πρώτα τον υπολογιστή, τον εκτυπωτή, το τοπικό δίκτυο και τις συσκευές που θα χρησιμοποιεί η ομάδα.",
+      intro: "Σύνδεσε τον θερμικό εκτυπωτή στα Windows, εγκατέστησε τον σωστό driver αν χρειάζεται και κάνε δοκιμαστική εκτύπωση.",
     },
     {
       slug: "windows-installation",
@@ -81,7 +81,7 @@
   ];
 
   const legacyMap = {
-    "0": "/guides/?guide=printer-setup",
+    "0": "/guides/printer-setup/",
     "1": "/guides/?guide=windows-installation",
     "2": "/guides/?guide=app-tour",
     "3": "/guides/?guide=settings",
@@ -97,10 +97,15 @@
     return;
   }
 
+  const requestedGuide = params.get("guide");
+  if (requestedGuide === "printer-setup") {
+    window.location.replace("/guides/printer-setup/");
+    return;
+  }
+
   const app = document.getElementById("academy-app");
   if (!app) return;
 
-  const requestedGuide = params.get("guide");
   const currentSlug = requestedGuide || app.closest("[data-academy-current]")?.dataset.academyCurrent || guides[0].slug;
   const foundIndex = guides.findIndex((guide) => guide.slug === currentSlug);
   if (foundIndex === -1) {

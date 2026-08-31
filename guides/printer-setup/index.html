@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Σύνδεση θερμικού εκτυπωτή στα Windows | POSPal</title>
+  <meta name="description" content="Σύνδεσε θερμικό εκτυπωτή USB στα Windows, εγκατέστησε τον σωστό driver και κάνε δοκιμαστική εκτύπωση πριν ρυθμίσεις το POSPal.">
+  <meta name="theme-color" content="#f4f5f2">
+  <link rel="canonical" href="https://pospal.gr/guides/printer-setup/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="POSPal">
+  <meta property="og:title" content="Σύνδεση θερμικού εκτυπωτή στα Windows | POSPal">
+  <meta property="og:description" content="Σύνδεσε θερμικό εκτυπωτή USB στα Windows, εγκατέστησε τον σωστό driver και κάνε δοκιμαστική εκτύπωση πριν ρυθμίσεις το POSPal.">
+  <meta property="og:url" content="https://pospal.gr/guides/printer-setup/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="/app_icon.ico">
+  <link rel="apple-touch-icon" href="/app_icon.ico">
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="stylesheet" href="/static/css/site-redesign.css">
+  <link rel="stylesheet" href="/static/css/academy.css">
+  <link rel="stylesheet" href="/static/css/guide-article.css">
+  <script src="/static/js/ga-consent.js"></script>
+  <script defer src="/static/js/ga-events.js"></script>
+</head>
+<body class="academy-page guide-article-page">
+  <a class="skip-link" href="#guide-title">Μετάβαση στον οδηγό</a>
+
+  <header class="academy-topbar">
+    <a class="academy-brand" href="/" aria-label="POSPal αρχική">
+      <img src="/app_icon.ico" width="34" height="34" alt="">
+      <span translate="no">POS<b>Pal</b></span>
+    </a>
+    <nav aria-label="Κύρια πλοήγηση οδηγού">
+      <a href="/guides/">Όλοι οι οδηγοί</a>
+      <a class="academy-topbar-primary" href="/download/">Κατέβασε για Windows</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="academy-shell">
+      <article class="academy-theatre" aria-labelledby="guide-title">
+        <div class="academy-title-row">
+          <a class="guide-back-link" href="/guides/">← Όλοι οι οδηγοί</a>
+          <p class="academy-kicker">Βίντεο οδηγός · 2:52</p>
+          <h1 id="guide-title">Σύνδεση θερμικού εκτυπωτή στα Windows για το POSPal</h1>
+        </div>
+
+        <div class="academy-video-stage" aria-label="Βίντεο σύνδεσης θερμικού εκτυπωτή">
+          <iframe
+            src="https://www.youtube.com/embed/p0FNRfv0vVo"
+            title="Στήσιμο θερμικού εκτυπωτή για POSPal σε Windows"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <nav class="academy-actions" aria-label="Ενέργειες βίντεο">
+          <a href="https://youtu.be/p0FNRfv0vVo" target="_blank" rel="noopener">Άνοιγμα στο YouTube</a>
+        </nav>
+
+        <div class="guide-article">
+          <section aria-labelledby="guide-outcome">
+            <h2 id="guide-outcome">Τι θα κάνεις σε αυτόν τον οδηγό</h2>
+            <p>Θα συνδέσεις τον θερμικό εκτυπωτή στον υπολογιστή Windows, θα εγκαταστήσεις τον σωστό driver αν χρειάζεται και θα στείλεις μια δοκιμαστική σελίδα.</p>
+            <p>Το ζητούμενο είναι απλό: πριν ανοίξεις το POSPal, ο εκτυπωτής πρέπει να εμφανίζεται στα Windows και να τυπώνει κανονικά.</p>
+          </section>
+
+          <section aria-labelledby="guide-requirements">
+            <h2 id="guide-requirements">Τι χρειάζεσαι</h2>
+            <ul>
+              <li>Τον υπολογιστή Windows όπου θα εγκαταστήσεις το POSPal.</li>
+              <li>Τον θερμικό εκτυπωτή και το ακριβές μοντέλο του.</li>
+              <li>Σύνδεση USB με τον υπολογιστή.</li>
+              <li>Χαρτί στον εκτυπωτή.</li>
+              <li>Πρόσβαση στη σελίδα υποστήριξης του κατασκευαστή, αν χρειάζεται να κατεβάσεις driver.</li>
+            </ul>
+            <p><strong>Ο θερμικός εκτυπωτής είναι προαιρετικός.</strong> Τον χρειάζεσαι μόνο αν θέλεις έντυπα δελτία κουζίνας ή παραγγελίας.</p>
+          </section>
+
+          <section aria-labelledby="guide-steps">
+            <h2 id="guide-steps">Βήμα βήμα</h2>
+            <ol class="guide-steps">
+              <li>
+                <strong>Σύνδεσε τον εκτυπωτή με USB.</strong>
+                <p>Σύνδεσέ τον στον υπολογιστή Windows, βάλε χαρτί και άνοιξέ τον.</p>
+              </li>
+              <li>
+                <strong>Έλεγξε αν τον βλέπουν ήδη τα Windows.</strong>
+                <p>Άνοιξε <span class="guide-ui-path">Ρυθμίσεις &gt; Bluetooth και συσκευές &gt; Εκτυπωτές και σαρωτές</span>. Αν ο εκτυπωτής εμφανίζεται ήδη και μπορεί να τυπώσει δοκιμαστική σελίδα, δεν χρειάζεται να εγκαταστήσεις ξανά τον driver.</p>
+              </li>
+              <li>
+                <strong>Κατέβασε τον σωστό driver, αν ο εκτυπωτής λείπει.</strong>
+                <p>Πήγαινε στην επίσημη σελίδα του κατασκευαστή και αναζήτησε το ακριβές μοντέλο. Το βίντεο δείχνει έναν Epson TM-T20 ως παράδειγμα. Αν έχεις άλλο μοντέλο, μην κατεβάσεις τον ίδιο driver επειδή απλώς μοιάζει ο εκτυπωτής.</p>
+              </li>
+              <li>
+                <strong>Τρέξε το πρόγραμμα εγκατάστασης του κατασκευαστή.</strong>
+                <p>Ακολούθησε τα βήματα και επίλεξε σύνδεση USB όταν σου ζητηθεί ο τρόπος σύνδεσης.</p>
+              </li>
+              <li>
+                <strong>Επέστρεψε στους εκτυπωτές των Windows.</strong>
+                <p>Άνοιξε ξανά <span class="guide-ui-path">Εκτυπωτές και σαρωτές</span>. Ο θερμικός εκτυπωτής πρέπει πλέον να εμφανίζεται στη λίστα.</p>
+              </li>
+              <li>
+                <strong>Κάνε δοκιμαστική εκτύπωση.</strong>
+                <p>Επίλεξε τον εκτυπωτή και πάτησε <span class="guide-ui-path">Εκτύπωση δοκιμαστικής σελίδας</span>. Αν το χαρτί τυπωθεί σωστά, ο εκτυπωτής είναι έτοιμος για το επόμενο βήμα.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="guide-troubleshooting">
+            <h2 id="guide-troubleshooting">Αν κάτι δεν λειτουργεί</h2>
+            <ul>
+              <li>Αν ο εκτυπωτής δεν εμφανίζεται, έλεγξε ξανά το USB, ότι είναι ανοιχτός και ότι εγκατέστησες τον driver για το σωστό μοντέλο.</li>
+              <li>Αν εμφανίζεται αλλά δεν τυπώνει τη δοκιμαστική σελίδα, το πρόβλημα βρίσκεται ακόμη στη σύνδεση με τα Windows. Λύσε πρώτα αυτό το βήμα με τις οδηγίες του κατασκευαστή ή του τεχνικού σου.</li>
+              <li>Το ότι ένας εκτυπωτής εμφανίζεται στα Windows δεν αποτελεί εγγύηση συμβατότητας με κάθε λειτουργία. Κάνε πραγματική δοκιμαστική εκτύπωση μέσα από το POSPal πριν βασιστείς στον εκτυπωτή σε βάρδια.</li>
+            </ul>
+          </section>
+
+          <section class="guide-next" aria-labelledby="guide-next-step">
+            <h2 id="guide-next-step">Επόμενο βήμα</h2>
+            <p>Αφού η δοκιμαστική σελίδα βγει σωστά, συνέχισε με την <a href="/guides/windows-installation/">εγκατάσταση του POSPal σε Windows</a>. Εκεί θα επιλέξεις τον εκτυπωτή για το δελτίο κουζίνας και το χαρτάκι πελάτη.</p>
+            <p>Δεν έχεις κατεβάσει ακόμη το POSPal; <a href="/download/">Κατέβασε για Windows</a>.</p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="academy-footer">
+    <div class="academy-footer-inner">
+      <div>
+        <strong translate="no">POSPal</strong>
+        <span>Οδηγοί εγκατάστασης και πρώτης χρήσης.</span>
+      </div>
+      <nav aria-label="Σύνδεσμοι οδηγού">
+        <a href="/guides/">Όλοι οι οδηγοί</a>
+        <a href="/download/">Κατέβασε για Windows</a>
+        <a href="#guide-title">Πίσω στην αρχή</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
