@@ -80,6 +80,15 @@
   color: var(--green-dark);
 }
 
+body.guide-article-page .academy-brand {
+  gap: 0.65rem;
+}
+
+body.guide-article-page .academy-brand img {
+  width: 36px;
+  height: 36px;
+}
+
 .academy-topbar nav {
   display: flex;
   align-items: center;

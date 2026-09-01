@@ -28,8 +28,10 @@ body.pda-editorial-page {
   top: 0;
   z-index: 30;
   padding-top: env(safe-area-inset-top);
-  color: var(--editorial-white);
-  background: var(--editorial-forest-deep);
+  color: #07120b;
+  background: rgba(244, 245, 242, .96);
+  border-bottom: 1px solid #cbd0cb;
+  backdrop-filter: blur(12px);
   font-family: var(--editorial-sans);
 }
 
@@ -39,7 +41,7 @@ body.pda-editorial-page {
   align-items: center;
   min-height: 64px;
   padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
-  border-bottom: 1px solid oklch(35% .04 150);
+  border-bottom: 1px solid #cbd0cb;
 }
 
 .header-download,
@@ -47,7 +49,7 @@ body.pda-editorial-page {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: var(--editorial-green);
+  color: #0f7a38;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -63,21 +65,28 @@ body.pda-editorial-page {
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: .65rem;
+  min-width: 44px;
   min-height: 44px;
-  color: var(--editorial-white);
-  font-size: 25px;
+  color: #07120b;
+  font-family: Commissioner, "Segoe UI", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.58;
+  letter-spacing: -.03em;
   text-decoration: none;
 }
 
 .brand img {
-  border-radius: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
 }
 
 .brand b {
-  color: var(--editorial-green);
+  color: #0f7a38;
 }
 
 .section-bar {
@@ -98,7 +107,7 @@ body.pda-editorial-page {
 .section-bar a {
   display: flex;
   align-items: center;
-  color: var(--editorial-white);
+  color: #07120b;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -107,7 +116,7 @@ body.pda-editorial-page {
 
 .section-bar a:hover,
 .section-bar a:focus-visible {
-  color: var(--editorial-green);
+  color: #0f7a38;
 }
 
 .article-header {
@@ -556,12 +565,16 @@ body.pda-editorial-page {
   }
 
   .brand {
-    font-size: 20px;
+    font-size: 1.08rem;
   }
 
   .brand img {
-    width: 26px;
-    height: 26px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand span {
+    display: none;
   }
 
   .section-bar {

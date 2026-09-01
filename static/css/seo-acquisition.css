@@ -145,6 +145,26 @@ body.seo-page p {
   color: var(--seo-green-dark);
 }
 
+/* Keep public SEO-page lockups identical to the landing-page brand. */
+body.seo-page .seo-brand {
+  color: #07120b;
+  font-family: Commissioner, "Segoe UI", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.58;
+  letter-spacing: -.03em;
+}
+
+body.seo-page .seo-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+body.seo-page .seo-brand b {
+  color: #0f7a38;
+}
+
 .seo-nav {
   display: flex;
   align-items: center;
@@ -1820,6 +1840,12 @@ body.seo-page-system .system-price-card a.seo-button-primary {
 
   .seo-final {
     padding: 48px 0;
+  }
+}
+
+@media (max-width: 720px) {
+  body.seo-page .seo-brand span {
+    display: none;
   }
 }
 

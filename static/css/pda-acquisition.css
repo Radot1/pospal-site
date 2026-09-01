@@ -141,6 +141,7 @@ body.pda-acquisition-page {
   min-height: 44px;
   font-size: 1.08rem;
   font-weight: 800;
+  letter-spacing: -.03em;
 }
 
 .pda-brand img {
