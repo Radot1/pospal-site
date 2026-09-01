@@ -189,6 +189,7 @@ body.pda-editorial-page {
 
 .hero-image img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
