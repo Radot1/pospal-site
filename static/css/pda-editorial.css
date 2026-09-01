@@ -27,6 +27,7 @@ body.pda-editorial-page {
   position: sticky;
   top: 0;
   z-index: 30;
+  padding-top: env(safe-area-inset-top);
   color: var(--editorial-white);
   background: var(--editorial-forest-deep);
   font-family: var(--editorial-sans);
@@ -37,7 +38,7 @@ body.pda-editorial-page {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   min-height: 64px;
-  padding: 0 20px;
+  padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
   border-bottom: 1px solid oklch(35% .04 150);
 }
 
@@ -84,7 +85,7 @@ body.pda-editorial-page {
   justify-content: center;
   gap: 36px;
   min-height: 44px;
-  padding: 0 18px;
+  padding: 0 max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left));
   overflow-x: auto;
   scrollbar-width: none;
   white-space: nowrap;
@@ -159,6 +160,12 @@ body.pda-editorial-page {
 
 .byline p {
   margin: 0;
+}
+
+.byline a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
 
 .byline strong,
@@ -258,6 +265,13 @@ body.pda-editorial-page {
 
 .contents li + li {
   margin-top: 5px;
+}
+
+.contents a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 6px;
 }
 
 .article-body section {
@@ -536,7 +550,8 @@ body.pda-editorial-page {
 @media (max-width: 700px) {
   .brand-bar {
     min-height: 56px;
-    padding-inline: 14px;
+    padding-right: max(14px, env(safe-area-inset-right));
+    padding-left: max(14px, env(safe-area-inset-left));
   }
 
   .brand {
@@ -600,7 +615,8 @@ body.pda-editorial-page {
   .mobile-order-proof-header {
     display: block;
     margin-bottom: 30px;
-    padding: 0 20px;
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(20px, env(safe-area-inset-left));
   }
 
   .mobile-order-proof-header h2 {
@@ -615,9 +631,10 @@ body.pda-editorial-page {
   .mobile-order-proof-steps {
     display: flex;
     gap: 16px;
-    padding: 0 20px 18px;
+    padding: 0 max(20px, env(safe-area-inset-right)) 18px max(20px, env(safe-area-inset-left));
     overflow-x: auto;
-    scroll-padding-inline: 20px;
+    scroll-padding-right: max(20px, env(safe-area-inset-right));
+    scroll-padding-left: max(20px, env(safe-area-inset-left));
     scroll-snap-type: x mandatory;
     scrollbar-color: var(--editorial-green) var(--editorial-forest);
   }
@@ -637,7 +654,7 @@ body.pda-editorial-page {
   }
 
   .mobile-order-proof-note {
-    margin: 26px 20px 0;
+    margin: 26px max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
   }
 
   .desktop-proof {
@@ -660,6 +677,16 @@ body.pda-editorial-page {
 
   .site-footer nav > a[data-pospal-cookie-settings] {
     padding-left: 52px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .site-header {
+    position: static;
+  }
+
+  .article-body section {
+    scroll-margin-top: 24px;
   }
 }
 
