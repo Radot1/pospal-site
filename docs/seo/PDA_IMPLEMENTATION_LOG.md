@@ -162,3 +162,27 @@ User approved the four recommendations for `pda-ti-einai.html` after its SEO rev
 Skills used: `pospal-voice`, `on-page-seo-auditor`, `image`, `browser:control-in-app-browser`.
 
 Status: implemented and checked locally. These changes have not been committed, pushed or published. This pass does not measure ranking, traffic or conversion gains.
+
+## Definition page — approved editorial redesign — 2026-09-01
+
+The user approved the single, restrained editorial direction based on the supplied Bon Appetit reference and asked to lock it into `/pda-ti-einai.html` with POSPal's theme.
+
+- Promoted the approved prototype into the ranking URL without changing the URL or canonical.
+- Replaced the generic landing-page structure with a publication masthead, centered article identity, one dominant explanatory image, a narrow serif reading column, visible FAQ disclosures and one clear final handoff to `/times.html`.
+- Applied deep forest to the masthead and site footer. Bright green is limited to brand accents, the article label, link states and the next-step arrow.
+- Preserved the blank Robert portrait placeholder, added Robert Airey as founder/author, and recorded published and updated dates in visible copy and Article schema.
+- Preserved the exact canonical PDA proposition, the device/network qualifications, the real POSPal product screenshot, the non-fiscal boundary and five matching FAQ schema entries.
+- Moved the approved equipment illustration into `static/img/pda-equipment-atlas.webp`; removed unused prototype variants, JavaScript and superseded page CSS.
+
+### Verification
+
+- Local page and hero asset return HTTP 200. All referenced internal targets exist.
+- One H1, two valid JSON-LD blocks, five visible FAQs and five FAQ schema questions remain.
+- Mobile document width equals viewport width after hiding the section-bar scrollbar; desktop and mobile layouts were inspected in the browser.
+- A deep-page browser pass found that the consent script appended `Ρυθμίσεις cookies` to the article handoff because it was the first `<footer>`. Replacing that block with semantic article navigation keeps the consent link in the real site footer.
+- Calculated WCAG contrast ratios for the selected palette range from 7.06:1 for muted text on white to 19.60:1 for white on deep forest.
+- `git diff --check` passes. Locked `index.html`, `download/index.html` and `guides/index.html` remain untouched.
+
+Skills used: `impeccable` (colorize and polish), `pospal-voice`, `browser:control-in-app-browser`, `graphify`.
+
+Status: approved direction implemented locally. Not committed, pushed or published.

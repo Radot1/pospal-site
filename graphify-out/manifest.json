@@ -22,7 +22,7 @@
   "static/js/academy.js": {
     "mtime": 1788194782.8745806,
     "ast_hash": "12fab998805d1cf683baa4b1e76a2488",
-    "semantic_hash": ""
+    "semantic_hash": "12fab998805d1cf683baa4b1e76a2488"
   },
   "static/js/decision-pages.js": {
     "mtime": 1774739191.1576633,
@@ -62,7 +62,7 @@
   ".agents/product-marketing.md": {
     "mtime": 1788087918.0267093,
     "ast_hash": "1a7cf1b7522a4720939ee9d8fddb6a24",
-    "semantic_hash": ""
+    "semantic_hash": "1a7cf1b7522a4720939ee9d8fddb6a24"
   },
   ".github/workflows/static.yml": {
     "mtime": 1783182882.0768602,
@@ -77,7 +77,7 @@
   "AGENTS.md": {
     "mtime": 1788088722.2847123,
     "ast_hash": "226388fb481673b4239537e68dbc7170",
-    "semantic_hash": ""
+    "semantic_hash": "226388fb481673b4239537e68dbc7170"
   },
   "CONTEXT.md": {
     "mtime": 1783183867.9405577,
@@ -87,7 +87,7 @@
   "MARKETING_PLAN.md": {
     "mtime": 1788119780.2304122,
     "ast_hash": "ad53c2adaad41f84b19aed310b56208b",
-    "semantic_hash": ""
+    "semantic_hash": "ad53c2adaad41f84b19aed310b56208b"
   },
   "PRODUCT.md": {
     "mtime": 1782627926.8650556,
@@ -112,7 +112,7 @@
   "asyrmati-paraggeliolipsia.html": {
     "mtime": 1788177860.2047145,
     "ast_hash": "44b1df6830aa70389576d37363f3da97",
-    "semantic_hash": ""
+    "semantic_hash": "44b1df6830aa70389576d37363f3da97"
   },
   "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
     "mtime": 1782627926.8684068,
@@ -172,7 +172,7 @@
   "guides/index.html": {
     "mtime": 1788194782.8732536,
     "ast_hash": "b1374fadbcbc7214c3708d24ebd3a11f",
-    "semantic_hash": ""
+    "semantic_hash": "b1374fadbcbc7214c3708d24ebd3a11f"
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {
     "mtime": 1782627927.882365,
@@ -197,27 +197,27 @@
   "paraggelio-lipsia-gia-beach-bar.html": {
     "mtime": 1788177860.207718,
     "ast_hash": "60fd03963485502776004e869f50afbb",
-    "semantic_hash": ""
+    "semantic_hash": "60fd03963485502776004e869f50afbb"
   },
   "pda-gia-kafeteries.html": {
     "mtime": 1788177860.2067199,
     "ast_hash": "6b257f44f6e00a329d2a76c69e0d2415",
-    "semantic_hash": ""
+    "semantic_hash": "6b257f44f6e00a329d2a76c69e0d2415"
   },
   "pda-gia-servitoro/index.html": {
     "mtime": 1788174868.1526816,
     "ast_hash": "ec47265f032c77df99772927b8e5e724",
-    "semantic_hash": ""
+    "semantic_hash": "ec47265f032c77df99772927b8e5e724"
   },
   "pda-pos-leitourgei.html": {
     "mtime": 1788177860.2097163,
     "ast_hash": "d07e1ccddc4bb1be0427152e8e7940c9",
-    "semantic_hash": ""
+    "semantic_hash": "d07e1ccddc4bb1be0427152e8e7940c9"
   },
   "pda-ti-einai.html": {
-    "mtime": 1788174868.150679,
-    "ast_hash": "142590d31924b5fdcd43432f89df55c6",
-    "semantic_hash": ""
+    "mtime": 1788244685.7753859,
+    "ast_hash": "4334a7d52fc621dd3b5fcd739c26cb64",
+    "semantic_hash": "4334a7d52fc621dd3b5fcd739c26cb64"
   },
   "prototype/README.md": {
     "mtime": 1782627927.8918886,
@@ -237,7 +237,7 @@
   "systima-paraggeliolipsias.html": {
     "mtime": 1788167589.391617,
     "ast_hash": "da2c11c8c86c87d7bc58597119b71d86",
-    "semantic_hash": ""
+    "semantic_hash": "da2c11c8c86c87d7bc58597119b71d86"
   },
   "times.html": {
     "mtime": 1785777981.999138,
@@ -297,7 +297,7 @@
   "docs/seo/chatgpt-discovery-work-plan.md": {
     "mtime": 1786007676.8274648,
     "ast_hash": "a291dae2585947af13e2eaba0ffe0a68",
-    "semantic_hash": ""
+    "semantic_hash": "a291dae2585947af13e2eaba0ffe0a68"
   },
   "docs/seo/pospal-entity-facts.md": {
     "mtime": 1785911429.5637133,
@@ -317,7 +317,7 @@
   "sxetika-me-to-pospal/index.html": {
     "mtime": 1788177860.2021904,
     "ast_hash": "78ed4149fd634923be4e81b664dc3490",
-    "semantic_hash": ""
+    "semantic_hash": "78ed4149fd634923be4e81b664dc3490"
   },
   "static/img/pospal-mark-64.png": {
     "mtime": 1785910017.386696,
@@ -337,12 +337,12 @@
   "docs/seo/pospal-generic-hub-improvement-spec.md": {
     "mtime": 1785927822.493574,
     "ast_hash": "0979efc807dfc9fb31a3f4a540220093",
-    "semantic_hash": ""
+    "semantic_hash": "0979efc807dfc9fb31a3f4a540220093"
   },
   "docs/seo/pospal-independent-verification-fact-pack.md": {
     "mtime": 1785927822.493574,
     "ast_hash": "bc0180827f3605394ac6603e874dfb9f",
-    "semantic_hash": ""
+    "semantic_hash": "bc0180827f3605394ac6603e874dfb9f"
   },
   "docs/seo/pospal-seo-claim-map.md": {
     "mtime": 1785921416.4253523,
@@ -352,12 +352,12 @@
   "docs/seo/pospal-seo-proof-execution-tracker.md": {
     "mtime": 1786007716.579945,
     "ast_hash": "d3b7d108fd010a1bccdfe85692bf494d",
-    "semantic_hash": ""
+    "semantic_hash": "d3b7d108fd010a1bccdfe85692bf494d"
   },
   "docs/seo/pospal-seo-proof-measurement-protocol.md": {
     "mtime": 1786007735.8719811,
     "ast_hash": "c0ea3c8891abc2c17ae55140cb68cfe8",
-    "semantic_hash": ""
+    "semantic_hash": "c0ea3c8891abc2c17ae55140cb68cfe8"
   },
   "docs/seo/proof-records/PRF-2026-001.md": {
     "mtime": 1785924937.2006273,
@@ -387,131 +387,161 @@
   "docs/seo/OWNER_INTENT_SEO_PLAN.md": {
     "mtime": 1788085138.7658546,
     "ast_hash": "8f743e736a1b9d1de6995d79f22b02bb",
-    "semantic_hash": ""
+    "semantic_hash": "8f743e736a1b9d1de6995d79f22b02bb"
   },
   "docs/seo/PDA_AUDIENCE_AND_PAGE_REVIEW.md": {
     "mtime": 1787999589.3351624,
     "ast_hash": "e9f3e2e940918ae1f65b99ebb5bcb891",
-    "semantic_hash": ""
+    "semantic_hash": "e9f3e2e940918ae1f65b99ebb5bcb891"
   },
   "docs/seo/PDA_COPY_VETTING_REPORT.md": {
     "mtime": 1788004776.261523,
     "ast_hash": "bfb2dedf4f2b50747844f3b1865e418c",
-    "semantic_hash": ""
+    "semantic_hash": "bfb2dedf4f2b50747844f3b1865e418c"
   },
   "docs/seo/PDA_DEFINITION_PAGE_BRIEF.md": {
     "mtime": 1787999589.3331618,
     "ast_hash": "88bbf01be49f3d9379d3860bd55b2725",
-    "semantic_hash": ""
+    "semantic_hash": "88bbf01be49f3d9379d3860bd55b2725"
   },
   "docs/seo/PDA_DEFINITION_PAGE_COPY_DRAFT.md": {
     "mtime": 1788096772.324201,
     "ast_hash": "8d06e8f71fdd6233d8ebc0b659415020",
-    "semantic_hash": ""
+    "semantic_hash": "8d06e8f71fdd6233d8ebc0b659415020"
   },
   "docs/seo/PDA_DEFINITION_PAGE_REWRITE_V2.md": {
-    "mtime": 1788106190.9827342,
-    "ast_hash": "97f262a67d2bdc1befe9aa62f5a9e4a6",
-    "semantic_hash": ""
+    "mtime": 1788245122.5800533,
+    "ast_hash": "02272c64b1f326d3903deef288eb4359",
+    "semantic_hash": "02272c64b1f326d3903deef288eb4359"
   },
   "docs/seo/PDA_IMPLEMENTATION_LOG.md": {
-    "mtime": 1788096922.8033788,
-    "ast_hash": "2cf5afc6e5fc81a4c6c0a955656b7bb0",
-    "semantic_hash": ""
+    "mtime": 1788244904.603532,
+    "ast_hash": "c8d518be08e747c6f678a4cae0b894d3",
+    "semantic_hash": "c8d518be08e747c6f678a4cae0b894d3"
   },
   "docs/seo/SYSTEM_PAGE_CONTENT_BRIEF.md": {
     "mtime": 1788115611.704747,
     "ast_hash": "b924b7d18092aeb04cd7c10735ce7e28",
-    "semantic_hash": ""
+    "semantic_hash": "b924b7d18092aeb04cd7c10735ce7e28"
   },
   "docs/seo/WAITER_PDA_COMMERCIAL_BRIEF.md": {
     "mtime": 1788107205.4201057,
     "ast_hash": "759fe4f2a05a02578a2306fe825769b6",
-    "semantic_hash": ""
+    "semantic_hash": "759fe4f2a05a02578a2306fe825769b6"
   },
   "docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md": {
     "mtime": 1788095723.1811755,
     "ast_hash": "f29b8e520ec838333ab311f138717899",
-    "semantic_hash": ""
+    "semantic_hash": "f29b8e520ec838333ab311f138717899"
   },
   "docs/seo/pospal-independent-reviewer-outreach-kit.md": {
     "mtime": 1786007780.6376665,
     "ast_hash": "6ad6f5fb8140cc51f5dea713d677e87d",
-    "semantic_hash": ""
+    "semantic_hash": "6ad6f5fb8140cc51f5dea713d677e87d"
   },
   "graphify-out/memory/query_20260829_090209_who_does_pospal_seo_currently_target__and_how_shou.md": {
     "mtime": 1787994129.3935568,
     "ast_hash": "38c7610c33f75b16eceffe0febf3c088",
-    "semantic_hash": ""
+    "semantic_hash": "38c7610c33f75b16eceffe0febf3c088"
   },
   "graphify-out/memory/query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to.md": {
     "mtime": 1787998222.0308118,
     "ast_hash": "b07c31987386b0c721aa3ad99a6f6aa3",
-    "semantic_hash": ""
+    "semantic_hash": "b07c31987386b0c721aa3ad99a6f6aa3"
   },
   "graphify-out/memory/query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate.md": {
     "mtime": 1787998979.792075,
     "ast_hash": "a72943ccb099de493c9e7674a461b13f",
-    "semantic_hash": ""
+    "semantic_hash": "a72943ccb099de493c9e7674a461b13f"
   },
   "docs/seo/SYSTEM_PAGE_COMPETITOR_RESEARCH_2026-08-30.md": {
     "mtime": 1788111893.5417726,
     "ast_hash": "5c63a1a6094ee29175e78567c1aa707f",
-    "semantic_hash": ""
+    "semantic_hash": "5c63a1a6094ee29175e78567c1aa707f"
   },
   "docs/seo/SYSTEM_PAGE_IMPLEMENTATION_LOG.md": {
     "mtime": 1788119780.2314124,
     "ast_hash": "62dfa12b6c6918940768ca97496b8707",
-    "semantic_hash": ""
+    "semantic_hash": "62dfa12b6c6918940768ca97496b8707"
   },
   "guides/printer-setup/index.html": {
     "mtime": 1788190601.583229,
     "ast_hash": "7dae55c422d83d294dad0eac020d00ff",
-    "semantic_hash": ""
+    "semantic_hash": "7dae55c422d83d294dad0eac020d00ff"
   },
   "guides/windows-installation/index.html": {
     "mtime": 1788191726.0528243,
     "ast_hash": "1854c99315ddfc03382c36a250433e1b",
-    "semantic_hash": ""
+    "semantic_hash": "1854c99315ddfc03382c36a250433e1b"
   },
   "static/img/pospal-desktop-order.webp": {
     "mtime": 1788096734.257,
     "ast_hash": "045029be78257f944ff1cd83323934b9",
-    "semantic_hash": ""
+    "semantic_hash": "045029be78257f944ff1cd83323934b9"
   },
   "static/img/pospal-icon-180.png": {
     "mtime": 1788119501.4507117,
     "ast_hash": "a3bbd2e42d1b430c97a7cdd613ee87a3",
-    "semantic_hash": ""
+    "semantic_hash": "a3bbd2e42d1b430c97a7cdd613ee87a3"
   },
   "static/img/pospal-icon-96.png": {
     "mtime": 1788119501.4477117,
     "ast_hash": "112515f1e67149ef25f42539d8bca846",
-    "semantic_hash": ""
+    "semantic_hash": "112515f1e67149ef25f42539d8bca846"
   },
   "guides/app-tour/index.html": {
     "mtime": 1788192869.9627025,
     "ast_hash": "78a56aabd1829f3b6e55fdcea3971194",
-    "semantic_hash": ""
+    "semantic_hash": "78a56aabd1829f3b6e55fdcea3971194"
   },
   "guides/settings/index.html": {
     "mtime": 1788193430.88715,
     "ast_hash": "ba969c8af171c3a2a1c154edd3e370d5",
-    "semantic_hash": ""
+    "semantic_hash": "ba969c8af171c3a2a1c154edd3e370d5"
   },
   "guides/qr-menu/index.html": {
     "mtime": 1788194281.5740762,
     "ast_hash": "37dd21e0eec2a36569efc1c20d953ed7",
-    "semantic_hash": ""
+    "semantic_hash": "37dd21e0eec2a36569efc1c20d953ed7"
   },
   "guides/account/index.html": {
     "mtime": 1788194782.872132,
     "ast_hash": "c0c7e5a5fb92454afcb3bdf91c195650",
-    "semantic_hash": ""
+    "semantic_hash": "c0c7e5a5fb92454afcb3bdf91c195650"
   },
   "guides/troubleshooting/index.html": {
     "mtime": 1788194782.872132,
     "ast_hash": "ad6ddc9959179f6b38723ac3128dcc84",
-    "semantic_hash": ""
+    "semantic_hash": "ad6ddc9959179f6b38723ac3128dcc84"
+  },
+  "docs/seo/KEYWORD_FUNNEL_RESEARCH_2026-08-31.md": {
+    "mtime": 1788210483.3568304,
+    "ast_hash": "be2bfbe1fbda3c52dfae090929eaebac",
+    "semantic_hash": "be2bfbe1fbda3c52dfae090929eaebac"
+  },
+  "docs/seo/PDA_ARTICLE_VISUAL_STORY_BRIEF.md": {
+    "mtime": 1788210483.3578312,
+    "ast_hash": "d068adb191222f06cbb5cc01eef227fa",
+    "semantic_hash": "d068adb191222f06cbb5cc01eef227fa"
+  },
+  "graphify-out/memory/query_20260831_202501_what_real_assets_and_repository_evidence_should_sh.md": {
+    "mtime": 1788207901.0415812,
+    "ast_hash": "598eb4519c1fabb91b23c4905bef3aa4",
+    "semantic_hash": "598eb4519c1fabb91b23c4905bef3aa4"
+  },
+  "prototype/pda-article/NOTES.md": {
+    "mtime": 1788244581.0056849,
+    "ast_hash": "6a89c08e2f8ac0b8ce0a4ac275ab5484",
+    "semantic_hash": "6a89c08e2f8ac0b8ce0a4ac275ab5484"
+  },
+  "prototype/pda-article/index.html": {
+    "mtime": 1788245301.684193,
+    "ast_hash": "1782bb29be42ce22658a715a4fdd1d5d",
+    "semantic_hash": "1782bb29be42ce22658a715a4fdd1d5d"
+  },
+  "static/img/pda-equipment-atlas.webp": {
+    "mtime": 1788208329.627206,
+    "ast_hash": "c07374edb0a70907d277a41c612822ab",
+    "semantic_hash": "c07374edb0a70907d277a41c612822ab"
   }
 }

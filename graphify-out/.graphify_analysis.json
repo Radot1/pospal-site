@@ -28,6 +28,7 @@
       "context_honest_urgency",
       "context_hosting_platform",
       "context_included_product",
+      "context_included_qr_menu",
       "context_landing_page_design",
       "context_launch_blocker_exception",
       "context_launch_candidate",
@@ -68,55 +69,159 @@
       "context_windows_installed"
     ],
     "1": [
-      "docs_seo_post_redesign_evaluation_2026_08_02_architecture_findings",
-      "docs_seo_post_redesign_evaluation_2026_08_02_authority_building_rule",
-      "docs_seo_post_redesign_evaluation_2026_08_02_current_hierarchy",
-      "docs_seo_post_redesign_evaluation_2026_08_02_current_status",
-      "docs_seo_post_redesign_evaluation_2026_08_02_data_availability_audit_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_device_and_search_appearance_deltas",
-      "docs_seo_post_redesign_evaluation_2026_08_02_evidence_rules",
-      "docs_seo_post_redesign_evaluation_2026_08_02_external_authority_and_brand_evidence",
-      "docs_seo_post_redesign_evaluation_2026_08_02_first_metadata_test_deployed_and_verified_on_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_github_installer_evidence_2026_08_02",
-      "docs_seo_post_redesign_evaluation_2026_08_02_keyword_quality_validation_gate",
-      "docs_seo_post_redesign_evaluation_2026_08_02_known_baselines",
-      "docs_seo_post_redesign_evaluation_2026_08_02_landing_page_deltas",
-      "docs_seo_post_redesign_evaluation_2026_08_02_matched_intent_cluster_deltas_visible_queries",
-      "docs_seo_post_redesign_evaluation_2026_08_02_measured_inbound_internal_links",
-      "docs_seo_post_redesign_evaluation_2026_08_02_measured_overlap_evidence",
-      "docs_seo_post_redesign_evaluation_2026_08_02_measurement_funnel",
-      "docs_seo_post_redesign_evaluation_2026_08_02_mobile_filtered_diagnosis_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_next_update",
-      "docs_seo_post_redesign_evaluation_2026_08_02_ownership_assessment_2026_08_02",
-      "docs_seo_post_redesign_evaluation_2026_08_02_p1_legacy_redirects_are_not_live",
-      "docs_seo_post_redesign_evaluation_2026_08_02_page_filtered_query_evidence_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_1_measurement_baseline",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_1_open_inputs",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_2_monitoring",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_2_technical_health",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_3_search_performance_diagnosis",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_4_query_to_page_mapping",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_5_on_page_audit_order",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_6_architecture_and_authority",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_status",
-      "docs_seo_post_redesign_evaluation_2026_08_02_pospal_post_redesign_seo_evaluation",
-      "docs_seo_post_redesign_evaluation_2026_08_02_pre_launch_intent_clusters",
-      "docs_seo_post_redesign_evaluation_2026_08_02_priority_recommendations_from_the_on_page_pass",
-      "docs_seo_post_redesign_evaluation_2026_08_02_product_truth_check",
-      "docs_seo_post_redesign_evaluation_2026_08_02_provisional_scorecard_2026_08_02",
-      "docs_seo_post_redesign_evaluation_2026_08_02_purpose",
-      "docs_seo_post_redesign_evaluation_2026_08_02_redirect_implementation_audit_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_reproducible_crawl_results",
-      "docs_seo_post_redesign_evaluation_2026_08_02_required_comparison_periods",
-      "docs_seo_post_redesign_evaluation_2026_08_02_search_console_before_launch",
-      "docs_seo_post_redesign_evaluation_2026_08_02_search_console_indexing_coverage_2026_08_03",
-      "docs_seo_post_redesign_evaluation_2026_08_02_shared_measured_strengths",
-      "docs_seo_post_redesign_evaluation_2026_08_02_shared_measured_weaknesses",
-      "docs_seo_post_redesign_evaluation_2026_08_02_skills_and_order_of_work",
-      "docs_seo_post_redesign_evaluation_2026_08_02_technical_scorecard",
-      "docs_seo_post_redesign_evaluation_2026_08_02_working_findings_and_decisions"
+      "docs_adr_0001_freeze_launch_inventory_and_gate_seo_expansion",
+      "docs_adr_0001_freeze_launch_inventory_and_gate_seo_expansion_freeze_launch_inventory_and_gate_seo_expansion",
+      "docs_seo_ai_discovery_benchmark_prompts",
+      "docs_seo_ai_discovery_benchmark_runbook",
+      "docs_seo_ai_discovery_benchmark_scorecard",
+      "docs_seo_ai_discovery_measurement_proposal",
+      "docs_seo_chatgpt_discovery_work_plan",
+      "docs_seo_pospal_generic_hub_improvement_spec",
+      "docs_seo_pospal_independent_reviewer_outreach_kit",
+      "docs_seo_pospal_independent_verification_fact_pack",
+      "docs_seo_pospal_independent_verification_fact_pack_acceptance_gate",
+      "docs_seo_pospal_independent_verification_fact_pack_independent_reproduction_path",
+      "docs_seo_pospal_independent_verification_fact_pack_official_links",
+      "docs_seo_pospal_independent_verification_fact_pack_outreach_record_template",
+      "docs_seo_pospal_independent_verification_fact_pack_pospal_independent_verification_fact_pack",
+      "docs_seo_pospal_independent_verification_fact_pack_public_safe_identity_card",
+      "docs_seo_pospal_independent_verification_fact_pack_publication_quality_evidence_checklist",
+      "docs_seo_pospal_independent_verification_fact_pack_source_target_registry",
+      "docs_seo_pospal_independent_verification_fact_pack_suggested_reviewer_questions",
+      "docs_seo_pospal_independent_verification_fact_pack_supplied_facts_and_primary_controlled_sources",
+      "docs_seo_pospal_independent_verification_fact_pack_use_rule",
+      "docs_seo_pospal_independent_verification_fact_pack_what_the_current_evidence_does_not_prove",
+      "docs_seo_pospal_product_fact_checklist",
+      "docs_seo_pospal_product_fact_checklist_customer_independent_and_outcome_proof",
+      "docs_seo_pospal_product_fact_checklist_evidence_labels",
+      "docs_seo_pospal_product_fact_checklist_pospal_product_fact_checklist",
+      "docs_seo_pospal_product_fact_checklist_printer_facts",
+      "docs_seo_pospal_product_fact_checklist_publishable_controlled_facts",
+      "docs_seo_pospal_product_fact_checklist_remaining_claim_boundaries",
+      "docs_seo_pospal_product_fact_checklist_repository_evidence_decision",
+      "docs_seo_pospal_product_fact_checklist_source_inventory",
+      "docs_seo_pospal_product_fact_checklist_staff_device_network_and_reconnect_facts",
+      "docs_seo_pospal_product_fact_checklist_windows_and_release_facts",
+      "docs_seo_pospal_product_fact_checklist_workflow_and_qr_menu_facts",
+      "docs_seo_pospal_proof_system",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_accessibility_and_frontend_audit",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_on_page_seo_audit",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_pending_live_measurement",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_pospal_repository_backed_release_audit",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_scope_delivered",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_seo_priorities_after_deployment",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_skills_used",
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_structural_verification",
+      "docs_seo_pospal_repository_backed_website_proposal",
+      "docs_seo_pospal_seo_claim_map",
+      "docs_seo_pospal_seo_proof_execution_tracker",
+      "docs_seo_pospal_seo_proof_measurement_protocol",
+      "docs_seo_proof_records_prf_2026_001",
+      "docs_seo_proof_records_prf_2026_002"
     ],
     "2": [
+      "docs_seo_pospal_entity_facts",
+      "docs_seo_pospal_entity_facts_confirmation_log",
+      "docs_seo_pospal_entity_facts_evidence_rules",
+      "docs_seo_pospal_entity_facts_pospal_entity_facts",
+      "docs_seo_pospal_entity_facts_remaining_implementation_detail",
+      "docs_seo_pospal_entity_facts_user_confirmed_publisher_facts",
+      "docs_seo_pospal_entity_facts_verified_public_facts",
+      "docs_seo_pospal_entity_foundation_proposal",
+      "docs_seo_pospal_entity_foundation_proposal_1_approve_the_identity_facts",
+      "docs_seo_pospal_entity_foundation_proposal_2_draft_one_distinct_public_entity_page",
+      "docs_seo_pospal_entity_foundation_proposal_3_define_the_supported_schema_graph",
+      "docs_seo_pospal_entity_foundation_proposal_4_connect_controlled_sources",
+      "docs_seo_pospal_entity_foundation_proposal_already_visible_and_verified",
+      "docs_seo_pospal_entity_foundation_proposal_current_state",
+      "docs_seo_pospal_entity_foundation_proposal_current_structured_data_gap",
+      "docs_seo_pospal_entity_foundation_proposal_exit_criteria",
+      "docs_seo_pospal_entity_foundation_proposal_explicit_exclusions",
+      "docs_seo_pospal_entity_foundation_proposal_inputs_required_from_the_user",
+      "docs_seo_pospal_entity_foundation_proposal_outcome",
+      "docs_seo_pospal_entity_foundation_proposal_proposed_entity_model",
+      "docs_seo_pospal_entity_foundation_proposal_recommended_implementation_batch",
+      "docs_seo_pospal_entity_foundation_proposal_remaining_implementation_gaps",
+      "docs_seo_pospal_entity_foundation_proposal_skill_decisions",
+      "docs_seo_pospal_entity_foundation_proposal_step_2_proposal_pospal_entity_foundation",
+      "docs_seo_pospal_entity_foundation_proposal_validation",
+      "docs_seo_pospal_entity_foundation_proposal_why_this_is_next",
+      "docs_seo_pospal_entity_page_draft",
+      "docs_seo_pospal_entity_page_draft_copy_rationale",
+      "docs_seo_pospal_entity_page_draft_draft_sxetika_me_to_pospal",
+      "docs_seo_pospal_entity_page_draft_final_cta",
+      "docs_seo_pospal_entity_page_draft_hero",
+      "docs_seo_pospal_entity_page_draft_implementation_checklist_after_copy_approval",
+      "docs_seo_pospal_entity_page_draft_optional_h1_alternatives",
+      "docs_seo_pospal_entity_page_draft_page_metadata",
+      "docs_seo_pospal_entity_page_draft_proposed_json_ld",
+      "docs_seo_pospal_entity_page_draft_recommended_page_copy",
+      "docs_seo_pospal_entity_page_draft_schema_exclusions",
+      "docs_seo_pospal_entity_page_draft_άμεση_συνδρομή_χωρίσ_μεσάζοντα",
+      "docs_seo_pospal_entity_page_draft_δεν_αντικαθιστά_την_ταμειακή_σου",
+      "docs_seo_pospal_entity_page_draft_δοκίμασε_το_pospal_στη_δική_σου_βάρδια",
+      "docs_seo_pospal_entity_page_draft_επικοινωνία_απευθείασ_με_το_pospal",
+      "docs_seo_pospal_entity_page_draft_η_ταυτότητα_πίσω_από_το_pospal",
+      "docs_seo_pospal_entity_page_draft_μία_ροή_από_την_παραγγελία_μέχρι_την_κουζίνα",
+      "docs_seo_pospal_entity_page_draft_ποιοσ_βρίσκεται_πίσω_από_το_pospal",
+      "docs_seo_pospal_entity_page_draft_τι_κάνει_το_pospal",
+      "docs_seo_pospal_entity_page_draft_τιμή_και_τρόποσ_διάθεσησ",
+      "docs_seo_pospal_entity_page_draft_το_pospal_με_καθαρά_λόγια",
+      "docs_seo_pospal_entity_page_draft_το_καθαρό_όριο_του_προϊόντοσ",
+      "docs_seo_pospal_entity_page_draft_υποστήριξη_και_επίσημα_προφίλ"
+    ],
+    "3": [
+      "docs_seo_system_page_content_brief_1_hero_identify_the_product_and_remove_purchase_risk",
+      "docs_seo_system_page_content_brief_2_recognisable_shift_and_self_fit_qualify_the_diy_owner",
+      "docs_seo_system_page_content_brief_3_complete_workflow_show_what_the_owner_gets",
+      "docs_seo_system_page_content_brief_4_setup_path_make_self_installation_feel_concrete",
+      "docs_seo_system_page_content_brief_5_requirements_answer_compatibility_before_it_becomes_fear",
+      "docs_seo_system_page_content_brief_6_price_and_trial_give_the_commercial_decision_its_own_section",
+      "docs_seo_system_page_content_brief_7_honest_limitations_keep_trust_without_leading_with_edge_cases",
+      "docs_seo_system_page_content_brief_8_faq_answer_purchase_objections",
+      "docs_seo_system_page_content_brief_9_final_cta_repeat_the_low_risk_decision",
+      "docs_seo_system_page_content_brief_ad_to_page_message_match",
+      "docs_seo_system_page_content_brief_alternative_title",
+      "docs_seo_system_page_content_brief_anti_persona",
+      "docs_seo_system_page_content_brief_approval_and_implementation",
+      "docs_seo_system_page_content_brief_audience",
+      "docs_seo_system_page_content_brief_campaign_line",
+      "docs_seo_system_page_content_brief_close_variants_to_use_naturally",
+      "docs_seo_system_page_content_brief_conversion_risks_to_avoid",
+      "docs_seo_system_page_content_brief_core_offer",
+      "docs_seo_system_page_content_brief_cta_and_internal_link_map",
+      "docs_seo_system_page_content_brief_current_competitor_review",
+      "docs_seo_system_page_content_brief_decision",
+      "docs_seo_system_page_content_brief_estimated_strategic_inference",
+      "docs_seo_system_page_content_brief_evidence_and_assumptions",
+      "docs_seo_system_page_content_brief_keep",
+      "docs_seo_system_page_content_brief_likely_buying_triggers",
+      "docs_seo_system_page_content_brief_move_later",
+      "docs_seo_system_page_content_brief_p0_required_before_implementation",
+      "docs_seo_system_page_content_brief_p1_high_value",
+      "docs_seo_system_page_content_brief_p2_later_supporting_work",
+      "docs_seo_system_page_content_brief_page_promise",
+      "docs_seo_system_page_content_brief_pospal_commercial_system_page_brief",
+      "docs_seo_system_page_content_brief_pre_rewrite_observations_recorded_during_the_earlier_review",
+      "docs_seo_system_page_content_brief_pre_rewrite_on_page_audit",
+      "docs_seo_system_page_content_brief_primary_query",
+      "docs_seo_system_page_content_brief_primary_reader",
+      "docs_seo_system_page_content_brief_priority_fixes",
+      "docs_seo_system_page_content_brief_product_explanation",
+      "docs_seo_system_page_content_brief_queries_this_page_should_support_not_fully_own",
+      "docs_seo_system_page_content_brief_recommended_h1",
+      "docs_seo_system_page_content_brief_recommended_meta_description",
+      "docs_seo_system_page_content_brief_recommended_metadata",
+      "docs_seo_system_page_content_brief_recommended_page_structure_and_draft_copy_direction",
+      "docs_seo_system_page_content_brief_recommended_title",
+      "docs_seo_system_page_content_brief_reduce_or_merge",
+      "docs_seo_system_page_content_brief_search_intent_and_page_ownership",
+      "docs_seo_system_page_content_brief_user_provided_business_fact",
+      "docs_seo_system_page_content_brief_validation_after_an_approved_implementation",
+      "docs_seo_system_page_content_brief_what_to_keep_move_and_reduce"
+    ],
+    "4": [
       "static_js_ga_consent",
       "static_js_ga_consent_acceptallconsents",
       "static_js_ga_consent_applyconsentdefaults",
@@ -165,48 +270,7 @@
       "static_js_ga_consent_updatefloatingtriggervisibility",
       "static_js_ga_consent_updategoogleconsentmode"
     ],
-    "3": [
-      "agents",
-      "agents_asset_rules",
-      "agents_audience",
-      "agents_content_rules",
-      "agents_cta_rules",
-      "agents_funnel_rules",
-      "agents_language_standards",
-      "agents_legal_clarity_note",
-      "agents_messaging_pillars",
-      "agents_objectives",
-      "agents_positioning",
-      "agents_product_marketing",
-      "agents_purpose",
-      "agents_redesign_branch_mandate",
-      "agents_repository_hygiene",
-      "agents_scope",
-      "agents_testing",
-      "agents_what_to_avoid",
-      "agents_workflow_constraints",
-      "agents_writing_style",
-      "docs_adr_0001_freeze_launch_inventory_and_gate_seo_expansion",
-      "docs_adr_0001_freeze_launch_inventory_and_gate_seo_expansion_freeze_launch_inventory_and_gate_seo_expansion",
-      "docs_seo_ai_discovery_measurement_proposal",
-      "docs_seo_chatgpt_discovery_work_plan",
-      "docs_seo_post_redesign_evaluation_2026_08_02",
-      "marketing_plan",
-      "marketing_plan_10_risks_open_questions",
-      "marketing_plan_11_next_actions",
-      "marketing_plan_1_goals",
-      "marketing_plan_2_audience_tbd",
-      "marketing_plan_3_positioning_tbd",
-      "marketing_plan_4_offer_pricing_tbd",
-      "marketing_plan_5_messaging_pillars_tbd",
-      "marketing_plan_6_funnel_cta",
-      "marketing_plan_7_website_plan",
-      "marketing_plan_8_assets_proof_tbd",
-      "marketing_plan_9_1_product_opportunities_internal_not_promised",
-      "marketing_plan_9_metrics",
-      "marketing_plan_pospal_marketing_plan_working_draft"
-    ],
-    "4": [
+    "5": [
       "docs_redesign_information_architecture_and_onboarding",
       "docs_redesign_information_architecture_and_onboarding_1_ready_windows_visitor",
       "docs_redesign_information_architecture_and_onboarding_2_mobile_researcher",
@@ -244,74 +308,144 @@
       "docs_redesign_information_architecture_and_onboarding_support_support_html",
       "docs_redesign_information_architecture_and_onboarding_working_consolidation_direction"
     ],
-    "5": [
-      "docs_seo_ai_discovery_benchmark_prompts",
-      "docs_seo_ai_discovery_benchmark_prompts_b01",
-      "docs_seo_ai_discovery_benchmark_prompts_b02",
-      "docs_seo_ai_discovery_benchmark_prompts_b03",
-      "docs_seo_ai_discovery_benchmark_prompts_broad_category",
-      "docs_seo_ai_discovery_benchmark_prompts_c01",
-      "docs_seo_ai_discovery_benchmark_prompts_c02",
-      "docs_seo_ai_discovery_benchmark_prompts_c03",
-      "docs_seo_ai_discovery_benchmark_prompts_commercial_constraints",
-      "docs_seo_ai_discovery_benchmark_prompts_core_prompts",
-      "docs_seo_ai_discovery_benchmark_prompts_default_mode_d1",
-      "docs_seo_ai_discovery_benchmark_prompts_deliberate_non_fit_controls",
-      "docs_seo_ai_discovery_benchmark_prompts_exact_product_fit",
-      "docs_seo_ai_discovery_benchmark_prompts_exact_two_turn_reproduction",
-      "docs_seo_ai_discovery_benchmark_prompts_f01",
-      "docs_seo_ai_discovery_benchmark_prompts_f02",
-      "docs_seo_ai_discovery_benchmark_prompts_f03",
-      "docs_seo_ai_discovery_benchmark_prompts_f04",
-      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s1",
-      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s2",
-      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s3",
-      "docs_seo_ai_discovery_benchmark_prompts_frozen_run_order",
-      "docs_seo_ai_discovery_benchmark_prompts_known_issues_for_version_1_1",
-      "docs_seo_ai_discovery_benchmark_prompts_n01",
-      "docs_seo_ai_discovery_benchmark_prompts_n02",
-      "docs_seo_ai_discovery_benchmark_prompts_planned_counts",
-      "docs_seo_ai_discovery_benchmark_prompts_pospal_ai_discovery_prompt_bank",
-      "docs_seo_ai_discovery_benchmark_prompts_r01_t1",
-      "docs_seo_ai_discovery_benchmark_prompts_r01_t2",
-      "docs_seo_ai_discovery_benchmark_prompts_version_history",
-      "docs_seo_ai_discovery_benchmark_runbook",
-      "docs_seo_ai_discovery_benchmark_scorecard"
-    ],
     "6": [
-      "docs_seo_pospal_entity_facts",
-      "docs_seo_pospal_entity_facts_confirmation_log",
-      "docs_seo_pospal_entity_facts_evidence_rules",
-      "docs_seo_pospal_entity_facts_pospal_entity_facts",
-      "docs_seo_pospal_entity_facts_remaining_implementation_detail",
-      "docs_seo_pospal_entity_facts_user_confirmed_publisher_facts",
-      "docs_seo_pospal_entity_facts_verified_public_facts",
-      "docs_seo_pospal_entity_foundation_proposal",
-      "docs_seo_pospal_entity_foundation_proposal_1_approve_the_identity_facts",
-      "docs_seo_pospal_entity_foundation_proposal_2_draft_one_distinct_public_entity_page",
-      "docs_seo_pospal_entity_foundation_proposal_3_define_the_supported_schema_graph",
-      "docs_seo_pospal_entity_foundation_proposal_4_connect_controlled_sources",
-      "docs_seo_pospal_entity_foundation_proposal_already_visible_and_verified",
-      "docs_seo_pospal_entity_foundation_proposal_current_state",
-      "docs_seo_pospal_entity_foundation_proposal_current_structured_data_gap",
-      "docs_seo_pospal_entity_foundation_proposal_exit_criteria",
-      "docs_seo_pospal_entity_foundation_proposal_explicit_exclusions",
-      "docs_seo_pospal_entity_foundation_proposal_inputs_required_from_the_user",
-      "docs_seo_pospal_entity_foundation_proposal_outcome",
-      "docs_seo_pospal_entity_foundation_proposal_proposed_entity_model",
-      "docs_seo_pospal_entity_foundation_proposal_recommended_implementation_batch",
-      "docs_seo_pospal_entity_foundation_proposal_remaining_implementation_gaps",
-      "docs_seo_pospal_entity_foundation_proposal_skill_decisions",
-      "docs_seo_pospal_entity_foundation_proposal_step_2_proposal_pospal_entity_foundation",
-      "docs_seo_pospal_entity_foundation_proposal_validation",
-      "docs_seo_pospal_entity_foundation_proposal_why_this_is_next",
-      "docs_seo_pospal_entity_page_draft",
-      "docs_seo_pospal_entity_page_draft_draft_sxetika_me_to_pospal",
-      "docs_seo_pospal_entity_page_draft_hero",
-      "docs_seo_pospal_entity_page_draft_page_metadata",
-      "docs_seo_pospal_entity_page_draft_recommended_page_copy"
+      "docs_seo_chatgpt_discovery_work_plan_ai_discovery_plan",
+      "docs_seo_chatgpt_discovery_work_plan_proof_and_independent_verification",
+      "docs_seo_chatgpt_discovery_work_plan_verifiability_gap",
+      "docs_seo_pospal_generic_hub_improvement_spec_evidence_module",
+      "docs_seo_pospal_generic_hub_improvement_spec_generic_hub_spec",
+      "docs_seo_pospal_generic_hub_improvement_spec_structured_data_policy",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_outreach_kit",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_reviewer_control",
+      "docs_seo_pospal_independent_verification_fact_pack_evidence_limitations",
+      "docs_seo_pospal_independent_verification_fact_pack_fact_pack",
+      "docs_seo_pospal_independent_verification_fact_pack_reproduction_path",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_rb_2026_01_implemented_and_audited",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_repository_only_evidence_decision_and_website_proposal",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_1_complete_seo_claim_layer",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_2_partial_controlled_verification",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_3_prepared_named_customer_proof",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_4_complete_generic_hub_specification",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_5_complete_independent_verification_materials",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_6_complete_release_measurement_protocol",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_step_7_complete_graph_and_repository_closeout",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_05_tracker_created",
+      "docs_seo_pospal_seo_proof_execution_tracker_2026_08_06_live_review_and_independent_review_preparation",
+      "docs_seo_pospal_seo_proof_execution_tracker_dependencies_and_blockers",
+      "docs_seo_pospal_seo_proof_execution_tracker_execution_board",
+      "docs_seo_pospal_seo_proof_execution_tracker_execution_log",
+      "docs_seo_pospal_seo_proof_execution_tracker_execution_tracker",
+      "docs_seo_pospal_seo_proof_execution_tracker_independent_review_next",
+      "docs_seo_pospal_seo_proof_execution_tracker_next_execution_point",
+      "docs_seo_pospal_seo_proof_execution_tracker_non_negotiable_rules",
+      "docs_seo_pospal_seo_proof_execution_tracker_pospal_seo_proof_execution_tracker",
+      "docs_seo_pospal_seo_proof_execution_tracker_purpose",
+      "docs_seo_pospal_seo_proof_execution_tracker_seo_outcome_map",
+      "docs_seo_pospal_seo_proof_execution_tracker_skills_by_execution_step",
+      "docs_seo_pospal_seo_proof_execution_tracker_update_protocol"
     ],
     "7": [
+      "docs_seo_pda_definition_page_copy_draft",
+      "docs_seo_pda_definition_page_copy_draft_hero",
+      "docs_seo_pda_definition_page_copy_draft_meta_description",
+      "docs_seo_pda_definition_page_copy_draft_pda_πρόγραμμα_παραγγελιοληψίασ_και_ταμειακή_δεν_είναι_το_ίδιο_πράγμα",
+      "docs_seo_pda_definition_page_copy_draft_pda_τι_είναι_πλήρεσ_κείμενο_σελίδασ",
+      "docs_seo_pda_definition_page_copy_draft_seo_title",
+      "docs_seo_pda_definition_page_copy_draft_και_πού_μπαίνει_το_pospal",
+      "docs_seo_pda_definition_page_copy_draft_μπορεί_ένα_κινητό_να_χρησιμοποιηθεί_ωσ_pda_σερβιτόρου",
+      "docs_seo_pda_definition_page_copy_draft_πώσ_λειτουργεί_το_pda_σερβιτόρου_με_το_pospal",
+      "docs_seo_pda_definition_page_copy_draft_σταθερή_διευκρίνιση_υποσέλιδου",
+      "docs_seo_pda_definition_page_copy_draft_συχνέσ_ερωτήσεισ",
+      "docs_seo_pda_definition_page_copy_draft_τι_κάνει_το_pda_στη_βάρδια",
+      "docs_seo_pda_definition_page_copy_draft_τι_σημαίνουν_τα_αρχικά_pda",
+      "docs_seo_pda_definition_page_copy_draft_το_pda_είναι_η_συσκευή_ή_το_πρόγραμμα",
+      "docs_seo_pda_definition_page_copy_draft_το_pda_είναι_ταμειακή_ή_φορολογικό_pos",
+      "docs_seo_pda_definition_page_copy_draft_χρειάζεται_internet_για_να_λειτουργήσει_το_pda",
+      "docs_seo_pda_definition_page_copy_draft_χρειάζεται_ειδική_συσκευή_pda",
+      "docs_seo_pda_definition_page_copy_draft_ψάχνεισ_πρόγραμμα_και_όχι_μόνο_τον_ορισμό",
+      "docs_seo_pda_definition_page_copy_draft_ψάχνεισ_τον_ορισμό_ή_πρόγραμμα_για_το_κατάστημά_σου",
+      "docs_seo_pda_definition_page_rewrite_v2",
+      "docs_seo_pda_definition_page_rewrite_v2_1_definition_and_offer",
+      "docs_seo_pda_definition_page_rewrite_v2_2_the_shift_problem_and_founder_position",
+      "docs_seo_pda_definition_page_rewrite_v2_3_how_the_phone_becomes_a_pda",
+      "docs_seo_pda_definition_page_rewrite_v2_4_price_and_fit",
+      "docs_seo_pda_definition_page_rewrite_v2_5_faq",
+      "docs_seo_pda_definition_page_rewrite_v2_6_download_close",
+      "docs_seo_pda_definition_page_rewrite_v2_copy_guardrails",
+      "docs_seo_pda_definition_page_rewrite_v2_current_public_copy_and_structure",
+      "docs_seo_pda_definition_page_rewrite_v2_mobile_distillation_decision",
+      "docs_seo_pda_definition_page_rewrite_v2_mobile_visual_rules_implemented",
+      "docs_seo_pda_definition_page_rewrite_v2_non_negotiable_page_idea",
+      "docs_seo_pda_definition_page_rewrite_v2_pda_τι_είναι_current_page_record",
+      "docs_seo_pda_definition_page_rewrite_v2_search_elements_preserved",
+      "docs_seo_pda_definition_page_rewrite_v2_voice_review"
+    ],
+    "8": [
+      "docs_seo_pda_definition_page_brief",
+      "docs_seo_pda_definition_page_brief_1_definition_hero",
+      "docs_seo_pda_definition_page_brief_2_owner_qualification_fork",
+      "docs_seo_pda_definition_page_brief_3_what_a_pda_does_and_what_it_does_not_do",
+      "docs_seo_pda_definition_page_brief_4_pda_waiter_handoff",
+      "docs_seo_pda_definition_page_brief_5_short_pospal_explanation",
+      "docs_seo_pda_definition_page_brief_6_faq",
+      "docs_seo_pda_definition_page_brief_7_final_qualification_cta",
+      "docs_seo_pda_definition_page_brief_approval_gate",
+      "docs_seo_pda_definition_page_brief_cta_map",
+      "docs_seo_pda_definition_page_brief_current_on_page_audit",
+      "docs_seo_pda_definition_page_brief_decision",
+      "docs_seo_pda_definition_page_brief_evidence",
+      "docs_seo_pda_definition_page_brief_h1",
+      "docs_seo_pda_definition_page_brief_implementation_acceptance_criteria",
+      "docs_seo_pda_definition_page_brief_keep",
+      "docs_seo_pda_definition_page_brief_measured_current_repository_html",
+      "docs_seo_pda_definition_page_brief_measured_search_console_2026_05_27_to_2026_08_26",
+      "docs_seo_pda_definition_page_brief_meta_description",
+      "docs_seo_pda_definition_page_brief_move_to_other_pages",
+      "docs_seo_pda_definition_page_brief_pda_definition_page_refocus_brief",
+      "docs_seo_pda_definition_page_brief_primary_target",
+      "docs_seo_pda_definition_page_brief_ranking_preservation_rules",
+      "docs_seo_pda_definition_page_brief_recommended_metadata",
+      "docs_seo_pda_definition_page_brief_recommended_page_argument",
+      "docs_seo_pda_definition_page_brief_reduce",
+      "docs_seo_pda_definition_page_brief_search_ownership",
+      "docs_seo_pda_definition_page_brief_secondary_targets",
+      "docs_seo_pda_definition_page_brief_terms_to_mention_but_hand_off",
+      "docs_seo_pda_definition_page_brief_title",
+      "docs_seo_pda_definition_page_brief_what_to_keep_reduce_and_move"
+    ],
+    "9": [
+      "docs_seo_owner_intent_seo_plan",
+      "docs_seo_owner_intent_seo_plan_ai_recommendation_direction",
+      "docs_seo_owner_intent_seo_plan_business_fact",
+      "docs_seo_owner_intent_seo_plan_commercial_page_priorities",
+      "docs_seo_owner_intent_seo_plan_common_trigger_events",
+      "docs_seo_owner_intent_seo_plan_current_diagnosis",
+      "docs_seo_owner_intent_seo_plan_current_step",
+      "docs_seo_owner_intent_seo_plan_execution_plan_and_skill_map",
+      "docs_seo_owner_intent_seo_plan_immediate_next_task",
+      "docs_seo_owner_intent_seo_plan_later_steps",
+      "docs_seo_owner_intent_seo_plan_locked_website_files",
+      "docs_seo_owner_intent_seo_plan_phase_1_audience_and_positioning",
+      "docs_seo_owner_intent_seo_plan_phase_2_owner_intent_search_map",
+      "docs_seo_owner_intent_seo_plan_phase_2a_pda_cluster_correction",
+      "docs_seo_owner_intent_seo_plan_phase_3_commercial_decision_page_and_ad_landing",
+      "docs_seo_owner_intent_seo_plan_phase_4_rewire_the_existing_seo_estate",
+      "docs_seo_owner_intent_seo_plan_phase_5_technical_and_machine_readable_clarity",
+      "docs_seo_owner_intent_seo_plan_phase_6_independent_authority_and_ai_recommendations",
+      "docs_seo_owner_intent_seo_plan_phase_7_paid_acquisition_alignment",
+      "docs_seo_owner_intent_seo_plan_phase_8_download_to_first_use_activation",
+      "docs_seo_owner_intent_seo_plan_phase_9_lightweight_measurement_and_iteration",
+      "docs_seo_owner_intent_seo_plan_positioning_from_the_ad",
+      "docs_seo_owner_intent_seo_plan_pospal_owner_intent_seo_plan",
+      "docs_seo_owner_intent_seo_plan_primary_target",
+      "docs_seo_owner_intent_seo_plan_product_claim_guardrails",
+      "docs_seo_owner_intent_seo_plan_purpose",
+      "docs_seo_owner_intent_seo_plan_role_of_existing_pda_content",
+      "docs_seo_owner_intent_seo_plan_search_intent_we_want",
+      "docs_seo_owner_intent_seo_plan_skills_deliberately_deferred",
+      "docs_seo_owner_intent_seo_plan_target_customer_hypothesis"
+    ],
+    "10": [
       "static_js_guides_curriculum",
       "static_js_guides_curriculum_applydevlockui",
       "static_js_guides_curriculum_basepayload",
@@ -343,7 +477,96 @@
       "static_js_guides_curriculum_updateprogress",
       "static_js_guides_curriculum_updatestepui"
     ],
-    "8": [
+    "11": [
+      "docs_seo_ai_discovery_benchmark_prompts_b01",
+      "docs_seo_ai_discovery_benchmark_prompts_b02",
+      "docs_seo_ai_discovery_benchmark_prompts_b03",
+      "docs_seo_ai_discovery_benchmark_prompts_broad_category",
+      "docs_seo_ai_discovery_benchmark_prompts_c01",
+      "docs_seo_ai_discovery_benchmark_prompts_c02",
+      "docs_seo_ai_discovery_benchmark_prompts_c03",
+      "docs_seo_ai_discovery_benchmark_prompts_commercial_constraints",
+      "docs_seo_ai_discovery_benchmark_prompts_core_prompts",
+      "docs_seo_ai_discovery_benchmark_prompts_default_mode_d1",
+      "docs_seo_ai_discovery_benchmark_prompts_deliberate_non_fit_controls",
+      "docs_seo_ai_discovery_benchmark_prompts_exact_product_fit",
+      "docs_seo_ai_discovery_benchmark_prompts_exact_two_turn_reproduction",
+      "docs_seo_ai_discovery_benchmark_prompts_f01",
+      "docs_seo_ai_discovery_benchmark_prompts_f02",
+      "docs_seo_ai_discovery_benchmark_prompts_f03",
+      "docs_seo_ai_discovery_benchmark_prompts_f04",
+      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s1",
+      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s2",
+      "docs_seo_ai_discovery_benchmark_prompts_forced_search_s3",
+      "docs_seo_ai_discovery_benchmark_prompts_frozen_run_order",
+      "docs_seo_ai_discovery_benchmark_prompts_known_issues_for_version_1_1",
+      "docs_seo_ai_discovery_benchmark_prompts_n01",
+      "docs_seo_ai_discovery_benchmark_prompts_n02",
+      "docs_seo_ai_discovery_benchmark_prompts_planned_counts",
+      "docs_seo_ai_discovery_benchmark_prompts_pospal_ai_discovery_prompt_bank",
+      "docs_seo_ai_discovery_benchmark_prompts_r01_t1",
+      "docs_seo_ai_discovery_benchmark_prompts_r01_t2",
+      "docs_seo_ai_discovery_benchmark_prompts_version_history"
+    ],
+    "12": [
+      "docs_seo_pda_audience_and_page_review",
+      "docs_seo_pda_audience_and_page_review_1_pda_ti_einai_html_keep_narrow_and_use_as_a_feeder",
+      "docs_seo_pda_audience_and_page_review_2_pda_pos_leitourgei_html_keep_as_a_short_bridge_page",
+      "docs_seo_pda_audience_and_page_review_3_pda_gia_servitoro_rebuild_as_a_commercial_owner_page",
+      "docs_seo_pda_audience_and_page_review_4_pda_gia_kafeteries_html_refocus_on_the_venue_purchase_decision",
+      "docs_seo_pda_audience_and_page_review_adjacent_page",
+      "docs_seo_pda_audience_and_page_review_approval_gate",
+      "docs_seo_pda_audience_and_page_review_cta_strategy_by_buyer_stage",
+      "docs_seo_pda_audience_and_page_review_decision",
+      "docs_seo_pda_audience_and_page_review_decision_log",
+      "docs_seo_pda_audience_and_page_review_explicit_non_targets",
+      "docs_seo_pda_audience_and_page_review_landing_pages",
+      "docs_seo_pda_audience_and_page_review_pda_gia_servitoro",
+      "docs_seo_pda_audience_and_page_review_pda_ti_einai_html",
+      "docs_seo_pda_audience_and_page_review_pospal_audience_and_pda_page_review",
+      "docs_seo_pda_audience_and_page_review_proposed_content_architecture",
+      "docs_seo_pda_audience_and_page_review_recommended_execution_order",
+      "docs_seo_pda_audience_and_page_review_recommended_role_for_every_pda_page",
+      "docs_seo_pda_audience_and_page_review_revised_audience_model",
+      "docs_seo_pda_audience_and_page_review_segment_1_active_owner_buyer",
+      "docs_seo_pda_audience_and_page_review_segment_2_operational_problem_aware_owner",
+      "docs_seo_pda_audience_and_page_review_segment_3_general_learner",
+      "docs_seo_pda_audience_and_page_review_site_totals",
+      "docs_seo_pda_audience_and_page_review_the_cannibalisation_problem",
+      "docs_seo_pda_audience_and_page_review_top_search_queries",
+      "docs_seo_pda_audience_and_page_review_what_not_to_do",
+      "docs_seo_pda_audience_and_page_review_what_search_console_shows"
+    ],
+    "13": [
+      "docs_seo_system_page_competitor_research_2026_08_30_1_first_screen_category_difference_price_action",
+      "docs_seo_system_page_competitor_research_2026_08_30_2_recognisable_shift_show_the_system_working",
+      "docs_seo_system_page_competitor_research_2026_08_30_3_complete_workflow_prove_the_category_breadth",
+      "docs_seo_system_page_competitor_research_2026_08_30_4_why_pospal_make_the_offer_comparable",
+      "docs_seo_system_page_competitor_research_2026_08_30_5_setup_replace_fear_with_a_three_step_test",
+      "docs_seo_system_page_competitor_research_2026_08_30_6_requirements_and_honest_limits",
+      "docs_seo_system_page_competitor_research_2026_08_30_7_price_trial_and_final_decision",
+      "docs_seo_system_page_competitor_research_2026_08_30_8_faq_cover_the_search_and_purchase_objections",
+      "docs_seo_system_page_competitor_research_2026_08_30_competitors_reviewed",
+      "docs_seo_system_page_competitor_research_2026_08_30_coquo_https_go_coquo_gr",
+      "docs_seo_system_page_competitor_research_2026_08_30_current_pospal_baseline",
+      "docs_seo_system_page_competitor_research_2026_08_30_fastorder_https_fastorder_gr_plans",
+      "docs_seo_system_page_competitor_research_2026_08_30_inteprof_https_inteprof_gr_systima_parangeliolipsias",
+      "docs_seo_system_page_competitor_research_2026_08_30_natural_secondary_coverage",
+      "docs_seo_system_page_competitor_research_2026_08_30_ordersoft_https_ordersoft_gr_asyrmati_paraggeliolipsia",
+      "docs_seo_system_page_competitor_research_2026_08_30_ordio_https_ordio_gr",
+      "docs_seo_system_page_competitor_research_2026_08_30_primary_ownership",
+      "docs_seo_system_page_competitor_research_2026_08_30_quickord_https_www_quickord_com_el",
+      "docs_seo_system_page_competitor_research_2026_08_30_recommended_next_deliverable",
+      "docs_seo_system_page_competitor_research_2026_08_30_recommended_page_argument",
+      "docs_seo_system_page_competitor_research_2026_08_30_scope_and_limits",
+      "docs_seo_system_page_competitor_research_2026_08_30_search_term_map",
+      "docs_seo_system_page_competitor_research_2026_08_30_serviro_https_serviro_gr",
+      "docs_seo_system_page_competitor_research_2026_08_30_system_ordering_page_competitor_research",
+      "docs_seo_system_page_competitor_research_2026_08_30_the_common_ranking_pattern",
+      "docs_seo_system_page_competitor_research_2026_08_30_the_gap_pospal_can_own",
+      "docs_seo_system_page_competitor_research_2026_08_30_what_the_page_rewrite_can_and_cannot_achieve"
+    ],
+    "14": [
       "docs_redesign_academy_plan",
       "docs_redesign_academy_plan_1_ξεκίνα_εδώ",
       "docs_redesign_academy_plan_2_κατάλογοσ_και_προϊόντα",
@@ -371,7 +594,7 @@
       "docs_redesign_academy_plan_technical_seo_launch_gate",
       "docs_redesign_academy_plan_trust_and_objection_handling"
     ],
-    "9": [
+    "15": [
       "docs_mobile_audit_2026_08_03",
       "docs_mobile_audit_2026_08_03_1",
       "docs_mobile_audit_2026_08_03_10_paraggelio_lipsia_gia_beach_bar_html",
@@ -398,7 +621,86 @@
       "docs_mobile_audit_2026_08_03_scope_and_method",
       "docs_mobile_audit_2026_08_03_what_is_already_good"
     ],
-    "10": [
+    "16": [
+      "docs_seo_pospal_seo_proof_measurement_protocol_active_experiment_protection",
+      "docs_seo_pospal_seo_proof_measurement_protocol_ai_decision_rules",
+      "docs_seo_pospal_seo_proof_measurement_protocol_ai_discovery_benchmark_protocol",
+      "docs_seo_pospal_seo_proof_measurement_protocol_ai_referral_exploration",
+      "docs_seo_pospal_seo_proof_measurement_protocol_batch_boundaries",
+      "docs_seo_pospal_seo_proof_measurement_protocol_completion_criteria",
+      "docs_seo_pospal_seo_proof_measurement_protocol_customer_reported_discovery",
+      "docs_seo_pospal_seo_proof_measurement_protocol_decision_gate",
+      "docs_seo_pospal_seo_proof_measurement_protocol_decision_this_protocol_supports",
+      "docs_seo_pospal_seo_proof_measurement_protocol_evaluation_clock",
+      "docs_seo_pospal_seo_proof_measurement_protocol_ga4_referral_and_funnel_protocol",
+      "docs_seo_pospal_seo_proof_measurement_protocol_landing_page_funnel_interpretation",
+      "docs_seo_pospal_seo_proof_measurement_protocol_link_attribution_and_utm_rules",
+      "docs_seo_pospal_seo_proof_measurement_protocol_measurement_principles",
+      "docs_seo_pospal_seo_proof_measurement_protocol_next_proof_batch",
+      "docs_seo_pospal_seo_proof_measurement_protocol_page_query_record",
+      "docs_seo_pospal_seo_proof_measurement_protocol_pospal_seo_proof_measurement_protocol",
+      "docs_seo_pospal_seo_proof_measurement_protocol_registered_batch_rb_2026_01",
+      "docs_seo_pospal_seo_proof_measurement_protocol_registered_observation_checkpoints",
+      "docs_seo_pospal_seo_proof_measurement_protocol_release_batch_register",
+      "docs_seo_pospal_seo_proof_measurement_protocol_release_scorecard",
+      "docs_seo_pospal_seo_proof_measurement_protocol_required_exports",
+      "docs_seo_pospal_seo_proof_measurement_protocol_search_console_protocol",
+      "docs_seo_pospal_seo_proof_measurement_protocol_search_success_and_guardrails",
+      "docs_seo_pospal_seo_proof_measurement_protocol_supporting_download_evidence"
+    ],
+    "17": [
+      "docs_redesign_homepage_concepts",
+      "docs_redesign_homepage_concepts_concept_a_the_order_route",
+      "docs_redesign_homepage_concepts_concept_b_the_guided_setup",
+      "docs_redesign_homepage_concepts_concept_c_the_direct_offer",
+      "docs_redesign_homepage_concepts_hero_direction",
+      "docs_redesign_homepage_concepts_hero_direction_104",
+      "docs_redesign_homepage_concepts_hero_direction_61",
+      "docs_redesign_homepage_concepts_pospal_homepage_concept_directions",
+      "docs_redesign_homepage_concepts_prototype_gate",
+      "docs_redesign_homepage_concepts_recommendation",
+      "docs_redesign_homepage_concepts_risk",
+      "docs_redesign_homepage_concepts_risk_136",
+      "docs_redesign_homepage_concepts_risk_94",
+      "docs_redesign_homepage_concepts_shared_requirements_for_any_selected_concept",
+      "docs_redesign_homepage_concepts_strengths",
+      "docs_redesign_homepage_concepts_strengths_130",
+      "docs_redesign_homepage_concepts_strengths_87",
+      "docs_redesign_homepage_concepts_structure",
+      "docs_redesign_homepage_concepts_structure_113",
+      "docs_redesign_homepage_concepts_structure_70",
+      "docs_redesign_homepage_concepts_the_question",
+      "docs_redesign_homepage_concepts_visual_character",
+      "docs_redesign_homepage_concepts_visual_character_123",
+      "docs_redesign_homepage_concepts_visual_character_80"
+    ],
+    "18": [
+      "docs_seo_pospal_generic_hub_improvement_spec_audit_method_and_limits",
+      "docs_seo_pospal_generic_hub_improvement_spec_authoritativeness",
+      "docs_seo_pospal_generic_hub_improvement_spec_critical_before_adding_stronger_claims",
+      "docs_seo_pospal_generic_hub_improvement_spec_decision",
+      "docs_seo_pospal_generic_hub_improvement_spec_draft_metadata_and_opening_copy",
+      "docs_seo_pospal_generic_hub_improvement_spec_evidence_module_contract",
+      "docs_seo_pospal_generic_hub_improvement_spec_experience",
+      "docs_seo_pospal_generic_hub_improvement_spec_expertise",
+      "docs_seo_pospal_generic_hub_improvement_spec_fact_gates_for_each_section",
+      "docs_seo_pospal_generic_hub_improvement_spec_fast_e_e_a_t_scan",
+      "docs_seo_pospal_generic_hub_improvement_spec_h1",
+      "docs_seo_pospal_generic_hub_improvement_spec_high",
+      "docs_seo_pospal_generic_hub_improvement_spec_implementation_acceptance_criteria",
+      "docs_seo_pospal_generic_hub_improvement_spec_internal_link_plan",
+      "docs_seo_pospal_generic_hub_improvement_spec_issues_by_priority",
+      "docs_seo_pospal_generic_hub_improvement_spec_lead",
+      "docs_seo_pospal_generic_hub_improvement_spec_measurement_hypotheses",
+      "docs_seo_pospal_generic_hub_improvement_spec_medium",
+      "docs_seo_pospal_generic_hub_improvement_spec_meta_description",
+      "docs_seo_pospal_generic_hub_improvement_spec_pospal_generic_search_hub_audit_and_improvement_specification",
+      "docs_seo_pospal_generic_hub_improvement_spec_proposed_information_architecture",
+      "docs_seo_pospal_generic_hub_improvement_spec_title",
+      "docs_seo_pospal_generic_hub_improvement_spec_trustworthiness",
+      "docs_seo_pospal_generic_hub_improvement_spec_weighted_scorecard"
+    ],
+    "19": [
       "seo_opportunities",
       "seo_opportunities_1_pda_in_hospitality",
       "seo_opportunities_2_pda_for_waiter",
@@ -423,7 +725,7 @@
       "seo_opportunities_source_data",
       "seo_opportunities_technical_cleanup_pages"
     ],
-    "11": [
+    "20": [
       "static_js_guides_journey",
       "static_js_guides_journey_bindreset",
       "static_js_guides_journey_bindstepinteractions",
@@ -448,7 +750,7 @@
       "static_js_guides_journey_updateprogress",
       "static_js_guides_journey_updatestepstates"
     ],
-    "12": [
+    "21": [
       "docs_seo_ai_discovery_measurement_proposal_a_broad_category_discovery",
       "docs_seo_ai_discovery_measurement_proposal_accuracy_metric",
       "docs_seo_ai_discovery_measurement_proposal_approval_gate",
@@ -472,7 +774,77 @@
       "docs_seo_ai_discovery_measurement_proposal_skill_decision",
       "docs_seo_ai_discovery_measurement_proposal_step_1_proposal_pospal_ai_discovery_measurement_baseline"
     ],
-    "13": [
+    "22": [
+      "docs_seo_pospal_seo_proof_measurement_protocol_protocol",
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target__and_how_shou_query",
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to_query",
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate_query",
+      "graphify_out_memory_query_20260831_202501_what_real_assets_and_repository_evidence_should_sh_query",
+      "guides_account_index_account_guide",
+      "guides_app_tour_index_app_tour_guide",
+      "guides_index_guides_hub",
+      "guides_printer_setup_index_printer_guide",
+      "guides_qr_menu_index_qr_guide",
+      "guides_settings_index_settings_guide",
+      "guides_troubleshooting_index_troubleshooting_guide",
+      "guides_windows_installation_index_installation_guide",
+      "paraggelio_lipsia_gia_beach_bar_page",
+      "pda_gia_kafeteries_page",
+      "pda_gia_servitoro_index_page",
+      "pda_pos_leitourgei_page",
+      "pda_ti_einai_page",
+      "prototype_pda_article_index_page",
+      "prototype_pda_article_notes_editorial_direction",
+      "sxetika_me_to_pospal_index_page",
+      "systima_paraggeliolipsias_page"
+    ],
+    "23": [
+      "agents",
+      "agents_agents_md",
+      "agents_asset_rules",
+      "agents_audience",
+      "agents_canonical_pda_proposition",
+      "agents_content_rules",
+      "agents_cta_rules",
+      "agents_funnel_rules",
+      "agents_language_standards",
+      "agents_legal_clarity_note",
+      "agents_messaging_pillars",
+      "agents_objectives",
+      "agents_positioning",
+      "agents_purpose",
+      "agents_redesign_branch_mandate",
+      "agents_repository_hygiene",
+      "agents_scope",
+      "agents_testing",
+      "agents_what_to_avoid",
+      "agents_workflow_constraints",
+      "agents_writing_style"
+    ],
+    "24": [
+      "docs_redesign_probes_living_order_route_inventory",
+      "docs_redesign_probes_living_order_route_inventory_authentic_product_evidence",
+      "docs_redesign_probes_living_order_route_inventory_before_production_promotion",
+      "docs_redesign_probes_living_order_route_inventory_deferred_assets",
+      "docs_redesign_probes_living_order_route_inventory_direction_and_composition",
+      "docs_redesign_probes_living_order_route_inventory_fit_section_redesign",
+      "docs_redesign_probes_living_order_route_inventory_full_homepage_section_completion_pass",
+      "docs_redesign_probes_living_order_route_inventory_full_homepage_verification",
+      "docs_redesign_probes_living_order_route_inventory_living_order_route_plan_and_delivery_log",
+      "docs_redesign_probes_living_order_route_inventory_motion_and_accessibility",
+      "docs_redesign_probes_living_order_route_inventory_onboarding_and_conversion",
+      "docs_redesign_probes_living_order_route_inventory_original_plan",
+      "docs_redesign_probes_living_order_route_inventory_production_and_release_qa",
+      "docs_redesign_probes_living_order_route_inventory_remaining_work",
+      "docs_redesign_probes_living_order_route_inventory_responsive_layout",
+      "docs_redesign_probes_living_order_route_inventory_route_story_and_copy",
+      "docs_redesign_probes_living_order_route_inventory_search_console_informed_next_direction",
+      "docs_redesign_probes_living_order_route_inventory_status",
+      "docs_redesign_probes_living_order_route_inventory_verification_completed",
+      "docs_redesign_probes_living_order_route_inventory_work_completed",
+      "living_order_route_motion"
+    ],
+    "25": [
       "docs_redesign_technical_seo_baseline_2026_06_19",
       "docs_redesign_technical_seo_baseline_2026_06_19_1_crawlability",
       "docs_redesign_technical_seo_baseline_2026_06_19_2_indexability",
@@ -495,7 +867,7 @@
       "docs_redesign_technical_seo_baseline_2026_06_19_search_baseline",
       "docs_redesign_technical_seo_baseline_2026_06_19_vip_urls_to_preserve"
     ],
-    "14": [
+    "26": [
       "docs_seo_ai_discovery_benchmark_runbook_citation_fields",
       "docs_seo_ai_discovery_benchmark_runbook_coding_rules",
       "docs_seo_ai_discovery_benchmark_runbook_completion_rule",
@@ -518,56 +890,12 @@
       "docs_seo_ai_discovery_benchmark_runbook_snapshot_boundary",
       "docs_seo_ai_discovery_benchmark_runbook_two_turn_reproduction"
     ],
-    "15": [
-      "docs_seo_pospal_generic_hub_improvement_spec_claim_gating_policy",
-      "docs_seo_pospal_generic_hub_improvement_spec_document",
-      "docs_seo_pospal_generic_hub_improvement_spec_download_led_architecture",
-      "docs_seo_pospal_generic_hub_improvement_spec_evidence_index_contract",
-      "docs_seo_pospal_generic_hub_improvement_spec_generic_hub_decision",
-      "docs_seo_pospal_independent_verification_fact_pack_controlled_fact_pack",
-      "docs_seo_pospal_independent_verification_fact_pack_document",
-      "docs_seo_pospal_independent_verification_fact_pack_fac_ind_001",
-      "docs_seo_pospal_independent_verification_fact_pack_independence_guardrail",
-      "docs_seo_pospal_independent_verification_fact_pack_independent_reproduction_method",
-      "docs_seo_pospal_product_fact_checklist_document",
-      "docs_seo_pospal_product_fact_checklist_evidence_status_model",
-      "docs_seo_pospal_product_fact_checklist_first_verification_run",
-      "docs_seo_pospal_product_fact_checklist_product_fact_register",
-      "docs_seo_pospal_product_fact_checklist_unsupported_claim_boundary",
-      "docs_seo_pospal_seo_claim_map_claim_to_query_map",
-      "docs_seo_pospal_seo_claim_map_document",
-      "docs_seo_pospal_seo_claim_map_download_led_funnel",
-      "docs_seo_pospal_seo_claim_map_evidence_levels",
-      "docs_seo_pospal_seo_claim_map_page_ownership_model",
-      "docs_seo_pospal_seo_claim_map_release_hypotheses"
-    ],
-    "16": [
-      "docs_redesign_probes_living_order_route_inventory_authentic_product_evidence",
-      "docs_redesign_probes_living_order_route_inventory_before_production_promotion",
-      "docs_redesign_probes_living_order_route_inventory_deferred_assets",
-      "docs_redesign_probes_living_order_route_inventory_direction_and_composition",
-      "docs_redesign_probes_living_order_route_inventory_fit_section_redesign",
-      "docs_redesign_probes_living_order_route_inventory_full_homepage_section_completion_pass",
-      "docs_redesign_probes_living_order_route_inventory_full_homepage_verification",
-      "docs_redesign_probes_living_order_route_inventory_living_order_route_plan_and_delivery_log",
-      "docs_redesign_probes_living_order_route_inventory_motion_and_accessibility",
-      "docs_redesign_probes_living_order_route_inventory_onboarding_and_conversion",
-      "docs_redesign_probes_living_order_route_inventory_original_plan",
-      "docs_redesign_probes_living_order_route_inventory_production_and_release_qa",
-      "docs_redesign_probes_living_order_route_inventory_remaining_work",
-      "docs_redesign_probes_living_order_route_inventory_responsive_layout",
-      "docs_redesign_probes_living_order_route_inventory_route_story_and_copy",
-      "docs_redesign_probes_living_order_route_inventory_search_console_informed_next_direction",
-      "docs_redesign_probes_living_order_route_inventory_status",
-      "docs_redesign_probes_living_order_route_inventory_verification_completed",
-      "docs_redesign_probes_living_order_route_inventory_work_completed",
-      "living_order_route_motion"
-    ],
-    "17": [
+    "27": [
+      "docs_seo_chatgpt_discovery_work_plan_current_checkpoint",
       "docs_seo_chatgpt_discovery_work_plan_execution_order",
       "docs_seo_chatgpt_discovery_work_plan_gap_1_pospal_is_relevant_but_not_sufficiently_verifiable",
       "docs_seo_chatgpt_discovery_work_plan_gap_2_generic_query_authority_is_weak",
-      "docs_seo_chatgpt_discovery_work_plan_gap_3_the_broad_category_hub_is_too_light_to_be_a_definitive_source",
+      "docs_seo_chatgpt_discovery_work_plan_gap_3_the_controlled_category_source_is_stronger_but_independent_operational_proof_is_still_absent",
       "docs_seo_chatgpt_discovery_work_plan_gap_4_measurement_is_not_yet_a_controlled_ai_discovery_system",
       "docs_seo_chatgpt_discovery_work_plan_initial_work_queue",
       "docs_seo_chatgpt_discovery_work_plan_inputs_needed_as_work_progresses",
@@ -585,29 +913,52 @@
       "docs_seo_chatgpt_discovery_work_plan_what_is_already_working",
       "docs_seo_chatgpt_discovery_work_plan_what_we_will_not_do"
     ],
-    "18": [
-      "docs_seo_pospal_seo_proof_execution_tracker_document",
-      "docs_seo_pospal_seo_proof_execution_tracker_download_first_rules",
-      "docs_seo_pospal_seo_proof_execution_tracker_evidence_dependency_order",
-      "docs_seo_pospal_seo_proof_execution_tracker_execution_board",
-      "docs_seo_pospal_seo_proof_execution_tracker_seo_outcome_map",
-      "docs_seo_pospal_seo_proof_measurement_protocol_active_pda_experiment_protection",
-      "docs_seo_pospal_seo_proof_measurement_protocol_decision_gate",
-      "docs_seo_pospal_seo_proof_measurement_protocol_document",
-      "docs_seo_pospal_seo_proof_measurement_protocol_equal_window_evaluation",
-      "docs_seo_pospal_seo_proof_measurement_protocol_multichannel_scorecard",
-      "docs_seo_pospal_seo_proof_measurement_protocol_release_batch_register",
-      "docs_seo_proof_records_prf_2026_001_advancement_gate",
-      "docs_seo_proof_records_prf_2026_001_controlled_workflow_test",
-      "docs_seo_proof_records_prf_2026_001_document",
-      "docs_seo_proof_records_prf_2026_001_installer_artifact_verification",
-      "docs_seo_proof_records_prf_2026_002_customer_selection_and_permission",
-      "docs_seo_proof_records_prf_2026_002_document",
-      "docs_seo_proof_records_prf_2026_002_operational_proof_record",
-      "docs_seo_proof_records_prf_2026_002_page_creation_gate",
-      "docs_seo_proof_records_prf_2026_002_result_measurement_gate"
+    "28": [
+      "docs_seo_waiter_pda_page_copy_draft_faq_που_πρέπει_να_παραμένει_ορατό_και_στο_schema",
+      "docs_seo_waiter_pda_page_copy_draft_h1",
+      "docs_seo_waiter_pda_page_copy_draft_hero",
+      "docs_seo_waiter_pda_page_copy_draft_meta_description",
+      "docs_seo_waiter_pda_page_copy_draft_pda_σερβιτόρου_κείμενο_ρόλοσ_και_οπτική_κατεύθυνση",
+      "docs_seo_waiter_pda_page_copy_draft_product_truth_όρια",
+      "docs_seo_waiter_pda_page_copy_draft_seo",
+      "docs_seo_waiter_pda_page_copy_draft_skills_used",
+      "docs_seo_waiter_pda_page_copy_draft_title",
+      "docs_seo_waiter_pda_page_copy_draft_εσωτερικοί_σύνδεσμοι",
+      "docs_seo_waiter_pda_page_copy_draft_η_θέση_του_ιδρυτή",
+      "docs_seo_waiter_pda_page_copy_draft_η_πραγματική_στιγμή_στη_βάρδια",
+      "docs_seo_waiter_pda_page_copy_draft_κεντρική_θέση",
+      "docs_seo_waiter_pda_page_copy_draft_οπτική_κατεύθυνση",
+      "docs_seo_waiter_pda_page_copy_draft_πώσ_λειτουργεί",
+      "docs_seo_waiter_pda_page_copy_draft_ρόλοσ_τησ_σελίδασ",
+      "docs_seo_waiter_pda_page_copy_draft_σταθερά_στοιχεία_που_προστατεύονται",
+      "docs_seo_waiter_pda_page_copy_draft_τελικό_cta",
+      "docs_seo_waiter_pda_page_copy_draft_τελικό_επιχείρημα_και_κείμενο",
+      "docs_seo_waiter_pda_page_copy_draft_τι_πληρώνεισ",
+      "docs_seo_waiter_pda_page_copy_draft_τι_χρειάζεται_πραγματικά"
     ],
-    "19": [
+    "29": [
+      "docs_seo_pospal_proof_system_10_evidence_index",
+      "docs_seo_pospal_proof_system_11_approval",
+      "docs_seo_pospal_proof_system_12_independent_verification_route",
+      "docs_seo_pospal_proof_system_13_publication_gate",
+      "docs_seo_pospal_proof_system_1_record_control",
+      "docs_seo_pospal_proof_system_2_content_and_buyer_job",
+      "docs_seo_pospal_proof_system_3_venue_and_permission",
+      "docs_seo_pospal_proof_system_4_problem_and_baseline",
+      "docs_seo_pospal_proof_system_5_tested_environment",
+      "docs_seo_pospal_proof_system_6_setup_record",
+      "docs_seo_pospal_proof_system_7_workflow_trace",
+      "docs_seo_pospal_proof_system_8_results",
+      "docs_seo_pospal_proof_system_9_limitations_and_non_fit",
+      "docs_seo_pospal_proof_system_claim_ledger",
+      "docs_seo_pospal_proof_system_evidence_classes",
+      "docs_seo_pospal_proof_system_evidence_pack_structure",
+      "docs_seo_pospal_proof_system_first_proof_batch",
+      "docs_seo_pospal_proof_system_outcome",
+      "docs_seo_pospal_proof_system_reusable_proof_record_template",
+      "docs_seo_pospal_proof_system_step_3_draft_pospal_proof_system"
+    ],
+    "30": [
       "docs_seo_ai_discovery_benchmark_scorecard_data_quality_check",
       "docs_seo_ai_discovery_benchmark_scorecard_default_mode_controls",
       "docs_seo_ai_discovery_benchmark_scorecard_diagnosis",
@@ -628,27 +979,26 @@
       "docs_seo_ai_discovery_benchmark_scorecard_what_is_measured",
       "docs_seo_ai_discovery_benchmark_scorecard_what_would_falsify_this_diagnosis"
     ],
-    "20": [
-      "docs_seo_pospal_entity_page_draft_copy_rationale",
-      "docs_seo_pospal_entity_page_draft_final_cta",
-      "docs_seo_pospal_entity_page_draft_implementation_checklist_after_copy_approval",
-      "docs_seo_pospal_entity_page_draft_optional_h1_alternatives",
-      "docs_seo_pospal_entity_page_draft_proposed_json_ld",
-      "docs_seo_pospal_entity_page_draft_schema_exclusions",
-      "docs_seo_pospal_entity_page_draft_άμεση_συνδρομή_χωρίσ_μεσάζοντα",
-      "docs_seo_pospal_entity_page_draft_δεν_αντικαθιστά_την_ταμειακή_σου",
-      "docs_seo_pospal_entity_page_draft_δοκίμασε_το_pospal_στη_δική_σου_βάρδια",
-      "docs_seo_pospal_entity_page_draft_επικοινωνία_απευθείασ_με_το_pospal",
-      "docs_seo_pospal_entity_page_draft_η_ταυτότητα_πίσω_από_το_pospal",
-      "docs_seo_pospal_entity_page_draft_μία_ροή_από_την_παραγγελία_μέχρι_την_κουζίνα",
-      "docs_seo_pospal_entity_page_draft_ποιοσ_βρίσκεται_πίσω_από_το_pospal",
-      "docs_seo_pospal_entity_page_draft_τι_κάνει_το_pospal",
-      "docs_seo_pospal_entity_page_draft_τιμή_και_τρόποσ_διάθεσησ",
-      "docs_seo_pospal_entity_page_draft_το_pospal_με_καθαρά_λόγια",
-      "docs_seo_pospal_entity_page_draft_το_καθαρό_όριο_του_προϊόντοσ",
-      "docs_seo_pospal_entity_page_draft_υποστήριξη_και_επίσημα_προφίλ"
+    "31": [
+      "docs_seo_pda_implementation_log_local_verified_implementation",
+      "docs_seo_pda_implementation_log_pda_implementation_log",
+      "docs_seo_system_page_competitor_research_2026_08_30_common_ranking_pattern",
+      "docs_seo_system_page_competitor_research_2026_08_30_competitor_research",
+      "docs_seo_system_page_competitor_research_2026_08_30_competitor_set",
+      "docs_seo_system_page_competitor_research_2026_08_30_pospal_market_gap",
+      "docs_seo_system_page_content_brief_buyer_question_architecture",
+      "docs_seo_system_page_content_brief_system_page_brief",
+      "docs_seo_system_page_implementation_log_delivered_offer_and_flow",
+      "docs_seo_system_page_implementation_log_system_page_implementation",
+      "docs_seo_waiter_pda_commercial_brief_shift_device_proposition",
+      "docs_seo_waiter_pda_commercial_brief_waiter_commercial_brief",
+      "docs_seo_waiter_pda_page_copy_draft_local_order_flow",
+      "docs_seo_waiter_pda_page_copy_draft_waiter_copy_draft",
+      "marketing_plan_download_trial_offer",
+      "marketing_plan_founder_voice",
+      "marketing_plan_pospal_marketing_plan"
     ],
-    "21": [
+    "32": [
       "static_js_ga_events",
       "static_js_ga_events_buildbasepayload",
       "static_js_ga_events_classifydownload",
@@ -667,7 +1017,7 @@
       "static_js_ga_events_setuppricingviewtracking",
       "static_js_ga_events_tourl"
     ],
-    "22": [
+    "33": [
       "docs_redesign_academy_technical_seo_audit",
       "docs_redesign_academy_technical_seo_audit_academy_technical_seo_audit_and_url_migration_plan",
       "docs_redesign_academy_technical_seo_audit_canonical_rules",
@@ -685,7 +1035,60 @@
       "docs_redesign_academy_technical_seo_audit_structured_data",
       "docs_redesign_academy_technical_seo_audit_url_structure"
     ],
-    "23": [
+    "34": [
+      "docs_seo_waiter_pda_commercial_brief",
+      "docs_seo_waiter_pda_commercial_brief_1_hero_η_θέση_μασ_αμέσωσ",
+      "docs_seo_waiter_pda_commercial_brief_2_το_πρόβλημα_τησ_βάρδιασ_και_η_founder_θέση",
+      "docs_seo_waiter_pda_commercial_brief_3_η_πραγματική_διαδρομή_τησ_παραγγελίασ",
+      "docs_seo_waiter_pda_commercial_brief_4_τιμή_απαιτήσεισ_και_όρια_σε_ένα_decision_block",
+      "docs_seo_waiter_pda_commercial_brief_5_buyer_faq",
+      "docs_seo_waiter_pda_commercial_brief_6_σύντομο_final_cta",
+      "docs_seo_waiter_pda_commercial_brief_files",
+      "docs_seo_waiter_pda_commercial_brief_metadata_retained",
+      "docs_seo_waiter_pda_commercial_brief_mobile_distillation",
+      "docs_seo_waiter_pda_commercial_brief_pda_σερβιτόρου_υλοποιημένη_κατεύθυνση",
+      "docs_seo_waiter_pda_commercial_brief_product_truth_guardrails",
+      "docs_seo_waiter_pda_commercial_brief_search_ownership",
+      "docs_seo_waiter_pda_commercial_brief_η_απόφαση",
+      "docs_seo_waiter_pda_commercial_brief_σε_ποιον_μιλάει",
+      "docs_seo_waiter_pda_commercial_brief_τελική_δομή_έξι_ενότητεσ"
+    ],
+    "35": [
+      "static_img_pospal_desktop_order_category_browser",
+      "static_img_pospal_desktop_order_category_search",
+      "static_img_pospal_desktop_order_coffee_category",
+      "static_img_pospal_desktop_order_current_order",
+      "static_img_pospal_desktop_order_item_modifiers",
+      "static_img_pospal_desktop_order_line_item_controls",
+      "static_img_pospal_desktop_order_new_order_action",
+      "static_img_pospal_desktop_order_numeric_keypad",
+      "static_img_pospal_desktop_order_order_line_items",
+      "static_img_pospal_desktop_order_order_notes",
+      "static_img_pospal_desktop_order_order_total",
+      "static_img_pospal_desktop_order_pospal_desktop_order_interface",
+      "static_img_pospal_desktop_order_product_option_controls",
+      "static_img_pospal_desktop_order_product_selection_grid",
+      "static_img_pospal_desktop_order_send_order_action",
+      "static_img_pospal_desktop_order_takeaway_mode"
+    ],
+    "36": [
+      "agents_product_marketing",
+      "agents_product_marketing_brand_voice",
+      "agents_product_marketing_competitive_landscape",
+      "agents_product_marketing_customer_language",
+      "agents_product_marketing_differentiation",
+      "agents_product_marketing_goals",
+      "agents_product_marketing_objections",
+      "agents_product_marketing_personas",
+      "agents_product_marketing_problems_pain_points",
+      "agents_product_marketing_product_marketing_context",
+      "agents_product_marketing_product_overview",
+      "agents_product_marketing_proof_points",
+      "agents_product_marketing_switching_dynamics",
+      "agents_product_marketing_target_audience",
+      "agents_product_marketing_website_rules"
+    ],
+    "37": [
       "docs_redesign_homepage_design_brief",
       "docs_redesign_homepage_design_brief_art_direction",
       "docs_redesign_homepage_design_brief_commercial_model",
@@ -702,39 +1105,90 @@
       "docs_redesign_homepage_design_brief_probe_phase",
       "docs_redesign_homepage_design_brief_product_claims"
     ],
-    "24": [
-      "agents_product_marketing_brand_voice",
-      "agents_product_marketing_competitive_landscape",
-      "agents_product_marketing_customer_language",
-      "agents_product_marketing_differentiation",
-      "agents_product_marketing_goals",
-      "agents_product_marketing_objections",
-      "agents_product_marketing_personas",
-      "agents_product_marketing_problems_pain_points",
-      "agents_product_marketing_product_marketing_context",
-      "agents_product_marketing_product_overview",
-      "agents_product_marketing_proof_points",
-      "agents_product_marketing_switching_dynamics",
-      "agents_product_marketing_target_audience",
-      "agents_product_marketing_website_rules"
+    "38": [
+      "docs_redesign_search_console_intent_map_2026_06_23",
+      "docs_redesign_search_console_intent_map_2026_06_23_current_backlog_source",
+      "docs_redesign_search_console_intent_map_2026_06_23_intent_classification",
+      "docs_redesign_search_console_intent_map_2026_06_23_launch_candidate_seo_page_tiers",
+      "docs_redesign_search_console_intent_map_2026_06_23_measurement",
+      "docs_redesign_search_console_intent_map_2026_06_23_operating_rule",
+      "docs_redesign_search_console_intent_map_2026_06_23_post_launch_seo_rhythm",
+      "docs_redesign_search_console_intent_map_2026_06_23_qr_menu_launch_stance",
+      "docs_redesign_search_console_intent_map_2026_06_23_search_console_intent_map_2026_06_23_export",
+      "qr_menu_customer_categories",
+      "qr_menu_customer_prices",
+      "qr_menu_included",
+      "qr_menu_launch_stance",
+      "static_qr_menu_live_code_image",
+      "static_qr_menu_live_preview_image"
     ],
-    "25": [
-      "docs_redesign_homepage_concepts",
-      "docs_redesign_homepage_concepts_concept_a_the_order_route",
-      "docs_redesign_homepage_concepts_concept_b_the_guided_setup",
-      "docs_redesign_homepage_concepts_concept_c_the_direct_offer",
-      "docs_redesign_homepage_concepts_hero_direction",
-      "docs_redesign_homepage_concepts_pospal_homepage_concept_directions",
-      "docs_redesign_homepage_concepts_prototype_gate",
-      "docs_redesign_homepage_concepts_recommendation",
-      "docs_redesign_homepage_concepts_risk",
-      "docs_redesign_homepage_concepts_shared_requirements_for_any_selected_concept",
-      "docs_redesign_homepage_concepts_strengths",
-      "docs_redesign_homepage_concepts_structure",
-      "docs_redesign_homepage_concepts_the_question",
-      "docs_redesign_homepage_concepts_visual_character"
+    "39": [
+      "docs_seo_pda_copy_vetting_report",
+      "docs_seo_pda_copy_vetting_report_1_natural_greek",
+      "docs_seo_pda_copy_vetting_report_2_ai_and_corporate_phrasing",
+      "docs_seo_pda_copy_vetting_report_3_specificity",
+      "docs_seo_pda_copy_vetting_report_4_reader_intent",
+      "docs_seo_pda_copy_vetting_report_5_sales_pressure",
+      "docs_seo_pda_copy_vetting_report_6_repetition_and_rhythm",
+      "docs_seo_pda_copy_vetting_report_7_conversion_clarity",
+      "docs_seo_pda_copy_vetting_report_edits_made_during_vetting",
+      "docs_seo_pda_copy_vetting_report_files_reviewed",
+      "docs_seo_pda_copy_vetting_report_internal_quality_score",
+      "docs_seo_pda_copy_vetting_report_pda_copy_vetting_report",
+      "docs_seo_pda_copy_vetting_report_remaining_human_decision",
+      "docs_seo_pda_copy_vetting_report_verdict",
+      "docs_seo_pda_copy_vetting_report_what_was_checked"
     ],
-    "26": [
+    "40": [
+      "docs_seo_pospal_repository_backed_website_proposal_1_broad_commercial_hub",
+      "docs_seo_pospal_repository_backed_website_proposal_2_wireless_local_network_detail_page",
+      "docs_seo_pospal_repository_backed_website_proposal_claims_allowed_in_this_release",
+      "docs_seo_pospal_repository_backed_website_proposal_claims_excluded_from_this_release",
+      "docs_seo_pospal_repository_backed_website_proposal_decision",
+      "docs_seo_pospal_repository_backed_website_proposal_implementation_acceptance_criteria",
+      "docs_seo_pospal_repository_backed_website_proposal_page_ownership_and_internal_links",
+      "docs_seo_pospal_repository_backed_website_proposal_pospal_repository_backed_website_proposal",
+      "docs_seo_pospal_repository_backed_website_proposal_release_1_outcome",
+      "docs_seo_pospal_repository_backed_website_proposal_release_1_strengthen_the_existing_content_cluster",
+      "docs_seo_pospal_repository_backed_website_proposal_release_2_pricing_clarification",
+      "docs_seo_pospal_repository_backed_website_proposal_release_and_measurement_plan",
+      "docs_seo_pospal_repository_backed_website_proposal_skills_used",
+      "docs_seo_pospal_repository_backed_website_proposal_structured_data_and_evidence_policy",
+      "docs_seo_pospal_repository_backed_website_proposal_why_this_is_the_right_seo_move"
+    ],
+    "41": [
+      "docs_seo_pospal_independent_reviewer_outreach_kit_canonical_greek_outreach_message",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_customer",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_equipment_or_hospitality_partner",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_follow_up_message",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_independent_reviewer_or_publication",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_optional_opening_by_recipient_type",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_pospal_independent_reviewer_outreach_kit",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_privacy_safe_outreach_record",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_public_safe_handoff_links",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_purpose",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_reviewer_handoff_checklist",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_send_gate",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_suggested_review_scopes",
+      "docs_seo_pospal_independent_reviewer_outreach_kit_video_creator"
+    ],
+    "42": [
+      "docs_seo_proof_records_prf_2026_002_advancement_gate",
+      "docs_seo_proof_records_prf_2026_002_current_blockers",
+      "docs_seo_proof_records_prf_2026_002_customer_evidence_request",
+      "docs_seo_proof_records_prf_2026_002_customer_selection_gate",
+      "docs_seo_proof_records_prf_2026_002_document",
+      "docs_seo_proof_records_prf_2026_002_independent_corroboration_option",
+      "docs_seo_proof_records_prf_2026_002_measurement_gate_for_results",
+      "docs_seo_proof_records_prf_2026_002_operational_record",
+      "docs_seo_proof_records_prf_2026_002_page_creation_gate",
+      "docs_seo_proof_records_prf_2026_002_permission_matrix",
+      "docs_seo_proof_records_prf_2026_002_prf_2026_002_first_named_customer_operational_proof",
+      "docs_seo_proof_records_prf_2026_002_public_proof_outline",
+      "docs_seo_proof_records_prf_2026_002_seo_and_buyer_job",
+      "docs_seo_proof_records_prf_2026_002_venue_record"
+    ],
+    "43": [
       "impeccable_critique_2026_06_22t15_08_59z_prototype_homepage_v3_index_html",
       "impeccable_critique_2026_06_22t15_08_59z_prototype_homepage_v3_index_html_anti_patterns_verdict",
       "impeccable_critique_2026_06_22t15_08_59z_prototype_homepage_v3_index_html_design_health_score",
@@ -750,37 +1204,83 @@
       "impeccable_critique_2026_06_22t15_08_59z_prototype_homepage_v3_index_html_questions_to_consider",
       "impeccable_critique_2026_06_22t15_08_59z_prototype_homepage_v3_index_html_what_s_working"
     ],
-    "27": [
-      "docs_redesign_search_console_intent_map_2026_06_23",
-      "docs_redesign_search_console_intent_map_2026_06_23_current_backlog_source",
-      "docs_redesign_search_console_intent_map_2026_06_23_intent_classification",
-      "docs_redesign_search_console_intent_map_2026_06_23_launch_candidate_seo_page_tiers",
-      "docs_redesign_search_console_intent_map_2026_06_23_measurement",
-      "docs_redesign_search_console_intent_map_2026_06_23_operating_rule",
-      "docs_redesign_search_console_intent_map_2026_06_23_post_launch_seo_rhythm",
-      "qr_menu_customer_categories",
-      "qr_menu_customer_prices",
-      "qr_menu_included",
-      "qr_menu_launch_stance",
-      "static_qr_menu_live_code_image",
-      "static_qr_menu_live_preview_image"
+    "44": [
+      "marketing_plan_10_risks_open_questions",
+      "marketing_plan_11_next_actions",
+      "marketing_plan_1_goals",
+      "marketing_plan_2_audience_tbd",
+      "marketing_plan_3_1_founder_voice_and_page_ethos",
+      "marketing_plan_3_positioning_tbd",
+      "marketing_plan_4_offer_pricing_tbd",
+      "marketing_plan_5_messaging_pillars_tbd",
+      "marketing_plan_6_funnel_cta",
+      "marketing_plan_7_website_plan",
+      "marketing_plan_8_assets_proof_tbd",
+      "marketing_plan_9_1_product_opportunities_internal_not_promised",
+      "marketing_plan_9_metrics",
+      "marketing_plan_pospal_marketing_plan_working_draft"
     ],
-    "28": [
-      "docs_seo_post_redesign_evaluation_2026_08_02_90_day_execution_sequence",
-      "docs_seo_post_redesign_evaluation_2026_08_02_days_0_7_restore_measurement_and_url_equity",
-      "docs_seo_post_redesign_evaluation_2026_08_02_days_15_42_first_improvement_batch",
-      "docs_seo_post_redesign_evaluation_2026_08_02_days_43_70_build_first_party_authority",
-      "docs_seo_post_redesign_evaluation_2026_08_02_days_71_90_measure_and_choose_the_next_batch",
-      "docs_seo_post_redesign_evaluation_2026_08_02_days_8_14_make_the_first_evidence_led_seo_decisions",
-      "docs_seo_post_redesign_evaluation_2026_08_02_p0_verify_before_changes",
-      "docs_seo_post_redesign_evaluation_2026_08_02_p1_high_impact",
-      "docs_seo_post_redesign_evaluation_2026_08_02_p2_supporting_improvements",
-      "docs_seo_post_redesign_evaluation_2026_08_02_phase_7_backlog_and_90_day_roadmap",
-      "docs_seo_post_redesign_evaluation_2026_08_02_prioritized_backlog",
-      "docs_seo_post_redesign_evaluation_2026_08_02_success_criteria",
-      "docs_seo_post_redesign_evaluation_2026_08_02_watch_do_not_expand_yet"
+    "45": [
+      "agents_product_marketing_download_first_positioning",
+      "docs_seo_keyword_funnel_research_2026_08_31_keyword_research",
+      "docs_seo_keyword_funnel_research_2026_08_31_search_demand_evidence",
+      "docs_seo_keyword_funnel_research_2026_08_31_single_funnel",
+      "docs_seo_owner_intent_seo_plan_active_owner_buyer",
+      "docs_seo_owner_intent_seo_plan_owner_intent_plan",
+      "docs_seo_owner_intent_seo_plan_page_ownership_map",
+      "docs_seo_pda_audience_and_page_review_audience_review",
+      "docs_seo_pda_audience_and_page_review_cannibalisation_correction",
+      "docs_seo_pda_audience_and_page_review_three_segment_model",
+      "docs_seo_pda_definition_page_brief_definition_brief",
+      "docs_seo_pda_definition_page_brief_owner_qualification_fork",
+      "docs_seo_pda_definition_page_brief_ranking_preservation"
     ],
-    "29": [
+    "46": [
+      "docs_seo_pospal_seo_claim_map_asyrmati_paraggeliolipsia_html",
+      "docs_seo_pospal_seo_claim_map_content_cluster_map",
+      "docs_seo_pospal_seo_claim_map_evidence_to_seo_rules",
+      "docs_seo_pospal_seo_claim_map_existing_pda_pages",
+      "docs_seo_pospal_seo_claim_map_locked_conversion_pages",
+      "docs_seo_pospal_seo_claim_map_page_ownership_boundaries",
+      "docs_seo_pospal_seo_claim_map_pospal_seo_claim_to_query_map",
+      "docs_seo_pospal_seo_claim_map_priority_claim_map",
+      "docs_seo_pospal_seo_claim_map_purpose",
+      "docs_seo_pospal_seo_claim_map_release_hypotheses",
+      "docs_seo_pospal_seo_claim_map_sxetika_me_to_pospal",
+      "docs_seo_pospal_seo_claim_map_systima_paraggeliolipsias_html",
+      "docs_seo_pospal_seo_claim_map_times_html"
+    ],
+    "47": [
+      "docs_seo_proof_records_prf_2026_001_advancement_gate",
+      "docs_seo_proof_records_prf_2026_001_artifact_verification",
+      "docs_seo_proof_records_prf_2026_001_candidate_environment_observation",
+      "docs_seo_proof_records_prf_2026_001_current_limitations",
+      "docs_seo_proof_records_prf_2026_001_device_and_network_checkpoints",
+      "docs_seo_proof_records_prf_2026_001_evidence_index",
+      "docs_seo_proof_records_prf_2026_001_installation_checkpoints",
+      "docs_seo_proof_records_prf_2026_001_kitchen_and_printer_checkpoints",
+      "docs_seo_proof_records_prf_2026_001_owner_decision",
+      "docs_seo_proof_records_prf_2026_001_prf_2026_001_controlled_windows_installation_and_first_order_verification",
+      "docs_seo_proof_records_prf_2026_001_record_control",
+      "docs_seo_proof_records_prf_2026_001_seo_and_buyer_job",
+      "docs_seo_proof_records_prf_2026_001_test_method_awaiting_execution"
+    ],
+    "48": [
+      "marketing_plan_0_00_0_08",
+      "marketing_plan_0_08_0_16",
+      "marketing_plan_0_16_0_22",
+      "marketing_plan_0_22_0_31",
+      "marketing_plan_0_31_0_43",
+      "marketing_plan_0_43_0_54",
+      "marketing_plan_0_54_1_01",
+      "marketing_plan_1_01_1_13",
+      "marketing_plan_1_13_1_23",
+      "marketing_plan_1_23_1_31",
+      "marketing_plan_1_31_1_37",
+      "marketing_plan_appendix_a_founder_ad_and_voice_source",
+      "marketing_plan_end_card"
+    ],
+    "49": [
       "guides_internal_utm_governance",
       "guides_internal_utm_governance_approved_values",
       "guides_internal_utm_governance_examples",
@@ -794,7 +1294,7 @@
       "guides_internal_utm_governance_utm_source",
       "guides_internal_utm_governance_utm_term"
     ],
-    "30": [
+    "50": [
       "static_js_academy_progress",
       "static_js_academy_progress_defaultstate",
       "static_js_academy_progress_getlessonchecks",
@@ -808,20 +1308,70 @@
       "static_js_academy_progress_savestate",
       "static_js_academy_progress_setlessonchecks"
     ],
-    "31": [
-      "beach_bar_order_page",
-      "cafe_pda_page",
-      "download_first_funnel",
-      "greek_hospitality_audience",
-      "order_system_page",
-      "pda_definition_page",
-      "pda_education_cluster",
-      "pda_how_it_works_page",
-      "waiter_pda_page",
-      "waiter_service_cluster",
-      "wireless_order_page"
+    "51": [
+      "docs_seo_pda_implementation_log_definition_page",
+      "docs_seo_pda_implementation_log_definition_page_focused_seo_improvements_2026_08_30",
+      "docs_seo_pda_implementation_log_findings_and_changes",
+      "docs_seo_pda_implementation_log_pages_changed",
+      "docs_seo_pda_implementation_log_pda_page_implementation_log",
+      "docs_seo_pda_implementation_log_post_implementation_on_page_score",
+      "docs_seo_pda_implementation_log_verification",
+      "docs_seo_pda_implementation_log_verification_132",
+      "docs_seo_pda_implementation_log_verification_154",
+      "docs_seo_pda_implementation_log_visual_polish_review_2026_08_30",
+      "docs_seo_pda_implementation_log_waiter_pda_page"
     ],
-    "32": [
+    "52": [
+      "docs_seo_post_redesign_evaluation_2026_08_02",
+      "docs_seo_post_redesign_evaluation_2026_08_02_evidence_rules",
+      "docs_seo_post_redesign_evaluation_2026_08_02_known_baselines",
+      "docs_seo_post_redesign_evaluation_2026_08_02_next_update",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_status",
+      "docs_seo_post_redesign_evaluation_2026_08_02_pospal_post_redesign_seo_evaluation",
+      "docs_seo_post_redesign_evaluation_2026_08_02_pre_launch_intent_clusters",
+      "docs_seo_post_redesign_evaluation_2026_08_02_purpose",
+      "docs_seo_post_redesign_evaluation_2026_08_02_search_console_before_launch",
+      "docs_seo_post_redesign_evaluation_2026_08_02_skills_and_order_of_work",
+      "docs_seo_post_redesign_evaluation_2026_08_02_working_findings_and_decisions"
+    ],
+    "53": [
+      "docs_seo_system_page_implementation_log_approved_direction",
+      "docs_seo_system_page_implementation_log_changes",
+      "docs_seo_system_page_implementation_log_commercial_system_page_implementation_record",
+      "docs_seo_system_page_implementation_log_follow_up_mobile_optimization_2026_08_30",
+      "docs_seo_system_page_implementation_log_handoff",
+      "docs_seo_system_page_implementation_log_measured_checks",
+      "docs_seo_system_page_implementation_log_responsive_and_functional_verification",
+      "docs_seo_system_page_implementation_log_scope_protection",
+      "docs_seo_system_page_implementation_log_seo_and_conversion_checks",
+      "docs_seo_system_page_implementation_log_skills_used",
+      "docs_seo_system_page_implementation_log_what_changed"
+    ],
+    "54": [
+      "agents_agent_guidance",
+      "agents_product_marketing_product_truth_boundaries",
+      "agents_site_guardrails",
+      "asyrmati_paraggeliolipsia_non_fiscal_boundary",
+      "docs_seo_pda_article_visual_story_brief_anatomy_of_one_order",
+      "docs_seo_pda_article_visual_story_brief_evidence_led_design",
+      "docs_seo_pda_article_visual_story_brief_visual_story_brief",
+      "docs_seo_pda_copy_vetting_report_copy_vetting_report",
+      "docs_seo_pda_copy_vetting_report_natural_greek_quality",
+      "docs_seo_system_page_content_brief_conversion_guardrails"
+    ],
+    "55": [
+      "asyrmati_paraggeliolipsia_internet_dependency_boundary",
+      "asyrmati_paraggeliolipsia_local_link_connection",
+      "asyrmati_paraggeliolipsia_local_network_route",
+      "asyrmati_paraggeliolipsia_reachable_local_network",
+      "asyrmati_paraggeliolipsia_reconnect_and_internet_boundary",
+      "asyrmati_paraggeliolipsia_trial_terms",
+      "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "docs_seo_pda_definition_page_copy_draft_historical_copy_draft",
+      "docs_seo_pda_definition_page_rewrite_v2_founder_voice_record",
+      "docs_seo_pda_definition_page_rewrite_v2_three_step_device_flow"
+    ],
+    "56": [
       "guides_internal_ga4_setup_checklist",
       "guides_internal_ga4_setup_checklist_custom_dimensions_event_scope",
       "guides_internal_ga4_setup_checklist_custom_insights",
@@ -833,7 +1383,7 @@
       "guides_internal_ga4_setup_checklist_saved_explorations",
       "guides_internal_ga4_setup_checklist_traffic_quality"
     ],
-    "33": [
+    "57": [
       "guides_internal_specialist_guide_template",
       "guides_internal_specialist_guide_template_academy_hub_structure",
       "guides_internal_specialist_guide_template_content_block_limits_lesson_page",
@@ -845,7 +1395,7 @@
       "guides_internal_specialist_guide_template_specialist_guide_template_video_first_academy",
       "guides_internal_specialist_guide_template_video_url_policy"
     ],
-    "34": [
+    "58": [
       "short",
       "short_audience",
       "short_conversion_path",
@@ -857,7 +1407,29 @@
       "short_pospal_website_redesign_brief",
       "short_work_order"
     ],
-    "35": [
+    "59": [
+      "asyrmati_paraggeliolipsia_same_device_reconnect",
+      "systima_paraggeliolipsias_non_fiscal_boundary",
+      "systima_paraggeliolipsias_ordering_system_hub_page",
+      "systima_paraggeliolipsias_printer_category_routing",
+      "systima_paraggeliolipsias_qr_customer_menu",
+      "systima_paraggeliolipsias_same_device_pending_queue",
+      "systima_paraggeliolipsias_simple_and_table_modes",
+      "systima_paraggeliolipsias_staff_device_to_windows_route",
+      "systima_paraggeliolipsias_trial_terms"
+    ],
+    "60": [
+      "beach_bar_order_page",
+      "cafe_pda_page",
+      "download_first_funnel",
+      "greek_hospitality_audience",
+      "pda_definition_page",
+      "pda_education_cluster",
+      "pda_how_it_works_page",
+      "waiter_pda_page",
+      "waiter_service_cluster"
+    ],
+    "61": [
       "product",
       "product_accessibility_inclusion",
       "product_anti_references",
@@ -868,7 +1440,7 @@
       "product_register",
       "product_users"
     ],
-    "36": [
+    "62": [
       "static_js_home_motion",
       "static_js_home_motion_activateshiftstep",
       "static_js_home_motion_clearroutetimers",
@@ -878,7 +1450,61 @@
       "static_js_home_motion_setstage",
       "static_js_home_motion_updateclock"
     ],
-    "37": [
+    "63": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_current_status",
+      "docs_seo_post_redesign_evaluation_2026_08_02_device_and_search_appearance_deltas",
+      "docs_seo_post_redesign_evaluation_2026_08_02_keyword_quality_validation_gate",
+      "docs_seo_post_redesign_evaluation_2026_08_02_landing_page_deltas",
+      "docs_seo_post_redesign_evaluation_2026_08_02_matched_intent_cluster_deltas_visible_queries",
+      "docs_seo_post_redesign_evaluation_2026_08_02_mobile_filtered_diagnosis_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_3_search_performance_diagnosis"
+    ],
+    "64": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_data_availability_audit_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_github_installer_evidence_2026_08_02",
+      "docs_seo_post_redesign_evaluation_2026_08_02_measurement_funnel",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_1_measurement_baseline",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_1_open_inputs",
+      "docs_seo_post_redesign_evaluation_2026_08_02_product_truth_check",
+      "docs_seo_post_redesign_evaluation_2026_08_02_required_comparison_periods"
+    ],
+    "65": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_p0_verify_before_changes",
+      "docs_seo_post_redesign_evaluation_2026_08_02_p1_high_impact",
+      "docs_seo_post_redesign_evaluation_2026_08_02_p2_supporting_improvements",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_7_backlog_and_90_day_roadmap",
+      "docs_seo_post_redesign_evaluation_2026_08_02_prioritized_backlog",
+      "docs_seo_post_redesign_evaluation_2026_08_02_success_criteria",
+      "docs_seo_post_redesign_evaluation_2026_08_02_watch_do_not_expand_yet"
+    ],
+    "66": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_p1_legacy_redirects_are_not_live",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_2_monitoring",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_2_technical_health",
+      "docs_seo_post_redesign_evaluation_2026_08_02_redirect_implementation_audit_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_reproducible_crawl_results",
+      "docs_seo_post_redesign_evaluation_2026_08_02_search_console_indexing_coverage_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_technical_scorecard"
+    ],
+    "67": [
+      "static_img_pda_equipment_atlas_equipment_atlas",
+      "static_img_pda_equipment_atlas_laptop",
+      "static_img_pda_equipment_atlas_pos_hardware_ecosystem",
+      "static_img_pda_equipment_atlas_receipt_printer",
+      "static_img_pda_equipment_atlas_rugged_pda",
+      "static_img_pda_equipment_atlas_smartphone",
+      "static_img_pda_equipment_atlas_wireless_router"
+    ],
+    "68": [
+      "static_img_pospal_icon_180_display",
+      "static_img_pospal_icon_180_green_action_keys",
+      "static_img_pospal_icon_180_keypad",
+      "static_img_pospal_icon_180_navy_green_palette",
+      "static_img_pospal_icon_180_order_terminal",
+      "static_img_pospal_icon_180_pospal_icon",
+      "static_img_pospal_icon_180_receipt"
+    ],
+    "69": [
       "docs_seo_ai_discovery_benchmark_customer_discovery_intake",
       "docs_seo_ai_discovery_benchmark_customer_discovery_intake_candidate_prompt_queue",
       "docs_seo_ai_discovery_benchmark_customer_discovery_intake_customer_reported_chatgpt_discovery_intake",
@@ -886,7 +1512,39 @@
       "docs_seo_ai_discovery_benchmark_customer_discovery_intake_privacy_and_evidence_rules",
       "docs_seo_ai_discovery_benchmark_customer_discovery_intake_report_id_cr_yyyy_nnn"
     ],
-    "38": [
+    "70": [
+      "docs_seo_pda_implementation_log",
+      "docs_seo_system_page_competitor_research_2026_08_30",
+      "docs_seo_system_page_content_brief",
+      "docs_seo_system_page_implementation_log",
+      "docs_seo_waiter_pda_page_copy_draft",
+      "marketing_plan"
+    ],
+    "71": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_90_day_execution_sequence",
+      "docs_seo_post_redesign_evaluation_2026_08_02_days_0_7_restore_measurement_and_url_equity",
+      "docs_seo_post_redesign_evaluation_2026_08_02_days_15_42_first_improvement_batch",
+      "docs_seo_post_redesign_evaluation_2026_08_02_days_43_70_build_first_party_authority",
+      "docs_seo_post_redesign_evaluation_2026_08_02_days_71_90_measure_and_choose_the_next_batch",
+      "docs_seo_post_redesign_evaluation_2026_08_02_days_8_14_make_the_first_evidence_led_seo_decisions"
+    ],
+    "72": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_architecture_findings",
+      "docs_seo_post_redesign_evaluation_2026_08_02_authority_building_rule",
+      "docs_seo_post_redesign_evaluation_2026_08_02_current_hierarchy",
+      "docs_seo_post_redesign_evaluation_2026_08_02_external_authority_and_brand_evidence",
+      "docs_seo_post_redesign_evaluation_2026_08_02_measured_inbound_internal_links",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_6_architecture_and_authority"
+    ],
+    "73": [
+      "static_img_pospal_icon_96_button_grid",
+      "static_img_pospal_icon_96_display_panel",
+      "static_img_pospal_icon_96_green_action_button",
+      "static_img_pospal_icon_96_order_entry_workflow",
+      "static_img_pospal_icon_96_order_terminal_illustration",
+      "static_img_pospal_icon_96_pospal_icon"
+    ],
+    "74": [
       "static_pricing",
       "static_pricing_applypricingtodom",
       "static_pricing_ensurepricingloaded",
@@ -894,284 +1552,498 @@
       "static_pricing_guesscurrencysymbol",
       "static_pricing_normalizepricingpayload"
     ],
-    "39": [
-      "agents_product_marketing_download_first_funnel",
-      "docs_seo_post_redesign_evaluation_2026_08_02_locked_conversion_core",
-      "download_index_installer_handoff",
-      "guides_index_onboarding_hub",
-      "index_homepage_conversion_surface"
+    "75": [
+      "docs_seo_pda_implementation_log_final_local_checks",
+      "docs_seo_pda_implementation_log_handoff",
+      "docs_seo_pda_implementation_log_local_on_page_assessment",
+      "docs_seo_pda_implementation_log_scope_and_decisions",
+      "docs_seo_pda_implementation_log_waiter_page_founder_voice_and_visual_update_2026_08_30"
     ],
-    "40": [
-      "docs_seo_pospal_proof_system_claim_ledger",
-      "docs_seo_pospal_proof_system_document",
-      "docs_seo_pospal_proof_system_evidence_classes",
-      "docs_seo_pospal_proof_system_publication_gate",
-      "docs_seo_pospal_proof_system_reusable_proof_record"
+    "76": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_first_metadata_test_deployed_and_verified_on_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_measured_overlap_evidence",
+      "docs_seo_post_redesign_evaluation_2026_08_02_ownership_assessment_2026_08_02",
+      "docs_seo_post_redesign_evaluation_2026_08_02_page_filtered_query_evidence_2026_08_03",
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_4_query_to_page_mapping"
     ],
-    "41": [
+    "77": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_phase_5_on_page_audit_order",
+      "docs_seo_post_redesign_evaluation_2026_08_02_priority_recommendations_from_the_on_page_pass",
+      "docs_seo_post_redesign_evaluation_2026_08_02_provisional_scorecard_2026_08_02",
+      "docs_seo_post_redesign_evaluation_2026_08_02_shared_measured_strengths",
+      "docs_seo_post_redesign_evaluation_2026_08_02_shared_measured_weaknesses"
+    ],
+    "78": [
+      "docs_seo_system_page_implementation_log_estimated_scorecard_same_weights_as_the_preceding_audit",
+      "docs_seo_system_page_implementation_log_follow_up_seo_audit_fixes_and_recheck_2026_08_30",
+      "docs_seo_system_page_implementation_log_implemented_fixes",
+      "docs_seo_system_page_implementation_log_measured_local_recheck",
+      "docs_seo_system_page_implementation_log_remaining_gaps_and_handoff"
+    ],
+    "79": [
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target_and_how_shou",
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target_and_how_shou_answer",
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target_and_how_shou_outcome",
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target_and_how_shou_q_who_does_pospal_seo_currently_target_and_how_should_it_target_self_installing_hospitality_owners",
+      "graphify_out_memory_query_20260829_090209_who_does_pospal_seo_currently_target_and_how_shou_source_nodes"
+    ],
+    "80": [
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to",
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to_answer",
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to_outcome",
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to_q_how_should_the_ordering_system_hub_page_connect_to_the_pospal_download_first_self_service_funnel",
+      "graphify_out_memory_query_20260829_101022_how_should_the_ordering_system_hub_page_connect_to_source_nodes"
+    ],
+    "81": [
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate",
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate_answer",
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate_outcome",
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate_q_review_who_pospal_seo_is_targeting_and_reevaluate_the_pda_pages_that_bring_visitors_who_do_not_download",
+      "graphify_out_memory_query_20260829_102259_review_who_pospal_seo_is_targeting_and_reevaluate_source_nodes"
+    ],
+    "82": [
       "mobile_viewport_density_fix",
       "monthly_price_23_90",
       "not_fiscal_pos_boundary",
       "pricing_page",
       "prototype_homepage_v3"
     ],
-    "42": [
+    "83": [
       "readme",
       "readme_custom_domain_setup",
       "readme_linking_to_downloads",
       "readme_pospal_website_github_pages",
       "readme_updating_the_site"
     ],
-    "43": [
+    "84": [
       "desktop_menu_item_grid",
       "desktop_order_ticket_panel",
       "kitchen_order_workflow",
       "static_img_pospal_desktop_order_screenshot"
     ],
-    "44": [
+    "85": [
+      "docs_seo_post_redesign_evaluation_2026_08_02_locked_conversion_core",
+      "download_index_installer_handoff",
+      "guides_index_onboarding_hub",
+      "index_homepage_conversion_surface"
+    ],
+    "86": [
       "package",
       "package_devdependencies",
       "package_devdependencies_axe_core_playwright",
       "package_devdependencies_playwright"
     ],
-    "45": [
+    "87": [
       "context",
       "context_pospal_context",
       "context_relationships"
     ],
-    "46": [
+    "88": [
       "prototype_homepage_v3_motion",
       "prototype_homepage_v3_motion_stage",
       "prototype_homepage_v3_motion_toggle"
     ],
-    "47": [
+    "89": [
       "static_js_academy",
       "static_js_academy_escapetext",
       "static_js_academy_guidenav"
     ],
-    "48": [
+    "90": [
       "prototype_readme",
       "prototype_readme_pospal_redesign_prototype"
     ],
-    "49": [
+    "91": [
       "user_preferences",
       "user_preferences_user_communication_preferences"
     ],
-    "50": [
+    "92": [
+      "_agents_product_marketing_download_first_positioning"
+    ],
+    "93": [
+      "_agents_product_marketing_source_verified_product_proof"
+    ],
+    "94": [
       "adr_launch_inventory_freeze"
     ],
-    "51": [
+    "95": [
       "agents_governance"
     ],
-    "52": [
+    "96": [
       "agents_graphify_update_rule"
     ],
-    "53": [
+    "97": [
       "agents_locked_pages_rule"
     ],
-    "54": [
-      "agents_product_marketing_fiscal_boundary"
-    ],
-    "55": [
-      "agents_product_marketing_greek_hospitality_audience"
-    ],
-    "56": [
-      "agents_product_marketing_pospal_positioning"
-    ],
-    "57": [
-      "agents_product_marketing_verified_offer"
-    ],
-    "58": [
+    "98": [
       "agents_public_asset_rule"
     ],
-    "59": [
+    "99": [
       "agents_repository_hygiene_rule"
     ],
-    "60": [
+    "100": [
       "assets_desktop_support"
     ],
-    "61": [
+    "101": [
       "direct_subscription_model"
     ],
-    "62": [
+    "102": [
       "discovery_to_first_shift_journey"
     ],
-    "63": [
+    "103": [
       "docs_capture_archive_cleanup"
     ],
-    "64": [
+    "104": [
+      "docs_seo_chatgpt_discovery_work_plan_repository_backed_release_step"
+    ],
+    "105": [
+      "docs_seo_pospal_generic_hub_improvement_spec_evidence_gated_implementation"
+    ],
+    "106": [
+      "docs_seo_pospal_generic_hub_improvement_spec_evidence_index_hub"
+    ],
+    "107": [
+      "docs_seo_pospal_generic_hub_improvement_spec_generic_hub_improvement_specification"
+    ],
+    "108": [
+      "docs_seo_pospal_independent_verification_fact_pack_controlled_fact_pack"
+    ],
+    "109": [
+      "docs_seo_pospal_independent_verification_fact_pack_fac_ind_001"
+    ],
+    "110": [
+      "docs_seo_pospal_independent_verification_fact_pack_independence_guardrail"
+    ],
+    "111": [
+      "docs_seo_pospal_independent_verification_fact_pack_independent_reproduction_method"
+    ],
+    "112": [
+      "docs_seo_pospal_product_fact_checklist_repository_evidence_boundary"
+    ],
+    "113": [
+      "docs_seo_pospal_product_fact_checklist_source_verified_fact_register"
+    ],
+    "114": [
+      "docs_seo_pospal_proof_system_document"
+    ],
+    "115": [
+      "docs_seo_pospal_proof_system_publication_gate"
+    ],
+    "116": [
+      "docs_seo_pospal_proof_system_reusable_proof_record"
+    ],
+    "117": [
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_live_measurement_pending"
+    ],
+    "118": [
+      "docs_seo_pospal_repository_backed_release_audit_2026_08_05_release_1_verification"
+    ],
+    "119": [
+      "docs_seo_pospal_repository_backed_website_proposal_existing_page_strategy"
+    ],
+    "120": [
+      "docs_seo_pospal_repository_backed_website_proposal_release_1_content_cluster"
+    ],
+    "121": [
+      "docs_seo_pospal_seo_claim_map_claim_to_query_map"
+    ],
+    "122": [
+      "docs_seo_pospal_seo_claim_map_download_led_funnel"
+    ],
+    "123": [
+      "docs_seo_pospal_seo_claim_map_evidence_levels"
+    ],
+    "124": [
+      "docs_seo_pospal_seo_claim_map_page_ownership_model"
+    ],
+    "125": [
+      "docs_seo_pospal_seo_proof_execution_tracker_clean_graph_health"
+    ],
+    "126": [
+      "docs_seo_pospal_seo_proof_execution_tracker_graph_closeout"
+    ],
+    "127": [
+      "docs_seo_pospal_seo_proof_execution_tracker_rb_2026_01_execution_record"
+    ],
+    "128": [
+      "docs_seo_pospal_seo_proof_measurement_protocol_rb_2026_01_batch_register"
+    ],
+    "129": [
       "docs_seo_post_redesign_evaluation_2026_08_02_internal_link_imbalance"
     ],
-    "65": [
+    "130": [
       "docs_seo_post_redesign_evaluation_2026_08_02_legacy_redirect_failure"
     ],
-    "66": [
+    "131": [
       "docs_seo_post_redesign_evaluation_2026_08_02_measurement_baseline"
     ],
-    "67": [
+    "132": [
       "docs_seo_post_redesign_evaluation_2026_08_02_ninety_day_roadmap"
     ],
-    "68": [
+    "133": [
       "docs_seo_post_redesign_evaluation_2026_08_02_pda_intent_overlap"
     ],
-    "69": [
+    "134": [
       "docs_seo_post_redesign_evaluation_2026_08_02_seo_expansion_gate"
     ],
-    "70": [
+    "135": [
+      "docs_seo_proof_records_prf_2026_001_artifact_only_verification_record"
+    ],
+    "136": [
+      "docs_seo_proof_records_prf_2026_001_installer_artifact_integrity"
+    ],
+    "137": [
+      "docs_seo_proof_records_prf_2026_001_owner_cancelled_execution"
+    ],
+    "138": [
+      "docs_seo_proof_records_prf_2026_002_customer_selection_and_permission"
+    ],
+    "139": [
+      "docs_seo_proof_records_prf_2026_002_operational_proof_record"
+    ],
+    "140": [
+      "docs_seo_proof_records_prf_2026_002_result_measurement_gate"
+    ],
+    "141": [
       "download_page_handoff"
     ],
-    "71": [
+    "142": [
       "ga4_key_events"
     ],
-    "72": [
+    "143": [
       "gitignore_generated_artifact_rules"
     ],
-    "73": [
+    "144": [
       "guide_measurement_events"
     ],
-    "74": [
+    "145": [
       "homepage_order_route_direction"
     ],
-    "75": [
+    "146": [
       "locked_conversion_core"
     ],
-    "76": [
+    "147": [
       "pospal_artifacts_download_host"
     ],
-    "77": [
+    "148": [
       "pospal_product"
     ],
-    "78": [
+    "149": [
       "redesign_ia_onboarding"
     ],
-    "79": [
+    "150": [
       "search_console_intent_map"
     ],
-    "80": [
+    "151": [
       "seo_expansion_gate"
     ],
-    "81": [
+    "152": [
       "simple_guides_surface"
     ],
-    "82": [
+    "153": [
       "static_js_decision_pages"
     ],
-    "83": [
+    "154": [
       "technical_seo_baseline"
     ],
-    "84": [
+    "155": [
       "thirty_day_no_card_trial"
     ],
-    "85": [
+    "156": [
       "truthful_offline_sync_story"
     ],
-    "86": [
+    "157": [
       "video_first_guide_template"
     ],
-    "87": [
+    "158": [
       "windows_installer_download"
     ]
   },
   "cohesion": {
-    "0": 0.03076923076923077,
-    "1": 0.0425531914893617,
-    "2": 0.1036077705827937,
-    "3": 0.05128205128205128,
-    "4": 0.05555555555555555,
-    "5": 0.0625,
-    "6": 0.06666666666666667,
-    "7": 0.15402298850574714,
-    "8": 0.07692307692307693,
-    "9": 0.08,
-    "10": 0.08695652173913043,
-    "11": 0.19367588932806323,
-    "12": 0.09090909090909091,
-    "13": 0.09523809523809523,
-    "14": 0.09523809523809523,
-    "15": 0.1523809523809524,
-    "16": 0.1,
-    "17": 0.1,
-    "18": 0.13157894736842105,
-    "19": 0.10526315789473684,
-    "20": 0.1111111111111111,
-    "21": 0.27205882352941174,
-    "22": 0.125,
-    "23": 0.13333333333333333,
-    "24": 0.14285714285714285,
-    "25": 0.25274725274725274,
-    "26": 0.14285714285714285,
-    "27": 0.15384615384615385,
-    "28": 0.15384615384615385,
-    "29": 0.16666666666666666,
-    "30": 0.2878787878787879,
-    "31": 0.2909090909090909,
-    "32": 0.2,
-    "33": 0.2,
-    "34": 0.2,
-    "35": 0.2222222222222222,
-    "36": 0.42857142857142855,
-    "37": 0.3333333333333333,
-    "38": 0.5333333333333333,
-    "39": 0.5,
-    "40": 0.4,
-    "41": 0.4,
-    "42": 0.4,
-    "43": 0.5,
-    "44": 0.5,
-    "45": 0.6666666666666666,
-    "46": 0.6666666666666666,
-    "47": 0.6666666666666666,
-    "48": 1.0,
-    "49": 1.0,
-    "50": 1.0,
-    "51": 1.0,
-    "52": 1.0,
-    "53": 1.0,
-    "54": 1.0,
-    "55": 1.0,
-    "56": 1.0,
-    "57": 1.0,
-    "58": 1.0,
-    "59": 1.0,
-    "60": 1.0,
-    "61": 1.0,
-    "62": 1.0,
-    "63": 1.0,
-    "64": 1.0,
-    "65": 1.0,
-    "66": 1.0,
-    "67": 1.0,
-    "68": 1.0,
-    "69": 1.0,
-    "70": 1.0,
-    "71": 1.0,
-    "72": 1.0,
-    "73": 1.0,
-    "74": 1.0,
-    "75": 1.0,
-    "76": 1.0,
-    "77": 1.0,
-    "78": 1.0,
-    "79": 1.0,
-    "80": 1.0,
-    "81": 1.0,
-    "82": 1.0,
-    "83": 1.0,
-    "84": 1.0,
-    "85": 1.0,
-    "86": 1.0,
-    "87": 1.0
+    "0": 0.030303030303030304,
+    "1": 0.05959183673469388,
+    "2": 0.041666666666666664,
+    "3": 0.041666666666666664,
+    "4": 0.1036077705827937,
+    "5": 0.05555555555555555,
+    "6": 0.06951871657754011,
+    "7": 0.058823529411764705,
+    "8": 0.06451612903225806,
+    "9": 0.06666666666666667,
+    "10": 0.15402298850574714,
+    "11": 0.06896551724137931,
+    "12": 0.07407407407407407,
+    "13": 0.07407407407407407,
+    "14": 0.07692307692307693,
+    "15": 0.08,
+    "16": 0.08,
+    "17": 0.11956521739130435,
+    "18": 0.08333333333333333,
+    "19": 0.08695652173913043,
+    "20": 0.19367588932806323,
+    "21": 0.09090909090909091,
+    "22": 0.13852813852813853,
+    "23": 0.09523809523809523,
+    "24": 0.09523809523809523,
+    "25": 0.09523809523809523,
+    "26": 0.09523809523809523,
+    "27": 0.09523809523809523,
+    "28": 0.09523809523809523,
+    "29": 0.1,
+    "30": 0.10526315789473684,
+    "31": 0.16911764705882354,
+    "32": 0.27205882352941174,
+    "33": 0.125,
+    "34": 0.125,
+    "35": 0.13333333333333333,
+    "36": 0.13333333333333333,
+    "37": 0.13333333333333333,
+    "38": 0.19047619047619047,
+    "39": 0.13333333333333333,
+    "40": 0.13333333333333333,
+    "41": 0.14285714285714285,
+    "42": 0.26373626373626374,
+    "43": 0.14285714285714285,
+    "44": 0.14285714285714285,
+    "45": 0.20512820512820512,
+    "46": 0.15384615384615385,
+    "47": 0.15384615384615385,
+    "48": 0.15384615384615385,
+    "49": 0.16666666666666666,
+    "50": 0.2878787878787879,
+    "51": 0.18181818181818182,
+    "52": 0.18181818181818182,
+    "53": 0.18181818181818182,
+    "54": 0.2,
+    "55": 0.2222222222222222,
+    "56": 0.2,
+    "57": 0.2,
+    "58": 0.2,
+    "59": 0.2222222222222222,
+    "60": 0.3333333333333333,
+    "61": 0.2222222222222222,
+    "62": 0.42857142857142855,
+    "63": 0.2857142857142857,
+    "64": 0.2857142857142857,
+    "65": 0.2857142857142857,
+    "66": 0.2857142857142857,
+    "67": 0.42857142857142855,
+    "68": 0.2857142857142857,
+    "69": 0.3333333333333333,
+    "70": 0.4666666666666667,
+    "71": 0.3333333333333333,
+    "72": 0.3333333333333333,
+    "73": 0.4,
+    "74": 0.5333333333333333,
+    "75": 0.4,
+    "76": 0.4,
+    "77": 0.4,
+    "78": 0.4,
+    "79": 0.4,
+    "80": 0.4,
+    "81": 0.4,
+    "82": 0.4,
+    "83": 0.4,
+    "84": 0.5,
+    "85": 0.5,
+    "86": 0.5,
+    "87": 0.6666666666666666,
+    "88": 0.6666666666666666,
+    "89": 0.6666666666666666,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0,
+    "114": 1.0,
+    "115": 1.0,
+    "116": 1.0,
+    "117": 1.0,
+    "118": 1.0,
+    "119": 1.0,
+    "120": 1.0,
+    "121": 1.0,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 1.0,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0,
+    "135": 1.0,
+    "136": 1.0,
+    "137": 1.0,
+    "138": 1.0,
+    "139": 1.0,
+    "140": 1.0,
+    "141": 1.0,
+    "142": 1.0,
+    "143": 1.0,
+    "144": 1.0,
+    "145": 1.0,
+    "146": 1.0,
+    "147": 1.0,
+    "148": 1.0,
+    "149": 1.0,
+    "150": 1.0,
+    "151": 1.0,
+    "152": 1.0,
+    "153": 1.0,
+    "154": 1.0,
+    "155": 1.0,
+    "156": 1.0,
+    "157": 1.0,
+    "158": 1.0
   },
   "gods": [
     {
       "id": "context_glossary",
       "label": "Glossary",
-      "degree": 66
+      "degree": 67
     },
     {
       "id": "docs_redesign_information_architecture_and_onboarding_pospal_information_architecture_and_onboarding_specification",
       "label": "POSPal Information Architecture And Onboarding Specification",
       "degree": 18
+    },
+    {
+      "id": "docs_seo_owner_intent_seo_plan_pospal_owner_intent_seo_plan",
+      "label": "POSPal Owner-Intent SEO Plan",
+      "degree": 17
+    },
+    {
+      "id": "agents_product_marketing_product_marketing_context",
+      "label": "POSPal Product Marketing Context",
+      "degree": 16
+    },
+    {
+      "id": "docs_seo_system_page_content_brief_pospal_commercial_system_page_brief",
+      "label": "POSPal Commercial System Page Brief",
+      "degree": 16
     },
     {
       "id": "docs_redesign_academy_technical_seo_audit_academy_technical_seo_audit_and_url_migration_plan",
@@ -1189,123 +2061,108 @@
       "degree": 15
     },
     {
-      "id": "agents_product_marketing_product_marketing_context",
-      "label": "Product Marketing Context",
+      "id": "marketing_plan_pospal_marketing_plan_working_draft",
+      "label": "POSPal Marketing Plan (Working Draft)",
       "degree": 14
     },
     {
       "id": "docs_redesign_academy_plan_pospal_customer_guides_plan",
       "label": "POSPal Customer Guides Plan",
       "degree": 14
-    },
-    {
-      "id": "static_js_ga_consent_buildconsentui",
-      "label": "buildConsentUI()",
-      "degree": 13
-    },
-    {
-      "id": "marketing_plan_pospal_marketing_plan_working_draft",
-      "label": "POSPal Marketing Plan (Working Draft)",
-      "degree": 13
-    },
-    {
-      "id": "docs_seo_ai_discovery_benchmark_runbook_pospal_ai_discovery_benchmark_runbook",
-      "label": "POSPal AI-Discovery Benchmark Runbook",
-      "degree": 13
     }
   ],
   "surprises": [
     {
-      "source": "POSPal Desktop Order Screenshot",
-      "target": "Kitchen/order Workflow",
+      "source": "Waiter Device Local Order Flow",
+      "target": "Phone-to-Windows Local Network Route",
       "source_files": [
-        "static/img/pospal-desktop-order.png",
-        "CONTEXT.md"
+        "docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md",
+        "asyrmati-paraggeliolipsia.html"
       ],
       "confidence": "INFERRED",
-      "relation": "conceptually_related_to",
-      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image); connects across different repos/directories"
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link; peripheral node `Waiter Device Local Order Flow` unexpectedly reaches hub `Phone-to-Windows Local Network Route`"
     },
     {
-      "source": "QR Menu Live Preview",
-      "target": "QR Menu Launch Stance",
+      "source": "Evidence-Gated Structured Data Policy",
+      "target": "POSPal Product-Truth Boundaries",
       "source_files": [
-        "static/qr-menu-live-preview.png",
-        "docs/redesign/search-console-intent-map-2026-06-23.md"
+        "docs/seo/pospal-generic-hub-improvement-spec.md",
+        ".agents/product-marketing.md"
       ],
       "confidence": "INFERRED",
-      "relation": "conceptually_related_to",
-      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image); connects across different repos/directories"
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
     },
     {
-      "source": "Beach Bar Order-taking Page",
-      "target": "Greek Hospitality Audience",
+      "source": "Windows Download and 30-Day Trial Offer",
+      "target": "Download-First Self-Service Positioning",
       "source_files": [
-        "paraggelio-lipsia-gia-beach-bar.html",
-        "MARKETING_PLAN.md"
+        "MARKETING_PLAN.md",
+        ".agents/product-marketing.md"
       ],
       "confidence": "INFERRED",
-      "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Beach Bar Order-taking Page` unexpectedly reaches hub `Greek Hospitality Audience`"
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
     },
     {
-      "source": "Cafe PDA Page",
-      "target": "Greek Hospitality Audience",
+      "source": "Wireless Ordering Is Not Fiscal Operation",
+      "target": "POSPal Product-Truth Boundaries",
       "source_files": [
-        "pda-gia-kafeteries.html",
-        "MARKETING_PLAN.md"
+        "asyrmati-paraggeliolipsia.html",
+        ".agents/product-marketing.md"
       ],
       "confidence": "INFERRED",
-      "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Cafe PDA Page` unexpectedly reaches hub `Greek Hospitality Audience`"
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link; peripheral node `Wireless Ordering Is Not Fiscal Operation` unexpectedly reaches hub `POSPal Product-Truth Boundaries`"
     },
     {
-      "source": "Order-taking System Page",
-      "target": "Greek Hospitality Audience",
+      "source": "Controlled Evidence Limitations",
+      "target": "POSPal Product-Truth Boundaries",
       "source_files": [
-        "systima-paraggeliolipsias.html",
-        "MARKETING_PLAN.md"
+        "docs/seo/pospal-independent-verification-fact-pack.md",
+        ".agents/product-marketing.md"
       ],
       "confidence": "INFERRED",
-      "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Order-taking System Page` unexpectedly reaches hub `Greek Hospitality Audience`"
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `POSPal Post-Redesign SEO Evaluation` connect `Guide Curriculum` to `SEO Marketing Funnel`, `POSPal Homepage Concept Directions`?",
-      "why": "High betweenness centrality (0.036) - this node is a cross-community bridge."
+      "question": "Why does `POSPal Product Marketing Context` connect `Academy Technical SEO Migration` to `POSPal Website Redesign Brief`, `Motion Script`?",
+      "why": "High betweenness centrality (0.046) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Step 1 Proposal: POSPal AI-Discovery Measurement Baseline` connect `Academy Navigation` to `SEO Marketing Funnel`?",
-      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
+      "question": "Why does `POSPal Commercial System Page Brief` connect `SEO Marketing Funnel` to `Download Page Handoff`?",
+      "why": "High betweenness centrality (0.034) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `POSPal Post-Redesign SEO Evaluation` connect `Graphify Update Rule` to `Internal Link Authority Imbalance`, `Legacy Redirect Failure`, `Post-Redesign Measurement Baseline`, `Generated Artifact Ignore Rules`, `pospal-artifacts Download Host`, `POSPal Product`, `Redesign Capture Archive Cleanup`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `@axe-core/playwright`, `playwright`, `stage` to the rest of the system?",
-      "why": "560 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "1027 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Consent Analytics` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.03076923076923077 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.030303030303030304 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Guide Curriculum` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.05959183673469388 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Guide Journey` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.1036077705827937 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `SEO Marketing Funnel` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected."
     }
   ]
 }

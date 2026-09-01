@@ -1,10 +1,10 @@
 # PDA τι είναι — current page record
 
-Status: Implemented in `pda-ti-einai.html`  
+Status: Superseded on 2026-09-01 by the approved editorial redesign in `pda-ti-einai.html`
 Target: `/pda-ti-einai.html`  
 Primary search intent: `PDA τι είναι`  
 Primary conversion: Windows download  
-Last updated: 2026-08-30
+Last updated: 2026-09-01
 
 ## Non-negotiable page idea
 
@@ -154,7 +154,7 @@ The visible FAQ and JSON-LD contain the same five questions, in the same order:
 - The standalone browser graphic is gone; the real screenshot arrives sooner.
 - The final CTA becomes full width on mobile.
 - The cookie-settings control sits in reserved footer space on this page, so it does not cover the founder line or mobile content while scrolling.
-- All changes live in `static/css/pda-definition.css`; shared CSS and the permanently locked pages are untouched.
+- Historical implementation note: this version used `static/css/pda-definition.css`. The approved editorial redesign replaced it with `static/css/pda-editorial.css`; shared CSS and the permanently locked pages remain untouched.
 
 ## Copy guardrails
 
