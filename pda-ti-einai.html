@@ -24,7 +24,7 @@
   <link rel="preload" href="/static/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/static/img/pda-phone-during-service.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="/static/css/pda-acquisition.css">
-  <link rel="stylesheet" href="/static/css/pda-editorial.css?v=20260901">
+  <link rel="stylesheet" href="/static/css/pda-editorial.css?v=20260901-2">
   <script src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
   <script type="application/ld+json">
@@ -181,13 +181,39 @@
       </section>
     </article>
 
-    <figure class="product-proof">
-      <picture>
-        <source srcset="/static/img/pospal-desktop-order.webp" type="image/webp">
-        <img src="/static/img/pospal-desktop-order.png" alt="Πραγματικό στιγμιότυπο της οθόνης παραγγελίας POSPal" width="1280" height="900" loading="lazy" decoding="async">
-      </picture>
-      <figcaption>Πραγματικό στιγμιότυπο της οθόνης παραγγελίας POSPal στον υπολογιστή Windows. Δείχνει το περιβάλλον του προγράμματος· δεν αποτελεί απόδειξη συμβατότητας με κάθε συσκευή ή εκτυπωτή.</figcaption>
-    </figure>
+    <section class="mobile-order-proof" aria-labelledby="mobile-order-proof-title">
+      <div class="mobile-order-proof-inner">
+        <header class="mobile-order-proof-header">
+          <h2 id="mobile-order-proof-title">Η πραγματική ροή στο κινητό</h2>
+          <p>Αυτές είναι οι οθόνες που χρησιμοποιεί ο σερβιτόρος: επιλέγει τραπέζι, καταχωρίζει προϊόντα και ελέγχει την παραγγελία πριν πατήσει αποστολή.</p>
+        </header>
+
+        <div class="mobile-order-proof-steps" role="list" aria-label="Τρία βήματα παραγγελιοληψίας από κινητό" tabindex="0">
+          <figure class="mobile-order-proof-step" role="listitem">
+            <div class="mobile-order-proof-frame">
+              <img src="/static/img/pda-tables-mobile.webp" alt="Οθόνη POSPal σε κινητό με διαθέσιμα τραπέζια" width="720" height="1197" loading="lazy" decoding="async">
+            </div>
+            <figcaption><span aria-hidden="true">1</span><strong>Επιλογή τραπεζιού</strong></figcaption>
+          </figure>
+
+          <figure class="mobile-order-proof-step" role="listitem">
+            <div class="mobile-order-proof-frame">
+              <img src="/static/img/pda-menu-mobile.webp" alt="Οθόνη POSPal σε κινητό κατά την επιλογή προϊόντων" width="720" height="825" loading="lazy" decoding="async">
+            </div>
+            <figcaption><span aria-hidden="true">2</span><strong>Καταχώριση προϊόντων</strong></figcaption>
+          </figure>
+
+          <figure class="mobile-order-proof-step" role="listitem">
+            <div class="mobile-order-proof-frame">
+              <img src="/static/img/pda-send-mobile.webp" alt="Οθόνη POSPal σε κινητό με έλεγχο παραγγελίας και κουμπί αποστολής" width="720" height="1285" loading="lazy" decoding="async">
+            </div>
+            <figcaption><span aria-hidden="true">3</span><strong>Έλεγχος και αποστολή</strong></figcaption>
+          </figure>
+        </div>
+
+        <p class="mobile-order-proof-note">Πραγματικά στιγμιότυπα δοκιμαστικής παραγγελίας POSPal από browser κινητού. Δείχνουν τη ροή της εφαρμογής, όχι πιστοποίηση συμβατότητας με κάθε συσκευή ή δίκτυο.</p>
+      </div>
+    </section>
 
     <article class="article-body article-body-continuation">
       <section id="eksoplismos">
@@ -202,6 +228,14 @@
         </ul>
         <p>Η συσκευή που κρατά ο σερβιτόρος είναι μόνο ένα μέρος αυτής της εγκατάστασης. Αν το δίκτυο δεν επιτρέπει την επικοινωνία ή αν ο εκτυπωτής δεν παράγει σωστό χαρτί, μια ακριβότερη φορητή συσκευή δεν λύνει το πρόβλημα.</p>
       </section>
+
+      <figure class="product-proof desktop-proof">
+        <picture>
+          <source srcset="/static/img/pospal-desktop-order.webp" type="image/webp">
+          <img src="/static/img/pospal-desktop-order.png" alt="Η εφαρμογή POSPal στον υπολογιστή Windows" width="1280" height="900" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Η εφαρμογή POSPal στον υπολογιστή Windows. Είναι το κεντρικό μέρος του συστήματος, όχι το PDA που κρατά ο σερβιτόρος.</figcaption>
+      </figure>
 
       <section id="eidiko-i-kinito">
         <h2>Χρειάζεται πραγματικά ειδικό PDA;</h2>
