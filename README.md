@@ -15,8 +15,9 @@ The current marketing goal is download-first. Demo content, where present, is on
 ## Updating the Site
 
 1. Edit `index.html` or the relevant static page/asset locally.
-2. Commit and push to `main`.
-3. GitHub Pages automatically redeploys (Settings > Pages > `main` branch / root).
+2. Commit and push for review. A push does not deploy production.
+3. Confirm `legal-release-status.json` is approved with zero blockers and the legal verifier has passed.
+4. After explicit owner publication approval, manually run **Deploy static content to Pages** from GitHub Actions and enter the exact confirmation `PUBLISH`. The workflow refuses blocked or draft legal files.
 
 ## Custom Domain Setup
 

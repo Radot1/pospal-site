@@ -20,9 +20,9 @@
     "semantic_hash": "4515f6a2753350ecf8c55554165f4e30"
   },
   "static/js/academy.js": {
-    "mtime": 1788194782.8745806,
-    "ast_hash": "12fab998805d1cf683baa4b1e76a2488",
-    "semantic_hash": "12fab998805d1cf683baa4b1e76a2488"
+    "mtime": 1788344164.0904322,
+    "ast_hash": "475bc4b87afc3af528a2d1946a122ef7",
+    "semantic_hash": ""
   },
   "static/js/decision-pages.js": {
     "mtime": 1774739191.1576633,
@@ -30,9 +30,9 @@
     "semantic_hash": "2dafcdc6e03a41e214ea2a1ab6a6e0c3"
   },
   "static/js/ga-consent.js": {
-    "mtime": 1785772038.4376678,
-    "ast_hash": "66ead96e4ef3b5e2248bf1ed13137887",
-    "semantic_hash": "66ead96e4ef3b5e2248bf1ed13137887"
+    "mtime": 1788344361.276964,
+    "ast_hash": "a2728459f2f785232a52cd49251066eb",
+    "semantic_hash": ""
   },
   "static/js/ga-events.js": {
     "mtime": 1782629222.8973727,
@@ -65,9 +65,9 @@
     "semantic_hash": "1a7cf1b7522a4720939ee9d8fddb6a24"
   },
   ".github/workflows/static.yml": {
-    "mtime": 1783182882.0768602,
-    "ast_hash": "3a88d09aac142787e0bab8b7e80bb610",
-    "semantic_hash": "3a88d09aac142787e0bab8b7e80bb610"
+    "mtime": 1788439194.4500718,
+    "ast_hash": "892391adddff51243534c705d1b49177",
+    "semantic_hash": ""
   },
   ".impeccable/critique/2026-06-22T15-08-59Z__prototype-homepage-v3-index-html.md": {
     "mtime": 1782627926.8625047,
@@ -95,9 +95,9 @@
     "semantic_hash": "b22cdfe4a8d657e2154fbaf7f54ae73d"
   },
   "README.md": {
-    "mtime": 1782627926.8650556,
-    "ast_hash": "756886b331efdc8aff8c9d7bd8e9c937",
-    "semantic_hash": "756886b331efdc8aff8c9d7bd8e9c937"
+    "mtime": 1788439473.7360349,
+    "ast_hash": "53e5d7056080ca63a8fccc5b54a9f8ee",
+    "semantic_hash": ""
   },
   "SEO_OPPORTUNITIES.md": {
     "mtime": 1783183867.9415972,
@@ -110,9 +110,9 @@
     "semantic_hash": "27ac033294d0c066bd79da669b72a91c"
   },
   "asyrmati-paraggeliolipsia.html": {
-    "mtime": 1788177860.2047145,
-    "ast_hash": "44b1df6830aa70389576d37363f3da97",
-    "semantic_hash": "44b1df6830aa70389576d37363f3da97"
+    "mtime": 1788440046.6796494,
+    "ast_hash": "84e89899a590c9cf4d4c034969522e2e",
+    "semantic_hash": ""
   },
   "docs/adr/0001-freeze-launch-inventory-and-gate-seo-expansion.md": {
     "mtime": 1782627926.8684068,
@@ -160,9 +160,9 @@
     "semantic_hash": "88b60996f3a8433c56bbe964fc6625c3"
   },
   "download/index.html": {
-    "mtime": 1785687807.572347,
-    "ast_hash": "238bb70f92802c786e062d94664e0546",
-    "semantic_hash": "238bb70f92802c786e062d94664e0546"
+    "mtime": 1788440046.6826477,
+    "ast_hash": "03f7d2eb638ce803f57d12952323c08b",
+    "semantic_hash": ""
   },
   "google768162376caa4dfd.html": {
     "mtime": 1762090813.5857258,
@@ -170,9 +170,9 @@
     "semantic_hash": "f6fb6e619e5507813de0bb130c853004"
   },
   "guides/index.html": {
-    "mtime": 1788194782.8732536,
-    "ast_hash": "b1374fadbcbc7214c3708d24ebd3a11f",
-    "semantic_hash": "b1374fadbcbc7214c3708d24ebd3a11f"
+    "mtime": 1788440046.6826477,
+    "ast_hash": "1ad3d82f2e0f220f1b7a62f0e187b662",
+    "semantic_hash": ""
   },
   "guides/internal/GA4_SETUP_CHECKLIST.md": {
     "mtime": 1782627927.882365,
@@ -190,34 +190,34 @@
     "semantic_hash": "0b44885978c6d078c303568e2fc830fb"
   },
   "index.html": {
-    "mtime": 1785687342.633917,
-    "ast_hash": "6595388260fa62933fbef0a122802d54",
-    "semantic_hash": "6595388260fa62933fbef0a122802d54"
+    "mtime": 1788440046.6766493,
+    "ast_hash": "de0271402e65057e34434e0f06c4e866",
+    "semantic_hash": ""
   },
   "paraggelio-lipsia-gia-beach-bar.html": {
-    "mtime": 1788177860.207718,
-    "ast_hash": "60fd03963485502776004e869f50afbb",
-    "semantic_hash": "60fd03963485502776004e869f50afbb"
+    "mtime": 1788440046.6806483,
+    "ast_hash": "b6c18f2586b53551824e527f88e46359",
+    "semantic_hash": ""
   },
   "pda-gia-kafeteries.html": {
-    "mtime": 1788177860.2067199,
-    "ast_hash": "6b257f44f6e00a329d2a76c69e0d2415",
-    "semantic_hash": "6b257f44f6e00a329d2a76c69e0d2415"
+    "mtime": 1788440046.678649,
+    "ast_hash": "2df572d54762582a99aebbd9ae7c9c86",
+    "semantic_hash": ""
   },
   "pda-gia-servitoro/index.html": {
-    "mtime": 1788174868.1526816,
-    "ast_hash": "ec47265f032c77df99772927b8e5e724",
-    "semantic_hash": "ec47265f032c77df99772927b8e5e724"
+    "mtime": 1788440046.6816475,
+    "ast_hash": "be3fd0ad1b03159bc1853333d7341bb1",
+    "semantic_hash": ""
   },
   "pda-pos-leitourgei.html": {
-    "mtime": 1788177860.2097163,
-    "ast_hash": "d07e1ccddc4bb1be0427152e8e7940c9",
-    "semantic_hash": "d07e1ccddc4bb1be0427152e8e7940c9"
+    "mtime": 1788440046.678649,
+    "ast_hash": "9a403d9802e1a443ab394794657a8fce",
+    "semantic_hash": ""
   },
   "pda-ti-einai.html": {
-    "mtime": 1788244685.7753859,
-    "ast_hash": "4334a7d52fc621dd3b5fcd739c26cb64",
-    "semantic_hash": "4334a7d52fc621dd3b5fcd739c26cb64"
+    "mtime": 1788440046.6776497,
+    "ast_hash": "b2def88241fb18886da4b9faba8c9ba5",
+    "semantic_hash": ""
   },
   "prototype/README.md": {
     "mtime": 1782627927.8918886,
@@ -235,14 +235,14 @@
     "semantic_hash": "6d790bb9ff3936c31530c3d6e057f779"
   },
   "systima-paraggeliolipsias.html": {
-    "mtime": 1788167589.391617,
-    "ast_hash": "da2c11c8c86c87d7bc58597119b71d86",
-    "semantic_hash": "da2c11c8c86c87d7bc58597119b71d86"
+    "mtime": 1788440046.6776497,
+    "ast_hash": "8dea386a30425ab72c4d455ac3e2e7b2",
+    "semantic_hash": ""
   },
   "times.html": {
-    "mtime": 1785777981.999138,
-    "ast_hash": "11619ff73b0c5d1735c0c66e5ebd9847",
-    "semantic_hash": "11619ff73b0c5d1735c0c66e5ebd9847"
+    "mtime": 1788440046.6766493,
+    "ast_hash": "a1e21363a6d0b4729907f098f27380a5",
+    "semantic_hash": ""
   },
   "static/img/pospal-desktop-order.png": {
     "mtime": 1782627927.8974218,
@@ -315,9 +315,9 @@
     "semantic_hash": "8c9ae52919cb9a72d3601bab9d759576"
   },
   "sxetika-me-to-pospal/index.html": {
-    "mtime": 1788177860.2021904,
-    "ast_hash": "78ed4149fd634923be4e81b664dc3490",
-    "semantic_hash": "78ed4149fd634923be4e81b664dc3490"
+    "mtime": 1788440046.6806483,
+    "ast_hash": "5cff131d3b81421435923ae5fbc05477",
+    "semantic_hash": ""
   },
   "static/img/pospal-mark-64.png": {
     "mtime": 1785910017.386696,
@@ -465,14 +465,14 @@
     "semantic_hash": "62dfa12b6c6918940768ca97496b8707"
   },
   "guides/printer-setup/index.html": {
-    "mtime": 1788190601.583229,
-    "ast_hash": "7dae55c422d83d294dad0eac020d00ff",
-    "semantic_hash": "7dae55c422d83d294dad0eac020d00ff"
+    "mtime": 1788440046.6826477,
+    "ast_hash": "e883df5a40c4b43376e8d1ac0bfdc883",
+    "semantic_hash": ""
   },
   "guides/windows-installation/index.html": {
-    "mtime": 1788191726.0528243,
-    "ast_hash": "1854c99315ddfc03382c36a250433e1b",
-    "semantic_hash": "1854c99315ddfc03382c36a250433e1b"
+    "mtime": 1788440046.6836474,
+    "ast_hash": "6d006c82c33e37943fcf20cc00fec5fd",
+    "semantic_hash": ""
   },
   "static/img/pospal-desktop-order.webp": {
     "mtime": 1788096734.257,
@@ -490,29 +490,29 @@
     "semantic_hash": "112515f1e67149ef25f42539d8bca846"
   },
   "guides/app-tour/index.html": {
-    "mtime": 1788192869.9627025,
-    "ast_hash": "78a56aabd1829f3b6e55fdcea3971194",
-    "semantic_hash": "78a56aabd1829f3b6e55fdcea3971194"
+    "mtime": 1788440046.6836474,
+    "ast_hash": "cbfdbd39bf51f993db8cc1e383a4a480",
+    "semantic_hash": ""
   },
   "guides/settings/index.html": {
-    "mtime": 1788193430.88715,
-    "ast_hash": "ba969c8af171c3a2a1c154edd3e370d5",
-    "semantic_hash": "ba969c8af171c3a2a1c154edd3e370d5"
+    "mtime": 1788440046.6846473,
+    "ast_hash": "eadc2f306b3d7222f4e38905bd9e018a",
+    "semantic_hash": ""
   },
   "guides/qr-menu/index.html": {
-    "mtime": 1788194281.5740762,
-    "ast_hash": "37dd21e0eec2a36569efc1c20d953ed7",
-    "semantic_hash": "37dd21e0eec2a36569efc1c20d953ed7"
+    "mtime": 1788440046.6846473,
+    "ast_hash": "4836fb071d0882ddd89fef16f4eebd67",
+    "semantic_hash": ""
   },
   "guides/account/index.html": {
-    "mtime": 1788194782.872132,
-    "ast_hash": "c0c7e5a5fb92454afcb3bdf91c195650",
-    "semantic_hash": "c0c7e5a5fb92454afcb3bdf91c195650"
+    "mtime": 1788440046.6856475,
+    "ast_hash": "4b5edaaeeff68ecbd00e4ba3f0f0069f",
+    "semantic_hash": ""
   },
   "guides/troubleshooting/index.html": {
-    "mtime": 1788194782.872132,
-    "ast_hash": "ad6ddc9959179f6b38723ac3128dcc84",
-    "semantic_hash": "ad6ddc9959179f6b38723ac3128dcc84"
+    "mtime": 1788440046.6856475,
+    "ast_hash": "5651f8c3243adb6f436ee8ed8254bcc8",
+    "semantic_hash": ""
   },
   "docs/seo/KEYWORD_FUNNEL_RESEARCH_2026-08-31.md": {
     "mtime": 1788210483.3568304,
@@ -543,5 +543,145 @@
     "mtime": 1788208329.627206,
     "ast_hash": "c07374edb0a70907d277a41c612822ab",
     "semantic_hash": "c07374edb0a70907d277a41c612822ab"
+  },
+  "cookies/index.html": {
+    "mtime": 1788440046.6639097,
+    "ast_hash": "e90fde9f2d8bfcc59d6bff6ed1531044",
+    "semantic_hash": ""
+  },
+  "dpa/index.html": {
+    "mtime": 1788440046.6684241,
+    "ast_hash": "7ae2ab5cf976027a759c427f0c14d002",
+    "semantic_hash": ""
+  },
+  "en/cookies/index.html": {
+    "mtime": 1788440046.6649141,
+    "ast_hash": "88f20d6f1c65026dc679a43c4143a91b",
+    "semantic_hash": ""
+  },
+  "en/dpa/index.html": {
+    "mtime": 1788440046.669424,
+    "ast_hash": "796dc073aa86081a079e165a46756450",
+    "semantic_hash": ""
+  },
+  "en/eula/index.html": {
+    "mtime": 1788440046.667424,
+    "ast_hash": "a7b18bb7d39808462260d95b58366513",
+    "semantic_hash": ""
+  },
+  "en/legal/index.html": {
+    "mtime": 1788440046.6609058,
+    "ast_hash": "10bfd1c46f66e3d26948e8299aed1c6f",
+    "semantic_hash": ""
+  },
+  "en/privacy/index.html": {
+    "mtime": 1788440046.6629062,
+    "ast_hash": "eb6359066da4bf6dc9ea1ea3f0015b4e",
+    "semantic_hash": ""
+  },
+  "en/subprocessors/index.html": {
+    "mtime": 1788440046.6704247,
+    "ast_hash": "d230596920c244eb68ed2c08b6c2bc65",
+    "semantic_hash": ""
+  },
+  "en/terms/index.html": {
+    "mtime": 1788440046.6664188,
+    "ast_hash": "6c1dec821afd0d895b8fa45a1855e4e4",
+    "semantic_hash": ""
+  },
+  "eula/index.html": {
+    "mtime": 1788440046.667424,
+    "ast_hash": "f0bc50a64c93ff95e01f8f5703211fcc",
+    "semantic_hash": ""
+  },
+  "legal/index.html": {
+    "mtime": 1788440046.6599052,
+    "ast_hash": "151674019107f15dafe50f790b02ab9a",
+    "semantic_hash": ""
+  },
+  "privacy/index.html": {
+    "mtime": 1788440046.661907,
+    "ast_hash": "edfeb14618ca3963469c0b9f2f4ecdef",
+    "semantic_hash": ""
+  },
+  "subprocessors/index.html": {
+    "mtime": 1788440046.669424,
+    "ast_hash": "cf3b0e6bb5025681a700946f95304f79",
+    "semantic_hash": ""
+  },
+  "terms/index.html": {
+    "mtime": 1788440046.6664188,
+    "ast_hash": "63d32f2a9db3c2793b9fd6c9f23bb6e6",
+    "semantic_hash": ""
+  },
+  ".codex-remote-attachments/01a05d3e-ce46-7f82-a2dd-4045f344c135/3b48ed0a-d38d-4d99-b314-cb249095ff67/1-Photo-1.jpg": {
+    "mtime": 1788290740.8975964,
+    "ast_hash": "7c8554db592e0fca7fb9203fd6d66f1c",
+    "semantic_hash": ""
+  },
+  "static/img/pda-menu-mobile.webp": {
+    "mtime": 1788263167.051004,
+    "ast_hash": "1b6912cbbfcdf224db16f82db40d2b09",
+    "semantic_hash": ""
+  },
+  "static/img/pda-phone-during-service.webp": {
+    "mtime": 1788262316.267717,
+    "ast_hash": "481493bd387189dcc547014cac41fea7",
+    "semantic_hash": ""
+  },
+  "static/img/pda-phone-pospal-during-service.webp": {
+    "mtime": 1788264012.084823,
+    "ast_hash": "3f319ebf05a4d98259a83f6fa2edb2f8",
+    "semantic_hash": ""
+  },
+  "static/img/pda-send-mobile.webp": {
+    "mtime": 1788263167.200055,
+    "ast_hash": "795b1d540a4bfc83a9c2a5119a5cdd8f",
+    "semantic_hash": ""
+  },
+  "static/img/pda-tables-mobile.webp": {
+    "mtime": 1788263166.9465582,
+    "ast_hash": "db0a96b9835acfdb037960f03b83adc3",
+    "semantic_hash": ""
+  },
+  "static/img/robert-airey-founder.jpg": {
+    "mtime": 1788268189.4518924,
+    "ast_hash": "536dc19d1c03c4d53b18dd890cab88b1",
+    "semantic_hash": ""
+  },
+  ".github/scripts/verify-legal-render.mjs": {
+    "mtime": 1788439738.1701388,
+    "ast_hash": "19ddcff73781c4366149c6964869cd53",
+    "semantic_hash": ""
+  },
+  ".github/scripts/verify-production-release.mjs": {
+    "mtime": 1788439194.4510722,
+    "ast_hash": "b648c5c5b12a690219ced223dbbcf361",
+    "semantic_hash": ""
+  },
+  "legal-release-status.json": {
+    "mtime": 1788440046.6726494,
+    "ast_hash": "da1f4145339e3523567efe224e6dabdf",
+    "semantic_hash": ""
+  },
+  "eula.html": {
+    "mtime": 1788440046.671644,
+    "ast_hash": "5b693b2913f0eba875a22a2bae078984",
+    "semantic_hash": ""
+  },
+  "legal/eula.html": {
+    "mtime": 1788440046.671644,
+    "ast_hash": "5b693b2913f0eba875a22a2bae078984",
+    "semantic_hash": ""
+  },
+  "legal/privacy.html": {
+    "mtime": 1788440046.671644,
+    "ast_hash": "5e1aade58f3af3f01b4c391c939d1409",
+    "semantic_hash": ""
+  },
+  "privacy.html": {
+    "mtime": 1788440046.6704247,
+    "ast_hash": "5e1aade58f3af3f01b4c391c939d1409",
+    "semantic_hash": ""
   }
 }

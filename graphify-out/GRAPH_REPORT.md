@@ -1,17 +1,21 @@
-# Graph Report - C:\Users\bzoum\Documents\GitHub\pospal-site  (2026-09-01)
+# Graph Report - pospal-site  (2026-09-03)
 
 ## Corpus Check
-- 50 files · ~145,009 words
+- 80 files · ~169,506 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1539 nodes · 1697 edges · 159 communities (90 shown, 69 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.88)
+- 1608 nodes · 1651 edges · 215 communities (94 shown, 121 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `7c0ab8f5`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Consent Analytics|Consent Analytics]]
-- [[_COMMUNITY_Guide Curriculum|Guide Curriculum]]
 - [[_COMMUNITY_Guide Journey|Guide Journey]]
 - [[_COMMUNITY_SEO Marketing Funnel|SEO Marketing Funnel]]
 - [[_COMMUNITY_Product Pricing Model|Product Pricing Model]]
@@ -165,30 +169,86 @@
 - [[_COMMUNITY_Community 156|Community 156]]
 - [[_COMMUNITY_Community 157|Community 157]]
 - [[_COMMUNITY_Community 158|Community 158]]
+- [[_COMMUNITY_POSPal Independent Verification Fact Pack|POSPal Independent Verification Fact Pack]]
+- [[_COMMUNITY_POSPal Product-Fact Checklist|POSPal Product-Fact Checklist]]
+- [[_COMMUNITY_POSPal Repository-Backed Release Audit|POSPal Repository-Backed Release Audit]]
+- [[_COMMUNITY_pospal-entity-foundation-proposal|pospal-entity-foundation-proposal.md]]
+- [[_COMMUNITY_POSPal Entity Facts|POSPal Entity Facts]]
+- [[_COMMUNITY_QR Menu Live Preview|QR Menu Live Preview]]
+- [[_COMMUNITY_Q What real assets and repository evidence should shape the visual-story brief for pda-ti-einai.html|Q: What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?]]
+- [[_COMMUNITY_0001-freeze-launch-inventory-and-gate-seo-expansion|0001-freeze-launch-inventory-and-gate-seo-expansion.md]]
+- [[_COMMUNITY_NOTES|NOTES.md]]
+- [[_COMMUNITY_Marketing Site Guardrails|Marketing Site Guardrails]]
+- [[_COMMUNITY_Reusable Proof and Independent Verification Program|Reusable Proof and Independent Verification Program]]
+- [[_COMMUNITY_AI Discovery Verifiability and Authority Gap|AI Discovery Verifiability and Authority Gap]]
+- [[_COMMUNITY_Keyword Planner and Search Console Demand Evidence|Keyword Planner and Search Console Demand Evidence]]
+- [[_COMMUNITY_PDA Definition to Pricing to System to Download Funnel|PDA Definition to Pricing to System to Download Funnel]]
+- [[_COMMUNITY_Independent Active Owner-Buyer|Independent Active Owner-Buyer]]
+- [[_COMMUNITY_Owner-Intent Search Page Ownership Map|Owner-Intent Search Page Ownership Map]]
+- [[_COMMUNITY_Anatomy of One Order|Anatomy of One Order]]
+- [[_COMMUNITY_Evidence-Led Editorial Design|Evidence-Led Editorial Design]]
+- [[_COMMUNITY_PDA Article Visual-Story Brief|PDA Article Visual-Story Brief]]
+- [[_COMMUNITY_PDA Search Cannibalisation Correction|PDA Search Cannibalisation Correction]]
+- [[_COMMUNITY_Three-Segment PDA Audience Model|Three-Segment PDA Audience Model]]
+- [[_COMMUNITY_PDA Copy Vetting Report|PDA Copy Vetting Report]]
+- [[_COMMUNITY_Natural Greek and Conversion-Clarity Review|Natural Greek and Conversion-Clarity Review]]
+- [[_COMMUNITY_Definition-or-Software Owner Qualification Fork|Definition-or-Software Owner Qualification Fork]]
+- [[_COMMUNITY_PDA Definition Ranking Preservation|PDA Definition Ranking Preservation]]
+- [[_COMMUNITY_Superseded Founder-Voice PDA Page Record|Superseded Founder-Voice PDA Page Record]]
+- [[_COMMUNITY_Windows Browser Kitchen Three-Step Flow|Windows Browser Kitchen Three-Step Flow]]
+- [[_COMMUNITY_PDA Page Implementation Log|PDA Page Implementation Log]]
+- [[_COMMUNITY_Verified Facts and Limits Evidence Module|Verified Facts and Limits Evidence Module]]
+- [[_COMMUNITY_POSPal Generic Search Hub Improvement Specification|POSPal Generic Search Hub Improvement Specification]]
+- [[_COMMUNITY_Reviewer-Controlled Conclusion and Privacy-Safe Outreach|Reviewer-Controlled Conclusion and Privacy-Safe Outreach]]
+- [[_COMMUNITY_Controlled Evidence Limitations|Controlled Evidence Limitations]]
+- [[_COMMUNITY_Independent Technical Reproduction Path|Independent Technical Reproduction Path]]
+- [[_COMMUNITY_Independent Reviewer Selection as Next Execution Point|Independent Reviewer Selection as Next Execution Point]]
+- [[_COMMUNITY_PRF-2026-002 First Named Customer Operational Proof|PRF-2026-002 First Named Customer Operational Proof]]
+- [[_COMMUNITY_Common Commercial Ranking Pattern|Common Commercial Ranking Pattern]]
+- [[_COMMUNITY_System Ordering Page Competitor Research|System Ordering Page Competitor Research]]
+- [[_COMMUNITY_Greek Ordering-System Competitor Page Set|Greek Ordering-System Competitor Page Set]]
+- [[_COMMUNITY_Transparent Download-Led POSPal Market Gap|Transparent Download-Led POSPal Market Gap]]
+- [[_COMMUNITY_Commercial Buyer-Question Architecture|Commercial Buyer-Question Architecture]]
+- [[_COMMUNITY_System Page Conversion and Claim Guardrails|System Page Conversion and Claim Guardrails]]
+- [[_COMMUNITY_Delivered Founder Offer and Phone-to-Kitchen Flow|Delivered Founder Offer and Phone-to-Kitchen Flow]]
+- [[_COMMUNITY_Commercial System Page Implementation Record|Commercial System Page Implementation Record]]
+- [[_COMMUNITY_Shared-PDA Shift Problem and Device-Freedom Proposition|Shared-PDA Shift Problem and Device-Freedom Proposition]]
+- [[_COMMUNITY_PDA Waiter Commercial Brief|PDA Waiter Commercial Brief]]
+- [[_COMMUNITY_Waiter Device Local Order Flow|Waiter Device Local Order Flow]]
+- [[_COMMUNITY_PDA Waiter Page Copy and Visual Direction|PDA Waiter Page Copy and Visual Direction]]
+- [[_COMMUNITY_POSPal SEO Targeting Query|POSPal SEO Targeting Query]]
+- [[_COMMUNITY_Ordering System Hub Funnel Query|Ordering System Hub Funnel Query]]
+- [[_COMMUNITY_PDA Page Role Review|PDA Page Role Review]]
+- [[_COMMUNITY_PDA Visual Story Evidence Query|PDA Visual Story Evidence Query]]
+- [[_COMMUNITY_Living Order Route Motion|Living Order Route Motion]]
+- [[_COMMUNITY_Windows Download and 30-Day Trial Offer|Windows Download and 30-Day Trial Offer]]
+- [[_COMMUNITY_Founder Voice and Page Ethos|Founder Voice and Page Ethos]]
+- [[_COMMUNITY_POSPal Marketing Plan|POSPal Marketing Plan]]
+- [[_COMMUNITY_PDA Article Prototype Notes|PDA Article Prototype Notes]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Glossary` - 67 edges
+1. `Glossary` - 66 edges
 2. `POSPal Information Architecture And Onboarding Specification` - 18 edges
 3. `POSPal Owner-Intent SEO Plan` - 17 edges
-4. `POSPal Product Marketing Context` - 16 edges
-5. `POSPal Commercial System Page Brief` - 16 edges
-6. `Academy Technical SEO Audit And URL Migration Plan` - 15 edges
-7. `POSPal Technical SEO Baseline` - 15 edges
-8. `POSPal Post-Redesign SEO Evaluation` - 15 edges
+4. `POSPal Commercial System Page Brief` - 16 edges
+5. `Academy Technical SEO Audit And URL Migration Plan` - 15 edges
+6. `POSPal Technical SEO Baseline` - 15 edges
+7. `POSPal Post-Redesign SEO Evaluation` - 15 edges
+8. `Product Marketing Context` - 14 edges
 9. `POSPal Marketing Plan (Working Draft)` - 14 edges
 10. `POSPal Customer Guides Plan` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Waiter Device Local Order Flow` --semantically_similar_to--> `Phone-to-Windows Local Network Route`  [INFERRED] [semantically similar]
-  docs/seo/WAITER_PDA_PAGE_COPY_DRAFT.md → asyrmati-paraggeliolipsia.html
-- `Evidence-Gated Structured Data Policy` --semantically_similar_to--> `POSPal Product-Truth Boundaries`  [INFERRED] [semantically similar]
-  docs/seo/pospal-generic-hub-improvement-spec.md → .agents/product-marketing.md
-- `Windows Download and 30-Day Trial Offer` --semantically_similar_to--> `Download-First Self-Service Positioning`  [INFERRED] [semantically similar]
-  MARKETING_PLAN.md → .agents/product-marketing.md
+- `POSPal Desktop Order Screenshot` --conceptually_related_to--> `Kitchen/order Workflow`  [INFERRED]
+  static/img/pospal-desktop-order.png → CONTEXT.md
+- `QR Menu Live Preview` --conceptually_related_to--> `QR Menu Launch Stance`  [INFERRED]
+  static/qr-menu-live-preview.png → docs/redesign/search-console-intent-map-2026-06-23.md
+- `Same-Device Reconnect Boundary` --semantically_similar_to--> `Same-Device Pending Queue`  [INFERRED] [semantically similar]
+  asyrmati-paraggeliolipsia.html → systima-paraggeliolipsias.html
 - `Wireless Ordering Is Not Fiscal Operation` --semantically_similar_to--> `POSPal Product-Truth Boundaries`  [INFERRED] [semantically similar]
   asyrmati-paraggeliolipsia.html → .agents/product-marketing.md
-- `Controlled Evidence Limitations` --semantically_similar_to--> `POSPal Product-Truth Boundaries`  [INFERRED] [semantically similar]
-  docs/seo/pospal-independent-verification-fact-pack.md → .agents/product-marketing.md
+- `PDA Article Prototype` --semantically_similar_to--> `PDA Definition Page`  [INFERRED] [semantically similar]
+  prototype/pda-article/index.html → pda-ti-einai.html
 
 ## Import Cycles
 - None detected.
@@ -212,19 +272,15 @@
 - **POS Hardware Group** — static_img_pda_equipment_atlas_smartphone, static_img_pda_equipment_atlas_rugged_pda, static_img_pda_equipment_atlas_laptop, static_img_pda_equipment_atlas_wireless_router, static_img_pda_equipment_atlas_receipt_printer [INFERRED 0.95]
 - **Order Building Workflow** — static_img_pospal_desktop_order_category_browser, static_img_pospal_desktop_order_product_selection_grid, static_img_pospal_desktop_order_current_order, static_img_pospal_desktop_order_send_order_action [INFERRED 0.85]
 
-## Communities (159 total, 69 thin omitted)
+## Communities (215 total, 121 thin omitted)
 
 ### Community 0 - "Consent Analytics"
 Cohesion: 0.03
 Nodes (66): Active redesign pair, Basic equipment fit, Brand identity, Canvas, Capture dataset, Confidence-first guides, Conversion core, Cookie banner polish boundary (+58 more)
 
-### Community 1 - "Guide Curriculum"
-Cohesion: 0.06
-Nodes (32): Freeze Launch Inventory And Gate SEO Expansion, Acceptance gate, Independent reproduction path, Official links, Outreach record template, POSPal Independent Verification Fact Pack, Public-safe identity card, Publication-quality evidence checklist (+24 more)
-
 ### Community 2 - "Guide Journey"
-Cohesion: 0.04
-Nodes (46): Confirmation log, Evidence rules, POSPal Entity Facts, Remaining implementation detail, User-confirmed publisher facts, Verified public facts, 1. Approve the identity facts, 2. Draft one distinct public entity page (+38 more)
+Cohesion: 0.11
+Nodes (18): 1. Approve the identity facts, 2. Draft one distinct public entity page, 3. Define the supported schema graph, 4. Connect controlled sources, Already visible and verified, Current state, Current structured-data gap, Exit criteria (+10 more)
 
 ### Community 3 - "SEO Marketing Funnel"
 Cohesion: 0.04
@@ -232,15 +288,15 @@ Nodes (48): 1. Hero — identify the product and remove purchase risk, 2. Recogn
 
 ### Community 4 - "Product Pricing Model"
 Cohesion: 0.10
-Nodes (42): acceptAllConsents(), applyConsentState(), applyTrackerGating(), bindGlobalKeyboardHandler(), buildConsentUI(), closeConsentUI(), closePanel(), ensureClarityLoaded() (+34 more)
+Nodes (45): acceptAllConsents(), applyConsentState(), applyExternalMediaConsent(), applyTrackerGating(), bindGlobalKeyboardHandler(), buildConsentUI(), closeConsentUI(), closePanel() (+37 more)
 
 ### Community 5 - "Post-Redesign SEO Audit"
 Cohesion: 0.06
 Nodes (35): 1. Ready Windows Visitor, 2. Mobile Researcher, 3. Organic Search Visitor, Academy Launch Gate, Approval Gates, Cluster-Led SEO Update: 2026-06-26, Core Page Roles, CTA Rules (+27 more)
 
 ### Community 6 - "Analytics Events"
-Cohesion: 0.07
-Nodes (34): POSPal ChatGPT and AI Discovery Work Plan, Reusable Proof and Independent Verification Program, AI Discovery Verifiability and Authority Gap, Verified Facts and Limits Evidence Module, POSPal Generic Search Hub Improvement Specification, Evidence-Gated Structured Data Policy, POSPal Independent Reviewer Outreach Kit, Reviewer-Controlled Conclusion and Privacy-Safe Outreach (+26 more)
+Cohesion: 0.10
+Nodes (21): 2026-08-05 — `RB-2026-01` implemented and audited, 2026-08-05 — Repository-only evidence decision and website proposal, 2026-08-05 — Step 1 complete: SEO claim layer, 2026-08-05 — Step 2 partial: controlled verification, 2026-08-05 — Step 3 prepared: named customer proof, 2026-08-05 — Step 4 complete: generic hub specification, 2026-08-05 — Step 5 complete: independent-verification materials, 2026-08-05 — Step 6 complete: release measurement protocol (+13 more)
 
 ### Community 7 - "Homepage Motion Design"
 Cohesion: 0.06
@@ -283,12 +339,12 @@ Cohesion: 0.08
 Nodes (25): Active experiment protection, AI decision rules, AI-discovery benchmark protocol, AI-referral exploration, Batch boundaries, Completion criteria, Customer-reported discovery, Decision gate (+17 more)
 
 ### Community 17 - "Desktop Support"
-Cohesion: 0.12
+Cohesion: 0.08
 Nodes (23): Concept A: The Order Route, Concept B: The Guided Setup, Concept C: The Direct Offer, Hero Direction, Hero Direction, Hero Direction, POSPal Homepage Concept Directions, Prototype Gate (+15 more)
 
 ### Community 18 - "SEO Proof Execution Pipeline"
 Cohesion: 0.08
-Nodes (24): Audit method and limits, Authoritativeness, Critical before adding stronger claims, Decision, Draft metadata and opening copy, Evidence-module contract, Experience, Expertise (+16 more)
+Nodes (25): Audit method and limits, Authoritativeness, Critical before adding stronger claims, Decision, Draft metadata and opening copy, Evidence-module contract, Experience, Expertise (+17 more)
 
 ### Community 19 - "Decision Pages"
 Cohesion: 0.09
@@ -303,8 +359,8 @@ Cohesion: 0.09
 Nodes (22): A. Broad category discovery, Accuracy metric, Approval gate, B. Commercial constraints, C. Exact product fit, Citation metrics, Customer-discovery intake, D. Deliberate non-fit controls (+14 more)
 
 ### Community 22 - "Agent Instructions"
-Cohesion: 0.14
-Nodes (22): POSPal SEO Proof Measurement Protocol, POSPal SEO Targeting Query, Ordering System Hub Funnel Query, PDA Page Role Review, PDA Visual Story Evidence Query, Account and Subscription Guide, First-Use App Tour Guide, POSPal Guides Hub (+14 more)
+Cohesion: 0.17
+Nodes (16): Account and Subscription Guide, First-Use App Tour Guide, POSPal Guides Hub, Thermal Printer Setup Guide, QR Menu Guide, POSPal Settings Guide, POSPal Troubleshooting Guide, Windows Installation Guide (+8 more)
 
 ### Community 23 - "POSPal Information Architecture And Onboarding"
 Cohesion: 0.10
@@ -312,7 +368,7 @@ Nodes (19): Asset rules, Audience, Canonical PDA proposition, Content rules, CTA
 
 ### Community 24 - "POSPal AI-Discovery Prompt Bank"
 Cohesion: 0.10
-Nodes (20): Authentic Product Evidence, Before Production Promotion, Deferred Assets, Direction and Composition, Fit Section Redesign, Full Homepage Section Completion Pass, Full Homepage Verification, Living Order Route: Plan and Delivery Log (+12 more)
+Nodes (19): Authentic Product Evidence, Before Production Promotion, Deferred Assets, Direction and Composition, Fit Section Redesign, Full Homepage Section Completion Pass, Full Homepage Verification, Living Order Route: Plan and Delivery Log (+11 more)
 
 ### Community 25 - "Το POSPal, με καθαρά λόγια."
 Cohesion: 0.10
@@ -337,10 +393,6 @@ Nodes (20): 10. Evidence index, 11. Approval, 12. Independent verification route
 ### Community 30 - "AI Discovery Measurement Baseline"
 Cohesion: 0.11
 Nodes (19): Data-quality check, Default-mode controls, Diagnosis, Environment, Evidence for the constraint, Exact reported-scenario reproduction, Forced-Search S1 checkpoint, GA4 AI-referral funnel (+11 more)
-
-### Community 31 - "POSPal Technical SEO Baseline"
-Cohesion: 0.17
-Nodes (17): Locally Verified PDA Page Implementations, PDA Page Implementation Log, Common Commercial Ranking Pattern, System Ordering Page Competitor Research, Greek Ordering-System Competitor Page Set, Transparent Download-Led POSPal Market Gap, Commercial Buyer-Question Architecture, POSPal Commercial System Page Brief (+9 more)
 
 ### Community 32 - "Work Completed"
 Cohesion: 0.27
@@ -367,8 +419,8 @@ Cohesion: 0.13
 Nodes (14): Art Direction, Commercial Model, Core Promise, Delivery Constraints, Evidence, Goal, Homepage Journey, Included QR Menu (+6 more)
 
 ### Community 38 - "Product Marketing Context"
-Cohesion: 0.19
-Nodes (14): Current Backlog Source, Intent Classification, Launch Candidate SEO Page Tiers, Measurement, Operating Rule, Post-Launch SEO Rhythm, QR/Menu Launch Stance, Search Console Intent Map - 2026-06-23 Export (+6 more)
+Cohesion: 0.22
+Nodes (8): Current Backlog Source, Intent Classification, Launch Candidate SEO Page Tiers, Measurement, Operating Rule, Post-Launch SEO Rhythm, QR/Menu Launch Stance, Search Console Intent Map - 2026-06-23 Export
 
 ### Community 39 - "Prototype Review"
 Cohesion: 0.13
@@ -383,20 +435,16 @@ Cohesion: 0.14
 Nodes (14): Canonical Greek outreach message, Customer, Equipment or hospitality partner, Follow-up message, Independent reviewer or publication, Optional opening by recipient type, POSPal Independent Reviewer Outreach Kit, Privacy-safe outreach record (+6 more)
 
 ### Community 42 - "UTM Governance (POSPal)"
-Cohesion: 0.26
-Nodes (14): Advancement gate, Current blockers, Customer evidence request, Customer selection gate, PRF-2026-002 First Named Customer Operational Proof, Independent corroboration option, Measurement gate for results, Operational record (+6 more)
+Cohesion: 0.15
+Nodes (13): Advancement gate, Current blockers, Customer evidence request, Customer selection gate, Independent corroboration option, Measurement gate for results, Operational record, Page-creation gate (+5 more)
 
 ### Community 43 - "GA4 Setup Checklist (POSPal)"
 Cohesion: 0.14
 Nodes (13): Anti-Patterns Verdict, Design Health Score, Minor Observations, Overall Impression, [P1] Different concepts are presented as equivalent requirements, [P1] The headline promises more certainty than the content provides, [P2] No contextual action resolves compatibility doubt, [P2] The equal-cell matrix creates a generic narrative valley (+5 more)
 
 ### Community 44 - "Specialist Guide Template"
-Cohesion: 0.14
-Nodes (14): 10) Risks & Open Questions, 11) Next Actions, 1) Goals, 2) Audience (TBD), 3.1) Founder voice and page ethos, 3) Positioning (TBD), 4) Offer & Pricing (TBD), 5) Messaging Pillars (TBD) (+6 more)
-
-### Community 45 - "POSPal Website Redesign Brief"
-Cohesion: 0.21
-Nodes (13): Download-First Self-Service Positioning, POSPal Single-Funnel Keyword Research, Keyword Planner and Search Console Demand Evidence, PDA Definition to Pricing to System to Download Funnel, Independent Active Owner-Buyer, POSPal Owner-Intent SEO Plan, Owner-Intent Search Page Ownership Map, POSPal Audience and PDA Page Review (+5 more)
+Cohesion: 0.40
+Nodes (3): canonicalPages, sitemap, status
 
 ### Community 46 - "Search Console Intent Map -"
 Cohesion: 0.15
@@ -407,8 +455,8 @@ Cohesion: 0.15
 Nodes (13): Advancement gate, Artifact verification, Candidate environment observation, Current limitations, Device and network checkpoints, Evidence index, Installation checkpoints, Kitchen and printer checkpoints (+5 more)
 
 ### Community 48 - "Customer-Reported ChatGPT Discovery Intake"
-Cohesion: 0.15
-Nodes (13): 0:00–0:08, 0:08–0:16, 0:16–0:22, 0:22–0:31, 0:31–0:43, 0:43–0:54, 0:54–1:01, 1:01–1:13 (+5 more)
+Cohesion: 0.50
+Nodes (3): baseUrl, failures, routes
 
 ### Community 49 - "Pricing Script"
 Cohesion: 0.17
@@ -419,24 +467,16 @@ Cohesion: 0.29
 Nodes (9): defaultState(), loadState(), markCompleted(), markStarted(), nowIso(), resetState(), safeParse(), saveState() (+1 more)
 
 ### Community 51 - "Agent Governance"
-Cohesion: 0.18
-Nodes (11): Definition page, Definition page — focused SEO improvements — 2026-08-30, Findings and changes, Pages changed, PDA page implementation log, Post-implementation on-page score, Verification, Verification (+3 more)
+Cohesion: 0.11
+Nodes (18): Definition page, Definition page — approved editorial redesign — 2026-09-01, Definition page — focused SEO improvements — 2026-08-30, Final local checks, Findings and changes, Handoff, Local on-page assessment, Pages changed (+10 more)
 
 ### Community 52 - "Graphify Update Rule"
 Cohesion: 0.18
 Nodes (10): Evidence Rules, Known Baselines, Next Update, Phase Status, POSPal Post-Redesign SEO Evaluation, Pre-launch intent clusters, Purpose, Search Console before launch (+2 more)
 
 ### Community 53 - "Locked Public Pages Rule"
-Cohesion: 0.18
-Nodes (11): Approved direction, Changes, Commercial system page — implementation record, Follow-up: mobile optimization — 2026-08-30, Handoff, Measured checks, Responsive and functional verification, Scope protection (+3 more)
-
-### Community 54 - "Motion Script"
-Cohesion: 0.20
-Nodes (10): POSPal Site Agent Guidance, POSPal Product-Truth Boundaries, Marketing Site Guardrails, Wireless Ordering Is Not Fiscal Operation, Anatomy of One Order, Evidence-Led Editorial Design, PDA Article Visual-Story Brief, PDA Copy Vetting Report (+2 more)
-
-### Community 55 - "Project README"
-Cohesion: 0.22
-Nodes (10): Internet-Dependent Function Boundary, Local Link and QR Device Connection, Phone-to-Windows Local Network Route, Reachable Local Network Requirement, Reconnect Queue and Internet Dependency Boundary, 30-Day Trial, No Card, Cancel Anytime, Wireless Ordering Page, Historical PDA Definition Copy Draft (+2 more)
+Cohesion: 0.04
+Nodes (43): Approved direction, Changes, Commercial system page — implementation record, Estimated scorecard, same weights as the preceding audit, Follow-up: mobile optimization — 2026-08-30, Follow-up: SEO audit fixes and recheck — 2026-08-30, Handoff, Implemented fixes (+35 more)
 
 ### Community 56 - "POSPal Product Positioning"
 Cohesion: 0.20
@@ -451,8 +491,8 @@ Cohesion: 0.20
 Nodes (9): Audience, Conversion Path, Design Principles, Goal, Lean Website Structure, Onboarding Requirement, Positioning, POSPal Website Redesign Brief (+1 more)
 
 ### Community 59 - "Repository Hygiene Rule"
-Cohesion: 0.22
-Nodes (9): Same-Device Reconnect Boundary, Ordering Workflow Not Fiscal POS, Ordering System Hub Page, Printer Role and Category Routing, QR Customer Menu Publishing, Same-Device Pending Queue, Simple and Table Ordering Modes, Staff Device to Windows Route (+1 more)
+Cohesion: 0.12
+Nodes (18): POSPal Product-Truth Boundaries, Internet-Dependent Function Boundary, Local Link and QR Device Connection, Phone-to-Windows Local Network Route, Wireless Ordering Is Not Fiscal Operation, Reachable Local Network Requirement, Reconnect Queue and Internet Dependency Boundary, Same-Device Reconnect Boundary (+10 more)
 
 ### Community 60 - "desktop-support.js Overview"
 Cohesion: 0.33
@@ -511,8 +551,8 @@ Cohesion: 0.53
 Nodes (4): ensurePricingLoaded(), fetchPricing(), guessCurrencySymbol(), normalizePricingPayload()
 
 ### Community 75 - "Locked Conversion Core"
-Cohesion: 0.40
-Nodes (5): Final local checks, Handoff, Local on-page assessment, Scope and decisions, Waiter-page founder-voice and visual update — 2026-08-30
+Cohesion: 0.05
+Nodes (37): 10. Commercial handoff, 1. Article masthead and first viewport, 2. The direct definition, 3. What equipment is actually involved, 4. Where a dedicated PDA helps and where it does not, 5. The recognisable shift problem, 6. Follow one order to the kitchen, 7. What usually goes wrong (+29 more)
 
 ### Community 76 - "pospal-artifacts Download Host"
 Cohesion: 0.40
@@ -523,8 +563,8 @@ Cohesion: 0.40
 Nodes (5): Phase 5 — On-Page Audit Order, Priority recommendations from the on-page pass, Provisional scorecard — 2026-08-02, Shared measured strengths, Shared measured weaknesses
 
 ### Community 78 - "Redesign IA And Onboarding"
-Cohesion: 0.40
-Nodes (5): Estimated scorecard, same weights as the preceding audit, Follow-up: SEO audit fixes and recheck — 2026-08-30, Implemented fixes, Measured local recheck, Remaining gaps and handoff
+Cohesion: 0.10
+Nodes (20): 1. `/pda-ti-einai.html`, 2. `/times.html`, 3. `/systima-paraggeliolipsias.html`, 4. `/download/`, 5. `/guides/`, Commercial-intent comparison, Commercial variants worth considering, Decision (+12 more)
 
 ### Community 79 - "Search Console Intent Map"
 Cohesion: 0.40
@@ -558,25 +598,67 @@ Nodes (4): Locked Conversion Core, Windows Installer Handoff, Guided Onboarding 
 Cohesion: 0.50
 Nodes (3): devDependencies, @axe-core/playwright, playwright
 
+### Community 92 - "POSPal Audience and PDA Page Review"
+Cohesion: 0.11
+Nodes (18): Copy rationale, Final CTA, Implementation checklist after copy approval, Optional H1 alternatives, Proposed JSON-LD, Schema exclusions, Άμεση συνδρομή, χωρίς μεσάζοντα., Δεν αντικαθιστά την ταμειακή σου. (+10 more)
+
+### Community 159 - "POSPal Independent Verification Fact Pack"
+Cohesion: 0.17
+Nodes (12): Acceptance gate, Independent reproduction path, Official links, Outreach record template, POSPal Independent Verification Fact Pack, Public-safe identity card, Publication-quality evidence checklist, Source-target registry (+4 more)
+
+### Community 160 - "POSPal Product-Fact Checklist"
+Cohesion: 0.18
+Nodes (11): Customer, independent, and outcome proof, Evidence labels, POSPal Product-Fact Checklist, Printer facts, Publishable controlled facts, Remaining claim boundaries, Repository-evidence decision, Source inventory (+3 more)
+
+### Community 162 - "POSPal Repository-Backed Release Audit"
+Cohesion: 0.25
+Nodes (8): Accessibility and frontend audit, On-page SEO audit, Pending live measurement, POSPal Repository-Backed Release Audit, Scope delivered, SEO priorities after deployment, Skills used, Structural verification
+
+### Community 164 - "pospal-entity-foundation-proposal.md"
+Cohesion: 0.33
+Nodes (4): Draft: `/sxetika-me-to-pospal/`, Hero, Page metadata, Recommended page copy
+
+### Community 165 - "POSPal Entity Facts"
+Cohesion: 0.33
+Nodes (6): Confirmation log, Evidence rules, POSPal Entity Facts, Remaining implementation detail, User-confirmed publisher facts, Verified public facts
+
+### Community 166 - "QR Menu Live Preview"
+Cohesion: 0.33
+Nodes (6): QR Menu Customer Categories, QR Menu Customer Prices, Included QR Menu, QR Menu Launch Stance, QR Menu Live Code, QR Menu Live Preview
+
+### Community 168 - "Q: What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?, Source Nodes
+
 ## Knowledge Gaps
-- **1002 isolated node(s):** `@axe-core/playwright`, `playwright`, `stage`, `toggle`, `Product Overview` (+997 more)
+- **1117 isolated node(s):** `baseUrl`, `routes`, `failures`, `status`, `canonicalPages` (+1112 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **69 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **121 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Work-memory lessons
+
+**Preferred sources** — corroborated by past sessions; start here.
+- `Cafe PDA Page` (2× useful, score=1.890312809) _(code changed — re-verify)_
+- `Download-first Funnel` (2× useful, score=1.890312809)
+- `Greek Hospitality Audience` (2× useful, score=1.890312809)
+- `PDA Definition Page` (2× useful, score=1.890312809) _(code changed — re-verify)_
+- `PDA How-it-works Page` (2× useful, score=1.890312809) _(code changed — re-verify)_
+- `Waiter PDA Page` (2× useful, score=1.890312809) _(code changed — re-verify)_
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `POSPal Product Marketing Context` connect `Academy Technical SEO Migration` to `POSPal Website Redesign Brief`, `Motion Script`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `POSPal Commercial System Page Brief` connect `SEO Marketing Funnel` to `Download Page Handoff`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **Why does `POSPal Post-Redesign SEO Evaluation` connect `Graphify Update Rule` to `Internal Link Authority Imbalance`, `Legacy Redirect Failure`, `Post-Redesign Measurement Baseline`, `Generated Artifact Ignore Rules`, `pospal-artifacts Download Host`, `POSPal Product`, `Redesign Capture Archive Cleanup`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **What connects `@axe-core/playwright`, `playwright`, `stage` to the rest of the system?**
-  _1027 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `System Ordering Page — Competitor Research` connect `Agent Instructions` to `Locked Public Pages Rule`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `POSPal AI-Discovery Prompt Bank` connect `Product Positioning` to `RUNBOOK.md`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **What connects `baseUrl`, `routes`, `failures` to the rest of the system?**
+  _1153 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Consent Analytics` be split into smaller, more focused modules?**
   _Cohesion score 0.030303030303030304 - nodes in this community are weakly interconnected._
-- **Should `Guide Curriculum` be split into smaller, more focused modules?**
-  _Cohesion score 0.05959183673469388 - nodes in this community are weakly interconnected._
 - **Should `Guide Journey` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+- **Should `SEO Marketing Funnel` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._

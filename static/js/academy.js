@@ -7,7 +7,7 @@
       shortTitle: "Θερμικός εκτυπωτής",
       duration: "2:52",
       navMeta: "Σύνδεση USB · 2:52",
-      video: "https://www.youtube.com/embed/p0FNRfv0vVo",
+      video: "https://www.youtube-nocookie.com/embed/p0FNRfv0vVo",
       youtube: "https://youtu.be/p0FNRfv0vVo",
       intro: "Σύνδεσε τον θερμικό εκτυπωτή στα Windows, εγκατέστησε τον σωστό driver αν χρειάζεται και κάνε δοκιμαστική εκτύπωση.",
     },
@@ -18,7 +18,7 @@
       shortTitle: "Εγκατάσταση σε Windows",
       duration: "9:38",
       navMeta: "Εγκατάσταση · 9:38",
-      video: "https://www.youtube.com/embed/2XJvWmfJWwk",
+      video: "https://www.youtube-nocookie.com/embed/2XJvWmfJWwk",
       youtube: "https://youtu.be/2XJvWmfJWwk",
       intro: "Κατέβασε το αρχείο εγκατάστασης, άνοιξέ το στον υπολογιστή της επιχείρησης και έλεγξε ότι το POSPal ξεκινά κανονικά.",
       downloadFocus: true,
@@ -30,7 +30,7 @@
       shortTitle: "Πρώτη χρήση",
       duration: "8:36",
       navMeta: "Μενού και παραγγελίες · 8:36",
-      video: "https://www.youtube.com/embed/POZUAfynPYE",
+      video: "https://www.youtube-nocookie.com/embed/POZUAfynPYE",
       youtube: "https://youtu.be/POZUAfynPYE",
       intro: "Σύνδεσε το κινητό, καταχώρισε μια παραγγελία και δες πώς διαχειρίζεσαι προϊόντα, τραπέζια και πληρωμές.",
     },
@@ -41,7 +41,7 @@
       shortTitle: "Ρυθμίσεις POSPal",
       duration: "14:40",
       navMeta: "Εκτυπωτές και συσκευές · 14:40",
-      video: "https://www.youtube.com/embed/IY2f3hRGlH8",
+      video: "https://www.youtube-nocookie.com/embed/IY2f3hRGlH8",
       youtube: "https://youtu.be/IY2f3hRGlH8",
       intro: "Δες τις βασικές ρυθμίσεις της εφαρμογής, όπως εκτυπωτές, συσκευή, λειτουργίες, αποδείξεις και επιλογές διαχείρισης.",
     },
@@ -52,7 +52,7 @@
       shortTitle: "QR menu",
       duration: "13:37",
       navMeta: "Δημιουργία και δημοσίευση · 13:37",
-      video: "https://www.youtube.com/embed/AvokJphL4zk",
+      video: "https://www.youtube-nocookie.com/embed/AvokJphL4zk",
       youtube: "https://youtu.be/AvokJphL4zk",
       intro: "Ρύθμισε την εμφάνιση και τις πληροφορίες προϊόντων, δημοσίευσε το QR menu και κατέβασε τον κωδικό QR.",
     },
@@ -63,7 +63,7 @@
       shortTitle: "Λογαριασμός",
       duration: "6:18",
       navMeta: "Συνδρομή, άδεια και πληρωμές · 6:18",
-      video: "https://www.youtube.com/embed/TVMczUWJVpk",
+      video: "https://www.youtube-nocookie.com/embed/TVMczUWJVpk",
       youtube: "https://youtu.be/TVMczUWJVpk",
       intro: "Έλεγξε την άδεια και την επόμενη χρέωση, διαχειρίσου τη συνδρομή και δες πώς μεταφέρεται η άδεια σε άλλον υπολογιστή.",
     },
@@ -74,7 +74,7 @@
       shortTitle: "Λύση προβλημάτων",
       duration: "5:08",
       navMeta: "Αναφορά και σύνδεση κινητού · 5:08",
-      video: "https://www.youtube.com/embed/VaTsP1x8gWk",
+      video: "https://www.youtube-nocookie.com/embed/VaTsP1x8gWk",
       youtube: "https://youtu.be/VaTsP1x8gWk",
       intro: "Στείλε αναφορά προβλήματος, έλεγξε τη διεύθυνση σύνδεσης του κινητού και δες πότε ένα VPN μπορεί να επηρεάζει το τοπικό δίκτυο.",
     },
@@ -205,7 +205,8 @@
 
         <div class="academy-video-stage" aria-label="Βίντεο οδηγού">
           <iframe
-            src="${current.video}"
+            src="about:blank"
+            data-pospal-youtube-src="${current.video}"
             title="${escapeText(current.title)}"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

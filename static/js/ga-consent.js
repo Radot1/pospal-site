@@ -2,8 +2,8 @@
   var MEASUREMENT_ID = "G-F851JG8PL6";
   var ADS_ID = "AW-17981190399";
   var CLARITY_ID = "vnzrn7y23s";
-  var C15T_ESM_URL = "https://esm.sh/c15t@1.8.3?target=es2020";
   var CONSENT_STORAGE_KEY = "pospal-consent-v1";
+  var CONSENT_MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
 
   var GA_SCRIPT_ID = "pospal-ga-script";
   var CLARITY_SCRIPT_ID = "pospal-clarity-script";
@@ -25,7 +25,64 @@
     necessary: true,
     measurement: false,
     marketing: false,
+    externalMedia: false,
   };
+
+  function readStoredConsent() {
+    try {
+      var parsed = JSON.parse(window.localStorage.getItem(CONSENT_STORAGE_KEY) || "null");
+      var savedAt = parsed && Date.parse(parsed.savedAt);
+      if (!savedAt || Date.now() - savedAt >= CONSENT_MAX_AGE_MS) {
+        window.localStorage.removeItem(CONSENT_STORAGE_KEY);
+        return null;
+      }
+      return parsed;
+    } catch (error) {
+      window.localStorage.removeItem(CONSENT_STORAGE_KEY);
+      return null;
+    }
+  }
+
+  function createLocalConsentStore() {
+    var stored = readStoredConsent();
+    var listeners = [];
+    var state = {
+      consents: normalizeConsentState(stored && stored.consents),
+      consentInfo: stored ? { savedAt: stored.savedAt } : null,
+      setSelectedConsent: function (name, value) {
+        state.consents[name] = !!value;
+      },
+      saveConsents: function (selection) {
+        if (selection === "all") {
+          state.consents.measurement = true;
+          state.consents.marketing = true;
+          state.consents.externalMedia = true;
+        } else if (selection === "necessary") {
+          state.consents.measurement = false;
+          state.consents.marketing = false;
+          state.consents.externalMedia = false;
+        }
+        var savedAt = new Date().toISOString();
+        state.consentInfo = { savedAt: savedAt };
+        window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({
+          version: 2,
+          savedAt: savedAt,
+          consents: normalizeConsentState(state.consents),
+        }));
+        listeners.forEach(function (listener) { listener(state); });
+      },
+      hasConsented: function () { return !!state.consentInfo; },
+    };
+    return {
+      getState: function () { return state; },
+      subscribe: function (listener) {
+        listeners.push(listener);
+        return function () {
+          listeners = listeners.filter(function (item) { return item !== listener; });
+        };
+      },
+    };
+  }
 
   function normalizePathname(pathname) {
     var path = String(pathname || "/").trim().toLowerCase();
@@ -214,23 +271,33 @@
   }
 
   function ensureGAConfigured() {
-    if (gaConfigured) {
-      return;
-    }
     window.gtag("js", new Date());
-    window.gtag("config", MEASUREMENT_ID);
-    window.gtag("config", ADS_ID);
-    gaConfigured = true;
+    if (consentState.measurement && !gaConfigured) {
+      window.gtag("config", MEASUREMENT_ID);
+      gaConfigured = true;
+    }
+    if (consentState.marketing && !window.__pospalAdsConfigured) {
+      window.gtag("config", ADS_ID);
+      window.__pospalAdsConfigured = true;
+    }
   }
 
   function ensureClarityLoaded() {
     if (clarityLoaded) {
+      window.clarity("consentv2", {
+        ad_Storage: getConsentValue(consentState.marketing),
+        analytics_Storage: "granted",
+      });
       return;
     }
 
     var existing = document.getElementById(CLARITY_SCRIPT_ID);
     if (existing) {
       clarityLoaded = true;
+      window.clarity("consentv2", {
+        ad_Storage: getConsentValue(consentState.marketing),
+        analytics_Storage: "granted",
+      });
       return;
     }
 
@@ -246,6 +313,10 @@
     script.src = "https://www.clarity.ms/tag/" + CLARITY_ID;
     document.head.appendChild(script);
     clarityLoaded = true;
+    window.clarity("consentv2", {
+      ad_Storage: getConsentValue(consentState.marketing),
+      analytics_Storage: "granted",
+    });
   }
 
   function stopClarityIfPossible() {
@@ -254,7 +325,10 @@
     }
 
     try {
-      window.clarity("consent", false);
+      window.clarity("consentv2", {
+        ad_Storage: "denied",
+        analytics_Storage: "denied",
+      });
     } catch (error) {
       // no-op
     }
@@ -264,6 +338,19 @@
     } catch (error) {
       // no-op
     }
+  }
+
+  function applyExternalMediaConsent() {
+    document.querySelectorAll("iframe[data-pospal-youtube-src]").forEach(function (frame) {
+      var source = frame.getAttribute("data-pospal-youtube-src");
+      if (consentState.externalMedia && source) {
+        if (frame.getAttribute("src") !== source) frame.setAttribute("src", source);
+        frame.removeAttribute("srcdoc");
+      } else {
+        frame.setAttribute("src", "about:blank");
+        frame.setAttribute("srcdoc", '<!doctype html><html><body style="margin:0;display:grid;place-items:center;height:100%;font:16px system-ui;background:#f8fafc;color:#334155;text-align:center"><p>Το βίντεο YouTube φορτώνεται μόνο μετά από συγκατάθεση για εξωτερικά μέσα.</p></body></html>');
+      }
+    });
   }
 
   function applyTrackerGating() {
@@ -279,6 +366,7 @@
     } else {
       stopClarityIfPossible();
     }
+    applyExternalMediaConsent();
   }
 
   function normalizeConsentState(rawState) {
@@ -286,6 +374,7 @@
       necessary: true,
       measurement: !!(rawState && rawState.measurement),
       marketing: !!(rawState && rawState.marketing),
+      externalMedia: !!(rawState && rawState.externalMedia),
     };
   }
 
@@ -310,7 +399,8 @@
       !!left &&
       !!right &&
       !!left.measurement === !!right.measurement &&
-      !!left.marketing === !!right.marketing
+      !!left.marketing === !!right.marketing &&
+      !!left.externalMedia === !!right.externalMedia
     );
   }
 
@@ -398,10 +488,11 @@
     banner.setAttribute("aria-label", "Ρυθμίσεις cookies");
     banner.innerHTML =
       '<h2 class="pospal-consent-title">Χρησιμοποιούμε cookies</h2>' +
-      '<p class="pospal-consent-text">Χρησιμοποιούμε cookies για στατιστικά και marketing. Μπορείς να αλλάξεις επιλογές οποιαδήποτε στιγμή.</p>' +
+      '<p class="pospal-consent-text">Χρησιμοποιούμε προαιρετικά μέσα για στατιστικά, marketing και εξωτερικά βίντεο. Μπορείς να αλλάξεις επιλογές οποιαδήποτε στιγμή.</p>' +
+      '<p class="pospal-consent-text"><a href="/cookies/">Πολιτική Cookies</a> · <a href="/privacy/">Πολιτική Απορρήτου</a></p>' +
       '<div class="pospal-consent-actions">' +
-      '<button type="button" class="pospal-consent-btn pospal-consent-btn-primary" data-pospal-consent-accept>Αποδοχή όλων</button>' +
-      '<button type="button" class="pospal-consent-btn" data-pospal-consent-reject>Απόρριψη</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-accept>Αποδοχή όλων</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-reject>Απόρριψη όλων</button>' +
       '<button type="button" class="pospal-consent-btn" data-pospal-consent-settings>Ρυθμίσεις</button>' +
       "</div>";
 
@@ -425,6 +516,11 @@
       '<div><strong>Marketing</strong><span>Διαφημιστικά cookies και δεδομένα διαφήμισης.</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-marketing />' +
       "</div>" +
+      '<div class="pospal-consent-row">' +
+      '<div><strong>Εξωτερικά μέσα</strong><span>Ενσωματωμένα βίντεο YouTube.</span></div>' +
+      '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-external-media />' +
+      "</div>" +
+      '<p class="pospal-consent-text"><a href="/cookies/">Αναλυτική Πολιτική Cookies</a> · <a href="/privacy/">Πολιτική Απορρήτου</a></p>' +
       '<div class="pospal-consent-panel-actions">' +
       '<button type="button" class="pospal-consent-btn" data-pospal-consent-cancel>Ακύρωση</button>' +
       '<button type="button" class="pospal-consent-btn pospal-consent-btn-primary" data-pospal-consent-save>Αποθήκευση επιλογών</button>' +
@@ -441,6 +537,7 @@
       panel: panel,
       measurementInput: panel.querySelector("[data-pospal-consent-measurement]"),
       marketingInput: panel.querySelector("[data-pospal-consent-marketing]"),
+      externalMediaInput: panel.querySelector("[data-pospal-consent-external-media]"),
       floatingTrigger: null,
     };
 
@@ -485,6 +582,7 @@
     var built = buildConsentUI();
     built.measurementInput.checked = !!consentState.measurement;
     built.marketingInput.checked = !!consentState.marketing;
+    built.externalMediaInput.checked = !!consentState.externalMedia;
   }
 
   function showBanner(shouldFocus) {
@@ -565,6 +663,7 @@
     var built = buildConsentUI();
     consentStore.getState().setSelectedConsent("measurement", !!built.measurementInput.checked);
     consentStore.getState().setSelectedConsent("marketing", !!built.marketingInput.checked);
+    consentStore.getState().setSelectedConsent("externalMedia", !!built.externalMediaInput.checked);
     consentStore.getState().saveConsents("custom");
     closeConsentUI();
   }
@@ -661,24 +760,8 @@
     };
   }
 
-  function initializeConsentStore(c15t) {
-    var manager = c15t.configureConsentManager({
-      mode: "offline",
-      storageConfig: {
-        storageKey: CONSENT_STORAGE_KEY,
-      },
-    });
-
-    consentStore = c15t.createConsentManagerStore(manager, {
-      storageConfig: {
-        storageKey: CONSENT_STORAGE_KEY,
-      },
-      initialGdprTypes: ["necessary", "measurement", "marketing"],
-      trackingBlockerConfig: {
-        disableAutomaticBlocking: true,
-      },
-      ignoreGeoLocation: true,
-    });
+  function initializeConsentStore() {
+    consentStore = createLocalConsentStore();
 
     var initialState = consentStore.getState();
     applyConsentState(initialState.consents);
@@ -706,13 +789,7 @@
       return initializationPromise;
     }
 
-    initializationPromise = import(C15T_ESM_URL)
-      .then(function (module) {
-        initializeConsentStore(module);
-      })
-      .catch(function (error) {
-        console.error("POSPal consent initialization failed:", error);
-      });
+    initializationPromise = Promise.resolve().then(initializeConsentStore);
 
     return initializationPromise;
   }

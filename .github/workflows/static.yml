@@ -1,13 +1,13 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Manual, owner-gated workflow for deploying static content to GitHub Pages.
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      confirm_publish:
+        description: 'Type PUBLISH to confirm this production deployment'
+        required: true
+        type: string
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Verify explicit approval and legal release gate
+        env:
+          CONFIRM_PUBLISH: ${{ inputs.confirm_publish }}
+        run: node .github/scripts/verify-production-release.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload artifact

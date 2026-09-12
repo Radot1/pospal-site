@@ -18,13 +18,12 @@
 
   <link rel="icon" href="/app_icon.ico">
   <link rel="apple-touch-icon" href="/app_icon.ico">
-  <link rel="preconnect" href="https://www.youtube.com">
-  <link rel="preconnect" href="https://i.ytimg.com">
   <link rel="stylesheet" href="/static/css/site-redesign.css">
   <link rel="stylesheet" href="/static/css/academy.css?v=20260901-2">
   <link rel="stylesheet" href="/static/css/guide-article.css">
   <script src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
+  <link rel="stylesheet" href="/static/css/legal-links.css">
 </head>
 <body class="academy-page guide-article-page">
   <a class="skip-link" href="#guide-title">Μετάβαση στον οδηγό</a>
@@ -51,7 +50,8 @@
 
         <div class="academy-video-stage" aria-label="Βίντεο εγκατάστασης του POSPal σε Windows">
           <iframe
-            src="https://www.youtube.com/embed/2XJvWmfJWwk"
+            src="about:blank"
+            data-pospal-youtube-src="https://www.youtube-nocookie.com/embed/2XJvWmfJWwk"
             title="Εγκατάσταση και πρώτη ρύθμιση του POSPal σε Windows"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -79,7 +79,7 @@
               <li>Ένα κινητό ή tablet με browser, συνδεδεμένο στο ίδιο προσβάσιμο τοπικό δίκτυο.</li>
               <li>Θερμικό εκτυπωτή εγκατεστημένο στα Windows, μόνο αν θέλεις να ρυθμίσεις εκτυπώσεις σε αυτό το βήμα.</li>
             </ul>
-            <p>Η δωρεάν δοκιμή ξεκινά χωρίς κάρτα και χωρίς προσωπικά στοιχεία.</p>
+            <p>Η δωρεάν δοκιμή ξεκινά χωρίς κάρτα και χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</p>
           </section>
 
           <section aria-labelledby="guide-steps">
@@ -161,6 +161,10 @@
         <a href="#guide-title">Πίσω στην αρχή</a>
       </nav>
     </div>
-  </footer>
+
+    <!-- POSPAL-LEGAL-LINKS:START -->
+    <nav class="pospal-legal-links pospal-legal-links--sitewide" aria-label="Νομικά κείμενα"><a href="/legal/">Νομικά</a><a href="/privacy/">Απόρρητο</a><a href="/cookies/">Cookies</a><a href="/terms/">Όροι</a><a href="/eula/">EULA</a><a href="/dpa/">DPA</a><a href="/subprocessors/">Πάροχοι</a></nav>
+    <!-- POSPAL-LEGAL-LINKS:END -->
+</footer>
 </body>
 </html>

@@ -1,7 +1,10 @@
 /prototype/homepage-v3/   /   301
 /buy-license.html   /download/   301
 /support.html   /guides/   301
-/privacy.html   /guides/   301
+/privacy.html   /privacy/   301
+/eula.html   /eula/   301
+/legal/privacy.html   /privacy/   301
+/legal/eula.html   /eula/   301
 /installation-guide.html   /guides/   301
 /pospal-demo-coffee-desktop.html   /download/   301
 /pospal-demo-coffee-mobile.html   /download/   301
