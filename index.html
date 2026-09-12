@@ -20,6 +20,44 @@
   <script defer src="/static/js/ga-events.js"></script>
   <script>document.documentElement.classList.remove('no-js');</script>
   <link rel="stylesheet" href="/static/css/legal-links.css">
+<style>
+
+.hero-grid{isolation:isolate}
+.taste-art{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.taste-stream{position:absolute;left:0;top:46%;width:100%;height:300px;overflow:visible;color:#738d79}
+.taste-stream text{font-family:inherit;font-size:18px;fill:currentColor;letter-spacing:.01em}
+.taste-printer{position:absolute;right:15px;top:49%;width:186px;transform:rotate(3deg)}
+.taste-slot{height:42px;background:#102117;border:1px solid #294134;border-radius:8px 8px 3px 3px;position:relative;z-index:2;text-align:center;color:#d3e1d7;font-size:12px;font-weight:700;padding-top:7px;box-shadow:0 4px 8px #10211712}
+.taste-slot b{color:#35ed78}
+.taste-slot:after{content:'';position:absolute;bottom:5px;left:12px;right:12px;height:3px;background:#020805;border-radius:4px}
+.taste-paper-window{height:300px;overflow:hidden;margin:-7px 9px 0;padding:0 0 10px;filter:drop-shadow(0 6px 5px #10211712)}
+.taste-paper{background:#fffefa;padding:20px 13px 22px;color:#304238;font-size:11px;line-height:1.5;clip-path:none}
+.taste-paper strong{display:block;font-size:14px;margin:2px 0 9px;padding-bottom:9px;border-bottom:1px dashed #bec9bf}
+.taste-paper small{font-size:8px;letter-spacing:.09em;color:#6d7c70}
+.taste-item{display:flex;gap:9px;margin:8px 0}.taste-item b{color:#0f7a38}.taste-item em{display:block;font-style:normal;font-size:9px;color:#7a847b}
+.taste-replay{position:absolute;right:20px;bottom:18px;z-index:8;background:transparent;border:0;color:#56625a;font:inherit;font-size:11px;min-height:44px;padding:8px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+@media(min-width:1450px){.hero-grid{width:calc(100% - 4rem);max-width:1680px}.taste-printer{right:35px;top:44%;width:205px}.taste-stream{top:38%;height:350px}}
+@media(max-width:1100px){.hero-copy{order:1}.offer-panel{order:2}.taste-art{order:3}.taste-art{position:relative;inset:auto;grid-column:1/-1;width:100%;height:310px;z-index:0;margin-top:-12px}.taste-stream{top:-26px;left:0;height:260px;width:calc(100% - 110px)}.taste-printer{top:2px;right:15px;width:170px;transform:rotate(2deg)}.taste-paper{padding-top:15px;padding-bottom:18px}.taste-replay{bottom:5px;right:auto;left:16px}.offer-panel{margin-top:0}.hero-grid{gap:18px}}
+@media(prefers-reduced-motion:reduce){.taste-replay{display:none}}
+
+.taste-printer{transform:rotate(1deg)}
+.taste-slot{height:36px;border-radius:6px 6px 2px 2px;box-shadow:0 3px 7px #10211712;font-size:11px}
+.taste-slot:after{left:10px;right:10px;bottom:4px;height:2px}
+.taste-paper-window{margin-top:-3px;filter:drop-shadow(0 5px 5px #10211710)}
+.taste-paper{clip-path:none;background:#fffefa;padding:17px 14px 18px;border-radius:0 0 1px 1px;transform-origin:top center;line-height:1.55}
+.taste-paper strong{font-size:15px;letter-spacing:-.015em;margin-bottom:11px;padding-bottom:10px}
+.taste-item{margin:10px 0;gap:10px}.taste-item b{font-variant-numeric:tabular-nums;min-width:9px}
+.taste-item em{margin-top:2px;font-size:10px;color:#56625a}
+.taste-paper small{font-size:8px;letter-spacing:.045em;color:#56625a}
+.taste-stream{mask-image:linear-gradient(to right,#000 0%,#000 26%,transparent 38%,transparent 65%,#000 82%)}
+.taste-replay{border-radius:5px;text-decoration:none;color:#526459;transition:background-color .2s,color .2s}
+.taste-replay:hover{background:#dfe7df;color:#102117}
+@media(max-width:1100px){.taste-stream{mask-image:none;width:100%;height:260px;top:0}.taste-stream text{font-size:13px}.taste-printer{transform:none}.taste-paper-window{height:290px}}
+
+.taste-paper{will-change:transform,opacity;backface-visibility:hidden}
+@media(max-width:1100px){.taste-art,.taste-replay{display:none}.hero-grid{gap:1.5rem}.offer-panel{margin:.75rem auto 0}}
+
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
@@ -44,7 +82,13 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="shell hero-grid">
+      <div class="shell hero-grid"><div class="taste-art" role="img" aria-label="Ενδεικτική παραγγελία: σκόρπιες σημειώσεις οργανώνονται σε δελτίο κουζίνας.">
+<svg class="taste-stream" viewBox="0 0 1400 330" preserveAspectRatio="none" aria-hidden="true"><defs><path id="taste-path" d="M-90 190 C80 240 260 80 190 38 C90 -30 20 120 145 172 C260 228 430 282 740 276 S1090 80 1250 108"/></defs>
+<text opacity=".5"><textPath href="#taste-path" startOffset="1%">μία χωριάτικη</textPath></text>
+<text opacity=".38"><textPath href="#taste-path" startOffset="18%">χωρίς κρεμμύδι</textPath></text>
+<text opacity=".5"><textPath href="#taste-path" startOffset="35%">τραπέζι έξι</textPath></text>
+<text opacity=".32"><textPath href="#taste-path" startOffset="51%">δύο πατάτες</textPath></text>
+</svg><div class="taste-printer" aria-hidden="true"><div class="taste-slot">POS<b>Pal</b></div><div class="taste-paper-window"><div class="taste-paper"><small>ΔΕΛΤΙΟ ΚΟΥΖΙΝΑΣ</small><strong>Τραπέζι 6</strong><div class="taste-item"><b>1</b><span>Χωριάτικη<em>Χωρίς κρεμμύδι</em></span></div><div class="taste-item"><b>2</b><span>Πατάτες</span></div><small>ΕΝΔΕΙΚΤΙΚΗ ΠΑΡΑΓΓΕΛΙΑ</small></div></div></div></div><button class="taste-replay" type="button">Παύση κίνησης</button>
         <div class="hero-copy">
           <p class="signal-label">Παραγγελιοληψία για εστίαση · Εγκατάσταση σε Windows</p>
           <h1 id="hero-title">Από το τραπέζι μέχρι την κουζίνα. <span>Χωρίς διακοπές.</span></h1>
@@ -419,5 +463,54 @@
 </footer>
 
   <script src="/prototype/homepage-v3/motion.js" defer></script>
+<script>
+(() => {
+const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+const art=document.querySelector('.taste-art');
+const svg=document.querySelector('.taste-stream');
+const mobile=matchMedia('(max-width:1100px)');
+function fitStream(){svg.setAttribute('viewBox',mobile.matches?'0 0 390 260':'0 0 1400 330');svg.querySelector('path').setAttribute('d',mobile.matches?'M-70 200 C50 240 175 190 110 140 C20 70 10 40 55 38 C100 30 130 90 240 48':'M-90 190 C80 240 260 80 190 38 C90 -30 20 120 145 172 C260 228 430 282 740 276 S1090 80 1250 108');}fitStream();mobile.addEventListener('change',fitStream);
+const paper=document.querySelector('.taste-paper');
+const slot=document.querySelector('.taste-slot');
+const button=document.querySelector('.taste-replay');
+const orders=[
+ {table:6,items:[[1,'Χωριάτικη','Χωρίς κρεμμύδι'],[2,'Πατάτες',''],[1,'Τζατζίκι','']],words:['τραπέζι έξι','μία χωριάτικη','χωρίς κρεμμύδι','δύο πατάτες','ένα τζατζίκι','στο έξι']},
+ {table:12,items:[[2,'Μπιφτέκια','Το ένα χωρίς γαρνιτούρα'],[1,'Πράσινη σαλάτα','Σάλτσα χωριστά']],words:['τραπέζι δώδεκα','δύο μπιφτέκια','το ένα σκέτο','μία πράσινη','σάλτσα χωριστά','στο δώδεκα']},
+ {table:3,items:[[1,'Κλαμπ σάντουιτς','Χωρίς ντομάτα'],[2,'Τοστ','Τυρί και γαλοπούλα'],[1,'Πατάτες','']],words:['στο τρία','ένα κλαμπ','χωρίς ντομάτα','δύο τοστ','τυρί γαλοπούλα','και πατάτες']},
+ {table:8,items:[[2,'Σουβλάκια κοτόπουλο',''],[1,'Χωριάτικη','Χωρίς φέτα'],[2,'Πίτες','Αλάδωτες']],words:['τραπέζι οκτώ','δύο κοτόπουλο','μία χωριάτικη','χωρίς φέτα','δύο πίτες','αλάδωτες']}
+];
+svg.querySelectorAll('text').forEach(t=>t.remove());
+const paths=Array.from({length:6},()=>{const t=document.createElementNS('http://www.w3.org/2000/svg','text');const p=document.createElementNS(t.namespaceURI,'textPath');p.setAttribute('href','#taste-path');t.append(p);svg.append(t);return p;});
+let elapsed=0,last=null,frame=null,visible=false,paused=false,current=-1;let paperMotion=null;
+const duration=10000;
+function setOrder(index){current=index;const o=orders[index];paper.innerHTML='<small>ΔΕΛΤΙΟ ΚΟΥΖΙΝΑΣ</small><strong>Τραπέζι '+o.table+'</strong>'+o.items.map(([q,name,note])=>'<div class="taste-item"><b>'+q+'</b><span>'+name+(note?'<em>'+note+'</em>':'')+'</span></div>').join('')+'<small>ΕΝΔΕΙΚΤΙΚΗ ΠΑΡΑΓΓΕΛΙΑ</small>';paths.forEach((p,i)=>p.textContent=o.words[i]);
+ paperMotion?.cancel();paper.style.clipPath='none';
+ paperMotion=paper.animate([
+ {transform:'translate3d(0,-102%,0)',opacity:1,offset:0},
+ {transform:'translate3d(0,-102%,0)',opacity:1,offset:.10},
+ {transform:'translate3d(0,0,0)',opacity:1,offset:.30},
+ {transform:'translate3d(0,0,0)',opacity:1,offset:.78},
+ {transform:'translate3d(0,2px,0)',opacity:1,offset:.80},
+ {transform:'translate3d(4%,110%,0) rotate(2deg)',opacity:0,offset:.97},
+ {transform:'translate3d(4%,110%,0) rotate(2deg)',opacity:0,offset:1}
+ ],{duration,fill:'both',easing:'linear'});
+ paperMotion.currentTime=elapsed%duration;
+ if(paused||!visible||document.hidden||reduce.matches)paperMotion.pause();
+ }
+const clamp=x=>Math.max(0,Math.min(1,x));
+function render(){const index=Math.floor(elapsed/duration)%orders.length;const t=(elapsed%duration)/duration;if(index!==current)setOrder(index);
+ paths.forEach((p,i)=>{const progress=(t*1.48+i*.14)%1; p.setAttribute('startOffset',(-14+progress*119)+'%');p.parentElement.style.opacity=((mobile.matches&&i%2?0:1)*clamp(progress/.12)*clamp((1-progress)/.12)*.52).toFixed(3);});
+
+}
+function tick(now){if(last!==null)elapsed+=Math.min(now-last,80);last=now;render();frame=requestAnimationFrame(tick);}
+function sync(){cancelAnimationFrame(frame);frame=null;last=null;paperMotion?.pause();if(reduce.matches){setOrder(0);paperMotion?.cancel();paper.style.transform='none';paper.style.clipPath='none';paper.style.opacity=1;slot.style.transform='none';paths.forEach((p,i)=>{p.setAttribute('startOffset',(i*14)+'%');p.parentElement.style.opacity='.4';});return;}if(visible&&!paused&&!document.hidden){paperMotion?.play();frame=requestAnimationFrame(tick);}}
+button.setAttribute('aria-pressed','false');
+button.addEventListener('click',()=>{paused=!paused;button.textContent=paused?'Συνέχεια κίνησης':'Παύση κίνησης';button.setAttribute('aria-pressed',String(paused));sync();});
+new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.15}).observe(art);
+document.addEventListener('visibilitychange',sync);reduce.addEventListener('change',sync);
+setOrder(0);render();sync();
+
+})();
+</script>
 </body>
 </html>
