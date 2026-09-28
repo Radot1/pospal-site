@@ -37,3 +37,19 @@
   .system-article-page .system-qr figure { width: min(230px, 100%); margin: 0 auto; }
   .system-article-page .article-body section + section { margin-top: 44px; }
 }
+
+.system-article-page .system-hero-offer {
+  max-width: 760px;
+  margin: 22px auto 18px;
+  font: 400 16px/1.55 var(--editorial-sans);
+  text-wrap: pretty;
+}
+.system-article-page .system-hero-note {
+  margin: 10px 0 0;
+  color: #56625a;
+  font: 400 13px/1.5 var(--editorial-sans);
+}
+@media (max-width: 700px) {
+  .system-article-page .article-header { padding-top: 28px; }
+  .system-article-page .system-hero-offer { margin-top: 18px; font-size: 15px; }
+}
