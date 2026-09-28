@@ -1,0 +1,30 @@
+/* Additions used only by the wireless commercial page. */
+.wireless-article-page .wireless-phone-proof {
+  width: min(360px, 100%);
+  margin: 32px auto;
+}
+.wireless-article-page .wireless-phone-proof img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #cbd0cb;
+  border-radius: 8px;
+}
+.wireless-article-page .wireless-phone-proof figcaption {
+  margin-top: 12px;
+  color: #56625a;
+  font: 14px/1.6 var(--editorial-sans);
+}
+.wireless-article-page .wireless-recovery {
+  padding-left: 26px;
+}
+.wireless-article-page .wireless-recovery li + li {
+  margin-top: 16px;
+}
+.wireless-article-page .system-hero-note a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: #0f7a38;
+  text-underline-offset: 3px;
+}
