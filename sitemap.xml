@@ -114,4 +114,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://pospal.gr/arthra/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
 </urlset>

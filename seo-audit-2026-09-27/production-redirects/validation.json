@@ -1,0 +1,17 @@
+{
+  "selected_301s": 87,
+  "static_sources": 45,
+  "query_sources": 42,
+  "retained_404s": 48,
+  "bulk_rows": 90,
+  "unique_targets": 17,
+  "all_targets_self_canonical_200": true,
+  "cycles_or_target_source_overlap": false,
+  "all_retained_sources_currently_404": true,
+  "all_30_existing_rules_reviewed": true,
+  "bulk_has_no_header_or_BOM": true,
+  "bulk_exact_host_and_path_only": true,
+  "live_academy_matches_local_ignoring_line_endings": true,
+  "live_academy_sha256": "bbb9539d548f2d6be59b2e34bcfb0acb33781a60959ac480eea8d601f7e61c73",
+  "website_DNS_and_deployment_modified": false
+}

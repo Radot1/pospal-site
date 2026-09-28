@@ -741,3 +741,6 @@ body.money-page {
     transform: none;
   }
 }
+
+/* Keep the pricing handoff readable on the dark offer section. */
+body.money-page .money-offer .money-link { color: #b0f5bf; }

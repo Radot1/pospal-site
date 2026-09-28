@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" fill="none">
+  <title>Από το τραπέζι στην κουζίνα</title>
+  <desc>Εικονογράφηση της διαδρομής μιας παραγγελίας: τραπέζι, κινητό και δελτίο στην κουζίνα. Δεν απεικονίζει την οθόνη της εφαρμογής.</desc>
+  <!-- Editable vector artwork. Palette: paper, forest, sage, warm orange. -->
+  <rect width="1200" height="600" fill="#F1F0E8"/>
+  <path d="M0 475C260 420 322 502 600 464C875 427 990 471 1200 438V600H0Z" fill="#E3E8DC"/>
+  <!-- The order travels in one direction. -->
+  <g stroke="#59806A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M371 297H459M443 281L459 297L443 313"/>
+    <path d="M716 297H805M789 281L805 297L789 313"/>
+  </g>
+  <!-- Restaurant table, seen from above. -->
+  <g id="table">
+    <rect x="191" y="122" width="93" height="49" rx="18" fill="#718778"/>
+    <rect x="191" y="420" width="93" height="49" rx="18" fill="#718778"/>
+    <rect x="107" y="177" width="260" height="252" rx="58" fill="#D5DACD"/>
+    <rect x="107" y="165" width="260" height="252" rx="58" fill="#D9B988" stroke="#173C2B" stroke-width="6"/>
+    <circle cx="228" cy="291" r="65" fill="#FAFAF3" stroke="#173C2B" stroke-width="5"/>
+    <circle cx="228" cy="291" r="47" stroke="#CDD3C5" stroke-width="4"/>
+    <path d="M140 262V319M130 250V270Q140 281 150 270V250M140 250V268M315 250V319M305 250V282H315" stroke="#173C2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="299" cy="206" r="17" fill="#F1F0E8" stroke="#173C2B" stroke-width="4"/>
+    <rect x="207" y="348" width="43" height="32" rx="5" fill="#173C2B"/>
+    <text x="228" y="371" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#FFFFFF">7</text>
+  </g>
+  <!-- Schematic order on a phone; intentionally not a product screenshot. -->
+  <g id="phone" transform="rotate(-5 589 296)">
+    <rect x="499" y="122" width="190" height="359" rx="33" fill="#CDD6C9"/>
+    <rect x="493" y="112" width="190" height="359" rx="33" fill="#173C2B"/>
+    <rect x="505" y="125" width="166" height="330" rx="22" fill="#FFFFFF"/>
+    <path d="M558 132H618" stroke="#173C2B" stroke-width="10" stroke-linecap="round"/>
+    <rect x="531" y="177" width="114" height="178" rx="7" fill="#F1F0E8"/>
+    <rect x="548" y="196" width="36" height="32" rx="5" fill="#D9B988"/>
+    <text x="566" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#173C2B">7</text>
+    <g stroke="#718778" stroke-width="7" stroke-linecap="round">
+      <path d="M549 252H621M549 274H607M549 296H621M549 327H579"/>
+    </g>
+    <rect x="531" y="378" width="114" height="49" rx="12" fill="#155D32"/>
+    <path d="M570 403H606M595 392L607 403L595 414" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Kitchen pass with matching order ticket and covered dish. -->
+  <g id="kitchen">
+    <path d="M848 165H1093" stroke="#173C2B" stroke-width="12" stroke-linecap="round"/>
+    <path d="M868 161H981V323L969 316L957 323L945 316L933 323L921 316L909 323L897 316L885 323L868 316Z" fill="#FFFFFF" stroke="#173C2B" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="885" y="184" width="36" height="32" rx="5" fill="#D9B988"/>
+    <text x="903" y="208" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#173C2B">7</text>
+    <path d="M887 241H961M887 263H947M887 285H961" stroke="#718778" stroke-width="7" stroke-linecap="round"/>
+    <path d="M882 421A92 92 0 0 1 1066 421Z" fill="#9CB79B" stroke="#173C2B" stroke-width="6"/>
+    <path d="M974 329V317M963 317H985" stroke="#173C2B" stroke-width="6" stroke-linecap="round"/>
+    <path d="M904 395Q912 367 940 359" stroke="#DCE8D4" stroke-width="7" stroke-linecap="round"/>
+    <path d="M866 426H1082" stroke="#173C2B" stroke-width="10" stroke-linecap="round"/>
+    <path d="M841 454H1108" stroke="#173C2B" stroke-width="9" stroke-linecap="round"/>
+    <path d="M861 460V483M1088 460V483" stroke="#173C2B" stroke-width="7"/>
+  </g>
+</svg>

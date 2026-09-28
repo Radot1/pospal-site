@@ -1,0 +1,121 @@
+[
+  {
+    "article": "pda-ti-einai",
+    "description": "Paper order pad to phone",
+    "file": "pda-ti-einai/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 12_53_16 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "7c22ad67f7935d965a59ec18429bfa418f60abada7a48667c8d2d25cfd2479ba",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "pda-ti-einai/polished-v1.png",
+    "approved_sha256": "f1eef6ab145f0b94a424fb3cc7a91a255689efa8fc0c34ad7abed8787e0d5560",
+    "web_exports": [
+      "pda-ti-einai/cover-320.webp",
+      "pda-ti-einai/cover-640.webp",
+      "pda-ti-einai/cover-1200.webp"
+    ],
+    "usage": [
+      "arthra/index.html card",
+      "pda-ti-einai.html hero and social preview"
+    ]
+  },
+  {
+    "article": "pda-pos-leitourgei",
+    "description": "Phone to order ticket to kitchen",
+    "file": "pda-pos-leitourgei/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 12_53_31 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "06637334cd1ae2abcbce153ce32e34b6299fe09c3d856d0d60be767e665b7a2d",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "pda-pos-leitourgei/polished-v1.png",
+    "approved_sha256": "ddf180a1a6794dc50ec3890a318a36274767294fb20c294470946b0af49d08dd",
+    "web_exports": [
+      "pda-pos-leitourgei/cover-320.webp",
+      "pda-pos-leitourgei/cover-640.webp"
+    ]
+  },
+  {
+    "article": "pda-gia-servitoro",
+    "description": "Three staff phones to one laptop",
+    "file": "pda-gia-servitoro/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 12_53_27 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "ab6bf6bba4c48191d7d14870e3f2ad42e7aa5e356f4e915479681f937d5978f2",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "pda-gia-servitoro/polished-v1.png",
+    "approved_sha256": "628cf6cbae450c51a671be6c820ea7165ee4eda02b1c1938ac016db5a1926f6d",
+    "web_exports": [
+      "pda-gia-servitoro/cover-320.webp",
+      "pda-gia-servitoro/cover-640.webp"
+    ]
+  },
+  {
+    "article": "asyrmati-paraggeliolipsia",
+    "description": "Phone to Wi-Fi to laptop",
+    "file": "asyrmati-paraggeliolipsia/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 12_53_24 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "61e2ea57e934187e06bc193b08a668585f66eba54ebceb8a468bb17a64e3cf34",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "asyrmati-paraggeliolipsia/polished-v1.png",
+    "approved_sha256": "2e8122e99ca345c08e36aae3e1716ee1bac885bf1280e37ca573223b1a806b70",
+    "web_exports": [
+      "asyrmati-paraggeliolipsia/cover-320.webp",
+      "asyrmati-paraggeliolipsia/cover-640.webp"
+    ]
+  },
+  {
+    "article": "systima-paraggeliolipsias",
+    "description": "Phone plus laptop plus printer",
+    "file": "systima-paraggeliolipsias/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 12_53_20 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "c79548e4015db64d4345848d07271a1bd6bd919e80f3621ae4f3ba592ab7d755",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "systima-paraggeliolipsias/polished-v1.png",
+    "approved_sha256": "fbcc2b6ea23f212e0236f107a43a5f3063aecd50a589eff157351b8fe548c21c",
+    "web_exports": [
+      "systima-paraggeliolipsias/cover-320.webp",
+      "systima-paraggeliolipsias/cover-640.webp"
+    ]
+  },
+  {
+    "article": "times",
+    "description": "Ordering equipment plus euro price tag and coins",
+    "file": "times/source.png",
+    "original_filename": "ChatGPT Image Sep 27, 2026, 01_23_14 PM.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "sha256": "00ba2aff77145ecc7773a011ddf0a26b0404a4d81b3d503a1bdeccd7626a5935",
+    "status": "approved-locked",
+    "approved_date": "2026-09-27",
+    "approved_master": "times/polished-v1.png",
+    "approved_sha256": "e441c28fcda4e71e60835943f9d1654f5b9d31bc1ca5b5bc7f0217d9c7e791c5",
+    "web_exports": [
+      "times/cover-320.webp",
+      "times/cover-640.webp"
+    ]
+  }
+]

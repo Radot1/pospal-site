@@ -413,6 +413,64 @@ body.pda-editorial-page {
   font-weight: 700;
 }
 
+.mobile-order-proof-cta {
+  margin-top: 36px;
+}
+
+.mobile-order-proof-cta h3 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.mobile-order-proof-cta p {
+  margin: 12px 0 0;
+  line-height: 1.55;
+}
+
+.mobile-order-proof-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.mobile-order-proof-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  color: var(--editorial-white);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pda-editorial-page .mobile-order-proof-button-primary {
+  color: var(--editorial-forest-deep);
+  background: var(--editorial-green);
+  border-color: var(--editorial-green);
+}
+
+.mobile-order-proof-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mobile-order-proof-button:focus-visible {
+  outline: 2px solid var(--editorial-white);
+  outline-offset: 4px;
+}
+
+.mobile-order-proof-cta .mobile-order-proof-setup {
+  max-width: 70ch;
+  color: oklch(88% .012 150);
+  font-size: 14px;
+}
+
 .mobile-order-proof-note {
   max-width: 78ch;
   margin: 42px 0 0;
@@ -665,6 +723,14 @@ body.pda-editorial-page {
   .mobile-order-proof-step figcaption {
     padding: 0;
     font-size: 15px;
+  }
+
+  .mobile-order-proof-cta {
+    margin: 30px max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+  }
+
+  .mobile-order-proof-actions {
+    flex-direction: column;
   }
 
   .mobile-order-proof-note {

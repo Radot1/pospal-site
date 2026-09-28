@@ -1,0 +1,953 @@
+[
+  {
+    "url": "https://pospal.gr/README.md",
+    "status": 200,
+    "location": null,
+    "sources": []
+  },
+  {
+    "url": "https://pospal.gr/app_icon.ico",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/download/",
+      "live:/guides/",
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "live:/sxetika-me-to-pospal/",
+      "live:/systima-paraggeliolipsias.html",
+      "local:/",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/download/",
+      "local:/guides/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html",
+      "local:/sxetika-me-to-pospal/",
+      "local:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/docs/redesign/captures/app-route-desktop-order.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "local:/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/docs/redesign/captures/app-route-mobile-order.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "local:/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/graphify-out/GRAPH_REPORT.md",
+    "status": 200,
+    "location": null,
+    "sources": []
+  },
+  {
+    "url": "https://pospal.gr/graphify-out/graph.html",
+    "status": 200,
+    "location": null,
+    "sources": []
+  },
+  {
+    "url": "https://pospal.gr/guides/?guide=app-tour",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/guides/?guide=printer-setup",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/guides/?guide=settings",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/guides/?guide=troubleshooting",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/guides/?guide=windows-installation",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "rendered:/download/",
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/prototype/homepage-proposal/styles.css",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/prototype/homepage-proposal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/prototype/homepage-v3/motion.js",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "local:/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/prototype/homepage-v3/styles.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/sxetika-me-to-pospal/",
+      "local:/",
+      "local:/sxetika-me-to-pospal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/prototype/pda-article/styles.css?v=3",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/prototype/pda-article/",
+      "local:/prototype/pda-article/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/about.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/sxetika-me-to-pospal/",
+      "local:/sxetika-me-to-pospal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/academy.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/guides/",
+      "local:/guides/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/academy.css?v=20260901-2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/articles-hub.css?v=20260921-8",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/fonts.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/guide-article.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/guides-hub.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/guides/",
+      "local:/guides/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/legal-links.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/cookies/",
+      "live:/download/",
+      "live:/dpa/",
+      "live:/en/cookies/",
+      "live:/en/dpa/",
+      "live:/en/eula/",
+      "live:/en/legal/",
+      "live:/en/privacy/",
+      "live:/en/subprocessors/",
+      "live:/en/terms/",
+      "live:/eula/",
+      "live:/guides/",
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "live:/legal/",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "live:/privacy/",
+      "live:/subprocessors/",
+      "live:/sxetika-me-to-pospal/",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/terms/",
+      "live:/times.html",
+      "local:/",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/cookies/",
+      "local:/download/",
+      "local:/dpa/",
+      "local:/en/cookies/",
+      "local:/en/dpa/",
+      "local:/en/eula/",
+      "local:/en/legal/",
+      "local:/en/privacy/",
+      "local:/en/subprocessors/",
+      "local:/en/terms/",
+      "local:/eula/",
+      "local:/guides/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/",
+      "local:/legal/",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html",
+      "local:/privacy/",
+      "local:/subprocessors/",
+      "local:/sxetika-me-to-pospal/",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/terms/",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/legal.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/cookies/",
+      "live:/dpa/",
+      "live:/en/cookies/",
+      "live:/en/dpa/",
+      "live:/en/eula/",
+      "live:/en/legal/",
+      "live:/en/privacy/",
+      "live:/en/subprocessors/",
+      "live:/en/terms/",
+      "live:/eula/",
+      "live:/legal/",
+      "live:/privacy/",
+      "live:/subprocessors/",
+      "live:/terms/",
+      "local:/cookies/",
+      "local:/dpa/",
+      "local:/en/cookies/",
+      "local:/en/dpa/",
+      "local:/en/eula/",
+      "local:/en/legal/",
+      "local:/en/privacy/",
+      "local:/en/subprocessors/",
+      "local:/en/terms/",
+      "local:/eula/",
+      "local:/legal/",
+      "local:/privacy/",
+      "local:/subprocessors/",
+      "local:/terms/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pda-acquisition.css?v=20260901-2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pda-editorial.css?v=20260901-5",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pda-editorial.css?v=20260921-2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "local:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pda-waiter.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-gia-servitoro/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pda-waiter.css?v=20260921-1",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "local:/pda-gia-servitoro/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/pricing-buyer-guide.css?v=20260901-3",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/times.html",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/seo-acquisition.css?v=20260901-2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/site-redesign.css",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/cookies/",
+      "live:/download/",
+      "live:/dpa/",
+      "live:/en/cookies/",
+      "live:/en/dpa/",
+      "live:/en/eula/",
+      "live:/en/legal/",
+      "live:/en/privacy/",
+      "live:/en/subprocessors/",
+      "live:/en/terms/",
+      "live:/eula/",
+      "live:/guides/",
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "live:/legal/",
+      "live:/privacy/",
+      "live:/subprocessors/",
+      "live:/terms/",
+      "local:/cookies/",
+      "local:/download/",
+      "local:/dpa/",
+      "local:/en/cookies/",
+      "local:/en/dpa/",
+      "local:/en/eula/",
+      "local:/en/legal/",
+      "local:/en/privacy/",
+      "local:/en/subprocessors/",
+      "local:/en/terms/",
+      "local:/eula/",
+      "local:/guides/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/",
+      "local:/legal/",
+      "local:/privacy/",
+      "local:/subprocessors/",
+      "local:/terms/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/system-money-page.css?v=20260831",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/css/system-money-page.css?v=20260921-1",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "local:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/fonts/Inter-Bold.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:prototype\\homepage-proposal\\styles.css",
+      "css:prototype\\homepage-v3\\styles.css",
+      "css:prototype\\pda-article\\styles.css",
+      "css:static\\css\\articles-hub.css",
+      "css:static\\css\\fonts.css",
+      "css:static\\css\\pda-acquisition.css",
+      "css:static\\css\\seo-acquisition.css",
+      "css:static\\css\\site-redesign.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/fonts/Inter-Medium.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:static\\css\\fonts.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/fonts/Inter-Regular.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:prototype\\homepage-proposal\\styles.css",
+      "css:prototype\\homepage-v3\\styles.css",
+      "css:prototype\\pda-article\\styles.css",
+      "css:static\\css\\articles-hub.css",
+      "css:static\\css\\fonts.css",
+      "css:static\\css\\pda-acquisition.css",
+      "css:static\\css\\seo-acquisition.css",
+      "css:static\\css\\site-redesign.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/fonts/Inter-SemiBold.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:prototype\\homepage-proposal\\styles.css",
+      "css:prototype\\homepage-v3\\styles.css",
+      "css:static\\css\\fonts.css",
+      "css:static\\css\\pda-acquisition.css",
+      "css:static\\css\\seo-acquisition.css",
+      "css:static\\css\\site-redesign.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/asyrmati-paraggeliolipsia/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/pda-gia-servitoro/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/pda-pos-leitourgei/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/pda-ti-einai/cover-1200.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/pda-ti-einai/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/systima-paraggeliolipsias/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/articles/illustrations/times/cover-320.webp",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pda-equipment-atlas.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/prototype/pda-article/",
+      "local:/prototype/pda-article/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pda-menu-mobile.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html",
+      "local:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pda-phone-pospal-during-service.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html",
+      "live:/times.html",
+      "local:/times.html",
+      "schema"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pda-send-mobile.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html",
+      "local:/pda-ti-einai.html",
+      "local:/prototype/homepage-proposal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pda-tables-mobile.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html",
+      "local:/pda-ti-einai.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pospal-desktop-order.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/download/",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "live:/sxetika-me-to-pospal/",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/download/",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html",
+      "local:/sxetika-me-to-pospal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pospal-desktop-order.webp",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/prototype/pda-article/",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/prototype/homepage-proposal/",
+      "local:/prototype/pda-article/",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/times.html",
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pospal-icon-96.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/times.html",
+      "local:/prototype/homepage-proposal/",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/pospal-mark-64.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/prototype/pda-article/",
+      "local:/arthra/",
+      "local:/prototype/pda-article/",
+      "schema"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/img/robert-airey-founder.jpg",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/pda-ti-einai.html",
+      "local:/pda-ti-einai.html",
+      "schema"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/js/academy.js",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/guides/",
+      "local:/guides/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/js/articles-hub.js",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "local:/arthra/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/js/ga-consent.js",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/cookies/",
+      "live:/download/",
+      "live:/dpa/",
+      "live:/en/cookies/",
+      "live:/en/dpa/",
+      "live:/en/eula/",
+      "live:/en/legal/",
+      "live:/en/privacy/",
+      "live:/en/subprocessors/",
+      "live:/en/terms/",
+      "live:/eula/",
+      "live:/guides/",
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "live:/legal/",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "live:/privacy/",
+      "live:/subprocessors/",
+      "live:/sxetika-me-to-pospal/",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/terms/",
+      "live:/times.html",
+      "local:/",
+      "local:/arthra/",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/cookies/",
+      "local:/download/",
+      "local:/dpa/",
+      "local:/en/cookies/",
+      "local:/en/dpa/",
+      "local:/en/eula/",
+      "local:/en/legal/",
+      "local:/en/privacy/",
+      "local:/en/subprocessors/",
+      "local:/en/terms/",
+      "local:/eula/",
+      "local:/guides/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/",
+      "local:/legal/",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html",
+      "local:/privacy/",
+      "local:/subprocessors/",
+      "local:/sxetika-me-to-pospal/",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/terms/",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/js/ga-events.js",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/asyrmati-paraggeliolipsia.html",
+      "live:/download/",
+      "live:/guides/",
+      "live:/guides/account/",
+      "live:/guides/app-tour/",
+      "live:/guides/printer-setup/",
+      "live:/guides/qr-menu/",
+      "live:/guides/settings/",
+      "live:/guides/troubleshooting/",
+      "live:/guides/windows-installation/",
+      "live:/paraggelio-lipsia-gia-beach-bar.html",
+      "live:/pda-gia-kafeteries.html",
+      "live:/pda-gia-servitoro/",
+      "live:/pda-pos-leitourgei.html",
+      "live:/pda-ti-einai.html",
+      "live:/sxetika-me-to-pospal/",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/",
+      "local:/arthra/",
+      "local:/asyrmati-paraggeliolipsia.html",
+      "local:/download/",
+      "local:/guides/",
+      "local:/guides/account/",
+      "local:/guides/app-tour/",
+      "local:/guides/printer-setup/",
+      "local:/guides/qr-menu/",
+      "local:/guides/settings/",
+      "local:/guides/troubleshooting/",
+      "local:/guides/windows-installation/",
+      "local:/paraggelio-lipsia-gia-beach-bar.html",
+      "local:/pda-gia-kafeteries.html",
+      "local:/pda-gia-servitoro/",
+      "local:/pda-pos-leitourgei.html",
+      "local:/pda-ti-einai.html",
+      "local:/sxetika-me-to-pospal/",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/times.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/qr-menu-live-code.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "local:/",
+      "local:/prototype/homepage-proposal/"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/qr-menu-live-preview.png",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "live:/",
+      "live:/systima-paraggeliolipsias.html",
+      "live:/times.html",
+      "local:/",
+      "local:/prototype/homepage-proposal/",
+      "local:/systima-paraggeliolipsias.html",
+      "local:/times.html",
+      "rendered:/systima-paraggeliolipsias.html"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-brands-400.ttf",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-brands-400.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-regular-400.ttf",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-regular-400.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-solid-900.ttf",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-solid-900.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-v4compatibility.ttf",
+    "status": 404,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  },
+  {
+    "url": "https://pospal.gr/static/vendor/fontawesome/webfonts/fa-v4compatibility.woff2",
+    "status": 200,
+    "location": null,
+    "sources": [
+      "css:static\\vendor\\fontawesome\\css\\all.min.css"
+    ]
+  }
+]

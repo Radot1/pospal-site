@@ -1,0 +1,1562 @@
+{
+  "checks": [
+    {
+      "url": "http://pospal.gr/",
+      "status": 301,
+      "location": "https://pospal.gr/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/arthra/",
+      "status": 301,
+      "location": "https://pospal.gr/arthra/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/asyrmati-paraggeliolipsia.html",
+      "status": 301,
+      "location": "https://pospal.gr/asyrmati-paraggeliolipsia.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/download/",
+      "status": 301,
+      "location": "https://pospal.gr/download/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/account/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/account/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/app-tour/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/app-tour/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/printer-setup/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/printer-setup/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/qr-menu/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/qr-menu/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/settings/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/settings/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/troubleshooting/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/troubleshooting/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/guides/windows-installation/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/windows-installation/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "status": 301,
+      "location": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/pda-gia-kafeteries.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-kafeteries.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/pda-gia-servitoro/",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-servitoro/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/pda-pos-leitourgei.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-pos-leitourgei.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/pda-ti-einai.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-ti-einai.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/sxetika-me-to-pospal/",
+      "status": 301,
+      "location": "https://pospal.gr/sxetika-me-to-pospal/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/systima-paraggeliolipsias.html",
+      "status": 301,
+      "location": "https://pospal.gr/systima-paraggeliolipsias.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://pospal.gr/times.html",
+      "status": 301,
+      "location": "https://pospal.gr/times.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/",
+      "status": 301,
+      "location": "https://pospal.gr/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/arthra/",
+      "status": 301,
+      "location": "https://pospal.gr/arthra/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/asyrmati-paraggeliolipsia.html",
+      "status": 301,
+      "location": "https://pospal.gr/asyrmati-paraggeliolipsia.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/download/",
+      "status": 301,
+      "location": "https://pospal.gr/download/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/account/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/account/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/app-tour/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/app-tour/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/printer-setup/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/printer-setup/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/qr-menu/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/qr-menu/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/settings/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/settings/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/troubleshooting/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/troubleshooting/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/guides/windows-installation/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/windows-installation/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "status": 301,
+      "location": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/pda-gia-kafeteries.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-kafeteries.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/pda-gia-servitoro/",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-servitoro/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/pda-pos-leitourgei.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-pos-leitourgei.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/pda-ti-einai.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-ti-einai.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/sxetika-me-to-pospal/",
+      "status": 301,
+      "location": "https://pospal.gr/sxetika-me-to-pospal/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/systima-paraggeliolipsias.html",
+      "status": 301,
+      "location": "https://pospal.gr/systima-paraggeliolipsias.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "http://www.pospal.gr/times.html",
+      "status": 301,
+      "location": "https://pospal.gr/times.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/POSPalDesktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/POSPal_Demo.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/POSPal_Demo_Desktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/POSPal_Demo_Index.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/arthra",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/arthra/index.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/asyrmati-parageliolipsia-estiasi/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/asyrmati-paraggeliolipsia",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/asyrmati-paraggeliolipsia.html"
+      ],
+      "sha256": "c9198b8b208b9b4af2aabf7602126646289d4ea9f934118f07152331e51c6fc4",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/asyrmati-paraggeliolipsia.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/asyrmati-paraggeliolipsia/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/buy-license.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/download",
+      "status": 301,
+      "location": "https://pospal.gr/download/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/download/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/download/"
+      ],
+      "sha256": "ce7fd5fca717e349655b7bac362dc8206b1b319a2d0604fa3eb27726d8ac8c0d",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/home-v2.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/pospal-demo-coffee-desktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/pospal-demo-coffee-mobile.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/pospal-demo-desktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/pospal-demo-mobile.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/drafts/qr-menu-demo.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/dwrean-dokimi-30-imeron/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides",
+      "status": 301,
+      "location": "https://pospal.gr/guides/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/?guide=printer-setup",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/?guide=unknown",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/?guide=windows-installation",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/?lesson=0",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/?lesson=1",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/account",
+      "status": 301,
+      "location": "https://pospal.gr/guides/account/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/account/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/account/"
+      ],
+      "sha256": "8564a7e4212626033c29c6091c305cd8d3f009dd52c6b7fe937b7c292f6a8cd8",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/app-tour",
+      "status": 301,
+      "location": "https://pospal.gr/guides/app-tour/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/app-tour/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/app-tour/"
+      ],
+      "sha256": "7d7e79c49c418779bb7910f78e6e573b5216c77e51fc0d2b8af6b3a1052c0b8a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/beach-bar-setup.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/cafe-optimization.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/connect-staff-devices/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/first-week-optimization/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/food-truck-mobile/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/"
+      ],
+      "sha256": "29b4b5056f6f4207efdf8b9f100daf07a35dd578a344fc809d7cc94218e4ab6a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/index_backup.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/logariasmos-kai-pliromes/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/printer-setup",
+      "status": 301,
+      "location": "https://pospal.gr/guides/printer-setup/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/printer-setup/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/printer-setup/"
+      ],
+      "sha256": "2165e32d7964893d931ed6119e1c2d325a6906244b6419c9dbdeac72290b4f1a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/proto-menou-kai-qr/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/qr-menu",
+      "status": 301,
+      "location": "https://pospal.gr/guides/qr-menu/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/qr-menu-best-practices.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/qr-menu/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/qr-menu/"
+      ],
+      "sha256": "b13885625b65881082fc0402ecc3d0e8240c0f5254b654c31a6eef9cc33ee062",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/seasonal-management/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/settings",
+      "status": 301,
+      "location": "https://pospal.gr/guides/settings/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/settings/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/settings/"
+      ],
+      "sha256": "3ff612db096535f094845957dbdf0e07cdbb91a9a43e61bdd503a48d4833deaf",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/stisimo-ektypoti/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/test-order/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/troubleshooting",
+      "status": 301,
+      "location": "https://pospal.gr/guides/troubleshooting/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/troubleshooting/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/troubleshooting/"
+      ],
+      "sha256": "c33c6ea958df80fa90ad5b253904eb0cc5c6db353f90a0d0a9ffaf32af59c08c",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/windows-installation",
+      "status": 301,
+      "location": "https://pospal.gr/guides/windows-installation/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/guides/windows-installation/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/guides/windows-installation/"
+      ],
+      "sha256": "c72af096115e32d0344084006a6ad8c02410abd9a6550bddcf91ee2b6f322465",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/"
+      ],
+      "sha256": "9042d84815719b5ef76923b52391c0ce7fc42fe25c94fb7fc3dbb1e11a79bfa8",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/installation-guide.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/managementComponent.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/menu-estiatoriou.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/paraggelies-gia-estiash.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/paraggelio-lipsia-gia-beach-bar.html"
+      ],
+      "sha256": "275ce4a8449bbda22df8825a6ee2c2113e13c2bfdba59d6e2fc924727cdffdf8",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-kafeteria/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-kafeteries",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/pda-gia-kafeteries.html"
+      ],
+      "sha256": "1833dd43ccf8ffc71cddf93e6b86dd7b10f97d6575297c389bea09e654129df1",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-kafeteries.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-kafeteries/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-servitoro",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-servitoro/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-gia-servitoro/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/pda-gia-servitoro/"
+      ],
+      "sha256": "7a6666fd13ee80d1aeecfe211f5180e4b49e383f4e2b329c0f86f87f480748d4",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-pos-leitourgei",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/pda-pos-leitourgei.html"
+      ],
+      "sha256": "fd84a60be5c2740466095f3227d829a9bb87ff1b8af0bd8911e70e25fedb3609",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-pos-leitourgei.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-pos-leitourgei/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-ti-einai",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/pda-ti-einai.html"
+      ],
+      "sha256": "889e574874f23296534d98a2bc170d214189d5ace2aaee6013642bdb1fb0e63e",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-ti-einai.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pda-ti-einai/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pospal-demo-coffee-desktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pospal-demo-coffee-mobile.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pospal-demo-desktop.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/pospal-demo-mobile.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/academy-odoo-lab/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/academy-v1/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/academy-v1/printer-setup/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/academy-v1/windows-installation/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/homepage-hero-lab/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/homepage-v2/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/homepage-v3/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/prototype/homepage/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/qr-menu-demo.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/qr-menu-estiasis/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/qr-menu-gia-estiash.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/support.html",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/sxetika-me-to-pospal",
+      "status": 301,
+      "location": "https://pospal.gr/sxetika-me-to-pospal/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/sxetika-me-to-pospal/index.html",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/sxetika-me-to-pospal/"
+      ],
+      "sha256": "afc0e74a79b4c4284c50fab9bced5ce68f302008b0971eff791e4aff71b14cb0",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/systima-paraggeliolipsias",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/systima-paraggeliolipsias.html"
+      ],
+      "sha256": "399e80b81d6e729160cb28a409745a68802d3ffbb376dbdfdc8bc98b28b46586",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/systima-paraggeliolipsias.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/systima-paraggeliolipsias/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/times",
+      "status": 200,
+      "location": null,
+      "canonical": [
+        "https://pospal.gr/times.html"
+      ],
+      "sha256": "7fa4a57ba2b905f29bd343f35c2fcd17198f83e901e4877999cddc99cf326788",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/times-systimatos-parageliolipsias/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/times.html/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://pospal.gr/times/",
+      "status": 404,
+      "location": null,
+      "canonical": [],
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/",
+      "status": 301,
+      "location": "https://pospal.gr/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/arthra/",
+      "status": 301,
+      "location": "https://pospal.gr/arthra/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/asyrmati-paraggeliolipsia.html",
+      "status": 301,
+      "location": "https://pospal.gr/asyrmati-paraggeliolipsia.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/download/",
+      "status": 301,
+      "location": "https://pospal.gr/download/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/account/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/account/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/app-tour/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/app-tour/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/printer-setup/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/printer-setup/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/qr-menu/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/qr-menu/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/settings/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/settings/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/troubleshooting/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/troubleshooting/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/guides/windows-installation/",
+      "status": 301,
+      "location": "https://pospal.gr/guides/windows-installation/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "status": 301,
+      "location": "https://pospal.gr/paraggelio-lipsia-gia-beach-bar.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/pda-gia-kafeteries.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-kafeteries.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/pda-gia-servitoro/",
+      "status": 301,
+      "location": "https://pospal.gr/pda-gia-servitoro/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/pda-pos-leitourgei.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-pos-leitourgei.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/pda-ti-einai.html",
+      "status": 301,
+      "location": "https://pospal.gr/pda-ti-einai.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/sxetika-me-to-pospal/",
+      "status": 301,
+      "location": "https://pospal.gr/sxetika-me-to-pospal/",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/systima-paraggeliolipsias.html",
+      "status": 301,
+      "location": "https://pospal.gr/systima-paraggeliolipsias.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    },
+    {
+      "url": "https://www.pospal.gr/times.html",
+      "status": 301,
+      "location": "https://pospal.gr/times.html",
+      "canonical": [],
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "server": "GitHub.com",
+      "xrobots": null
+    }
+  ],
+  "historical_html_files": [
+    "POSPalDesktop.html",
+    "POSPal_Demo.html",
+    "POSPal_Demo_Desktop.html",
+    "POSPal_Demo_Index.html",
+    "asyrmati-parageliolipsia-estiasi/index.html",
+    "asyrmati-paraggeliolipsia.html",
+    "buy-license.html",
+    "cookies/index.html",
+    "download/index.html",
+    "dpa/index.html",
+    "drafts/home-v2.html",
+    "drafts/pospal-demo-coffee-desktop.html",
+    "drafts/pospal-demo-coffee-mobile.html",
+    "drafts/pospal-demo-desktop.html",
+    "drafts/pospal-demo-mobile.html",
+    "drafts/qr-menu-demo.html",
+    "dwrean-dokimi-30-imeron/index.html",
+    "en/cookies/index.html",
+    "en/dpa/index.html",
+    "en/eula/index.html",
+    "en/legal/index.html",
+    "en/privacy/index.html",
+    "en/subprocessors/index.html",
+    "en/terms/index.html",
+    "eula.html",
+    "eula/index.html",
+    "google768162376caa4dfd.html",
+    "guides/account/index.html",
+    "guides/app-tour/index.html",
+    "guides/beach-bar-setup.html",
+    "guides/cafe-optimization.html",
+    "guides/connect-staff-devices/index.html",
+    "guides/first-week-optimization/index.html",
+    "guides/food-truck-mobile/index.html",
+    "guides/index.html",
+    "guides/index_backup.html",
+    "guides/logariasmos-kai-pliromes/index.html",
+    "guides/printer-setup/index.html",
+    "guides/proto-menou-kai-qr/index.html",
+    "guides/qr-menu-best-practices.html",
+    "guides/qr-menu/index.html",
+    "guides/seasonal-management/index.html",
+    "guides/settings/index.html",
+    "guides/stisimo-ektypoti/index.html",
+    "guides/test-order/index.html",
+    "guides/troubleshooting/index.html",
+    "guides/windows-installation/index.html",
+    "index.html",
+    "installation-guide.html",
+    "legal/eula.html",
+    "legal/index.html",
+    "legal/privacy.html",
+    "managementComponent.html",
+    "menu-estiatoriou.html",
+    "paraggelies-gia-estiash.html",
+    "paraggelio-lipsia-gia-beach-bar.html",
+    "pda-gia-kafeteria/index.html",
+    "pda-gia-kafeteries.html",
+    "pda-gia-servitoro/index.html",
+    "pda-pos-leitourgei.html",
+    "pda-ti-einai.html",
+    "pospal-demo-coffee-desktop.html",
+    "pospal-demo-coffee-mobile.html",
+    "pospal-demo-desktop.html",
+    "pospal-demo-mobile.html",
+    "privacy.html",
+    "privacy/index.html",
+    "prototype/academy-odoo-lab/index.html",
+    "prototype/academy-v1/index.html",
+    "prototype/academy-v1/printer-setup/index.html",
+    "prototype/academy-v1/windows-installation/index.html",
+    "prototype/homepage-hero-lab/index.html",
+    "prototype/homepage-v2/index.html",
+    "prototype/homepage-v3/index.html",
+    "prototype/homepage/index.html",
+    "prototype/pda-article/index.html",
+    "qr-menu-demo.html",
+    "qr-menu-estiasis/index.html",
+    "qr-menu-gia-estiash.html",
+    "subprocessors/index.html",
+    "support.html",
+    "sxetika-me-to-pospal/index.html",
+    "systima-paraggeliolipsias.html",
+    "terms/index.html",
+    "times-systimatos-parageliolipsias/index.html",
+    "times.html"
+  ]
+}

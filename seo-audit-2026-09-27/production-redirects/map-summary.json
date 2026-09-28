@@ -1,0 +1,22 @@
+{
+  "total_301_source_URLs": 87,
+  "static_301_source_URLs": 45,
+  "query_301_source_URLs": 42,
+  "retained_404_source_URLs": 48,
+  "bulk_import_rows": 90,
+  "approved_static_base_families": 23,
+  "questionable_base_URLs": {
+    "/POSPalDesktop.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/POSPal_Demo.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/POSPal_Demo_Desktop.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/POSPal_Demo_Index.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/managementComponent.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/pospal-demo-desktop.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/pospal-demo-mobile.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/pospal-demo-coffee-desktop.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/pospal-demo-coffee-mobile.html": "Owner decision: accept a browser-demo-to-installed-trial product transition? Excluded from production 301s unless that intent change is expressly accepted.",
+    "/qr-menu-demo.html": "A verified maintained public menu sample could be a successor, but none is established in this audit; do not invent or use a private customer URL.",
+    "/menu-estiatoriou.html": "Closest partial candidate /guides/qr-menu/; do not activate without accepting the narrower tutorial scope."
+  },
+  "all_existing_rules_reviewed": 30
+}

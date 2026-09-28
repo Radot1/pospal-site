@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-31T20:17:59.402160+00:00",
+  "generated_at": "2026-09-21T14:37:33.938101+00:00",
   "nodes": {
     "beach_bar_order_page": {
-      "code_fingerprint": "d59809afb0d3ec6fb389c79c91b6866ffdfcf905a13e89d59a4e71d066ed505b",
+      "code_fingerprint": "275ce4a8449bbda22df8825a6ee2c2113e13c2bfdba59d6e2fc924727cdffdf8",
       "label": "Beach Bar Order-taking Page",
       "last": "2026-08-29T09:02:09.394201+00:00",
       "provenance": [
@@ -12,31 +12,10 @@
           "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
         }
       ],
-      "score": 0.944543431,
+      "score": 0.584619248,
       "source_file": "paraggelio-lipsia-gia-beach-bar.html",
       "status": "tentative",
       "uses": 1
-    },
-    "cafe_pda_page": {
-      "code_fingerprint": "75203ec019df1f68830fd3b28629ad3fd5c8fef1e54581fe070e8be23e62109c",
-      "label": "Cafe PDA Page",
-      "last": "2026-08-29T10:22:59.791853+00:00",
-      "provenance": [
-        {
-          "date": "2026-08-29T10:22:59.791853+00:00",
-          "outcome": "useful",
-          "q": "Review who POSPal SEO is targeting and reevaluate the PDA pages that bring visitors who do not download"
-        },
-        {
-          "date": "2026-08-29T09:02:09.394201+00:00",
-          "outcome": "useful",
-          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
-        }
-      ],
-      "score": 1.890312809,
-      "source_file": "pda-gia-kafeteries.html",
-      "status": "preferred",
-      "uses": 2
     },
     "docs_redesign_homepage_design_brief_commercial_model": {
       "code_fingerprint": "a4990b7bd6c3caf8adb3e780efd6a0725f744773d05e56ea95e9da528b0e56cb",
@@ -49,8 +28,72 @@
           "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
         }
       ],
-      "score": 0.944543431,
+      "score": 0.584619248,
       "source_file": "docs/redesign/homepage-design-brief.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_seo_pospal_product_fact_checklist_pospal_product_fact_checklist": {
+      "code_fingerprint": "af953396fd3ee3a9be6e55204f567a46cd6613f2adfa072f0e3e29dff005b47b",
+      "label": "POSPal Product-Fact Checklist",
+      "last": "2026-08-31T20:25:01.041850+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-31T20:25:01.041850+00:00",
+          "outcome": "useful",
+          "q": "What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+        }
+      ],
+      "score": 0.619013537,
+      "source_file": "docs/seo/pospal-product-fact-checklist.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_seo_pospal_product_fact_checklist_printer_facts": {
+      "code_fingerprint": "af953396fd3ee3a9be6e55204f567a46cd6613f2adfa072f0e3e29dff005b47b",
+      "label": "Printer facts",
+      "last": "2026-08-31T20:25:01.041850+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-31T20:25:01.041850+00:00",
+          "outcome": "useful",
+          "q": "What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+        }
+      ],
+      "score": 0.619013537,
+      "source_file": "docs/seo/pospal-product-fact-checklist.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_seo_proof_records_prf_2026_001_device_and_network_checkpoints": {
+      "code_fingerprint": "082d9e4fc755cd122332d605bd00de526e525cf53062ba4e7f0b01bd27534818",
+      "label": "Device and network checkpoints",
+      "last": "2026-08-31T20:25:01.041850+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-31T20:25:01.041850+00:00",
+          "outcome": "useful",
+          "q": "What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+        }
+      ],
+      "score": 0.619013537,
+      "source_file": "docs/seo/proof-records/PRF-2026-001.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_seo_proof_records_prf_2026_001_prf_2026_001_controlled_windows_installation_and_first_order_verification": {
+      "code_fingerprint": "082d9e4fc755cd122332d605bd00de526e525cf53062ba4e7f0b01bd27534818",
+      "label": "PRF-2026-001: Controlled Windows Installation and First-Order Verification",
+      "last": "2026-08-31T20:25:01.041850+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-31T20:25:01.041850+00:00",
+          "outcome": "useful",
+          "q": "What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+        }
+      ],
+      "score": 0.619013537,
+      "source_file": "docs/seo/proof-records/PRF-2026-001.md",
       "status": "tentative",
       "uses": 1
     },
@@ -70,13 +113,13 @@
           "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
         }
       ],
-      "score": 1.890312809,
+      "score": 1.169997288,
       "source_file": "MARKETING_PLAN.md",
       "status": "preferred",
       "uses": 2
     },
     "download_index_installer_handoff": {
-      "code_fingerprint": "582b3b060b494e08bc16d2cf90fd2aafce5def67f5b36ce6bccbb9497fc95a52",
+      "code_fingerprint": "ce7fd5fca717e349655b7bac362dc8206b1b319a2d0604fa3eb27726d8ac8c0d",
       "label": "Windows Installer Handoff",
       "last": "2026-08-29T10:10:22.037051+00:00",
       "provenance": [
@@ -86,7 +129,7 @@
           "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
         }
       ],
-      "score": 0.945577749,
+      "score": 0.585259433,
       "source_file": "download/index.html",
       "status": "tentative",
       "uses": 1
@@ -107,34 +150,13 @@
           "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
         }
       ],
-      "score": 1.890312809,
+      "score": 1.169997288,
       "source_file": "MARKETING_PLAN.md",
       "status": "preferred",
       "uses": 2
     },
-    "pda_definition_page": {
-      "code_fingerprint": "4f1c9ae4060eb5366c4b77b40916764ab6c74b3145588009fbdadb38a88d66e6",
-      "label": "PDA Definition Page",
-      "last": "2026-08-29T10:22:59.791853+00:00",
-      "provenance": [
-        {
-          "date": "2026-08-29T10:22:59.791853+00:00",
-          "outcome": "useful",
-          "q": "Review who POSPal SEO is targeting and reevaluate the PDA pages that bring visitors who do not download"
-        },
-        {
-          "date": "2026-08-29T09:02:09.394201+00:00",
-          "outcome": "useful",
-          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
-        }
-      ],
-      "score": 1.890312809,
-      "source_file": "pda-ti-einai.html",
-      "status": "preferred",
-      "uses": 2
-    },
     "pda_how_it_works_page": {
-      "code_fingerprint": "94d5b7c23fb6b268229b707f552ced3156615f9fe889ac42a26b530352c2f0eb",
+      "code_fingerprint": "fd84a60be5c2740466095f3227d829a9bb87ff1b8af0bd8911e70e25fedb3609",
       "label": "PDA How-it-works Page",
       "last": "2026-08-29T10:22:59.791853+00:00",
       "provenance": [
@@ -149,13 +171,13 @@
           "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
         }
       ],
-      "score": 1.890312809,
+      "score": 1.169997288,
       "source_file": "pda-pos-leitourgei.html",
       "status": "preferred",
       "uses": 2
     },
     "systima_paraggeliolipsias_non_fiscal_boundary": {
-      "code_fingerprint": "685fe9467276e8bf0c2813b54d5e56746be0041dfe5992a78a1a5576cb4089e5",
+      "code_fingerprint": "399e80b81d6e729160cb28a409745a68802d3ffbb376dbdfdc8bc98b28b46586",
       "label": "Ordering Workflow Not Fiscal POS",
       "last": "2026-08-29T10:10:22.037051+00:00",
       "provenance": [
@@ -165,61 +187,29 @@
           "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
         }
       ],
-      "score": 0.945577749,
-      "source_file": "systima-paraggeliolipsias.html",
-      "status": "tentative",
-      "uses": 1
-    },
-    "systima_paraggeliolipsias_ordering_system_hub_page": {
-      "code_fingerprint": "685fe9467276e8bf0c2813b54d5e56746be0041dfe5992a78a1a5576cb4089e5",
-      "label": "Ordering System Hub Page",
-      "last": "2026-08-29T10:10:22.037051+00:00",
-      "provenance": [
-        {
-          "date": "2026-08-29T10:10:22.037051+00:00",
-          "outcome": "useful",
-          "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
-        }
-      ],
-      "score": 0.945577749,
+      "score": 0.585259433,
       "source_file": "systima-paraggeliolipsias.html",
       "status": "tentative",
       "uses": 1
     },
     "systima_paraggeliolipsias_staff_device_to_windows_route": {
-      "code_fingerprint": "685fe9467276e8bf0c2813b54d5e56746be0041dfe5992a78a1a5576cb4089e5",
+      "code_fingerprint": "399e80b81d6e729160cb28a409745a68802d3ffbb376dbdfdc8bc98b28b46586",
       "label": "Staff Device to Windows Route",
-      "last": "2026-08-29T10:10:22.037051+00:00",
+      "last": "2026-08-31T20:25:01.041850+00:00",
       "provenance": [
+        {
+          "date": "2026-08-31T20:25:01.041850+00:00",
+          "outcome": "useful",
+          "q": "What real assets and repository evidence should shape the visual-story brief for /pda-ti-einai.html?"
+        },
         {
           "date": "2026-08-29T10:10:22.037051+00:00",
           "outcome": "useful",
           "q": "How should the Ordering System Hub Page connect to the POSPal download-first self-service funnel?"
         }
       ],
-      "score": 0.945577749,
+      "score": 1.204272969,
       "source_file": "systima-paraggeliolipsias.html",
-      "status": "tentative",
-      "uses": 1
-    },
-    "waiter_pda_page": {
-      "code_fingerprint": "955a98b529447dd38c37f54bbccc2f48db4b282ad2763791e5fbb9523c10192f",
-      "label": "Waiter PDA Page",
-      "last": "2026-08-29T10:22:59.791853+00:00",
-      "provenance": [
-        {
-          "date": "2026-08-29T10:22:59.791853+00:00",
-          "outcome": "useful",
-          "q": "Review who POSPal SEO is targeting and reevaluate the PDA pages that bring visitors who do not download"
-        },
-        {
-          "date": "2026-08-29T09:02:09.394201+00:00",
-          "outcome": "useful",
-          "q": "Who does POSPal SEO currently target, and how should it target self-installing hospitality owners?"
-        }
-      ],
-      "score": 1.890312809,
-      "source_file": "pda-gia-servitoro/index.html",
       "status": "preferred",
       "uses": 2
     }

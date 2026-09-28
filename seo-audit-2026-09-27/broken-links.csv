@@ -1,0 +1,46 @@
+﻿scope,source,target,http_status,issue,local_target_exists
+"live legacy route; configuration source, not current navigation",_redirects:1,https://pospal.gr/prototype/homepage-v3/,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:2,https://pospal.gr/buy-license.html,404,Configured 301 to /download/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:3,https://pospal.gr/support.html,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:8,https://pospal.gr/installation-guide.html,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:9,https://pospal.gr/pospal-demo-coffee-desktop.html,404,Configured 301 to /download/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:10,https://pospal.gr/pospal-demo-coffee-mobile.html,404,Configured 301 to /download/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:11,https://pospal.gr/qr-menu-demo.html,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:12,https://pospal.gr/menu-estiatoriou.html,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:13,https://pospal.gr/qr-menu-gia-estiash.html,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:14,https://pospal.gr/paraggelies-gia-estiash.html,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:15,https://pospal.gr/dwrean-dokimi-30-imeron/,404,Configured 301 to /download/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:16,https://pospal.gr/pda-gia-kafeteria/,404,Configured 301 to /pda-gia-kafeteries.html is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:17,https://pospal.gr/times-systimatos-parageliolipsias/,404,Configured 301 to /times.html is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:18,https://pospal.gr/qr-menu-estiasis/,404,Configured 301 to / is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:19,https://pospal.gr/asyrmati-parageliolipsia-estiasi/,404,Configured 301 to /asyrmati-paraggeliolipsia.html is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:20,https://pospal.gr/guides/connect-staff-devices/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:21,https://pospal.gr/guides/test-order/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:22,https://pospal.gr/guides/food-truck-mobile/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:23,https://pospal.gr/guides/first-week-optimization/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:24,https://pospal.gr/guides/logariasmos-kai-pliromes/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:25,https://pospal.gr/guides/proto-menou-kai-qr/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:26,https://pospal.gr/guides/seasonal-management/,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:27,https://pospal.gr/guides/beach-bar-setup.html,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:28,https://pospal.gr/guides/cafe-optimization.html,404,Configured 301 to /guides/ is not executed,False
+"live legacy route; configuration source, not current navigation",_redirects:29,https://pospal.gr/guides/qr-menu-best-practices.html,404,Configured 301 to /guides/ is not executed,False
+local-only publication mismatch,/times.html,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only publication mismatch,/systima-paraggeliolipsias.html,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only publication mismatch,/asyrmati-paraggeliolipsia.html,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only publication mismatch,/pda-pos-leitourgei.html,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only publication mismatch,/pda-gia-servitoro/,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only publication mismatch,/pda-ti-einai.html,https://pospal.gr/arthra/,404,Local page links to unpublished URL; not found in live navigation,True
+local-only asset publication mismatch,local:/prototype/homepage-proposal/,https://pospal.gr/prototype/homepage-proposal/styles.css,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/css/articles-hub.css?v=20260921-8,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/asyrmati-paraggeliolipsia/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/pda-gia-servitoro/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/pda-pos-leitourgei/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/pda-ti-einai.html,https://pospal.gr/static/img/articles/illustrations/pda-ti-einai/cover-1200.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/pda-ti-einai/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/systima-paraggeliolipsias/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/img/articles/illustrations/times/cover-320.webp,404,Asset is not published at this URL,True
+local-only asset publication mismatch,local:/arthra/,https://pospal.gr/static/js/articles-hub.js,404,Asset is not published at this URL,True
+unused vendor CSS fallback,css:static\vendor\fontawesome\css\all.min.css,https://pospal.gr/static/vendor/fontawesome/webfonts/fa-brands-400.ttf,404,Missing TTF fallback; WOFF2 available; stylesheet not referenced by current HTML,False
+unused vendor CSS fallback,css:static\vendor\fontawesome\css\all.min.css,https://pospal.gr/static/vendor/fontawesome/webfonts/fa-regular-400.ttf,404,Missing TTF fallback; WOFF2 available; stylesheet not referenced by current HTML,False
+unused vendor CSS fallback,css:static\vendor\fontawesome\css\all.min.css,https://pospal.gr/static/vendor/fontawesome/webfonts/fa-solid-900.ttf,404,Missing TTF fallback; WOFF2 available; stylesheet not referenced by current HTML,False
+unused vendor CSS fallback,css:static\vendor\fontawesome\css\all.min.css,https://pospal.gr/static/vendor/fontawesome/webfonts/fa-v4compatibility.ttf,404,Missing TTF fallback; WOFF2 available; stylesheet not referenced by current HTML,False

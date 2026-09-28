@@ -1,0 +1,202 @@
+COMMIT a5f92ed67363dcb9cb605ed6b27f82adebb80854
+AuthorDate 2026-07-05T10:55:31+03:00
+CommitDate 2026-07-05T10:55:31+03:00
+Subject Update academy.js
+
+M	static/js/academy.js
+COMMIT fbb5480276dadea59c83655e122be26ec22efea7
+AuthorDate 2026-07-05T10:50:12+03:00
+CommitDate 2026-07-05T10:50:12+03:00
+Subject update
+
+M	static/js/academy.js
+COMMIT 9ce06ac0dd4b40f071c9aa14f6ac36ccb975a238
+AuthorDate 2026-07-05T10:37:42+03:00
+CommitDate 2026-07-05T10:37:42+03:00
+Subject update
+
+M	static/js/academy.js
+COMMIT e05b1a3638493a0f21238ecabec261fd28318c0b
+AuthorDate 2026-07-05T10:27:56+03:00
+CommitDate 2026-07-05T10:27:56+03:00
+Subject update
+
+M	graphify-out/graph.html
+M	guides/index.html
+M	static/js/academy.js
+COMMIT 8c034d443e115778dfa3f8b7bea1e8ca7a844428
+AuthorDate 2026-07-05T09:25:21+03:00
+CommitDate 2026-07-05T09:25:21+03:00
+Subject update
+
+D	docs/redesign/captures/home-footer-sitemap-desktop.png
+D	docs/redesign/captures/home-footer-sitemap-mobile320.png
+A	graphify-out/graph.html
+COMMIT 6a7f382ba7a31e53f15b01d723f511701400f971
+AuthorDate 2026-07-04T19:52:44+03:00
+CommitDate 2026-07-04T19:52:44+03:00
+Subject update
+
+M	asyrmati-paraggeliolipsia.html
+M	index.html
+M	systima-paraggeliolipsias.html
+M	times.html
+COMMIT 962358de528a0424cfa3e0b09d76c46eae77e9d7
+AuthorDate 2026-07-04T19:37:05+03:00
+CommitDate 2026-07-04T19:37:05+03:00
+Subject Update static.yml
+
+M	.github/workflows/static.yml
+COMMIT 4c7a5a2981b19ef97d8f2a93fa15be88e791195d
+AuthorDate 2026-07-04T19:25:26+03:00
+CommitDate 2026-07-04T19:25:26+03:00
+Subject update
+
+M	asyrmati-paraggeliolipsia.html
+M	index.html
+M	systima-paraggeliolipsias.html
+M	times.html
+COMMIT 33bc16344fd72718b7f6c58244261cd8d0748a0c
+AuthorDate 2026-06-28T09:33:28+03:00
+CommitDate 2026-06-28T09:33:28+03:00
+Subject Add homepage tracking and update sitemap
+
+M	index.html
+M	sitemap.xml
+COMMIT c4013ccbf17ed9859dbc636645ae17b90ab40bce
+AuthorDate 2026-06-28T00:05:29+03:00
+CommitDate 2026-06-28T00:05:29+03:00
+Subject update
+
+M	index.html
+M	static/js/academy.js
+COMMIT 8463415fa61a19fd4873c44adf71069b84bec3c0
+AuthorDate 2026-06-27T16:36:57+03:00
+CommitDate 2026-06-27T16:36:57+03:00
+Subject update
+
+A	docs/redesign/captures/home-footer-sitemap-desktop.png
+A	docs/redesign/captures/home-footer-sitemap-mobile320.png
+M	index.html
+COMMIT 1615fbbf9366c9a2374a8c083895b1620eea4601
+AuthorDate 2026-06-26T23:40:16+03:00
+CommitDate 2026-06-26T23:40:16+03:00
+Subject update
+
+M	_redirects
+D	asyrmati-parageliolipsia-estiasi/index.html
+M	asyrmati-paraggeliolipsia.html
+D	buy-license.html
+M	download/index.html
+D	dwrean-dokimi-30-imeron/index.html
+D	guides/beach-bar-setup.html
+D	guides/cafe-optimization.html
+D	guides/connect-staff-devices/index.html
+D	guides/first-week-optimization/index.html
+D	guides/food-truck-mobile/index.html
+M	guides/index.html
+D	guides/logariasmos-kai-pliromes/index.html
+D	guides/printer-setup/index.html
+D	guides/proto-menou-kai-qr/index.html
+D	guides/qr-menu-best-practices.html
+D	guides/seasonal-management/index.html
+D	guides/test-order/index.html
+D	guides/windows-installation/index.html
+M	index.html
+D	installation-guide.html
+D	menu-estiatoriou.html
+D	paraggelies-gia-estiash.html
+M	paraggelio-lipsia-gia-beach-bar.html
+D	pda-gia-kafeteria/index.html
+M	pda-gia-kafeteries.html
+A	pda-gia-servitoro/index.html
+M	pda-pos-leitourgei.html
+M	pda-ti-einai.html
+D	pospal-demo-coffee-desktop.html
+D	pospal-demo-coffee-mobile.html
+D	privacy.html
+D	prototype/homepage-v3/index.html
+D	qr-menu-demo.html
+D	qr-menu-estiasis/index.html
+D	qr-menu-gia-estiash.html
+M	sitemap.xml
+M	static/js/academy.js
+D	support.html
+M	systima-paraggeliolipsias.html
+D	times-systimatos-parageliolipsias/index.html
+M	times.html
+COMMIT 64897feefdfe881c66b51abb8d85cd2651afbb13
+AuthorDate 2026-06-25T22:58:26+03:00
+CommitDate 2026-06-25T22:58:26+03:00
+Subject update
+
+M	download/index.html
+M	index.html
+COMMIT f5314928dca4849c8f882ef1a16d6495e4784a0c
+AuthorDate 2026-06-24T22:16:28+03:00
+CommitDate 2026-06-24T22:16:28+03:00
+Subject update
+
+M	download/index.html
+M	guides/connect-staff-devices/index.html
+M	guides/index.html
+M	guides/printer-setup/index.html
+M	guides/test-order/index.html
+M	guides/windows-installation/index.html
+D	prototype/academy-odoo-lab/index.html
+D	prototype/academy-v1/index.html
+D	prototype/academy-v1/printer-setup/index.html
+D	prototype/academy-v1/windows-installation/index.html
+D	prototype/homepage-hero-lab/index.html
+D	prototype/homepage-v2/index.html
+M	prototype/homepage-v3/index.html
+D	prototype/homepage/index.html
+M	static/js/academy.js
+COMMIT 709d7ca4586f98532384196adc8702c149321c30
+AuthorDate 2026-06-23T22:51:56+03:00
+CommitDate 2026-06-23T22:51:56+03:00
+Subject update
+
+M	asyrmati-parageliolipsia-estiasi/index.html
+M	buy-license.html
+M	download/index.html
+M	dwrean-dokimi-30-imeron/index.html
+A	guides/connect-staff-devices/index.html
+M	guides/index.html
+A	guides/printer-setup/index.html
+A	guides/test-order/index.html
+A	guides/windows-installation/index.html
+M	installation-guide.html
+M	pda-gia-kafeteria/index.html
+M	privacy.html
+A	prototype/academy-odoo-lab/index.html
+A	prototype/academy-v1/index.html
+A	prototype/academy-v1/printer-setup/index.html
+A	prototype/academy-v1/windows-installation/index.html
+M	prototype/homepage-v3/index.html
+M	qr-menu-estiasis/index.html
+M	sitemap.xml
+A	static/js/academy.js
+M	support.html
+M	systima-paraggeliolipsias.html
+M	times-systimatos-parageliolipsias/index.html
+M	times.html
+COMMIT 0a27d44c82d627ccc79116234cc1a917662be724
+AuthorDate 2026-06-22T22:39:53+03:00
+CommitDate 2026-06-22T22:39:53+03:00
+Subject update
+
+M	prototype/homepage-v3/index.html
+COMMIT 864a1f3c5982261552997fb95813f7ef413bcbd7
+AuthorDate 2026-06-21T19:28:24+03:00
+CommitDate 2026-06-21T19:28:24+03:00
+Subject update
+
+M	download/index.html
+M	guides/index.html
+M	index.html
+A	prototype/homepage-hero-lab/index.html
+A	prototype/homepage-v2/index.html
+A	prototype/homepage-v3/index.html
+A	prototype/homepage/index.html
+M	times.html

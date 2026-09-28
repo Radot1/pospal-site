@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://pospal.gr/times-systimatos-parageliolipsias",
+    "status": 404,
+    "location": null
+  },
+  {
+    "url": "https://pospal.gr/dwrean-dokimi-30-imeron",
+    "status": 404,
+    "location": null
+  },
+  {
+    "url": "https://pospal.gr/pda-gia-kafeteria",
+    "status": 404,
+    "location": null
+  },
+  {
+    "url": "https://pospal.gr/asyrmati-parageliolipsia-estiasi",
+    "status": 404,
+    "location": null
+  },
+  {
+    "url": "https://pospal.gr/qr-menu-estiasis",
+    "status": 404,
+    "location": null
+  },
+  {
+    "url": "http://www.pospal.gr/download",
+    "status": 301,
+    "location": "https://pospal.gr/download"
+  },
+  {
+    "url": "https://pospal.gr/_redirects",
+    "status": 200,
+    "location": null
+  }
+]

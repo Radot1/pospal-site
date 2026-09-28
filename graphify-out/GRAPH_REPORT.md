@@ -662,3 +662,29 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `SEO Marketing Funnel` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
+
+## Articles hub addition (2026-09-21)
+Targeted graph update: `arthra/index.html` links existing system, PDA definition, PDA process, pricing, download and Windows installation pages. The PDA definition page links back to `/arthra/`. Existing URLs are preserved. Hub styling is isolated in `static/css/articles-hub.css`. This update records the new structure; it does not rebuild unrelated graph content.
+
+Hub iteration: compact three-column article grid, category filters and accent-insensitive Greek search in `static/js/articles-hub.js`; includes waiter PDA and wireless pages. Mobile uses two columns. No article URL changes.
+
+Audit fixes: participating pages link back to the Articles Hub. Responsive thumbnail derivatives are maintained in `static/img/articles/`; consolidated hub CSS preserves the existing grid.
+
+Historical article cover update (superseded by the approved 2026-09-27 illustrations): four generated editorial scenes replaced standalone UI thumbnail variants (`cover-system`, `cover-flow`, `cover-waiter`, `cover-wireless`, each 320/640 WebP) under `static/img/articles/`. Original source screenshots remain unchanged. These scenes illustrate usage and are not customer proof. Existing phone and equipment covers remain.
+
+
+## Article illustration source library — 2026-09-27
+
+Five user-supplied original PNG illustrations are organized by article slug under `static/img/articles/illustrations/`. See its `README.md` and `manifest.json` for the mapping, original filenames, dimensions, hashes and replacement workflow. This import does not change website image references.
+
+## Approved article covers — 2026-09-27
+
+Focused additive graph update, preserving existing nodes, edges and communities. The user approved and locked all five `polished-v1.png` raster masters under `static/img/articles/illustrations/<article-slug>/`. The library README and manifest record the approval, source mapping and integrity hashes. Future visual changes must use a new version rather than overwrite these approved masters. Original `source.png` files remain preserved.
+
+The Articles Hub uses the corresponding `cover-320.webp` / `cover-640.webp` derivatives for PDA definition, PDA how-it-works, waiter PDA, wireless ordering and ordering-system covers. The pricing card retains its equipment photograph. These are conceptual diagrams, not screenshots or customer proof. Earlier generated restaurant scenes are superseded on the hub.
+
+This update adds one approval-decision node and five approved-image nodes linked to the hub and existing article nodes. Existing graph structure was not re-extracted or re-clustered. No external extraction API was used; host-agent token usage is not independently metered. Graph endpoint integrity was checked.
+
+
+## Pricing cover approved — 2026-09-27
+The sixth hub cover is now `static/img/articles/illustrations/times/polished-v1.png`, explicitly approved and locked. `arthra/index.html` uses its 320/640 WebP exports. The previous retained-equipment-photo decision is superseded for the hub.

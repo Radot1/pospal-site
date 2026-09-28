@@ -957,3 +957,5 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+.waiter-decision .waiter-section-label { color: var(--pda-ink); }
