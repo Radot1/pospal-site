@@ -1,0 +1,39 @@
+/* Page-only additions to the existing PDA article layout. */
+.system-article-page .article-header { padding-bottom: 0; }
+.system-article-page .system-opening { margin-top: 40px; }
+.system-article-page .article-body h2 { line-height: 1.15; letter-spacing: -.025em; }
+.system-article-page .article-body h3 { line-height: 1.25; }
+.system-article-page .system-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 48px;
+  padding: 12px 20px;
+  color: #06100a;
+  background: #35ed78;
+  border: 1px solid #0f7a38;
+  border-radius: 4px;
+  font: 700 16px/1.4 var(--editorial-sans);
+  text-decoration: none;
+}
+.system-article-page .system-download:hover { background: #65f296; }
+.system-article-page .system-download:focus-visible { outline: 3px solid #0f7a38; outline-offset: 4px; }
+.system-article-page .system-scope { margin-top: 24px; color: #56625a; font: 14px/1.6 var(--editorial-sans); }
+.system-article-page .system-desktop-proof { max-width: 960px; margin-top: 32px; }
+.system-article-page .system-desktop-proof img { border: 1px solid #cbd0cb; border-radius: 8px; }
+.system-article-page .system-qr { display: grid; grid-template-columns: 1fr 190px; gap: 32px; align-items: start; }
+.system-article-page .system-qr h3 { margin-top: 0; }
+.system-article-page .system-qr figure { margin: 0; }
+.system-article-page .system-qr img { width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
+.system-article-page .system-invitation { padding-bottom: 64px; }
+.system-article-page .system-trial-note { margin-top: 18px; color: #56625a; font: 14px/1.6 var(--editorial-sans); }
+@media (max-width: 700px) {
+  .system-article-page .article-header h1 { font-size: clamp(34px, 9vw, 48px); line-height: 1.1; }
+  .system-article-page .system-opening { margin-top: 32px; }
+  .system-article-page .system-desktop-proof { width: calc(100% - 40px); }
+  .system-article-page .system-desktop-proof figcaption, .system-article-page .system-qr figcaption { padding: 0; }
+  .system-article-page .system-qr { grid-template-columns: 1fr; gap: 8px; }
+  .system-article-page .system-qr figure { width: min(230px, 100%); margin: 0 auto; }
+  .system-article-page .article-body section + section { margin-top: 44px; }
+}
