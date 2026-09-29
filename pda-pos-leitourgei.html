@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f4f5f2">
   <title>PDA πώς λειτουργεί: 3 βήματα στην εστίαση | POSPal</title>
-  <meta name="description" content="Δες πώς λειτουργεί το PDA σε 3 βήματα: παραγγελία από κινητό ή tablet, τοπικό δίκτυο και συνέχεια στο POSPal για Windows. Δοκίμασέ το 30 ημέρες δωρεάν.">
+  <meta name="description" content="Δες πώς λειτουργεί το PDA σε 3 βήματα: παραγγελία από κινητό ή tablet, τοπικό δίκτυο και συνέχεια στο POSPal για Windows και στη ροή κουζίνας.">
   <link rel="canonical" href="https://pospal.gr/pda-pos-leitourgei.html">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:locale" content="el_GR">
   <meta property="og:site_name" content="POSPal">
   <meta property="og:title" content="PDA πώς λειτουργεί στην εστίαση">
@@ -20,6 +20,8 @@
   <link rel="apple-touch-icon" href="/app_icon.ico">
   <link rel="preload" href="/static/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/static/css/pda-acquisition.css?v=20260901-2">
+  <link rel="stylesheet" href="/static/css/fonts.css">
+  <link rel="stylesheet" href="/static/css/pda-editorial.css?v=20260921-2">
   <style>
     body.pda-acquisition-page .pospal-consent-btn {
       min-height: 44px;
@@ -28,24 +30,35 @@
   <script src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "PDA πώς λειτουργεί στην πράξη",
+      "mainEntityOfPage": "https://pospal.gr/pda-pos-leitourgei.html",
+      "inLanguage": "el",
+      "dateModified": "2026-09-29",
+      "image": "https://pospal.gr/static/img/pospal-desktop-order.png",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Airey",
+        "url": "https://pospal.gr/sxetika-me-to-pospal/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "POSPal"
+      }
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "PDA πώς λειτουργεί στην παραγγελιοληψία;",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ο σερβιτόρος περνά την παραγγελία από κινητό ή tablet. Η συσκευή στέλνει την παραγγελία μέσω του τοπικού δικτύου στο POSPal, που τρέχει σε υπολογιστή Windows και συγκεντρώνει τη ροή."
-          }
-        },
         {
           "@type": "Question",
           "name": "Χρειάζεται ειδική συσκευή PDA;",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Όχι απαραίτητα. Με το POSPal η ομάδα μπορεί να χρησιμοποιήσει συσκευή που ανοίγει τη σελίδα παραγγελιοληψίας στο τοπικό δίκτυο, όπως κινητό ή tablet."
+            "text": "Όχι απαραίτητα. Με το POSPal η ομάδα μπορεί να χρησιμοποιήσει κατάλληλο κινητό ή tablet που ανοίγει τη σελίδα παραγγελιοληψίας και επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο."
           }
         },
         {
@@ -53,193 +66,99 @@
           "name": "Πού καταλήγει η παραγγελία;",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Η παραγγελία καταλήγει στο POSPal στον υπολογιστή Windows και συνεχίζει στη ροή κουζίνας ή στην οργάνωση της βάρδιας."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Το POSPal είναι φορολογικός POS ή ταμειακή;",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Όχι. Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία, ροή κουζίνας και QR μενού δίπλα στο υπάρχον φορολογικό σύστημα."
+            "text": "Η παραγγελία καταλήγει στο POSPal στον υπολογιστή Windows και συνεχίζει στη ροή κουζίνας ή εξυπηρέτησης. Εκτυπωτής χρειάζεται μόνο αν θέλεις έντυπα δελτία."
           }
         }
       ]
     }
+  ]
+}
   </script>
   <link rel="stylesheet" href="/static/css/legal-links.css">
 </head>
-<body class="pda-acquisition-page">
-  <a class="pda-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
-
-  <header class="pda-site-header">
-    <a class="pda-brand" href="/" aria-label="POSPal, αρχική">
-      <img src="/app_icon.ico" alt="" width="36" height="36">
-      <span translate="no">POS<b>Pal</b></span>
-    </a>
-    <nav class="pda-nav" aria-label="Κύρια πλοήγηση">
-      <a href="/guides/">Οδηγοί</a>
-    </nav>
-    <a class="pda-button pda-button-primary pda-header-cta" href="/download/">Κατέβασε για Windows</a>
-  </header>
-
-  <main id="main-content">
-    <section class="pda-hero" aria-labelledby="pda-flow-title">
-      <div class="pda-shell pda-hero-grid">
-        <div class="pda-hero-copy">
-          <p class="pda-signal">PDA πώς λειτουργεί · Παραγγελιοληψία στην πράξη</p>
-          <h1 id="pda-flow-title">PDA πώς λειτουργεί στην πράξη</h1>
-          <p class="pda-lead">Το PDA λειτουργεί ως σημείο λήψης παραγγελίας. Ο σερβιτόρος περνά τα είδη από κινητό ή tablet, η συσκευή μιλά με τον υπολογιστή Windows μέσα από το τοπικό δίκτυο και το POSPal κρατά τη συνέχεια της βάρδιας οργανωμένη.</p>
-          <div class="pda-actions" aria-label="Επόμενες ενέργειες">
-            <a class="pda-button pda-button-primary" href="/systima-paraggeliolipsias.html">Δες το σύστημα παραγγελιοληψίας στην πράξη</a>
-            <a class="pda-button pda-button-secondary" href="#route-title">Δες τα 3 βήματα ↓</a>
-          </div>
-          <p class="pda-trial-line"><strong>30 ημέρες δωρεάν</strong> · χωρίς κάρτα · χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας</p>
-        </div>
-
-        <aside class="pda-offer" aria-label="Ροή POSPal">
-          <span>Η βασική ιδέα</span>
-          <strong>3 βήματα</strong>
-          <p>Συσκευή σερβιτόρου, τοπικό δίκτυο και POSPal σε Windows για καθαρή συνέχεια στη βάρδια.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="pda-route-band" aria-labelledby="route-title">
-      <div class="pda-shell pda-route-grid">
-        <div class="pda-route-copy">
-          <p class="pda-signal">Η διαδρομή της παραγγελίας</p>
-          <h2 id="route-title">Από τη συσκευή του σερβιτόρου στο POSPal.</h2>
-          <p>Το PDA δεν είναι η ταμειακή και δεν είναι το τελικό σημείο της παραγγελίας. Είναι ο τρόπος που η παραγγελία μπαίνει γρήγορα στη ροή και φτάνει στο POSPal για να συνεχίσει η ομάδα.</p>
-        </div>
-        <figure class="pda-screen">
-          <img src="/static/img/pospal-desktop-order.png" alt="Οθόνη POSPal σε υπολογιστή Windows με παραγγελία που έχει καταχωρηθεί στη ροή" width="1280" height="900" loading="eager" decoding="async">
-          <figcaption>Το POSPal συγκεντρώνει την παραγγελία στον υπολογιστή Windows, ώστε η συνέχεια της βάρδιας να μένει οργανωμένη.</figcaption>
-        </figure>
-      </div>
-      <div class="pda-shell pda-proof-row" aria-label="Βήματα λειτουργίας PDA">
-        <p><span>1</span><strong>Στο τραπέζι</strong><small>Ο σερβιτόρος επιλέγει είδη, ποσότητες και σημειώσεις από κινητό ή tablet.</small></p>
-        <p><span>2</span><strong>Στο τοπικό δίκτυο</strong><small>Η συσκευή επικοινωνεί με τον υπολογιστή του καταστήματος μέσα στο ίδιο δίκτυο.</small></p>
-        <p><span>3</span><strong>Στο POSPal</strong><small>Η παραγγελία εμφανίζεται σε Windows και συνεχίζει στη ροή κουζίνας ή εξυπηρέτησης.</small></p>
-      </div>
-    </section>
-
-    <section class="pda-fit-section" aria-labelledby="flow-related-title">
-      <div class="pda-shell pda-fit-grid">
-        <div>
-          <p class="pda-signal">Σχετικές απαντήσεις</p>
-          <h2 id="flow-related-title">Η ροή αλλάζει ανάλογα με τον χώρο.</h2>
-          <p class="pda-muted">Αν ψάχνεις γενική εξήγηση, χρήση από σερβιτόρο ή εφαρμογή σε καφετέρια, συνέχισε στη σελίδα που ταιριάζει στο στάδιο της απόφασης.</p>
-        </div>
-        <div class="pda-fit-cards" aria-label="Σχετικές σελίδες παραγγελιοληψίας με PDA">
-          <article>
-            <span>Ορισμός</span>
-            <h3><a href="/pda-ti-einai.html">PDA τι είναι</a></h3>
-            <p>Η σύντομη εξήγηση για το τι σημαίνει PDA στην εστίαση.</p>
-          </article>
-          <article>
-            <span>Προσωπικό</span>
-            <h3><a href="/pda-gia-servitoro/">PDA σερβιτόρου</a></h3>
-            <p>Πώς δουλεύει η λήψη παραγγελίας από συσκευή προσωπικού.</p>
-          </article>
-          <article>
-            <span>Χώρος</span>
-            <h3><a href="/pda-gia-kafeteries.html">PDA για καφετέριες</a></h3>
-            <p>Πώς ταιριάζει η ίδια ροή σε τραπέζια, πάγκο και ώρες αιχμής.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="pda-fit-section" aria-labelledby="fit-title">
-      <div class="pda-shell pda-fit-grid">
-        <div>
-          <p class="pda-signal">Πριν το δοκιμάσεις</p>
-          <h2 id="fit-title">Τι χρειάζεσαι για να το δοκιμάσεις.</h2>
-          <p class="pda-muted">Η ροή είναι απλή: ένας υπολογιστής Windows για το POSPal, τοπικό δίκτυο στο κατάστημα και συσκευή για τον σερβιτόρο. Εκτυπωτής χρειάζεται μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
-        </div>
-        <div class="pda-fit-cards" aria-label="Βασικό στήσιμο PDA με POSPal">
-          <article>
-            <span>Απαραίτητο</span>
-            <h3>Υπολογιστής Windows</h3>
-            <p>Εδώ εγκαθίσταται το POSPal και συγκεντρώνεται η παραγγελιοληψία της βάρδιας.</p>
-          </article>
-          <article>
-            <span>Για τον σερβιτόρο</span>
-            <h3>Κινητό ή tablet</h3>
-            <p>Η ομάδα περνά παραγγελίες από συσκευή που δουλεύει μέσα στο τοπικό δίκτυο.</p>
-          </article>
-          <article>
-            <span>Προαιρετικό</span>
-            <h3>Εκτυπωτής κουζίνας</h3>
-            <p>Χρήσιμος αν θέλεις έντυπα δελτία για την κουζίνα ή άλλο σημείο εκτέλεσης.</p>
-          </article>
-        </div>
-      </div>
-      <aside class="pda-shell pda-boundary" aria-label="Διευκρίνιση για φορολογικό POS">
-        <strong>Δίπλα στο φορολογικό σου σύστημα.</strong>
-        <p>Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία, ροή κουζίνας και QR μενού δίπλα στο υπάρχον φορολογικό σύστημα.</p>
-      </aside>
-    </section>
-
-    <section class="pda-faq-section" aria-labelledby="faq-title">
-      <div class="pda-shell pda-faq-grid">
-        <div>
-          <p class="pda-signal">Συχνές ερωτήσεις</p>
-          <h2 id="faq-title">Οι βασικές απαντήσεις πριν κατεβάσεις.</h2>
-        </div>
-        <div class="pda-faq">
-          <details>
-            <summary>PDA πώς λειτουργεί στην παραγγελιοληψία;</summary>
-            <p>Ο σερβιτόρος περνά την παραγγελία από κινητό ή tablet. Η συσκευή στέλνει την παραγγελία μέσω του τοπικού δικτύου στο POSPal, που τρέχει σε υπολογιστή Windows και συγκεντρώνει τη ροή.</p>
-          </details>
-          <details>
-            <summary>Χρειάζεται ειδική συσκευή PDA;</summary>
-            <p>Όχι απαραίτητα. Με το POSPal η ομάδα μπορεί να χρησιμοποιήσει συσκευή που ανοίγει τη σελίδα παραγγελιοληψίας στο τοπικό δίκτυο, όπως κινητό ή tablet.</p>
-          </details>
-          <details>
-            <summary>Πού καταλήγει η παραγγελία;</summary>
-            <p>Η παραγγελία καταλήγει στο POSPal στον υπολογιστή Windows και συνεχίζει στη ροή κουζίνας ή στην οργάνωση της βάρδιας.</p>
-          </details>
-          <details>
-            <summary>Το POSPal είναι φορολογικός POS ή ταμειακή;</summary>
-            <p>Όχι. Το POSPal δεν είναι φορολογικός POS και δεν είναι ταμειακή. Καλύπτει παραγγελιοληψία, ροή κουζίνας και QR μενού δίπλα στο υπάρχον φορολογικό σύστημα.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="pda-final" aria-labelledby="final-title">
-      <div class="pda-shell pda-final-inner">
-        <div>
-          <p class="pda-signal">Επόμενο βήμα</p>
-          <h2 id="final-title">Δοκίμασε τη ροή στο δικό σου κατάστημα.</h2>
-        </div>
-        <div class="pda-actions">
-          <a class="pda-button pda-button-primary" href="/download/">Κατέβασε για Windows</a>
-          <a class="pda-button pda-button-secondary" href="/guides/">Άνοιξε τους οδηγούς</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="pda-footer">
-    <div class="pda-shell pda-footer-inner">
-      <p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι ταμειακή ή φορολογικός POS.</p>
-      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/arthra/">Άρθρα</a>
-        <a href="/">Αρχική</a>
-        <a href="/pda-ti-einai.html">PDA τι είναι</a>
-        <a href="/pda-gia-servitoro/">PDA σερβιτόρου</a>
-        <a href="/pda-gia-kafeteries.html">PDA για καφετέριες</a>
-        <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
-        <a href="/download/">Κατέβασε</a>
-        <a href="/guides/">Οδηγοί</a>
-      </nav>
+<body class="pda-acquisition-page pda-editorial-page">
+  <a class="pda-skip" href="#main-content">Μετάβαση στο άρθρο</a>
+  <header class="site-header">
+    <div class="brand-bar">
+      <a class="header-download" href="/download/">ΚΑΤΕΒΑΣΕ</a>
+      <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/app_icon.ico" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a>
+      <a href="/times.html">ΤΙΜΕΣ</a>
     </div>
-
+    <nav class="section-bar" aria-label="Ενότητες άρθρου"><a href="#route-title">ΤΑ 3 ΒΗΜΑΤΑ</a><a href="#devices">Η ΣΥΣΚΕΥΗ</a><a href="#fit-title">ΕΞΟΠΛΙΣΜΟΣ</a><a href="#faq-title">ΕΡΩΤΗΣΕΙΣ</a></nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <article aria-labelledby="pda-flow-title">
+    <header class="article-header">
+      <p class="category"><a href="/arthra/">ΑΡΘΡΑ</a> / PDA ΚΑΙ ΚΙΝΗΤΑ / ΠΑΡΑΓΓΕΛΙΟΛΗΨΙΑ</p>
+      <h1 id="pda-flow-title">PDA πώς λειτουργεί στην πράξη</h1>
+      <p class="dek">Από το κινητό του σερβιτόρου, μέσα από το τοπικό δίκτυο, στον υπολογιστή με το POSPal. Τα τρία βήματα μιας παραγγελίας.</p>
+      <div class="byline">
+        <img class="author-photo" src="/static/img/robert-airey-founder.jpg" alt="Ο Robert Airey, ιδρυτής της POSPal" width="58" height="58" decoding="async">
+        <p><a href="/sxetika-me-to-pospal/"><strong>ΑΠΟ ΤΟΝ ROBERT AIREY</strong></a><span>Ιδρυτή της POSPal</span></p>
+        <small>Ενημέρωση: <time datetime="2026-09-29">29 Σεπτεμβρίου 2026</time></small>
+      </div>
+    </header>
+    <div class="article-body">
+      <p class="intro">Το PDA στην παραγγελιοληψία είναι το σημείο όπου ο σερβιτόρος περνά την παραγγελία. Με το POSPal, αυτό μπορεί να είναι ένα κινητό ή tablet. Η συσκευή επικοινωνεί μέσα από το τοπικό δίκτυο με τον υπολογιστή Windows, όπου το POSPal παραλαμβάνει την παραγγελία και συνεχίζει τη ροή προς την κουζίνα ή την εξυπηρέτηση.</p>
+      <p>Σκέψου μια απλή παραγγελία: δύο καφέδες, ο ένας χωρίς ζάχαρη. Αυτό που χρειάζεται να φτάσει στο σημείο προετοιμασίας είναι και οι δύο καφέδες και η σημείωση. Η συσκευή στο χέρι είναι μόνο η αρχή αυτής της διαδρομής. Αν θέλεις πρώτα τον ορισμό του όρου, δες <a href="/pda-ti-einai.html">τι είναι το PDA στην εστίαση</a>.</p>
+      <section aria-labelledby="route-title">
+        <h2 id="route-title">Τι γίνεται όταν ο σερβιτόρος στείλει την παραγγελία;</h2>
+        <p>Ας ακολουθήσουμε την ίδια παραγγελία σε τρία σημεία: στο τραπέζι, στο τοπικό δίκτυο και στο POSPal.</p>
+        <h3>1. Στο τραπέζι: το κινητό ή tablet</h3>
+        <p>Ο σερβιτόρος επιλέγει τα είδη, τις ποσότητες και τις σημειώσεις από τη συσκευή του. Ελέγχει τι έχει περάσει και στέλνει την παραγγελία. Αυτή είναι η δουλειά του PDA: να βάλει όσα ζήτησε ο πελάτης μέσα στο πρόγραμμα.</p>
+        <p>Το τι κρατά ο σερβιτόρος και πώς το χρησιμοποιεί μέσα στη βάρδια εξηγείται αναλυτικότερα στη σελίδα για το <a href="/pda-gia-servitoro/">PDA σερβιτόρου</a>.</p>
+        <h3>2. Στο τοπικό δίκτυο: η επικοινωνία</h3>
+        <p>Η συσκευή στέλνει την παραγγελία στον υπολογιστή του καταστήματος μέσα από το τοπικό δίκτυο. Χρειάζεται να μπορεί να επικοινωνεί μαζί του. Το ότι πέρασες τα είδη στην οθόνη δεν σημαίνει από μόνο του ότι τα έχει παραλάβει το POSPal.</p>
+        <h3>3. Στο POSPal: ο υπολογιστής Windows</h3>
+        <p>Το POSPal τρέχει στον υπολογιστή Windows και συγκεντρώνει τις παραγγελίες. Εκεί καταλήγουν τα είδη και οι σημειώσεις που έστειλε ο σερβιτόρος, για να συνεχιστεί η ροή κουζίνας ή εξυπηρέτησης.</p>
+        <p>Αν το μαγαζί δουλεύει με έντυπα δελτία, στη συνέχεια χρησιμοποιείται και εκτυπωτής. Είναι άλλο στάδιο από την καταχώριση στο κινητό: η παραγγελία πρέπει πρώτα να φτάσει στο πρόγραμμα.</p>
+      </section>
+    </div>
+    <figure class="product-proof">
+      <img src="/static/img/pospal-desktop-order.png" alt="Οθόνη POSPal σε υπολογιστή Windows με προϊόντα, σημειώσεις και σύνολο παραγγελίας" width="1280" height="900" loading="lazy" decoding="async">
+      <figcaption>Η οθόνη παραγγελίας στο POSPal για Windows. Ο υπολογιστής είναι το κεντρικό σημείο της ροής.</figcaption>
+    </figure>
+    <div class="article-body">
+      <section id="devices">
+        <h2>Χρειάζεται ειδικό PDA;</h2>
+        <p>Για το POSPal, όχι απαραίτητα. Μπορείς να χρησιμοποιήσεις κατάλληλο κινητό ή tablet που ανοίγει τη σελίδα παραγγελιοληψίας και επικοινωνεί με τον υπολογιστή μέσα από το τοπικό δίκτυο.</p>
+        <p>Η δουλειά παραμένει η ίδια: καταχώριση, αποστολή και παραλαβή από το πρόγραμμα. Δεν χρειάζεται η συσκευή να έχει πουληθεί ως «PDA» για να αναλάβει αυτόν τον ρόλο. Χρειάζεται όμως να λειτουργεί σωστά στη συγκεκριμένη χρήση.</p>
+      </section>
+      <section aria-labelledby="fit-title">
+        <h2 id="fit-title">Τι χρειάζεται στην πράξη;</h2>
+        <ul>
+          <li><strong>Υπολογιστής Windows.</strong> Εκεί εγκαθίσταται το POSPal και συγκεντρώνεται η παραγγελιοληψία της βάρδιας.</li>
+          <li><strong>Τοπικό δίκτυο.</strong> Συνδέει τη συσκευή του σερβιτόρου με τον υπολογιστή του καταστήματος.</li>
+          <li><strong>Κινητό ή tablet.</strong> Από εκεί η ομάδα ανοίγει την παραγγελιοληψία και περνά τα είδη.</li>
+          <li><strong>Εκτυπωτής, προαιρετικά.</strong> Χρειάζεται αν θέλεις έντυπα δελτία για την κουζίνα ή άλλο σημείο προετοιμασίας.</li>
+        </ul>
+        <p>Σε μια καφετέρια, για παράδειγμα, η ίδια βασική διαδρομή εξυπηρετεί τις παραγγελίες των τραπεζιών. Για το πώς συνδυάζονται τραπέζια και πάγκος, δες τη σελίδα για <a href="/pda-gia-kafeteries.html">PDA για καφετέριες</a>.</p>
+      </section>
+      <section id="fiscal">
+        <h2>PDA και ταμειακή δεν είναι το ίδιο πράγμα</h2>
+        <p>Εδώ μιλάμε για λήψη παραγγελίας και ροή κουζίνας. Το POSPal δεν είναι φορολογικό POS και δεν είναι ταμειακή. Το φορολογικό σύστημα της επιχείρησης παραμένει ξεχωριστό. Το POSPal καλύπτει την παραγγελιοληψία, τη ροή κουζίνας και το QR μενού δίπλα του.</p>
+      </section>
+      <section class="faq-list" aria-labelledby="faq-title">
+        <h2 id="faq-title">Συχνές ερωτήσεις</h2>
+        <details><summary>Χρειάζεται ειδική συσκευή PDA;</summary><p>Όχι απαραίτητα. Με το POSPal η ομάδα μπορεί να χρησιμοποιήσει κατάλληλο κινητό ή tablet που ανοίγει τη σελίδα παραγγελιοληψίας και επικοινωνεί με τον υπολογιστή Windows στο τοπικό δίκτυο.</p></details>
+        <details><summary>Πού καταλήγει η παραγγελία;</summary><p>Η παραγγελία καταλήγει στο POSPal στον υπολογιστή Windows και συνεχίζει στη ροή κουζίνας ή εξυπηρέτησης. Εκτυπωτής χρειάζεται μόνο αν θέλεις έντυπα δελτία.</p></details>
+      </section>
+      <section aria-labelledby="final-title">
+        <h2 id="final-title">Από τη συσκευή στο σύστημα παραγγελιοληψίας</h2>
+        <p>Τώρα που η διαδρομή είναι ξεκάθαρη, το επόμενο είναι να δεις τι κάνει το πρόγραμμα με τις παραγγελίες και τι χρειάζεται για να το δουλέψεις στο δικό σου μαγαζί.</p>
+        <p><a href="/systima-paraggeliolipsias.html">Δες πώς δουλεύει όλο το σύστημα παραγγελιοληψίας του POSPal →</a></p>
+        <p>Αν είσαι έτοιμος για δοκιμή, <a href="/download/">κατέβασε για Windows</a>. Για το στήσιμο υπάρχουν οι <a href="/guides/">οδηγοί εγκατάστασης και χρήσης</a>.</p>
+      </section>
+    </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div><p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
+      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/arthra/">Άρθρα</a><a href="/">Αρχική</a><a href="/guides/">Οδηγοί</a></nav>
+    </div>
     <!-- POSPAL-LEGAL-LINKS:START -->
     <nav class="pospal-legal-links pospal-legal-links--sitewide" aria-label="Νομικά κείμενα"><a href="/legal/">Νομικά</a><a href="/privacy/">Απόρρητο</a><a href="/cookies/">Cookies</a><a href="/terms/">Όροι</a><a href="/eula/">EULA</a><a href="/dpa/">DPA</a><a href="/subprocessors/">Πάροχοι</a></nav>
     <!-- POSPAL-LEGAL-LINKS:END -->
-</footer>
+  </footer>
 </body>
 </html>
