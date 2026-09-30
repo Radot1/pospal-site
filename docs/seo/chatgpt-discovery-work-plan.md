@@ -144,7 +144,7 @@ Tasks:
 
 Privacy decision:
 
-- The owner's official legal name is private and must not appear in public copy, structured data, or current repository documentation.
+- Superseded on 2026-09-30: the owner explicitly authorized publishing the GEMI legal identity for Legal Issue #1. Use the registered provider details in `pospal-entity-facts.md` for legal copy and structured data.
 - Use `Robert Airey` in Latin characters as the public founder/owner identity.
 
 Lock note:

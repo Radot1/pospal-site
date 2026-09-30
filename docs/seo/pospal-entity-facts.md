@@ -22,6 +22,22 @@ Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 | Trial | 30 days; no card or personal information | Visible on homepage and pricing page | Visible offer/trial copy |
 | Fiscal boundary | Not a fiscal POS or cash register | Visible across acquisition and conversion pages | Entity description and FAQ |
 
+## Registered provider identity — 2026-09-30
+
+Source: official GEMI record supplied and authorized for publication by the owner for Legal Issue #1. POSPal is the distinctive/trading title, not the legal name. This supersedes the earlier restriction on publishing the legal name. Robert Airey remains the approved public founder attribution, not the registered provider name.
+
+- Legal name: ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ ΡΟΜΠΕΡΤΟΣ του ΕΥΣΤΡΑΤΙΟΥ
+- Registered Latin name: ZOUMPOULIS ERI ROMPERTOS tou EFSTRATIOU
+- Legal form: ΑΤΟΜΙΚΗ (Ατομική Επιχείρηση / sole proprietorship)
+- Distinctive title: POSPal
+- Registered address (GEMI): ΚΥΒΟΠΟΥΛΟΥ ΠΕΤΡΟΥ 13Β, ΜΥΤΙΛΗΝΗΣ / ΛΕΣΒΟΥ, 81100
+- Public address: ΚΥΒΟΠΟΥΛΟΥ ΠΕΤΡΟΥ 13Β, ΜΥΤΙΛΗΝΗ / ΛΕΣΒΟΣ, 81100, Ελλάδα
+- AFM: 159497740
+- GEMI: 195335742000
+- EUID: ELGEMI.195335742000
+
+This identity confirmation does not resolve VAT status, Stripe merchant display, invoicing, subprocessors, or legal release approval. No tax office or phone number is supplied.
+
 ## User-confirmed publisher facts
 
 | Field | Value | Evidence status | Use |
