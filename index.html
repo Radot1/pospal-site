@@ -57,6 +57,42 @@
 .taste-paper{will-change:transform,opacity;backface-visibility:hidden}
 @media(max-width:1100px){.taste-art,.taste-replay{display:none}.hero-grid{gap:1.5rem}.offer-panel{margin:.75rem auto 0}}
 
+/* One-time approved homepage navigation/banner refinement. */
+.offer-panel .offer-details{display:flex;align-items:center;gap:.4rem;min-height:44px;margin-top:.35rem;color:#fff;font-size:.82rem;text-decoration:underline;text-underline-offset:4px}
+.offer-panel .offer-details span{display:inline;color:inherit;font-size:inherit}
+.offer-panel .offer-details:hover{color:var(--green)}
+/* Approved homepage-only footer; shared footer styles remain unchanged. */
+.home-footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr 1fr;gap:2.5rem;align-items:start}
+.home-footer h2{margin:0 0 .6rem;color:#fff;font-size:.95rem;line-height:1.5;font-weight:700}
+.home-footer nav a{display:flex;align-items:center;min-height:44px;color:#dce8df;font-size:.9rem;font-weight:400;line-height:1.45;padding-block:.4rem}
+.home-footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.home-footer-logo{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:1.2rem;font-weight:800;margin-top:-.55rem}
+.home-footer-brand p{margin:.4rem 0 0;max-width:30ch;font-size:.9rem;line-height:1.6}
+.home-footer-brand .home-footer-boundary{margin-top:1rem;color:#aebfb3;font-size:.82rem}
+.home-footer-legal{display:flex;flex-wrap:wrap;gap:0 1.5rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #34483b}
+.home-footer .home-footer-legal a{font-size:.8rem;color:#b9c9be}
+@media(max-width:1000px){.home-footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.home-footer-brand p{max-width:36ch}}
+@media(max-width:560px){.home-footer-grid{gap:1.5rem 1rem}.home-footer-brand{grid-column:1/-1}.home-footer-grid nav:last-child{grid-column:1/-1}.home-footer nav a{font-size:.86rem}.home-footer-legal{gap:0 1rem;margin-top:1.5rem}}
+.hero-lead-mobile{display:none}
+/* Approved mobile hero refinement; desktop composition is preserved. */
+@media(max-width:720px){
+  .hero-grid{padding-top:1.75rem;gap:0;text-align:left}
+  .hero-copy{display:flex;flex-direction:column;align-items:stretch;text-align:left}
+  .hero-copy .signal-label{margin-bottom:1rem}
+  .hero h1{font-size:clamp(2rem,8.7vw,2.75rem);line-height:1.08;margin-bottom:1rem;text-wrap:balance}
+  .hero-lead-desktop{display:none}
+  .hero-lead-mobile{display:block;font-size:1rem;line-height:1.5;margin:0 0 1.25rem}
+  .hero-copy .offer-panel{order:initial;width:100%;margin:0 0 .75rem;padding:0;background:transparent;border:0;color:var(--ink);text-align:left;display:flex;flex-direction:column}
+  .hero-copy .offer-panel>strong{order:-1;color:var(--ink);font-size:2rem;line-height:1.15;margin:0 0 .4rem}
+  .hero-copy .offer-panel small{color:var(--ink);font-size:.9rem;margin-left:.2rem}
+  .hero-copy .offer-panel>span{color:var(--ink);font-size:.8rem;font-weight:600}
+  .hero-copy .offer-panel p{max-width:none;font-size:.8rem;line-height:1.45;color:var(--muted);margin-top:.25rem}
+  .hero-copy .offer-panel .offer-details{color:var(--ink);margin-top:0}
+  .hero-copy .trial-line{margin:0 0 1rem;font-size:.85rem;line-height:1.5;max-width:34ch}
+  .hero-copy .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:none;margin:0;gap:.25rem;justify-items:stretch}
+  .hero-copy .hero-actions .button-primary{width:100%;max-width:none;justify-self:stretch}
+  .hero-copy .hero-actions .button-secondary{min-height:44px;border:0;background:transparent;padding:.65rem;color:var(--ink);text-decoration:underline;text-underline-offset:4px;font-size:.9rem;font-weight:400}
+}
 </style>
 </head>
 <body>
@@ -68,16 +104,17 @@
       <span>POS<b>Pal</b></span>
     </a>
     <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
-      <a href="/arthra/">Άρθρα</a>
+      <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+      <a href="/times.html">Τιμές</a>
       <a href="/guides/">Οδηγοί</a>
     </nav>
     <a class="button button-primary header-cta" href="/download/">Κατέβασε για Windows</a>
     <details class="mobile-nav">
       <summary aria-label="Άνοιγμα μενού">Μενού</summary>
       <nav aria-label="Πλοήγηση κινητού">
-        <a href="/arthra/">Άρθρα</a>
+        <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+      <a href="/times.html">Τιμές</a>
         <a href="/guides/">Οδηγοί</a>
-        <a href="/download/">Κατέβασε για Windows</a>
       </nav>
     </details>
   </header>
@@ -94,18 +131,20 @@
         <div class="hero-copy">
           <p class="signal-label">Παραγγελιοληψία για εστίαση · Εγκατάσταση σε Windows</p>
           <h1 id="hero-title">Από το τραπέζι μέχρι την κουζίνα. <span>Χωρίς διακοπές.</span></h1>
-          <p class="hero-lead">Το POSPal κρατά την παραγγελία ζωντανή: τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού σε ένα πρόγραμμα που κατεβάζεις και στήνεις με οδηγούς.</p>
+          <p class="hero-lead hero-lead-desktop">Το POSPal κρατά την παραγγελία ζωντανή: τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού σε ένα πρόγραμμα που κατεβάζεις και στήνεις με οδηγούς.</p>
+          <p class="hero-lead hero-lead-mobile">Παραγγελιοληψία, τραπέζια, ροή κουζίνας και QR μενού. Στον υπολογιστή Windows του καταστήματος.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
-            <a class="button button-secondary" href="/guides/">Δες το στήσιμο</a>
+            <a class="button button-secondary" href="/guides/windows-installation/">Οδηγός εγκατάστασης</a>
           </div>
-          <p class="trial-line"><strong>30 ημέρες δωρεάν</strong> · χωρίς κάρτα · χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας</p>
+          <p class="trial-line"><strong>30 ημέρες δωρεάν.</strong> Χωρίς κάρτα ή προσωπικά στοιχεία.</p>
         </div>
 
         <div class="offer-panel" aria-label="Ειδική τιμή για τους πρώτους χρήστες">
           <span>Ειδική τιμή για τους πρώτους χρήστες</span>
-          <strong>€23,90<small>/μήνα</small></strong>
+          <strong>€23,90<small>/μήνα με ΦΠΑ</small></strong>
           <p>Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+          <a class="offer-details" href="/times.html">Δες τι περιλαμβάνει <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -424,47 +463,72 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div class="footer-brand">
-        <strong>POSPal</strong>
+  <footer class="site-footer home-footer">
+    <div class="shell home-footer-grid">
+      <div class="home-footer-brand">
+        <a class="home-footer-logo" href="/" aria-label="POSPal, αρχική">POSPal</a>
         <p>Παραγγελιοληψία και ροή κουζίνας για Windows.</p>
+        <p class="home-footer-boundary">Δεν είναι ταμειακή ή φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα.</p>
       </div>
-      <nav class="footer-nav footer-sitemap" aria-label="Χάρτης σελίδων">
-        <div>
-          <span>Βασικά</span>
-          <a href="/">Αρχική</a>
-          <a href="/download/">Κατέβασε για Windows</a>
-          <a href="/arthra/">Άρθρα</a>
-          <a href="/guides/">Οδηγοί</a>
-          <a href="/times.html">Τιμές</a>
-        </div>
-        <div>
-          <span>PDA</span>
-          <a href="/pda-ti-einai.html">PDA τι είναι</a>
-          <a href="/pda-pos-leitourgei.html">PDA πώς λειτουργεί</a>
-          <a href="/pda-gia-servitoro/">PDA για σερβιτόρο</a>
-          <a href="/pda-gia-kafeteries.html">PDA για καφετέριες</a>
-        </div>
-        <div>
-          <span>Παραγγελιοληψία</span>
-          <a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a>
-          <a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a>
-          <a href="/paraggelio-lipsia-gia-beach-bar.html">Παραγγελιοληψία για beach bar</a>
-        </div>
+      <nav aria-labelledby="footer-product-title">
+        <h2 id="footer-product-title">Το POSPal</h2>
+        <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+        <a href="/times.html">Τιμές</a>
+        <a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a>
       </nav>
-      <address class="footer-contact">
-        <span>Υποστήριξη</span>
+      <nav aria-labelledby="footer-start-title">
+        <h2 id="footer-start-title">Ξεκίνα εδώ</h2>
+        <a href="/download/">Κατέβασε για Windows</a>
+        <a href="/guides/windows-installation/">Εγκατάσταση σε Windows</a>
+        <a href="/guides/">Όλοι οι οδηγοί</a>
+        <a href="/arthra/">Άρθρα</a>
+      </nav>
+      <nav aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Επικοινωνία</h2>
+        <a href="/sxetika-me-to-pospal/">Σχετικά με το POSPal</a>
         <a href="mailto:support@pospal.gr">support@pospal.gr</a>
-      </address>
-      <p class="footer-boundary">Δεν είναι ταμειακή ή φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα.</p>
+      </nav>
     </div>
-
     <!-- POSPAL-LEGAL-LINKS:START -->
-    <nav class="pospal-legal-links pospal-legal-links--sitewide" aria-label="Νομικά κείμενα"><a href="/legal/">Νομικά</a><a href="/privacy/">Απόρρητο</a><a href="/cookies/">Cookies</a><a href="/terms/">Όροι</a><a href="/eula/">EULA</a><a href="/dpa/">DPA</a><a href="/subprocessors/">Πάροχοι</a></nav>
+    <nav class="shell home-footer-legal" aria-label="Νομικά κείμενα και απόρρητο">
+      <a href="/privacy/">Πολιτική απορρήτου</a>
+      <a href="/terms/">Όροι συνδρομής</a>
+      <a href="/cookies/">Cookies</a>
+      <a href="/cookies/#cookie-settings" data-pospal-cookie-settings="true">Ρυθμίσεις cookies</a>
+      <a href="/legal/">Νομικά κείμενα</a>
+    </nav>
     <!-- POSPAL-LEGAL-LINKS:END -->
-</footer>
+  </footer>
+  <script>
+    document.querySelector('.home-footer [data-pospal-cookie-settings]').addEventListener('click', function (event) {
+      if (window.POSPALConsent && typeof window.POSPALConsent.openSettings === 'function') {
+        event.preventDefault();
+        window.POSPALConsent.openSettings();
+      }
+    });
+  </script>
 
+  <script>
+    (() => {
+      const mobile = matchMedia('(max-width:720px)');
+      const copy = document.querySelector('.hero-copy');
+      const offer = document.querySelector('.offer-panel');
+      const actions = copy.querySelector('.hero-actions');
+      const trial = copy.querySelector('.trial-line');
+      const grid = copy.parentElement;
+      function arrangeHero() {
+        if (mobile.matches) {
+          copy.insertBefore(offer, actions);
+          copy.insertBefore(trial, actions);
+        } else {
+          grid.appendChild(offer);
+          copy.appendChild(trial);
+        }
+      }
+      arrangeHero();
+      mobile.addEventListener('change', arrangeHero);
+    })();
+  </script>
   <script src="/prototype/homepage-v3/motion.js" defer></script>
 <script>
 (() => {

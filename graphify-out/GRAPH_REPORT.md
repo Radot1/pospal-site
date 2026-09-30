@@ -688,3 +688,13 @@ This update adds one approval-decision node and five approved-image nodes linked
 
 ## Pricing cover approved — 2026-09-27
 The sixth hub cover is now `static/img/articles/illustrations/times/polished-v1.png`, explicitly approved and locked. `arthra/index.html` uses its 320/640 WebP exports. The previous retained-equipment-photo decision is superseded for the hub.
+
+## Pricing page maintenance update (2026-09-30)
+
+Verified directly against the local implementation; this is a targeted context update, not a full graph rebuild.
+- `times.html` is now a compact download-led pricing page: one offer card, product boundary, five FAQs and final CTA.
+- It loads `static/css/pricing-buyer-guide.css` and `static/css/legal-links.css`. It no longer loads `fonts.css`, `seo-acquisition.css` or `system-money-page.css` directly.
+- `pricing-buyer-guide.css` contains the required POSPal shell/font subset, responsive and theme states, and page-specific rules. Shared styles and locked pages are unchanged.
+- The printer and QR-menu feature links have 44px-high hit areas.
+- Existing `ga-consent.js` and `ga-events.js` remain; `pricing-table` identifies the pricing-view tracking target.
+- Early-user price retention, VAT, trial, cancellation and fiscal-POS boundaries remain documented in the page. No subscription logic changed.
