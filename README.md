@@ -15,9 +15,9 @@ The current marketing goal is download-first. Demo content, where present, is on
 ## Updating the Site
 
 1. Edit `index.html` or the relevant static page/asset locally.
-2. Commit and push for review. A push does not deploy production.
-3. Confirm `legal-release-status.json` is approved with zero blockers and the legal verifier has passed.
-4. After explicit owner publication approval, manually run **Deploy static content to Pages** from GitHub Actions and enter the exact confirmation `PUBLISH`. The workflow refuses blocked or draft legal files.
+2. The current **Deploy static content to Pages** workflow deploys pushes to `main` and supports manual runs. It does not invoke the legal release checker. Treat a push to `main` as publication.
+3. Legal Issue #3 is satisfied: the owner approved the Greek and English documents with revision/effective date `2026-10-01`. Validate this separately with `node .github/scripts/verify-production-release.mjs --documents-only` and run the existing browser check against a local server.
+4. Document approval is not paid-launch approval. The top-level `legal-release-status.json` remains blocked; its separate `document_approval` entry records Issue #3. The overall checker still requires `CONFIRM_PUBLISH=PUBLISH`, approved release metadata and zero blockers. Its legacy count of 13 is not an itemized current checklist; unresolved issue groups are recorded separately. Do not interpret the document-only check as permission to enable paid sales or as a successful overall release check.
 
 ## Custom Domain Setup
 

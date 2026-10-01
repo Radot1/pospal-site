@@ -1,4 +1,7 @@
 import { chromium } from "playwright";
+import fs from "node:fs";
+
+const approval = JSON.parse(fs.readFileSync("legal-release-status.json", "utf8")).document_approval;
 
 const baseUrl = (process.argv[2] || "http://127.0.0.1:8765").replace(/\/$/, "");
 const routes = ["legal", "privacy", "cookies", "terms", "eula", "dpa", "subprocessors"]
@@ -30,12 +33,17 @@ try {
         bodyOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
         tableCount: document.querySelectorAll("table").length,
         wrappedTableCount: document.querySelectorAll(".legal-table-wrap > table").length,
-        robots: document.querySelector('meta[name="robots"]')?.content || ""
+        robots: document.querySelector('meta[name="robots"]')?.content || "",
+        legalMeta: document.querySelector('.legal-meta')?.textContent?.trim() || ""
       }));
       if (!result.h1) failures.push(`${route} has no visible heading at ${width}px`);
       if (result.bodyOverflow > 1) failures.push(`${route} overflows the viewport by ${result.bodyOverflow}px at ${width}px`);
       if (result.tableCount !== result.wrappedTableCount) failures.push(`${route} has an unwrapped legal table at ${width}px`);
-      if (result.robots !== "noindex,nofollow") failures.push(`${route} is unexpectedly indexable before approval`);
+      if (result.robots !== "noindex,nofollow") failures.push(`${route} changed the existing legal indexing policy`);
+      const expectedMeta = route.startsWith('/en/')
+        ? `Revised: ${approval.revision} · Effective: ${approval.effective_date}`
+        : `Αναθεώρηση: ${approval.revision} · Έναρξη ισχύος: ${approval.effective_date}`;
+      if (result.legalMeta !== expectedMeta) failures.push(`${route} has inconsistent revision/effective dates`);
     }
     await page.close();
   }
