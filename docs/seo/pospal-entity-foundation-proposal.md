@@ -99,7 +99,7 @@ Create one internal entity record containing:
 | Public support details | `support@pospal.gr`; no public telephone | User-confirmed |
 | Launch date | May 2025 | User-confirmed |
 | Official profiles | Instagram `@pospalsoftware`, YouTube `@pospal_gr`, and technical GitHub account `Radot1`; no Facebook or LinkedIn | Verified and user-confirmed |
-| Price | €23.90/month including VAT | User-confirmed |
+| Price | €23.90/month total; no VAT is added | User-confirmed |
 
 ### 2. Draft one distinct public entity page
 

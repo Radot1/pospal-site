@@ -78,7 +78,7 @@ Target: `/guides/`
 
 Κατεβάζεις το POSPal απευθείας, το δοκιμάζεις για 30 ημέρες χωρίς κάρτα ή προσωπικά στοιχεία και αποφασίζεις μέσα στη δική σου ροή εργασίας.
 
-Μετά τη δοκιμή, η συνδρομή είναι **€23,90 τον μήνα, με ΦΠΑ**. Δεν υπάρχει χρέωση εγκατάστασης ή συντήρησης. Μπορείς να ακυρώσεις την επόμενη ανανέωση οποτεδήποτε.
+Μετά τη δοκιμή, η συνδρομή είναι **€23,90 τον μήνα, τελική τιμή**. Δεν υπάρχει χρέωση εγκατάστασης ή συντήρησης. Μπορείς να ακυρώσεις την επόμενη ανανέωση οποτεδήποτε.
 
 ### Υποστήριξη και επίσημα προφίλ
 
@@ -104,7 +104,7 @@ Target: `https://github.com/Radot1/pospal-artifacts/releases/latest/download/POS
 **Secondary CTA:** `Άνοιξε τον οδηγό εγκατάστασης`
 Target: `/guides/`
 
-**Closing note:** `30 ημέρες δωρεάν · €23,90/μήνα με ΦΠΑ μετά τη δοκιμή · ακύρωση οποτεδήποτε`
+**Closing note:** `30 ημέρες δωρεάν · €23,90/μήνα · τελική τιμή μετά τη δοκιμή · ακύρωση οποτεδήποτε`
 
 ## Copy rationale
 
@@ -181,8 +181,7 @@ This graph is a specification for the approved visible copy. It must be added on
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "price": "23.90",
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true
+          "priceCurrency": "EUR"
         }
       }
     },

@@ -116,7 +116,7 @@ This prevents the commercial hub from competing with every supporting page while
 
 ### Page promise
 
-> Κατεβάζεις το POSPal για Windows, το στήνεις μόνος σου και το δοκιμάζεις για 30 ημέρες χωρίς κάρτα ή προσωπικά στοιχεία. Αν σου κάνει, συνεχίζεις με 23,90 € τον μήνα με ΦΠΑ.
+> Κατεβάζεις το POSPal για Windows, το στήνεις μόνος σου και το δοκιμάζεις για 30 ημέρες χωρίς κάρτα ή προσωπικά στοιχεία. Αν σου κάνει, συνεχίζεις με 23,90 € τον μήνα · τελική τιμή.
 
 ### Product explanation
 
@@ -186,7 +186,7 @@ Length: 52 characters. Use this if trial is judged more persuasive than price in
 
 ### Recommended meta description
 
-> Κατέβασε το POSPal για Windows. Παραγγελιοληψία από κινητά και tablet, ροή κουζίνας και QR μενού. 30 ημέρες δωρεάν χωρίς κάρτα· μετά 23,90 €/μήνα με ΦΠΑ.
+> Κατέβασε το POSPal για Windows. Παραγγελιοληψία από κινητά και tablet, ροή κουζίνας και QR μενού. 30 ημέρες δωρεάν χωρίς κάρτα· μετά 23,90 €/μήνα · τελική τιμή.
 
 Length: 153 characters.
 
@@ -224,7 +224,7 @@ This is a content brief, not the final approved copy. It deliberately defines th
 
 **Price line**
 
-> Μετά τη δοκιμή: 23,90 € τον μήνα με ΦΠΑ. Ακύρωση όποτε θέλεις.
+> Μετά τη δοκιμή: 23,90 € τον μήνα · τελική τιμή. Ακύρωση όποτε θέλεις.
 
 **Secondary text link**
 
@@ -329,7 +329,7 @@ Add a contextual link to the detailed wireless-ordering page after the local-net
 
 > 30 ημέρες δωρεάν  
 > Χωρίς κάρτα ή προσωπικά στοιχεία  
-> 23,90 € τον μήνα με ΦΠΑ μετά τη δοκιμή  
+> 23,90 € τον μήνα · τελική τιμή μετά τη δοκιμή
 > Ακύρωση όποτε θέλεις
 
 **Primary CTA**
@@ -386,7 +386,7 @@ Any FAQ schema must match the visible answers exactly.
 
 **Microcopy**
 
-> Χωρίς κάρτα · Χωρίς προσωπικά στοιχεία · Μετά 23,90 €/μήνα με ΦΠΑ
+> Χωρίς κάρτα · Χωρίς προσωπικά στοιχεία · Μετά 23,90 €/μήνα · τελική τιμή
 
 ## What to keep, move, and reduce
 

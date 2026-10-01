@@ -54,7 +54,7 @@ Working campaign line:
 
 Supporting promise:
 
-> Κατεβάζεις το POSPal για Windows, το εγκαθιστάς μόνος σου και το δοκιμάζεις για 30 ημέρες χωρίς κάρτα. Αν σου κάνει, συνεχίζεις με 23,90 € τον μήνα με ΦΠΑ.
+> Κατεβάζεις το POSPal για Windows, το εγκαθιστάς μόνος σου και το δοκιμάζεις για 30 ημέρες χωρίς κάρτα. Αν σου κάνει, συνεχίζεις με 23,90 € τον μήνα · τελική τιμή.
 
 The ad creates demand around independence, transparent cost, ordinary hardware, and low-risk evaluation. SEO pages should continue the same promise.
 

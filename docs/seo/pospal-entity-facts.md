@@ -1,7 +1,7 @@
 # POSPal Entity Facts
 
 Status: Complete; entity facts and page URL approved
-Last reviewed: 2026-08-05
+Last reviewed: 2026-09-30 (VAT treatment only)
 Related proposal: [POSPal entity foundation](pospal-entity-foundation-proposal.md)
 Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 
@@ -18,7 +18,7 @@ Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 | Public repository start | 2025-12-08/09 | Repositories created 2025-12-08; first site commit 2025-12-09 | Historical evidence only; not yet accepted as product launch date |
 | Product category | Hospitality ordering and kitchen-workflow software | Visible across the site and product context | Entity descriptor and application category |
 | Operating system | Windows | Visible on homepage, download, pricing, and generic hub | `operatingSystem` |
-| Price | €23.90/month after trial, including VAT | Visible on homepage and pricing page; VAT treatment confirmed by the owner on 2026-08-05 | `Offer` and visible pricing copy |
+| Price | €23.90/month after trial, total; no VAT is added | Visible on homepage and pricing page; VAT exemption confirmed by the accountant, supplied by the owner on 2026-09-30 | `Offer` and visible pricing copy |
 | Trial | 30 days; no card or personal information | Visible on homepage and pricing page | Visible offer/trial copy |
 | Fiscal boundary | Not a fiscal POS or cash register | Visible across acquisition and conversion pages | Entity description and FAQ |
 
@@ -48,7 +48,7 @@ This identity confirmation does not resolve VAT status, Stripe merchant display,
 | Public business location | `Mytilini, Lesvos, Greece` | Confirmed by the owner on 2026-08-05 | Visible publisher location; use natural Greek spelling in Greek public copy |
 | Public telephone | None | Confirmed by the owner on 2026-08-05 | Do not publish a telephone number; use `support@pospal.gr` as the public contact channel |
 | Product launch | May 2025 | Confirmed by the owner on 2026-08-05 | Visible product history and structured data where appropriate |
-| VAT treatment | €23.90/month includes VAT | Confirmed by the owner on 2026-08-05 | Pricing footnote and offer clarification |
+| VAT treatment | €23.90/month total; no VAT is added | Accountant-confirmed, supplied by the owner on 2026-09-30 | Pricing footnote and offer clarification |
 | Public disambiguator | `POSPal.gr` | Approved by the owner on 2026-08-05 | Distinguishes the Greek product from unrelated POSPal entities |
 | Canonical descriptor | `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα` | Approved by the owner on 2026-08-05 | Consistent visible entity and category description |
 | Entity-page URL | `/sxetika-me-to-pospal/` | Approved by the owner on 2026-08-05 | Canonical public entity/about page |
@@ -75,6 +75,10 @@ No additional user-supplied identity fact is required for the first entity-page 
 | 4 | Public telephone | No public phone | Confirmed |
 | 5 | Approximate product launch date | May 2025 | Confirmed |
 | 6 | Other official social profiles | Instagram `@pospalsoftware`; no Facebook or LinkedIn | Confirmed |
-| 7 | VAT treatment of €23.90 price | Includes VAT | Confirmed |
+| 7 | VAT treatment of €23.90 price | Small-business VAT exemption; €23.90 total, no VAT added | Accountant-confirmed, supplied by owner on 2026-09-30; supersedes earlier VAT assumption |
 | 8 | Canonical public descriptor | `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα` | Confirmed |
 | 9 | Public entity-page URL | `/sxetika-me-to-pospal/` | Confirmed |
+
+## Current VAT treatment — Legal Issue #2, 2026-09-30
+
+The owner supplied the accountant-confirmed Greek small-business VAT exemption status. The subscription is EUR 23.90 per month total; no VAT is charged or added. This supersedes previous VAT-inclusive assumptions, including historical audit records. Article 44a is the applicable regime; this is an exemption, not a zero rate. Stripe configuration and invoicing remain separate unresolved issues.

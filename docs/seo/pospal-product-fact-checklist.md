@@ -39,7 +39,7 @@ These facts may support public copy when phrased within their recorded scope. Th
 | `FAC-BND-002` | “Runs alongside” does not mean integration with a fiscal system | Do not claim integration | Change only after a specific integration is verified and approved |
 | `FAC-CAP-001` | Current product includes table mode, simple mode, kitchen workflow, and a QR customer menu | Source-verified: private routes, setup flow, publisher implementation, and maintained tests | Review on packaging/product change |
 | `FAC-OFR-001` | Trial is 30 days with no card or personal information required to start | Controlled: current pages and entity facts | Review on offer change |
-| `FAC-OFR-002` | Price after trial is €23.90/month including VAT | Controlled and owner-confirmed | Review on price or tax change |
+| `FAC-OFR-002` | Price after trial is €23.90/month total; no VAT is added | Controlled and owner-confirmed | Review on price or tax change |
 | `FAC-OFR-003` | Cancellation stops the next renewal and access continues through the paid period | Controlled: product context | Review on billing-policy change |
 | `FAC-OFR-004` | No separate installation or maintenance fee is currently charged | Controlled: product context and current pages | Review on commercial-policy change |
 | `FAC-SUP-001` | Public help channel is `support@pospal.gr`; support is remote and no public phone is offered | Controlled and owner-confirmed | Do not invent an SLA or channel |

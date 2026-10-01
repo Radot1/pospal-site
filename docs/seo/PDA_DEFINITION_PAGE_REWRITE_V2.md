@@ -63,7 +63,7 @@ PDA σημαίνει Personal Digital Assistant, δηλαδή προσωπικό
 
 **Offer line**
 
-30 ημέρες δωρεάν · Χωρίς κάρτα ή προσωπικά στοιχεία · Μετά 23,90 €/μήνα με ΦΠΑ
+30 ημέρες δωρεάν · Χωρίς κάρτα ή προσωπικά στοιχεία · Μετά 23,90 €/μήνα · τελική τιμή
 
 ### 2. The shift problem and founder position
 
@@ -99,7 +99,7 @@ The real Windows order screenshot remains. No mobile product interface is invent
 
 **Price first**
 
-23,90 € τον μήνα με ΦΠΑ
+23,90 € τον μήνα · τελική τιμή
 
 30 ημέρες δωρεάν · Χωρίς κάρτα
 

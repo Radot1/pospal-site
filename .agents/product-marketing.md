@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-*Last updated: 2026-08-05*
+*Last updated: 2026-09-30 (VAT treatment only)*
 
 ## Product Overview
 
@@ -14,7 +14,9 @@
 
 **Product type:** Locally installed Windows software with a direct monthly subscription and hosted supporting services. Do not describe it as fully self-hosted until the complete architecture supports that claim.
 
-**Business model:** EUR 23.90 per month including VAT after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
+**Business model:** EUR 23.90 per month (total; no VAT is added) after a 30-day free trial. No card or personal information is required to begin the trial. Cancel anytime.
+
+VAT treatment: accountant-confirmed Greek small-business VAT exemption, supplied by the owner on 2026-09-30. This supersedes earlier VAT-inclusive assumptions.
 
 ## Target Audience
 
@@ -74,7 +76,7 @@ Public marketing copy must not name competitors.
 
 **Key differentiators:**
 
-- Transparent EUR 23.90 monthly price including VAT.
+- Transparent EUR 23.90 monthly price (total; no VAT is added).
 - Thirty-day trial without a card or personal information.
 - Direct subscription without a distributor or maintenance plan.
 - No additional charge per PDA; suitable staff phones or tablets can open the order-taking page on the venue's reachable local network.
@@ -148,7 +150,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 ## Proof Points
 
-**Verified product proof:** EUR 23.90/month including VAT; 30-day no-card/no-personal-information trial; table mode; simple mode; kitchen workflow; QR customer-menu publisher; Windows x64 package target; local-link access for staff phones/tablets without a native mobile app; same-device reconnect queue for supported staff actions; Windows-installed printer roles and category routing; Greek and English application UI; direct subscription; cancel anytime; works alongside an existing fiscal POS.
+**Verified product proof:** EUR 23.90/month (total; no VAT is added); 30-day no-card/no-personal-information trial; table mode; simple mode; kitchen workflow; QR customer-menu publisher; Windows x64 package target; local-link access for staff phones/tablets without a native mobile app; same-device reconnect queue for supported staff actions; Windows-installed printer roles and category routing; Greek and English application UI; direct subscription; cancel anytime; works alongside an existing fiscal POS.
 
 Technical product facts above are source-verified from the private POSPal application repository and maintained tests reviewed on 2026-08-05. They are controlled first-party evidence, not broad compatibility certification, customer proof, or independent validation.
 
@@ -158,7 +160,7 @@ Technical product facts above are source-verified from the private POSPal applic
 
 | Value theme | Current proof |
 |-------------|---------------|
-| Transparent cost | Public EUR 23.90/month price including VAT and clear trial terms |
+| Transparent cost | Public EUR 23.90/month price (total; no VAT is added) and clear trial terms |
 | Direct access | Public Windows installer and direct subscription |
 | Complete workflow | Table mode, simple mode, QR menu, and kitchen flow |
 | Honest boundary | Explicitly not a fiscal POS or cash register |
