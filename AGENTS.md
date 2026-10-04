@@ -10,7 +10,7 @@ Guidance for agents working on the POSPal marketing site.
 ## Objectives
 - Primary: drive downloads of `POSPal-win-Setup.exe` (Windows installer).
 - Secondary: drive guide engagement after or around the download, especially installation/setup guides.
-- Emphasize the 30-day free trial with no card and no personal information required.
+- Emphasize the 30-day free trial with no name, email, account or card details required.
 - Demo traffic is no longer a goal. Keep any demo content small and proof-oriented only; do not create or promote a dedicated demo funnel unless explicitly approved.
 
 ## Audience

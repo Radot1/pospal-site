@@ -1,46 +1,13 @@
 {
-  "schema": 1,
-  "revision": "2026-09-03",
-  "status": "blocked",
-  "effective_date": null,
-  "approved_by": null,
-  "approved_at": null,
-  "blocker_count": 13,
-  "document_approval": {
-    "issue": 3,
-    "status": "satisfied",
-    "revision": "2026-10-01",
-    "effective_date": "2026-10-01",
-    "approved_by": "owner",
-    "approved_at": "2026-10-01",
-    "scope": "Current Greek and English legal documents only; not paid-launch approval."
+  "schema": 3,
+  "revision": "2026-10-03",
+  "status": "approved",
+  "effective_date": "2026-10-03",
+  "approval": {
+    "approved_by": "Repository owner (explicit rollout approval in Codex)",
+    "approved_at": "2026-10-03T18:21:19Z",
+    "confirmation": "PUBLISH LEGAL RELEASE"
   },
-  "blocker_count_note": "Legacy aggregate of 13 has no itemized source in this repository and is not recalculated by document approval. Issues 1 and 2 are complete per owner; issue 3 is satisfied. Overall readiness remains blocked pending separate verification.",
-  "remaining_issue_groups": [
-    {
-      "issue": 4,
-      "status": "unresolved",
-      "detail": "Invoicing/myDATA provider, role, delivery, responsibility, processing location, DPA and transfers."
-    },
-    {
-      "issue": 5,
-      "status": "unresolved",
-      "detail": "Production checkout amount and merchant identity verification."
-    },
-    {
-      "issue": 6,
-      "status": "unresolved",
-      "detail": "Application acceptance version 1.0 does not prove acceptance of current EULA."
-    },
-    {
-      "issue": "international-transfers",
-      "status": "unresolved",
-      "detail": "Current contractual mechanisms and account-specific applicability for transfers outside the EEA remain unverified."
-    },
-    {
-      "issue": "retention-settings",
-      "status": "unresolved",
-      "detail": "Google/other website account-specific retention settings remain unverified and unrecorded."
-    }
-  ]
+  "acceptance_manifest": "legal/acceptance-manifest.json",
+  "blocker_count": 0
 }

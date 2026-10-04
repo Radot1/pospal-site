@@ -40,7 +40,7 @@
 ### 4) Offer & Pricing (TBD)
 - Plan name(s): POSPal Subscription.
 - Price point(s): EUR 23.90 / month total. Accountant-confirmed Greek small-business VAT exemption (owner confirmation, 2026-09-30): no VAT is charged or added. Public clarification: `Τελική τιμή. Δεν προστίθεται ΦΠΑ.` This supersedes earlier VAT-inclusive copy and historical references.
-- Trial details: 30-day free trial, no card and no personal information required.
+- Trial details: 30-day free trial, with no name, email, account or card details required.
 - Cancellation terms: cancel anytime, just like common subscriptions (Netflix/Spotify).
 
 ### 5) Messaging Pillars (TBD)

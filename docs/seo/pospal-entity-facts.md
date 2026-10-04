@@ -19,7 +19,7 @@ Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 | Product category | Hospitality ordering and kitchen-workflow software | Visible across the site and product context | Entity descriptor and application category |
 | Operating system | Windows | Visible on homepage, download, pricing, and generic hub | `operatingSystem` |
 | Price | €23.90/month after trial, total; no VAT is added | Visible on homepage and pricing page; VAT exemption confirmed by the accountant, supplied by the owner on 2026-09-30 | `Offer` and visible pricing copy |
-| Trial | 30 days; no card or personal information | Visible on homepage and pricing page | Visible offer/trial copy |
+| Trial | 30 days; no name, email, account or card details required | Visible on homepage and pricing page | Visible offer/trial copy |
 | Fiscal boundary | Not a fiscal POS or cash register | Visible across acquisition and conversion pages | Entity description and FAQ |
 
 ## Registered provider identity — 2026-09-30

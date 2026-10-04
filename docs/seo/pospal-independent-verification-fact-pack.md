@@ -32,7 +32,7 @@ These facts may be accurately attributed to POSPal. Attribution does not make th
 | Entity | The business is based in Mytilini, Lesvos, Greece | `/sxetika-me-to-pospal/` | Location change |
 | Entity | First public product availability was May 2025 | `/sxetika-me-to-pospal/` | Historical correction |
 | `FAC-SUP-001` | Public support is remote through `support@pospal.gr`; no public phone is offered | `/sxetika-me-to-pospal/` and `CONTEXT.md` | Support-channel change |
-| Offer | Trial is 30 days, without card or personal information | `/sxetika-me-to-pospal/` and `/times.html` | Offer change |
+| Offer | Trial is 30 days, with no name, email, account or card details required | `/sxetika-me-to-pospal/` and `/times.html` | Offer change |
 | Offer | Subscription after trial is €23.90/month total; no VAT is added | `/sxetika-me-to-pospal/` and `/times.html` | Pricing or tax change |
 | Offer | There is no installation or maintenance charge; next renewal can be cancelled at any time | `/sxetika-me-to-pospal/` | Commercial-policy change |
 | Product boundary | POSPal is not a fiscal POS and not a cash register; it works alongside the venue's fiscal system | `/sxetika-me-to-pospal/` and acquisition pages | Product-scope change |

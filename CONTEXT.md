@@ -180,7 +180,7 @@ Natural monotonic Greek written consistently in the second-person singular. Copy
 
 ### Shared hero promise
 
-The current homepage promise: `Από το τραπέζι μέχρι την κουζίνα. Χωρίς διακοπές.` It describes table mode, simple mode, kitchen workflow, customizable QR menu, Windows installation, guided self-setup, the early-adopter price, and the 30-day trial without card or personal information. Its primary action is `Κατέβασε για Windows`. The older `Χωρίς μεσάζοντα` language remains a direct-relationship theme rather than the protected hero headline.
+The current homepage promise: `Από το τραπέζι μέχρι την κουζίνα. Χωρίς διακοπές.` It describes table mode, simple mode, kitchen workflow, customizable QR menu, Windows installation, guided self-setup, the early-adopter price, and the 30-day trial with no name, email, account or card details required. Its primary action is `Κατέβασε για Windows`. The older `Χωρίς μεσάζοντα` language remains a direct-relationship theme rather than the protected hero headline.
 
 ### Hero setup action
 
