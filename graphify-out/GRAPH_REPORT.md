@@ -698,3 +698,10 @@ Verified directly against the local implementation; this is a targeted context u
 - The printer and QR-menu feature links have 44px-high hit areas.
 - Existing `ga-consent.js` and `ga-events.js` remain; `pricing-table` identifies the pricing-view tracking target.
 - Early-user price retention, VAT, trial, cancellation and fiscal-POS boundaries remain documented in the page. No subscription logic changed.
+
+## Targeted addition: mobile homepage V4 (2026-10-05)
+
+Added five nodes for the isolated main page, proof-first opening, stylesheet, progressive-enhancement script and delivery notes; six EXTRACTED edges record their load, link and documentation relationships. Sources are under `prototype/homepage-mobile-v4/`. The current homepage and shared dependencies are unchanged. This is an incremental inventory addition; historical clusters and their freshness remain as documented above. No external LLM extraction was run (0 API input/output tokens).
+
+## Approved homepage promotion — 2026-10-05
+Targeted inventory update: index.html now uses the restored mobile V4 layout with dedicated static/css/homepage-mobile-v4.css and static/js/homepage-mobile-v4.js. Production noindex removed; original consent and event scripts retained. Exact previous homepage archived at backups/homepage-before-mobile-v4.html.bak. Prototype remains noindex and unchanged. This supersedes the earlier statement that the homepage is unchanged. No full re-extraction or clustering performed.

@@ -17163,6 +17163,70 @@
       "source_location": "whole file",
       "community": "Execution order",
       "description": "Approved raster master; web derivatives cover-320.webp and cover-640.webp in the same article folder. Original source.png preserved."
+    },
+    {
+      "id": "mobile_v4_index_html",
+      "label": "Mobile V4 index.html",
+      "file_type": "document",
+      "source_file": "prototype/homepage-mobile-v4/index.html",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "mobile_v4_opening_proof_first_html",
+      "label": "Mobile V4 opening-proof-first.html",
+      "file_type": "document",
+      "source_file": "prototype/homepage-mobile-v4/opening-proof-first.html",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "mobile_v4_styles_css",
+      "label": "Mobile V4 styles.css",
+      "file_type": "code",
+      "source_file": "prototype/homepage-mobile-v4/styles.css",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "mobile_v4_interactions_js",
+      "label": "Mobile V4 interactions.js",
+      "file_type": "code",
+      "source_file": "prototype/homepage-mobile-v4/interactions.js",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "mobile_v4_DELIVERY_md",
+      "label": "Mobile V4 DELIVERY.md",
+      "file_type": "document",
+      "source_file": "prototype/homepage-mobile-v4/DELIVERY.md",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "homepage_v4_production",
+      "label": "index.html",
+      "source_file": "index.html",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "homepage_v4_css",
+      "label": "static/css/homepage-mobile-v4.css",
+      "source_file": "static/css/homepage-mobile-v4.css",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "homepage_v4_js",
+      "label": "static/js/homepage-mobile-v4.js",
+      "source_file": "static/js/homepage-mobile-v4.js",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "homepage_v4_backup",
+      "label": "backups/homepage-before-mobile-v4.html.bak",
+      "source_file": "backups/homepage-before-mobile-v4.html.bak",
+      "confidence": "EXTRACTED"
     }
   ],
   "links": [
@@ -34071,6 +34135,90 @@
       "relation": "illustrates_article",
       "confidence": "EXTRACTED",
       "source_file": "static/img/articles/illustrations/README.md",
+      "weight": 1.0
+    },
+    {
+      "source": "mobile_v4_index_html",
+      "target": "mobile_v4_styles_css",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/index.html",
+      "source_location": "L1"
+    },
+    {
+      "source": "mobile_v4_index_html",
+      "target": "mobile_v4_interactions_js",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/index.html",
+      "source_location": "L1"
+    },
+    {
+      "source": "mobile_v4_opening_proof_first_html",
+      "target": "mobile_v4_styles_css",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/opening-proof-first.html",
+      "source_location": "L1"
+    },
+    {
+      "source": "mobile_v4_opening_proof_first_html",
+      "target": "mobile_v4_interactions_js",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/opening-proof-first.html",
+      "source_location": "L1"
+    },
+    {
+      "source": "mobile_v4_opening_proof_first_html",
+      "target": "mobile_v4_index_html",
+      "relation": "links_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/opening-proof-first.html",
+      "source_location": "L1"
+    },
+    {
+      "source": "mobile_v4_DELIVERY_md",
+      "target": "mobile_v4_index_html",
+      "relation": "documents",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "prototype/homepage-mobile-v4/DELIVERY.md",
+      "source_location": "L1"
+    },
+    {
+      "source": "homepage_v4_production",
+      "target": "homepage_v4_css",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "source_file": "index.html",
+      "weight": 1.0
+    },
+    {
+      "source": "homepage_v4_production",
+      "target": "homepage_v4_js",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "source_file": "index.html",
+      "weight": 1.0
+    },
+    {
+      "source": "homepage_v4_production",
+      "target": "homepage_v4_backup",
+      "relation": "previous_version_saved_as",
+      "confidence": "EXTRACTED",
+      "source_file": "index.html",
       "weight": 1.0
     }
   ],

@@ -109,3 +109,6 @@ Guidance for agents working on the POSPal marketing site.
 
 ## Testing
 - No automated tests required (static site).
+
+## Approved homepage promotion — 2026-10-05
+The user explicitly authorized replacing `index.html` with the restored `prototype/homepage-mobile-v4/index.html`, preserving the previous homepage as a backup. This is a one-time exception to the homepage lock; `download/index.html`, `guides/index.html` and their shared rendering dependencies remain locked. The promoted homepage uses dedicated `static/css/homepage-mobile-v4.css` and `static/js/homepage-mobile-v4.js`. No push or deployment was authorized.
