@@ -1,11 +1,11 @@
 {
   "schema": 3,
-  "revision": "2026-10-03",
+  "revision": "2026-10-07",
   "status": "approved",
-  "effective_date": "2026-10-03",
+  "effective_date": "2026-10-07",
   "approval": {
-    "approved_by": "Repository owner (explicit rollout approval in Codex)",
-    "approved_at": "2026-10-03T18:21:19Z",
+    "approved_by": "Repository owner (explicit Issue #15A publication approval in Codex)",
+    "approved_at": "2026-10-07T14:59:32.088Z",
     "confirmation": "PUBLISH LEGAL RELEASE"
   },
   "acceptance_manifest": "legal/acceptance-manifest.json",
