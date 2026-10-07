@@ -73,6 +73,17 @@
       },
       hasConsented: function () { return !!state.consentInfo; },
     };
+    // Apply choices made in another tab without writing them back or losing revocations.
+    window.addEventListener("storage", function (event) {
+      if (event.storageArea !== window.localStorage ||
+          (event.key !== CONSENT_STORAGE_KEY && event.key !== null)) {
+        return;
+      }
+      var latest = readStoredConsent();
+      state.consents = normalizeConsentState(latest && latest.consents);
+      state.consentInfo = latest ? { savedAt: latest.savedAt } : null;
+      listeners.forEach(function (listener) { listener(state); });
+    });
     return {
       getState: function () { return state; },
       subscribe: function (listener) {
@@ -780,6 +791,8 @@
 
       if (hasConsentDecision()) {
         closeConsentUI();
+      } else {
+        showBanner();
       }
     });
   }
