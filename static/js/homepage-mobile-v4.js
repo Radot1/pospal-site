@@ -28,6 +28,12 @@
       }
     });
     dialog.addEventListener('close', () => opener?.focus());
+    // A modal in the top layer must close when its mobile layout is hidden.
+    if (dialog.closest('.homepage-mobile')) {
+      matchMedia('(max-width:720px)').addEventListener('change', event => {
+        if (!event.matches && dialog.open) dialog.close();
+      });
+    }
   }
   const menu = document.querySelector('.menu');
   if (menu) {
@@ -45,7 +51,7 @@
 })();
 
 // Keep the cookie-policy link usable when consent enhancement is unavailable.
-document.querySelector('[data-pospal-cookie-settings]')?.addEventListener('click', event => {
+document.querySelector('.homepage-mobile [data-pospal-cookie-settings], body > .footer [data-pospal-cookie-settings]')?.addEventListener('click', event => {
   if (typeof window.POSPALConsent?.openSettings === 'function') {
     event.preventDefault();
     window.POSPALConsent.openSettings();

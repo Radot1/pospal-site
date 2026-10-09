@@ -705,3 +705,9 @@ Added five nodes for the isolated main page, proof-first opening, stylesheet, pr
 
 ## Approved homepage promotion — 2026-10-05
 Targeted inventory update: index.html now uses the restored mobile V4 layout with dedicated static/css/homepage-mobile-v4.css and static/js/homepage-mobile-v4.js. Production noindex removed; original consent and event scripts retained. Exact previous homepage archived at backups/homepage-before-mobile-v4.html.bak. Prototype remains noindex and unchanged. This supersedes the earlier statement that the homepage is unchanged. No full re-extraction or clustering performed.
+
+
+## Approved desktop restoration — 2026-10-09
+Targeted inventory update: `index.html` restores the exact pre-promotion desktop design from commit `03446b9` above 720px, using the unchanged `prototype/homepage-v3/styles.css` and `prototype/homepage-v3/motion.js`. The existing mobile V4 design remains at 720px and below. CSS media conditions isolate the two designs; mobile IDs that overlapped the desktop are namespaced. The backup remains unchanged. The mobile script binds cookie settings to the mobile footer. No download/guide page or shared asset changed.
+
+Added the desktop stylesheet node and three EXTRACTED dependency/provenance edges, and qualified the mobile stylesheet edge by viewport. Existing clusters were preserved; no full re-extraction was performed. Endpoint integrity passed. No external extraction API was used (0 API input/output tokens); host-agent usage is not independently metered.

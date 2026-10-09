@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="el">
+<html lang="el" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,19 +10,586 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
   <meta property="og:site_name" content="POSPal">
-  <meta property="og:title" content="POSPal | Παραγγελιοληψία για εστίαση σε Windows">
-  <meta property="og:description" content="Παραγγελιοληψία, ροή κουζίνας και QR μενού. 30 ημέρες δωρεάν δοκιμή στον υπολογιστή Windows του καταστήματος.">
+  <meta property="og:title" content="POSPal | Παραγγελιοληψία για εστίαση">
+  <meta property="og:description" content="Κατέβασε το POSPal για Windows και στήσε παραγγελιοληψία, ροή κουζίνας και QR μενού με οδηγούς.">
   <meta property="og:url" content="https://pospal.gr/">
-  <meta property="og:image" content="https://pospal.gr/static/img/pospal-desktop-order.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/static/img/pospal-icon-96.png">
-  <link rel="stylesheet" href="/static/css/homepage-mobile-v4.css">
-  <script src="/static/js/homepage-mobile-v4.js" defer></script>
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/app_icon.ico">
+  <link media="(width > 720px)" rel="stylesheet" href="/prototype/homepage-v3/styles.css">
   <script src="/static/js/ga-consent.js"></script>
-  <script src="/static/js/ga-events.js" defer></script>
+  <script defer src="/static/js/ga-events.js"></script>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <link media="(width > 720px)" rel="stylesheet" href="/static/css/legal-links.css">
+<style media="(width > 720px)">
+
+.hero-grid{isolation:isolate}
+.taste-art{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;overflow-anchor:none}
+.taste-stream{position:absolute;left:0;top:46%;width:100%;height:300px;overflow:visible;color:#738d79}
+.taste-stream text{font-family:inherit;font-size:18px;fill:currentColor;letter-spacing:.01em}
+.taste-printer{position:absolute;right:15px;top:49%;width:186px;transform:rotate(3deg)}
+.taste-slot{height:42px;background:#102117;border:1px solid #294134;border-radius:8px 8px 3px 3px;position:relative;z-index:2;text-align:center;color:#d3e1d7;font-size:12px;font-weight:700;padding-top:7px;box-shadow:0 4px 8px #10211712}
+.taste-slot b{color:#35ed78}
+.taste-slot:after{content:'';position:absolute;bottom:5px;left:12px;right:12px;height:3px;background:#020805;border-radius:4px}
+.taste-paper-window{height:300px;overflow:hidden;margin:-7px 9px 0;padding:0 0 10px;filter:drop-shadow(0 6px 5px #10211712)}
+.taste-paper{background:#fffefa;padding:20px 13px 22px;color:#304238;font-size:11px;line-height:1.5;clip-path:none}
+.taste-paper strong{display:block;font-size:14px;margin:2px 0 9px;padding-bottom:9px;border-bottom:1px dashed #bec9bf}
+.taste-paper small{font-size:8px;letter-spacing:.09em;color:#6d7c70}
+.taste-item{display:flex;gap:9px;margin:8px 0}.taste-item b{color:#0f7a38}.taste-item em{display:block;font-style:normal;font-size:9px;color:#7a847b}
+.taste-replay{position:absolute;right:20px;bottom:18px;z-index:8;background:transparent;border:0;color:#56625a;font:inherit;font-size:11px;min-height:44px;padding:8px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+@media(min-width:1450px){.hero-grid{width:calc(100% - 4rem);max-width:1680px}.taste-printer{right:35px;top:44%;width:205px}.taste-stream{top:38%;height:350px}}
+@media(max-width:1100px){.hero-copy{order:1}.offer-panel{order:2}.taste-art{order:3}.taste-art{position:relative;inset:auto;grid-column:1/-1;width:100%;height:310px;z-index:0;margin-top:-12px}.taste-stream{top:-26px;left:0;height:260px;width:calc(100% - 110px)}.taste-printer{top:2px;right:15px;width:170px;transform:rotate(2deg)}.taste-paper{padding-top:15px;padding-bottom:18px}.taste-replay{bottom:5px;right:auto;left:16px}.offer-panel{margin-top:0}.hero-grid{gap:18px}}
+@media(prefers-reduced-motion:reduce){.taste-replay{display:none}}
+
+.taste-printer{transform:rotate(1deg)}
+.taste-slot{height:36px;border-radius:6px 6px 2px 2px;box-shadow:0 3px 7px #10211712;font-size:11px}
+.taste-slot:after{left:10px;right:10px;bottom:4px;height:2px}
+.taste-paper-window{margin-top:-3px;filter:drop-shadow(0 5px 5px #10211710)}
+.taste-paper{clip-path:none;background:#fffefa;padding:17px 14px 18px;border-radius:0 0 1px 1px;transform-origin:top center;line-height:1.55}
+.taste-paper strong{font-size:15px;letter-spacing:-.015em;margin-bottom:11px;padding-bottom:10px}
+.taste-item{margin:10px 0;gap:10px}.taste-item b{font-variant-numeric:tabular-nums;min-width:9px}
+.taste-item em{margin-top:2px;font-size:10px;color:#56625a}
+.taste-paper small{font-size:8px;letter-spacing:.045em;color:#56625a}
+.taste-stream{mask-image:linear-gradient(to right,#000 0%,#000 26%,transparent 38%,transparent 65%,#000 82%)}
+.taste-replay{border-radius:5px;text-decoration:none;color:#526459;transition:background-color .2s,color .2s}
+.taste-replay:hover{background:#dfe7df;color:#102117}
+@media(max-width:1100px){.taste-stream{mask-image:none;width:100%;height:260px;top:0}.taste-stream text{font-size:13px}.taste-printer{transform:none}.taste-paper-window{height:290px}}
+
+.taste-paper{will-change:transform,opacity;backface-visibility:hidden}
+@media(max-width:1100px){.taste-art,.taste-replay{display:none}.hero-grid{gap:1.5rem}.offer-panel{margin:.75rem auto 0}}
+
+/* One-time approved homepage navigation/banner refinement. */
+.offer-panel .offer-details{display:flex;align-items:center;gap:.4rem;min-height:44px;margin-top:.35rem;color:#fff;font-size:.82rem;text-decoration:underline;text-underline-offset:4px}
+.offer-panel .offer-details span{display:inline;color:inherit;font-size:inherit}
+.offer-panel .offer-details:hover{color:var(--green)}
+/* Approved homepage-only footer; shared footer styles remain unchanged. */
+.home-footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr 1fr;gap:2.5rem;align-items:start}
+.home-footer h2{margin:0 0 .6rem;color:#fff;font-size:.95rem;line-height:1.5;font-weight:700}
+.home-footer nav a{display:flex;align-items:center;min-height:44px;color:#dce8df;font-size:.9rem;font-weight:400;line-height:1.45;padding-block:.4rem}
+.home-footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.home-footer-logo{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:1.2rem;font-weight:800;margin-top:-.55rem}
+.home-footer-brand p{margin:.4rem 0 0;max-width:30ch;font-size:.9rem;line-height:1.6}
+.home-footer-brand .home-footer-boundary{margin-top:1rem;color:#aebfb3;font-size:.82rem}
+.home-footer-legal{display:flex;flex-wrap:wrap;gap:0 1.5rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #34483b}
+.home-footer .home-footer-legal a{font-size:.8rem;color:#b9c9be}
+@media(max-width:1000px){.home-footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.home-footer-brand p{max-width:36ch}}
+@media(max-width:560px){.home-footer-grid{gap:1.5rem 1rem}.home-footer-brand{grid-column:1/-1}.home-footer-grid nav:last-child{grid-column:1/-1}.home-footer nav a{font-size:.86rem}.home-footer-legal{gap:0 1rem;margin-top:1.5rem}}
+.hero-lead-mobile{display:none}
+/* Approved mobile hero refinement; desktop composition is preserved. */
+@media(max-width:720px){
+  .hero-grid{padding-top:1.75rem;gap:0;text-align:left}
+  .hero-copy{display:flex;flex-direction:column;align-items:stretch;text-align:left}
+  .hero-copy .signal-label{margin-bottom:1rem}
+  .hero h1{font-size:clamp(2rem,8.7vw,2.75rem);line-height:1.08;margin-bottom:1rem;text-wrap:balance}
+  .hero-lead-desktop{display:none}
+  .hero-lead-mobile{display:block;font-size:1rem;line-height:1.5;margin:0 0 1.25rem}
+  .hero-copy .offer-panel{order:initial;width:100%;margin:0 0 .75rem;padding:0;background:transparent;border:0;color:var(--ink);text-align:left;display:flex;flex-direction:column}
+  .hero-copy .offer-panel>strong{order:-1;color:var(--ink);font-size:2rem;line-height:1.15;margin:0 0 .4rem}
+  .hero-copy .offer-panel small{color:var(--ink);font-size:.9rem;margin-left:.2rem}
+  .hero-copy .offer-panel>span{color:var(--ink);font-size:.8rem;font-weight:600}
+  .hero-copy .offer-panel p{max-width:none;font-size:.8rem;line-height:1.45;color:var(--muted);margin-top:.25rem}
+  .hero-copy .offer-panel .offer-details{color:var(--ink);margin-top:0}
+  .hero-copy .trial-line{margin:0 0 1rem;font-size:.85rem;line-height:1.5;max-width:34ch}
+  .hero-copy .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:none;margin:0;gap:.25rem;justify-items:stretch}
+  .hero-copy .hero-actions .button-primary{width:100%;max-width:none;justify-self:stretch}
+  .hero-copy .hero-actions .button-secondary{min-height:44px;border:0;background:transparent;padding:.65rem;color:var(--ink);text-decoration:underline;text-underline-offset:4px;font-size:.9rem;font-weight:400}
+}
+</style>
+  <!-- Desktop: exact pre-promotion design (03446b9). Mobile: October 5 design. -->
+  <link rel="stylesheet" href="/static/css/homepage-mobile-v4.css" media="(max-width:720px)">
+  <script src="/static/js/homepage-mobile-v4.js" defer></script>
+  <style>
+    .homepage-desktop{display:contents}.homepage-mobile{display:none}
+    @media(max-width:720px){.homepage-desktop{display:none}.homepage-mobile{display:contents}}
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div class="homepage-desktop">
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="POSPal, αρχική">
+      <img src="/app_icon.ico" width="36" height="36" alt="">
+      <span>POS<b>Pal</b></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
+      <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+      <a href="/times.html">Τιμές</a>
+      <a href="/guides/">Οδηγοί</a>
+    </nav>
+    <a class="button button-primary header-cta" href="/download/">Κατέβασε για Windows</a>
+    <details class="mobile-nav">
+      <summary aria-label="Άνοιγμα μενού">Μενού</summary>
+      <nav aria-label="Πλοήγηση κινητού">
+        <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+      <a href="/times.html">Τιμές</a>
+        <a href="/guides/">Οδηγοί</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid"><div class="taste-art" role="img" aria-label="Ενδεικτική παραγγελία: σκόρπιες σημειώσεις οργανώνονται σε δελτίο κουζίνας.">
+<svg class="taste-stream" viewBox="0 0 1400 330" preserveAspectRatio="none" aria-hidden="true"><defs><path id="taste-path" d="M-90 190 C80 240 260 80 190 38 C90 -30 20 120 145 172 C260 228 430 282 740 276 S1090 80 1250 108"/></defs>
+<text opacity=".5"><textPath href="#taste-path" startOffset="1%">μία χωριάτικη</textPath></text>
+<text opacity=".38"><textPath href="#taste-path" startOffset="18%">χωρίς κρεμμύδι</textPath></text>
+<text opacity=".5"><textPath href="#taste-path" startOffset="35%">τραπέζι έξι</textPath></text>
+<text opacity=".32"><textPath href="#taste-path" startOffset="51%">δύο πατάτες</textPath></text>
+</svg><div class="taste-printer" aria-hidden="true"><div class="taste-slot">POS<b>Pal</b></div><div class="taste-paper-window"><div class="taste-paper"><small>ΔΕΛΤΙΟ ΚΟΥΖΙΝΑΣ</small><strong>Τραπέζι 6</strong><div class="taste-item"><b>1</b><span>Χωριάτικη<em>Χωρίς κρεμμύδι</em></span></div><div class="taste-item"><b>2</b><span>Πατάτες</span></div><small>ΕΝΔΕΙΚΤΙΚΗ ΠΑΡΑΓΓΕΛΙΑ</small></div></div></div></div><button class="taste-replay" type="button">Παύση κίνησης</button>
+        <div class="hero-copy">
+          <p class="signal-label">Παραγγελιοληψία για εστίαση · Εγκατάσταση σε Windows</p>
+          <h1 id="hero-title">Από το τραπέζι μέχρι την κουζίνα. <span>Και εκτός Wi-Fi.</span></h1>
+          <p class="hero-lead hero-lead-desktop">Το POSPal κρατά την παραγγελία ζωντανή: τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού σε ένα πρόγραμμα που κατεβάζεις και στήνεις με οδηγούς.</p>
+          <p class="hero-lead hero-lead-mobile">Παραγγελιοληψία, τραπέζια, ροή κουζίνας και QR μενού. Στον υπολογιστή Windows του καταστήματος.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="button button-secondary" href="/guides/windows-installation/">Οδηγός εγκατάστασης</a>
+          </div>
+          <p class="trial-line"><strong>30 ημέρες δωρεάν.</strong> Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</p>
+        </div>
+
+        <div class="offer-panel" aria-label="Ειδική τιμή για τους πρώτους χρήστες">
+          <span>Ειδική τιμή για τους πρώτους χρήστες</span>
+          <strong>€23,90<small>/μήνα</small></strong>
+          <p>Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+          <a class="offer-details" href="/times.html">Δες τι περιλαμβάνει <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="route-theatre" data-route-theatre>
+        <div class="shell route-shell">
+          <p class="sr-only" id="route-description">Η εικόνα δείχνει παραγγελία που καταχωρείται σε συσκευή σερβιτόρου, αποθηκεύεται προσωρινά όταν βγει από το Wi-Fi, συγχρονίζεται όταν επιστρέψει στο τοπικό δίκτυο και περνά στο POSPal και στην κουζίνα.</p>
+
+          <figure class="route-scene" aria-labelledby="route-title" aria-describedby="route-description">
+            <div class="route-scene-label">
+              <span>Η διαδρομή της παραγγελίας</span>
+              <strong id="route-title">Εκτός Wi‑Fi, η παραγγελία παραμένει στη συσκευή.</strong>
+              <small>Μόλις επιστρέψει, συγχρονίζεται με το POSPal και συνεχίζει στην κουζίνα.</small>
+            </div>
+            <div class="route-controls" role="group" aria-label="Έλεγχος κίνησης διαδρομής">
+              <button class="motion-replay" type="button" data-motion-replay aria-pressed="false" aria-label="Παύση κίνησης διαδρομής">Παύση</button>
+            </div>
+            <div class="venue-depth" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wifi-radius" aria-hidden="true"></div>
+            <svg class="route-svg route-svg-desktop" viewBox="0 0 1180 460" aria-hidden="true" preserveAspectRatio="none">
+              <path class="route-shadow" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-line" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-progress" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+              <path class="route-pulse" d="M106 264 C220 212 290 315 400 264 C535 200 620 200 742 264 C850 320 960 272 1074 236"></path>
+            </svg>
+            <svg class="route-svg route-svg-tablet" viewBox="0 0 1000 700" aria-hidden="true" preserveAspectRatio="none">
+              <path class="route-shadow" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-line" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-progress" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+              <path class="route-pulse" d="M120 270 C270 250 330 330 420 410 C540 520 660 540 770 420 C840 345 900 285 940 260"></path>
+            </svg>
+            <div class="order-token" aria-hidden="true">
+              <span>#1</span>
+            </div>
+            <div class="route-chip chip-offline" aria-hidden="true"><span>1</span> Εκτός Wi‑Fi</div>
+            <div class="route-chip chip-device" aria-hidden="true"><span>2</span> Αποθηκεύτηκε στη συσκευή</div>
+            <div class="route-chip chip-local" aria-hidden="true"><span>3</span> Επιστροφή και συγχρονισμός</div>
+            <div class="route-chip chip-ready" aria-hidden="true"><span>4</span> Στην κουζίνα</div>
+
+            <figure class="node node-phone">
+              <figcaption><strong>Σερβιτόρος</strong></figcaption>
+              <div class="offline-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4.7 9.1a11.5 11.5 0 0 1 12.8-1.7M7.6 12.2a7.2 7.2 0 0 1 6.6-1.4M10.5 15.3a3 3 0 0 1 2.9-.2M3 3l18 18"></path>
+                </svg>
+              </div>
+              <div class="phone-frame">
+                <img src="/docs/redesign/captures/app-route-mobile-order.png" width="430" height="900" alt="Πραγματική οθόνη POSPal σε κινητό με την παραγγελία 1 στο τραπέζι 1">
+                <div class="device-toast" aria-hidden="true"><span>✓</span> Αποθηκεύτηκε στη συσκευή</div>
+              </div>
+            </figure>
+
+            <figure class="node node-laptop">
+              <figcaption><strong>POSPal σε Windows</strong></figcaption>
+              <div class="laptop-frame">
+                <div class="laptop-screen">
+                  <img src="/docs/redesign/captures/app-route-desktop-order.png" width="1280" height="900" alt="Πραγματική οθόνη POSPal σε Windows με την παραγγελία 1 στο τραπέζι 1">
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+            </figure>
+
+            <figure class="node node-kitchen">
+              <figcaption><strong>Κουζίνα</strong></figcaption>
+              <div class="printer-frame" aria-hidden="true">
+                <div class="printer-top"></div>
+                <div class="ticket">
+                  <b>ΠΑΡΑΓΓΕΛΙΑ #1</b>
+                  <span>Τραπέζι 1</span>
+                  <span>6 καπουτσίνο</span>
+                  <mark>ΕΛΗΦΘΗ</mark>
+                </div>
+              </div>
+            </figure>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-band" aria-label="Τι περιλαμβάνεται">
+      <div class="shell proof-grid">
+        <p><span>Κινητό</span><strong>Παραγγελία στο χέρι</strong><small>Κινητό ή tablet στο τοπικό δίκτυο.</small></p>
+        <p><span>Εκτός εμβέλειας</span><strong>Δεν χάνεται η καταχώρηση</strong><small>Η συσκευή κρατά την παραγγελία προσωρινά.</small></p>
+        <p><span>Windows</span><strong>Έλεγχος στον υπολογιστή</strong><small>Η κύρια εφαρμογή τρέχει στο κατάστημα.</small></p>
+        <p><span>Έξοδος</span><strong>Κουζίνα και QR μαζί</strong><small>Ροή κουζίνας και QR μενού στην ίδια συνδρομή.</small></p>
+      </div>
+    </section>
+
+    <section class="fit-section" aria-labelledby="fit-title">
+      <div class="shell fit-grid">
+        <div class="fit-intro">
+          <p class="signal-label">Πριν το κατεβάσεις</p>
+          <h2 id="fit-title">Τι χρειάζεσαι για να ξεκινήσεις.</h2>
+          <p class="fit-lead">Η εφαρμογή εγκαθίσταται σε υπολογιστή Windows. Οι συσκευές της βάρδιας συνδέονται στο ίδιο τοπικό δίκτυο.</p>
+          <div class="fit-action">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <small>30 ημέρες δωρεάν, χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</small>
+          </div>
+        </div>
+        <div class="fit-setup">
+          <ul class="fit-equipment" aria-label="Βασικό στήσιμο POSPal">
+            <li class="fit-node fit-host">
+              <span class="fit-status">Απαραίτητο</span>
+              <strong>Υπολογιστής Windows</strong>
+              <p>Εδώ εγκαθίσταται και τρέχει το POSPal.</p>
+            </li>
+            <li class="fit-node fit-device">
+              <span class="fit-status">Για ασύρματη παραγγελιοληψία</span>
+              <strong>Κινητό ή tablet</strong>
+              <p>Συνδέεται στο ίδιο τοπικό δίκτυο.</p>
+            </li>
+            <li class="fit-node fit-printer">
+              <span class="fit-status">Προαιρετικό</span>
+              <strong>Θερμικός εκτυπωτής</strong>
+              <p>Μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
+            </li>
+          </ul>
+          <aside class="fit-boundary" aria-label="Διευκρίνιση για το φορολογικό σύστημα">
+            <span class="fit-boundary-mark" aria-hidden="true">≠</span>
+            <div>
+              <strong>Δίπλα, όχι στη θέση του.</strong>
+              <p>Το POSPal λειτουργεί δίπλα στο υπάρχον φορολογικό σου σύστημα. Δεν είναι ταμειακή ή φορολογικό POS.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="qr-section" aria-labelledby="qr-title">
+      <div class="shell qr-grid">
+        <figure class="qr-proof">
+          <a class="qr-scan-card" href="https://menu.pospal.gr/s/pospal" aria-label="Άνοιξε το δημοσιευμένο δείγμα QR μενού">
+            <img src="/static/qr-menu-live-code.png" width="576" height="576" loading="lazy" decoding="async" alt="">
+            <span><strong>Σκάναρέ το</strong><small>Ανοίγει το ίδιο δείγμα.</small></span>
+          </a>
+          <div class="qr-phone">
+            <img src="/static/qr-menu-live-preview.png" width="430" height="932" loading="lazy" decoding="async" alt="Δημοσιευμένο δείγμα QR μενού POSPal με κατηγορίες, φίλτρα και προϊόντα">
+          </div>
+          <figcaption>Το QR ανοίγει αυτό το δημοσιευμένο δείγμα.</figcaption>
+        </figure>
+        <div class="qr-copy">
+          <p class="signal-label">Περιλαμβάνεται στη συνδρομή</p>
+          <h2 id="qr-title">Προϊόντα και QR μενού, από το ίδιο σημείο.</h2>
+          <p class="qr-lead">Διαχειρίζεσαι προϊόντα και εμφάνιση από το POSPal. Χωρίς ξεχωριστή χρέωση.</p>
+          <dl class="qr-ledger">
+            <div><dt>Περιλαμβάνεται</dt><dd>QR μενού</dd></div>
+            <div><dt>Προσαρμόζεται</dt><dd>Εμφάνιση καταστήματος</dd></div>
+            <div><dt>Έξτρα χρέωση</dt><dd>Καμία</dd></div>
+          </dl>
+          <div class="qr-actions">
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="qr-sample-link" href="https://menu.pospal.gr/s/pospal">Άνοιξε το δείγμα μενού</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="onboarding-section" aria-labelledby="onboarding-title">
+      <div class="shell onboarding-grid">
+        <div class="onboarding-copy">
+          <p class="signal-label">Από τον εξοπλισμό στην πρώτη βάρδια</p>
+          <h2 id="onboarding-title">Το στήσιμο, σε καθαρή σειρά.</h2>
+          <p>Ξεκινάς από τον εξοπλισμό και φτάνεις σε μία δοκιμαστική παραγγελία πριν από την πρώτη βάρδια.</p>
+          <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+        </div>
+        <div class="onboarding-runway">
+          <ol>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">1</span>
+              <div>
+                <small>Πριν κατεβάσεις</small>
+                <h3>Έλεγξε τον εξοπλισμό</h3>
+                <p>Windows, τοπικό δίκτυο και προαιρετικός εκτυπωτής.</p>
+                <a href="/guides/">Άνοιξε τον οδηγό εξοπλισμού <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">2</span>
+              <div>
+                <small>Στον υπολογιστή</small>
+                <h3>Εγκατέστησε το POSPal</h3>
+                <p>Κατέβασε, άνοιξε και έλεγξε τη σύνδεση.</p>
+                <a href="/guides/">Άνοιξε τον οδηγό εγκατάστασης <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">3</span>
+              <div>
+                <small>Μέσα στο POSPal</small>
+                <h3>Πέρασε το πρώτο μενού</h3>
+                <p>Πρόσθεσε προϊόντα και έλεγξε το QR μενού.</p>
+              </div>
+            </li>
+            <li>
+              <span class="onboarding-number" aria-hidden="true">4</span>
+              <div>
+                <small>Πριν από την πρώτη βάρδια</small>
+                <h3>Κάνε μία δοκιμαστική παραγγελία</h3>
+                <p>Έλεγξε κινητό, Windows και κουζίνα μαζί.</p>
+              </div>
+            </li>
+          </ol>
+          <aside class="onboarding-support" aria-label="Βοήθεια για το στήσιμο">
+            <strong>Αν κολλήσεις, στείλε μήνυμα.</strong>
+            <p><a href="mailto:support@pospal.gr">support@pospal.gr</a> · Η βοήθεια γίνεται από απόσταση, χωρίς επιτόπια εγκατάσταση.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" aria-labelledby="pricing-title">
+      <div class="shell pricing-wrap">
+        <header class="pricing-heading">
+          <div>
+            <p class="signal-label">Μία καθαρή τιμή</p>
+            <h2 id="pricing-title">Μία συνδρομή. Όλη η ροή.</h2>
+          </div>
+          <p>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού στην ίδια συνδρομή.</p>
+        </header>
+        <div class="pricing-offer">
+          <div class="pricing-price-block">
+            <span>Τιμή πρώτων χρηστών</span>
+            <p class="pricing-price"><strong>€23,90</strong><small>/μήνα</small></p>
+            <p class="pricing-retention">Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p>
+            <a class="button button-primary" href="/download/">Ξεκίνα 30 ημέρες δωρεάν</a>
+            <small class="pricing-trial">Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</small>
+          </div>
+          <div class="pricing-terms">
+            <dl>
+              <div><dt>Περιλαμβάνονται</dt><dd>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού</dd></div>
+              <div><dt>Χρέωση εγκατάστασης</dt><dd>Καμία</dd></div>
+              <div><dt>Χρέωση συντήρησης</dt><dd>Καμία</dd></div>
+              <div><dt>Ακύρωση</dt><dd>Σταματά την επόμενη ανανέωση</dd></div>
+            </dl>
+            <p class="pricing-cancellation">Μετά την ακύρωση, η πρόσβαση συνεχίζεται μέχρι το τέλος της ήδη πληρωμένης περιόδου.</p>
+            <p class="pricing-boundary">Το POSPal δεν είναι ταμειακή ή φορολογικό POS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="shell faq-grid">
+        <div>
+          <p class="signal-label">Σύντομες απαντήσεις</p>
+          <h2 id="faq-title">Οι ερωτήσεις πριν το κατεβάσεις.</h2>
+          <p class="faq-intro">PDA, παραγγελιοληψία, εγκατάσταση, τιμή και φορολογικό σύστημα, χωρίς ασάφειες.</p>
+        </div>
+        <div>
+          <div class="faq-list">
+            <details open>
+              <summary>Τι είναι το PDA σερβιτόρου;</summary>
+              <p>Στην εστίαση, PDA λέγεται συνήθως η συσκευή που χρησιμοποιεί ο σερβιτόρος για να πάρει παραγγελία ασύρματα. Στο POSPal η παραγγελία μπαίνει από κινητό ή tablet και περνά στο POSPal στον υπολογιστή Windows.</p>
+            </details>
+            <details>
+              <summary>Πώς λειτουργεί η παραγγελιοληψία στο POSPal;</summary>
+              <p>Περνάς παραγγελία από τραπέζι ή από απλή λειτουργία, τη βλέπεις στη ροή κουζίνας και κρατάς τον ίδιο κατάλογο για το QR μενού πελάτη.</p>
+            </details>
+            <details class="faq-boundary">
+              <summary>Είναι το POSPal ταμειακή ή φορολογικό POS;</summary>
+              <p>Όχι. Το POSPal οργανώνει παραγγελιοληψία και ροή κουζίνας. Δεν εκδίδει αποδείξεις και δεν αντικαθιστά την ταμειακή ή το φορολογικό POS του καταστήματος.</p>
+            </details>
+            <details>
+              <summary>Τι χρειάζομαι για να ξεκινήσω;</summary>
+              <p>Χρειάζεσαι έναν υπολογιστή Windows για το POSPal, τοπικό δίκτυο στο κατάστημα και κινητό ή tablet για την ομάδα. Εκτυπωτής χρειάζεται μόνο αν θέλεις έντυπα δελτία κουζίνας.</p>
+            </details>
+            <details>
+              <summary>Χρειάζομαι τεχνικό για εγκατάσταση;</summary>
+              <p>Το μοντέλο είναι αυτοεγκατάσταση με οδηγούς. Κατεβάζεις, ανοίγεις το POSPal και ελέγχεις τη σύνδεση βήμα βήμα. Για βοήθεια υπάρχει υποστήριξη, χωρίς υπόσχεση επιτόπιας εγκατάστασης.</p>
+            </details>
+            <details>
+              <summary>Πόσο κοστίζει και τι περιλαμβάνει;</summary>
+              <p>Η τιμή πρώτων χρηστών είναι €23,90 τον μήνα μετά από 30 ημέρες δωρεάν δοκιμή. Περιλαμβάνει τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού.</p>
+            </details>
+            <details>
+              <summary>Τι γίνεται όταν ακυρώσω;</summary>
+              <p>Σταματά η επόμενη ανανέωση. Η πρόσβαση συνεχίζεται μέχρι το τέλος της ήδη πληρωμένης περιόδου.</p>
+            </details>
+          </div>
+          <div class="faq-actions">
+            <p>Θέλεις να το δοκιμάσεις στο δικό σου κατάστημα;</p>
+            <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+            <a class="guide-link" href="/guides/">Δες τους οδηγούς εγκατάστασης</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="shell final-grid">
+        <div class="final-copy">
+          <p class="signal-label">Το επόμενο βήμα</p>
+          <h2 id="final-title">Κατέβασε το POSPal και δοκίμασέ το στη δική σου ροή.</h2>
+          <p class="final-lead">Ξεκινάς από τον υπολογιστή Windows του καταστήματος. Βάζεις τον κατάλογο, ελέγχεις τη σύνδεση και κάνεις δοκιμή πριν το βάλεις σε βάρδια.</p>
+        </div>
+        <div class="final-panel" aria-label="Σύνοψη λήψης POSPal">
+          <dl class="final-proof-list">
+            <div>
+              <dt>Δοκιμή</dt>
+              <dd>30 ημέρες δωρεάν</dd>
+            </div>
+            <div>
+              <dt>Έναρξη</dt>
+              <dd>Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας</dd>
+            </div>
+            <div>
+              <dt>Εγκατάσταση</dt>
+              <dd>Σε υπολογιστή Windows, με οδηγούς</dd>
+            </div>
+          </dl>
+          <a class="button button-primary" href="/download/">Κατέβασε για Windows</a>
+          <p class="final-next-step">Μετά το κατέβασμα, άνοιξε τον <a href="/guides/">οδηγό εγκατάστασης</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer home-footer">
+    <div class="shell home-footer-grid">
+      <div class="home-footer-brand">
+        <a class="home-footer-logo" href="/" aria-label="POSPal, αρχική">POSPal</a>
+        <p>Παραγγελιοληψία και ροή κουζίνας για Windows.</p>
+        <p class="home-footer-boundary">Δεν είναι ταμειακή ή φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα.</p>
+      </div>
+      <nav aria-labelledby="footer-product-title">
+        <h2 id="footer-product-title">Το POSPal</h2>
+        <a href="/systima-paraggeliolipsias.html">Πώς λειτουργεί</a>
+        <a href="/times.html">Τιμές</a>
+        <a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a>
+      </nav>
+      <nav aria-labelledby="footer-start-title">
+        <h2 id="footer-start-title">Ξεκίνα εδώ</h2>
+        <a href="/download/">Κατέβασε για Windows</a>
+        <a href="/guides/windows-installation/">Εγκατάσταση σε Windows</a>
+        <a href="/guides/">Όλοι οι οδηγοί</a>
+        <a href="/arthra/">Άρθρα</a>
+      </nav>
+      <nav aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Επικοινωνία</h2>
+        <a href="/sxetika-me-to-pospal/">Σχετικά με το POSPal</a>
+        <a href="mailto:support@pospal.gr">support@pospal.gr</a>
+      </nav>
+    </div>
+    <!-- POSPAL-LEGAL-LINKS:START -->
+    <nav class="shell home-footer-legal" aria-label="Νομικά κείμενα και απόρρητο">
+      <a href="/privacy/">Πολιτική απορρήτου</a>
+      <a href="/terms/">Όροι συνδρομής</a>
+      <a href="/cookies/">Cookies</a>
+      <a href="/cookies/#cookie-settings" data-pospal-cookie-settings="true">Ρυθμίσεις cookies</a>
+      <a href="/legal/">Νομικά κείμενα</a>
+    </nav>
+    <!-- POSPAL-LEGAL-LINKS:END -->
+  </footer>
+  <script>
+    document.querySelector('.home-footer [data-pospal-cookie-settings]').addEventListener('click', function (event) {
+      if (window.POSPALConsent && typeof window.POSPALConsent.openSettings === 'function') {
+        event.preventDefault();
+        window.POSPALConsent.openSettings();
+      }
+    });
+  </script>
+
+  <script>
+    (() => {
+      const mobile = matchMedia('(max-width:720px)');
+      const copy = document.querySelector('.hero-copy');
+      const offer = document.querySelector('.offer-panel');
+      const actions = copy.querySelector('.hero-actions');
+      const trial = copy.querySelector('.trial-line');
+      const grid = copy.parentElement;
+      function arrangeHero() {
+        if (mobile.matches) {
+          copy.insertBefore(offer, actions);
+          copy.insertBefore(trial, actions);
+        } else {
+          grid.appendChild(offer);
+          copy.appendChild(trial);
+        }
+      }
+      arrangeHero();
+      mobile.addEventListener('change', arrangeHero);
+    })();
+  </script>
+  <script src="/prototype/homepage-v3/motion.js" defer></script>
+<script>
+(() => {
+const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+const art=document.querySelector('.taste-art');
+const svg=document.querySelector('.taste-stream');
+const mobile=matchMedia('(max-width:1100px)');
+function fitStream(){svg.setAttribute('viewBox',mobile.matches?'0 0 390 260':'0 0 1400 330');svg.querySelector('path').setAttribute('d',mobile.matches?'M-70 200 C50 240 175 190 110 140 C20 70 10 40 55 38 C100 30 130 90 240 48':'M-90 190 C80 240 260 80 190 38 C90 -30 20 120 145 172 C260 228 430 282 740 276 S1090 80 1250 108');}fitStream();mobile.addEventListener('change',fitStream);
+const paper=document.querySelector('.taste-paper');
+const slot=document.querySelector('.taste-slot');
+const button=document.querySelector('.taste-replay');
+const orders=[
+ {table:6,items:[[1,'Χωριάτικη','Χωρίς κρεμμύδι'],[2,'Πατάτες',''],[1,'Τζατζίκι','']],words:['τραπέζι έξι','μία χωριάτικη','χωρίς κρεμμύδι','δύο πατάτες','ένα τζατζίκι','στο έξι']},
+ {table:12,items:[[2,'Μπιφτέκια','Το ένα χωρίς γαρνιτούρα'],[1,'Πράσινη σαλάτα','Σάλτσα χωριστά']],words:['τραπέζι δώδεκα','δύο μπιφτέκια','το ένα σκέτο','μία πράσινη','σάλτσα χωριστά','στο δώδεκα']},
+ {table:3,items:[[1,'Κλαμπ σάντουιτς','Χωρίς ντομάτα'],[2,'Τοστ','Τυρί και γαλοπούλα'],[1,'Πατάτες','']],words:['στο τρία','ένα κλαμπ','χωρίς ντομάτα','δύο τοστ','τυρί γαλοπούλα','και πατάτες']},
+ {table:8,items:[[2,'Σουβλάκια κοτόπουλο',''],[1,'Χωριάτικη','Χωρίς φέτα'],[2,'Πίτες','Αλάδωτες']],words:['τραπέζι οκτώ','δύο κοτόπουλο','μία χωριάτικη','χωρίς φέτα','δύο πίτες','αλάδωτες']}
+];
+svg.querySelectorAll('text').forEach(t=>t.remove());
+const paths=Array.from({length:6},()=>{const t=document.createElementNS('http://www.w3.org/2000/svg','text');const p=document.createElementNS(t.namespaceURI,'textPath');p.setAttribute('href','#taste-path');t.append(p);svg.append(t);return p;});
+let elapsed=0,last=null,frame=null,visible=false,paused=false,current=-1;let paperMotion=null;
+const duration=10000;
+function setOrder(index){current=index;const o=orders[index];paper.innerHTML='<small>ΔΕΛΤΙΟ ΚΟΥΖΙΝΑΣ</small><strong>Τραπέζι '+o.table+'</strong>'+o.items.map(([q,name,note])=>'<div class="taste-item"><b>'+q+'</b><span>'+name+(note?'<em>'+note+'</em>':'')+'</span></div>').join('')+'<small>ΕΝΔΕΙΚΤΙΚΗ ΠΑΡΑΓΓΕΛΙΑ</small>';paths.forEach((p,i)=>p.textContent=o.words[i]);
+ paperMotion?.cancel();paper.style.clipPath='none';
+ paperMotion=paper.animate([
+ {transform:'translate3d(0,-102%,0)',opacity:1,offset:0},
+ {transform:'translate3d(0,-102%,0)',opacity:1,offset:.10},
+ {transform:'translate3d(0,0,0)',opacity:1,offset:.30},
+ {transform:'translate3d(0,0,0)',opacity:1,offset:.78},
+ {transform:'translate3d(0,2px,0)',opacity:1,offset:.80},
+ {transform:'translate3d(4%,110%,0) rotate(2deg)',opacity:0,offset:.97},
+ {transform:'translate3d(4%,110%,0) rotate(2deg)',opacity:0,offset:1}
+ ],{duration,fill:'both',easing:'linear'});
+ paperMotion.currentTime=elapsed%duration;
+ if(paused||!visible||document.hidden||reduce.matches)paperMotion.pause();
+ }
+const clamp=x=>Math.max(0,Math.min(1,x));
+function render(){const index=Math.floor(elapsed/duration)%orders.length;const t=(elapsed%duration)/duration;if(index!==current)setOrder(index);
+ paths.forEach((p,i)=>{const progress=(t*1.48+i*.14)%1; p.setAttribute('startOffset',(-14+progress*119)+'%');p.parentElement.style.opacity=((mobile.matches&&i%2?0:1)*clamp(progress/.12)*clamp((1-progress)/.12)*.52).toFixed(3);});
+
+}
+function tick(now){if(last!==null)elapsed+=Math.min(now-last,80);last=now;render();frame=requestAnimationFrame(tick);}
+function sync(){cancelAnimationFrame(frame);frame=null;last=null;paperMotion?.pause();if(reduce.matches){setOrder(0);paperMotion?.cancel();paper.style.transform='none';paper.style.clipPath='none';paper.style.opacity=1;slot.style.transform='none';paths.forEach((p,i)=>{p.setAttribute('startOffset',(i*14)+'%');p.parentElement.style.opacity='.4';});return;}if(visible&&!paused&&!document.hidden){paperMotion?.play();frame=requestAnimationFrame(tick);}}
+button.setAttribute('aria-pressed','false');
+button.addEventListener('click',()=>{paused=!paused;button.textContent=paused?'Συνέχεια κίνησης':'Παύση κίνησης';button.setAttribute('aria-pressed',String(paused));sync();});
+new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.15}).observe(art);
+document.addEventListener('visibilitychange',sync);reduce.addEventListener('change',sync);
+setOrder(0);render();sync();
+
+})();
+</script>
+</div>
+<div class="homepage-mobile">
+  <a class="skip" href="#mobile-main">Μετάβαση στο περιεχόμενο</a>
   <header class="header">
     <div class="shell header-inner">
       <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-mark-64.png" width="32" height="32" alt=""><span>POS<b>Pal</b></span></a>
@@ -30,11 +597,11 @@
       <details class="menu"><summary>Μενού</summary><nav aria-label="Κύρια πλοήγηση"><a href="#workflow">Πώς λειτουργεί</a><a href="#requirements">Τι χρειάζεσαι</a><a href="#pricing">Τιμές</a><a href="/guides/">Οδηγοί</a></nav></details>
     </div>
   </header>
-  <main id="main">
-    <section class="opening shell" aria-labelledby="hero-title">
+  <main id="mobile-main">
+    <section class="opening shell" aria-labelledby="mobile-hero-title">
       <div class="opening-grid">
         <div class="hero-copy">
-          <h1 id="hero-title">Παραγγελιοληψία για εστίαση. <span>Από το κινητό στην κουζίνα.</span></h1>
+          <h1 id="mobile-hero-title">Παραγγελιοληψία για εστίαση. <span>Από το κινητό στην κουζίνα.</span></h1>
           <p class="lead">Το POSPal στον υπολογιστή Windows. Παραγγελίες από κατάλληλα κινητά ή tablet, με πρόγραμμα περιήγησης στο ίδιο τοπικό δίκτυο.</p>
           <div class="offer">
             <p class="compact-price"><strong>23,90 €<small> /μήνα</small></strong><small>Τελική τιμή. Δεν προστίθεται ΦΠΑ.</small></p>
@@ -73,12 +640,12 @@
       </dl>
       <aside class="boundary"><h3>Δίπλα στο φορολογικό σου σύστημα.</h3><p>Το POSPal οργανώνει την παραγγελιοληψία και τη ροή κουζίνας. Δεν εκδίδει αποδείξεις. Δεν είναι ταμειακή ή φορολογικό POS και δεν τα αντικαθιστά.</p></aside>
     </div></section>
-    <section class="qr section" aria-labelledby="qr-title"><div class="shell qr-grid">
-      <div><h2 id="qr-title">Και το QR μενού; Μέσα στην ίδια τιμή.</h2><p>Προϊόντα και εμφάνιση από το POSPal. Ο πελάτης ανοίγει το δημοσιευμένο μενού στο κινητό του, χωρίς ξεχωριστή χρέωση για σένα.</p><a class="text-link" href="https://menu.pospal.gr/s/pospal" target="_blank" rel="noopener">Άνοιξε το δείγμα μενού (νέα καρτέλα)</a></div>
+    <section class="qr section" aria-labelledby="mobile-qr-title"><div class="shell qr-grid">
+      <div><h2 id="mobile-qr-title">Και το QR μενού; Μέσα στην ίδια τιμή.</h2><p>Προϊόντα και εμφάνιση από το POSPal. Ο πελάτης ανοίγει το δημοσιευμένο μενού στο κινητό του, χωρίς ξεχωριστή χρέωση για σένα.</p><a class="text-link" href="https://menu.pospal.gr/s/pospal" target="_blank" rel="noopener">Άνοιξε το δείγμα μενού (νέα καρτέλα)</a></div>
       <figure class="qr-preview"><a href="https://menu.pospal.gr/s/pospal" target="_blank" rel="noopener" aria-label="Άνοιξε το πραγματικό δείγμα QR μενού σε νέα καρτέλα"><img src="/static/qr-menu-live-preview.png" width="430" height="932" loading="lazy" alt="Δημοσιευμένο QR μενού POSPal με κατηγορίες και προϊόντα"></a><figcaption>Δες το πραγματικό δείγμα στο κινητό σου.</figcaption></figure>
     </div></section>
-    <section class="section" id="pricing" aria-labelledby="pricing-title"><div class="shell">
-      <div class="section-intro"><h2 id="pricing-title">Μία συνδρομή. Χωρίς λογαριασμό ανά PDA.</h2></div>
+    <section class="section" id="pricing" aria-labelledby="mobile-pricing-title"><div class="shell">
+      <div class="section-intro"><h2 id="mobile-pricing-title">Μία συνδρομή. Χωρίς λογαριασμό ανά PDA.</h2></div>
       <div class="price-layout">
         <div class="price-block"><p class="price-number">23,90 € <span>/μήνα</span></p><p>Τελική τιμή. Δεν προστίθεται ΦΠΑ.</p><p class="small">Ειδική τιμή για τους πρώτους χρήστες. Την κρατάς όσο η συνδρομή παραμένει ενεργή.</p><a class="button" href="/download/">Ξεκίνα 30 ημέρες δωρεάν</a><p class="small">Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</p></div>
         <div><dl class="price-ledger"><div><dt>Περιλαμβάνονται</dt><dd>Τραπέζια, απλή λειτουργία, ροή κουζίνας και QR μενού.</dd></div><div><dt>Εγκατάσταση και συντήρηση</dt><dd>Χωρίς ξεχωριστή χρέωση. Εγκαθιστάς το πρόγραμμα με τους οδηγούς.</dd></div><div><dt>Ακύρωση όποτε θέλεις</dt><dd>Σταματά η επόμενη ανανέωση. Η πρόσβαση συνεχίζεται έως το τέλος της πληρωμένης περιόδου.</dd></div></dl><p class="price-note">Το POSPal δεν είναι ταμειακή ή φορολογικό POS. <a href="/times.html">Όλες οι πληροφορίες τιμολόγησης</a>.</p></div>
@@ -89,8 +656,8 @@
       <ol class="steps"><li><div><h3>Έλεγξε τον εξοπλισμό</h3><p>Windows, συσκευές της ομάδας και τοπικό δίκτυο.</p><a href="#requirements">Δες τις προϋποθέσεις</a></div></li><li><div><h3>Εγκατέστησε το POSPal</h3><p>Κατέβασε το αρχείο στον υπολογιστή Windows.</p><a href="/guides/windows-installation/">Άνοιξε τον οδηγό εγκατάστασης</a></div></li><li><div><h3>Πέρασε το πρώτο μενού</h3><p>Πρόσθεσε προϊόντα και έλεγξε το QR μενού.</p><a href="/guides/qr-menu/">Οδηγός QR μενού</a></div></li><li><div><h3>Στείλε μια δοκιμαστική παραγγελία</h3><p>Έλεγξε συσκευή, Windows και κουζίνα μαζί. Αν χρησιμοποιείς εκτυπωτή, κάνε και δοκιμαστική εκτύπωση.</p></div></li></ol>
       <p class="support">Αν κολλήσεις: <a href="mailto:support@pospal.gr">support@pospal.gr</a>. Βοήθεια από απόσταση, χωρίς επιτόπια εγκατάσταση.</p>
     </div></section>
-    <section class="faq section" aria-labelledby="faq-title"><div class="shell">
-      <div class="section-intro"><h2 id="faq-title">Πριν το κατεβάσεις.</h2></div>
+    <section class="faq section" aria-labelledby="mobile-faq-title"><div class="shell">
+      <div class="section-intro"><h2 id="mobile-faq-title">Πριν το κατεβάσεις.</h2></div>
       <details><summary>Τι είναι το PDA σερβιτόρου;</summary><p>Στην εστίαση, PDA λέγεται συνήθως η συσκευή που χρησιμοποιεί ο σερβιτόρος για να πάρει παραγγελία ασύρματα. Στο POSPal μπορεί να είναι κατάλληλο κινητό ή tablet με πρόγραμμα περιήγησης και πρόσβαση στον υπολογιστή Windows μέσω του τοπικού δικτύου.</p></details>
       <details><summary>Πώς λειτουργεί η παραγγελιοληψία;</summary><p>Περνάς την παραγγελία από τραπέζι ή από απλή λειτουργία, τη βλέπεις στη ροή κουζίνας και διαχειρίζεσαι τον κατάλογο του QR μενού από το POSPal. Αν μια ήδη ανοιχτή συσκευή χάσει τη σύνδεση, η εκκρεμής παραγγελία κρατιέται προσωρινά και συγχρονίζεται όταν επανέλθει. Δεν φτάνει στην κουζίνα όσο η συσκευή είναι αποσυνδεδεμένη.</p></details>
       <details><summary>Είναι ταμειακή ή φορολογικό POS;</summary><p>Όχι. Το POSPal δεν εκδίδει αποδείξεις και δεν αντικαθιστά την ταμειακή ή το φορολογικό POS. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα του καταστήματος.</p></details>
@@ -108,5 +675,6 @@
     <nav class="footer-contact" aria-label="Επικοινωνία"><h2>Επικοινωνία</h2><a href="/sxetika-me-to-pospal/">Σχετικά με το POSPal</a><a href="mailto:support@pospal.gr">support@pospal.gr</a></nav>
   </div><nav class="legal" aria-label="Νομικά κείμενα"><a href="/privacy/">Πολιτική απορρήτου</a><a href="/terms/">Όροι συνδρομής</a><a href="/cookies/">Cookies</a><a href="/cookies/#cookie-settings" data-pospal-cookie-settings="true">Ρυθμίσεις cookies</a><a href="/legal/">Νομικά κείμενα</a></nav></div></footer>
   <dialog class="image-dialog" aria-labelledby="image-title"><div class="dialog-head"><h2 id="image-title">Οθόνη POSPal</h2><button type="button" autofocus>Κλείσιμο</button></div><img class="dialog-image" alt=""></dialog>
+</div>
 </body>
 </html>
