@@ -15,6 +15,7 @@
   var gaLoaded = false;
   var gaConfigured = false;
   var clarityLoaded = false;
+  var clarityStopped = false;
   var settingsInjected = false;
   var initializationPromise = null;
   var keydownBound = false;
@@ -294,44 +295,36 @@
   }
 
   function ensureClarityLoaded() {
-    if (clarityLoaded) {
-      window.clarity("consentv2", {
-        ad_Storage: getConsentValue(consentState.marketing),
-        analytics_Storage: "granted",
-      });
-      return;
-    }
+    if (!clarityLoaded) {
+      window.clarity =
+        window.clarity ||
+        function () {
+          (window.clarity.q = window.clarity.q || []).push(arguments);
+        };
 
-    var existing = document.getElementById(CLARITY_SCRIPT_ID);
-    if (existing) {
+      if (!document.getElementById(CLARITY_SCRIPT_ID)) {
+        var script = document.createElement("script");
+        script.id = CLARITY_SCRIPT_ID;
+        script.async = true;
+        script.src = "https://www.clarity.ms/tag/" + CLARITY_ID;
+        document.head.appendChild(script);
+      }
       clarityLoaded = true;
-      window.clarity("consentv2", {
-        ad_Storage: getConsentValue(consentState.marketing),
-        analytics_Storage: "granted",
-      });
-      return;
     }
 
-    window.clarity =
-      window.clarity ||
-      function () {
-        (window.clarity.q = window.clarity.q || []).push(arguments);
-      };
-
-    var script = document.createElement("script");
-    script.id = CLARITY_SCRIPT_ID;
-    script.async = true;
-    script.src = "https://www.clarity.ms/tag/" + CLARITY_ID;
-    document.head.appendChild(script);
-    clarityLoaded = true;
     window.clarity("consentv2", {
       ad_Storage: getConsentValue(consentState.marketing),
       analytics_Storage: "granted",
     });
+    if (clarityStopped) {
+      // A stopped SDK queues consent calls until an explicit start processes them.
+      window.clarity("start");
+      clarityStopped = false;
+    }
   }
 
   function stopClarityIfPossible() {
-    if (typeof window.clarity !== "function") {
+    if (typeof window.clarity !== "function" || clarityStopped) {
       return;
     }
 
@@ -346,6 +339,7 @@
 
     try {
       window.clarity("stop");
+      clarityStopped = true;
     } catch (error) {
       // no-op
     }
@@ -749,11 +743,17 @@
   function applyConsentState(nextState) {
     consentState = normalizeConsentState(nextState);
     applyTrackerGating();
+    window.dispatchEvent(new window.CustomEvent("pospal:consentchange", {
+      detail: normalizeConsentState(consentState),
+    }));
     syncPanelInputs();
   }
 
   function exposeGlobalController() {
     window.POSPALConsent = {
+      getState: function () {
+        return normalizeConsentState(consentState);
+      },
       openSettings: function () {
         onDomReady(function () {
           ensureInitialized().then(function () {

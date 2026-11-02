@@ -1,5 +1,5 @@
 ﻿(function () {
-  var EVENT_VERSION = "v1.1";
+  var EVENT_VERSION = "v1.2";
 
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -77,12 +77,21 @@
     };
   }
 
+  function isMeasurementAllowed() {
+    return !!(
+      window.POSPALConsent &&
+      typeof window.POSPALConsent.getState === "function" &&
+      window.POSPALConsent.getState().measurement
+    );
+  }
+
   function sendEvent(name, params) {
-    if (typeof window.gtag !== "function") {
-      return;
+    if (!isMeasurementAllowed() || typeof window.gtag !== "function") {
+      return false;
     }
 
     window.gtag("event", name, params);
+    return true;
   }
 
   function classifyDownload(pathname, elementId) {
@@ -124,7 +133,7 @@
       return "installer_manual";
     }
 
-    if (textMatch.indexOf("Î´Î¿ÎºÎ¹Î¼") !== -1 || textMatch.indexOf("trial") !== -1) {
+    if (textMatch.indexOf("δοκιμ") !== -1 || textMatch.indexOf("trial") !== -1) {
       return "trial_copy_cta";
     }
 
@@ -238,21 +247,22 @@
     );
   }
 
-  function findPricingTarget() {
+  function findPricingTargets() {
     var directSelectors = [
       "#pricing-table",
       "#pricing",
       "section[id*='pricing']",
       "div[id*='pricing']",
+      ".pricing-section",
     ];
+    var targets = Array.prototype.slice.call(
+      document.querySelectorAll(directSelectors.join(","))
+    );
     var i;
     var el;
 
-    for (i = 0; i < directSelectors.length; i += 1) {
-      el = document.querySelector(directSelectors[i]);
-      if (el) {
-        return el;
-      }
+    if (targets.length) {
+      return targets;
     }
 
     var headings = document.querySelectorAll("h1, h2, h3");
@@ -260,19 +270,19 @@
       var heading = headings[i];
       var headingMatch = normalizeForMatch(heading.textContent || "");
       if (
-        headingMatch.indexOf("Ï„Î¹Î¼") === -1 &&
+        headingMatch.indexOf("τιμ") === -1 &&
         headingMatch.indexOf("pricing") === -1
       ) {
         continue;
       }
 
       el = heading.closest("section, article, main, div");
-      if (el) {
-        return el;
+      if (el && targets.indexOf(el) === -1) {
+        targets.push(el);
       }
     }
 
-    return null;
+    return targets;
   }
 
   function setupPricingViewTracking() {
@@ -280,8 +290,8 @@
       return;
     }
 
-    var target = findPricingTarget();
-    if (!target) {
+    var targets = findPricingTargets();
+    if (!targets.length) {
       return;
     }
 
@@ -290,20 +300,22 @@
       function (entries) {
         var i;
         for (i = 0; i < entries.length; i += 1) {
-          if (sent || !entries[i].isIntersecting) {
+          if (sent || !entries[i].isIntersecting || !isMeasurementAllowed()) {
             continue;
           }
 
-          sent = true;
-          observer.disconnect();
-
+          var target = entries[i].target;
           var heading = target.querySelector("h1, h2, h3");
           var payload = buildBasePayload();
           payload.section_id = target.id || "";
           payload.section_heading = normalizeText(
             heading ? heading.textContent || "" : ""
           ).slice(0, 200);
-          sendEvent("pricing_view", payload);
+          if (sendEvent("pricing_view", payload)) {
+            sent = true;
+            observer.disconnect();
+            window.removeEventListener("pospal:consentchange", updateObservation);
+          }
           return;
         }
       },
@@ -312,7 +324,18 @@
       }
     );
 
-    observer.observe(target);
+    function updateObservation() {
+      observer.disconnect();
+      if (!sent && isMeasurementAllowed()) {
+        // Re-observe current visibility after consent; never replay an earlier view.
+        targets.forEach(function (target) {
+          observer.observe(target);
+        });
+      }
+    }
+
+    window.addEventListener("pospal:consentchange", updateObservation);
+    updateObservation();
   }
 
   function setupFaqExpandTracking() {
@@ -323,6 +346,9 @@
     document.addEventListener(
       "click",
       function (event) {
+        if (!isMeasurementAllowed()) {
+          return;
+        }
         var target = event.target;
         if (!target || typeof target.closest !== "function") {
           return;
