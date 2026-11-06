@@ -115,3 +115,6 @@ The user explicitly authorized replacing `index.html` with the restored `prototy
 
 ## Approved desktop restoration — 2026-10-09
 The user explicitly authorized restoring the pre-promotion desktop homepage unchanged while retaining the current mobile homepage. `index.html` now displays the desktop design from commit `03446b9` (also preserved in `backups/homepage-before-mobile-v4.html.bak`) above 720px and the mobile V4 design at 720px and below. Each variant's styles apply only at its viewport size. This is a scoped exception to the homepage lock; the other locked pages and shared assets remain protected. No push or deployment was authorized.
+
+## Approved mobile V5 publication — 2026-11-06
+After reviewing the mobile-only V5 replacement, the user explicitly authorized promoting it, pushing to GitHub and following the Pages action through publication. This is a one-time exception to the `index.html` lock for its mobile variant at 720px and below. Preserve the desktop markup, styles and behavior above 720px, and keep the download and guide pages locked. The promoted mobile variant uses dedicated `static/css/homepage-mobile-v5.css` and `static/js/homepage-mobile-v5.js`. Unrelated local changes and generated review artifacts are outside this publication.
