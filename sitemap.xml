@@ -116,6 +116,12 @@
   </url>
   <url>
     <loc>https://pospal.gr/arthra/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://pospal.gr/pos-na-dialexeis-paraggeliolipsia.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

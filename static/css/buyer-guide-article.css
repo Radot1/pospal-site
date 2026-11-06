@@ -1,0 +1,157 @@
+.buyer-guide-page .site-header {
+  color: var(--pda-ink);
+  background: color-mix(in srgb, var(--pda-canvas) 96%, transparent);
+  border-bottom-color: var(--pda-line);
+}
+
+.buyer-guide-page .brand-bar {
+  border-bottom-color: var(--pda-line);
+}
+
+.buyer-guide-page .brand,
+.buyer-guide-page .header-download,
+.buyer-guide-page .section-bar a {
+  color: var(--pda-ink);
+}
+
+.buyer-guide-page .brand-bar > a:last-child,
+.buyer-guide-page .brand b,
+.buyer-guide-page .section-bar a:hover,
+.buyer-guide-page .section-bar a:focus-visible {
+  color: var(--pda-green-dark);
+}
+
+.buyer-guide-page .article-header h1 {
+  font-size: clamp(2.5rem, 4.3vw, 3.25rem);
+}
+
+.buyer-guide-page .dek {
+  font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
+}
+
+.buyer-guide-page .buyer-guide-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font: 400 .875rem/1.5 var(--editorial-sans);
+}
+
+.buyer-guide-page .buyer-guide-breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: var(--pda-green-dark);
+  text-decoration: underline;
+  text-underline-offset: .14em;
+}
+
+.buyer-guide-page .byline strong {
+  font-size: .875rem;
+  letter-spacing: normal;
+}
+
+.buyer-guide-page .byline span,
+.buyer-guide-page .byline small {
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+.buyer-guide-page .article-body {
+  margin-top: 18px;
+  padding-bottom: 80px;
+  font-size: 1.1875rem;
+  overflow-wrap: anywhere;
+}
+
+.buyer-guide-page .article-body .intro {
+  font-size: 1.3125rem;
+}
+
+.buyer-guide-page .article-body h2 {
+  scroll-margin-top: 130px;
+  font-size: clamp(1.875rem, 3.2vw, 2.625rem);
+}
+
+.buyer-guide-page .buyer-guide-table {
+  width: 100%;
+  margin-bottom: 28px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.buyer-guide-page .buyer-guide-table th,
+.buyer-guide-page .buyer-guide-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--editorial-line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.buyer-guide-page .buyer-guide-table thead {
+  background: var(--editorial-canvas);
+  border-top: 2px solid var(--editorial-ink);
+  font-family: var(--editorial-sans);
+}
+
+.buyer-guide-page .buyer-guide-table th:first-child {
+  width: 44%;
+}
+
+.buyer-guide-page .buyer-guide-table tbody th {
+  font-weight: 400;
+}
+
+.buyer-guide-page .buyer-guide-download {
+  color: var(--editorial-ink);
+  font-family: var(--editorial-sans);
+  text-align: center;
+  text-decoration: none;
+}
+
+.buyer-guide-page a:focus-visible,
+.buyer-guide-page button:focus-visible {
+  outline: 3px solid var(--pda-green-dark);
+  outline-offset: 4px;
+}
+
+.buyer-guide-page .site-footer a:focus-visible {
+  outline-color: var(--editorial-green);
+}
+
+.buyer-guide-page .pospal-legal-links--sitewide {
+  border-top-color: color-mix(in srgb, var(--editorial-white) 18%, transparent);
+}
+
+.buyer-guide-page ::selection {
+  color: var(--editorial-ink);
+  background: var(--editorial-green);
+}
+
+@media (max-width: 700px) {
+  .buyer-guide-page .article-header h1 {
+    font-size: clamp(1.875rem, 8.8vw, 2.625rem);
+  }
+
+  .buyer-guide-page .article-body {
+    font-size: 1.125rem;
+  }
+
+  .buyer-guide-page .article-body .intro {
+    font-size: 1.1875rem;
+  }
+
+  .buyer-guide-page .buyer-guide-table {
+    font-size: 1rem;
+  }
+
+  .buyer-guide-page .buyer-guide-table th,
+  .buyer-guide-page .buyer-guide-table td {
+    padding: 12px 10px;
+  }
+}
