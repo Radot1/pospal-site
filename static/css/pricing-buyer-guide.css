@@ -123,6 +123,14 @@ html { scroll-behavior: auto; }
 .pricing-page .price-retention, .pricing-page .price-terms { margin: 0; font-size: 14px; }
 .pricing-page .price-boundary { max-width: 78ch; margin: 20px 0 0; font-size: 14px; color: var(--seo-ink-soft); }
 .pricing-page .price-faq { max-width: 1040px; padding-bottom: 40px; }
+.pricing-page .price-setup { padding-bottom: 40px; }
+.pricing-page .price-setup h2 { font-size: 27px; margin-bottom: 18px; letter-spacing: -.025em; }
+.pricing-page .price-setup > p { max-width: 78ch; color: var(--seo-ink-soft); }
+.pricing-page .price-setup table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.pricing-page .price-setup th, .pricing-page .price-setup td { padding: 16px 20px; border-bottom: 1px solid var(--seo-line); text-align: left; vertical-align: top; overflow-wrap: break-word; }
+.pricing-page .price-setup th:first-child { width: 28%; padding-left: 0; }
+.pricing-page .price-setup td { padding-right: 0; }
+.pricing-page .price-setup a { display: inline-flex; align-items: center; min-height: 44px; }
 .pricing-page .price-faq h2 { font-size: 27px; margin-bottom: 18px; letter-spacing: -.025em; }
 .pricing-page .price-final { display: flex; justify-content: space-between; align-items: center; gap: 28px; border-top: 1px solid var(--seo-line); padding-block: 30px; }
 .pricing-page .price-final h2 { margin-bottom: 8px; font-size: 25px; line-height: 1.25; letter-spacing: -.025em; }
@@ -153,6 +161,11 @@ html { scroll-behavior: auto; }
   .pricing-page .price-final { flex-direction: column; align-items: flex-start; gap: 20px; padding-block: 26px; }
   .pricing-page .price-final h2 { font-size: 23px; }
   .pricing-page .price-faq { padding-bottom: 30px; }
+  .pricing-page .price-setup { padding-bottom: 30px; }
+  .pricing-page .price-setup h2 { font-size: 23px; }
+  .pricing-page .price-setup table { font-size: 14px; }
+  .pricing-page .price-setup th, .pricing-page .price-setup td { padding: 14px 12px; }
+  .pricing-page .price-setup th:first-child { width: 34%; }
 }
 @media (max-width: 360px) {
   .pricing-page .price-amount, .pricing-page .price-includes { padding: 20px; }
