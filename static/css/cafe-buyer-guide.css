@@ -1,0 +1,7 @@
+/* Only the new buyer-information paragraphs on the café page. */
+body.seo-page .cafe-buyer-note { margin-top: 0.85rem; }
+body.seo-page .cafe-buyer-note a,
+body.seo-page .cafe-setup-intro a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
