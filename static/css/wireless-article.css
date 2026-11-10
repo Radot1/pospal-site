@@ -28,3 +28,13 @@
   color: #0f7a38;
   text-underline-offset: 3px;
 }
+
+.wireless-article-page .wireless-workflow-proof { margin-block: 24px; }
+.wireless-article-page .proof-stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.wireless-article-page .proof-stages figure { margin: 0; }
+.wireless-article-page .proof-stages img { display: block; width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
+.wireless-article-page .proof-stages figcaption { margin-top: 12px; color: #56625a; font: 14px/1.6 var(--editorial-sans); }
+.wireless-article-page .proof-conditions { font: 14px/1.6 var(--editorial-sans); }
+@media (max-width: 620px) {
+  .wireless-article-page .proof-stages { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
+}
