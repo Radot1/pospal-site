@@ -1,0 +1,89 @@
+/* Included only by the articles and their linked landing pages. */
+.article-site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  justify-self: end;
+  font: 700 12px/1.4 Commissioner, "Segoe UI", sans-serif;
+}
+.article-site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: #146532;
+  text-decoration: none;
+}
+.article-breadcrumbs {
+  margin: 0 0 20px;
+  color: #146532;
+  font: 400 14px/1.4 Commissioner, "Segoe UI", sans-serif;
+}
+.article-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.article-breadcrumbs li { display: flex; align-items: center; gap: 10px; }
+.article-breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.article-breadcrumbs span { color: #526057; }
+.article-related {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--seo-line, #a6b3aa);
+  color: var(--seo-ink, #102319);
+  font: 400 16px/1.5 Commissioner, "Segoe UI", sans-serif;
+}
+.article-related h2 { margin: 0 0 12px; font-size: 22px; }
+.article-related ul { margin: 0 0 12px; padding: 0; list-style: none; }
+.article-related a, .seo-page .article-related a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding-block: 8px;
+  color: var(--seo-green-dark, #146532);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.article-related .article-all { width: fit-content; font-weight: 700; }
+.article-site-nav a:hover, .article-breadcrumbs a:hover { color: #07120b; }
+.article-related a:hover { color: var(--seo-ink, #07120b); }
+.article-site-nav a:focus-visible, .article-breadcrumbs a:focus-visible, .article-related a:focus-visible {
+  outline: 3px solid #146532;
+  outline-offset: 3px;
+}
+.article-related a:focus-visible { outline-color: var(--seo-green-dark, #146532); }
+/* Keep the existing commercial-page menu available on phones as well. */
+@media (max-width: 1000px) {
+  .seo-header .seo-header-inner { flex-wrap: wrap; gap: 0 12px; padding-block: 8px; }
+  .seo-header .seo-nav {
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+    justify-content: center;
+    gap: 0 18px;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+  }
+  .seo-header .seo-header-cta { margin-left: auto; }
+}
+@media (max-width: 360px) {
+  .article-site-nav { gap: 6px; }
+  .article-breadcrumbs { font-size: 13px; }
+}

@@ -75,6 +75,7 @@
 }
   </script>
   <link rel="stylesheet" href="/static/css/legal-links.css">
+  <link rel="stylesheet" href="/static/css/article-navigation.css?v=20261111">
 </head>
 <body class="pda-acquisition-page pda-editorial-page">
   <a class="pda-skip" href="#main-content">Μετάβαση στο άρθρο</a>
@@ -82,14 +83,14 @@
     <div class="brand-bar">
       <a class="header-download" href="/download/">ΚΑΤΕΒΑΣΕ</a>
       <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/app_icon.ico" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a>
-      <a href="/times.html">ΤΙΜΕΣ</a>
+      <nav class="article-site-nav" aria-label="Κύρια πλοήγηση"><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a></nav>
     </div>
     <nav class="section-bar" aria-label="Ενότητες άρθρου"><a href="#route-title">ΤΑ 3 ΒΗΜΑΤΑ</a><a href="#devices">Η ΣΥΣΚΕΥΗ</a><a href="#fit-title">ΕΞΟΠΛΙΣΜΟΣ</a><a href="#faq-title">ΕΡΩΤΗΣΕΙΣ</a></nav>
   </header>
   <main id="main-content" tabindex="-1">
     <article aria-labelledby="pda-flow-title">
     <header class="article-header">
-      <p class="category"><a href="/arthra/">ΑΡΘΡΑ</a> / PDA ΚΑΙ ΚΙΝΗΤΑ / ΠΑΡΑΓΓΕΛΙΟΛΗΨΙΑ</p>
+      <nav class="article-breadcrumbs" aria-label="Διαδρομή σελίδας"><ol><li><a href="/">Αρχική</a></li><li><span aria-hidden="true">›</span><a href="/arthra/">Άρθρα</a></li><li><span aria-hidden="true">›</span><a href="/arthra/?category=pda">PDA και κινητά</a></li></ol></nav>
       <h1 id="pda-flow-title">PDA πώς λειτουργεί στην πράξη</h1>
       <p class="dek">Από το κινητό του σερβιτόρου, μέσα από το τοπικό δίκτυο, στον υπολογιστή με το POSPal. Τα τρία βήματα μιας παραγγελίας.</p>
       <div class="byline">
@@ -151,10 +152,19 @@
       </section>
     </div>
     </article>
+
+    <nav class="article-related" aria-label="Σχετικά άρθρα">
+      <h2>Διάβασε επίσης</h2>
+      <ul>
+        <li><a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία στο κατάστημα</a></li>
+        <li><a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας για εστίαση</a></li>
+      </ul>
+      <a class="article-all" href="/arthra/">Όλα τα άρθρα <span aria-hidden="true">→</span></a>
+    </nav>
   </main>
   <footer class="site-footer">
     <div><p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
-      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/arthra/">Άρθρα</a><a href="/">Αρχική</a><a href="/guides/">Οδηγοί</a></nav>
+      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε</a></nav>
     </div>
     <!-- POSPAL-LEGAL-LINKS:START -->
     <p class="pospal-legal-links pospal-legal-links--sitewide">POSPal · ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ ΡΟΜΠΕΡΤΟΣ · ΓΕΜΗ 195335742000</p>

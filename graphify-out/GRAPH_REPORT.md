@@ -1,5 +1,9 @@
 # Graph Report - pospal-site  (2026-09-03)
 
+## Internal navigation refresh — 2026-11-11
+
+Updated the curated graph with the mobile V5 homepage entry links, all nine articles-index destinations, six category breadcrumbs, reciprocal home/articles links, related-reading pairs, isolated navigation stylesheet, URL-backed filters and browser verification script. Article categories use `/arthra/?category=pda`, `paraggeliolipsia` and `kostos`; search uses `q`. The original article URLs remain unchanged. Earlier graph corpus figures below describe the historical full extraction.
+
 ## Corpus Check
 - 80 files · ~169,506 words
 - Verdict: corpus is large enough that graph structure adds value.

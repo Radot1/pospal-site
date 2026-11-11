@@ -252,7 +252,8 @@
         "confidence_score": 0.85,
         "source_file": "static/img/pospal-desktop-order.webp"
       }
-    ]
+    ],
+    "navigation_updated": "2026-11-11"
   },
   "nodes": [
     {
@@ -17233,6 +17234,59 @@
       "label": "prototype/homepage-v3/styles.css",
       "source_file": "prototype/homepage-v3/styles.css",
       "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_mobile_v5_homepage",
+      "label": "Mobile V5 Homepage",
+      "file_type": "document",
+      "source_file": "index.html",
+      "confidence": "EXTRACTED",
+      "url": "/",
+      "viewport": "at or below 720px"
+    },
+    {
+      "id": "pospal_cafe_buyer_article",
+      "label": "Cafe Programme Selection Article",
+      "file_type": "document",
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_article_navigation",
+      "label": "Article Navigation Styles",
+      "file_type": "code",
+      "source_file": "static/css/article-navigation.css",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_article_filters",
+      "label": "Shareable Article Category and Search Filters",
+      "file_type": "code",
+      "source_file": "static/js/articles-hub.js",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_article_navigation_check",
+      "label": "Article Navigation Browser Verification",
+      "file_type": "code",
+      "source_file": ".github/scripts/verify-article-navigation.mjs",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_article_category_paraggeliolipsia",
+      "label": "Παραγγελιοληψία",
+      "file_type": "document",
+      "source_file": "arthra/index.html",
+      "confidence": "EXTRACTED",
+      "url": "/arthra/?category=paraggeliolipsia"
+    },
+    {
+      "id": "pospal_article_category_pda",
+      "label": "PDA και κινητά",
+      "file_type": "document",
+      "source_file": "arthra/index.html",
+      "confidence": "EXTRACTED",
+      "url": "/arthra/?category=pda"
     }
   ],
   "links": [
@@ -34250,6 +34304,591 @@
       "confidence": "EXTRACTED",
       "source_file": "index.html",
       "weight": 1.0
+    },
+    {
+      "source": "pospal_mobile_v5_homepage",
+      "target": "pospal_articles_hub",
+      "relation": "menu_and_footer_link",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "index.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_link",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pospal_article_filters",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pospal_cafe_buyer_article",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "cafe_pda_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "pricing_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_cafe_buyer_article",
+      "target": "pospal_article_category_paraggeliolipsia",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pos-na-dialexeis-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_article_category_paraggeliolipsia",
+      "target": "pospal_article_filters",
+      "relation": "restored_from_url",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "static/js/articles-hub.js"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "waiter_pda_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "target": "pospal_article_category_paraggeliolipsia",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "systima-paraggeliolipsias.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "waiter_pda_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "target": "pospal_article_category_paraggeliolipsia",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "asyrmati-paraggeliolipsia.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pda_definition_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "pda_how_it_works_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "waiter_pda_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pda_definition_page",
+      "target": "pospal_article_category_pda",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-ti-einai.html"
+    },
+    {
+      "source": "pospal_article_category_pda",
+      "target": "pospal_article_filters",
+      "relation": "restored_from_url",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "static/js/articles-hub.js"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pda_how_it_works_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pda_how_it_works_page",
+      "target": "pospal_article_category_pda",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-pos-leitourgei.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "waiter_pda_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "pda_definition_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "waiter_pda_page",
+      "target": "pospal_article_category_pda",
+      "relation": "category_breadcrumb",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-servitoro/index.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pricing_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "systima_paraggeliolipsias_ordering_system_hub_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "pospal_cafe_buyer_article",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "cafe_pda_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "cafe_pda_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-kafeteries.html"
+    },
+    {
+      "source": "cafe_pda_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-kafeteries.html"
+    },
+    {
+      "source": "cafe_pda_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-kafeteries.html"
+    },
+    {
+      "source": "cafe_pda_page",
+      "target": "pospal_cafe_buyer_article",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-kafeteries.html"
+    },
+    {
+      "source": "cafe_pda_page",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "pda-gia-kafeteries.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "beach_bar_order_page",
+      "relation": "lists_page",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "arthra/index.html"
+    },
+    {
+      "source": "beach_bar_order_page",
+      "target": "pospal_articles_hub",
+      "relation": "header_related_and_footer_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html"
+    },
+    {
+      "source": "beach_bar_order_page",
+      "target": "index_homepage_conversion_surface",
+      "relation": "explicit_home_return",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html"
+    },
+    {
+      "source": "beach_bar_order_page",
+      "target": "pospal_article_navigation",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html"
+    },
+    {
+      "source": "beach_bar_order_page",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html"
+    },
+    {
+      "source": "beach_bar_order_page",
+      "target": "waiter_pda_page",
+      "relation": "related_reading",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "paraggelio-lipsia-gia-beach-bar.html"
     }
   ],
   "hyperedges": [

@@ -112,6 +112,7 @@
     }
   </script>
   <link rel="stylesheet" href="/static/css/legal-links.css">
+  <link rel="stylesheet" href="/static/css/article-navigation.css?v=20261111">
 </head>
 <body class="pda-acquisition-page pda-editorial-page">
   <a class="pda-skip" href="#main-content">Μετάβαση στο άρθρο</a>
@@ -123,7 +124,7 @@
         <img src="/app_icon.ico" alt="" width="36" height="36">
         <span translate="no">POS<b>Pal</b></span>
       </a>
-      <a href="/times.html">ΤΙΜΕΣ</a>
+      <nav class="article-site-nav" aria-label="Κύρια πλοήγηση"><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a></nav>
     </div>
     <nav class="section-bar" aria-label="Ενότητες άρθρου">
       <a href="#ti-einai">ΤΙ ΕΙΝΑΙ</a>
@@ -135,7 +136,7 @@
 
   <main id="main-content">
     <header class="article-header">
-      <p class="category"><a href="/arthra/">ΑΡΘΡΑ</a> / ΟΔΗΓΟΣ ΠΑΡΑΓΓΕΛΙΟΛΗΨΙΑΣ</p>
+      <nav class="article-breadcrumbs" aria-label="Διαδρομή σελίδας"><ol><li><a href="/">Αρχική</a></li><li><span aria-hidden="true">›</span><a href="/arthra/">Άρθρα</a></li><li><span aria-hidden="true">›</span><a href="/arthra/?category=pda">PDA και κινητά</a></li></ol></nav>
       <h1>PDA τι είναι στην εστίαση;</h1>
       <p class="dek">Τι κρατά ο σερβιτόρος, τι συμβαίνει όταν πατήσει αποστολή και πότε χρειάζεται πραγματικά ειδική συσκευή.</p>
 
@@ -380,22 +381,23 @@
 
       <p>Τώρα ξέρεις τι είναι πραγματικά το PDA και ποια στοιχεία του εξοπλισμού επηρεάζουν τη λειτουργία του: η συσκευή, το τοπικό δίκτυο, ο υπολογιστής και, όταν χρησιμοποιείται, ο εκτυπωτής. Η επόμενη χρήσιμη ερώτηση είναι τι κοστίζει ολόκληρο το σύστημα και τι ακριβώς περιλαμβάνει η κάθε προσφορά.</p>
 
-      <nav class="next-article" aria-label="Επόμενος οδηγός">
-        <p>ΕΠΟΜΕΝΟΣ ΟΔΗΓΟΣ</p>
-        <a href="/times.html">Σύστημα παραγγελιοληψίας: τιμές, κόστος και τι περιλαμβάνεται <span aria-hidden="true">→</span></a>
-      </nav>
+      <p><a href="/times.html">Δες τις τιμές και τι περιλαμβάνει το POSPal →</a></p>
     </article>
+
+    <nav class="article-related" aria-label="Σχετικά άρθρα">
+      <h2>Διάβασε επίσης</h2>
+      <ul>
+        <li><a href="/pda-pos-leitourgei.html">Πώς λειτουργεί το PDA;</a></li>
+        <li><a href="/pda-gia-servitoro/">Το κινητό ως PDA σερβιτόρου</a></li>
+      </ul>
+      <a class="article-all" href="/arthra/">Όλα τα άρθρα <span aria-hidden="true">→</span></a>
+    </nav>
   </main>
 
   <footer class="site-footer">
     <div>
       <p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
-      <nav aria-label="Σύνδεσμοι σελίδας">
-        <a href="/times.html">Τιμές</a>
-        <a href="/systima-paraggeliolipsias.html">Το σύστημα</a>
-        <a href="/download/">Κατέβασε</a>
-        <a href="/guides/">Οδηγοί</a>
-      </nav>
+      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε</a></nav>
     </div>
 
     <!-- POSPAL-LEGAL-LINKS:START -->

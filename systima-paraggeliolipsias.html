@@ -54,6 +54,7 @@
   "inLanguage": "el"
 }
   </script>
+  <link rel="stylesheet" href="/static/css/article-navigation.css?v=20261111">
 </head>
 <body class="pda-acquisition-page pda-editorial-page system-article-page">
   <a class="pda-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
@@ -61,7 +62,7 @@
     <div class="brand-bar">
       <a class="header-download" href="/download/">ΚΑΤΕΒΑΣΕ</a>
       <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-icon-96.png" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a>
-      <a href="/times.html">ΤΙΜΕΣ</a>
+      <nav class="article-site-nav" aria-label="Κύρια πλοήγηση"><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a></nav>
     </div>
     <nav class="section-bar" aria-label="Ενότητες σελίδας">
       <a href="#workflow">ΤΟ ΠΡΟΓΡΑΜΜΑ</a><a href="#requirements">ΕΞΟΠΛΙΣΜΟΣ</a><a href="#how-it-starts">ΤΟ ΣΤΗΣΙΜΟ</a><a href="#offer">Η ΣΥΝΔΡΟΜΗ</a>
@@ -70,7 +71,7 @@
   <main id="main-content" tabindex="-1">
     <article aria-labelledby="system-title">
       <header class="article-header">
-        <p class="category">POSPAL / ΠΑΡΑΓΓΕΛΙΟΛΗΨΙΑ</p>
+        <nav class="article-breadcrumbs" aria-label="Διαδρομή σελίδας"><ol><li><a href="/">Αρχική</a></li><li><span aria-hidden="true">›</span><a href="/arthra/">Άρθρα</a></li><li><span aria-hidden="true">›</span><a href="/arthra/?category=paraggeliolipsia">Παραγγελιοληψία</a></li></ol></nav>
         <h1 id="system-title">Σύστημα παραγγελιοληψίας για εστίαση</h1>
         <p class="dek">Τι κάνει το POSPal, γιατί το έφτιαξα έτσι και τι χρειάζεται για να το δουλέψεις στο δικό σου μαγαζί.</p>
         <p class="system-hero-offer"><strong>23,90 €/μήνα</strong> · 30 ημέρες δωρεάν · Χωρίς υποχρεωτική αγορά PDA ή εξοπλισμού από εμάς</p>
@@ -179,16 +180,20 @@
         </section>
       </div>
     </article>
+
+    <nav class="article-related" aria-label="Σχετικά άρθρα">
+      <h2>Διάβασε επίσης</h2>
+      <ul>
+        <li><a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία στο κατάστημα</a></li>
+        <li><a href="/pda-gia-servitoro/">Το κινητό ως PDA σερβιτόρου</a></li>
+      </ul>
+      <a class="article-all" href="/arthra/">Όλα τα άρθρα <span aria-hidden="true">→</span></a>
+    </nav>
   </main>
   <footer class="site-footer">
     <div>
       <p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p>
-      <nav aria-label="Σύνδεσμοι σελίδας">
-        <a href="/times.html">Τιμές</a>
-        <a href="/arthra/">Άρθρα</a>
-        <a href="/download/">Κατέβασε</a>
-        <a href="/guides/">Οδηγοί</a>
-      </nav>
+      <nav aria-label="Σύνδεσμοι σελίδας"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε</a></nav>
     </div>
 
     <!-- POSPAL-LEGAL-LINKS:START -->
