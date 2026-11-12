@@ -1,7 +1,60 @@
-/* Only the new buyer-information paragraphs on the café page. */
+/* Exclusive to the café page; shared acquisition styles remain unchanged. */
 body.seo-page .cafe-buyer-note { margin-top: 0.85rem; }
 body.seo-page .cafe-buyer-note a,
 body.seo-page .cafe-setup-intro a {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.cafe-order-flow .seo-section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+.cafe-order-flow .seo-section-heading h2 { max-width: 26ch; }
+.cafe-order-flow .seo-section-heading p { max-width: 75ch; }
+.cafe-proof-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cafe-proof-steps li { min-width: 0; }
+.cafe-proof-steps figure { margin: 0; }
+.cafe-proof-steps figcaption { margin-bottom: 1rem; }
+.cafe-proof-steps h3 { margin: 0 0 .5rem; font-size: 1.08rem; }
+.cafe-proof-steps p { margin: 0; color: #dbe8de; }
+.cafe-proof-steps a { display: block; border-radius: 8px; }
+.cafe-proof-steps .cafe-proof-phone { max-width: 160px; margin-inline: auto; }
+.cafe-proof-steps img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #526356;
+  border-radius: 8px;
+}
+.cafe-order-flow .cafe-proof-conditions {
+  margin: 1.5rem 0 0;
+  color: #c8d8cc;
+  font-size: .82rem;
+}
+.cafe-order-flow .cafe-proof-detail { margin: .5rem 0 0; }
+.cafe-proof-detail a {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 44px;
+  color: #f8fff9;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (min-width: 621px) and (max-width: 920px) {
+  .cafe-proof-steps { grid-template-columns: 1fr; gap: 2rem; }
+  .cafe-proof-steps figure {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 620px) {
+  .cafe-proof-steps { grid-template-columns: 1fr; gap: 2rem; }
 }
