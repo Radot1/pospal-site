@@ -30,6 +30,18 @@
 }
 
 .wireless-article-page .wireless-workflow-proof { margin-block: 24px; }
+.wireless-article-page .wireless-proof-jump { margin: 12px auto 0; font: 600 15px/1.5 var(--editorial-sans); }
+.wireless-article-page .wireless-proof-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #135b2e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.wireless-article-page #controlled-proof-title { scroll-margin-top: 128px; }
+.wireless-article-page .wireless-proof-jump a:focus-visible { outline: 3px solid #0f7a38; outline-offset: 4px; }
 .wireless-article-page .proof-stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
 .wireless-article-page .proof-stages figure { margin: 0; }
 .wireless-article-page .proof-stages img { display: block; width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
