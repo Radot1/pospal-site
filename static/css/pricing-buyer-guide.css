@@ -113,7 +113,9 @@ html { scroll-behavior: auto; }
 .pricing-page .price-offer-label { margin-bottom: 13px; font-size: 14px; font-weight: 600; }
 .pricing-page .price-number { margin-bottom: 8px; font-size: clamp(56px,5.5vw,76px); line-height: 1.1; font-weight: 800; letter-spacing: -.045em; white-space: nowrap; }
 .pricing-page .price-number span { font-size: 18px; font-weight: 400; letter-spacing: 0; }
-.pricing-page .price-tax { margin-bottom: 22px; font-size: 15px; font-weight: 600; }
+.pricing-page .price-tax { margin-bottom: 12px; font-size: 15px; font-weight: 600; }
+.pricing-page .price-scope { margin-bottom: 18px; font-size: 14px; line-height: 1.5; }
+.pricing-page .price-scope a { display: flex; width: fit-content; align-items: center; gap: 6px; min-height: 44px; }
 .pricing-page .price-trial-copy { margin-bottom: 22px; font-size: 15px; color: var(--seo-ink-soft); }
 .pricing-page .price-trial-copy strong { color: var(--seo-ink); font-size: 18px; }
 .pricing-page .price-guide { display: flex; width: fit-content; align-items: center; gap: 8px; min-height: 44px; margin-top: 6px; font-size: 14px; }
@@ -124,7 +126,7 @@ html { scroll-behavior: auto; }
 .pricing-page .price-boundary { max-width: 78ch; margin: 20px 0 0; font-size: 14px; color: var(--seo-ink-soft); }
 .pricing-page .price-faq { max-width: 1040px; padding-bottom: 40px; }
 .pricing-page .price-setup { padding-bottom: 40px; }
-.pricing-page .price-setup h2 { font-size: 27px; margin-bottom: 18px; letter-spacing: -.025em; }
+.pricing-page .price-setup h2 { font-size: 27px; margin-bottom: 18px; letter-spacing: -.025em; scroll-margin-top: 128px; }
 .pricing-page .price-setup > p { max-width: 78ch; color: var(--seo-ink-soft); }
 .pricing-page .price-setup table { width: 100%; table-layout: fixed; border-collapse: collapse; }
 .pricing-page .price-setup th, .pricing-page .price-setup td { padding: 16px 20px; border-bottom: 1px solid var(--seo-line); text-align: left; vertical-align: top; overflow-wrap: break-word; }
@@ -152,7 +154,7 @@ html { scroll-behavior: auto; }
   .pricing-page .price-offer-label { font-size: 13px; }
   .pricing-page .price-number { font-size: 58px; }
   .pricing-page .price-number span { font-size: 16px; }
-  .pricing-page .price-tax { font-size: 14px; margin-bottom: 18px; }
+  .pricing-page .price-tax { font-size: 14px; }
   .pricing-page .price-trial-copy { font-size: 14px; margin-bottom: 18px; }
   .pricing-page .price-guide { margin-inline: auto; }
   .pricing-page .price-conditions { grid-template-columns: 1fr; padding: 20px 24px; gap: 12px; }
@@ -168,6 +170,7 @@ html { scroll-behavior: auto; }
   .pricing-page .price-setup th:first-child { width: 34%; }
 }
 @media (max-width: 360px) {
+  .pricing-page .price-offer h1 { font-size: 28px; }
   .pricing-page .price-amount, .pricing-page .price-includes { padding: 20px; }
   .pricing-page .price-number { font-size: 48px; }
   .pricing-page .price-number span { font-size: 14px; }

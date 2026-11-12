@@ -1,0 +1,123 @@
+/* Exclusive to the primary money page; the wireless article shares the base CSS. */
+.system-money-page .article-header {
+  max-width: 1200px;
+  padding-top: 36px;
+  text-align: left;
+}
+.system-money-page .system-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.system-money-page .system-hero-copy { min-width: 0; }
+.system-money-page .article-header h1 {
+  margin-inline: 0;
+  font-size: clamp(36px, 3.6vw, 52px);
+  line-height: 1.08;
+}
+.system-money-page .dek {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+.system-money-page .system-hero-workflow {
+  margin: 16px 0 0;
+  font: 400 17px/1.6 var(--editorial-sans);
+}
+.system-money-page .system-hero-offer { margin-inline: 0; }
+.system-money-page .system-scope { margin-bottom: 0; }
+.system-money-page .system-hero-proof {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #cbd0cb;
+  border-radius: 8px;
+  background: #f4f6f1;
+  font-family: var(--editorial-sans);
+}
+.system-money-page .system-hero-proof h2 {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 2.2vw, 30px);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+.system-money-page .system-hero-proof > p {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.system-money-page .system-proof-stages {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 16px;
+  align-items: center;
+}
+.system-money-page .system-proof-stages figure { min-width: 0; margin: 0; }
+.system-money-page .system-proof-stages a { display: block; border-radius: 6px; }
+.system-money-page .system-proof-stages img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #cbd0cb;
+  border-radius: 6px;
+}
+.system-money-page .system-proof-stages figcaption {
+  padding: 0;
+  color: #3e4c42;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.system-money-page .system-proof-stages figcaption strong { display: block; }
+.system-money-page .system-hero-proof .system-proof-detail { margin: 18px 0 12px; }
+.system-money-page .system-proof-detail a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #135b2e;
+  text-underline-offset: .16em;
+}
+.system-money-page .system-hero-proof .system-proof-conditions {
+  margin: 0;
+  color: #4d5b50;
+  font-size: 12px;
+}
+.system-money-page .system-hero-proof a:focus-visible {
+  outline: 3px solid #0f7a38;
+  outline-offset: 4px;
+}
+.system-money-page .byline {
+  grid-template-columns: 42px auto;
+  justify-content: start;
+  justify-items: start;
+  column-gap: 12px;
+  margin-top: 28px;
+}
+.system-money-page .author-photo { grid-row: span 2; width: 42px; height: 42px; margin: 0; }
+.system-money-page .byline p { grid-column: 2; }
+.system-money-page .byline small { grid-column: 2; }
+.system-money-page .system-opening { margin-top: 28px; }
+.system-money-page .system-opening .contents { margin-top: 0; }
+@media (max-width: 900px) {
+  .system-money-page .system-hero-layout { grid-template-columns: 1fr; gap: 28px; }
+  .system-money-page .system-hero-proof { max-width: 620px; }
+  .system-money-page .system-proof-stages { grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); }
+}
+@media (max-width: 700px) {
+  .system-money-page .article-header { padding: 24px 20px 0; }
+  .system-money-page .article-header h1 { font-size: clamp(28px, 8.8vw, 44px); }
+  .system-money-page .dek { font-size: 17px; }
+  .system-money-page .system-hero-workflow { font-size: 16px; }
+  .system-money-page .system-hero-proof { padding: 18px; }
+  .system-money-page .system-proof-stages { gap: 12px; }
+  .system-money-page .system-proof-stages figcaption { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .system-money-page .system-proof-stages { grid-template-columns: 1fr; gap: 20px; }
+  .system-money-page .system-proof-stages figure:first-child {
+    display: grid;
+    grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+    gap: 16px;
+    align-items: center;
+  }
+}
