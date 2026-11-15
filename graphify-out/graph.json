@@ -17308,6 +17308,13 @@
       "file_type": "code",
       "source_file": "static/css/pricing-hallmark/base.css",
       "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_homepage_hallmark_polish",
+      "label": "Scoped desktop/mobile homepage Hallmark polish",
+      "file_type": "code",
+      "source_file": "static/css/homepage-hallmark-polish.css",
+      "confidence": "EXTRACTED"
     }
   ],
   "links": [
@@ -34928,6 +34935,24 @@
       "confidence_score": 1.0,
       "weight": 1.0,
       "source_file": "static/css/pricing-hallmark/styles.css"
+    },
+    {
+      "source": "index_homepage_conversion_surface",
+      "target": "pospal_homepage_hallmark_polish",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "index.html"
+    },
+    {
+      "source": "pospal_mobile_v5_homepage",
+      "target": "pospal_homepage_hallmark_polish",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "index.html"
     }
   ],
   "hyperedges": [

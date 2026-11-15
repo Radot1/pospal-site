@@ -1,5 +1,9 @@
 # Graph Report - pospal-site  (2026-09-03)
 
+## Homepage polish refresh — 2026-11-15
+
+Updated the curated dependency graph for the dedicated `static/css/homepage-hallmark-polish.css` loaded by the desktop/mobile homepage. This additive stylesheet polishes lower-section type, surfaces and keyboard focus; the original homepage body, animation code, heroes and separate 720px variants stay intact. Existing homepage CSS/JS, download and guides entry pages and shared assets are unchanged. Prototype and verification artifacts are excluded from publication.
+
 ## Pricing redesign refresh — 2026-11-15
 
 Updated the curated graph for `/times.html` and its dedicated Hallmark layout, token and base styles under `static/css/pricing-hallmark/`. The pricing page no longer loads the shared article-navigation stylesheet; its article links are retained in its own markup. The existing URL, SEO metadata, structured data, consent scripts, download flow and product facts remain. The locked homepage, download and guide pages and shared rendering dependencies are unchanged. The graph JSON contains these targeted changes; historical extraction figures below remain historical.

@@ -1,0 +1,113 @@
+/* Hallmark · checked: 2026-11-15 · genre: modern-minimal · built: the project · redesign: polish · hero: kept · nav: kept · footer: kept · theme: brand · posture: restrained · copy: verbatim */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R5 V3 · weakest: H, brought the small desktop FAQ head into the existing section hierarchy without moving sections */
+/* Hallmark · finish-review: subagent, fix, 1 finding, 1 resolved · mobile footer links retain their original compact size; heroes and animation areas verified unchanged at ten widths */
+/* Hallmark · waive 80 · labelled route diagram with real POSPal captures · the route-scene explains the actual phone, Windows and kitchen sequence; all animation is protected by the user */
+/* Hallmark · waive 81 · wifi-radius is the route diagram's network boundary · the POSPal route-scene uses this field behind real screens and labelled connection states, never as a stand-alone picture */
+/* Hallmark · dismissed 40 · the route-scene label has its original bright ink over the dark network band; the sampled gradient result conflicts with the actual painted surface, which remains protected */
+/* Hallmark · answered F25 · the homepage ships separately authored desktop and mobile variants; both variants keep their original product facts and their 720px switch */
+/* Hallmark · answered F19 · the unchanged hero and route keep their existing type weights; the polish limits its own additions to 400, 600 and 700 */
+/* Hallmark · answered F17 · the original two-column equipment placement stays; a smaller display and wider heading measure improve the existing column without restructuring */
+/* Hallmark · answered F6 · the grouped .homepage-desktop rule names equipment and setup headings, not numeric figures; original pricing figures already use tabular numerals */
+:root {
+  --hp-paper: #f4f5f2;
+  --hp-paper-soft: #e8ede8;
+  --hp-paper-raised: #f7f8f4;
+  --hp-ink: #102117;
+  --hp-muted: #4d5e52;
+  --hp-dark: #102117;
+  --hp-on-dark: #edf4ed;
+  --hp-muted-on-dark: #c7d8cc;
+  --hp-line: #bdc9bf;
+  --hp-line-dark: #486052;
+  --hp-focus-light: #0f7a38;
+  --hp-focus-dark: #35ed78;
+  --hp-text: 1rem;
+  --hp-label: .875rem;
+  --hp-section: clamp(2.5rem, 3.8vw, 3.5rem);
+  --hp-item: clamp(1.125rem, 1.5vw, 1.375rem);
+  --hp-space-xs: 8px;
+  --hp-space-sm: 12px;
+  --hp-space-md: 16px;
+  --hp-space-lg: 24px;
+  --hp-radius: 8px;
+}
+
+.homepage-desktop :is(a, button, summary):focus-visible { outline: 3px solid var(--hp-focus-light); outline-offset: 4px; }
+.homepage-desktop :is(.route-theatre, .proof-band, .qr-section, .final-cta, .home-footer, .offer-panel) :is(a, button, summary):focus-visible { outline-color: var(--hp-focus-dark); }
+.homepage-desktop :is(.fit-section, .qr-section, .onboarding-section, .pricing-section, .faq-section, .final-cta, .home-footer) :is(a, button, summary):active,
+.homepage-mobile :is(.workflow, .equipment, .pricing, .faq, .closing, .footer) :is(a, button, summary):active { opacity: .8; }
+
+@media (width > 720px) {
+  .homepage-desktop :is(.fit-section, .qr-section, .onboarding-section, .pricing-section, .faq-section, .final-cta) h2 {
+    min-width: 0;
+    overflow-wrap: break-word;
+    margin-bottom: 0;
+    text-wrap: balance;
+    font-variant-numeric: tabular-nums;
+    font-size: var(--hp-section);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.035em;
+  }
+  .homepage-desktop :is(.fit-intro, .onboarding-copy, .pricing-heading) h2 { max-width: 13ch; }
+  .homepage-desktop .qr-copy h2 { max-width: 15ch; }
+  .homepage-desktop .faq-grid h2 { max-width: 14ch; }
+  .homepage-desktop .final-grid h2 { max-width: 18ch; }
+  .homepage-desktop :is(.fit-section, .qr-section, .onboarding-section, .pricing-section, .faq-section, .final-cta) .signal-label {
+    font-size: var(--hp-label);
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: var(--hp-space-md);
+  }
+  .homepage-desktop :is(.fit-lead, .qr-lead, .onboarding-copy > p:not(.signal-label), .pricing-heading > p, .faq-intro, .final-lead) {
+    font-size: var(--hp-text);
+    line-height: 1.65;
+  }
+  .homepage-desktop .qr-section { background: var(--hp-dark); color: var(--hp-on-dark); }
+  .homepage-desktop .onboarding-section { background: var(--hp-paper); color: var(--hp-ink); }
+  .homepage-desktop .pricing-section { background: var(--hp-paper-soft); color: var(--hp-ink); }
+  .homepage-desktop .final-cta { background: var(--hp-dark); color: var(--hp-on-dark); }
+  .homepage-desktop :is(.fit-node:not(.fit-host), .pricing-terms, .final-panel) { background: var(--hp-paper-raised); color: var(--hp-ink); }
+  .homepage-desktop :is(.fit-node p, .onboarding-runway li p, .pricing-cancellation, .faq-list p) { font-size: var(--hp-text); line-height: 1.6; }
+  .homepage-desktop :is(.fit-status, .onboarding-runway small, .pricing-terms dt, .pricing-trial, .qr-ledger dt, .fit-action small, .final-proof-list dt, .final-next-step) { font-size: var(--hp-label); line-height: 1.5; }
+  .homepage-desktop :is(.fit-node strong, .onboarding-runway h3) { font-size: var(--hp-item); font-weight: 600; line-height: 1.25; }
+  .homepage-desktop .fit-host strong { font-size: clamp(1.75rem, 2.8vw, 2.65rem); font-weight: 700; }
+  .homepage-desktop :is(.qr-ledger dd, .pricing-terms dd, .final-proof-list dd) { font-weight: 600; line-height: 1.5; }
+  .homepage-desktop .onboarding-support { line-height: 1.6; }
+  .homepage-desktop :is(.onboarding-support strong, .onboarding-support p, .onboarding-runway li a) { font-size: var(--hp-label); }
+  .homepage-desktop .pricing-trial { color: var(--hp-muted-on-dark); }
+  .homepage-desktop .pricing-offer { border-radius: var(--hp-radius); }
+  .homepage-desktop .pricing-price-block { border-radius: var(--hp-radius) 0 0 var(--hp-radius); }
+  .homepage-desktop .pricing-terms { border-radius: 0 var(--hp-radius) var(--hp-radius) 0; }
+  .homepage-desktop .faq-list { border-color: var(--hp-line); }
+  .homepage-desktop .faq-list details { border-color: var(--hp-line); }
+  .homepage-desktop .faq-list summary { font-size: var(--hp-text); font-weight: 600; line-height: 1.5; }
+  .homepage-desktop .faq-list p { padding-bottom: var(--hp-space-lg); }
+  .homepage-desktop :is(.qr-lead, .final-lead) { color: var(--hp-muted-on-dark); }
+  .homepage-desktop .home-footer nav a { font-size: var(--hp-label); }
+  .homepage-desktop .home-footer-grid nav a { white-space: nowrap; }
+  .homepage-desktop .home-footer-boundary { font-size: var(--hp-label); }
+  .homepage-desktop .home-footer h2 { font-size: var(--hp-text); }
+}
+
+@media (max-width: 720px) {
+  .homepage-mobile :is(.workflow, .equipment, .pricing, .faq, .closing) h2 {
+    min-width: 0;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+  }
+  .homepage-mobile .workflow .route li h3 { font-size: var(--hp-text); font-weight: 600; line-height: 1.4; }
+  .homepage-mobile :is(.network-note, .requirements dd, .pricing-note, .fiscal-note, .all-help) { color: var(--hp-muted); font-size: var(--hp-label); line-height: 1.6; }
+  .homepage-mobile :is(.equipment, .qr-included) { border-radius: var(--hp-radius); }
+  .homepage-mobile .equipment { border-radius: 0; }
+  .homepage-mobile :is(.equipment, .qr-included, .footer) { background: var(--hp-paper-soft); color: var(--hp-ink); }
+  .homepage-mobile .qr-included { border: 0; }
+  .homepage-mobile :is(.faq, .equipment, .pricing) summary { font-size: var(--hp-text); font-weight: 600; line-height: 1.5; }
+  .homepage-mobile :is(.faq, .equipment, .pricing) details p { line-height: 1.65; }
+  .homepage-mobile .pricing .price { font-variant-numeric: tabular-nums; }
+  .homepage-mobile .legal a { font-size: var(--hp-label); }
+  .homepage-mobile .footer > .shell > p { font-size: var(--hp-label); line-height: 1.65; }
+}
