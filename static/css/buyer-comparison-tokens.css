@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light;
+  --color-paper: #f4f5f2;
+  --color-panel: #fcfdfb;
+  --color-ink: #102319;
+  --color-muted: #526057;
+  --color-rule: #d3d9d3;
+  --color-accent: #b0f5bf;
+  --color-accent-ink: #102319;
+  --color-link: #155d32;
+  --color-focus: #16813c;
+  --color-clear: transparent;
+  --font-body: BuyerSans, sans-serif;
+  --font-display: BuyerSans, sans-serif;
+  --font-source: BuyerSans;
+  --container: 1120px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --column-gap: 32px;
+  --radius: 4px;
+}

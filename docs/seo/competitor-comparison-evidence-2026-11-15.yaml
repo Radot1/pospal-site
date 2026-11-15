@@ -1,0 +1,109 @@
+review_date: '2026-11-15'
+status: source_evidence_for_approved_guide_release
+implementation:
+  route: /pos-na-dialexeis-paraggeliolipsia.html
+  selected: [pospal, dishy, serviro, anima_menu]
+  reverified_first_party_sources: '2026-11-15'
+  publication: 'authorized 2026-11-15; verify Pages deployment and live content'
+scope: quick_scan_of_first_five_supplied_competitors
+raw_data_directory: 'C:/Users/bzoum/Downloads/pospal-competitor-research-2026-11-15/raw'
+method:
+  - Supplier-authored pages establish advertised terms, not independent product performance.
+  - No trials, sales conversations, customer interviews or migration tests were performed.
+  - Competitor naming is authorized under AGENTS.md as updated on 2026-11-15; the user subsequently approved the guide implementation. Publication of the existing guide was explicitly authorized on the same date; a separate Anima Menu page is on hold.
+  - Absence from a reviewed page is not evidence that a product lacks a feature.
+  - Remaining supplied competitors have not been reverified in this pass.
+competitors:
+  servitwra:
+    name: ΣερβιΤΩΡΑ
+    sources:
+      - https://www.servitwra.gr/
+      - https://www.servitwra.gr/pricing
+    observed:
+      - Pricing table lists annual CLOUD TAMEIAKH 180, BASIC 300 and PRO 400 euros.
+      - Homepage also advertises a starting figure of 149 euros/year; discrepancy requires clarification.
+      - Pricing page advertises annual subscription and support.
+    unknown:
+      - VAT treatment and exact like-for-like ordering scope of the lowest-priced plan.
+      - Feature checkmarks were not legible in extracted table text; no absent-feature claims are justified.
+    implication: Broad suite; compare the appropriate plan and service scope, not just its lowest price.
+  butler:
+    name: Butler — Cloudcom
+    sources:
+      - https://cloudcom.gr/digital-solutions/butler/
+    observed:
+      - Advertises inventory, delivery, kitchen and table workflows and a demo contact path.
+    unknown:
+      - Price, billing commitment, trial terms and installation cost were not established on the reviewed product page.
+    implication: Potentially broader operational scope; no cost advantage can be calculated from this evidence.
+  dishy:
+    name: Dishy
+    sources:
+      - https://dishy.gr/
+    observed:
+      - Basic 15 euros/month plus VAT; Pro 25 euros/month plus VAT.
+      - Pro includes QR menu; hardware is separate.
+      - Advertises local mini-server operation, installation and training; geographic notice names Magnesia.
+    unknown:
+      - Minimum term, cancellation, hardware quote and service availability for a specific venue.
+    implication: Closest first editorial pilot for self-setup versus assisted setup; not a proven SEO-volume winner.
+  serviro:
+    name: Serviro
+    sources:
+      - https://serviro.gr/
+    observed:
+      - Advertised Cloud + PDA offer 400 euros upfront; Delivery package 800 euros upfront.
+      - Annual maintenance 85 euros; listed prices exclude VAT.
+      - Advertises installation and training; states it does not replace a fiscal system.
+    unknown:
+      - Whether maintenance is payable immediately in year one and when subsequent fees become due.
+    implication: Do not state 485 euros as a verified first-year total or 7.08 euros as a cancellable monthly subscription.
+  anima_menu:
+    name: Anima Menu
+    sources:
+      - https://www.animamenu.gr/
+    observed:
+      - Base agreement 120 euros/six months includes one staff device.
+      - Unlimited-device option adds 40 euros/six months.
+      - FAQ advertises a monthly agreement starting at 30 euros.
+      - FAQ specifies Windows 10 or 11 for an existing central computer, with additional CPU and memory requirements; Android and iOS are staff-device options.
+    unknown:
+      - VAT treatment and precise scope of the monthly option.
+    implication: Its advertised monthly option prevents a blanket claim that alternatives require annual or semiannual commitments.
+keyword_research:
+  provider: OpenSEO keyword metrics
+  country: Greece
+  location_code: 2300
+  language: el
+  requested_keywords: 25
+  returned_keywords: 2
+  no_data_keywords: 23
+  returned:
+    - keyword: σερβιτωρα
+      reported_average_monthly_searches: 140
+      last_month_in_provider_series: '2026-08'
+      caveat: Greek term can be ambiguous; do not equate all volume with software buyers.
+    - keyword: anima menu
+      reported_average_monthly_searches: 140
+      last_month_in_provider_series: '2026-09'
+      caveat: Brand searches do not establish demand for comparison or alternative searches.
+  interpretation:
+    - All explicitly tested comparison and alternative phrases returned no keyword metrics; this means unavailable, not zero searches.
+    - Exact candidate list and monthly series are preserved in raw keyword-metrics.json.
+    - Three mobile SERP samples used Greece and Greek; results were mixed and included unrelated entities.
+    - Samples do not demonstrate a strong established comparison intent or justify a large page rollout.
+  organic_traffic_backlinks_reviews: not_measured
+pospal_truth:
+  price: '23.90 euros/month total; no VAT added'
+  annualized_arithmetic: '286.80 euros for 12 paid months; not a mandatory annual plan'
+  trial: '30 days; no name, email, account or card details required'
+  setup: 'Self-managed Windows x64 host, guided setup and reachable local network'
+  devices: 'Suitable phones/tablets via browser; no extra per-PDA charge; practical capacity must be tested'
+  support: 'Remote through support@pospal.gr and guides; no public phone, response SLA or done-for-you installation promised'
+  fiscal: 'Not a fiscal POS or cash register; alongside does not establish integration'
+  migration: 'No verified automatic migration from any profiled competitor'
+  separate_setup_maintenance_fee: 'None currently charged by POSPal; third-party hardware and services are separate'
+  sources:
+    - MARKETING_PLAN.md
+    - .agents/product-marketing.md
+    - docs/seo/pospal-product-fact-checklist.md

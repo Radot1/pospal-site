@@ -64,7 +64,7 @@ VAT treatment: accountant-confirmed Greek small-business VAT exemption, supplied
 
 ## Competitive Landscape
 
-Public marketing copy must not name competitors.
+Competitor names are allowed in factual comparison and alternative pages under AGENTS.md (owner direction, 2026-11-15). Source and date claims, acknowledge competitors' verified strengths and POSPal's limitations, and disclose that POSPal publishes the comparison. This does not authorize website implementation or publication by itself.
 
 **Direct:** Distributor-sold PDA and hospitality ordering systems with maintenance plans or opaque pricing.
 
@@ -88,7 +88,7 @@ Public marketing copy must not name competitors.
 
 **Canonical PDA proposition:** `Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.`
 
-This is not merely a slogan. It expresses the product stance: POSPal should not manufacture device scarcity or turn every additional waiter device into another fee. Public copy may dramatize the familiar `Ποιος έχει το PDA;` moment, but must not name competitors or claim compatibility with every phone, tablet, browser, router or network configuration.
+This is not merely a slogan. It expresses the product stance: POSPal should not manufacture device scarcity or turn every additional waiter device into another fee. Public copy may dramatize the familiar `Ποιος έχει το PDA;` moment, but must not attribute that situation to a named competitor without evidence or claim compatibility with every phone, tablet, browser, router or network configuration.
 
 **Why that is better:** The buyer can understand the cost, requirements, setup process, and product boundary before making a commitment.
 
@@ -129,7 +129,7 @@ The phrases below are search or stakeholder language, not verified customer test
 
 **Words to use:** `παραγγελιοληψία`, `ασύρματη`, `σερβιτόρος`, `λειτουργία τραπεζιών`, `απλή λειτουργία`, `ροή κουζίνας`, `QR μενού`, `Κατέβασε για Windows`.
 
-**Words to avoid:** Cheap/`φθηνό` as the main quality signal, fully self-hosted unless verified, fiscal/compliance claims, competitor names, invented integrations, and generic digital-transformation language.
+**Words to avoid:** Cheap/`φθηνό` as the main quality signal, fully self-hosted unless verified, fiscal/compliance claims, unsupported competitor claims, invented integrations, and generic digital-transformation language.
 
 **Glossary:**
 

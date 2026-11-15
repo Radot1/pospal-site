@@ -55,9 +55,18 @@ Guidance for agents working on the POSPal marketing site.
 
 ## Content rules
 - Greek-only public copy (English internal notes are OK).
-- Avoid naming competitors.
+- Competitor names are allowed in factual comparison and alternative pages under the rules below. No separate naming exception is needed for each competitor.
 - Avoid claims about compliance or fines.
-- Keep statements factual and non-comparative.
+- Keep statements factual. Comparative claims must be specific, supportable and current; avoid blanket superiority claims.
+
+## Comparison and alternative pages
+- Help owners choose a suitable product. Explain who each option fits and acknowledge POSPal's limitations and competitors' verified strengths.
+- Distinguish a multi-product buying guide, a competitor-alternatives page and a direct POSPal-versus-competitor page by search intent. Do not automatically create one URL per competitor, or separate near-duplicate "alternative" and "versus" URLs for the same decision.
+- Use current first-party sources for competitor features, pricing, billing commitments, tax treatment, hardware and installation costs. Date the checks and reverify before publication. Label unknowns; absence from a website is not proof a feature is unavailable.
+- Compare equivalent needs and plans. An annual price divided by twelve is not a cancellable monthly subscription. State when a price excludes tax, equipment, setup or required extras.
+- Do not invent competitor defects, customer complaints, switcher testimonials, migration support, savings, performance advantages, market share or search demand. Do not imply every comparison searcher has already decided to buy.
+- If using a "best programs" format, explain the selection criteria and recommend by actual fit. Disclose that POSPal publishes the comparison; do not pretend it is an independent ranking.
+- Public copy stays Greek, follows the download-led funnel and retains fiscal-POS clarity. Naming permission does not change the existing draft, implementation, locked-page or publication rules.
 
 ## Writing style
 - Tone: natural human Greek.
@@ -127,3 +136,6 @@ After reviewing the local Hallmark pricing preview and its on-page SEO audit, th
 
 ## Approved homepage Hallmark polish publication — 2026-11-15
 After reviewing the isolated desktop/mobile homepage polish, the user explicitly authorized promotion and publication. This is a scoped exception to the `index.html` lock: add the dedicated `static/css/homepage-hallmark-polish.css` link and publish the reviewed stylesheet. Preserve the original homepage body, copy, separate desktop/mobile variants and 720px switch, both heroes, order-route animation, all existing scripts and interactions. Download and guides entry pages and their rendering dependencies remain locked. The approval covers committing, pushing and following GitHub Pages through publication of this polish only; unrelated local changes and prototype/review artifacts remain outside the release.
+
+## Approved comparison-guide publication — 2026-11-15
+The user explicitly authorized publication of the reviewed multi-product café comparison guide at `/pos-na-dialexeis-paraggeliolipsia.html`, its dedicated styles, the existing Articles entry, café inbound link and affected sitemap dates. Preserve newer main-branch content, including the controlled POSPal proof and existing directory badges. This approval covers committing, updating main and following GitHub Pages through publication. It does not authorize a separate Anima Menu comparison page, unrelated website changes or changes to locked pages and their rendering dependencies.

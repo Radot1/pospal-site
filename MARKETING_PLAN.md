@@ -12,6 +12,7 @@
 - Primary segments: hospitality businesses in Greece (cafes, restaurants, beach bars, food trucks, seasonal venues).
 - Business size / seasonality: all sizes, including seasonal operations.
 - Decision makers: owners, managers, or operators who control tooling and budgets.
+- Seasonal planning context (founder, 2026-11-15): the summer season has ended for the seasonal customer segment; the next opening period is approximately May 2027. Use winter for useful content preparation ahead of that period. Do not interpret lower autumn/winter search impressions alone as evidence of failed content, or apply the same seasonal assumption to every year-round venue.
 - Key pain points: distributor-led pricing/maintenance, fragmented tools, unclear costs, slow setup.
 
 ### 3) Positioning (TBD)
@@ -35,7 +36,7 @@
 - Use direct language, concrete situations and dry humour. A small number of memorable lines is stronger than filling every section with jokes.
 - Preserve the ad's attitude without copying unsupported claims. `Χωρίς σήμα` means no mobile-network signal is required for local order-taking; it must never be rewritten as working without the venue's reachable local network.
 - `Χρησιμοποίησε τους εκτυπωτές που ήδη έχεις` must always retain the compatibility boundary: the printer must be installed in Windows and verified with a real test print.
-- Do not name competitors or claim that every vendor deliberately restricts devices. Describe the recognisable operational situation and state POSPal's own pricing and product policy clearly.
+- Competitor names are allowed in factual comparison and alternative pages under AGENTS.md (owner direction, 2026-11-15). Acknowledge competitors' verified strengths and POSPal's limitations; source and date claims. Do not claim that every vendor deliberately restricts devices. General acquisition copy should still describe the recognisable operational situation and state POSPal's own pricing and product policy clearly.
 
 ### 4) Offer & Pricing (TBD)
 - Plan name(s): POSPal Subscription.
