@@ -1,7 +1,7 @@
 # POSPal Entity Facts
 
 Status: Complete; entity facts and page URL approved
-Last reviewed: 2026-09-30 (VAT treatment only)
+Last reviewed: 2026-11-15 (owner-confirmed personal LinkedIn)
 Related proposal: [POSPal entity foundation](pospal-entity-foundation-proposal.md)
 Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 
@@ -15,6 +15,7 @@ Page draft: [POSPal entity page](pospal-entity-page-draft.md)
 | Official Instagram | `https://www.instagram.com/pospalsoftware/` (`@pospalsoftware`) | User-confirmed; also linked by earlier public versions of the POSPal site in repository history | Candidate `sameAs` |
 | Official YouTube channel | `https://www.youtube.com/@pospal_gr` | Publisher of the videos embedded by the POSPal guides | Candidate `sameAs` |
 | Official technical GitHub account | `https://github.com/Radot1` | Owns `pospal-site` and `pospal-artifacts`, which supply the site and installer | Candidate technical profile; do not label as legal publisher |
+| Founder's personal LinkedIn | `https://www.linkedin.com/in/robert-zairey/` | Supplied by Robert on 2026-11-15 | Visible author links and `Person.sameAs`; not an organization profile |
 | Public repository start | 2025-12-08/09 | Repositories created 2025-12-08; first site commit 2025-12-09 | Historical evidence only; not yet accepted as product launch date |
 | Product category | Hospitality ordering and kitchen-workflow software | Visible across the site and product context | Entity descriptor and application category |
 | Operating system | Windows | Visible on homepage, download, pricing, and generic hub | `operatingSystem` |
@@ -74,7 +75,7 @@ No additional user-supplied identity fact is required for the first entity-page 
 | 3 | Public business city and country | `Mytilini, Lesvos, Greece` | Confirmed |
 | 4 | Public telephone | No public phone | Confirmed |
 | 5 | Approximate product launch date | May 2025 | Confirmed |
-| 6 | Other official social profiles | Instagram `@pospalsoftware`; no Facebook or LinkedIn | Confirmed |
+| 6 | Other official social profiles | Instagram `@pospalsoftware`; no Facebook or company LinkedIn. Personal LinkedIn supplied on 2026-11-15 (see below) | Confirmed |
 | 7 | VAT treatment of €23.90 price | Small-business VAT exemption; €23.90 total, no VAT added | Accountant-confirmed, supplied by owner on 2026-09-30; supersedes earlier VAT assumption |
 | 8 | Canonical public descriptor | `POSPal.gr — σύστημα παραγγελιοληψίας και ροής κουζίνας για καφέ και εστιατόρια στην Ελλάδα` | Confirmed |
 | 9 | Public entity-page URL | `/sxetika-me-to-pospal/` | Confirmed |
@@ -82,3 +83,7 @@ No additional user-supplied identity fact is required for the first entity-page 
 ## Current VAT treatment — Legal Issue #2, 2026-09-30
 
 The owner supplied the accountant-confirmed Greek small-business VAT exemption status. The subscription is EUR 23.90 per month total; no VAT is charged or added. This supersedes previous VAT-inclusive assumptions, including historical audit records. Article 44a is the applicable regime; this is an exemption, not a zero rate. Stripe configuration and invoicing remain separate unresolved issues.
+
+## Author identity — 2026-11-15
+
+The owner supplied `https://www.linkedin.com/in/robert-zairey/` as his personal LinkedIn and authorized implementing the authorship audit recommendations. Keep the approved public name `Robert Airey`. The profile belongs to the person and must not be added to the organization's `sameAs`. LinkedIn blocks automated viewing; no employment history, qualifications, or hospitality experience has been inferred from it. The shared author identifier is `https://pospal.gr/sxetika-me-to-pospal/#robert-airey`.

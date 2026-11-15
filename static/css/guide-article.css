@@ -29,6 +29,41 @@
   margin-top: 0.45rem;
 }
 
+.guide-author {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.guide-author img {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.guide-author p {
+  margin: 0;
+}
+
+.guide-author span {
+  display: block;
+}
+
+.guide-author a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: #096b31;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 .guide-article {
   display: grid;
   gap: clamp(2.75rem, 6vw, 4.75rem);

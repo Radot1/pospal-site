@@ -22,7 +22,7 @@
   <link rel="preload" href="/static/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/static/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/prototype/homepage-v3/styles.css">
-  <link rel="stylesheet" href="/static/css/about.css">
+  <link rel="stylesheet" href="/static/css/about.css?v=20261115">
   <script src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
   <script>document.documentElement.classList.remove('no-js');</script>
@@ -44,8 +44,7 @@
         "description": "Ατομική επιχείρηση που αναπτύσσει και υποστηρίζει το POSPal, σύστημα παραγγελιοληψίας και ροής κουζίνας για την εστίαση.",
         "email": "support@pospal.gr",
         "founder": {
-          "@type": "Person",
-          "name": "Robert Airey"
+          "@id": "https://pospal.gr/sxetika-me-to-pospal/#robert-airey"
         },
         "address": {
           "@type": "PostalAddress",
@@ -66,6 +65,17 @@
           "https://www.youtube.com/@pospal_gr",
           "https://github.com/Radot1"
         ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pospal.gr/sxetika-me-to-pospal/#robert-airey",
+        "name": "Robert Airey",
+        "url": "https://pospal.gr/sxetika-me-to-pospal/#robert-airey",
+        "image": "https://pospal.gr/static/img/robert-airey-founder.jpg",
+        "jobTitle": "Δημιουργός του POSPal",
+        "description": "Δημιουργός του POSPal στη Μυτιλήνη. Γράφει για την παραγγελιοληψία και τη ροή κουζίνας, την εγκατάσταση σε Windows, τα κινητά, τους εκτυπωτές και το QR μενού.",
+        "sameAs": ["https://www.linkedin.com/in/robert-zairey/"],
+        "worksFor": {"@id": "https://pospal.gr/#organization"}
       },
       {
         "@type": "SoftwareApplication",
@@ -226,10 +236,13 @@
 
     <section class="about-section about-section-muted" aria-labelledby="identity-title">
       <div class="shell about-identity-grid">
-        <div class="about-founder-copy">
+        <div class="about-founder-copy" id="robert-airey">
           <h2 id="identity-title">Η ταυτότητα πίσω από το προϊόν.</h2>
-          <p class="about-lead">Το POSPal δημιουργήθηκε από τον <strong>Robert Airey</strong> και έγινε δημόσια διαθέσιμο τον Μάιο του 2025.</p>
-          <p>Η ατομική επιχείρηση που το διαθέτει και το υποστηρίζει βρίσκεται στη Μυτιλήνη, στη Λέσβο, και λειτουργεί με διακριτικό τίτλο POSPal.</p>
+          <img class="about-founder-photo" src="/static/img/robert-airey-founder.jpg" alt="Ο Robert Airey, δημιουργός του POSPal" width="96" height="96" loading="lazy" decoding="async">
+          <p class="about-lead">Ο <strong>Robert Airey</strong> είναι ο δημιουργός του POSPal. Το αναπτύσσει στη Μυτιλήνη, στη Λέσβο.</p>
+          <p>Γράφει εδώ για την παραγγελιοληψία και τη ροή κουζίνας: από την πρώτη εγκατάσταση σε Windows και τη σύνδεση του κινητού μέχρι τις ρυθμίσεις εκτυπωτών και το QR μενού.</p>
+          <p><a class="about-founder-link" href="https://www.linkedin.com/in/robert-zairey/" rel="me">Ο Robert Airey στο LinkedIn <span aria-hidden="true">↗</span></a></p>
+          <p>Το POSPal έγινε δημόσια διαθέσιμο τον Μάιο του 2025. Η ατομική επιχείρηση που το διαθέτει και το υποστηρίζει βρίσκεται στη Μυτιλήνη και λειτουργεί με διακριτικό τίτλο POSPal.</p>
         </div>
         <dl class="about-identity-ledger" aria-label="Στοιχεία επιχείρησης POSPal">
           <div><dt>Δημιουργός (δημόσιο όνομα)</dt><dd>Robert Airey</dd></div>

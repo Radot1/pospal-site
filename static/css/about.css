@@ -282,6 +282,30 @@
   margin: 1.35rem 0 0;
 }
 
+#robert-airey {
+  scroll-margin-top: 104px;
+}
+
+.about-founder-photo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-top: 1.35rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-founder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 44px;
+  color: var(--green-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 .about-identity-ledger {
   margin: 0;
   border-top: 1px solid var(--ink);
