@@ -37,7 +37,7 @@ footer .directory-badges-list {
 footer .directory-badges-list a {
   display: inline-flex;
   align-items: center;
-  flex: 0 1 182px;
+  flex: 0 1 auto;
   max-width: 100%;
   min-height: 44px;
   padding: 0;
@@ -52,8 +52,6 @@ footer .directory-badges-list a:focus-visible {
 
 footer .directory-badges-list img {
   display: block;
-  width: 182px;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 182 / 43;
 }
