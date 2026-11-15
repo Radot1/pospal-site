@@ -1,0 +1,59 @@
+footer .directory-badges {
+  margin: 16px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+
+footer .directory-badges--sitewide {
+  width: min(1120px, calc(100% - 36px));
+  margin-inline: auto;
+}
+
+footer .directory-badges.shell {
+  margin-inline: auto;
+}
+
+footer .directory-badges h2 {
+  margin: 0 0 8px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: .75;
+}
+
+footer .directory-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+footer .directory-badges-list a {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 182px;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+footer .directory-badges-list a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+footer .directory-badges-list img {
+  display: block;
+  width: 182px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 182 / 43;
+}
