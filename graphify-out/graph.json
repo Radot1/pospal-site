@@ -17287,6 +17287,27 @@
       "source_file": "arthra/index.html",
       "confidence": "EXTRACTED",
       "url": "/arthra/?category=pda"
+    },
+    {
+      "id": "pospal_pricing_hallmark_styles",
+      "label": "Hallmark pricing layout",
+      "file_type": "code",
+      "source_file": "static/css/pricing-hallmark/styles.css",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_pricing_hallmark_tokens",
+      "label": "POSPal pricing design tokens",
+      "file_type": "code",
+      "source_file": "static/css/pricing-hallmark/tokens.css",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_pricing_hallmark_base",
+      "label": "Isolated pricing base styles",
+      "file_type": "code",
+      "source_file": "static/css/pricing-hallmark/base.css",
+      "confidence": "EXTRACTED"
     }
   ],
   "links": [
@@ -34757,15 +34778,6 @@
     },
     {
       "source": "pricing_page",
-      "target": "pospal_article_navigation",
-      "relation": "loads",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "weight": 1.0,
-      "source_file": "times.html"
-    },
-    {
-      "source": "pricing_page",
       "target": "systima_paraggeliolipsias_ordering_system_hub_page",
       "relation": "related_reading",
       "confidence": "EXTRACTED",
@@ -34889,6 +34901,33 @@
       "confidence_score": 1.0,
       "weight": 1.0,
       "source_file": "paraggelio-lipsia-gia-beach-bar.html"
+    },
+    {
+      "source": "pricing_page",
+      "target": "pospal_pricing_hallmark_styles",
+      "relation": "loads",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "times.html"
+    },
+    {
+      "source": "pospal_pricing_hallmark_styles",
+      "target": "pospal_pricing_hallmark_tokens",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "static/css/pricing-hallmark/styles.css"
+    },
+    {
+      "source": "pospal_pricing_hallmark_styles",
+      "target": "pospal_pricing_hallmark_base",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "static/css/pricing-hallmark/styles.css"
     }
   ],
   "hyperedges": [

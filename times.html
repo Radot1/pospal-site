@@ -25,7 +25,6 @@
   <link rel="apple-touch-icon" href="/static/img/pospal-icon-180.png">
   <link rel="preload" href="/static/fonts/Inter-Regular.woff2" as="font" type="font/woff2" media="(min-width: 621px)" crossorigin>
   <link rel="preload" href="/static/fonts/Inter-Bold.woff2" as="font" type="font/woff2" media="(min-width: 621px)" crossorigin>
-  <link rel="stylesheet" href="/static/css/pricing-buyer-guide.css?v=20261112-price-scope">
   <script defer src="/static/js/ga-consent.js"></script>
   <script defer src="/static/js/ga-events.js"></script>
   <script type="application/ld+json">
@@ -101,95 +100,90 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="/static/css/legal-links.css">
-  <link rel="stylesheet" href="/static/css/article-navigation.css?v=20261111">
+  <link rel="stylesheet" href="/static/css/pricing-hallmark/styles.css?v=20261115">
 </head>
-<body class="seo-page pricing-page">
-  <a class="seo-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
-  <header class="seo-header">
-    <div class="seo-shell seo-header-inner">
-      <a class="seo-brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-icon-96.png" alt="" width="36" height="36" decoding="async"><span translate="no">POS<b>Pal</b></span></a>
-      <nav class="seo-nav" aria-label="Κύρια πλοήγηση"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html" aria-current="page">Τιμές</a><a href="/guides/">Οδηγοί</a></nav>
-      <a class="seo-button seo-button-primary seo-header-cta" href="/download/">Κατέβασε για Windows</a>
+<body class="pricing-page">
+  <a class="skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-icon-96.png" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a>
+      <nav class="desktop-nav" aria-label="Κύρια πλοήγηση"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html" aria-current="page">Τιμές</a><a href="/guides/">Οδηγοί</a></nav>
+      <a class="header-download" href="/download/">Κατέβασε για Windows</a>
+      <details class="mobile-menu"><summary>Μενού</summary><nav aria-label="Πλοήγηση κινητού"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html" aria-current="page">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε για Windows</a></nav></details>
     </div>
   </header>
   <main id="main-content" tabindex="-1">
-    <section class="price-offer seo-shell" aria-labelledby="pricing-title">
-      <h1 id="pricing-title">Τιμές προγράμματος παραγγελιοληψίας</h1>
-      <div class="price-card" id="pricing-table">
-        <div class="price-amount">
-          <p class="price-offer-label">Ειδική τιμή για τους πρώτους χρήστες</p>
-          <p class="price-number">23,90 € <span>/ μήνα</span></p>
-          <p class="price-tax">Τελική τιμή. Δεν προστίθεται ΦΠΑ. Χωρίς χρέωση ανά PDA.</p>
-          <p class="price-scope">Η συνδρομή αφορά μόνο το πρόγραμμα. Υπολογιστής Windows x64, κινητά/tablet και τοπικό δίκτυο δεν περιλαμβάνονται. Το στήσιμο το κάνεις εσύ. <a href="#setup-cost-title">Εξοπλισμός και στήσιμο <span aria-hidden="true">→</span></a></p>
-          <p class="price-trial-copy"><strong>30 ημέρες δωρεάν.</strong><br>Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</p>
-          <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
-          <a class="price-guide" href="/guides/windows-installation/">Οδηγός εγκατάστασης <span aria-hidden="true">→</span></a>
+    <section class="offer" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="offer-grid">
+          <div class="offer-copy">
+            <h1 id="pricing-title">Παραγγελιοληψία.<br>Μία συνδρομή.</h1>
+            <p class="lead">30 ημέρες δωρεάν. Μετά 23,90 € τον μήνα.</p>
+            <div class="actions"><a class="btn btn-primary" href="/download/">Κατέβασε για Windows</a><a class="text-link" href="/guides/windows-installation/">Οδηγός εγκατάστασης</a></div>
+            <p class="trial-note">Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας.</p>
+          </div>
+          <div class="price-board" id="pricing-table" aria-label="23,90 ευρώ τον μήνα">
+            <p class="price-number">23,90<span class="currency">€</span></p>
+            <p class="price-period">τον μήνα, μετά τη δοκιμή</p>
+            <p class="price-tax">Τελική τιμή. Δεν προστίθεται ΦΠΑ.</p>
+            <p class="price-device">Χωρίς χρέωση ανά PDA.</p>
+            <div class="board-bottom"><p>Ειδική τιμή για τους πρώτους χρήστες</p><a href="#setup-cost-title">Εξοπλισμός και στήσιμο ξεχωριστά</a></div>
+          </div>
         </div>
-        <div class="price-includes" id="perilamvanei">
-          <h2 id="included-title">Όλο το POSPal. Μία συνδρομή.</h2>
-          <ul>
-            <li>Παραγγελιοληψία</li>
-            <li>Τραπέζια / απλή λειτουργία</li>
-            <li>Ασύρματη παραγγελιοληψία από κατάλληλα κινητά / tablet</li>
-            <li>Ροή κουζίνας / <a href="/guides/printer-setup/">εκτυπώσεις</a></li>
-            <li><a href="/guides/qr-menu/">QR μενού</a></li>
-          </ul>
-          <p class="price-trial-note">Πρώτα στη βάρδια. Μετά αποφασίζεις.</p>
-        </div>
-        <div class="price-conditions">
-          <p class="price-retention">Κρατάς την τιμή όσο η ίδια συνδρομή παραμένει αδιάλειπτα ενεργή.</p>
-          <p class="price-terms">Χωρίς ελάχιστη δέσμευση. Ακύρωση όποτε θέλεις, σύμφωνα με τους <a href="/terms/">όρους συνδρομής</a>.</p>
-        </div>
-      </div>
-      <p class="price-boundary">Το POSPal είναι σύστημα παραγγελιοληψίας. Δεν είναι ταμειακή ή φορολογικό POS. <a href="/systima-paraggeliolipsias.html">Πώς δουλεύει το πρόγραμμα POSPal <span aria-hidden="true">→</span></a></p>
-    </section>
-    <section class="price-setup seo-shell" aria-labelledby="setup-cost-title">
-      <h2 id="setup-cost-title">Τι πληρώνεις και τι χρειάζεται να έχεις;</h2>
-      <table>
-        <thead><tr><th scope="col">Στοιχείο</th><th scope="col">Τι ισχύει</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Συνδρομή λογισμικού</th><td>23,90 € τον μήνα συνολικά. Δεν προστίθεται ΦΠΑ και δεν υπάρχει επιπλέον χρέωση ανά PDA. Περιλαμβάνονται παραγγελιοληψία, τραπέζια, απλή λειτουργία, ροή κουζίνας, εκτυπώσεις και QR μενού.</td></tr>
-          <tr><th scope="row">Υπολογιστής και συσκευές</th><td>Χρειάζεσαι υπολογιστή Windows x64 και κατάλληλα κινητά ή tablet με browser. Πρέπει να μπορούν να επικοινωνούν με τον υπολογιστή μέσα από το τοπικό δίκτυο του μαγαζιού. Οι συσκευές και το δίκτυο δεν περιλαμβάνονται στη συνδρομή.</td></tr>
-          <tr><th scope="row">Εκτυπωτής, αν θέλεις χαρτί</th><td>Ο εκτυπωτής είναι ξεχωριστός εξοπλισμός. Χρειάζεται εγκατάσταση στα Windows και πραγματική δοκιμαστική εκτύπωση. Δες την <a href="/guides/printer-setup/">προετοιμασία εκτυπωτή</a>.</td></tr>
-          <tr><th scope="row">Αρχικό στήσιμο</th><td>Το αναλαμβάνεις εσύ, με τους οδηγούς μας και υποστήριξη με email. Δεν περιλαμβάνεται εγκατάσταση στον χώρο σου ή τηλεφωνική υποστήριξη. Ξεκίνα από τον <a href="/guides/windows-installation/">οδηγό εγκατάστασης για Windows</a>.</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="price-faq seo-shell" id="faq" aria-labelledby="faq-title">
-      <h2 id="faq-title">Πριν το κατεβάσεις.</h2>
-      <div class="seo-faq">
-        <details><summary>Πόσο κοστίζει;</summary><p>23,90 € τον μήνα, μετά τις 30 δωρεάν ημέρες. Η POSPal υπάγεται επί του παρόντος στο καθεστώς απαλλαγής ΦΠΑ μικρών επιχειρήσεων, επομένως στην τιμή δεν προστίθεται ΦΠΑ. Ακυρώνεις όποτε θέλεις: σταματά η επόμενη ανανέωση και έχεις πρόσβαση μέχρι το τέλος της πληρωμένης περιόδου.</p></details>
-        <details><summary>Τι περιλαμβάνει;</summary><p>Όλο το POSPal: παραγγελιοληψία, τραπέζια και απλή λειτουργία, ασύρματη παραγγελιοληψία, ροή κουζίνας, εκτυπώσεις και QR μενού.</p></details>
-        <details><summary>Χρεώνομαι ανά PDA;</summary><p>Όχι. Χρησιμοποιείς κατάλληλα κινητά ή tablet με browser και πρόσβαση στον υπολογιστή Windows από το τοπικό δίκτυο του καταστήματος. <a href="/asyrmati-paraggeliolipsia.html">Πώς λειτουργεί η ασύρματη παραγγελιοληψία →</a></p></details>
-        <details><summary>Χρειάζεται κάρτα για τη δοκιμή;</summary><p>Όχι. Δεν απαιτούνται όνομα, email, λογαριασμός ή στοιχεία κάρτας. Η δοκιμή αρχίζει στο στήσιμο του καταστήματος και δεν μετατρέπεται αυτόματα σε πληρωμένη συνδρομή.</p></details>
-        <details><summary>Είναι φορολογικό POS ή ταμειακή;</summary><p>Όχι. Είναι σύστημα παραγγελιοληψίας και ροής κουζίνας. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα, χωρίς να το αντικαθιστά.</p></details>
+        <div class="offer-foot"><p>Κρατάς την τιμή όσο η ίδια συνδρομή παραμένει αδιάλειπτα ενεργή.</p><p>Χωρίς ελάχιστη δέσμευση. Ακύρωση όποτε θέλεις, σύμφωνα με τους <a href="/terms/">όρους συνδρομής</a>.</p></div>
       </div>
     </section>
-    <section class="price-final seo-shell" aria-labelledby="final-title">
-      <div><h2 id="final-title">Δοκίμασέ το στη δική σου βάρδια.</h2>
-      <p>30 ημέρες δωρεάν. Μετά 23,90 € / μήνα, αν συνεχίσεις.</p></div>
-      <a class="seo-button seo-button-primary" href="/download/">Κατέβασε για Windows</a>
+    <section class="section included" id="perilamvanei" aria-labelledby="included-title">
+      <div class="container">
+        <div class="section-head"><h2 id="included-title">Όλα περιλαμβάνονται.</h2><p>Η συνδρομή αφορά μόνο το πρόγραμμα. Ο εξοπλισμός και το αρχικό στήσιμο είναι ξεχωριστά.</p></div>
+        <dl class="feature-list">
+          <div><dt>Παραγγελιοληψία</dt><dd>Τραπέζια / απλή λειτουργία</dd></div>
+          <div><dt>Ασύρματη παραγγελιοληψία</dt><dd>Από κατάλληλα κινητά ή tablet</dd></div>
+          <div><dt>Ροή κουζίνας</dt><dd>Και <a href="/guides/printer-setup/">εκτυπώσεις</a></dd></div>
+          <div><dt>QR μενού</dt><dd><a href="/guides/qr-menu/">Οδηγός QR μενού</a></dd></div>
+        </dl>
+        <div class="included-bottom"><p class="statement">Πρώτα στη βάρδια.<br>Μετά αποφασίζεις.</p><p class="boundary">Το POSPal είναι σύστημα παραγγελιοληψίας. Δεν είναι ταμειακή ή φορολογικό POS. <a href="/systima-paraggeliolipsias.html">Πώς δουλεύει το πρόγραμμα POSPal</a></p></div>
+      </div>
     </section>
-    <!-- POSPAL-COMMERCE-LEGAL -->
-  <p class="legal-commerce-note">Η πληρωμένη συνδρομή διέπεται από τους <a href="/terms/">Όρους Συνδρομής</a> και το <a href="/eula/">EULA</a>. Δείτε επίσης την <a href="/privacy/">Πολιτική Απορρήτου</a>.</p>
-
-    <nav class="article-related" aria-label="Σχετικά άρθρα">
-      <h2>Διάβασε επίσης</h2>
-      <ul>
-        <li><a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας για εστίαση</a></li>
-        <li><a href="/pos-na-dialexeis-paraggeliolipsia.html">Πώς διαλέγεις πρόγραμμα για μικρή καφετέρια;</a></li>
-      </ul>
-      <a class="article-all" href="/arthra/">Όλα τα άρθρα <span aria-hidden="true">→</span></a>
-    </nav>
+    <section class="section setup" aria-labelledby="setup-cost-title">
+      <div class="container">
+        <div class="section-head"><h2 id="setup-cost-title">Πρόγραμμα, εξοπλισμός<br>και στήσιμο.</h2><p>Τι πληρώνεις και τι χρειάζεται να έχεις;</p></div>
+        <table class="setup-table">
+          <thead><tr><th scope="col">Στοιχείο</th><th scope="col">Τι ισχύει</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Συνδρομή λογισμικού</th><td><p>Η συνδρομή αφορά μόνο το πρόγραμμα. Δεν υπάρχει επιπλέον χρέωση ανά PDA. Περιλαμβάνονται παραγγελιοληψία, τραπέζια, απλή λειτουργία, ροή κουζίνας, εκτυπώσεις και QR μενού.</p></td></tr>
+            <tr><th scope="row">Υπολογιστής και συσκευές</th><td><p>Χρειάζεσαι υπολογιστή Windows x64 και κατάλληλα κινητά ή tablet με browser. Πρέπει να μπορούν να επικοινωνούν με τον υπολογιστή μέσα από το τοπικό δίκτυο του μαγαζιού. Οι συσκευές και το δίκτυο δεν περιλαμβάνονται στη συνδρομή.</p></td></tr>
+            <tr><th scope="row">Εκτυπωτής, αν θέλεις χαρτί</th><td><p>Ο εκτυπωτής είναι ξεχωριστός εξοπλισμός. Χρειάζεται εγκατάσταση στα Windows και πραγματική δοκιμαστική εκτύπωση. Δες την <a href="/guides/printer-setup/">προετοιμασία εκτυπωτή</a>.</p></td></tr>
+            <tr><th scope="row">Αρχικό στήσιμο</th><td><p>Το αναλαμβάνεις εσύ, με τους οδηγούς μας και υποστήριξη με email. Δεν περιλαμβάνεται εγκατάσταση στον χώρο σου ή τηλεφωνική υποστήριξη. Ξεκίνα από τον <a href="/guides/windows-installation/">οδηγό εγκατάστασης για Windows</a>.</p></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <h2 id="faq-title">Πριν το κατεβάσεις.</h2>
+        <div class="questions">
+          <details><summary>Πόσο κοστίζει;</summary><p>23,90 € τον μήνα, μετά τις 30 δωρεάν ημέρες. Η POSPal υπάγεται επί του παρόντος στο καθεστώς απαλλαγής ΦΠΑ μικρών επιχειρήσεων, επομένως στην τιμή δεν προστίθεται ΦΠΑ. Ακυρώνεις όποτε θέλεις: σταματά η επόμενη ανανέωση και έχεις πρόσβαση μέχρι το τέλος της πληρωμένης περιόδου.</p></details>
+          <details><summary>Τι περιλαμβάνει;</summary><p>Όλο το POSPal: παραγγελιοληψία, τραπέζια και απλή λειτουργία, ασύρματη παραγγελιοληψία, ροή κουζίνας, εκτυπώσεις και QR μενού.</p></details>
+          <details><summary>Χρεώνομαι ανά PDA;</summary><p>Όχι. Χρησιμοποιείς κατάλληλα κινητά ή tablet με browser και πρόσβαση στον υπολογιστή Windows από το τοπικό δίκτυο του καταστήματος. <a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a></p></details>
+          <details><summary>Χρειάζεται κάρτα για τη δοκιμή;</summary><p>Όχι. Δεν απαιτούνται όνομα, email, λογαριασμός ή στοιχεία κάρτας. Η δοκιμή αρχίζει στο στήσιμο του καταστήματος και δεν μετατρέπεται αυτόματα σε πληρωμένη συνδρομή.</p></details>
+          <details><summary>Είναι φορολογικό POS ή ταμειακή;</summary><p>Όχι. Είναι σύστημα παραγγελιοληψίας και ροής κουζίνας. Λειτουργεί δίπλα στο υπάρχον φορολογικό σύστημα, χωρίς να το αντικαθιστά.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="section closing" aria-labelledby="final-title">
+      <div class="container">
+        <div class="closing-grid"><div><h2 id="final-title">Δοκίμασέ το στη δική σου βάρδια.</h2><p class="lead">30 ημέρες δωρεάν. Μετά 23,90 € / μήνα, αν συνεχίσεις.</p></div><a class="btn btn-primary closing-action" href="/download/">Κατέβασε για Windows</a></div>
+        <p class="commerce-note">Η πληρωμένη συνδρομή διέπεται από τους <a href="/terms/">Όρους Συνδρομής</a> και το <a href="/eula/">EULA</a>. Δείτε επίσης την <a href="/privacy/">Πολιτική Απορρήτου</a>.</p>
+        <nav class="related" aria-label="Σχετικά άρθρα"><h2>Διάβασε επίσης</h2><div class="related-links"><a href="/systima-paraggeliolipsias.html">Σύστημα παραγγελιοληψίας</a><a href="/pos-na-dialexeis-paraggeliolipsia.html">Πρόγραμμα για καφετέρια</a><a href="/arthra/">Όλα τα άρθρα</a></div></nav>
+      </div>
+    </section>
   </main>
-  <footer class="seo-footer">
-    <div class="seo-shell seo-footer-inner"><p><strong>POSPal</strong> · Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p><nav aria-label="Σύνδεσμοι σελίδας"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε</a></nav></div>
-
-    <!-- POSPAL-LEGAL-LINKS:START -->
-    <p class="pospal-legal-links pospal-legal-links--sitewide">POSPal · ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ ΡΟΜΠΕΡΤΟΣ · ΓΕΜΗ 195335742000</p>
-    <nav class="pospal-legal-links pospal-legal-links--sitewide" aria-label="Νομικά κείμενα"><a href="/legal/">Νομικά</a><a href="/privacy/">Απόρρητο</a><a href="/cookies/">Cookies</a><a href="/terms/">Όροι</a><a href="/eula/">EULA</a><a href="/dpa/">DPA</a><a href="/subprocessors/">Πάροχοι</a></nav>
-    <!-- POSPAL-LEGAL-LINKS:END -->
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top"><div><a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-icon-96.png" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a><p class="footer-description">Παραγγελιοληψία και ροή κουζίνας για Windows. Δεν είναι φορολογικό POS ή ταμειακή.</p></div><nav class="footer-nav" aria-label="Σύνδεσμοι σελίδας"><a href="/">Αρχική</a><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a><a href="/guides/">Οδηγοί</a><a href="/download/">Κατέβασε</a></nav></div>
+      <div class="legal-bottom"><p>POSPal<br>ΖΟΥΜΠΟΥΛΗΣ ΕΡΗ ΡΟΜΠΕΡΤΟΣ<br>ΓΕΜΗ 195335742000</p><nav class="legal-nav" aria-label="Νομικά κείμενα"><a href="/legal/">Νομικά</a><a href="/privacy/">Απόρρητο</a><a href="/cookies/">Cookies</a><a href="/terms/">Όροι</a><a href="/eula/">EULA</a><a href="/dpa/">DPA</a><a href="/subprocessors/">Πάροχοι</a></nav></div>
+    </div>
+  </footer>
 </body>
 </html>

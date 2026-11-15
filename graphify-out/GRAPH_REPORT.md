@@ -1,5 +1,9 @@
 # Graph Report - pospal-site  (2026-09-03)
 
+## Pricing redesign refresh — 2026-11-15
+
+Updated the curated graph for `/times.html` and its dedicated Hallmark layout, token and base styles under `static/css/pricing-hallmark/`. The pricing page no longer loads the shared article-navigation stylesheet; its article links are retained in its own markup. The existing URL, SEO metadata, structured data, consent scripts, download flow and product facts remain. The locked homepage, download and guide pages and shared rendering dependencies are unchanged. The graph JSON contains these targeted changes; historical extraction figures below remain historical.
+
 ## Internal navigation refresh — 2026-11-11
 
 Updated the curated graph with the mobile V5 homepage entry links, all nine articles-index destinations, six category breadcrumbs, reciprocal home/articles links, related-reading pairs, isolated navigation stylesheet, URL-backed filters and browser verification script. Article categories use `/arthra/?category=pda`, `paraggeliolipsia` and `kostos`; search uses `q`. The original article URLs remain unchanged. Earlier graph corpus figures below describe the historical full extraction.
