@@ -87,6 +87,7 @@ ul, ol { padding-left: 1.4em; }
 .site-footer p { margin-bottom: 16px; }
 .buyer-guide-page .site-footer .directory-badges h2 { color: var(--color-muted); opacity: 1; }
 .pospal-legal-links--sitewide { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-rule); font-size: 12px; }
+.site-footer p.pospal-legal-links--sitewide { text-align: center; }
 .pda-skip { position: fixed; z-index: 500; left: 16px; top: 12px; padding: 12px; color: var(--color-accent-ink); background: var(--color-accent); transform: translateY(-150%); }
 .pda-skip:focus-visible { transform: translateY(0); }
 @media (max-width: 900px) {
