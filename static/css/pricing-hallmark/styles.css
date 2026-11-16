@@ -103,6 +103,7 @@ a:active { opacity: .8; }
 .footer-nav a, .legal-nav a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font-size: var(--text-sm); text-decoration: none; }
 .footer-nav a:hover, .legal-nav a:hover { text-decoration: underline; }
 .legal-bottom { padding-top: var(--space-lg); border-top: 1px solid var(--color-rule); display: grid; gap: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
+.legal-bottom > p { max-width: none; text-align: center; }
 .legal-nav { display: flex; flex-wrap: wrap; gap: 0 var(--space-lg); }
 @media (min-width: 100rem) { .offer-grid { gap: var(--space-3xl); } }
 @media (max-width: 75rem) { .offer-grid { gap: var(--space-xl); } .price-board { padding: var(--space-lg); } .price-number { font-size: clamp(5.5rem, 11vw, 9rem); } }
