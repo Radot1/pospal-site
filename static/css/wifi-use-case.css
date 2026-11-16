@@ -1,0 +1,53 @@
+/* Local to the Wi-Fi article; the established article styles stay shared. */
+.wifi-use-case-page h1,
+.wifi-use-case-page h2,
+.wifi-use-case-page th {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.wifi-use-case-page .article-header h1 { font-size: clamp(2.25rem, 4.5vw, 3.8rem); }
+.wifi-use-case-page .article-body { margin-top: 24px; }
+.wifi-use-case-page .article-related { margin-top: 64px; }
+
+.wifi-use-case-page .wifi-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 48px;
+  padding: 13px 20px;
+  color: #fff;
+  background: #146532;
+  font: 700 17px/1.4 var(--editorial-sans);
+  text-decoration: none;
+}
+
+.wifi-use-case-page .wifi-download:hover { background: #102319; }
+.wifi-use-case-page a:focus-visible,
+.wifi-use-case-page summary:focus-visible { outline: 3px solid #146532; outline-offset: 4px; }
+.wifi-use-case-page .site-footer a:focus-visible { outline-color: #35ed78; }
+.wifi-early-cta small { display: block; margin-top: 12px; font: 14px/1.6 var(--editorial-sans); }
+.wifi-table-wrap { margin-bottom: 28px; }
+.wifi-scenarios { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.55; }
+.wifi-scenarios caption { margin-bottom: 16px; text-align: left; font: 700 16px/1.5 var(--editorial-sans); }
+.wifi-scenarios th,
+.wifi-scenarios td { padding: 16px 12px; border-bottom: 1px solid #a6b3aa; text-align: left; vertical-align: top; }
+.wifi-scenarios th { font-family: var(--editorial-sans); }
+.wifi-scenarios thead { color: #fff; background: #102319; }
+.wifi-scenarios tbody th { width: 36%; }
+.wifi-product-proof { margin: 36px 0; }
+.wifi-product-proof img { width: 100%; height: auto; }
+.wifi-use-case-page .wifi-price-note { font-size: 15px; }
+.wifi-use-case-page .pospal-consent-btn { min-height: 44px; }
+
+@media (max-width: 480px) {
+  .wifi-scenarios { font-size: 15px; }
+  .wifi-scenarios th,
+  .wifi-scenarios td { padding: 12px 8px; }
+  .wifi-scenarios tbody th { width: 38%; font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -17315,6 +17315,22 @@
       "file_type": "code",
       "source_file": "static/css/homepage-hallmark-polish.css",
       "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_interruption_article",
+      "label": "Wi-Fi Interruption Use-Case Article",
+      "file_type": "document",
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_use_case_styles",
+      "label": "Scoped Wi-Fi Article Styles",
+      "file_type": "code",
+      "source_file": "static/css/wifi-use-case.css",
+      "source_location": "L1",
+      "confidence": "EXTRACTED"
     }
   ],
   "links": [
@@ -34953,6 +34969,86 @@
       "confidence_score": 1.0,
       "weight": 1.0,
       "source_file": "index.html"
+    },
+    {
+      "source": "pospal_articles_hub",
+      "target": "pospal_wifi_interruption_article",
+      "relation": "category_card_links_to",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "arthra/index.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_articles_hub",
+      "relation": "breadcrumbs_and_related_return",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "asyrmati_paraggeliolipsia_wireless_ordering_page",
+      "relation": "contextual_wireless_overview_link",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "download_index_installer_handoff",
+      "relation": "navigation_download_link",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "guides_windows_installation_index_installation_guide",
+      "relation": "installation_followup",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "guides_qr_menu_index_qr_guide",
+      "relation": "qr_menu_boundary_and_guide",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_wifi_use_case_styles",
+      "relation": "page_scoped_stylesheet",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "asyrmati_paraggeliolipsia_same_device_reconnect",
+      "relation": "explains_same_device_recovery",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
     }
   ],
   "hyperedges": [

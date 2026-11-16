@@ -723,3 +723,10 @@ Targeted inventory update: index.html now uses the restored mobile V4 layout wit
 Targeted inventory update: `index.html` restores the exact pre-promotion desktop design from commit `03446b9` above 720px, using the unchanged `prototype/homepage-v3/styles.css` and `prototype/homepage-v3/motion.js`. The existing mobile V4 design remains at 720px and below. CSS media conditions isolate the two designs; mobile IDs that overlapped the desktop are namespaced. The backup remains unchanged. The mobile script binds cookie settings to the mobile footer. No download/guide page or shared asset changed.
 
 Added the desktop stylesheet node and three EXTRACTED dependency/provenance edges, and qualified the mobile stylesheet edge by viewport. Existing clusters were preserved; no full re-extraction was performed. Endpoint integrity passed. No external extraction API was used (0 API input/output tokens); host-agent usage is not independently metered.
+
+## Wi-Fi interruption article — 2026-11-16
+
+- `paraggeliolipsia-xoris-wifi.html`: Greek use-case article covering local-device pending orders, reconnect review, Wi-Fi versus internet, Windows host requirements and a pre-shift check.
+- Discovered from the Articles hub in the `paraggeliolipsia` category and `sitemap.xml`; primary CTA uses the approved installer.
+- Reuses the established editorial styles; `static/css/wifi-use-case.css` is scoped to the new page. Locked pages and shared rendering dependencies are unchanged.
+- Source boundaries come from `docs/seo/pospal-product-fact-checklist.md` and the maintained private application recovery contract. Uses the existing Articles section on pospal.gr; no separate blog subdomain.
