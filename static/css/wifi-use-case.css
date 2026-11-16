@@ -54,3 +54,5 @@
   }
   .wifi-screen-pair .wifi-flow-shot { scroll-snap-align: start; }
 }
+
+.wifi-flow-shot.wifi-kitchen-proof { width: 100%; }

@@ -17362,9 +17362,9 @@
     },
     {
       "id": "pospal_wifi_flow_kitchen",
-      "label": "Received Offline Sample Order In Mobile Kitchen",
+      "label": "Received Offline Sample Order In Desktop Kitchen",
       "file_type": "image",
-      "source_file": "static/img/articles/pospal-wifi-flow-kitchen.webp",
+      "source_file": "static/img/articles/pospal-wifi-flow-kitchen-desktop.webp",
       "confidence": "EXTRACTED"
     }
   ],

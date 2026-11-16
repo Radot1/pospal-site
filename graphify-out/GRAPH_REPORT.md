@@ -745,3 +745,8 @@ Added the desktop stylesheet node and three EXTRACTED dependency/provenance edge
 - Test: Table 8, order #6, quantity 2 and explicit test note. Composed, edited and submitted while only the staff browser tab was disconnected. Pending count appeared, automatic reconnect replay completed, and kitchen showed the same two units and note. No payment or print test.
 - Assets live under `static/img/articles/pospal-wifi-flow-*.webp` (five files, about 130 KB total). The previous standalone pending image is replaced. Mobile pairs use native horizontal scrolling, focusable labelled regions and full-size image links; desktop pairs sit side by side.
 - Verified 320px/390px page widths and actual horizontal swipe; no new JavaScript, shared-style edits or locked-page changes.
+
+## Desktop kitchen proof correction — 2026-11-16
+
+- The four waiter screenshots remain mobile. The fifth image is now a fresh 1600 × 900 desktop kitchen capture of the same Table 8 order #6, two units and original test note. No new app data or orders created.
+- `static/img/articles/pospal-wifi-flow-kitchen-desktop.webp` replaces the phone-width kitchen asset. Figure width, intrinsic dimensions, alt/accessible text, caption and introductory proof note now identify the desktop kitchen.
