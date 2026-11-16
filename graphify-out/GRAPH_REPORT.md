@@ -730,3 +730,11 @@ Added the desktop stylesheet node and three EXTRACTED dependency/provenance edge
 - Discovered from the Articles hub in the `paraggeliolipsia` category and `sitemap.xml`; primary CTA uses the approved installer.
 - Reuses the established editorial styles; `static/css/wifi-use-case.css` is scoped to the new page. Locked pages and shared rendering dependencies are unchanged.
 - Source boundaries come from `docs/seo/pospal-product-fact-checklist.md` and the maintained private application recovery contract. Uses the existing Articles section on pospal.gr; no separate blog subdomain.
+
+## Wi-Fi article practical rewrite — 2026-11-16
+
+- Replaced the long use-case essay at the existing URL with the observed QR → table → menu → order → send workflow, local pending panel and reconnection checks.
+- Owner-authorized test: one labelled sample order on Table 10, composed/submitted during a browser-tab-only disconnection. Observed local pending count 1, no Table 10 kitchen order while disconnected, automatic sync on reconnect and the labelled order #4 on the refreshed kitchen screen. No payment or printer test.
+- `static/img/articles/pospal-wifi-pending-mobile.webp` is a real 390px phone-view screenshot from the mobile test, not a simulated product screen. Same-device storage and held-item boundaries remain.
+
+- Mobile follow-up: repeated the disconnected send at 390 × 844 with touch emulation on Table 9. Observed the mobile connection-warning strip, saved-order message, pending sheet/count, automatic sync and labelled order #5 in the kitchen. Browser restart interrupted an earlier unsent draft; no result was claimed for that draft. All emulation/connection overrides restored.

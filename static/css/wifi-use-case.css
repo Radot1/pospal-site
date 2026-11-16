@@ -1,7 +1,7 @@
 /* Local to the Wi-Fi article; the established article styles stay shared. */
 .wifi-use-case-page h1,
 .wifi-use-case-page h2,
-.wifi-use-case-page th {
+.wifi-use-case-page blockquote {
   overflow-wrap: anywhere;
   hyphens: auto;
 }
@@ -27,27 +27,13 @@
 .wifi-use-case-page a:focus-visible,
 .wifi-use-case-page summary:focus-visible { outline: 3px solid #146532; outline-offset: 4px; }
 .wifi-use-case-page .site-footer a:focus-visible { outline-color: #35ed78; }
-.wifi-early-cta small { display: block; margin-top: 12px; font: 14px/1.6 var(--editorial-sans); }
-.wifi-table-wrap { margin-bottom: 28px; }
-.wifi-scenarios { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.55; }
-.wifi-scenarios caption { margin-bottom: 16px; text-align: left; font: 700 16px/1.5 var(--editorial-sans); }
-.wifi-scenarios th,
-.wifi-scenarios td { padding: 16px 12px; border-bottom: 1px solid #a6b3aa; text-align: left; vertical-align: top; }
-.wifi-scenarios th { font-family: var(--editorial-sans); }
-.wifi-scenarios thead { color: #fff; background: #102319; }
-.wifi-scenarios tbody th { width: 36%; }
-.wifi-product-proof { margin: 36px 0; }
-.wifi-product-proof img { width: 100%; height: auto; }
 .wifi-use-case-page .wifi-price-note { font-size: 15px; }
 .wifi-use-case-page .pospal-consent-btn { min-height: 44px; }
-
-@media (max-width: 480px) {
-  .wifi-scenarios { font-size: 15px; }
-  .wifi-scenarios th,
-  .wifi-scenarios td { padding: 12px 8px; }
-  .wifi-scenarios tbody th { width: 38%; font-size: 14px; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+.wifi-queue-proof { width: min(100%, 390px); margin: 28px auto; }
+.wifi-queue-proof img { width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
+.wifi-queue-proof a { display: block; }
