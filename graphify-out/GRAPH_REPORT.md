@@ -750,3 +750,9 @@ Added the desktop stylesheet node and three EXTRACTED dependency/provenance edge
 
 - The four waiter screenshots remain mobile. The fifth image is now a fresh 1600 × 900 desktop kitchen capture of the same Table 8 order #6, two units and original test note. No new app data or orders created.
 - `static/img/articles/pospal-wifi-flow-kitchen-desktop.webp` replaces the phone-width kitchen asset. Figure width, intrinsic dimensions, alt/accessible text, caption and introductory proof note now identify the desktop kitchen.
+
+## Real-menu screenshot refresh — 2026-11-16
+
+- Retook the five existing proof assets using the owner-updated Coffee menu: two Espresso freddo at EUR 3.80 each, Table 8, order #7, note `Μέτριοι, με λίγο πάγο. Δοκιμαστική παραγγελία.`
+- Four staff captures remain 390 × 844; the kitchen capture remains desktop at 1600 × 900. Quantity and note entered while disconnected; one pending order observed; automatic replay and exact quantity/note confirmed in the kitchen. No payment or printer action. Browser overrides restored.
+- Replaced image bytes at the maintained static paths and versioned their article references to bypass cached dummy-menu screenshots. Only order references changed in the article text.
