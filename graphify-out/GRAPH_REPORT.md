@@ -735,6 +735,13 @@ Added the desktop stylesheet node and three EXTRACTED dependency/provenance edge
 
 - Replaced the long use-case essay at the existing URL with the observed QR → table → menu → order → send workflow, local pending panel and reconnection checks.
 - Owner-authorized test: one labelled sample order on Table 10, composed/submitted during a browser-tab-only disconnection. Observed local pending count 1, no Table 10 kitchen order while disconnected, automatic sync on reconnect and the labelled order #4 on the refreshed kitchen screen. No payment or printer test.
-- `static/img/articles/pospal-wifi-pending-mobile.webp` is a real 390px phone-view screenshot from the mobile test, not a simulated product screen. Same-device storage and held-item boundaries remain.
+- `static/img/articles/pospal-wifi-flow-pending.webp` now supplies the real 390px phone-view pending screenshot, not a simulated product screen. Same-device storage and held-item boundaries remain.
 
 - Mobile follow-up: repeated the disconnected send at 390 × 844 with touch emulation on Table 9. Observed the mobile connection-warning strip, saved-order message, pending sheet/count, automatic sync and labelled order #5 in the kitchen. Browser restart interrupted an earlier unsent draft; no result was claimed for that draft. All emulation/connection overrides restored.
+
+## Full mobile offline visual sequence — 2026-11-16
+
+- Replaced the single proof image with five actual 390 × 844 screens from one approved test: offline menu, quantity/notes editing, locally saved table marker, pending sheet and received kitchen order.
+- Test: Table 8, order #6, quantity 2 and explicit test note. Composed, edited and submitted while only the staff browser tab was disconnected. Pending count appeared, automatic reconnect replay completed, and kitchen showed the same two units and note. No payment or print test.
+- Assets live under `static/img/articles/pospal-wifi-flow-*.webp` (five files, about 130 KB total). The previous standalone pending image is replaced. Mobile pairs use native horizontal scrolling, focusable labelled regions and full-size image links; desktop pairs sit side by side.
+- Verified 320px/390px page widths and actual horizontal swipe; no new JavaScript, shared-style edits or locked-page changes.

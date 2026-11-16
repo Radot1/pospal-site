@@ -34,6 +34,23 @@
   html { scroll-behavior: auto; }
 }
 
-.wifi-queue-proof { width: min(100%, 390px); margin: 28px auto; }
-.wifi-queue-proof img { width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
-.wifi-queue-proof a { display: block; }
+.wifi-flow-shot { width: min(100%, 390px); margin: 28px auto; }
+.wifi-flow-shot img { width: 100%; height: auto; border: 1px solid #cbd0cb; border-radius: 8px; }
+.wifi-flow-shot a { display: block; }
+.wifi-screen-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 16px 0 28px; }
+.wifi-screen-pair .wifi-flow-shot { width: 100%; margin: 0; }
+.wifi-use-case-page .wifi-swipe-hint,
+.wifi-use-case-page .wifi-proof-note { font: 14px/1.6 var(--editorial-sans); }
+.wifi-screen-pair:focus-visible { outline: 3px solid #146532; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .wifi-screen-pair {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% - 24px);
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 2px 14px;
+  }
+  .wifi-screen-pair .wifi-flow-shot { scroll-snap-align: start; }
+}

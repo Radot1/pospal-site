@@ -17336,7 +17336,35 @@
       "id": "pospal_wifi_pending_screenshot",
       "label": "Observed POSPal Same-Device Pending Queue Screenshot",
       "file_type": "image",
-      "source_file": "static/img/articles/pospal-wifi-pending-mobile.webp",
+      "source_file": "static/img/articles/pospal-wifi-flow-pending.webp",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_flow_menu",
+      "label": "Mobile Menu During Disconnection",
+      "file_type": "image",
+      "source_file": "static/img/articles/pospal-wifi-flow-menu.webp",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_flow_order",
+      "label": "Offline Mobile Quantity and Notes",
+      "file_type": "image",
+      "source_file": "static/img/articles/pospal-wifi-flow-order.webp",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_flow_saved",
+      "label": "Mobile Table Pending Sync Indicator",
+      "file_type": "image",
+      "source_file": "static/img/articles/pospal-wifi-flow-saved.webp",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "pospal_wifi_flow_kitchen",
+      "label": "Received Offline Sample Order In Mobile Kitchen",
+      "file_type": "image",
+      "source_file": "static/img/articles/pospal-wifi-flow-kitchen.webp",
       "confidence": "EXTRACTED"
     }
   ],
@@ -35051,6 +35079,46 @@
       "source": "pospal_wifi_interruption_article",
       "target": "pospal_wifi_pending_screenshot",
       "relation": "illustrates_observed_pending_order_test",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_wifi_flow_menu",
+      "relation": "illustrates_observed_mobile_offline_sequence",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_wifi_flow_order",
+      "relation": "illustrates_observed_mobile_offline_sequence",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_wifi_flow_saved",
+      "relation": "illustrates_observed_mobile_offline_sequence",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "paraggeliolipsia-xoris-wifi.html",
+      "weight": 1
+    },
+    {
+      "source": "pospal_wifi_interruption_article",
+      "target": "pospal_wifi_flow_kitchen",
+      "relation": "illustrates_observed_mobile_offline_sequence",
       "_origin": "semantic",
       "confidence": "EXTRACTED",
       "confidence_score": 1,
