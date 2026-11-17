@@ -2,11 +2,14 @@
   var MEASUREMENT_ID = "G-F851JG8PL6";
   var ADS_ID = "AW-17981190399";
   var CLARITY_ID = "vnzrn7y23s";
+  var AHREFS_KEY = "CPLR9NF8fjPKUXrVZDP37A";
   var CONSENT_STORAGE_KEY = "pospal-consent-v1";
+  var CONSENT_VERSION = 3;
   var CONSENT_MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
 
   var GA_SCRIPT_ID = "pospal-ga-script";
   var CLARITY_SCRIPT_ID = "pospal-clarity-script";
+  var AHREFS_SCRIPT_ID = "pospal-ahrefs-script";
   var CONSENT_STYLE_ID = "pospal-consent-style";
   var CONSENT_ROOT_ID = "pospal-consent-root";
 
@@ -16,6 +19,7 @@
   var gaConfigured = false;
   var clarityLoaded = false;
   var clarityStopped = false;
+  var ahrefsLoaded = false;
   var settingsInjected = false;
   var initializationPromise = null;
   var keydownBound = false;
@@ -33,7 +37,7 @@
     try {
       var parsed = JSON.parse(window.localStorage.getItem(CONSENT_STORAGE_KEY) || "null");
       var savedAt = parsed && Date.parse(parsed.savedAt);
-      if (!savedAt || Date.now() - savedAt >= CONSENT_MAX_AGE_MS) {
+      if (!savedAt || parsed.version !== CONSENT_VERSION || Date.now() - savedAt >= CONSENT_MAX_AGE_MS) {
         window.localStorage.removeItem(CONSENT_STORAGE_KEY);
         return null;
       }
@@ -66,7 +70,7 @@
         var savedAt = new Date().toISOString();
         state.consentInfo = { savedAt: savedAt };
         window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({
-          version: 2,
+          version: CONSENT_VERSION,
           savedAt: savedAt,
           consents: normalizeConsentState(state.consents),
         }));
@@ -358,7 +362,25 @@
     });
   }
 
+  function ensureAhrefsLoaded() {
+    if (ahrefsLoaded) {
+      return;
+    }
+    var script = document.createElement("script");
+    script.id = AHREFS_SCRIPT_ID;
+    script.async = true;
+    script.src = "https://analytics.ahrefs.com/analytics.js";
+    script.setAttribute("data-key", AHREFS_KEY);
+    document.head.appendChild(script);
+    ahrefsLoaded = true;
+  }
+
   function applyTrackerGating() {
+    if (!consentState.measurement && ahrefsLoaded) {
+      // Ahrefs has no shutdown API; reload after saving withdrawal to remove its listeners.
+      window.location.reload();
+      return;
+    }
     updateGoogleConsentMode();
 
     if (consentState.measurement || consentState.marketing) {
@@ -368,6 +390,7 @@
 
     if (consentState.measurement) {
       ensureClarityLoaded();
+      ensureAhrefsLoaded();
     } else {
       stopClarityIfPossible();
     }
@@ -514,7 +537,7 @@
       '<input class="pospal-consent-switch" type="checkbox" checked disabled />' +
       "</div>" +
       '<div class="pospal-consent-row">' +
-      '<div><strong>Στατιστικά</strong><span>Μέτρηση επισκεψιμότητας και χρήσης.</span></div>' +
+      '<div><strong>Στατιστικά</strong><span>Μέτρηση επισκεψιμότητας και χρήσης με Google Analytics, Microsoft Clarity και Ahrefs. Το Ahrefs δεν χρησιμοποιεί cookies.</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-measurement />' +
       "</div>" +
       '<div class="pospal-consent-row">' +
