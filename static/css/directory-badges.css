@@ -55,3 +55,25 @@ footer .directory-badges-list img {
   max-width: 100%;
   height: auto;
 }
+
+footer .directory-badges-list a.preferred-source-link {
+  justify-content: center;
+  max-width: min(260px, 100%);
+  padding: 5px 12px;
+  border: 1px solid #aeb9b1;
+  background: #fff;
+  color: #102319;
+  font-size: 13px;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+}
+
+footer .directory-badges-list a.preferred-source-link:hover {
+  background: #f4f5f2;
+  text-decoration: underline;
+}
+
+footer .directory-badges-list a.preferred-source-link:focus-visible {
+  outline-color: #16813c;
+}
