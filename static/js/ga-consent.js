@@ -12,6 +12,8 @@
   var AHREFS_SCRIPT_ID = "pospal-ahrefs-script";
   var CONSENT_STYLE_ID = "pospal-consent-style";
   var CONSENT_ROOT_ID = "pospal-consent-root";
+  var english = document.documentElement.lang === "en";
+  var cookieSettingsLabel = english ? "Cookie settings" : "Ρυθμίσεις cookies";
 
   var consentStore = null;
   var ui = null;
@@ -20,6 +22,7 @@
   var clarityLoaded = false;
   var clarityStopped = false;
   var ahrefsLoaded = false;
+  var preferredSourcesRequested = false;
   var settingsInjected = false;
   var initializationPromise = null;
   var keydownBound = false;
@@ -31,6 +34,7 @@
     measurement: false,
     marketing: false,
     externalMedia: false,
+    preferredSources: false,
   };
 
   function readStoredConsent() {
@@ -62,10 +66,12 @@
           state.consents.measurement = true;
           state.consents.marketing = true;
           state.consents.externalMedia = true;
+          state.consents.preferredSources = true;
         } else if (selection === "necessary") {
           state.consents.measurement = false;
           state.consents.marketing = false;
           state.consents.externalMedia = false;
+          state.consents.preferredSources = false;
         }
         var savedAt = new Date().toISOString();
         state.consentInfo = { savedAt: savedAt };
@@ -375,9 +381,47 @@
     ahrefsLoaded = true;
   }
 
+  function loadPreferredSourcesWidget() {
+    if (!consentState.preferredSources || preferredSourcesRequested) return;
+    var fallbackLinks = document.querySelectorAll("footer .preferred-source-link");
+    if (!fallbackLinks.length) return;
+    preferredSourcesRequested = true;
+
+    var widgets = Array.from(fallbackLinks, function (fallback) {
+      var host = document.createElement("div");
+      host.className = "preferred-source-widget";
+      host.hidden = true;
+      host.setAttribute("google-add-preferred-source-btn", "");
+      host.setAttribute("data-lang", english ? "en" : "el");
+      fallback.after(host);
+      return { host: host, fallback: fallback };
+    });
+
+    window.PREFERRED_SOURCE = window.PREFERRED_SOURCE || [];
+    window.PREFERRED_SOURCE.push(function (preferredSource) {
+      if (!consentState.preferredSources) return;
+      preferredSource.init({ theme: "light" });
+      widgets.forEach(function (widget) {
+        // Keep the direct link if Google's control did not render.
+        if (!widget.host.shadowRoot || !widget.host.shadowRoot.querySelector("[data-aria-label]")) return;
+        widget.host.hidden = false;
+        widget.fallback.hidden = true;
+      });
+    });
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    script.referrerPolicy = "no-referrer";
+    script.setAttribute("preferred-sources-control", "manual");
+    script.src = "https://news.google.com/swg/js/v1/publisher.js";
+    document.head.appendChild(script);
+  }
+
   function applyTrackerGating() {
-    if (!consentState.measurement && ahrefsLoaded) {
-      // Ahrefs has no shutdown API; reload after saving withdrawal to remove its listeners.
+    if ((!consentState.measurement && ahrefsLoaded) ||
+        (!consentState.preferredSources && preferredSourcesRequested)) {
+      // These providers have no shutdown API. Reload after saving withdrawal.
       window.location.reload();
       return;
     }
@@ -395,6 +439,7 @@
       stopClarityIfPossible();
     }
     applyExternalMediaConsent();
+    loadPreferredSourcesWidget();
   }
 
   function normalizeConsentState(rawState) {
@@ -403,6 +448,7 @@
       measurement: !!(rawState && rawState.measurement),
       marketing: !!(rawState && rawState.marketing),
       externalMedia: !!(rawState && rawState.externalMedia),
+      preferredSources: !!(rawState && rawState.preferredSources),
     };
   }
 
@@ -428,7 +474,8 @@
       !!right &&
       !!left.measurement === !!right.measurement &&
       !!left.marketing === !!right.marketing &&
-      !!left.externalMedia === !!right.externalMedia
+      !!left.externalMedia === !!right.externalMedia &&
+      !!left.preferredSources === !!right.preferredSources
     );
   }
 
@@ -451,7 +498,7 @@
       ".pospal-consent-btn:hover{background:#f8fafc}" +
       ".pospal-consent-btn-primary{background:#15803d;border-color:#15803d;color:#fff}" +
       ".pospal-consent-btn-primary:hover{background:#166534}" +
-      ".pospal-consent-panel{position:fixed;left:16px;right:16px;top:50%;transform:translateY(-50%);max-width:560px;margin:0 auto;background:#fff;border:1px solid rgba(148,163,184,.35);box-shadow:0 14px 32px rgba(15,23,42,.25);border-radius:16px;padding:16px;z-index:2147483002}" +
+      ".pospal-consent-panel{position:fixed;left:16px;right:16px;top:50%;transform:translateY(-50%);max-width:560px;max-height:calc(100% - 24px);overflow-y:auto;box-sizing:border-box;margin:0 auto;background:#fff;border:1px solid rgba(148,163,184,.35);box-shadow:0 14px 32px rgba(15,23,42,.25);border-radius:16px;padding:16px;z-index:2147483002}" +
       ".pospal-consent-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #e2e8f0}" +
       ".pospal-consent-row:last-of-type{border-bottom:0}" +
       ".pospal-consent-row strong{display:block;font-size:.92rem;color:#0f172a}" +
@@ -513,45 +560,56 @@
     var banner = document.createElement("section");
     banner.className = "pospal-consent-banner pospal-consent-hidden";
     banner.setAttribute("role", "region");
-    banner.setAttribute("aria-label", "Ρυθμίσεις cookies");
+    banner.setAttribute("aria-label", cookieSettingsLabel);
+    var cookiePolicyLinks = english
+      ? '<a href="/en/cookies/">Cookie Policy</a> · <a href="/en/privacy/">Privacy Notice</a>'
+      : '<a href="/cookies/">Πολιτική Cookies</a> · <a href="/privacy/">Πολιτική Απορρήτου</a>';
     banner.innerHTML =
-      '<h2 class="pospal-consent-title">Χρησιμοποιούμε cookies</h2>' +
-      '<p class="pospal-consent-text">Χρησιμοποιούμε προαιρετικά μέσα για στατιστικά, marketing και εξωτερικά βίντεο. Μπορείς να αλλάξεις επιλογές οποιαδήποτε στιγμή.</p>' +
-      '<p class="pospal-consent-text"><a href="/cookies/">Πολιτική Cookies</a> · <a href="/privacy/">Πολιτική Απορρήτου</a></p>' +
+      '<h2 class="pospal-consent-title">' + (english ? "We use cookies" : "Χρησιμοποιούμε cookies") + '</h2>' +
+      '<p class="pospal-consent-text">' + (english ? "We use optional tools for analytics, marketing, embedded videos and Google’s Preferred Sources button. You can change your choices at any time." : "Χρησιμοποιούμε προαιρετικά μέσα για στατιστικά, marketing, εξωτερικά βίντεο και το κουμπί Προτιμώμενων πηγών της Google. Μπορείς να αλλάξεις επιλογές οποιαδήποτε στιγμή.") + '</p>' +
+      '<p class="pospal-consent-text">' + cookiePolicyLinks + '</p>' +
       '<div class="pospal-consent-actions">' +
-      '<button type="button" class="pospal-consent-btn" data-pospal-consent-accept>Αποδοχή όλων</button>' +
-      '<button type="button" class="pospal-consent-btn" data-pospal-consent-reject>Απόρριψη όλων</button>' +
-      '<button type="button" class="pospal-consent-btn" data-pospal-consent-settings>Ρυθμίσεις</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-accept>' + (english ? "Accept all" : "Αποδοχή όλων") + '</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-reject>' + (english ? "Reject all" : "Απόρριψη όλων") + '</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-settings>' + (english ? "Settings" : "Ρυθμίσεις") + '</button>' +
       "</div>";
 
+    var preferredSourcesTitle = english ? "Google Preferred Sources" : "Προτιμώμενες πηγές Google";
+    var preferredSourcesDescription = english
+      ? "Loads Google’s interactive button and lets Google record how it is displayed and used. A direct link works either way."
+      : "Φορτώνει το διαδραστικό κουμπί της Google. Η Google μπορεί να καταγράφει την προβολή και τη χρήση του. Ο απλός σύνδεσμος λειτουργεί πάντα.";
     var panel = document.createElement("section");
     panel.className = "pospal-consent-panel pospal-consent-hidden";
     panel.setAttribute("role", "dialog");
     panel.setAttribute("aria-modal", "true");
-    panel.setAttribute("aria-label", "Ρυθμίσεις cookies");
+    panel.setAttribute("aria-label", cookieSettingsLabel);
     panel.setAttribute("tabindex", "-1");
     panel.innerHTML =
-      '<h2 class="pospal-consent-title">Ρυθμίσεις cookies</h2>' +
+      '<h2 class="pospal-consent-title">' + (english ? "Cookie settings" : "Ρυθμίσεις cookies") + '</h2>' +
       '<div class="pospal-consent-row">' +
-      '<div><strong>Απαραίτητα</strong><span>Απαιτούνται για τη βασική λειτουργία του site.</span></div>' +
+      '<div><strong>' + (english ? "Necessary" : "Απαραίτητα") + '</strong><span>' + (english ? "Required for basic site functions." : "Απαιτούνται για τη βασική λειτουργία του site.") + '</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" checked disabled />' +
       "</div>" +
       '<div class="pospal-consent-row">' +
-      '<div><strong>Στατιστικά</strong><span>Μέτρηση επισκεψιμότητας και χρήσης με Google Analytics, Microsoft Clarity και Ahrefs. Το Ahrefs δεν χρησιμοποιεί cookies.</span></div>' +
+      '<div><strong>' + (english ? "Analytics" : "Στατιστικά") + '</strong><span>' + (english ? "Traffic and usage measurement with Google Analytics, Microsoft Clarity and Ahrefs. Ahrefs does not use cookies." : "Μέτρηση επισκεψιμότητας και χρήσης με Google Analytics, Microsoft Clarity και Ahrefs. Το Ahrefs δεν χρησιμοποιεί cookies.") + '</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-measurement />' +
       "</div>" +
       '<div class="pospal-consent-row">' +
-      '<div><strong>Marketing</strong><span>Διαφημιστικά cookies και δεδομένα διαφήμισης.</span></div>' +
+      '<div><strong>Marketing</strong><span>' + (english ? "Advertising cookies and advertising data." : "Διαφημιστικά cookies και δεδομένα διαφήμισης.") + '</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-marketing />' +
       "</div>" +
       '<div class="pospal-consent-row">' +
-      '<div><strong>Εξωτερικά μέσα</strong><span>Ενσωματωμένα βίντεο YouTube.</span></div>' +
+      '<div><strong>' + (english ? "External media" : "Εξωτερικά μέσα") + '</strong><span>' + (english ? "Embedded YouTube videos." : "Ενσωματωμένα βίντεο YouTube.") + '</span></div>' +
       '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-external-media />' +
       "</div>" +
-      '<p class="pospal-consent-text"><a href="/cookies/">Αναλυτική Πολιτική Cookies</a> · <a href="/privacy/">Πολιτική Απορρήτου</a></p>' +
+      '<div class="pospal-consent-row">' +
+      '<div><strong id="pospal-preferred-sources-label">' + preferredSourcesTitle + '</strong><span id="pospal-preferred-sources-description">' + preferredSourcesDescription + '</span></div>' +
+      '<input class="pospal-consent-switch" type="checkbox" data-pospal-consent-preferred-sources aria-labelledby="pospal-preferred-sources-label" aria-describedby="pospal-preferred-sources-description" />' +
+      "</div>" +
+      '<p class="pospal-consent-text">' + cookiePolicyLinks + '</p>' +
       '<div class="pospal-consent-panel-actions">' +
-      '<button type="button" class="pospal-consent-btn" data-pospal-consent-cancel>Ακύρωση</button>' +
-      '<button type="button" class="pospal-consent-btn pospal-consent-btn-primary" data-pospal-consent-save>Αποθήκευση επιλογών</button>' +
+      '<button type="button" class="pospal-consent-btn" data-pospal-consent-cancel>' + (english ? "Cancel" : "Ακύρωση") + '</button>' +
+      '<button type="button" class="pospal-consent-btn pospal-consent-btn-primary" data-pospal-consent-save>' + (english ? "Save choices" : "Αποθήκευση επιλογών") + '</button>' +
       "</div>";
 
     root.appendChild(overlay);
@@ -566,6 +624,7 @@
       measurementInput: panel.querySelector("[data-pospal-consent-measurement]"),
       marketingInput: panel.querySelector("[data-pospal-consent-marketing]"),
       externalMediaInput: panel.querySelector("[data-pospal-consent-external-media]"),
+      preferredSourcesInput: panel.querySelector("[data-pospal-consent-preferred-sources]"),
       floatingTrigger: null,
     };
 
@@ -611,6 +670,7 @@
     built.measurementInput.checked = !!consentState.measurement;
     built.marketingInput.checked = !!consentState.marketing;
     built.externalMediaInput.checked = !!consentState.externalMedia;
+    built.preferredSourcesInput.checked = consentState.preferredSources;
   }
 
   function showBanner(shouldFocus) {
@@ -692,6 +752,7 @@
     consentStore.getState().setSelectedConsent("measurement", !!built.measurementInput.checked);
     consentStore.getState().setSelectedConsent("marketing", !!built.marketingInput.checked);
     consentStore.getState().setSelectedConsent("externalMedia", !!built.externalMediaInput.checked);
+    consentStore.getState().setSelectedConsent("preferredSources", built.preferredSourcesInput.checked);
     consentStore.getState().saveConsents("custom");
     closeConsentUI();
   }
@@ -722,7 +783,7 @@
     link.href = "#cookie-settings";
     link.setAttribute("data-pospal-cookie-settings", "true");
     link.className = "hover:text-slate-900";
-    link.textContent = "Ρυθμίσεις cookies";
+    link.textContent = cookieSettingsLabel;
     link.addEventListener("click", function (event) {
       event.preventDefault();
       window.POSPALConsent.openSettings();
@@ -743,8 +804,8 @@
     trigger.type = "button";
     trigger.className = "pospal-cookie-settings-float";
     trigger.setAttribute("data-pospal-cookie-settings-floating", "true");
-    trigger.setAttribute("aria-label", "Ρυθμίσεις cookies");
-    trigger.setAttribute("title", "Ρυθμίσεις cookies");
+    trigger.setAttribute("aria-label", cookieSettingsLabel);
+    trigger.setAttribute("title", cookieSettingsLabel);
     trigger.innerHTML =
       '<svg class="pospal-cookie-settings-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
       '<path fill="currentColor" d="M7.5 3A1.5 1.5 0 0 0 6 4.5c0 .38.14.73.37 1.01A1.5 1.5 0 0 0 5.25 8.4a1.5 1.5 0 0 0-.7 2.68A1.5 1.5 0 0 0 5.5 13.8 1.5 1.5 0 0 0 6.75 16.7 1.5 1.5 0 0 0 9 18.5h.2c.64 0 1.2-.4 1.41-.99.27.16.58.24.89.24h1.2c.31 0 .62-.08.89-.24.21.59.77.99 1.41.99h.2a1.5 1.5 0 0 0 2.25-1.8 1.5 1.5 0 0 0 1.25-2.9 1.5 1.5 0 0 0 .95-2.72 1.5 1.5 0 0 0-.7-2.68 1.5 1.5 0 0 0-1.12-2.89c.23-.28.37-.63.37-1.01A1.5 1.5 0 0 0 16.5 3h-9zM9.75 9.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm4.5 1.25a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0z"/>' +

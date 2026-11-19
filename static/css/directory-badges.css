@@ -85,3 +85,13 @@ footer .directory-badges-list a.preferred-source-link:hover {
 footer .directory-badges-list a.preferred-source-link:focus-visible {
   outline-color: #16813c;
 }
+
+footer .directory-badges-list .preferred-source-widget {
+  max-width: 100%;
+  min-height: 44px;
+}
+
+footer .directory-badges-list .preferred-source-link[hidden],
+footer .directory-badges-list .preferred-source-widget[hidden] {
+  display: none;
+}
