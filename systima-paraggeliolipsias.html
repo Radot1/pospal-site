@@ -24,8 +24,6 @@
   <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/css/pda-acquisition.css?v=20260901-2">
   <link rel="stylesheet" href="/static/css/pda-editorial.css?v=20260921-2">
-  <link rel="stylesheet" href="/static/css/system-article.css?v=20260928-2">
-  <link rel="stylesheet" href="/static/css/system-opening.css?v=20261112">
   <script src="/static/js/ga-consent.js?v=20261119-preferred-sources"></script>
   <script defer src="/static/js/ga-events.js"></script>
   <link rel="stylesheet" href="/static/css/legal-links.css">
@@ -59,157 +57,143 @@
   </script>
   <link rel="stylesheet" href="/static/css/article-navigation.css?v=20261111">
   <link rel="stylesheet" href="/static/css/directory-badges.css?v=20261119-widget">
+  <link rel="stylesheet" href="/static/css/system-first-order.css">
 </head>
-<body class="pda-acquisition-page pda-editorial-page system-article-page system-money-page">
+<body class="pda-acquisition-page pda-editorial-page first-order-page">
   <a class="pda-skip" href="#main-content">Μετάβαση στο περιεχόμενο</a>
   <header class="site-header">
     <div class="brand-bar">
-      <a class="header-download" href="/download/">ΚΑΤΕΒΑΣΕ</a>
+      <a class="header-download" href="/download/" aria-label="Κατέβασε για Windows">Κατέβασε</a>
       <a class="brand" href="/" aria-label="POSPal, αρχική"><img src="/static/img/pospal-icon-96.png" alt="" width="36" height="36"><span translate="no">POS<b>Pal</b></span></a>
       <nav class="article-site-nav" aria-label="Κύρια πλοήγηση"><a href="/arthra/">Άρθρα</a><a href="/times.html">Τιμές</a></nav>
     </div>
-    <nav class="section-bar" aria-label="Ενότητες σελίδας">
-      <a href="#workflow">ΤΟ ΠΡΟΓΡΑΜΜΑ</a><a href="#requirements">ΕΞΟΠΛΙΣΜΟΣ</a><a href="#how-it-starts">ΤΟ ΣΤΗΣΙΜΟ</a><a href="#offer">Η ΣΥΝΔΡΟΜΗ</a>
-    </nav>
   </header>
   <main id="main-content" tabindex="-1">
     <article aria-labelledby="system-title">
-      <header class="article-header">
-        <nav class="article-breadcrumbs" aria-label="Διαδρομή σελίδας"><ol><li><a href="/">Αρχική</a></li><li><span aria-hidden="true">›</span><a href="/arthra/">Άρθρα</a></li><li><span aria-hidden="true">›</span><a href="/arthra/?category=paraggeliolipsia">Παραγγελιοληψία</a></li></ol></nav>
-        <div class="system-hero-layout">
-          <div class="system-hero-copy">
-            <h1 id="system-title">Σύστημα παραγγελιοληψίας για εστίαση</h1>
-            <p class="dek">Το POSPal είναι πρόγραμμα παραγγελιοληψίας για μικρά καφέ και εστιατόρια. Το εγκαθιστάς σε Windows και το στήνεις μόνος σου, με τους οδηγούς μας.</p>
-            <p class="system-hero-workflow">Η ομάδα περνά είδη, ποσότητες και σημειώσεις από κατάλληλο κινητό ή tablet, μέσα από το τοπικό δίκτυο. Η παραγγελία φτάνει στην κουζίνα με τη σημείωσή της, χωρίς να τη μεταφέρεις προφορικά.</p>
-            <p class="system-hero-offer"><strong>23,90 €/μήνα</strong> · 30 ημέρες δωρεάν · Χωρίς υποχρεωτική αγορά PDA ή εξοπλισμού από εμάς</p>
-            <a class="system-download" href="/download/">Κατέβασε για Windows <span aria-hidden="true">↓</span></a>
-            <p class="system-hero-note">Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας για τη δοκιμή.</p>
-            <p class="system-scope">Παραγγελιοληψία και ροή κουζίνας, δίπλα στο υπάρχον φορολογικό σου σύστημα. Το POSPal δεν είναι ταμειακή ή φορολογικό POS.</p>
+      <header class="order-shell">
+        <nav class="article-breadcrumbs" aria-label="Διαδρομή σελίδας">
+          <ol><li><a href="/">Αρχική</a></li><li><span aria-hidden="true">›</span><a href="/arthra/">Άρθρα</a></li><li><span aria-hidden="true">›</span><a href="/arthra/?category=paraggeliolipsia">Παραγγελιοληψία</a></li></ol>
+        </nav>
+        <div class="order-hero">
+          <div class="order-hero-copy">
+            <h1 id="system-title">Σύστημα παραγγελιοληψίας</h1>
+            <p class="order-lead">Στέλνεις τις παραγγελίες στην κουζίνα από το κινητό. Συνεχίζεις να κόβεις αποδείξεις από την ταμειακή σου.</p>
+            <a class="system-download" href="/download/">Κατέβασε για Windows</a>
+            <p class="order-offer-line"><strong>30 ημέρες δωρεάν.</strong> Χωρίς εγγραφή ή κάρτα. Μετά 23,90 € τον μήνα, αν συνεχίσεις.</p>
           </div>
-          <section class="system-hero-proof" aria-labelledby="system-proof-title">
-            <h2 id="system-proof-title">Η σημείωση φτάνει μαζί με την παραγγελία.</h2>
-            <p>Καφές «Χωρίς ζάχαρη» και τοστ, στο τραπέζι 2. Η ίδια δοκιμαστική παραγγελία στο κινητό και στην κουζίνα.</p>
-            <div class="system-proof-stages">
-              <figure>
-                <a href="/static/img/pospal-controlled-order-phone-20261110.webp" target="_blank" rel="noopener" aria-label="Δες τη δοκιμαστική παραγγελία στο κινητό σε πλήρες μέγεθος, σε νέα καρτέλα"><img src="/static/img/pospal-controlled-order-phone-20261110.webp" alt="Παραγγελία #1 στο κινητό για το τραπέζι 2: ένας καφές με σημείωση χωρίς ζάχαρη και ένα τοστ" width="1220" height="2392" decoding="async"></a>
-                <figcaption><strong>1. Στο κινητό.</strong> Είδη, ποσότητες και σημείωση πριν την αποστολή.</figcaption>
-              </figure>
-              <figure>
-                <a href="/static/img/pospal-controlled-order-kitchen-20261110.webp" target="_blank" rel="noopener" aria-label="Δες την ίδια δοκιμαστική παραγγελία στην κουζίνα σε πλήρες μέγεθος, σε νέα καρτέλα"><img src="/static/img/pospal-controlled-order-kitchen-20261110.webp" alt="Η ίδια παραγγελία #1 στην οθόνη κουζίνας των Windows, με τον καφέ, το τοστ και τη σημείωση χωρίς ζάχαρη" width="650" height="560" decoding="async"></a>
-                <figcaption><strong>2. Στην κουζίνα.</strong> Η ίδια παραγγελία, με τη σημείωση του καφέ.</figcaption>
-              </figure>
+          <figure class="order-preview">
+            <p class="order-preview-reference">Μια παραγγελία για το τραπέζι 2</p>
+            <div class="order-note-pair">
+              <div class="order-note-row">
+                <p><strong>Στο κινητό</strong><br>Πριν σταλεί</p>
+                <img src="/static/img/systima-simeiosi-sto-kinito.webp" alt="Στο κινητό, ένας καφές με τη σημείωση «Χωρίς ζάχαρη»." width="583" height="261" fetchpriority="high">
+              </div>
+              <div class="order-note-row">
+                <p><strong>Στην κουζίνα</strong><br>Μόλις έφτασε</p>
+                <img src="/static/img/systima-simeiosi-stin-kouzina.webp" alt="Στην κουζίνα, ο ίδιος καφές με τη σημείωση «Χωρίς ζάχαρη»." width="267" height="66">
+              </div>
             </div>
-            <p class="system-proof-detail"><a href="/asyrmati-paraggeliolipsia.html#controlled-proof-title">Δες όλη τη δοκιμή και το εκτυπωμένο δελτίο <span aria-hidden="true">→</span></a></p>
-            <p class="system-proof-conditions">Ελεγχόμενη δοκιμή στις 10/11/2026, με την εγκατεστημένη ανακατασκευή POSPal 0.7.1 και εκτυπωτή EPSON TM-T20 μέσω USB. Η συγκεκριμένη ανακατασκευή δεν έχει ακόμη δημοσιευτεί. Η δοκιμή αφορά αυτόν τον συνδυασμό εξοπλισμού· δεν είναι μαρτυρία πελάτη.</p>
-          </section>
-        </div>
-        <div class="byline">
-          <img class="author-photo" src="/static/img/robert-airey-founder.jpg" alt="Ο Robert Airey, ιδρυτής της POSPal" width="58" height="58" decoding="async">
-          <p><strong><a href="/sxetika-me-to-pospal/#robert-airey">ΑΠΟ ΤΟΝ ROBERT AIREY</a></strong><span>Ιδρυτή της POSPal · <a href="https://www.linkedin.com/in/robert-zairey/" rel="me">LinkedIn</a></span></p>
-          <small>Ενημέρωση: <time datetime="2026-11-12">12 Νοεμβρίου 2026</time></small>
+            <figcaption>
+              <small>Δοκιμή με ήδη στημένο POSPal.</small>
+              <a href="#workflow">Δες πώς έφτασε στην κουζίνα</a>
+            </figcaption>
+          </figure>
         </div>
       </header>
-      <div class="article-body system-opening">
-        <details class="contents" open>
-          <summary>Σε αυτή τη σελίδα</summary>
-          <ol>
-            <li><a href="#workflow">Τι μπορώ να κάνω με αυτό;</a></li>
-            <li><a href="#why">Γιατί το έφτιαξα έτσι</a></li>
-            <li><a href="#requirements">Τι χρειάζομαι στο μαγαζί;</a></li>
-            <li><a href="#how-it-starts">Και το στήνω μόνος μου;</a></li>
-            <li><a href="#offer">Τι περιλαμβάνει η τιμή;</a></li>
-            <li><a href="#fit">Θα μου κάνει;</a></li>
-          </ol>
-        </details>
-        <section id="workflow">
-          <h2 id="workflow-title">Τι μπορώ να κάνω με αυτό;</h2>
-          <p>Ανοίγεις ένα τραπέζι, περνάς τα είδη και προσθέτεις τις επιλογές ή τις σημειώσεις της παραγγελίας. Ο σερβιτόρος μπορεί να το κάνει από το κινητό του. Στον πάγκο υπάρχει και απλή λειτουργία, χωρίς τραπέζια.</p>
-          <p>Όταν στείλεις την παραγγελία, τη δέχεται το POSPal στον υπολογιστή του καταστήματος. Αν χρησιμοποιείς εκτυπωτές, ορίζεις πού πηγαίνει κάθε κατηγορία: για παράδειγμα, οι καφέδες στο μπαρ και τα φαγητά στην κουζίνα.</p>
-        </section>
-      </div>
-      <figure class="product-proof system-desktop-proof">
-        <a href="/static/img/pospal-desktop-order.webp" target="_blank" rel="noopener" aria-label="Δες την οθόνη παραγγελίας σε πλήρες μέγεθος, σε νέα καρτέλα"><img src="/static/img/pospal-desktop-order.webp" alt="Παραγγελία στο POSPal με προϊόντα, επιλογές, σημειώσεις και σύνολο πριν από την αποστολή" width="1280" height="900" loading="lazy" decoding="async"></a>
-        <figcaption>Η οθόνη καταχώρισης στον υπολογιστή. Πάτησε την εικόνα για να τη δεις σε πλήρες μέγεθος.</figcaption>
-      </figure>
-      <div class="article-body">
-        <section class="system-qr" aria-labelledby="qr-title">
+
+      <section class="order-shell order-requirements" id="requirements" aria-labelledby="requirements-title">
+        <h2 id="requirements-title">Τι χρειάζεσαι στο μαγαζί;</h2>
+        <dl>
           <div>
-            <h3 id="qr-title">Και το QR μενού;</h3>
-            <p>Περιλαμβάνεται στη συνδρομή. Χρησιμοποιεί τον κατάλογο του POSPal, βάζεις το λογότυπο και τα χρώματά σου και το δημοσιεύεις. Ο πελάτης σαρώνει τον κωδικό QR και βλέπει προϊόντα και τιμές στο κινητό του.</p>
-            <p>Μπορείς να δεις τη διαδικασία στον <a href="/guides/qr-menu/">οδηγό του QR μενού</a>, μαζί με το πώς δημοσιεύεις τις αλλαγές σου.</p>
+            <dt>Έναν υπολογιστή</dt>
+            <dd>Το POSPal εγκαθίσταται σε Windows x64 (64 bit). Ο υπολογιστής μένει ανοιχτός στη βάρδια.</dd>
           </div>
-          <figure><img src="/static/qr-menu-live-preview.png" alt="Δημοσιευμένο QR μενού POSPal με λογότυπο, κατηγορίες και τιμές" width="430" height="932" loading="lazy" decoding="async"><figcaption>Παράδειγμα εμφάνισης του QR μενού.</figcaption></figure>
-        </section>
-        <section id="why">
-          <h2>Γιατί το έφτιαξα έτσι</h2>
-          <p>Υπάρχουν πολλά προγράμματα παραγγελιοληψίας. Το <a href="https://www.wizcom.gr/software/inorder">inOrder της Wizcom</a>, για παράδειγμα, περιλαμβάνει και διαχείριση αποθήκης και διανομών. Το <a href="https://iserveme.com/">iServeMe</a> καλύπτει και κρατήσεις τραπεζιών. Αν αυτά είναι μέρος της δουλειάς σου, αξίζει να τα εξετάσεις. Δεν χρειάζεται κάθε μαγαζί τα ίδια πράγματα.</p>
-          <p>Εγώ είχα στο μυαλό μου τον ιδιοκτήτη που θέλει να αναλάβει ο ίδιος το στήσιμο και τη διαχείριση του προγράμματος. Να ξέρει τι πληρώνει, να μπορεί να το στήσει και να αποφασίσει αφού το δουλέψει. Αυτό ήθελα να κάνω προσιτό με το POSPal.</p>
-          <p>Γι’ αυτό βλέπεις την τιμή εδώ και κατεβάζεις το ίδιο το πρόγραμμα, χωρίς προσφορά, παρουσίαση ή εγγραφή. Έχεις 30 μέρες να δεις αν σε βολεύει. Δεν χρειάζεται να συμφωνήσουμε πρώτα ότι σου κάνει.</p>
-          <p>Το ίδιο ισχύει για τον εξοπλισμό. Αν έχεις ήδη κάτι που κάνει τη δουλειά, θέλω να μπορείς να το χρησιμοποιήσεις.</p>
-          <blockquote>Δεν πουλάμε PDA. Δεν χρεώνουμε ανά PDA. Το κινητό της ομάδας σου μπορεί να γίνει PDA.</blockquote>
-          <p>Χρειάζεται κατάλληλος browser και σύνδεση με τον υπολογιστή του καταστήματος μέσα από το τοπικό δίκτυο. Αν θέλεις να δεις αναλυτικά τι κάνει η φορητή συσκευή, υπάρχει και το άρθρο <a href="/pda-ti-einai.html">τι είναι το PDA στην εστίαση</a>.</p>
-        </section>
-        <section id="requirements">
-          <h2 id="requirements-title">Τι χρειάζομαι στο μαγαζί;</h2>
-          <ul>
-            <li><strong>Έναν υπολογιστή Windows x64.</strong> Εκεί εγκαθίσταται το POSPal. Ο υπολογιστής πρέπει να είναι ανοιχτός όσο δουλεύει η ομάδα.</li>
-            <li><strong>Κινητά ή tablet με browser.</strong> Για την ασύρματη παραγγελιοληψία, οι συσκευές πρέπει να μπορούν να επικοινωνούν με τον υπολογιστή στο τοπικό δίκτυο του μαγαζιού. Δεν εγκαθιστάς ξεχωριστή εφαρμογή στα κινητά.</li>
-            <li><strong>Θερμικό εκτυπωτή, αν θέλεις χαρτί στην κουζίνα ή στο μπαρ.</strong> Μπορείς να δοκιμάσεις αυτόν που έχεις ήδη. Πρέπει να είναι εγκατεστημένος στα Windows και να περάσει μια πραγματική δοκιμαστική εκτύπωση από το POSPal.</li>
-          </ul>
-          <p>Δεν χρειάζεται να αγοράσεις εκτυπωτή από εμάς. Δεν μπορώ όμως να σου πω ότι κάθε μοντέλο θα δουλέψει με κάθε σύνδεση. Γι’ αυτό ο έλεγχος γίνεται με τον δικό σου εξοπλισμό, πριν τον χρειαστείς στη βάρδια.</p>
-          <h3>Λειτουργεί χωρίς internet;</h3>
-          <p>Η τοπική παραγγελιοληψία γίνεται μέσα στο δίκτυο του καταστήματος, χωρίς να χρειάζεται σήμα κινητής. Το κινητό πρέπει όμως να φτάνει τον υπολογιστή: χωρίς αυτή την επικοινωνία, η παραγγελία δεν μπορεί να παραδοθεί εκείνη τη στιγμή.</p>
-          <p>Το POSPal δεν είναι εντελώς ανεξάρτητο από το internet. Χρειάζεται σύνδεση για δημοσίευση του QR μενού, ελέγχους άδειας και ενημερώσεις. Οι λεπτομέρειες υπάρχουν στο άρθρο για την <a href="/asyrmati-paraggeliolipsia.html">ασύρματη παραγγελιοληψία και το τοπικό δίκτυο</a>.</p>
-        </section>
-        <section id="how-it-starts">
-          <h2 id="start-title">Και το στήνω μόνος μου;</h2>
-          <p>Ναι, γι’ αυτό υπάρχουν οι οδηγοί. Η εγκατάσταση του προγράμματος είναι η αρχή. Μετά χρειάζεται να περάσεις τον κατάλογό σου και να ρυθμίσεις πώς θα δουλεύει το μαγαζί.</p>
-          <ol>
-            <li><strong>Εγκαθιστάς στον υπολογιστή.</strong> Ο <a href="/guides/windows-installation/">οδηγός εγκατάστασης για Windows</a> δείχνει τη διαδικασία.</li>
-            <li><strong>Περνάς προϊόντα, τιμές και επιλογές.</strong> Διαλέγεις λειτουργία με τραπέζια ή χωρίς, συνδέεις τα κινητά και ρυθμίζεις τις εκτυπώσεις που χρειάζεσαι. Υπάρχουν οδηγίες για τις <a href="/guides/settings/">ρυθμίσεις</a> και την <a href="/guides/printer-setup/">προετοιμασία του εξοπλισμού</a>.</li>
-            <li><strong>Στέλνεις μια δοκιμαστική παραγγελία.</strong> Από το κινητό που θα χρησιμοποιείς, στο σημείο που θα δουλεύεις. Ελέγχεις ότι φτάνει σωστά και, αν τυπώνεις, κοιτάς το ίδιο το χαρτί.</li>
+          <div>
+            <dt>Κινητό ή τάμπλετ</dt>
+            <dd>Σύνδεσέ το στο Wi-Fi του μαγαζιού. Ο browser του κινητού πρέπει να μπορεί να ανοίξει το POSPal στον υπολογιστή μέσα από το δίκτυο του μαγαζιού.</dd>
+          </div>
+          <div>
+            <dt>Για την κουζίνα</dt>
+            <dd>Για την οθόνη κουζίνας αρκεί ο ίδιος υπολογιστής. Για χαρτί, χρειάζεσαι εκτυπωτή εγκατεστημένο στα Windows και μια πραγματική εκτύπωση δελτίου από το POSPal για να τον ελέγξεις.</dd>
+          </div>
+        </dl>
+        <div class="order-fit-note" id="fit">
+          <p><strong>Χρειάζεται internet;</strong> Οι παραγγελίες του προσωπικού περνούν από το τοπικό δίκτυο του μαγαζιού. Το κινητό πρέπει να μπορεί να συνδεθεί με τον υπολογιστή Windows. Για τη δημοσίευση του QR μενού, τους ελέγχους άδειας και τις ενημερώσεις χρειάζεται internet. Δες τον <a href="/asyrmati-paraggeliolipsia.html">οδηγό ασύρματης παραγγελιοληψίας</a>.</p>
+          <p id="why">Μπορείς να παίρνεις παραγγελίες από τα κινητά της ομάδας σου χωρίς έξτρα χρέωση ανά συσκευή. Δες <a href="/pda-ti-einai.html">τι είναι το PDA</a>.</p>
+          <p>Αν παίρνεις <a href="/pda-gia-kafeteries.html">παραγγελίες στον πάγκο</a>, μπορείς να δουλέψεις χωρίς τραπέζια. Έχεις τραπέζια έξω; Δοκίμασε και στο πιο μακρινό. Δες πώς στήνεις την <a href="/paraggelio-lipsia-gia-beach-bar.html">παραγγελιοληψία σε beach bar</a>.</p>
+        </div>
+      </section>
+
+      <section class="order-proof" id="workflow" aria-labelledby="workflow-title">
+        <div class="order-shell">
+          <header class="order-proof-heading">
+            <h2 id="workflow-title">Ο καφές φτάνει με τη σημείωσή του</h2>
+            <p>Στείλαμε μια δοκιμαστική παραγγελία για το τραπέζι 2. Έναν καφέ χωρίς ζάχαρη και ένα τοστ.</p>
+            <p class="order-conditions">Οι εικόνες είναι από τη δοκιμή στις <time datetime="2026-11-10">10/11/2026</time>, με ήδη ρυθμισμένη ανακατασκευή του POSPal 0.7.1.</p>
+          </header>
+          <ol class="order-stages">
+            <li>
+              <figure>
+                <figcaption><h3>1. Στο κινητό</h3><p>Ο σερβιτόρος γράφει «Χωρίς ζάχαρη» στον καφέ και πατά «Αποστολή».</p></figcaption>
+                <a href="/static/img/systima-paraggelia-kinito-pliiris.webp" target="_blank" rel="noopener" aria-label="Μεγαλύτερη εικόνα της παραγγελίας στο κινητό, σε νέα καρτέλα"><img src="/static/img/systima-paraggelia-sto-kinito.webp" alt="Ένας καφές με τη σημείωση «Χωρίς ζάχαρη» και ένα τοστ, στο κινητό πριν από την αποστολή." width="700" height="451" loading="lazy" decoding="async"><span class="order-zoom" aria-hidden="true">Μεγαλύτερη εικόνα</span></a>
+              </figure>
+            </li>
+            <li class="order-stage-windows">
+              <figure>
+                <figcaption><h3>2. Στον υπολογιστή</h3><p>Η παραγγελία φαίνεται στο ιστορικό του POSPal, στο τραπέζι 2.</p></figcaption>
+                <a href="/static/img/systima-paraggelia-ston-ypologisti.webp" target="_blank" rel="noopener" aria-label="Δες την εικόνα του ιστορικού στον υπολογιστή, σε νέα καρτέλα"><img src="/static/img/systima-paraggelia-ston-ypologisti.webp" alt="Η παραγγελία #1 στο POSPal δείχνει έναν καφέ με τη σημείωση «Χωρίς ζάχαρη» και ένα τοστ." width="320" height="116" loading="lazy" decoding="async"><span class="order-zoom" aria-hidden="true">Δες την εικόνα</span></a>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <figcaption><h3>3. Στην κουζίνα</h3><p>Η κουζίνα βλέπει τι να ετοιμάσει και ότι ο καφές είναι χωρίς ζάχαρη.</p></figcaption>
+                <a href="/static/img/systima-paraggelia-kouzina-pliiris.webp" target="_blank" rel="noopener" aria-label="Μεγαλύτερη εικόνα της παραγγελίας στην κουζίνα, σε νέα καρτέλα"><img src="/static/img/systima-paraggelia-stin-kouzina.webp" alt="Οθόνη κουζίνας με την #1 στο τραπέζι 2, 1 καφέ χωρίς ζάχαρη, 1 τοστ." width="622" height="222" loading="lazy" decoding="async"><span class="order-zoom" aria-hidden="true">Μεγαλύτερη εικόνα</span></a>
+              </figure>
+            </li>
           </ol>
-          <p>Θα χρειαστεί να ασχοληθείς με το στήσιμο. Δεν είναι υπηρεσία εγκατάστασης στον χώρο σου. Αν κολλήσεις, υπάρχουν οδηγίες <a href="/guides/troubleshooting/">αντιμετώπισης προβλημάτων</a> και μπορείς να μας γράψεις στο <a href="mailto:support@pospal.gr">support@pospal.gr</a>. Η υποστήριξη γίνεται με email, όχι τηλεφωνικά.</p>
-        </section>
-        <section id="offer">
-          <h2 id="offer-title">Τι περιλαμβάνει η τιμή;</h2>
-          <p><strong>23,90 € τον μήνα.</strong> Περιλαμβάνονται η λειτουργία με τραπέζια, η απλή λειτουργία για τον πάγκο, η παραγγελιοληψία από κινητά και tablet, η ροή κουζίνας, η δρομολόγηση εκτυπώσεων και το QR μενού.</p>
-          <p>Δεν υπάρχει επιπλέον χρέωση ανά PDA ή ξεχωριστή συνδρομή για το QR μενού. Δεν αγοράζεις από εμάς πακέτο εξοπλισμού ή συμβόλαιο συντήρησης. Ο υπολογιστής, το δίκτυο και ό,τι άλλο χρειάζεται ο χώρος σου παραμένουν δικός σου εξοπλισμός.</p>
-          <h3>Τι γίνεται όταν τελειώσουν οι 30 μέρες;</h3>
-          <p>Η δωρεάν δοκιμή σταματά και το πρόγραμμα χρειάζεται ενεργή συνδρομή για να συνεχίσει να λειτουργεί. Δεν μετατρέπεται αυτόματα σε πληρωμένη συνδρομή. Δεν έχεις δώσει κάρτα.</p>
-          <p>Αν θέλεις να συνεχίσεις, ενεργοποιείς τη συνδρομή. Αν αργότερα αλλάξεις γνώμη, ακυρώνεις την επόμενη ανανέωση μόνος σου από τη διαχείριση της συνδρομής, χωρίς email ή τηλεφώνημα. Ο <a href="/guides/account/">οδηγός λογαριασμού</a> δείχνει πού βρίσκεται αυτή η επιλογή.</p>
-          <p>Οι χρεώσεις και οι όροι της δοκιμής βρίσκονται συγκεντρωμένα στη <a href="/times.html">σελίδα με τις τιμές του POSPal</a>.</p>
-          <p class="system-scope">Η συνδρομή αφορά παραγγελιοληψία και ροή κουζίνας. Δεν περιλαμβάνει ταμειακή ή φορολογικό POS.</p>
-        </section>
-        <section id="fit">
-          <h2>Θα μου κάνει;</h2>
-          <p>Σκέψου πώς παίρνεις τις παραγγελίες σου. Σε ένα εστιατόριο ή μια ταβέρνα, τις συνδέεις με το τραπέζι. Σε ένα <a href="/pda-gia-kafeteries.html">καφέ με εξυπηρέτηση στον πάγκο</a>, μπορείς να χρησιμοποιήσεις την απλή λειτουργία, χωρίς τραπέζια. Το POSPal έχει και τους δύο τρόπους.</p>
-          <p>Σε ένα μπαρ ή ένα beach bar, χρειάζεται επιπλέον να δοκιμάσεις τη σύνδεση από τα σημεία όπου κινείται η ομάδα. Το κινητό πρέπει να φτάνει τον υπολογιστή Windows, ακόμη και στο πιο απομακρυσμένο τραπέζι. Δες και τις πρακτικές προϋποθέσεις για <a href="/paraggelio-lipsia-gia-beach-bar.html">παραγγελιοληψία σε beach bar</a>.</p>
-          <p>Αν αυτές είναι οι δουλειές που θέλεις να καλύψεις, έχεις τον απαραίτητο εξοπλισμό και θέλεις να αναλάβεις το αρχικό στήσιμο, έχει νόημα να το δοκιμάσεις στη δική σου ροή.</p>
-          <p>Αν χρειάζεσαι κάποιον να έρθει στον χώρο σου, να αναλάβει όλη την εγκατάσταση και να είναι διαθέσιμος στο τηλέφωνο, το POSPal δεν προσφέρει αυτή την υπηρεσία. Είναι λογικό να τη χρειάζεσαι· απλώς χρειάζεται να το ξέρεις πριν αποφασίσεις.</p>
-          <p>Για τα υπόλοιπα, η δοκιμή θα σου πει περισσότερα από αυτή τη σελίδα. Πέρνα μερικά προϊόντα, άνοιξε ένα τραπέζι και δες πώς σου φαίνεται η παραγγελία από το κινητό. Δεν χρειάζεται να αποφασίσεις από την πρώτη μέρα.</p>
-        </section>
-        <section class="faq-list" id="questions">
-          <h2 id="system-faq-title">Δύο ακόμη διευκρινίσεις</h2>
-          <details><summary>Αντικαθιστά την ταμειακή ή το φορολογικό POS;</summary><p>Όχι. Το POSPal καλύπτει την παραγγελιοληψία και τη ροή κουζίνας. Η ταμειακή και το φορολογικό σου σύστημα παραμένουν ξεχωριστά.</p></details>
-          <details><summary>Χρειάζεται να ακυρώσω τη δωρεάν δοκιμή;</summary><p>Όχι. Η δοκιμή διαρκεί 30 ημέρες και δεν μετατρέπεται αυτόματα σε πληρωμένη συνδρομή. Αν δεν επιλέξεις να συνεχίσεις, δεν χρειάζεται να μας ειδοποιήσεις.</p></details>
-        </section>
-        <section class="system-invitation" id="try">
-          <h2 id="final-title">Αν αυτό ψάχνεις, μπορείς να το δοκιμάσεις.</h2>
-          <p>Στον δικό σου υπολογιστή, με τον δικό σου κατάλογο και τις συσκευές που θα χρησιμοποιεί η ομάδα σου.</p>
-          <a class="system-download" href="/download/">Κατέβασε για Windows <span aria-hidden="true">↓</span></a>
-          <p class="system-trial-note">30 μέρες δωρεάν · Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας<br>Μετά 23,90 €/μήνα, αν επιλέξεις να συνεχίσεις.</p>
-        </section>
+          <p class="order-print-link"><a href="/static/img/systima-deltio-kouzinas.webp" target="_blank" rel="noopener" aria-label="Δες το δελτίο κουζίνας, σε νέα καρτέλα">Δες το δελτίο κουζίνας</a> από την ίδια δοκιμή, με εκτυπωτή EPSON TM-T20 μέσω USB.</p>
+        </div>
+      </section>
+
+      <section class="order-shell order-exercise" id="how-it-starts" aria-labelledby="start-title">
+        <div>
+          <h2 id="start-title">Στείλε μια παραγγελία πριν τη βάρδια</h2>
+          <p>Στη χωριστή δοκιμή της δημόσιας έκδοσης 0.7.1, το POSPal ζήτησε δημοσίευση του QR μενού για να συνεχίσει. Σταματήσαμε εκεί, πριν στείλουμε παραγγελία από κινητό.</p>
+          <p>Το QR του μενού ανοίγει τον κατάλογο για τους πελάτες. Ο κωδικός «Σε κινητό» συνδέει το κινητό της ομάδας με το POSPal. Για το στήσιμο, δες τον <a href="/guides/windows-installation/">οδηγό εγκατάστασης</a>.</p>
+          <p>Την εγκατάσταση και το στήσιμο στον χώρο σου τα αναλαμβάνεις εσύ, με τους οδηγούς μας. Αν κολλήσεις, δες τον <a href="/guides/troubleshooting/">οδηγό αντιμετώπισης προβλημάτων</a>. Η υποστήριξη γίνεται μόνο με email στο <a href="mailto:support@pospal.gr">support@pospal.gr</a>.</p>
+        </div>
+        <ol class="order-checks">
+          <li><strong>Ξεκίνα με ήδη ρυθμισμένο POSPal.</strong> Διάλεξε ένα τραπέζι που εξυπηρετείς κανονικά και δύο είδη από τον κατάλογό σου. Δες τις <a href="/guides/settings/">ρυθμίσεις για τα τραπέζια</a> αν χρειαστεί.</li>
+          <li><strong>Στείλε από το κινητό.</strong> Στην αρχική οθόνη του POSPal, θα βρεις έναν κωδικό κάτω από το «Σε κινητό». Σκάναρέ τον με την κάμερα του κινητού και άνοιξε τον σύνδεσμο. Διάλεξε τραπέζι, βάλε έναν καφέ και ένα τοστ, γράψε «Χωρίς ζάχαρη» στον καφέ και στείλε την παραγγελία.</li>
+          <li><strong>Κοίτα τι έφτασε στην κουζίνα.</strong> Στο ιστορικό του POSPal και στην «Οθόνη κουζίνας», έλεγξε ότι έφτασε ακριβώς μία παραγγελία στο σωστό τραπέζι, με έναν καφέ, ένα τοστ και το «Χωρίς ζάχαρη» κάτω από τον καφέ. Αν τυπώνεις, έλεγξε τα ίδια σε πραγματικό δελτίο. Δες τον <a href="/guides/printer-setup/">οδηγό για τον εκτυπωτή</a>.</li>
+        </ol>
+      </section>
+
+      <section class="order-shell order-close" id="offer" aria-labelledby="offer-title">
+        <div id="try" class="order-close-inner">
+          <h2 id="offer-title">Δοκίμασέ το στο μαγαζί σου</h2>
+          <p><strong>30 ημέρες δωρεάν.</strong> Χωρίς όνομα, email, λογαριασμό ή στοιχεία κάρτας. Αν επιλέξεις να συνεχίσεις, η συνδρομή είναι <strong>23,90 € τον μήνα</strong>, τελική τιμή.</p>
+          <a class="system-download" href="/download/">Κατέβασε για Windows</a>
+          <details id="questions">
+            <summary>Τι περιλαμβάνει η συνδρομή;</summary>
+            <p>Παραγγελίες από τραπέζι ή πάγκο, οθόνη κουζίνας, εκτυπώσεις και <a href="/guides/qr-menu/">QR&nbsp;μενού</a>. Η δοκιμή λήγει αυτόματα. Αν ενεργοποιήσεις συνδρομή, μπορείς να ακυρώσεις την επόμενη ανανέωση από τον <a href="/guides/account/">λογαριασμό σου</a>. Δες τις <a href="/times.html">τιμές</a> και τους όρους.</p>
+          </details>
+        </div>
+      </section>
+
+      <div class="order-shell order-author">
+        <img class="author-photo" src="/static/img/robert-airey-founder.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+        <p>Από τον <a href="/sxetika-me-to-pospal/#robert-airey">Robert Airey</a>, ιδρυτή της POSPal. <a href="https://www.linkedin.com/in/robert-zairey/" rel="me">LinkedIn</a></p>
       </div>
     </article>
 
-    <nav class="article-related" aria-label="Σχετικά άρθρα">
+    <nav class="article-related order-shell" aria-label="Σχετικά άρθρα">
       <h2>Διάβασε επίσης</h2>
       <ul>
-        <li><a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία στο κατάστημα</a></li>
+        <li><a href="/asyrmati-paraggeliolipsia.html">Ασύρματη παραγγελιοληψία</a></li>
         <li><a href="/pda-gia-servitoro/">Το κινητό ως PDA σερβιτόρου</a></li>
       </ul>
-      <a class="article-all" href="/arthra/">Όλα τα άρθρα <span aria-hidden="true">→</span></a>
+      <a class="article-all" href="/arthra/">Όλα τα άρθρα</a>
     </nav>
   </main>
   <footer class="site-footer">
